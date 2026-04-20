@@ -2,14 +2,17 @@ import pytest
 from pydantic import ValidationError
 
 from humeo_core.schemas import (
+    ApprovalResult,
     Clip,
     ClipPlan,
     ClipSubtitleWords,
     FocusStackOrder,
     LayoutInstruction,
     LayoutKind,
+    RatingFeedback,
     RenderRequest,
     Scene,
+    SessionState,
     TranscriptWord,
 )
 
@@ -195,3 +198,42 @@ def test_render_request_modes():
     assert req.mode == "normal"
     req2 = RenderRequest(**{**req.model_dump(), "mode": "dry_run"})
     assert req2.mode == "dry_run"
+
+
+def test_approval_result_roundtrip():
+    result = ApprovalResult(
+        action="proceed",
+        selected_ids=["001", "003"],
+        steering_note="prefer emotional moments",
+    )
+    assert ApprovalResult.model_validate(result.model_dump()) == result
+
+
+def test_approval_result_rejects_invalid_action():
+    with pytest.raises(ValidationError):
+        ApprovalResult(action="invalid")
+
+
+def test_rating_feedback_roundtrip():
+    feedback = RatingFeedback(
+        rating=2,
+        issues=["wrong_moments", "other"],
+        free_text="needs more context",
+    )
+    assert RatingFeedback.model_validate(feedback.model_dump()) == feedback
+
+
+def test_rating_feedback_rejects_invalid_rating():
+    with pytest.raises(ValidationError):
+        RatingFeedback(rating=4)
+
+
+def test_session_state_roundtrip():
+    state = SessionState(
+        source_key="youtube:PdVv_vLkUgk",
+        iteration=3,
+        steering_notes=["be punchier"],
+        last_rating=RatingFeedback(rating=3),
+        last_selected_ids=["001", "002"],
+    )
+    assert SessionState.model_validate(state.model_dump()) == state

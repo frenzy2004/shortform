@@ -106,3 +106,14 @@ def test_load_clips_legacy_fixture_defaults_new_fields():
         assert clip.score_breakdown is None
         assert clip.visual_notes is None
         assert clip.reasoning is None
+
+
+def test_build_prompt_passes_through_steering_notes():
+    from humeo.clip_selector import build_prompt
+
+    system, _user = build_prompt(
+        {"segments": [{"start": 0.0, "end": 1.0, "text": "hello"}]},
+        steering_notes=["prefer standalone moments"],
+    )
+
+    assert "prefer standalone moments" in system

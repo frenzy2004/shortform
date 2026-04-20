@@ -1,12 +1,14 @@
 """End-to-end product pipeline."""
 
+import dataclasses
 import json
 import logging
 from pathlib import Path
 
 from humeo_core.primitives.ingest import extract_keyframes
-from humeo_core.schemas import LayoutInstruction, LayoutKind, Scene
+from humeo_core.schemas import LayoutInstruction, LayoutKind, RatingFeedback, Scene
 
+from humeo import interactive, session_state
 from humeo.clip_selection_cache import cache_valid, load_meta, transcript_fingerprint, write_artifacts
 from humeo.clip_selector import load_clips, save_clips, select_clips
 from humeo.config import PipelineConfig
@@ -26,6 +28,36 @@ from humeo.video_cache import (
 )
 
 logger = logging.getLogger(__name__)
+
+
+def _rerun_config(config: PipelineConfig, steering_notes: list[str]) -> PipelineConfig:
+    return dataclasses.replace(
+        config,
+        steering_notes=list(steering_notes),
+        force_clip_selection=True,
+        overwrite_outputs=True,
+    )
+
+
+def _build_steering_from_feedback(feedback: RatingFeedback) -> str:
+    parts: list[str] = []
+    if "wrong_moments" in feedback.issues:
+        parts.append("Previous selection picked the wrong moments. Reselect with different candidates.")
+    if "bad_cuts" in feedback.issues:
+        parts.append(
+            "Clip boundaries were bad. Prefer clips starting on clean sentence beginnings and ending on completed thoughts."
+        )
+    if "boring" in feedback.issues:
+        parts.append("Previous selection lacked energy. Bias strongly toward high-emotion, high-hook moments.")
+    if "confusing" in feedback.issues:
+        parts.append("Previous clips needed too much context. Pick moments that make sense standalone.")
+    if "wrong_layout" in feedback.issues:
+        logger.warning("Received wrong_layout feedback, but layout overrides are not available until Gate 2 ships.")
+    if "length_off" in feedback.issues:
+        parts.append("Clip durations felt off. Respect the duration bounds strictly.")
+    if "other" in feedback.issues and feedback.free_text:
+        parts.append(feedback.free_text)
+    return " ".join(parts).strip()
 
 
 def _ensure_work_dir(config: PipelineConfig) -> None:
@@ -58,6 +90,25 @@ def run_pipeline(config: PipelineConfig) -> list[Path]:
 
     _ensure_work_dir(config)
     assert config.work_dir is not None
+
+    state = None
+    if config.interactive:
+        state = session_state.load_state(config.work_dir, config.youtube_url)
+        if config.steering_notes:
+            if list(config.steering_notes) != state.steering_notes:
+                state.steering_notes = list(config.steering_notes)
+                session_state.save_state(config.work_dir, state)
+        elif state.steering_notes:
+            config = dataclasses.replace(
+                config,
+                steering_notes=list(state.steering_notes),
+                force_clip_selection=True,
+                overwrite_outputs=True,
+            )
+            logger.info(
+                "Loaded %d steering note(s) from session state for this source.",
+                len(state.steering_notes),
+            )
 
     # ------------------------------------------------------------------
     # Stage 1: Ingest
@@ -120,6 +171,7 @@ def run_pipeline(config: PipelineConfig) -> list[Path]:
             quality_threshold=config.clip_selection_quality_threshold,
             min_kept=config.clip_selection_min_kept,
             max_kept=config.clip_selection_max_kept,
+            steering_notes=config.steering_notes,
         )
         save_clips(clips, clips_path)
         write_artifacts(
@@ -172,6 +224,31 @@ def run_pipeline(config: PipelineConfig) -> list[Path]:
         transcript_fp=fp,
         config=config,
     )
+
+    if config.interactive and state is not None:
+        result = interactive.approve_clips(clips)
+        if result.action == "quit":
+            logger.info("Aborted by user at Gate 1.")
+            return []
+        if result.action == "refine":
+            state.iteration += 1
+            if result.steering_note:
+                state.steering_notes.append(result.steering_note)
+            state.last_selected_ids = None
+            session_state.save_state(config.work_dir, state)
+            if state.iteration >= config.max_iterations:
+                logger.warning("Iteration cap hit. Proceeding with current clips.")
+            else:
+                return run_pipeline(_rerun_config(config, state.steering_notes))
+        elif result.action == "proceed":
+            selected_ids = list(result.selected_ids or [])
+            state.last_selected_ids = selected_ids
+            session_state.save_state(config.work_dir, state)
+            clip_by_id = {clip.clip_id: clip for clip in clips}
+            clips = [clip_by_id[clip_id] for clip_id in selected_ids]
+        elif result.action == "accept_all":
+            state.last_selected_ids = [clip.clip_id for clip in clips]
+            session_state.save_state(config.work_dir, state)
 
     # ------------------------------------------------------------------
     # Stage 3: Clip layouts
@@ -254,5 +331,26 @@ def run_pipeline(config: PipelineConfig) -> list[Path]:
     for p in final_outputs:
         logger.info("  -> %s", p)
     logger.info("=" * 60)
+
+    if config.interactive and final_outputs and state is not None:
+        feedback = interactive.rate_output(final_outputs)
+        state.last_rating = feedback
+        session_state.save_state(config.work_dir, state)
+        if feedback.rating == 3:
+            logger.info("Rated Great. Shipped.")
+            return final_outputs
+
+        steering = _build_steering_from_feedback(feedback)
+        if not steering:
+            logger.warning("Interactive feedback recorded, but it is not actionable until a later gate ships.")
+            return final_outputs
+
+        state.iteration += 1
+        state.steering_notes.append(steering)
+        session_state.save_state(config.work_dir, state)
+        if state.iteration >= config.max_iterations:
+            logger.warning("Iteration cap hit. Source may not have a strong short.")
+            return final_outputs
+        return run_pipeline(_rerun_config(config, state.steering_notes))
 
     return final_outputs

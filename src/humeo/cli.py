@@ -142,6 +142,12 @@ Examples:
     )
 
     parser.add_argument(
+        "--interactive", "-i",
+        action="store_true",
+        help="Pause after clip selection and after render for human approval.",
+    )
+
+    parser.add_argument(
         "--subtitle-font-size",
         type=int,
         default=48,
@@ -220,6 +226,7 @@ def main():
         force_layout_vision=force_layout_vision,
         clean_run=args.clean_run,
         overwrite_outputs=overwrite_outputs,
+        interactive=args.interactive,
         prune_level=args.prune_level,
         force_content_pruning=force_content_pruning,
         detect_hooks=detect_hooks,

@@ -72,7 +72,10 @@ def _retry_llm(name: str, fn: Callable[[], T], attempts: int = LLM_MAX_ATTEMPTS)
 
 
 def build_prompt(
-    transcript: dict, *, candidate_count: int = DEFAULT_CANDIDATE_COUNT
+    transcript: dict,
+    *,
+    candidate_count: int = DEFAULT_CANDIDATE_COUNT,
+    steering_notes: list[str] | None = None,
 ) -> tuple[str, str]:
     """Return ``(system_prompt, user_message)`` for the clip-selector LLM call.
 
@@ -95,6 +98,7 @@ def build_prompt(
         min_dur=MIN_CLIP_DURATION_SEC,
         max_dur=MAX_CLIP_DURATION_SEC,
         count=candidate_count,
+        steering_notes=steering_notes,
     )
     return system, user
 
@@ -184,6 +188,7 @@ def select_clips(
     min_kept: int = DEFAULT_MIN_KEPT,
     max_kept: int = DEFAULT_MAX_KEPT,
     temperature: float = DEFAULT_CANDIDATE_TEMPERATURE,
+    steering_notes: list[str] | None = None,
 ) -> tuple[list[Clip], str]:
     """
     Call Gemini to select clips. Returns ``(clips, raw_json)`` for caching / debugging.
@@ -198,7 +203,9 @@ def select_clips(
     """
     model_name = (gemini_model or GEMINI_MODEL).strip()
     system_prompt, user_text = build_prompt(
-        transcript, candidate_count=candidate_count
+        transcript,
+        candidate_count=candidate_count,
+        steering_notes=steering_notes,
     )
 
     client = genai.Client(api_key=resolve_gemini_api_key())

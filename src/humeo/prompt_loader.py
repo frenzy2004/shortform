@@ -21,6 +21,7 @@ def clip_selection_prompts(
     min_dur: float,
     max_dur: float,
     count: int,
+    steering_notes: list[str] | None = None,
 ) -> tuple[str, str]:
     """Return ``(system_instruction, user_message)`` for Gemini clip selection."""
     env = jinja2.Environment(loader=_prompt_loader(), autoescape=False, trim_blocks=True)
@@ -29,6 +30,7 @@ def clip_selection_prompts(
         "max_dur": max_dur,
         "count": count,
         "transcript_text": transcript_text,
+        "steering_notes": steering_notes or [],
     }
     system = env.get_template("clip_selection_system.jinja2").render(**ctx)
     user = env.get_template("clip_selection_user.jinja2").render(**ctx)

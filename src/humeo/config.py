@@ -55,6 +55,12 @@ class PipelineConfig:
     clean_run: bool = False
     # When True, render stage overwrites existing output files.
     overwrite_outputs: bool = False
+    # When True, pause after clip selection and after render for human approval.
+    interactive: bool = False
+    # Interactive steering notes injected into the clip-selection prompt on reruns.
+    steering_notes: list[str] = field(default_factory=list)
+    # Hard cap on interactive reruns.
+    max_iterations: int = 5
 
     # Stage 2.25 - hook detection. The clip selector is unreliable at
     # localising the hook sentence and tends to echo the 0.0-3.0s placeholder
