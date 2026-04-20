@@ -1,0 +1,31 @@
+{
+  "source_path": "",
+  "clips": [
+    {
+      "clip_id": "001",
+      "topic": "The 2-Week Muscle Loss Rule",
+      "start_time_sec": 681.9,
+      "end_time_sec": 753.5,
+      "viral_hook": "Within about two weeks of not training it, the first reduction in muscle that is detectable by modern machinery occurs.",
+      "virality_score": 0.96,
+      "transcript": "Part one is within about two weeks of not training it, the first reduction in muscle that is detectable by modern machinery occurs.",
+      "suggested_overlay_title": "How Fast Do You Lose Muscle?",
+      "layout": null,
+      "hook_start_sec": 1.8,
+      "hook_end_sec": 8.9,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "shorts_title": "How Long Until Your Muscles Disappear?",
+      "description": "Ever wondered how long you can skip the gym before your gains vanish?",
+      "hashtags": [
+        "fitness",
+        "gymlife",
+        "muscleloss",
+        "science"
+      ],
+      "layout_hint": "zoom_call_center",
+      "needs_review": false,
+      "review_reason": ""
+    }
+  ]
+}
