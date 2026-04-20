@@ -149,16 +149,17 @@ def test_clip_score_breakdown_validation():
             topic="t",
             start_time_sec=0.0,
             end_time_sec=30.0,
-            score_breakdown={"hook": 1.5},
-        )
-    with pytest.raises(ValidationError):
-        Clip(
-            clip_id="1",
-            topic="t",
-            start_time_sec=0.0,
-            end_time_sec=30.0,
             score_breakdown={"hook": -0.1},
         )
+
+    clip = Clip(
+        clip_id="1",
+        topic="t",
+        start_time_sec=0.0,
+        end_time_sec=30.0,
+        score_breakdown={"hook": 1.5},
+    )
+    assert clip.score_breakdown == {"hook": 1.5}
 
     clip = Clip(
         clip_id="1",

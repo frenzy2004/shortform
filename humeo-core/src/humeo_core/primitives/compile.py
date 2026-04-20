@@ -22,8 +22,10 @@ Rendering order is fixed and intentional:
 
 from __future__ import annotations
 
+import os
 import shutil
 import subprocess
+import tempfile
 from pathlib import Path
 
 from ..schemas import SPLIT_LAYOUTS, RenderRequest, RenderResult
@@ -35,6 +37,54 @@ def _ensure_ffmpeg() -> str:
     if not exe:
         raise RuntimeError("ffmpeg not found on PATH")
     return exe
+
+
+def _ensure_windows_fontconfig() -> dict[str, str]:
+    """Return subprocess env with a minimal fontconfig setup on Windows.
+
+    Some Windows FFmpeg builds ship libass + fontconfig but do not bundle a
+    default fontconfig config, which makes subtitle rendering fail with:
+
+    ``Fontconfig error: Cannot load default config file: No such file: (null)``
+
+    We generate a tiny config that points fontconfig at ``C:/Windows/Fonts`` and
+    a writable cache dir under ``%LOCALAPPDATA%/humeo``. Non-Windows platforms
+    pass through the existing environment unchanged.
+    """
+    env = os.environ.copy()
+    if os.name != "nt":
+        return env
+    if env.get("FONTCONFIG_FILE"):
+        return env
+
+    local_appdata = Path(
+        env.get("LOCALAPPDATA", str(Path(tempfile.gettempdir()) / "humeo-local"))
+    )
+    cfg_dir = local_appdata / "humeo" / "fontconfig"
+    cache_dir = local_appdata / "humeo" / "fontconfig-cache"
+    cfg_dir.mkdir(parents=True, exist_ok=True)
+    cache_dir.mkdir(parents=True, exist_ok=True)
+
+    cfg_file = cfg_dir / "fonts.conf"
+    windows_fonts = Path(env.get("WINDIR", r"C:\Windows")) / "Fonts"
+    if not cfg_file.exists():
+        cfg_file.write_text(
+            "\n".join(
+                [
+                    '<?xml version="1.0"?>',
+                    "<fontconfig>",
+                    f"  <dir>{windows_fonts.as_posix()}</dir>",
+                    f"  <cachedir>{cache_dir.as_posix()}</cachedir>",
+                    "</fontconfig>",
+                    "",
+                ]
+            ),
+            encoding="utf-8",
+        )
+
+    env["FONTCONFIG_PATH"] = str(cfg_dir)
+    env["FONTCONFIG_FILE"] = str(cfg_file)
+    return env
 
 
 def _escape_drawtext(text: str) -> str:
@@ -115,12 +165,21 @@ def _wrap_title_two_lines(text: str) -> tuple[str, str]:
     return " ".join(words[:best_idx]), " ".join(words[best_idx:])
 
 
+def _drawtext_font_arg() -> str:
+    """Return a drawtext font selector that is stable on the current platform."""
+    if os.name == "nt":
+        arial = Path(os.environ.get("WINDIR", r"C:\Windows")) / "Fonts" / "arial.ttf"
+        if arial.is_file():
+            return f"fontfile='{_escape_filter_path(str(arial))}'"
+    return f"font={_TITLE_FONT_NAME}"
+
+
 def _drawtext_single(text: str, size: int, y: int) -> str:
     esc = _escape_drawtext(text)
     return (
         f"drawtext=text='{esc}':"
         "expansion=none:"
-        f"font={_TITLE_FONT_NAME}:"
+        f"{_drawtext_font_arg()}:"
         f"fontcolor=white:fontsize={size}:borderw=4:bordercolor=black:"
         f"x=(w-text_w)/2:y={y}"
     )
@@ -134,12 +193,12 @@ def _drawtext_two(line1: str, line2: str, size: int, y_top: int) -> str:
     return (
         f"drawtext=text='{esc1}':"
         "expansion=none:"
-        f"font={_TITLE_FONT_NAME}:"
+        f"{_drawtext_font_arg()}:"
         f"fontcolor=white:fontsize={size}:borderw=4:bordercolor=black:"
         f"x=(w-text_w)/2:y={y_top},"
         f"drawtext=text='{esc2}':"
         "expansion=none:"
-        f"font={_TITLE_FONT_NAME}:"
+        f"{_drawtext_font_arg()}:"
         f"fontcolor=white:fontsize={size}:borderw=4:bordercolor=black:"
         f"x=(w-text_w)/2:y={y_bottom}"
     )
@@ -349,7 +408,7 @@ def render_clip(req: RenderRequest) -> RenderResult:
             success=True,
         )
     try:
-        subprocess.run(cmd, check=True, capture_output=True)
+        subprocess.run(cmd, check=True, capture_output=True, env=_ensure_windows_fontconfig())
         if include_audio and not _has_audio_stream(req.output_path):
             return RenderResult(
                 clip_id=req.clip.clip_id,

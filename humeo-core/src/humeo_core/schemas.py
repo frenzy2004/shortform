@@ -317,8 +317,8 @@ class Clip(BaseModel):
         if v is None:
             return None
         for axis, score in v.items():
-            if not 0.0 <= score <= 1.0:
-                raise ValueError(f"score_breakdown[{axis!r}] must be within [0.0, 1.0]")
+            if score < 0.0:
+                raise ValueError(f"score_breakdown[{axis!r}] must be non-negative")
         return v
 
     @model_validator(mode="after")

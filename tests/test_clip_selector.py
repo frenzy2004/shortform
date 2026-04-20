@@ -151,6 +151,36 @@ def test_parse_clips_preserves_score_breakdown_and_reasoning():
     assert clips[0].reasoning == "Strong payoff and clear takeaway."
 
 
+def test_parse_clips_accepts_legacy_point_based_score_breakdown():
+    from humeo.clip_selector import _parse_clips
+
+    raw_json = json.dumps(
+        {
+            "clips": [
+                {
+                    "clip_id": "123",
+                    "topic": "topic",
+                    "start_time_sec": 10.0,
+                    "end_time_sec": 25.0,
+                    "duration_sec": 15.0,
+                    "score_breakdown": {
+                        "counter_intuitive_claim": 3,
+                        "quotable_phrasing": 2,
+                    },
+                }
+            ]
+        }
+    )
+
+    clips = _parse_clips(raw_json)
+
+    assert len(clips) == 1
+    assert clips[0].score_breakdown == {
+        "counter_intuitive_claim": 3.0,
+        "quotable_phrasing": 2.0,
+    }
+
+
 def test_load_clips_legacy_fixture_defaults_new_fields():
     from humeo.clip_selector import load_clips
 
