@@ -1,4 +1,5 @@
 import pytest
+from pydantic import ValidationError
 
 from humeo_core.schemas import (
     Clip,
@@ -99,6 +100,80 @@ def test_clip_plan_roundtrip():
     )
     d = plan.model_dump()
     assert ClipPlan.model_validate(d) == plan
+
+
+def test_clip_roundtrip_with_extended_fields():
+    clip = Clip(
+        clip_id="1",
+        topic="t",
+        start_time_sec=0.0,
+        end_time_sec=30.0,
+        score_breakdown={"message_wow": 0.9, "hook_emotion": 0.7},
+        origin="both",
+        visual_notes="Speaker leans in.",
+        reasoning="Strong explanation and hook.",
+    )
+
+    dumped = clip.model_dump()
+
+    assert dumped["score_breakdown"] == {"message_wow": 0.9, "hook_emotion": 0.7}
+    assert dumped["origin"] == "both"
+    assert dumped["visual_notes"] == "Speaker leans in."
+    assert dumped["reasoning"] == "Strong explanation and hook."
+    assert Clip.model_validate(dumped) == clip
+
+
+def test_clip_defaults_validate_and_do_not_serialize_new_fields():
+    clip = Clip(clip_id="1", topic="t", start_time_sec=0.0, end_time_sec=30.0)
+
+    assert clip.origin == "text"
+    assert clip.score_breakdown is None
+    assert clip.visual_notes is None
+    assert clip.reasoning is None
+
+    dumped = clip.model_dump()
+    assert "score_breakdown" not in dumped
+    assert "origin" not in dumped
+    assert "visual_notes" not in dumped
+    assert "reasoning" not in dumped
+    assert Clip.model_validate(dumped) == clip
+
+
+def test_clip_score_breakdown_validation():
+    with pytest.raises(ValidationError):
+        Clip(
+            clip_id="1",
+            topic="t",
+            start_time_sec=0.0,
+            end_time_sec=30.0,
+            score_breakdown={"hook": 1.5},
+        )
+    with pytest.raises(ValidationError):
+        Clip(
+            clip_id="1",
+            topic="t",
+            start_time_sec=0.0,
+            end_time_sec=30.0,
+            score_breakdown={"hook": -0.1},
+        )
+
+    clip = Clip(
+        clip_id="1",
+        topic="t",
+        start_time_sec=0.0,
+        end_time_sec=30.0,
+        score_breakdown={},
+    )
+    assert clip.score_breakdown == {}
+
+    clip = Clip(
+        clip_id="1",
+        topic="t",
+        start_time_sec=0.0,
+        end_time_sec=30.0,
+        score_breakdown={"hook": 0.5},
+    )
+    assert clip.score_breakdown == {"hook": 0.5}
 
 
 def test_clip_subtitle_words_relative_times():

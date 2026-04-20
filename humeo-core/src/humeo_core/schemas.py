@@ -10,7 +10,7 @@ from __future__ import annotations
 from enum import Enum
 from typing import Literal
 
-from pydantic import BaseModel, Field, field_validator, model_validator
+from pydantic import BaseModel, Field, field_validator, model_serializer, model_validator
 
 
 # ---------------------------------------------------------------------------
@@ -278,6 +278,10 @@ class Clip(BaseModel):
     transcript: str = ""
     suggested_overlay_title: str = ""
     layout: LayoutKind | None = None
+    score_breakdown: dict[str, float] | None = None
+    origin: Literal["text", "visual", "both"] = "text"
+    visual_notes: str | None = None
+    reasoning: str | None = None
 
     # Optional LLM metadata (source timeline is start_time_sec / end_time_sec).
     hook_start_sec: float | None = Field(
@@ -305,6 +309,18 @@ class Clip(BaseModel):
     needs_review: bool = False
     review_reason: str = ""
 
+    @field_validator("score_breakdown")
+    @classmethod
+    def _score_breakdown_in_range(
+        cls, v: dict[str, float] | None
+    ) -> dict[str, float] | None:
+        if v is None:
+            return None
+        for axis, score in v.items():
+            if not 0.0 <= score <= 1.0:
+                raise ValueError(f"score_breakdown[{axis!r}] must be within [0.0, 1.0]")
+        return v
+
     @model_validator(mode="after")
     def _timing_consistency(self) -> "Clip":
         if self.end_time_sec <= self.start_time_sec:
@@ -321,6 +337,19 @@ class Clip(BaseModel):
         if self.trim_start_sec + self.trim_end_sec > dur:
             raise ValueError("trim_start_sec + trim_end_sec must not exceed clip duration")
         return self
+
+    @model_serializer(mode="wrap")
+    def _serialize_without_default_extensions(self, handler):
+        data = handler(self)
+        if data.get("score_breakdown") is None:
+            data.pop("score_breakdown", None)
+        if data.get("origin") == "text":
+            data.pop("origin", None)
+        if data.get("visual_notes") is None:
+            data.pop("visual_notes", None)
+        if data.get("reasoning") is None:
+            data.pop("reasoning", None)
+        return data
 
     @property
     def duration_sec(self) -> float:

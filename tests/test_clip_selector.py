@@ -1,5 +1,7 @@
 """Tests for product clip selection (Gemini API key and google-genai client)."""
 
+import json
+from pathlib import Path
 from unittest.mock import MagicMock, patch
 
 import pytest
@@ -65,3 +67,42 @@ def test_select_clips_raises_without_key(mock_client_cls, monkeypatch):
         select_clips({"segments": []})
 
     mock_client_cls.assert_not_called()
+
+
+def test_parse_clips_preserves_score_breakdown_and_reasoning():
+    from humeo.clip_selector import _parse_clips
+
+    raw_json = json.dumps(
+        {
+            "clips": [
+                {
+                    "clip_id": "123",
+                    "topic": "topic",
+                    "start_time_sec": 10.0,
+                    "end_time_sec": 25.0,
+                    "duration_sec": 15.0,
+                    "score_breakdown": {"message_wow": 0.8, "hook_emotion": 0.6},
+                    "reasoning": "Strong payoff and clear takeaway.",
+                }
+            ]
+        }
+    )
+
+    clips = _parse_clips(raw_json)
+
+    assert len(clips) == 1
+    assert clips[0].score_breakdown == {"message_wow": 0.8, "hook_emotion": 0.6}
+    assert clips[0].reasoning == "Strong payoff and clear takeaway."
+
+
+def test_load_clips_legacy_fixture_defaults_new_fields():
+    from humeo.clip_selector import load_clips
+
+    clips = load_clips(Path("tests/fixtures/legacy_clips.json"))
+
+    assert clips
+    for clip in clips:
+        assert clip.origin == "text"
+        assert clip.score_breakdown is None
+        assert clip.visual_notes is None
+        assert clip.reasoning is None
