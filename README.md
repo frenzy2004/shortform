@@ -36,7 +36,8 @@ A short shows at most two on-screen items (`person` or `chart`). That yields fiv
 - **`uv`** — install: [astral.sh/uv](https://docs.astral.sh/uv/)  
 - **`ffmpeg`** — on `PATH` for extract/render  
 - **API keys** — see **`docs/ENVIRONMENT.md`**  
-  - `GOOGLE_API_KEY` or `GEMINI_API_KEY` — required for Gemini stages  
+  - `GOOGLE_API_KEY` or `GEMINI_API_KEY` — preferred for Gemini stages  
+  - `OPENROUTER_API_KEY` — supported fallback for those same Gemini-like stages when Google keys are unavailable  
   - `OPENAI_API_KEY` — if using OpenAI Whisper API (`HUMEO_TRANSCRIBE_PROVIDER=openai`)
 
 Copy **`.env.example`** → **`.env`** (never commit `.env`).

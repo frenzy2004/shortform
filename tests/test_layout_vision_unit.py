@@ -1,8 +1,9 @@
 """layout_vision parsing (no API calls)."""
 
 import math
+from unittest.mock import MagicMock, patch
 
-from humeo.layout_vision import _face_center_x, _instruction_from_gemini_json
+from humeo.layout_vision import _call_gemini_vision, _face_center_x, _instruction_from_gemini_json
 from humeo_core.schemas import BoundingBox, LayoutKind
 
 
@@ -112,3 +113,28 @@ def test_face_center_helper_unit():
     # Face suspiciously wide (> 40% of frame): ignore.
     wide = BoundingBox(x1=0.10, y1=0.10, x2=0.60, y2=0.95)
     assert _face_center_x(wide, body) is None
+
+
+@patch("humeo.layout_vision.OpenAI")
+def test_call_gemini_vision_uses_openrouter_image_payload(mock_openai_cls, monkeypatch, tmp_path):
+    monkeypatch.delenv("GOOGLE_API_KEY", raising=False)
+    monkeypatch.delenv("GEMINI_API_KEY", raising=False)
+    monkeypatch.setenv("OPENROUTER_API_KEY", "router-key")
+    image_path = tmp_path / "frame.jpg"
+    image_path.write_bytes(b"\xff\xd8\xff\xe0fakejpeg")
+
+    mock_inst = MagicMock()
+    mock_openai_cls.return_value = mock_inst
+    mock_inst.chat.completions.create.return_value = MagicMock(
+        choices=[MagicMock(message=MagicMock(content='{"layout":"sit_center"}'))]
+    )
+
+    out = _call_gemini_vision(str(image_path), "gemini-3.1-flash-lite-preview")
+
+    assert out["layout"] == "sit_center"
+    mock_openai_cls.assert_called_once()
+    call_kwargs = mock_inst.chat.completions.create.call_args.kwargs
+    assert call_kwargs["model"] == "google/gemini-3.1-flash-lite-preview"
+    content = call_kwargs["messages"][1]["content"]
+    assert content[1]["type"] == "image_url"
+    assert content[1]["image_url"]["url"].startswith("data:image/jpeg;base64,")

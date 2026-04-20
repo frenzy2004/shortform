@@ -317,8 +317,8 @@ class Clip(BaseModel):
         if v is None:
             return None
         for axis, score in v.items():
-            if not 0.0 <= score <= 1.0:
-                raise ValueError(f"score_breakdown[{axis!r}] must be within [0.0, 1.0]")
+            if score < 0.0:
+                raise ValueError(f"score_breakdown[{axis!r}] must be non-negative")
         return v
 
     @model_validator(mode="after")
@@ -361,6 +361,36 @@ class ClipPlan(BaseModel):
 
     source_path: str
     clips: list[Clip]
+
+
+class ApprovalResult(BaseModel):
+    action: Literal["proceed", "refine", "quit", "accept_all"]
+    selected_ids: list[str] | None = None
+    steering_note: str | None = None
+
+
+class RatingFeedback(BaseModel):
+    rating: Literal[1, 2, 3]
+    issues: list[
+        Literal[
+            "wrong_moments",
+            "bad_cuts",
+            "boring",
+            "confusing",
+            "wrong_layout",
+            "length_off",
+            "other",
+        ]
+    ] = Field(default_factory=list)
+    free_text: str | None = None
+
+
+class SessionState(BaseModel):
+    source_key: str = ""
+    iteration: int = 0
+    steering_notes: list[str] = Field(default_factory=list)
+    last_rating: RatingFeedback | None = None
+    last_selected_ids: list[str] | None = None
 
 
 # ---------------------------------------------------------------------------

@@ -9,6 +9,7 @@ from pathlib import Path
 from typing import Any
 
 from humeo.config import GEMINI_MODEL, PipelineConfig
+from humeo.env import current_llm_provider
 
 logger = logging.getLogger(__name__)
 
@@ -39,6 +40,14 @@ def cache_valid(meta: dict[str, Any], fingerprint: str, config: PipelineConfig) 
     if meta.get("transcript_sha256") != fingerprint:
         return False
     gm = resolved_gemini_model(config)
+    current_provider = current_llm_provider()
+    meta_provider = meta.get("llm_backend")
+    if current_provider == "openrouter":
+        if meta_provider != "openrouter":
+            return False
+    elif current_provider == "google":
+        if meta_provider not in (None, "google"):
+            return False
     ver = meta.get("version", 1)
     if ver >= CURRENT_META_VERSION:
         return meta.get("gemini_model") == gm
@@ -61,6 +70,7 @@ def write_artifacts(
         "version": CURRENT_META_VERSION,
         "transcript_sha256": fp,
         "gemini_model": resolved_gemini_model(config),
+        "llm_backend": current_llm_provider() or "google",
     }
     (work_dir / RAW_FILENAME).write_text(raw_response, encoding="utf-8")
     with open(work_dir / META_FILENAME, "w", encoding="utf-8") as f:

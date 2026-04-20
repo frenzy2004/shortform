@@ -14,6 +14,7 @@ from pathlib import Path
 from typing import Callable, TypeVar
 
 from google import genai
+from openai import OpenAI
 
 from humeo.gemini_generate import gemini_generate_config
 
@@ -25,7 +26,14 @@ from humeo.config import (
     MIN_CLIP_DURATION_SEC,
     TARGET_CLIP_COUNT,
 )
-from humeo.env import resolve_gemini_api_key
+from humeo.env import (
+    OPENROUTER_BASE_URL,
+    model_name_for_provider,
+    openrouter_default_headers,
+    resolve_gemini_api_key,
+    resolve_llm_provider,
+    resolve_openrouter_api_key,
+)
 from humeo.prompt_loader import clip_selection_prompts
 
 logger = logging.getLogger(__name__)
@@ -57,6 +65,21 @@ DEFAULT_MAX_KEPT = 8
 DEFAULT_CANDIDATE_TEMPERATURE = 0.7
 
 
+def _openai_message_text(content: object) -> str:
+    """Normalize OpenAI-compatible message content into plain text."""
+    if isinstance(content, str):
+        return content
+    if isinstance(content, list):
+        parts: list[str] = []
+        for item in content:
+            if isinstance(item, dict) and item.get("type") == "text":
+                text = item.get("text")
+                if isinstance(text, str):
+                    parts.append(text)
+        return "".join(parts)
+    return ""
+
+
 def _retry_llm(name: str, fn: Callable[[], T], attempts: int = LLM_MAX_ATTEMPTS) -> T:
     last: Exception | None = None
     for i in range(attempts):
@@ -72,7 +95,10 @@ def _retry_llm(name: str, fn: Callable[[], T], attempts: int = LLM_MAX_ATTEMPTS)
 
 
 def build_prompt(
-    transcript: dict, *, candidate_count: int = DEFAULT_CANDIDATE_COUNT
+    transcript: dict,
+    *,
+    candidate_count: int = DEFAULT_CANDIDATE_COUNT,
+    steering_notes: list[str] | None = None,
 ) -> tuple[str, str]:
     """Return ``(system_prompt, user_message)`` for the clip-selector LLM call.
 
@@ -95,6 +121,7 @@ def build_prompt(
         min_dur=MIN_CLIP_DURATION_SEC,
         max_dur=MAX_CLIP_DURATION_SEC,
         count=candidate_count,
+        steering_notes=steering_notes,
     )
     return system, user
 
@@ -184,6 +211,7 @@ def select_clips(
     min_kept: int = DEFAULT_MIN_KEPT,
     max_kept: int = DEFAULT_MAX_KEPT,
     temperature: float = DEFAULT_CANDIDATE_TEMPERATURE,
+    steering_notes: list[str] | None = None,
 ) -> tuple[list[Clip], str]:
     """
     Call Gemini to select clips. Returns ``(clips, raw_json)`` for caching / debugging.
@@ -196,32 +224,55 @@ def select_clips(
     Uses ``google.genai.Client`` and ``GenerateContentConfig`` (see Google
     Gen AI SDK for Python).
     """
-    model_name = (gemini_model or GEMINI_MODEL).strip()
+    provider = resolve_llm_provider()
+    model_name = model_name_for_provider((gemini_model or GEMINI_MODEL).strip(), provider)
     system_prompt, user_text = build_prompt(
-        transcript, candidate_count=candidate_count
+        transcript,
+        candidate_count=candidate_count,
+        steering_notes=steering_notes,
     )
-
-    client = genai.Client(api_key=resolve_gemini_api_key())
 
     def _call() -> str:
         logger.info(
-            "Gemini clip selection (model=%s, candidate_pool=%d, temp=%.2f)...",
+            "%s clip selection (model=%s, candidate_pool=%d, temp=%.2f)...",
+            provider,
             model_name,
             candidate_count,
             temperature,
         )
-        response = client.models.generate_content(
-            model=model_name,
-            contents=user_text,
-            config=gemini_generate_config(
-                system_instruction=system_prompt,
-                temperature=temperature,
-                response_mime_type="application/json",
-            ),
+        if provider == "google":
+            client = genai.Client(api_key=resolve_gemini_api_key())
+            response = client.models.generate_content(
+                model=model_name,
+                contents=user_text,
+                config=gemini_generate_config(
+                    system_instruction=system_prompt,
+                    temperature=temperature,
+                    response_mime_type="application/json",
+                ),
+            )
+            if not response.text:
+                raise RuntimeError("Gemini returned empty response text")
+            return response.text
+
+        client = OpenAI(
+            api_key=resolve_openrouter_api_key(),
+            base_url=OPENROUTER_BASE_URL,
+            default_headers=openrouter_default_headers(),
         )
-        if not response.text:
-            raise RuntimeError("Gemini returned empty response text")
-        return response.text
+        response = client.chat.completions.create(
+            model=model_name,
+            messages=[
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": user_text},
+            ],
+            temperature=temperature,
+            response_format={"type": "json_object"},
+        )
+        text = _openai_message_text(response.choices[0].message.content)
+        if not text:
+            raise RuntimeError("OpenRouter returned empty response text")
+        return text
 
     raw = _retry_llm("Gemini clip selection", _call)
     candidates = _parse_clips(raw)

@@ -34,6 +34,7 @@ from pathlib import Path
 from typing import Any, Callable, Literal, TypeVar
 
 from google import genai
+from openai import OpenAI
 from pydantic import BaseModel, Field, ValidationError
 
 from humeo_core.schemas import Clip
@@ -44,7 +45,15 @@ from humeo.config import (
     MIN_CLIP_DURATION_SEC,
     PipelineConfig,
 )
-from humeo.env import resolve_gemini_api_key
+from humeo.env import (
+    OPENROUTER_BASE_URL,
+    current_llm_provider,
+    model_name_for_provider,
+    openrouter_default_headers,
+    resolve_gemini_api_key,
+    resolve_llm_provider,
+    resolve_openrouter_api_key,
+)
 from humeo.gemini_generate import gemini_generate_config
 from humeo.prompt_loader import content_pruning_system_prompt
 
@@ -63,6 +72,20 @@ LLM_RETRY_DELAY_SEC = 2.0
 PruneLevel = Literal["off", "conservative", "balanced", "aggressive"]
 
 VALID_LEVELS: tuple[PruneLevel, ...] = ("off", "conservative", "balanced", "aggressive")
+
+
+def _openai_message_text(content: object) -> str:
+    if isinstance(content, str):
+        return content
+    if isinstance(content, list):
+        parts: list[str] = []
+        for item in content:
+            if isinstance(item, dict) and item.get("type") == "text":
+                text = item.get("text")
+                if isinstance(text, str):
+                    parts.append(text)
+        return "".join(parts)
+    return ""
 
 # The clip-selection prompt uses `[0.0, 3.0]` as an example / fallback hook
 # window. Gemini frequently copies this placeholder verbatim instead of
@@ -488,6 +511,7 @@ def _prune_meta(
         "clips_sha256": clips_fp,
         "gemini_model": _resolved_gemini_model(config),
         "prune_level": level,
+        "llm_backend": current_llm_provider() or "google",
     }
 
 
@@ -573,6 +597,14 @@ def _prune_cache_valid(
         return False
     if meta.get("clips_sha256") != clips_fp:
         return False
+    current_provider = current_llm_provider()
+    meta_provider = meta.get("llm_backend")
+    if current_provider == "openrouter":
+        if meta_provider != "openrouter":
+            return False
+    elif current_provider == "google":
+        if meta_provider not in (None, "google"):
+            return False
     if meta.get("gemini_model") != _resolved_gemini_model(config):
         return False
     if meta.get("prune_level") != level:
@@ -629,28 +661,50 @@ def request_prune_decisions(
     )
     user_text = _build_user_message(clips, transcript)
 
-    model_name = (gemini_model or GEMINI_MODEL).strip()
-    client = genai.Client(api_key=resolve_gemini_api_key())
+    provider = resolve_llm_provider()
+    model_name = model_name_for_provider((gemini_model or GEMINI_MODEL).strip(), provider)
 
     def _call() -> str:
         logger.info(
-            "Gemini content pruning (model=%s, level=%s, clips=%d)...",
+            "%s content pruning (model=%s, level=%s, clips=%d)...",
+            provider,
             model_name,
             level,
             len(clips),
         )
-        response = client.models.generate_content(
-            model=model_name,
-            contents=user_text,
-            config=gemini_generate_config(
-                system_instruction=system,
-                temperature=0.2,
-                response_mime_type="application/json",
-            ),
+        if provider == "google":
+            client = genai.Client(api_key=resolve_gemini_api_key())
+            response = client.models.generate_content(
+                model=model_name,
+                contents=user_text,
+                config=gemini_generate_config(
+                    system_instruction=system,
+                    temperature=0.2,
+                    response_mime_type="application/json",
+                ),
+            )
+            if not response.text:
+                raise RuntimeError("Gemini returned empty response text for content pruning")
+            return response.text
+
+        client = OpenAI(
+            api_key=resolve_openrouter_api_key(),
+            base_url=OPENROUTER_BASE_URL,
+            default_headers=openrouter_default_headers(),
         )
-        if not response.text:
-            raise RuntimeError("Gemini returned empty response text for content pruning")
-        return response.text
+        response = client.chat.completions.create(
+            model=model_name,
+            messages=[
+                {"role": "system", "content": system},
+                {"role": "user", "content": user_text},
+            ],
+            temperature=0.2,
+            response_format={"type": "json_object"},
+        )
+        text = _openai_message_text(response.choices[0].message.content)
+        if not text:
+            raise RuntimeError("OpenRouter returned empty response text for content pruning")
+        return text
 
     raw = _retry_llm("Gemini content pruning", _call)
     decisions = _parse_decisions(raw)

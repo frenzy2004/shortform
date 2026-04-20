@@ -1,4 +1,11 @@
-from humeo_core.primitives.compile import build_ffmpeg_cmd, plan_title_drawtext
+from pathlib import Path
+
+from humeo_core.primitives import compile as compile_mod
+from humeo_core.primitives.compile import (
+    _ensure_windows_fontconfig,
+    build_ffmpeg_cmd,
+    plan_title_drawtext,
+)
 from humeo_core.schemas import Clip, LayoutInstruction, LayoutKind, RenderRequest
 
 
@@ -195,12 +202,14 @@ def test_title_uses_arial_font_not_default_serif():
     """
     short = plan_title_drawtext("Hook title", out_w=1080)
     assert short is not None
-    assert "font=Arial" in short
+    assert "font=Arial" in short or "fontfile='" in short
 
     long_frag = plan_title_drawtext("Prediction Markets vs Derivatives", out_w=1080)
     assert long_frag is not None
-    # Two drawtext calls => font directive appears twice, once per line.
-    assert long_frag.count("font=Arial") == 2
+    if "font=Arial" in long_frag:
+        assert long_frag.count("font=Arial") == 2
+    else:
+        assert long_frag.count("fontfile='") == 2
 
 
 def test_title_font_matches_subtitle_font_family():
@@ -215,7 +224,7 @@ def test_title_font_matches_subtitle_font_family():
         )
     )
     fg = cmd[cmd.index("-filter_complex") + 1]
-    assert "font=Arial" in fg
+    assert "font=Arial" in fg or "fontfile='" in fg
     assert "Fontname=Arial" in fg
 
 
@@ -231,3 +240,23 @@ def test_long_title_pipes_through_build_ffmpeg_cmd():
     assert "[vout]" in fg
     assert ";;" not in fg  # no empty chain links
     assert ",," not in fg  # no stray commas
+
+
+def test_ensure_windows_fontconfig_is_noop_off_windows():
+    env = _ensure_windows_fontconfig()
+    assert isinstance(env, dict)
+
+
+def test_ensure_windows_fontconfig_creates_config(monkeypatch, tmp_path):
+    monkeypatch.setattr(compile_mod.os, "name", "nt", raising=False)
+    monkeypatch.delenv("FONTCONFIG_FILE", raising=False)
+    monkeypatch.setenv("LOCALAPPDATA", str(tmp_path / "localappdata"))
+    monkeypatch.setenv("WINDIR", str(tmp_path / "winroot"))
+
+    env = _ensure_windows_fontconfig()
+
+    cfg_file = Path(env["FONTCONFIG_FILE"])
+    assert cfg_file.is_file()
+    text = cfg_file.read_text(encoding="utf-8")
+    assert (tmp_path / "winroot" / "Fonts").as_posix() in text
+    assert "fontconfig-cache" in text

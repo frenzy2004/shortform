@@ -496,6 +496,52 @@ def test_request_prune_decisions_calls_gemini(mock_client_cls, monkeypatch):
     assert json.loads(raw)["decisions"][0]["clip_id"] == "001"
 
 
+@patch("humeo.content_pruning.OpenAI")
+def test_request_prune_decisions_uses_openrouter_when_router_key_only(
+    mock_openai_cls, monkeypatch
+):
+    monkeypatch.delenv("GOOGLE_API_KEY", raising=False)
+    monkeypatch.delenv("GEMINI_API_KEY", raising=False)
+    monkeypatch.setenv("OPENROUTER_API_KEY", "router-key")
+    mock_inst = MagicMock()
+    mock_openai_cls.return_value = mock_inst
+    mock_inst.chat.completions.create.return_value = MagicMock(
+        choices=[
+            MagicMock(
+                message=MagicMock(
+                    content=json.dumps(
+                        {
+                            "decisions": [
+                                {
+                                    "clip_id": "001",
+                                    "trim_start_sec": 2.0,
+                                    "trim_end_sec": 1.0,
+                                    "reason": "r",
+                                }
+                            ]
+                        }
+                    )
+                )
+            )
+        ]
+    )
+
+    clip = _clip("001", end=200.0)
+    transcript = _transcript_for(100.0, 200.0)
+
+    decisions, raw = request_prune_decisions(
+        [clip], transcript, level="balanced", gemini_model="gemini-x"
+    )
+
+    mock_openai_cls.assert_called_once()
+    call_kwargs = mock_inst.chat.completions.create.call_args.kwargs
+    assert call_kwargs["model"] == "google/gemini-x"
+    assert call_kwargs["response_format"] == {"type": "json_object"}
+    assert len(decisions) == 1
+    assert decisions[0].trim_start_sec == pytest.approx(2.0)
+    assert json.loads(raw)["decisions"][0]["clip_id"] == "001"
+
+
 def test_request_prune_decisions_off_level_is_no_op(monkeypatch):
     monkeypatch.setenv("GOOGLE_API_KEY", "test-key")
     with patch("humeo.content_pruning.genai.Client") as mock_client_cls:
