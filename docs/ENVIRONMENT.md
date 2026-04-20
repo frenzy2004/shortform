@@ -17,8 +17,9 @@ Clip selection uses the **Google Gen AI SDK for Python** (`google-genai` package
 |----------|----------|
 | **`GOOGLE_API_KEY`** | **Preferred** API key for Gemini. Get a key from [Google AI Studio](https://aistudio.google.com/apikey). The SDK also recognizes **`GEMINI_API_KEY`** in the environment when using `genai.Client()` without an explicit key. |
 | **`GEMINI_API_KEY`** | Fallback only if `GOOGLE_API_KEY` is unset (same kind of key as AI Studio). |
+| **`OPENROUTER_API_KEY`** | Optional fallback backend for the same Gemini-like stages when no Google Gemini key is available. Humeo routes clip selection, hook detection, content pruning, and layout vision through OpenRouter's OpenAI-compatible chat completions API. |
 
-Gemini **must** use an explicit API key for clip selection. Without it, clients may fall back to Application Default Credentials and return `403 ACCESS_TOKEN_SCOPE_INSUFFICIENT`.
+Gemini-like stages **must** use an explicit API key. Humeo prefers the Google Gemini SDK when `GOOGLE_API_KEY` / `GEMINI_API_KEY` is present. If those are absent and `OPENROUTER_API_KEY` is set, Humeo falls back to OpenRouter instead. Without any of those keys, the pipeline cannot run the LLM stages.
 
 | Variable | Default | Meaning |
 |----------|---------|---------|

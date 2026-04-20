@@ -39,6 +39,36 @@ def test_resolve_gemini_api_key_missing_raises(monkeypatch):
         resolve_gemini_api_key()
 
 
+def test_resolve_llm_provider_prefers_google_over_openrouter(monkeypatch):
+    monkeypatch.setenv("GOOGLE_API_KEY", "from-google")
+    monkeypatch.setenv("OPENROUTER_API_KEY", "from-openrouter")
+    from humeo.env import resolve_llm_provider
+
+    assert resolve_llm_provider() == "google"
+
+
+def test_resolve_llm_provider_falls_back_to_openrouter(monkeypatch):
+    monkeypatch.delenv("GOOGLE_API_KEY", raising=False)
+    monkeypatch.delenv("GEMINI_API_KEY", raising=False)
+    monkeypatch.setenv("OPENROUTER_API_KEY", "router-key")
+    from humeo.env import resolve_llm_provider
+
+    assert resolve_llm_provider() == "openrouter"
+
+
+def test_model_name_for_provider_normalizes_openrouter_prefix():
+    from humeo.env import model_name_for_provider
+
+    assert (
+        model_name_for_provider("gemini-3.1-flash-lite-preview", "openrouter")
+        == "google/gemini-3.1-flash-lite-preview"
+    )
+    assert (
+        model_name_for_provider("google/gemini-3.1-flash-lite-preview", "google")
+        == "gemini-3.1-flash-lite-preview"
+    )
+
+
 @patch("humeo.clip_selector.genai.Client")
 def test_select_clips_uses_gemini_client(mock_client_cls, monkeypatch):
     monkeypatch.setenv("GOOGLE_API_KEY", "test-api-key")
@@ -56,14 +86,40 @@ def test_select_clips_uses_gemini_client(mock_client_cls, monkeypatch):
     assert call_kw[1]["model"]  # model name set
 
 
+@patch("humeo.clip_selector.OpenAI")
+def test_select_clips_uses_openrouter_when_only_router_key(mock_openai_cls, monkeypatch):
+    monkeypatch.delenv("GOOGLE_API_KEY", raising=False)
+    monkeypatch.delenv("GEMINI_API_KEY", raising=False)
+    monkeypatch.setenv("OPENROUTER_API_KEY", "router-key")
+    mock_inst = MagicMock()
+    mock_openai_cls.return_value = mock_inst
+    mock_inst.chat.completions.create.return_value = MagicMock(
+        choices=[MagicMock(message=MagicMock(content='{"clips": []}'))]
+    )
+
+    from humeo.clip_selector import select_clips
+
+    select_clips({"segments": [{"start": 0.0, "end": 1.0, "text": "hi"}]})
+
+    mock_openai_cls.assert_called_once()
+    init_kwargs = mock_openai_cls.call_args.kwargs
+    assert init_kwargs["api_key"] == "router-key"
+    assert init_kwargs["base_url"] == "https://openrouter.ai/api/v1"
+
+    call_kw = mock_inst.chat.completions.create.call_args.kwargs
+    assert call_kw["model"] == "google/gemini-3.1-flash-lite-preview"
+    assert call_kw["response_format"] == {"type": "json_object"}
+
+
 @patch("humeo.clip_selector.genai.Client")
 def test_select_clips_raises_without_key(mock_client_cls, monkeypatch):
     monkeypatch.delenv("GOOGLE_API_KEY", raising=False)
     monkeypatch.delenv("GEMINI_API_KEY", raising=False)
+    monkeypatch.delenv("OPENROUTER_API_KEY", raising=False)
 
     from humeo.clip_selector import select_clips
 
-    with pytest.raises(ValueError, match="GOOGLE_API_KEY"):
+    with pytest.raises(ValueError, match="OPENROUTER_API_KEY"):
         select_clips({"segments": []})
 
     mock_client_cls.assert_not_called()

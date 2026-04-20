@@ -44,13 +44,22 @@ from pathlib import Path
 from typing import Any, Callable, TypeVar
 
 from google import genai
+from openai import OpenAI
 from pydantic import BaseModel, Field, ValidationError
 
 from humeo_core.schemas import Clip
 
 from humeo.config import GEMINI_MODEL, PipelineConfig
 from humeo.content_pruning import _looks_like_default_hook, _segments_within_clip
-from humeo.env import resolve_gemini_api_key
+from humeo.env import (
+    OPENROUTER_BASE_URL,
+    current_llm_provider,
+    model_name_for_provider,
+    openrouter_default_headers,
+    resolve_gemini_api_key,
+    resolve_llm_provider,
+    resolve_openrouter_api_key,
+)
 from humeo.gemini_generate import gemini_generate_config
 from humeo.prompt_loader import hook_detection_system_prompt
 
@@ -71,6 +80,20 @@ LLM_RETRY_DELAY_SEC = 2.0
 # obvious "LLM returned the whole paragraph" mistakes.
 _MIN_HOOK_DURATION_SEC = 1.0
 _MAX_HOOK_DURATION_SEC = 10.0
+
+
+def _openai_message_text(content: object) -> str:
+    if isinstance(content, str):
+        return content
+    if isinstance(content, list):
+        parts: list[str] = []
+        for item in content:
+            if isinstance(item, dict) and item.get("type") == "text":
+                text = item.get("text")
+                if isinstance(text, str):
+                    parts.append(text)
+        return "".join(parts)
+    return ""
 
 
 class _HookDecision(BaseModel):
@@ -263,6 +286,7 @@ def _hook_meta(
         "transcript_sha256": transcript_fp,
         "clips_sha256": clips_fp,
         "gemini_model": _resolved_gemini_model(config),
+        "llm_backend": current_llm_provider() or "google",
     }
 
 
@@ -287,6 +311,14 @@ def _hook_cache_valid(
         return False
     if meta.get("clips_sha256") != clips_fp:
         return False
+    current_provider = current_llm_provider()
+    meta_provider = meta.get("llm_backend")
+    if current_provider == "openrouter":
+        if meta_provider != "openrouter":
+            return False
+    elif current_provider == "google":
+        if meta_provider not in (None, "google"):
+            return False
     if meta.get("gemini_model") != _resolved_gemini_model(config):
         return False
     return True
@@ -404,25 +436,46 @@ def request_hook_decisions(
     system = hook_detection_system_prompt()
     user_text = _build_user_message(clips, transcript)
 
-    model_name = (gemini_model or GEMINI_MODEL).strip()
-    client = genai.Client(api_key=resolve_gemini_api_key())
+    provider = resolve_llm_provider()
+    model_name = model_name_for_provider((gemini_model or GEMINI_MODEL).strip(), provider)
 
     def _call() -> str:
         logger.info(
-            "Gemini hook detection (model=%s, clips=%d)...", model_name, len(clips)
+            "%s hook detection (model=%s, clips=%d)...", provider, model_name, len(clips)
         )
-        response = client.models.generate_content(
+        if provider == "google":
+            client = genai.Client(api_key=resolve_gemini_api_key())
+            response = client.models.generate_content(
+                model=model_name,
+                contents=user_text,
+                config=gemini_generate_config(
+                    system_instruction=system,
+                    temperature=0.2,
+                    response_mime_type="application/json",
+                ),
+            )
+            if not response.text:
+                raise RuntimeError("Gemini returned empty response text for hook detection")
+            return response.text
+
+        client = OpenAI(
+            api_key=resolve_openrouter_api_key(),
+            base_url=OPENROUTER_BASE_URL,
+            default_headers=openrouter_default_headers(),
+        )
+        response = client.chat.completions.create(
             model=model_name,
-            contents=user_text,
-            config=gemini_generate_config(
-                system_instruction=system,
-                temperature=0.2,
-                response_mime_type="application/json",
-            ),
+            messages=[
+                {"role": "system", "content": system},
+                {"role": "user", "content": user_text},
+            ],
+            temperature=0.2,
+            response_format={"type": "json_object"},
         )
-        if not response.text:
-            raise RuntimeError("Gemini returned empty response text for hook detection")
-        return response.text
+        text = _openai_message_text(response.choices[0].message.content)
+        if not text:
+            raise RuntimeError("OpenRouter returned empty response text for hook detection")
+        return text
 
     raw = _retry_llm("Gemini hook detection", _call)
     decisions = _parse_decisions(raw)

@@ -52,3 +52,33 @@ def test_legacy_v1_openai_meta_invalidates(tmp_path):
         "openai_model": "gpt-4o",
     }
     assert not cache_valid(meta, transcript_fingerprint(tr), cfg)
+
+
+def test_openrouter_backend_invalidates_legacy_google_cache(monkeypatch):
+    tr = {"segments": []}
+    cfg = PipelineConfig(youtube_url="https://youtu.be/x", gemini_model="m")
+    meta = {
+        "version": CURRENT_META_VERSION,
+        "transcript_sha256": transcript_fingerprint(tr),
+        "gemini_model": "m",
+    }
+    monkeypatch.delenv("GOOGLE_API_KEY", raising=False)
+    monkeypatch.delenv("GEMINI_API_KEY", raising=False)
+    monkeypatch.setenv("OPENROUTER_API_KEY", "router-key")
+
+    assert not cache_valid(meta, transcript_fingerprint(tr), cfg)
+
+
+def test_openrouter_backend_roundtrip(monkeypatch, tmp_path):
+    tr = {"segments": []}
+    monkeypatch.delenv("GOOGLE_API_KEY", raising=False)
+    monkeypatch.delenv("GEMINI_API_KEY", raising=False)
+    monkeypatch.setenv("OPENROUTER_API_KEY", "router-key")
+    cfg = PipelineConfig(youtube_url="https://youtu.be/x", gemini_model="m")
+
+    write_artifacts(tmp_path, transcript=tr, config=cfg, raw_response='{"clips":[]}')
+    meta = load_meta(tmp_path)
+
+    assert meta is not None
+    assert meta.get("llm_backend") == "openrouter"
+    assert cache_valid(meta, transcript_fingerprint(tr), cfg)

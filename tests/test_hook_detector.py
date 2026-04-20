@@ -257,6 +257,37 @@ def test_request_hook_decisions_calls_gemini(mock_client_cls, monkeypatch):
     assert json.loads(raw)["hooks"][0]["clip_id"] == "001"
 
 
+@patch("humeo.hook_detector.OpenAI")
+def test_request_hook_decisions_uses_openrouter_when_router_key_only(mock_openai_cls, monkeypatch):
+    monkeypatch.delenv("GOOGLE_API_KEY", raising=False)
+    monkeypatch.delenv("GEMINI_API_KEY", raising=False)
+    monkeypatch.setenv("OPENROUTER_API_KEY", "router-key")
+    mock_inst = MagicMock()
+    mock_openai_cls.return_value = mock_inst
+    mock_inst.chat.completions.create.return_value = MagicMock(
+        choices=[
+            MagicMock(
+                message=MagicMock(
+                    content=json.dumps(
+                        {"hooks": [{"clip_id": "001", "hook_start_sec": 4.0, "hook_end_sec": 7.0}]}
+                    )
+                )
+            )
+        ]
+    )
+    clip = _clip("001", end=200.0)
+    transcript = _transcript_for(100.0, 200.0)
+
+    decisions, raw = request_hook_decisions([clip], transcript, gemini_model="gemini-x")
+
+    mock_openai_cls.assert_called_once()
+    call_kwargs = mock_inst.chat.completions.create.call_args.kwargs
+    assert call_kwargs["model"] == "google/gemini-x"
+    assert call_kwargs["response_format"] == {"type": "json_object"}
+    assert len(decisions) == 1
+    assert json.loads(raw)["hooks"][0]["clip_id"] == "001"
+
+
 # ---------------------------------------------------------------------------
 # Stage entrypoint + cache
 # ---------------------------------------------------------------------------

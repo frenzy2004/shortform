@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import base64
 import hashlib
 import json
 import logging
@@ -10,6 +11,7 @@ from typing import Any
 
 from google import genai
 from google.genai import types
+from openai import OpenAI
 
 from humeo_core.schemas import (
     BoundingBox,
@@ -22,7 +24,15 @@ from humeo_core.schemas import (
 from humeo_core.primitives.vision import layout_instruction_from_regions
 
 from humeo.config import GEMINI_MODEL, GEMINI_VISION_MODEL, PipelineConfig
-from humeo.env import resolve_gemini_api_key
+from humeo.env import (
+    OPENROUTER_BASE_URL,
+    current_llm_provider,
+    model_name_for_provider,
+    openrouter_default_headers,
+    resolve_gemini_api_key,
+    resolve_llm_provider,
+    resolve_openrouter_api_key,
+)
 from humeo.gemini_generate import gemini_generate_config
 
 logger = logging.getLogger(__name__)
@@ -69,6 +79,20 @@ When in doubt prefer ``sit_center``. Never output more than two of {person, char
 No markdown. JSON only."""
 
 
+def _openai_message_text(content: object) -> str:
+    if isinstance(content, str):
+        return content
+    if isinstance(content, list):
+        parts: list[str] = []
+        for item in content:
+            if isinstance(item, dict) and item.get("type") == "text":
+                text = item.get("text")
+                if isinstance(text, str):
+                    parts.append(text)
+        return "".join(parts)
+    return ""
+
+
 def _clips_fingerprint(clips_path: Path) -> str:
     if not clips_path.is_file():
         return ""
@@ -94,6 +118,14 @@ def layout_cache_valid(
         meta.get("transcript_sha256") == transcript_fp
         and meta.get("clips_sha256") == clips_fp
         and meta.get("gemini_vision_model") == vision_model
+        and (
+            current_llm_provider() is None
+            or (
+                current_llm_provider() == "google"
+                and meta.get("llm_backend") in (None, "google")
+            )
+            or meta.get("llm_backend") == current_llm_provider()
+        )
     )
 
 
@@ -122,6 +154,7 @@ def write_layout_cache(
         "transcript_sha256": transcript_fp,
         "clips_sha256": clips_fp,
         "gemini_vision_model": vision_model,
+        "llm_backend": current_llm_provider() or "google",
     }
     (work_dir / LAYOUT_VISION_META).write_text(
         json.dumps(meta, indent=2) + "\n", encoding="utf-8"
@@ -256,21 +289,51 @@ def _call_gemini_vision(keyframe_path: str, model_name: str) -> dict[str, Any]:
     path = Path(keyframe_path)
     data = path.read_bytes()
     mime = "image/jpeg" if path.suffix.lower() in (".jpg", ".jpeg") else "image/png"
-    client = genai.Client(api_key=resolve_gemini_api_key())
-    response = client.models.generate_content(
-        model=model_name,
-        contents=[
-            types.Part.from_text(text=GEMINI_LAYOUT_VISION_PROMPT),
-            types.Part.from_bytes(data=data, mime_type=mime),
-        ],
-        config=gemini_generate_config(
-            temperature=0.2,
-            response_mime_type="application/json",
-        ),
+    provider = resolve_llm_provider()
+    resolved_model = model_name_for_provider(model_name, provider)
+
+    if provider == "google":
+        client = genai.Client(api_key=resolve_gemini_api_key())
+        response = client.models.generate_content(
+            model=resolved_model,
+            contents=[
+                types.Part.from_text(text=GEMINI_LAYOUT_VISION_PROMPT),
+                types.Part.from_bytes(data=data, mime_type=mime),
+            ],
+            config=gemini_generate_config(
+                temperature=0.2,
+                response_mime_type="application/json",
+            ),
+        )
+        if not response.text:
+            raise RuntimeError("Gemini vision returned empty response")
+        return json.loads(response.text)
+
+    client = OpenAI(
+        api_key=resolve_openrouter_api_key(),
+        base_url=OPENROUTER_BASE_URL,
+        default_headers=openrouter_default_headers(),
     )
-    if not response.text:
-        raise RuntimeError("Gemini vision returned empty response")
-    return json.loads(response.text)
+    data_url = f"data:{mime};base64,{base64.b64encode(data).decode('ascii')}"
+    response = client.chat.completions.create(
+        model=resolved_model,
+        messages=[
+            {"role": "system", "content": GEMINI_LAYOUT_VISION_PROMPT},
+            {
+                "role": "user",
+                "content": [
+                    {"type": "text", "text": "Analyze this keyframe and return only JSON."},
+                    {"type": "image_url", "image_url": {"url": data_url}},
+                ],
+            },
+        ],
+        temperature=0.2,
+        response_format={"type": "json_object"},
+    )
+    text = _openai_message_text(response.choices[0].message.content)
+    if not text:
+        raise RuntimeError("OpenRouter vision returned empty response")
+    return json.loads(text)
 
 
 def infer_layout_instructions(
