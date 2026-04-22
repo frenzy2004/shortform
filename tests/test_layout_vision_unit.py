@@ -1,10 +1,19 @@
 """layout_vision parsing (no API calls)."""
 
 import math
+from pathlib import Path
 from unittest.mock import MagicMock, patch
 
-from humeo.layout_vision import _call_gemini_vision, _face_center_x, _instruction_from_gemini_json
-from humeo_core.schemas import BoundingBox, LayoutKind
+import pytest
+
+from humeo.layout_vision import (
+    _call_gemini_vision,
+    _face_center_x,
+    _instruction_from_gemini_json,
+    _tracking_points_from_centers,
+    infer_layout_instructions,
+)
+from humeo_core.schemas import BoundingBox, LayoutKind, Scene
 
 
 def test_instruction_from_gemini_json_split_with_bboxes():
@@ -18,6 +27,56 @@ def test_instruction_from_gemini_json_split_with_bboxes():
     assert instr.layout == LayoutKind.SPLIT_CHART_PERSON
     assert instr.split_chart_region is not None
     assert instr.split_person_region is not None
+
+
+def test_instruction_from_gemini_json_split_with_pixel_bboxes():
+    data = {
+        "layout": "split_chart_person",
+        "person_bbox": {"x1": 400, "y1": 40, "x2": 620, "y2": 340},
+        "face_bbox": {"x1": 450, "y1": 40, "x2": 540, "y2": 140},
+        "chart_bbox": {"x1": 20, "y1": 25, "x2": 360, "y2": 250},
+        "reason": "speaker right, chart left",
+    }
+    instr = _instruction_from_gemini_json("005", data, image_size=(640, 360))
+    assert instr.layout == LayoutKind.SPLIT_CHART_PERSON
+    assert instr.split_chart_region is not None
+    assert instr.split_person_region is not None
+    assert math.isclose(instr.split_chart_region.x1, 20 / 640, abs_tol=1e-6)
+    assert math.isclose(instr.split_person_region.x1, 400 / 640, abs_tol=1e-6)
+
+
+def test_instruction_from_gemini_json_split_with_thousand_grid_bboxes():
+    data = {
+        "layout": "split_chart_person",
+        "person_bbox": {"x1": 508, "y1": 66, "x2": 999, "y2": 1000},
+        "face_bbox": {"x1": 692, "y1": 66, "x2": 866, "y2": 314},
+        "chart_bbox": {"x1": 20, "y1": 28, "x2": 581, "y2": 698},
+        "reason": "0..1000 pseudo-normalized values",
+    }
+    instr = _instruction_from_gemini_json("004", data, image_size=(640, 360))
+    assert instr.layout == LayoutKind.SPLIT_CHART_PERSON
+    assert instr.split_chart_region is not None
+    assert instr.split_person_region is not None
+    assert math.isclose(instr.split_person_region.x1, 0.508, abs_tol=1e-6)
+    assert math.isclose(instr.split_chart_region.x2, 0.581, abs_tol=1e-6)
+    assert math.isclose(instr.person_x_norm, 0.779, abs_tol=1e-6)
+
+
+def test_instruction_from_gemini_json_split_with_mixed_bbox_units():
+    data = {
+        "layout": "split_chart_person",
+        "person_bbox": {"x1": 0.585, "y1": 65, "x2": 0.985, "y2": 985},
+        "face_bbox": {"x1": 0.685, "y1": 0.065, "x2": 0.885, "y2": 350},
+        "chart_bbox": {"x1": 0.02, "y1": 30, "x2": 0.58, "y2": 0.69},
+        "reason": "mixed normalized/pixel values",
+    }
+    instr = _instruction_from_gemini_json("004", data, image_size=(1000, 1000))
+    assert instr.layout == LayoutKind.SPLIT_CHART_PERSON
+    assert instr.split_chart_region is not None
+    assert instr.split_person_region is not None
+    assert math.isclose(instr.split_person_region.y1, 0.065, abs_tol=1e-6)
+    assert math.isclose(instr.split_chart_region.y1, 0.03, abs_tol=1e-6)
+    assert math.isclose(instr.person_x_norm, 0.785, abs_tol=1e-6)
 
 
 def test_instruction_from_gemini_json_sit_center():
@@ -138,3 +197,84 @@ def test_call_gemini_vision_uses_openrouter_image_payload(mock_openai_cls, monke
     content = call_kwargs["messages"][1]["content"]
     assert content[1]["type"] == "image_url"
     assert content[1]["image_url"]["url"].startswith("data:image/jpeg;base64,")
+
+
+def test_tracking_points_filter_obvious_outlier_sample():
+    points = _tracking_points_from_centers(
+        4.0,
+        [
+            (0.0, 0.20),
+            (1.0, 0.25),
+            (2.0, 0.75),
+            (3.0, 0.30),
+            (4.0, 0.35),
+        ],
+    )
+    xs = [point.x_norm for point in points]
+    assert max(xs) < 0.5
+    assert points[2].x_norm == pytest.approx((0.25 + 0.30) / 2.0)
+
+
+@patch("humeo.layout_vision._call_gemini_vision")
+@patch("humeo.layout_vision._extract_frame_at_time")
+def test_infer_layout_instructions_adds_person_tracking(
+    mock_extract_frame_at_time,
+    mock_call_gemini_vision,
+    tmp_path,
+):
+    source_video = tmp_path / "source.mp4"
+    source_video.write_bytes(b"fake")
+    keyframe_path = tmp_path / "001.jpg"
+    keyframe_path.write_bytes(b"\xff\xd8\xff\xe0fakejpeg")
+
+    scene = Scene(scene_id="001", start_time=10.0, end_time=20.0, keyframe_path=str(keyframe_path))
+
+    def fake_extract(source_path: Path, time_sec: float, output_path: Path) -> Path:
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+        output_path.write_bytes(b"\xff\xd8\xff\xe0fakejpeg")
+        return output_path
+
+    def fake_vision(path: str, model_name: str) -> dict[str, object]:
+        name = Path(path).name
+        if name == "001.jpg":
+            return {
+                "layout": "sit_center",
+                "person_bbox": {"x1": 0.10, "y1": 0.10, "x2": 0.40, "y2": 0.95},
+                "face_bbox": {"x1": 0.16, "y1": 0.12, "x2": 0.26, "y2": 0.28},
+                "reason": "speaker left at midpoint",
+            }
+        if name.endswith("001000.jpg"):
+            face = {"x1": 0.08, "y1": 0.12, "x2": 0.18, "y2": 0.28}
+        elif name.endswith("003000.jpg"):
+            face = {"x1": 0.22, "y1": 0.12, "x2": 0.32, "y2": 0.28}
+        elif name.endswith("007000.jpg"):
+            face = {"x1": 0.56, "y1": 0.12, "x2": 0.66, "y2": 0.28}
+        else:
+            face = {"x1": 0.70, "y1": 0.12, "x2": 0.80, "y2": 0.28}
+        return {
+            "layout": "sit_center",
+            "person_bbox": {"x1": max(0.0, face["x1"] - 0.08), "y1": 0.10, "x2": min(1.0, face["x2"] + 0.12), "y2": 0.95},
+            "face_bbox": face,
+            "reason": "tracked speaker",
+        }
+
+    mock_extract_frame_at_time.side_effect = fake_extract
+    mock_call_gemini_vision.side_effect = fake_vision
+
+    instructions, raw_by_clip = infer_layout_instructions(
+        [scene],
+        gemini_vision_model="gemini-test",
+        source_video=source_video,
+        tracking_dir=tmp_path / "tracking",
+    )
+
+    instr = instructions["001"]
+    assert instr.layout == LayoutKind.SIT_CENTER
+    assert len(instr.person_tracking) >= 4
+    assert instr.person_tracking[0].t_sec == 0.0
+    assert instr.person_tracking[-1].t_sec == 10.0
+    assert instr.person_tracking[0].x_norm < instr.person_tracking[-1].x_norm
+
+    samples = raw_by_clip["001"]["person_tracking_samples"]
+    assert samples
+    assert samples[0]["sample_kind"] == "midpoint_keyframe"

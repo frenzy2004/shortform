@@ -151,7 +151,7 @@ def test_parse_clips_preserves_score_breakdown_and_reasoning():
     assert clips[0].reasoning == "Strong payoff and clear takeaway."
 
 
-def test_parse_clips_accepts_legacy_point_based_score_breakdown():
+def test_parse_clips_clamps_legacy_point_based_score_breakdown():
     from humeo.clip_selector import _parse_clips
 
     raw_json = json.dumps(
@@ -176,8 +176,8 @@ def test_parse_clips_accepts_legacy_point_based_score_breakdown():
 
     assert len(clips) == 1
     assert clips[0].score_breakdown == {
-        "counter_intuitive_claim": 3.0,
-        "quotable_phrasing": 2.0,
+        "counter_intuitive_claim": 1.0,
+        "quotable_phrasing": 1.0,
     }
 
 

@@ -6,7 +6,7 @@ import json
 import logging
 from pathlib import Path
 
-from humeo.video_cache import extract_youtube_video_id
+from humeo.video_cache import extract_youtube_video_id, normalize_local_source_path
 from humeo_core.schemas import SessionState
 
 logger = logging.getLogger(__name__)
@@ -18,6 +18,9 @@ def source_key_for_url(youtube_url: str) -> str:
     video_id = extract_youtube_video_id(youtube_url)
     if video_id:
         return f"youtube:{video_id}"
+    local_path = normalize_local_source_path(youtube_url)
+    if local_path is not None:
+        return f"local:{local_path}"
     return f"url:{youtube_url}"
 
 

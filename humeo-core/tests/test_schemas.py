@@ -13,6 +13,7 @@ from humeo_core.schemas import (
     RenderRequest,
     Scene,
     SessionState,
+    TimedCenterPoint,
     TranscriptWord,
 )
 
@@ -29,11 +30,36 @@ def test_layout_instruction_defaults_and_bounds():
     li = LayoutInstruction(clip_id="c", layout=LayoutKind.SIT_CENTER)
     assert li.zoom == 1.0
     assert 0 <= li.person_x_norm <= 1
+    assert li.person_tracking == []
     assert li.focus_stack_order == FocusStackOrder.CHART_THEN_PERSON
     with pytest.raises(ValueError):
         LayoutInstruction(clip_id="c", layout=LayoutKind.SIT_CENTER, zoom=0.0)
     with pytest.raises(ValueError):
         LayoutInstruction(clip_id="c", layout=LayoutKind.SIT_CENTER, person_x_norm=2.0)
+
+
+def test_layout_instruction_accepts_sorted_tracking_points():
+    li = LayoutInstruction(
+        clip_id="c",
+        layout=LayoutKind.SIT_CENTER,
+        person_tracking=[
+            TimedCenterPoint(t_sec=0.0, x_norm=0.2),
+            TimedCenterPoint(t_sec=5.0, x_norm=0.8),
+        ],
+    )
+    assert [point.t_sec for point in li.person_tracking] == [0.0, 5.0]
+
+
+def test_layout_instruction_rejects_unsorted_tracking_points():
+    with pytest.raises(ValueError, match="person_tracking times"):
+        LayoutInstruction(
+            clip_id="c",
+            layout=LayoutKind.SIT_CENTER,
+            person_tracking=[
+                TimedCenterPoint(t_sec=5.0, x_norm=0.8),
+                TimedCenterPoint(t_sec=1.0, x_norm=0.2),
+            ],
+        )
 
 
 def test_clip_duration():
@@ -157,9 +183,9 @@ def test_clip_score_breakdown_validation():
         topic="t",
         start_time_sec=0.0,
         end_time_sec=30.0,
-        score_breakdown={"hook": 1.5},
+        score_breakdown={"hook": 1.2},
     )
-    assert clip.score_breakdown == {"hook": 1.5}
+    assert clip.score_breakdown == {"hook": 1.0}
 
     clip = Clip(
         clip_id="1",

@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import hashlib
 import json
 import logging
 import re
@@ -22,6 +23,7 @@ _YOUTUBE_ID_RE = re.compile(
 
 MANIFEST_VERSION = 1
 MANIFEST_NAME = "video_cache_manifest.json"
+LOCAL_SOURCE_INFO_NAME = "source.local.json"
 
 
 class VideoCacheEntry(BaseModel):
@@ -46,6 +48,66 @@ def extract_youtube_video_id(url: str) -> str | None:
     """Return the 11-character video id, or None if not a recognized YouTube URL."""
     m = _YOUTUBE_ID_RE.search(url)
     return m.group(1) if m else None
+
+
+def looks_like_local_source(source: str) -> bool:
+    """Return True when ``source`` should be treated as a local file path."""
+    if extract_youtube_video_id(source):
+        return False
+    return "://" not in source
+
+
+def normalize_local_source_path(source: str) -> Path | None:
+    """Return an absolute local path for ``source`` when it is file-like."""
+    if not looks_like_local_source(source):
+        return None
+    return Path(source).expanduser().resolve(strict=False)
+
+
+def local_source_cache_key(source: str) -> str | None:
+    """Return a stable cache key for a local source path."""
+    path = normalize_local_source_path(source)
+    if path is None:
+        return None
+    stem = re.sub(r"[^a-zA-Z0-9]+", "-", path.stem).strip("-").lower() or "video"
+    digest = hashlib.sha256(str(path).encode("utf-8")).hexdigest()[:16]
+    return f"{stem}-{digest}"
+
+
+def _local_source_info_path(work_dir: Path) -> Path:
+    return work_dir / LOCAL_SOURCE_INFO_NAME
+
+
+def read_local_source_info(work_dir: Path) -> dict[str, str]:
+    """Read ``source.local.json`` when present."""
+    path = _local_source_info_path(work_dir)
+    if not path.is_file():
+        return {}
+    with open(path, encoding="utf-8") as f:
+        data = json.load(f)
+    if not isinstance(data, dict):
+        return {}
+    return {str(k): str(v) for k, v in data.items()}
+
+
+def write_local_source_info(work_dir: Path, source_path: Path) -> Path:
+    """Persist the original local source path used for ``source.mp4``."""
+    work_dir.mkdir(parents=True, exist_ok=True)
+    path = _local_source_info_path(work_dir)
+    payload = {"local_source_path": str(Path(source_path).expanduser().resolve(strict=False))}
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(payload, f, indent=2)
+        f.write("\n")
+    return path
+
+
+def local_source_matches(work_dir: Path, source: str) -> bool:
+    """Return True when ``work_dir`` already contains the same local source."""
+    path = normalize_local_source_path(source)
+    if path is None:
+        return False
+    info = read_local_source_info(work_dir)
+    return info.get("local_source_path") == str(path)
 
 
 def manifest_path(cache_root: Path | None = None) -> Path:
@@ -81,7 +143,9 @@ def resolve_work_directory(
     """Pick the directory for ``source.mp4``, ``transcript.json``, ``clips.json``, etc.
 
     - If ``explicit_work_dir`` is set (CLI ``--work-dir``), use it.
-    - Else if video cache is disabled or the URL has no YouTube id, use ``.humeo_work``.
+    - Else if video cache is disabled, use ``.humeo_work``.
+    - Else if the source is a local file path, use ``<cache_root>/local/<source_key>/``.
+    - Else if the source has no YouTube id, use ``.humeo_work``.
     - Else use ``<cache_root>/videos/<video_id>/`` (creates parents as needed).
     """
     if explicit_work_dir is not None:
@@ -91,6 +155,13 @@ def resolve_work_directory(
 
     if not use_video_cache:
         p = Path(".humeo_work").resolve()
+        p.mkdir(parents=True, exist_ok=True)
+        return p
+
+    local_key = local_source_cache_key(youtube_url)
+    if local_key:
+        root = cache_root if cache_root is not None else default_humeo_cache_root()
+        p = (root / "local" / local_key).resolve()
         p.mkdir(parents=True, exist_ok=True)
         return p
 
@@ -106,9 +177,17 @@ def resolve_work_directory(
     return p
 
 
-def ingest_complete(work_dir: Path) -> bool:
-    """Return True if both video and transcript exist (repeat-run reuse)."""
-    return (work_dir / "source.mp4").is_file() and (work_dir / "transcript.json").is_file()
+def ingest_complete(work_dir: Path, source: str | None = None) -> bool:
+    """Return True if both video and transcript exist and match the current source."""
+    complete = (work_dir / "source.mp4").is_file() and (work_dir / "transcript.json").is_file()
+    if not complete:
+        return False
+    if source is None:
+        return True
+    local_path = normalize_local_source_path(source)
+    if local_path is None:
+        return True
+    return local_source_matches(work_dir, source)
 
 
 def read_youtube_info_json(work_dir: Path) -> dict[str, Any]:

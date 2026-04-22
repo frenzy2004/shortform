@@ -217,3 +217,71 @@ def test_pipeline_different_source_in_same_workdir_ignores_old_state(monkeypatch
     assert call_notes == [[]]
     assert state["source_key"] == "youtube:PdVv_vLkUgk"
     assert state["steering_notes"] == []
+
+
+def test_pipeline_local_source_stages_video_without_downloading(monkeypatch, tmp_path):
+    import humeo.pipeline as pipeline_mod
+
+    local_source = tmp_path / "downloads" / "episode.mp4"
+    local_source.parent.mkdir(parents=True, exist_ok=True)
+    local_source.write_bytes(b"video")
+    transcript = {
+        "segments": [
+            {"start": 0.0, "end": 5.0, "text": "hello"},
+            {"start": 5.0, "end": 10.0, "text": "world"},
+        ]
+    }
+    (tmp_path / "transcript.json").write_text(json.dumps(transcript), encoding="utf-8")
+
+    clips = [_clip("001")]
+    monkeypatch.setattr(
+        pipeline_mod,
+        "download_video",
+        lambda *_args, **_kwargs: (_ for _ in ()).throw(AssertionError("download_video should not be called")),
+    )
+    monkeypatch.setattr(
+        pipeline_mod,
+        "select_clips",
+        lambda *_args, **_kwargs: (list(clips), '{"clips": []}'),
+    )
+    monkeypatch.setattr(pipeline_mod, "extract_audio", lambda *_args, **_kwargs: tmp_path / "source_audio.wav")
+    monkeypatch.setattr(pipeline_mod, "transcribe_whisperx", lambda *_args, **_kwargs: transcript)
+    monkeypatch.setattr(pipeline_mod, "run_hook_detection_stage", lambda *_args, **_kwargs: list(clips))
+    monkeypatch.setattr(pipeline_mod, "run_content_pruning_stage", lambda *_args, **_kwargs: list(clips))
+    monkeypatch.setattr(
+        pipeline_mod,
+        "extract_keyframes",
+        lambda *_args, **_kwargs: [
+            Scene(scene_id="001", start_time=0.0, end_time=60.0, keyframe_path="frame.jpg")
+        ],
+    )
+    monkeypatch.setattr(
+        pipeline_mod,
+        "run_layout_vision_stage",
+        lambda *_args, **_kwargs: {
+            "001": LayoutInstruction(clip_id="001", layout=LayoutKind.SIT_CENTER)
+        },
+    )
+    monkeypatch.setattr(pipeline_mod, "generate_ass", lambda *_args, **_kwargs: tmp_path / "subtitles" / "clip.ass")
+
+    def fake_reframe(*, output_path, **_kwargs):
+        Path(output_path).parent.mkdir(parents=True, exist_ok=True)
+        Path(output_path).write_text("rendered", encoding="utf-8")
+
+    monkeypatch.setattr(pipeline_mod, "reframe_clip_ffmpeg", fake_reframe)
+
+    outputs = run_pipeline(
+        PipelineConfig(
+            youtube_url=str(local_source),
+            work_dir=tmp_path,
+            output_dir=tmp_path / "output",
+            interactive=False,
+            gemini_model="gemini-test",
+        )
+    )
+
+    assert len(outputs) == 1
+    assert (tmp_path / "source.mp4").read_bytes() == b"video"
+    assert json.loads((tmp_path / "source.local.json").read_text(encoding="utf-8"))["local_source_path"] == str(
+        local_source.resolve()
+    )

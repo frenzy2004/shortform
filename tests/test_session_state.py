@@ -12,6 +12,13 @@ def test_source_key_falls_back_to_url():
     assert source_key_for_url("https://example.com/video") == "url:https://example.com/video"
 
 
+def test_source_key_for_local_path(tmp_path):
+    source = tmp_path / "episode.mp4"
+    source.write_bytes(b"x")
+
+    assert source_key_for_url(str(source)) == f"local:{source.resolve()}"
+
+
 def test_save_and_load_roundtrip(tmp_path):
     state = SessionState(
         source_key="youtube:PdVv_vLkUgk",

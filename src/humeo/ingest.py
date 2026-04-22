@@ -10,15 +10,52 @@ Responsibilities:
 import json
 import logging
 import os
+import shutil
 import subprocess
 from math import ceil
 from pathlib import Path
+
+from humeo.video_cache import local_source_matches, write_local_source_info
 
 logger = logging.getLogger(__name__)
 
 OPENAI_MAX_UPLOAD_BYTES = 25 * 1024 * 1024
 OPENAI_TARGET_UPLOAD_BYTES = 20 * 1024 * 1024
 OPENAI_MIN_CHUNK_SEC = 300.0
+
+
+def stage_local_video(source: str | Path, output_dir: Path) -> Path:
+    """
+    Copy a local source video into ``output_dir/source.mp4`` for cacheable reruns.
+    """
+    source_path = Path(source).expanduser().resolve(strict=False)
+    if not source_path.is_file():
+        raise FileNotFoundError(f"Local source video does not exist: {source_path}")
+
+    output_dir.mkdir(parents=True, exist_ok=True)
+    staged_path = output_dir / "source.mp4"
+    staged_resolved = staged_path.resolve(strict=False)
+
+    if source_path == staged_resolved:
+        logger.info("Using local source video in place: %s", source_path)
+        write_local_source_info(output_dir, source_path)
+        return staged_path
+
+    if staged_path.exists() and local_source_matches(output_dir, str(source_path)):
+        logger.info("Local source already staged at: %s", staged_path)
+        return staged_path
+
+    if source_path.suffix.lower() != ".mp4":
+        logger.warning(
+            "Local source uses %s; staging it as source.mp4 anyway.",
+            source_path.suffix or "<no extension>",
+        )
+
+    action = "Replacing" if staged_path.exists() else "Staging"
+    logger.info("%s local video: %s -> %s", action, source_path, staged_path)
+    shutil.copy2(source_path, staged_path)
+    write_local_source_info(output_dir, source_path)
+    return staged_path
 
 
 def download_video(youtube_url: str, output_dir: Path) -> Path:

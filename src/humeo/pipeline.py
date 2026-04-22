@@ -15,13 +15,14 @@ from humeo.config import PipelineConfig
 from humeo.content_pruning import run_content_pruning_stage
 from humeo.cutter import generate_ass
 from humeo.hook_detector import run_hook_detection_stage
-from humeo.ingest import download_video, extract_audio, transcribe_whisperx
+from humeo.ingest import download_video, extract_audio, stage_local_video, transcribe_whisperx
 from humeo.layout_vision import run_layout_vision_stage
 from humeo.render_window import clip_for_render
 from humeo.reframe_ffmpeg import reframe_clip_ffmpeg
 from humeo.video_cache import (
     extract_youtube_video_id,
     ingest_complete,
+    normalize_local_source_path,
     read_youtube_info_json,
     resolve_work_directory,
     upsert_manifest_from_info,
@@ -84,7 +85,7 @@ def run_pipeline(config: PipelineConfig) -> list[Path]:
     """
     logger.info("=" * 60)
     logger.info("HUMEO PIPELINE START")
-    logger.info("URL: %s", config.youtube_url)
+    logger.info("Source: %s", config.youtube_url)
     logger.info("Output: %s", config.output_dir)
     logger.info("=" * 60)
 
@@ -117,33 +118,40 @@ def run_pipeline(config: PipelineConfig) -> list[Path]:
 
     source_video = config.work_dir / "source.mp4"
     transcript_path = config.work_dir / "transcript.json"
+    local_source_path = normalize_local_source_path(config.youtube_url)
+    reuse_ingest = ingest_complete(config.work_dir, config.youtube_url)
 
-    if ingest_complete(config.work_dir):
-        logger.info("Cached ingest found for this URL (reusing source + transcript).")
+    if reuse_ingest:
+        logger.info("Cached ingest found for this source (reusing source + transcript).")
+    elif local_source_path is not None:
+        source_video = stage_local_video(local_source_path, config.work_dir)
     elif source_video.exists():
         logger.info("Source video already downloaded, skipping download.")
     else:
         source_video = download_video(config.youtube_url, config.work_dir)
 
-    if transcript_path.exists():
+    if reuse_ingest or (transcript_path.exists() and local_source_path is None):
         logger.info("Transcript already exists, loading.")
         with open(transcript_path, "r", encoding="utf-8") as f:
             transcript = json.load(f)
     else:
+        if transcript_path.exists() and local_source_path is not None:
+            logger.info("Transcript exists but belongs to a different local source; regenerating.")
         audio_path = extract_audio(source_video, config.work_dir)
         transcript = transcribe_whisperx(audio_path, config.work_dir)
 
-    vid = extract_youtube_video_id(config.youtube_url)
-    info = read_youtube_info_json(config.work_dir)
-    if not info and vid:
-        info = {"id": vid, "webpage_url": config.youtube_url}
-    if info:
-        upsert_manifest_from_info(
-            work_dir=config.work_dir,
-            youtube_url=config.youtube_url,
-            info=info,
-            cache_root=config.cache_root,
-        )
+    if local_source_path is None:
+        vid = extract_youtube_video_id(config.youtube_url)
+        info = read_youtube_info_json(config.work_dir)
+        if not info and vid:
+            info = {"id": vid, "webpage_url": config.youtube_url}
+        if info:
+            upsert_manifest_from_info(
+                work_dir=config.work_dir,
+                youtube_url=config.youtube_url,
+                info=info,
+                cache_root=config.cache_root,
+            )
 
     # ------------------------------------------------------------------
     # Stage 2: Clip Selection
@@ -266,6 +274,7 @@ def run_pipeline(config: PipelineConfig) -> list[Path]:
     layout_instructions = run_layout_vision_stage(
         config.work_dir,
         clip_scenes,
+        source_video=source_video,
         transcript_fp=fp,
         clips_path=clips_path,
         config=config,

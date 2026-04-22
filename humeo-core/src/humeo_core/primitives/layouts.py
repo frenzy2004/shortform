@@ -33,13 +33,20 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
-from ..schemas import BoundingBox, FocusStackOrder, LayoutInstruction, LayoutKind
+from ..schemas import (
+    BoundingBox,
+    FocusStackOrder,
+    LayoutInstruction,
+    LayoutKind,
+    TimedCenterPoint,
+)
 
 
 # Source geometry assumption. Most podcast sources are 1920x1080; we still
 # normalize everything by the actual source size so changing this is safe.
 DEFAULT_SRC_W = 1920
 DEFAULT_SRC_H = 1080
+TRACKING_BLEND_SEC = 0.30
 
 
 @dataclass(frozen=True)
@@ -121,6 +128,62 @@ def _center_crop_to_9x16(
     src_w: int, src_h: int, zoom: float, person_x_norm: float
 ) -> tuple[int, int, int, int]:
     return _crop_box(src_w, src_h, 9 / 16, zoom, person_x_norm, 0.5)
+
+
+def _crop_x_from_center(src_w: int, cw: int, center_x_norm: float) -> int:
+    """Return an even, in-bounds crop x for a normalized horizontal center."""
+    cx = int(round(_clamp01(center_x_norm) * src_w))
+    return _even(max(0, min(src_w - cw, cx - cw // 2)))
+
+
+def _tracked_crop_x_expr(
+    *,
+    src_w: int,
+    crop_w: int,
+    tracking: list[TimedCenterPoint],
+) -> str:
+    """Return an ffmpeg expression for a time-varying crop x position.
+
+    We mostly hold each framing until the midpoint between adjacent samples,
+    then blend over a short window. That keeps edited talk footage from
+    drifting for seconds after a cut while still avoiding a one-frame jump
+    in the crop position.
+    """
+    if not tracking:
+        raise ValueError("tracking must not be empty")
+
+    x_points = [
+        (_crop_x_from_center(src_w, crop_w, point.x_norm), float(point.t_sec))
+        for point in tracking
+    ]
+
+    expr = f"{x_points[-1][0]:.3f}"
+    for idx in range(len(x_points) - 2, -1, -1):
+        x0, t0 = x_points[idx]
+        x1, t1 = x_points[idx + 1]
+        if t1 <= t0:
+            expr = f"if(lt(t\\,{t1:.3f})\\,{x0:.3f}\\,{expr})"
+            continue
+
+        switch_t = (t0 + t1) / 2.0
+        blend_half = TRACKING_BLEND_SEC / 2.0
+        blend_start = max(t0, switch_t - blend_half)
+        blend_end = min(t1, switch_t + blend_half)
+
+        if blend_end <= blend_start:
+            expr = f"if(lt(t\\,{switch_t:.3f})\\,{x0:.3f}\\,{expr})"
+            continue
+
+        blend_expr = (
+            f"{x0:.3f}+({x1 - x0:.3f})*(t-{blend_start:.3f})/({blend_end - blend_start:.3f})"
+        )
+        expr = (
+            f"if(lt(t\\,{blend_start:.3f})\\,{x0:.3f}\\,"
+            f"if(lt(t\\,{blend_end:.3f})\\,{blend_expr}\\,{expr}))"
+        )
+
+    max_x = max(0, src_w - crop_w)
+    return f"floor(max(0\\,min({max_x}\\,{expr}))/2)*2"
 
 
 # ---------------------------------------------------------------------------
@@ -260,10 +323,18 @@ def plan_zoom_call_center(
     """1 person, tight zoom-call framing. ``zoom`` clamped to ``>= 1.25``."""
     zoom = max(instruction.zoom, 1.25)
     cw, ch, x, y = _center_crop_to_9x16(src_w, src_h, zoom, instruction.person_x_norm)
-    fg = (
-        f"[0:v]crop={cw}:{ch}:{x}:{y},"
-        f"scale={out_w}:{out_h}:flags=lanczos,setsar=1[vout]"
-    )
+    if instruction.person_tracking:
+        x_expr = _tracked_crop_x_expr(src_w=src_w, crop_w=cw, tracking=instruction.person_tracking)
+        fg = (
+            f"[0:v]setpts=PTS-STARTPTS[vsrc];"
+            f"[vsrc]crop={cw}:{ch}:{x_expr}:{y},"
+            f"scale={out_w}:{out_h}:flags=lanczos,setsar=1[vout]"
+        )
+    else:
+        fg = (
+            f"[0:v]crop={cw}:{ch}:{x}:{y},"
+            f"scale={out_w}:{out_h}:flags=lanczos,setsar=1[vout]"
+        )
     return FilterPlan(filtergraph=fg)
 
 
@@ -283,10 +354,18 @@ def plan_sit_center(
     cw, ch, x, y = _crop_box(
         src_w, src_h, 9 / 16, zoom, instruction.person_x_norm, 0.48
     )
-    fg = (
-        f"[0:v]crop={cw}:{ch}:{x}:{y},"
-        f"scale={out_w}:{out_h}:flags=lanczos,setsar=1[vout]"
-    )
+    if instruction.person_tracking:
+        x_expr = _tracked_crop_x_expr(src_w=src_w, crop_w=cw, tracking=instruction.person_tracking)
+        fg = (
+            f"[0:v]setpts=PTS-STARTPTS[vsrc];"
+            f"[vsrc]crop={cw}:{ch}:{x_expr}:{y},"
+            f"scale={out_w}:{out_h}:flags=lanczos,setsar=1[vout]"
+        )
+    else:
+        fg = (
+            f"[0:v]crop={cw}:{ch}:{x}:{y},"
+            f"scale={out_w}:{out_h}:flags=lanczos,setsar=1[vout]"
+        )
     return FilterPlan(filtergraph=fg)
 
 

@@ -10,6 +10,7 @@ from humeo_core.schemas import (
     FocusStackOrder,
     LayoutInstruction,
     LayoutKind,
+    TimedCenterPoint,
 )
 
 
@@ -59,6 +60,22 @@ def test_sit_center_layout_filtergraph_shape():
     plan = plan_layout(instr, out_w=1080, out_h=1920)
     assert "[vout]" in plan.filtergraph
     assert plan.out_label == "vout"
+
+
+def test_sit_center_tracking_uses_dynamic_crop_expression():
+    instr = LayoutInstruction(
+        clip_id="c",
+        layout=LayoutKind.SIT_CENTER,
+        person_tracking=[
+            TimedCenterPoint(t_sec=0.0, x_norm=0.2),
+            TimedCenterPoint(t_sec=10.0, x_norm=0.8),
+        ],
+    )
+    fg = plan_layout(instr, out_w=1080, out_h=1920).filtergraph
+    assert "setpts=PTS-STARTPTS" in fg
+    assert "[vsrc]crop=" in fg
+    assert "if(lt(t\\,4.850)" in fg
+    assert "*(t-4.850)/(0.300)" in fg
 
 
 def test_split_layout_contains_vstack():

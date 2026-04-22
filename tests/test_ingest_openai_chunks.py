@@ -1,9 +1,11 @@
+import json
 from unittest.mock import patch
 
 from humeo.ingest import (
     _merge_transcripts,
     _offset_transcript_timestamps,
     _plan_openai_chunk_ranges,
+    stage_local_video,
     transcribe_whisperx,
 )
 
@@ -67,3 +69,16 @@ def test_transcribe_provider_openai_calls_openai_api(monkeypatch, tmp_path):
     m.assert_called_once_with(audio)
     assert r == out
     assert (tmp_path / "transcript.json").read_text(encoding="utf-8").strip()
+
+
+def test_stage_local_video_copies_source_and_records_marker(tmp_path):
+    source = tmp_path / "downloads" / "episode.mp4"
+    source.parent.mkdir(parents=True, exist_ok=True)
+    source.write_bytes(b"video-bytes")
+
+    staged = stage_local_video(source, tmp_path / "work")
+
+    assert staged == tmp_path / "work" / "source.mp4"
+    assert staged.read_bytes() == b"video-bytes"
+    marker = json.loads((tmp_path / "work" / "source.local.json").read_text(encoding="utf-8"))
+    assert marker["local_source_path"] == str(source.resolve())

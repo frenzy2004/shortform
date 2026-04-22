@@ -28,11 +28,12 @@ def build_parser() -> argparse.ArgumentParser:
     """Build the argument parser."""
     parser = argparse.ArgumentParser(
         prog="humeo",
-        description="Humeo - Automated podcast-to-shorts pipeline",
+        description="Humeo - Automated podcast-to-shorts pipeline from YouTube or local MP4",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
   humeo --long-to-shorts "https://youtube.com/watch?v=abc123"
+  humeo --long-to-shorts "C:\\Videos\\episode.mp4"
   humeo --long-to-shorts "https://youtube.com/watch?v=abc123" --work-dir .humeo_work
   humeo --long-to-shorts "https://youtube.com/watch?v=abc123" --gemini-model gemini-2.0-flash
         """,
@@ -40,9 +41,9 @@ Examples:
 
     parser.add_argument(
         "--long-to-shorts",
-        metavar="URL",
+        metavar="SOURCE",
         required=True,
-        help="YouTube video URL to process",
+        help="YouTube video URL or local MP4 path to process",
     )
 
     parser.add_argument(

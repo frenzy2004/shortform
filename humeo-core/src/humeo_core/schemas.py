@@ -119,6 +119,13 @@ SPLIT_LAYOUTS: frozenset[LayoutKind] = frozenset(
 )
 
 
+class TimedCenterPoint(BaseModel):
+    """Speaker x-center at a clip-relative time, used for tracked centering."""
+
+    t_sec: float = Field(ge=0.0)
+    x_norm: float = Field(ge=0.0, le=1.0)
+
+
 class LayoutInstruction(BaseModel):
     """Per-clip decision telling the compiler which layout to apply and how to crop.
 
@@ -137,6 +144,13 @@ class LayoutInstruction(BaseModel):
         ge=0.0,
         le=1.0,
         description="Normalized x-center of the human subject in source frame (0=left, 1=right).",
+    )
+    person_tracking: list[TimedCenterPoint] = Field(
+        default_factory=list,
+        description=(
+            "Optional clip-relative speaker x-center samples for moving 9:16 crops. "
+            "When empty, the compiler uses the static person_x_norm center."
+        ),
     )
     chart_x_norm: float = Field(
         default=0.0,
@@ -186,6 +200,19 @@ class LayoutInstruction(BaseModel):
             "0.6 historically matched the 'chart dominant / person small' look."
         ),
     )
+
+
+    @field_validator("person_tracking")
+    @classmethod
+    def _tracking_times_non_decreasing(
+        cls, points: list[TimedCenterPoint]
+    ) -> list[TimedCenterPoint]:
+        last_t = -1.0
+        for point in points:
+            if point.t_sec < last_t:
+                raise ValueError("person_tracking times must be non-decreasing")
+            last_t = point.t_sec
+        return points
 
 
 class SceneClassification(BaseModel):
@@ -316,10 +343,12 @@ class Clip(BaseModel):
     ) -> dict[str, float] | None:
         if v is None:
             return None
+        cleaned: dict[str, float] = {}
         for axis, score in v.items():
             if score < 0.0:
                 raise ValueError(f"score_breakdown[{axis!r}] must be non-negative")
-        return v
+            cleaned[axis] = min(score, 1.0)
+        return cleaned
 
     @model_validator(mode="after")
     def _timing_consistency(self) -> "Clip":

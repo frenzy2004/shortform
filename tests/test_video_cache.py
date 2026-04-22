@@ -7,10 +7,14 @@ from humeo.video_cache import (
     VideoCacheManifest,
     extract_youtube_video_id,
     ingest_complete,
+    local_source_cache_key,
+    local_source_matches,
     load_manifest,
     manifest_path,
+    read_local_source_info,
     resolve_work_directory,
     save_manifest,
+    write_local_source_info,
 )
 
 
@@ -59,12 +63,54 @@ def test_resolve_video_cache_path(tmp_path):
     assert got == tmp_path / "cache" / "videos" / "abcdefghijk"
 
 
+def test_resolve_local_source_uses_per_file_cache_dir(tmp_path):
+    source = tmp_path / "downloads" / "episode.mp4"
+    source.parent.mkdir(parents=True, exist_ok=True)
+    source.write_bytes(b"x")
+    key = local_source_cache_key(str(source))
+
+    got = resolve_work_directory(
+        youtube_url=str(source),
+        explicit_work_dir=None,
+        use_video_cache=True,
+        cache_root=tmp_path / "cache",
+    )
+
+    assert key is not None
+    assert got == tmp_path / "cache" / "local" / key
+    assert got.is_dir()
+
+
 def test_ingest_complete_requires_both(tmp_path):
     assert ingest_complete(tmp_path) is False
     (tmp_path / "source.mp4").write_bytes(b"x")
     assert ingest_complete(tmp_path) is False
     (tmp_path / "transcript.json").write_text("{}")
     assert ingest_complete(tmp_path) is True
+
+
+def test_ingest_complete_for_local_source_requires_matching_marker(tmp_path):
+    source = tmp_path / "downloads" / "episode.mp4"
+    source.parent.mkdir(parents=True, exist_ok=True)
+    source.write_bytes(b"x")
+    (tmp_path / "source.mp4").write_bytes(b"x")
+    (tmp_path / "transcript.json").write_text("{}")
+
+    assert ingest_complete(tmp_path, str(source)) is False
+
+    write_local_source_info(tmp_path, source)
+    assert ingest_complete(tmp_path, str(source)) is True
+
+
+def test_local_source_info_roundtrip(tmp_path):
+    source = tmp_path / "downloads" / "episode.mp4"
+    source.parent.mkdir(parents=True, exist_ok=True)
+    source.write_bytes(b"x")
+
+    write_local_source_info(tmp_path, source)
+
+    assert read_local_source_info(tmp_path)["local_source_path"] == str(source.resolve())
+    assert local_source_matches(tmp_path, str(source)) is True
 
 
 def test_manifest_roundtrip(tmp_path):

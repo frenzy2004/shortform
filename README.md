@@ -59,6 +59,7 @@ uv sync --extra whisper
 
 ```bash
 humeo --long-to-shorts "https://www.youtube.com/watch?v=VIDEO_ID"
+humeo --long-to-shorts "C:\path\to\video.mp4"
 ```
 
 Use **`--work-dir`** or **`--no-video-cache`** to control where `source.mp4` and intermediates live (see **`docs/ENVIRONMENT.md`**).
@@ -71,7 +72,7 @@ Use `humeo --help` for the live source of truth. This table matches `src/humeo/c
 
 | Flag | Meaning |
 |------|---------|
-| `--long-to-shorts URL` | YouTube URL to process (required). |
+| `--long-to-shorts SOURCE` | YouTube URL or local MP4 path to process (required). |
 
 ### Paths and cache behavior
 
@@ -116,6 +117,9 @@ Use `humeo --help` for the live source of truth. This table matches `src/humeo/c
 ```bash
 # Basic run
 humeo --long-to-shorts "https://www.youtube.com/watch?v=VIDEO_ID"
+
+# Local MP4
+humeo --long-to-shorts "C:\path\to\video.mp4"
 
 # Full fresh run for debugging / prompt tuning
 humeo --long-to-shorts "https://www.youtube.com/watch?v=VIDEO_ID" --clean-run --verbose
