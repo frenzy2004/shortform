@@ -317,3 +317,69 @@ def test_infer_layout_instructions_adds_person_tracking(
     samples = raw_by_clip["001"]["person_tracking_samples"]
     assert samples
     assert samples[0]["sample_kind"] == "midpoint_keyframe"
+
+
+@patch("humeo.layout_vision._keyframe_dimensions", return_value=(640, 360))
+@patch("humeo.layout_vision._call_gemini_vision")
+@patch("humeo.layout_vision._extract_frame_at_time")
+def test_infer_layout_instructions_ignores_split_tracking_sample_for_single_person_midpoint(
+    mock_extract_frame_at_time,
+    mock_call_gemini_vision,
+    _mock_keyframe_dimensions,
+    tmp_path,
+):
+    fixture = json.loads(
+        (Path(__file__).parent / "fixtures" / "ticket_c_videoplayback4_short003_tracking.json").read_text(
+            encoding="utf-8"
+        )
+    )
+
+    source_video = tmp_path / "source.mp4"
+    source_video.write_bytes(b"fake")
+    keyframe_path = tmp_path / fixture["scene"]["keyframe_name"]
+    keyframe_path.write_bytes(b"\xff\xd8\xff\xe0fakejpeg")
+
+    scene = Scene(
+        scene_id=fixture["scene"]["scene_id"],
+        start_time=fixture["scene"]["start_time"],
+        end_time=fixture["scene"]["end_time"],
+        keyframe_path=str(keyframe_path),
+    )
+
+    def fake_extract(source_path: Path, time_sec: float, output_path: Path) -> Path:
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+        output_path.write_bytes(b"\xff\xd8\xff\xe0fakejpeg")
+        return output_path
+
+    def fake_vision(path: str, model_name: str) -> dict[str, object]:
+        name = Path(path).name
+        if name == fixture["scene"]["keyframe_name"]:
+            return fixture["midpoint_data"]
+        return fixture["tracking_samples"][name]
+
+    mock_extract_frame_at_time.side_effect = fake_extract
+    mock_call_gemini_vision.side_effect = fake_vision
+
+    instructions, raw_by_clip = infer_layout_instructions(
+        [scene],
+        gemini_vision_model="gemini-test",
+        source_video=source_video,
+        tracking_dir=tmp_path / "tracking",
+    )
+
+    instr = instructions["003"]
+    assert instr.layout == LayoutKind.SIT_CENTER
+    assert instr.person_tracking
+    assert instr.person_tracking[0].t_sec == 0.0
+    assert instr.person_tracking[0].x_norm == pytest.approx(0.425, abs=0.02)
+    assert min(point.x_norm for point in instr.person_tracking) > 0.35
+
+    samples = raw_by_clip["003"]["person_tracking_samples"]
+    split_sample = next(
+        sample
+        for sample in samples
+        if sample["sample_kind"] == "tracking_frame"
+        and isinstance(sample.get("raw"), dict)
+        and sample["raw"].get("layout") == "split_two_persons"
+    )
+    assert split_sample["center_x_norm"] is None

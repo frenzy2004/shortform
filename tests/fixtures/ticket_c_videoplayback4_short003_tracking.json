@@ -1,0 +1,118 @@
+{
+  "scene": {
+    "scene_id": "003",
+    "start_time": 0.0,
+    "end_time": 83.27599267578114,
+    "keyframe_name": "003.jpg"
+  },
+  "midpoint_data": {
+    "layout": "sit_center",
+    "person_bbox": {
+      "x1": 218,
+      "y1": 59,
+      "x2": 842,
+      "y2": 1000
+    },
+    "face_bbox": {
+      "x1": 335,
+      "y1": 59,
+      "x2": 535,
+      "y2": 415
+    },
+    "reason": "The frame features a single primary speaker in a panel setting. I have centered the framing on the speaker."
+  },
+  "tracking_samples": {
+    "003_008328.jpg": {
+      "layout": "split_two_persons",
+      "person_bbox": {
+        "x1": 0.09,
+        "y1": 225,
+        "x2": 0.33,
+        "y2": 780
+      },
+      "face_bbox": {
+        "x1": 0.11,
+        "y1": 225,
+        "x2": 0.17,
+        "y2": 330
+      },
+      "second_person_bbox": {
+        "x1": 0.72,
+        "y1": 200,
+        "x2": 0.95,
+        "y2": 810
+      },
+      "second_face_bbox": {
+        "x1": 0.83,
+        "y1": 200,
+        "x2": 0.9,
+        "y2": 300
+      },
+      "reason": "The frame shows two main speakers in an interview setting. I am focusing on the two primary participants on the left and right to create a split-screen effect."
+    },
+    "003_016655.jpg": {
+      "layout": "sit_center",
+      "person_bbox": {
+        "x1": 200,
+        "y1": 50,
+        "x2": 750,
+        "y2": 1000
+      },
+      "face_bbox": {
+        "x1": 325,
+        "y1": 50,
+        "x2": 525,
+        "y2": 400
+      },
+      "reason": "The frame features one primary speaker in the center. While other people are visible in the background, they are out of focus and not the subject of the shot."
+    },
+    "003_024983.jpg": {
+      "layout": "sit_center",
+      "person_bbox": {
+        "x1": 232,
+        "y1": 80,
+        "x2": 805,
+        "y2": 1000
+      },
+      "face_bbox": {
+        "x1": 415,
+        "y1": 150,
+        "x2": 585,
+        "y2": 460
+      },
+      "reason": "The frame features a single primary speaker in a panel setting, which is best captured using the sit_center layout."
+    },
+    "003_033310.jpg": {
+      "layout": "sit_center",
+      "person_bbox": {
+        "x1": 236,
+        "y1": 78,
+        "x2": 804,
+        "y2": 1000
+      },
+      "face_bbox": {
+        "x1": 409,
+        "y1": 156,
+        "x2": 578,
+        "y2": 422
+      },
+      "reason": "The frame features a single primary speaker in a panel setting, making sit_center the most appropriate layout."
+    },
+    "003_074948.jpg": {
+      "layout": "sit_center",
+      "person_bbox": {
+        "x1": 240,
+        "y1": 56,
+        "x2": 807,
+        "y2": 1000
+      },
+      "face_bbox": {
+        "x1": 435,
+        "y1": 139,
+        "x2": 605,
+        "y2": 390
+      },
+      "reason": "The frame features a single primary speaker in the center, making sit_center the most appropriate layout."
+    }
+  }
+}

@@ -479,6 +479,32 @@ def _person_center_x_from_data(
     return None
 
 
+def _tracking_sample_center_x(
+    data: dict[str, Any],
+    *,
+    image_size: tuple[int, int] | None,
+    midpoint_layout: LayoutKind,
+) -> float | None:
+    """Return a tracking center only for samples compatible with midpoint layout.
+
+    Ticket C keeps the sampling cadence itself unchanged; it only rejects
+    sample outputs whose layout family disagrees with a one-person midpoint
+    classification. That prevents a split-style outlier from seeding the
+    opening crop of an otherwise single-speaker clip.
+    """
+    sample_layout_raw = str(data.get("layout", "")).strip()
+    try:
+        sample_layout = LayoutKind(sample_layout_raw)
+    except ValueError:
+        sample_layout = None
+
+    if midpoint_layout in (LayoutKind.SIT_CENTER, LayoutKind.ZOOM_CALL_CENTER):
+        if sample_layout not in (LayoutKind.SIT_CENTER, LayoutKind.ZOOM_CALL_CENTER):
+            return None
+
+    return _person_center_x_from_data(data, image_size=image_size)
+
+
 def _tracking_sample_times(duration_sec: float) -> list[float]:
     seen: set[float] = set()
     out: list[float] = []
@@ -566,6 +592,8 @@ def _infer_person_tracking(
     source_video: Path,
     tracking_dir: Path,
     model_name: str,
+    midpoint_layout: LayoutKind,
+    midpoint_center_x: float | None,
     initial_data: dict[str, Any] | None = None,
     initial_image_size: tuple[int, int] | None = None,
 ) -> tuple[list[TimedCenterPoint], list[dict[str, Any]]]:
@@ -578,7 +606,7 @@ def _infer_person_tracking(
     samples: list[dict[str, Any]] = []
 
     if initial_data is not None:
-        center_x = _person_center_x_from_data(initial_data, image_size=initial_image_size)
+        center_x = midpoint_center_x
         samples.append(
             {
                 "sample_kind": "midpoint_keyframe",
@@ -601,7 +629,11 @@ def _infer_person_tracking(
             _extract_frame_at_time(source_video, abs_time, frame_path)
             data = _call_gemini_vision(str(frame_path), model_name)
             image_size = _keyframe_dimensions(str(frame_path))
-            center_x = _person_center_x_from_data(data, image_size=image_size)
+            center_x = _tracking_sample_center_x(
+                data,
+                image_size=image_size,
+                midpoint_layout=midpoint_layout,
+            )
             samples.append(
                 {
                     "sample_kind": "tracking_frame",
@@ -718,6 +750,8 @@ def infer_layout_instructions(
                     source_video=source_video,
                     tracking_dir=tracking_dir,
                     model_name=model_name,
+                    midpoint_layout=instr.layout,
+                    midpoint_center_x=instr.person_x_norm,
                     initial_data=data,
                     initial_image_size=image_size,
                 )
