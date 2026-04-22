@@ -65,6 +65,11 @@ DEFAULT_MAX_KEPT = 8
 DEFAULT_CANDIDATE_TEMPERATURE = 0.7
 
 
+def _has_valid_duration(clip: Clip) -> bool:
+    """Return True when the clip window satisfies the product duration contract."""
+    return MIN_CLIP_DURATION_SEC <= clip.duration_sec <= MAX_CLIP_DURATION_SEC
+
+
 def _openai_message_text(content: object) -> str:
     """Normalize OpenAI-compatible message content into plain text."""
     if isinstance(content, str):
@@ -159,7 +164,30 @@ def rank_and_filter_clips(
         review_penalty = 0.5 if c.needs_review else 0.0
         return (c.virality_score - review_penalty, c.virality_score)
 
-    ordered = sorted(clips, key=_priority, reverse=True)
+    valid: list[Clip] = []
+    invalid: list[Clip] = []
+    for clip in clips:
+        if _has_valid_duration(clip):
+            valid.append(clip)
+        else:
+            invalid.append(clip)
+            logger.warning(
+                "Clip %s dropped before ranking: duration %.1fs is outside [%ds, %ds] - %s",
+                clip.clip_id,
+                clip.duration_sec,
+                MIN_CLIP_DURATION_SEC,
+                MAX_CLIP_DURATION_SEC,
+                clip.topic,
+            )
+
+    if not valid:
+        logger.warning(
+            "Clip ranking: 0 valid candidates remain after duration filtering (dropped=%d).",
+            len(invalid),
+        )
+        return []
+
+    ordered = sorted(valid, key=_priority, reverse=True)
 
     strong = [c for c in ordered if c.virality_score >= threshold and not c.needs_review]
     kept = list(strong)
@@ -171,6 +199,14 @@ def rank_and_filter_clips(
                 break
             kept.append(c)
 
+    if len(kept) < min_kept:
+        logger.warning(
+            "Clip ranking: only %d valid candidates remain after duration filtering; "
+            "cannot satisfy min_kept=%d without invalid clips.",
+            len(kept),
+            min_kept,
+        )
+
     if len(kept) > max_kept:
         kept = kept[:max_kept]
 
@@ -181,11 +217,11 @@ def rank_and_filter_clips(
         new_id = f"{i:03d}"
         renumbered.append(c if c.clip_id == new_id else c.model_copy(update={"clip_id": new_id}))
 
-    dropped = len(ordered) - len(kept)
+    dropped = len(valid) - len(kept) + len(invalid)
     logger.info(
         "Clip ranking: kept %d / %d candidates (threshold=%.2f, min=%d, max=%d, dropped=%d).",
         len(renumbered),
-        len(ordered),
+        len(clips),
         threshold,
         min_kept,
         max_kept,

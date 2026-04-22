@@ -14,7 +14,10 @@ Covers the "over-generate -> threshold with a floor" policy:
 
 from __future__ import annotations
 
+import logging
+
 from humeo.clip_selector import build_prompt, rank_and_filter_clips
+from humeo.config import MAX_CLIP_DURATION_SEC, MIN_CLIP_DURATION_SEC
 from humeo_core.schemas import Clip
 
 
@@ -23,6 +26,7 @@ def _clip(
     *,
     score: float,
     start: float = 0.0,
+    duration: float = 60.0,
     needs_review: bool = False,
     topic: str = "t",
 ) -> Clip:
@@ -33,7 +37,7 @@ def _clip(
             "clip_id": clip_id,
             "topic": topic,
             "start_time_sec": start,
-            "end_time_sec": start + 60.0,
+            "end_time_sec": start + duration,
             "virality_score": score,
             "needs_review": needs_review,
         }
@@ -70,6 +74,69 @@ def test_weak_pool_backfills_to_min_kept():
     )
     assert len(kept) == 2
     assert [c.virality_score for c in kept] == [0.62, 0.55]
+
+
+def test_invalid_short_clips_excluded():
+    candidates = [
+        _clip("a", score=0.95, duration=MIN_CLIP_DURATION_SEC - 1.0),
+        _clip("b", score=0.80, start=100),
+        _clip("c", score=0.70, start=200),
+    ]
+
+    kept = rank_and_filter_clips(candidates, threshold=0.00, min_kept=1, max_kept=5)
+
+    assert [round(c.duration_sec, 1) for c in kept] == [60.0, 60.0]
+
+
+def test_invalid_long_clips_excluded():
+    candidates = [
+        _clip("a", score=0.95, duration=MAX_CLIP_DURATION_SEC + 5.0),
+        _clip("b", score=0.80, start=100),
+        _clip("c", score=0.70, start=200),
+    ]
+
+    kept = rank_and_filter_clips(candidates, threshold=0.00, min_kept=1, max_kept=5)
+
+    assert [round(c.duration_sec, 1) for c in kept] == [60.0, 60.0]
+
+
+def test_backfill_never_uses_invalid():
+    candidates = [
+        _clip("a", score=0.92, start=0),
+        _clip("b", score=0.81, start=100),
+        _clip("c", score=0.70, start=200, duration=MIN_CLIP_DURATION_SEC - 2.0),
+        _clip("d", score=0.68, start=300, duration=MAX_CLIP_DURATION_SEC + 2.0),
+    ]
+
+    kept = rank_and_filter_clips(candidates, threshold=0.85, min_kept=4, max_kept=5)
+
+    assert len(kept) == 2
+    assert [c.virality_score for c in kept] == [0.92, 0.81]
+
+
+def test_all_invalid_returns_empty():
+    candidates = [
+        _clip(f"c{i}", score=0.90 - i * 0.01, start=i * 100, duration=MIN_CLIP_DURATION_SEC - 5.0)
+        for i in range(5)
+    ]
+
+    assert rank_and_filter_clips(candidates, threshold=0.00, min_kept=5, max_kept=8) == []
+
+
+def test_fewer_valid_than_min_kept_logs_warning(caplog):
+    candidates = [
+        _clip("a", score=0.92, start=0),
+        _clip("b", score=0.81, start=100),
+        _clip("c", score=0.70, start=200, duration=MIN_CLIP_DURATION_SEC - 2.0),
+        _clip("d", score=0.68, start=300, duration=MIN_CLIP_DURATION_SEC - 10.0),
+        _clip("e", score=0.66, start=400, duration=MAX_CLIP_DURATION_SEC + 10.0),
+    ]
+
+    with caplog.at_level(logging.WARNING):
+        kept = rank_and_filter_clips(candidates, threshold=0.85, min_kept=5, max_kept=8)
+
+    assert len(kept) == 2
+    assert "cannot satisfy min_kept=5 without invalid clips" in caplog.text
 
 
 def test_rich_pool_capped_at_max_kept():
@@ -158,3 +225,16 @@ def test_clip_ids_are_renumbered_in_rank_order():
     )
     assert [c.clip_id for c in kept] == ["001", "002", "003"]
     assert [c.virality_score for c in kept] == [0.90, 0.70, 0.50]
+
+
+def test_valid_clips_still_sorted_and_renumbered():
+    candidates = [
+        _clip("zzz", score=0.82, start=0),
+        _clip("aaa", score=0.91, start=100),
+        _clip("mmm", score=0.77, start=200),
+    ]
+
+    kept = rank_and_filter_clips(candidates, threshold=0.00, min_kept=3, max_kept=5)
+
+    assert [c.clip_id for c in kept] == ["001", "002", "003"]
+    assert [c.virality_score for c in kept] == [0.91, 0.82, 0.77]

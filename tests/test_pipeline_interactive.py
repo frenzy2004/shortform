@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import logging
 from pathlib import Path
 from unittest.mock import MagicMock
 
@@ -285,3 +286,37 @@ def test_pipeline_local_source_stages_video_without_downloading(monkeypatch, tmp
     assert json.loads((tmp_path / "source.local.json").read_text(encoding="utf-8"))["local_source_path"] == str(
         local_source.resolve()
     )
+
+
+def test_pipeline_guardrail_drops_render_invalid_clips(monkeypatch, tmp_path, caplog):
+    import humeo.pipeline as pipeline_mod
+
+    valid = _clip("001")
+    invalid_after_trim = Clip.model_validate(
+        {
+            "clip_id": "002",
+            "topic": "too short after trim",
+            "start_time_sec": 100.0,
+            "end_time_sec": 160.0,
+            "virality_score": 0.95,
+            "transcript": "too short after trim transcript",
+            "trim_start_sec": 25.0,
+            "trim_end_sec": 25.0,
+        }
+    )
+    clips = [valid, invalid_after_trim]
+    _patch_pipeline(monkeypatch, tmp_path, clips)
+
+    approve = MagicMock(return_value=ApprovalResult(action="accept_all", selected_ids=["001"]))
+    rate = MagicMock(return_value=RatingFeedback(rating=3))
+    monkeypatch.setattr("humeo.pipeline.interactive.approve_clips", approve)
+    monkeypatch.setattr("humeo.pipeline.interactive.rate_output", rate)
+
+    with caplog.at_level(logging.WARNING):
+        outputs = run_pipeline(_config(tmp_path, interactive=True))
+
+    assert len(outputs) == 1
+    assert approve.call_count == 1
+    approved_clips = approve.call_args.args[0]
+    assert [clip.clip_id for clip in approved_clips] == ["001"]
+    assert "Stage 2.5 guardrail: dropping clip 002" in caplog.text

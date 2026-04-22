@@ -11,7 +11,7 @@ from humeo_core.schemas import LayoutInstruction, LayoutKind, RatingFeedback, Sc
 from humeo import interactive, session_state
 from humeo.clip_selection_cache import cache_valid, load_meta, transcript_fingerprint, write_artifacts
 from humeo.clip_selector import load_clips, save_clips, select_clips
-from humeo.config import PipelineConfig
+from humeo.config import MAX_CLIP_DURATION_SEC, MIN_CLIP_DURATION_SEC, PipelineConfig
 from humeo.content_pruning import run_content_pruning_stage
 from humeo.cutter import generate_ass
 from humeo.hook_detector import run_hook_detection_stage
@@ -71,6 +71,33 @@ def _ensure_work_dir(config: PipelineConfig) -> None:
         use_video_cache=config.use_video_cache,
         cache_root=config.cache_root,
     )
+
+
+def _filter_render_valid_clips(clips: list, *, stage_label: str) -> list:
+    """Drop clips whose actual render window violates the duration contract."""
+    valid: list = []
+    dropped = 0
+    for clip in clips:
+        render_clip = clip_for_render(clip)
+        render_duration = render_clip.duration_sec
+        if MIN_CLIP_DURATION_SEC <= render_duration <= MAX_CLIP_DURATION_SEC:
+            valid.append(clip)
+            continue
+        dropped += 1
+        logger.warning(
+            "%s: dropping clip %s because render-window duration %.1fs is outside [%ds, %ds] "
+            "(trim_start=%.1fs trim_end=%.1fs).",
+            stage_label,
+            clip.clip_id,
+            render_duration,
+            MIN_CLIP_DURATION_SEC,
+            MAX_CLIP_DURATION_SEC,
+            clip.trim_start_sec,
+            clip.trim_end_sec,
+        )
+    if dropped:
+        logger.warning("%s: dropped %d invalid render-window clip(s).", stage_label, dropped)
+    return valid
 
 
 def run_pipeline(config: PipelineConfig) -> list[Path]:
@@ -232,6 +259,7 @@ def run_pipeline(config: PipelineConfig) -> list[Path]:
         transcript_fp=fp,
         config=config,
     )
+    clips = _filter_render_valid_clips(clips, stage_label="Stage 2.5 guardrail")
 
     if config.interactive and state is not None:
         result = interactive.approve_clips(clips)
