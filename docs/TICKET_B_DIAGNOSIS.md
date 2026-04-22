@@ -302,3 +302,7 @@ Implement a small post-pruning boundary snap inside the existing Stage 2.5 flow 
 5. If no valid in-bounds boundary exists, leave the clip unchanged and log a warning.
 
 This is the smallest change that matches the evidence. A prompt rewrite to hook detection or pruning would still leave the system unable to recover context that sits just outside the selected window.
+
+## Post-fix Follow-up
+
+`videoplayback (5) / short_002` (`"The AI Exponential"`) remained a mid-thought opener after Ticket B because there was no clean start boundary inside the allowed `+-3s` snap window. The pre-snap render window from `.humeo_ticketb_videoplayback5/clips.json` plus `.humeo_ticketb_videoplayback5/prune.json` was `46.30s-122.80s`, and replaying `snap_render_windows_to_sentence_boundaries(...)` against the saved transcript leaves the post-snap window unchanged at `46.30s-122.80s` while logging `no valid clean sentence boundary found for start@46.30s`. The nearby start-side transcript segments at `43.340-46.260` (`"Anthropos co-founders were among the first to document it,"`) and `46.260-50.220` (`"is this very smooth exponential process."`) are both continuations of an earlier sentence, not valid sentence starts: neither has terminal punctuation nor a `>=0.5s` silence gap before it. The end boundary is already clean at `122.80s` (`"almost entirely with Claude Code."`). Conclusion: this is outcome (1), not a Ticket B bug. No recoverable clean start existed in range, so the snap correctly left the clip unchanged.
