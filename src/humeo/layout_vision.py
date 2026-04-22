@@ -40,7 +40,7 @@ from humeo.gemini_generate import gemini_generate_config
 
 logger = logging.getLogger(__name__)
 
-LAYOUT_VISION_CACHE_VERSION = 3
+LAYOUT_VISION_CACHE_VERSION = 4
 LAYOUT_VISION_META = "layout_vision.meta.json"
 LAYOUT_VISION_JSON = "layout_vision.json"
 TRACKING_SAMPLE_FRACTIONS = tuple(i / 10.0 for i in range(1, 10))
@@ -309,6 +309,27 @@ def _normalize_bbox_payload(
     return normalized
 
 
+def _bbox_unit_mode(raw: object) -> str | None:
+    if not isinstance(raw, dict):
+        return None
+    values = [float(v) for v in raw.values() if isinstance(v, (int, float))]
+    if not values:
+        return None
+    has_normalized = any(v <= 1.0 for v in values)
+    has_pixelish = any(v > 1.0 for v in values)
+    if has_normalized and has_pixelish:
+        return "mixed"
+    if has_pixelish:
+        return "pixelish"
+    return "normalized"
+
+
+def _reject_mixed_scale_split_bbox(raw: object) -> object:
+    if _bbox_unit_mode(raw) == "mixed":
+        return None
+    return raw
+
+
 def _parse_bbox(
     raw: object, *, image_size: tuple[int, int] | None = None
 ) -> BoundingBox | None:
@@ -341,11 +362,19 @@ def _instruction_from_gemini_json(
     except ValueError:
         kind = LayoutKind.SIT_CENTER
 
-    pb = _parse_bbox(data.get("person_bbox"), image_size=image_size)
-    fb = _parse_bbox(data.get("face_bbox"), image_size=image_size)
+    person_bbox_raw = data.get("person_bbox")
+    face_bbox_raw = data.get("face_bbox")
+    second_person_bbox_raw = data.get("second_person_bbox")
+    second_face_bbox_raw = data.get("second_face_bbox")
+    if kind == LayoutKind.SPLIT_TWO_PERSONS:
+        person_bbox_raw = _reject_mixed_scale_split_bbox(person_bbox_raw)
+        second_person_bbox_raw = _reject_mixed_scale_split_bbox(second_person_bbox_raw)
+
+    pb = _parse_bbox(person_bbox_raw, image_size=image_size)
+    fb = _parse_bbox(face_bbox_raw, image_size=image_size)
     cb = _parse_bbox(data.get("chart_bbox"), image_size=image_size)
-    p2 = _parse_bbox(data.get("second_person_bbox"), image_size=image_size)
-    f2 = _parse_bbox(data.get("second_face_bbox"), image_size=image_size)
+    p2 = _parse_bbox(second_person_bbox_raw, image_size=image_size)
+    f2 = _parse_bbox(second_face_bbox_raw, image_size=image_size)
     c2 = _parse_bbox(data.get("second_chart_bbox"), image_size=image_size)
     reason = str(data.get("reason", ""))[:400]
 
@@ -354,6 +383,10 @@ def _instruction_from_gemini_json(
     if kind == LayoutKind.SPLIT_CHART_PERSON and (pb is None or cb is None):
         kind = LayoutKind.SIT_CENTER if pb is not None else LayoutKind.SIT_CENTER
     if kind == LayoutKind.SPLIT_TWO_PERSONS and (pb is None or p2 is None):
+        if pb is None and p2 is not None:
+            pb, fb = p2, f2
+        elif p2 is None and pb is not None:
+            pass
         kind = LayoutKind.SIT_CENTER
     if kind == LayoutKind.SPLIT_TWO_CHARTS and (cb is None or c2 is None):
         kind = LayoutKind.SIT_CENTER

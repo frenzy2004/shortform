@@ -1,0 +1,32 @@
+{
+  "scene_id": "002",
+  "image_size": [640, 360],
+  "data": {
+    "layout": "split_two_persons",
+    "person_bbox": {
+      "x1": 0.228,
+      "y1": 234,
+      "x2": 0.438,
+      "y2": 0.945
+    },
+    "face_bbox": {
+      "x1": 0.265,
+      "y1": 0.234,
+      "x2": 0.315,
+      "y2": 0.335
+    },
+    "second_person_bbox": {
+      "x1": 0.595,
+      "y1": 0.234,
+      "x2": 0.825,
+      "y2": 0.935
+    },
+    "second_face_bbox": {
+      "x1": 0.735,
+      "y1": 0.234,
+      "x2": 0.785,
+      "y2": 0.335
+    },
+    "reason": "The frame features two speakers in a podcast setting. I have selected the split_two_persons layout to capture both individuals."
+  }
+}

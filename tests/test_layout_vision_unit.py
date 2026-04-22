@@ -1,5 +1,6 @@
 """layout_vision parsing (no API calls)."""
 
+import json
 import math
 from pathlib import Path
 from unittest.mock import MagicMock, patch
@@ -77,6 +78,44 @@ def test_instruction_from_gemini_json_split_with_mixed_bbox_units():
     assert math.isclose(instr.split_person_region.y1, 0.065, abs_tol=1e-6)
     assert math.isclose(instr.split_chart_region.y1, 0.03, abs_tol=1e-6)
     assert math.isclose(instr.person_x_norm, 0.785, abs_tol=1e-6)
+
+
+def test_instruction_from_gemini_json_split_two_persons_mixed_bbox_falls_back_to_sit_center():
+    fixture = json.loads(
+        (Path(__file__).parent / "fixtures" / "ticket_c_videoplayback3_short002_layout.json").read_text(
+            encoding="utf-8"
+        )
+    )
+
+    instr = _instruction_from_gemini_json(
+        fixture["scene_id"],
+        fixture["data"],
+        image_size=tuple(fixture["image_size"]),
+    )
+
+    assert instr.layout == LayoutKind.SIT_CENTER
+    assert instr.split_person_region is None
+    assert instr.split_second_person_region is None
+    assert math.isclose(instr.person_x_norm, 0.76, abs_tol=1e-6)
+
+
+def test_instruction_from_gemini_json_split_two_persons_consistent_boxes_preserved():
+    data = {
+        "layout": "split_two_persons",
+        "person_bbox": {"x1": 0.12, "y1": 0.18, "x2": 0.36, "y2": 0.92},
+        "face_bbox": {"x1": 0.18, "y1": 0.22, "x2": 0.28, "y2": 0.38},
+        "second_person_bbox": {"x1": 0.64, "y1": 0.18, "x2": 0.88, "y2": 0.92},
+        "second_face_bbox": {"x1": 0.71, "y1": 0.22, "x2": 0.81, "y2": 0.38},
+        "reason": "clean two-up shot",
+    }
+
+    instr = _instruction_from_gemini_json("006", data, image_size=(640, 360))
+
+    assert instr.layout == LayoutKind.SPLIT_TWO_PERSONS
+    assert instr.split_person_region is not None
+    assert instr.split_second_person_region is not None
+    assert math.isclose(instr.split_person_region.x1, 0.12, abs_tol=1e-6)
+    assert math.isclose(instr.split_second_person_region.x1, 0.64, abs_tol=1e-6)
 
 
 def test_instruction_from_gemini_json_sit_center():
