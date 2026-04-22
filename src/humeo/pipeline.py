@@ -12,7 +12,7 @@ from humeo import interactive, session_state
 from humeo.clip_selection_cache import cache_valid, load_meta, transcript_fingerprint, write_artifacts
 from humeo.clip_selector import load_clips, save_clips, select_clips
 from humeo.config import MAX_CLIP_DURATION_SEC, MIN_CLIP_DURATION_SEC, PipelineConfig
-from humeo.content_pruning import run_content_pruning_stage
+from humeo.content_pruning import run_content_pruning_stage, snap_render_windows_to_sentence_boundaries
 from humeo.cutter import generate_ass
 from humeo.hook_detector import run_hook_detection_stage
 from humeo.ingest import download_video, extract_audio, stage_local_video, transcribe_whisperx
@@ -259,6 +259,7 @@ def run_pipeline(config: PipelineConfig) -> list[Path]:
         transcript_fp=fp,
         config=config,
     )
+    clips = snap_render_windows_to_sentence_boundaries(clips, transcript)
     clips = _filter_render_valid_clips(clips, stage_label="Stage 2.5 guardrail")
 
     if config.interactive and state is not None:

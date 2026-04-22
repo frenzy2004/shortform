@@ -320,3 +320,48 @@ def test_pipeline_guardrail_drops_render_invalid_clips(monkeypatch, tmp_path, ca
     approved_clips = approve.call_args.args[0]
     assert [clip.clip_id for clip in approved_clips] == ["001"]
     assert "Stage 2.5 guardrail: dropping clip 002" in caplog.text
+
+
+def test_pipeline_boundary_snap_runs_before_gate_one(monkeypatch, tmp_path):
+    import humeo.pipeline as pipeline_mod
+
+    clip = Clip.model_validate(
+        {
+            "clip_id": "001",
+            "topic": "boundary case",
+            "start_time_sec": 100.0,
+            "end_time_sec": 160.0,
+            "virality_score": 0.9,
+            "transcript": "boundary case transcript",
+            "trim_start_sec": 3.0,
+            "trim_end_sec": 0.0,
+        }
+    )
+    clips = [clip]
+    _patch_pipeline(monkeypatch, tmp_path, clips)
+
+    monkeypatch.setattr(
+        "humeo.pipeline.snap_render_windows_to_sentence_boundaries",
+        lambda _clips, _transcript: [
+            _clips[0].model_copy(
+                update={
+                    "start_time_sec": 97.0,
+                    "end_time_sec": 157.0,
+                    "trim_start_sec": 0.0,
+                    "trim_end_sec": 0.0,
+                }
+            )
+        ],
+    )
+
+    approve = MagicMock(return_value=ApprovalResult(action="accept_all", selected_ids=["001"]))
+    rate = MagicMock(return_value=RatingFeedback(rating=3))
+    monkeypatch.setattr("humeo.pipeline.interactive.approve_clips", approve)
+    monkeypatch.setattr("humeo.pipeline.interactive.rate_output", rate)
+
+    outputs = run_pipeline(_config(tmp_path, interactive=True))
+
+    assert len(outputs) == 1
+    approved = approve.call_args.args[0]
+    assert approved[0].start_time_sec == 97.0
+    assert approved[0].end_time_sec == 157.0

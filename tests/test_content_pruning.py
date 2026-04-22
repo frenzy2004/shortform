@@ -36,6 +36,7 @@ from humeo.content_pruning import (
     apply_prune_decisions,
     request_prune_decisions,
     run_content_pruning_stage,
+    snap_render_windows_to_sentence_boundaries,
 )
 from humeo_core.schemas import Clip
 
@@ -73,6 +74,35 @@ def _transcript_for(start: float, end: float, *, step: float = 5.0) -> dict:
         segs.append({"start": t, "end": t + step, "text": f"text {t:.0f}"})
         t += step
     return {"segments": segs}
+
+
+def _transcript_with_words(rel_segments: list[tuple[float, float, str]], *, base_start: float = 0.0) -> dict:
+    segments = []
+    for idx, (seg_start, seg_end, text) in enumerate(rel_segments):
+        words = []
+        tokens = [token for token in text.split() if token]
+        span = max(seg_end - seg_start, 0.1)
+        step = span / max(len(tokens), 1)
+        cursor = seg_start
+        for token in tokens:
+            word_end = min(seg_end, cursor + step)
+            words.append(
+                {
+                    "word": token.strip(",.!?"),
+                    "start": base_start + cursor,
+                    "end": base_start + word_end,
+                }
+            )
+            cursor = word_end
+        segments.append(
+            {
+                "start": base_start + seg_start,
+                "end": base_start + seg_end,
+                "text": text,
+                "words": words,
+            }
+        )
+    return {"segments": segments}
 
 
 @pytest.fixture
@@ -371,6 +401,102 @@ def test_apply_decisions_with_transcript_performs_snap():
     # With the transcript, snap to seg end 54.0 -> trim_end = 6.0 (forward
     # within 2s tolerance).
     assert with_snap[0].trim_end_sec == pytest.approx(6.0, abs=0.05)
+
+
+# ---------------------------------------------------------------------------
+# Post-pruning render-window snapping (Ticket B)
+# ---------------------------------------------------------------------------
+
+
+def test_render_window_snap_uses_saved_evidence_fixture():
+    fixture = json.loads(
+        (Path(__file__).parent / "fixtures" / "ticket_b_videoplayback4_short003.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    clip = Clip.model_validate(fixture["clip"])
+    transcript = fixture["transcript"]
+
+    out = snap_render_windows_to_sentence_boundaries([clip], transcript)
+
+    assert out[0].start_time_sec == pytest.approx(1706.6909877929688, abs=0.05)
+    assert out[0].end_time_sec == pytest.approx(1766.8, abs=0.05)
+    assert out[0].trim_start_sec == 0.0
+    assert out[0].trim_end_sec == 0.0
+
+
+def test_render_window_snap_preserves_clean_start():
+    clip = _clip(start=100.0, end=160.0)
+    transcript = _transcript_with_words(
+        [
+            (0.0, 2.0, "A clean opening."),
+            (2.0, 6.0, "More explanation continues."),
+            (6.0, 60.0, "Long body of the clip."),
+        ],
+        base_start=100.0,
+    )
+
+    out = snap_render_windows_to_sentence_boundaries([clip], transcript)
+
+    assert out[0].start_time_sec == pytest.approx(100.0, abs=0.05)
+    assert out[0].end_time_sec == pytest.approx(160.0, abs=0.05)
+
+
+def test_render_window_snap_finishes_thought_at_end():
+    clip = _clip(start=100.0, end=157.2)
+    clip = clip.model_copy(update={"trim_start_sec": 0.0, "trim_end_sec": 2.4})
+    transcript = _transcript_with_words(
+        [
+            (0.0, 40.0, "A clean opening sentence."),
+            (40.0, 51.4, "A thought that is almost complete"),
+            (51.4, 56.5, "and now it finishes cleanly."),
+        ],
+        base_start=100.0,
+    )
+
+    out = snap_render_windows_to_sentence_boundaries([clip], transcript)
+
+    assert out[0].start_time_sec == pytest.approx(100.0, abs=0.05)
+    assert out[0].end_time_sec == pytest.approx(156.5, abs=0.05)
+
+
+def test_render_window_snap_skips_duration_violating_candidate():
+    clip = _clip(start=100.0, end=190.0)
+    clip = clip.model_copy(update={"trim_start_sec": 0.0, "trim_end_sec": 0.5})
+    transcript = _transcript_with_words(
+        [
+            (-2.5, 0.0, "Earlier clean start."),
+            (0.0, 45.0, "Current clip body."),
+            (45.0, 92.0, "Later end that would make the clip too long."),
+        ],
+        base_start=100.0,
+    )
+
+    out = snap_render_windows_to_sentence_boundaries([clip], transcript)
+
+    assert out[0].start_time_sec == pytest.approx(100.0, abs=0.05)
+    assert out[0].end_time_sec == pytest.approx(190.0, abs=0.05)
+    assert out[0].trim_end_sec == pytest.approx(0.5, abs=0.05)
+
+
+def test_render_window_snap_warns_when_no_clean_candidate(caplog):
+    clip = _clip(start=100.0, end=160.0)
+    clip = clip.model_copy(update={"trim_start_sec": 1.0, "trim_end_sec": 0.0})
+    transcript = _transcript_with_words(
+        [
+            (0.0, 4.0, "and still running"),
+            (4.0, 8.0, "because this never ends"),
+            (8.0, 60.0, "and nothing here stops"),
+        ],
+        base_start=100.0,
+    )
+
+    with caplog.at_level("WARNING", logger="humeo.content_pruning"):
+        out = snap_render_windows_to_sentence_boundaries([clip], transcript)
+
+    assert out[0].start_time_sec == pytest.approx(100.0, abs=0.05)
+    assert out[0].trim_start_sec == pytest.approx(1.0, abs=0.05)
+    assert "no valid clean sentence boundary found" in caplog.text
 
 
 # ---------------------------------------------------------------------------

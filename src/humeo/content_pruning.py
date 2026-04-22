@@ -248,6 +248,23 @@ def _clamp_decision(
 # mid-sentence cut in clip 001 of the ``PdVv_vLkUgk`` run (6.38s trim vs a
 # sentence that ended ~1.5s later).
 _SEGMENT_SNAP_TOLERANCE_SEC: float = 3.0
+_BOUNDARY_GAP_SEC: float = 0.5
+_BOUNDARY_TIME_EPS_SEC: float = 0.12
+_START_BOUNDARY_WINDOW_SEC: float = 3.0
+_END_BOUNDARY_WINDOW_SEC: float = 2.0
+_TERMINAL_PUNCT: tuple[str, ...] = (".", "?", "!")
+_WEAK_START_WORDS: frozenset[str] = frozenset({"and", "but", "so", "or", "then", "because"})
+
+
+@dataclass(frozen=True)
+class _BoundaryCandidate:
+    """A possible snapped boundary on the source timeline."""
+
+    time_sec: float
+    clean: bool
+    reason: str
+    source: str
+    weak_start: bool = False
 
 
 def _snap_trims_to_segment_boundaries(
@@ -337,6 +354,311 @@ def _snap_trims_to_segment_boundaries(
             return ts0, te0
 
     return new_ts, new_te
+
+
+def _flatten_transcript_words(transcript: dict) -> list[dict[str, float | str]]:
+    words: list[dict[str, float | str]] = []
+    for seg in transcript.get("segments", []):
+        for word in seg.get("words", []):
+            if "start" not in word or "end" not in word:
+                continue
+            try:
+                start = float(word["start"])
+                end = float(word["end"])
+            except (TypeError, ValueError):
+                continue
+            words.append(
+                {
+                    "word": str(word.get("word", "")),
+                    "start": start,
+                    "end": end,
+                }
+            )
+    return words
+
+
+def _normalized_last_char(text: str) -> str:
+    stripped = text.rstrip()
+    return stripped[-1] if stripped else ""
+
+
+def _segment_start_hint(
+    segments: list[dict[str, Any]],
+    words: list[dict[str, float | str]],
+    time_sec: float,
+) -> tuple[bool, str, bool]:
+    for idx, seg in enumerate(segments):
+        seg_start = float(seg.get("start", 0.0))
+        if abs(seg_start - time_sec) > _BOUNDARY_TIME_EPS_SEC:
+            continue
+        seg_words = seg.get("words") or []
+        first_word = ""
+        if seg_words:
+            first_word = str(seg_words[0].get("word", "")).strip().lower()
+        weak_start = first_word in _WEAK_START_WORDS
+        if idx == 0:
+            return True, "first transcript segment", weak_start
+        prev_text = str(segments[idx - 1].get("text", "")).rstrip()
+        if _normalized_last_char(prev_text) in _TERMINAL_PUNCT:
+            return True, "previous segment ends with terminal punctuation", weak_start
+        break
+
+    for idx, word in enumerate(words):
+        start = float(word["start"])
+        if abs(start - time_sec) > _BOUNDARY_TIME_EPS_SEC:
+            continue
+        weak_start = str(word["word"]).strip().lower() in _WEAK_START_WORDS
+        if idx == 0:
+            return True, "first transcript word", weak_start
+        gap_before = start - float(words[idx - 1]["end"])
+        if gap_before >= _BOUNDARY_GAP_SEC:
+            return True, f"silence gap before boundary ({gap_before:.2f}s)", weak_start
+        return False, "no terminal punctuation or >=0.5s silence before boundary", weak_start
+
+    return False, "no matching transcript boundary", False
+
+
+def _segment_end_hint(
+    segments: list[dict[str, Any]],
+    words: list[dict[str, float | str]],
+    time_sec: float,
+) -> tuple[bool, str]:
+    for seg in segments:
+        seg_end = float(seg.get("end", 0.0))
+        if abs(seg_end - time_sec) > _BOUNDARY_TIME_EPS_SEC:
+            continue
+        text = str(seg.get("text", "")).rstrip()
+        if _normalized_last_char(text) in _TERMINAL_PUNCT:
+            return True, "segment ends with terminal punctuation"
+        break
+
+    for idx, word in enumerate(words):
+        end = float(word["end"])
+        if abs(end - time_sec) > _BOUNDARY_TIME_EPS_SEC:
+            continue
+        if idx == len(words) - 1:
+            return True, "last transcript word"
+        gap_after = float(words[idx + 1]["start"]) - end
+        if gap_after >= _BOUNDARY_GAP_SEC:
+            return True, f"silence gap after boundary ({gap_after:.2f}s)"
+        return False, "no terminal punctuation or >=0.5s silence after boundary"
+
+    return False, "no matching transcript boundary"
+
+
+def _candidate_key(time_sec: float) -> float:
+    return round(time_sec, 3)
+
+
+def _gather_start_candidates(
+    clip: Clip,
+    current_start: float,
+    transcript: dict,
+) -> list[_BoundaryCandidate]:
+    low = current_start - _START_BOUNDARY_WINDOW_SEC
+    high = current_start + _START_BOUNDARY_WINDOW_SEC
+    segments = list(transcript.get("segments", []))
+    words = _flatten_transcript_words(transcript)
+
+    by_time: dict[float, _BoundaryCandidate] = {}
+
+    def add_candidate(time_sec: float, source: str) -> None:
+        clean, reason, weak = _segment_start_hint(segments, words, time_sec)
+        candidate = _BoundaryCandidate(
+            time_sec=float(time_sec),
+            clean=clean,
+            reason=reason,
+            source=source,
+            weak_start=weak,
+        )
+        key = _candidate_key(candidate.time_sec)
+        existing = by_time.get(key)
+        if existing is None:
+            by_time[key] = candidate
+            return
+        if candidate.clean and not existing.clean:
+            by_time[key] = candidate
+            return
+        if candidate.clean == existing.clean and not candidate.weak_start and existing.weak_start:
+            by_time[key] = candidate
+
+    add_candidate(current_start, "current")
+    add_candidate(clip.start_time_sec, "raw")
+
+    for seg in segments:
+        seg_start = float(seg.get("start", 0.0))
+        if low <= seg_start <= high:
+            add_candidate(seg_start, "segment")
+    for word in words:
+        word_start = float(word["start"])
+        if low <= word_start <= high:
+            add_candidate(word_start, "word")
+
+    return list(by_time.values())
+
+
+def _gather_end_candidates(
+    clip: Clip,
+    current_end: float,
+    transcript: dict,
+) -> list[_BoundaryCandidate]:
+    low = current_end - _END_BOUNDARY_WINDOW_SEC
+    high = current_end + _END_BOUNDARY_WINDOW_SEC
+    segments = list(transcript.get("segments", []))
+    words = _flatten_transcript_words(transcript)
+
+    by_time: dict[float, _BoundaryCandidate] = {}
+
+    def add_candidate(time_sec: float, source: str) -> None:
+        clean, reason = _segment_end_hint(segments, words, time_sec)
+        candidate = _BoundaryCandidate(
+            time_sec=float(time_sec),
+            clean=clean,
+            reason=reason,
+            source=source,
+        )
+        key = _candidate_key(candidate.time_sec)
+        existing = by_time.get(key)
+        if existing is None or (candidate.clean and not existing.clean):
+            by_time[key] = candidate
+
+    add_candidate(current_end, "current")
+    add_candidate(clip.end_time_sec, "raw")
+
+    for seg in segments:
+        seg_end = float(seg.get("end", 0.0))
+        if low <= seg_end <= high:
+            add_candidate(seg_end, "segment")
+    for word in words:
+        word_end = float(word["end"])
+        if low <= word_end <= high:
+            add_candidate(word_end, "word")
+
+    return list(by_time.values())
+
+
+def _candidate_priority(current_time: float, candidate: _BoundaryCandidate) -> tuple[int, int, int, float]:
+    source_rank = {"current": 0, "raw": 1, "segment": 2, "word": 3}.get(candidate.source, 9)
+    weak_rank = 1 if candidate.weak_start else 0
+    clean_rank = 0 if candidate.clean else 1
+    return (clean_rank, weak_rank, source_rank, abs(candidate.time_sec - current_time))
+
+
+def _pair_priority(
+    current_start: float,
+    current_end: float,
+    start_candidate: _BoundaryCandidate,
+    end_candidate: _BoundaryCandidate,
+) -> tuple[int, int, int, float]:
+    good_start = start_candidate.clean and not start_candidate.weak_start
+    good_end = end_candidate.clean
+    return (
+        -(int(good_start) + int(good_end)),
+        1 if start_candidate.weak_start else 0,
+        0 if (good_start or good_end) else 1,
+        abs(start_candidate.time_sec - current_start) + abs(end_candidate.time_sec - current_end),
+    )
+
+
+def snap_render_windows_to_sentence_boundaries(
+    clips: list[Clip],
+    transcript: dict,
+) -> list[Clip]:
+    """Snap render windows to nearby complete-thought boundaries.
+
+    This runs after Stage 2.5 pruning and operates on the *actual* render
+    window (`start + trim_start`, `end - trim_end`). Unlike trim snapping, it
+    can undo a harmful trim or move slightly beyond the original selected
+    window, as long as the final duration still satisfies the hard
+    `[MIN_CLIP_DURATION_SEC, MAX_CLIP_DURATION_SEC]` contract.
+    """
+    if not transcript.get("segments"):
+        return clips
+
+    snapped: list[Clip] = []
+    for clip in clips:
+        current_start = clip.start_time_sec + clip.trim_start_sec
+        current_end = clip.end_time_sec - clip.trim_end_sec
+        start_candidates = sorted(
+            _gather_start_candidates(clip, current_start, transcript),
+            key=lambda c: _candidate_priority(current_start, c),
+        )
+        end_candidates = sorted(
+            _gather_end_candidates(clip, current_end, transcript),
+            key=lambda c: _candidate_priority(current_end, c),
+        )
+
+        current_start_candidate = next(c for c in start_candidates if c.source == "current")
+        current_end_candidate = next(c for c in end_candidates if c.source == "current")
+        current_pair = (current_start_candidate, current_end_candidate)
+        best_pair = current_pair
+        best_priority = _pair_priority(
+            current_start,
+            current_end,
+            current_start_candidate,
+            current_end_candidate,
+        )
+
+        for start_candidate in start_candidates:
+            for end_candidate in end_candidates:
+                if end_candidate.time_sec <= start_candidate.time_sec:
+                    continue
+                duration = end_candidate.time_sec - start_candidate.time_sec
+                if duration < MIN_CLIP_DURATION_SEC or duration > MAX_CLIP_DURATION_SEC:
+                    continue
+                priority = _pair_priority(
+                    current_start,
+                    current_end,
+                    start_candidate,
+                    end_candidate,
+                )
+                if priority < best_priority:
+                    best_pair = (start_candidate, end_candidate)
+                    best_priority = priority
+
+        start_candidate, end_candidate = best_pair
+        start_improved = best_pair[0] is not current_pair[0]
+        end_improved = best_pair[1] is not current_pair[1]
+        if start_improved or end_improved:
+            logger.info(
+                "Clip %s: render window snapped %.2f-%.2f -> %.2f-%.2f "
+                "(start=%s; end=%s).",
+                clip.clip_id,
+                current_start,
+                current_end,
+                start_candidate.time_sec,
+                end_candidate.time_sec,
+                start_candidate.reason,
+                end_candidate.reason,
+            )
+            snapped.append(
+                clip.model_copy(
+                    update={
+                        "start_time_sec": start_candidate.time_sec,
+                        "end_time_sec": end_candidate.time_sec,
+                        "trim_start_sec": 0.0,
+                        "trim_end_sec": 0.0,
+                        "hook_start_sec": None,
+                        "hook_end_sec": None,
+                    }
+                )
+            )
+            continue
+
+        warnings: list[str] = []
+        if not current_start_candidate.clean or current_start_candidate.weak_start:
+            warnings.append(f"start@{current_start:.2f}s")
+        if not current_end_candidate.clean:
+            warnings.append(f"end@{current_end:.2f}s")
+        if warnings:
+            logger.warning(
+                "Clip %s: no valid clean sentence boundary found for %s; leaving render window unchanged.",
+                clip.clip_id,
+                ", ".join(warnings),
+            )
+        snapped.append(clip)
+
+    return snapped
 
 
 def apply_prune_decisions(
