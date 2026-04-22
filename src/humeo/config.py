@@ -22,6 +22,11 @@ TARGET_ASPECT = 9 / 16
 MIN_CLIP_DURATION_SEC = 50
 MAX_CLIP_DURATION_SEC = 90
 TARGET_CLIP_COUNT = 5
+TEXT_AXIS_WEIGHTS: dict[str, float] = {
+    "message_wow": 0.4,
+    "hook_emotion": 0.35,
+    "catchy": 0.25,
+}
 
 # Gemini model id (override with GEMINI_MODEL in .env or shell). See docs/ENVIRONMENT.md.
 GEMINI_MODEL = (os.environ.get("GEMINI_MODEL") or "gemini-3.1-flash-lite-preview").strip() or "gemini-3.1-flash-lite-preview"

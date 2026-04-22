@@ -24,6 +24,7 @@ from humeo.config import (
     GEMINI_MODEL,
     MAX_CLIP_DURATION_SEC,
     MIN_CLIP_DURATION_SEC,
+    TEXT_AXIS_WEIGHTS,
     TARGET_CLIP_COUNT,
 )
 from humeo.env import (
@@ -68,6 +69,40 @@ DEFAULT_CANDIDATE_TEMPERATURE = 0.7
 def _has_valid_duration(clip: Clip) -> bool:
     """Return True when the clip window satisfies the product duration contract."""
     return MIN_CLIP_DURATION_SEC <= clip.duration_sec <= MAX_CLIP_DURATION_SEC
+
+
+def _text_composite_score(clip: Clip) -> float:
+    """Weighted composite from the text-axis breakdown, falling back to virality_score.
+
+    Cache compatibility note:
+    - New Ticket 3 clips use the three-axis rubric (message_wow / hook_emotion / catchy).
+    - Older caches may still contain legacy rule-name ``score_breakdown`` maps from the
+      pre-Ticket-3 prompt. If none of the expected axes are present, fall back cleanly
+      to ``virality_score`` instead of treating the legacy shape as three missing axes.
+    """
+    if not clip.score_breakdown:
+        return clip.virality_score
+
+    present_expected_axes = [axis for axis in TEXT_AXIS_WEIGHTS if axis in clip.score_breakdown]
+    if not present_expected_axes:
+        return clip.virality_score
+
+    total = 0.0
+    missing: list[str] = []
+    for axis, weight in TEXT_AXIS_WEIGHTS.items():
+        value = clip.score_breakdown.get(axis)
+        if value is None:
+            missing.append(axis)
+            continue
+        total += value * weight
+
+    if missing:
+        logger.warning(
+            "Clip %s score_breakdown missing axis(es) %s; treating as 0.0.",
+            clip.clip_id,
+            ", ".join(missing),
+        )
+    return total
 
 
 def _openai_message_text(content: object) -> str:
@@ -138,14 +173,17 @@ def rank_and_filter_clips(
     min_kept: int = DEFAULT_MIN_KEPT,
     max_kept: int = DEFAULT_MAX_KEPT,
 ) -> list[Clip]:
-    """Rank ``clips`` by ``virality_score`` and apply the threshold+floor+cap.
+    """Rank ``clips`` by text composite (or legacy ``virality_score``) and apply
+    the threshold+floor+cap.
 
     Rules (in order, with clear precedence):
 
-    1. Sort descending by ``virality_score``.
-    2. Keep clips with ``virality_score >= threshold`` (or ``needs_review``
-       cleared). Reviewed-out clips (``needs_review=True``) are always sent
-       to the back of the priority queue.
+    1. Sort descending by the text composite score when the Ticket 3
+       three-axis ``score_breakdown`` is present; otherwise fall back to the
+       legacy ``virality_score``.
+    2. Keep clips whose active score signal is ``>= threshold`` (or
+       ``needs_review`` cleared). Reviewed-out clips (``needs_review=True``)
+       are always sent to the back of the priority queue.
     3. If fewer than ``min_kept`` clips passed the threshold, fill up from
        the remaining clips in rank order until we reach ``min_kept`` (or
        run out of candidates).
@@ -159,10 +197,13 @@ def rank_and_filter_clips(
     if not clips:
         return []
 
+    score_signal = {id(c): _text_composite_score(c) for c in clips}
+
     def _priority(c: Clip) -> tuple[float, float]:
         # needs_review clips fall behind same-score non-reviewed ones.
         review_penalty = 0.5 if c.needs_review else 0.0
-        return (c.virality_score - review_penalty, c.virality_score)
+        composite = score_signal[id(c)]
+        return (composite - review_penalty, composite)
 
     valid: list[Clip] = []
     invalid: list[Clip] = []
@@ -189,7 +230,7 @@ def rank_and_filter_clips(
 
     ordered = sorted(valid, key=_priority, reverse=True)
 
-    strong = [c for c in ordered if c.virality_score >= threshold and not c.needs_review]
+    strong = [c for c in ordered if score_signal[id(c)] >= threshold and not c.needs_review]
     kept = list(strong)
 
     if len(kept) < min_kept:

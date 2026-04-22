@@ -29,6 +29,7 @@ def _clip(
     duration: float = 60.0,
     needs_review: bool = False,
     topic: str = "t",
+    score_breakdown: dict[str, float] | None = None,
 ) -> Clip:
     # Give each clip a unique, legal window. Score is the only field these
     # tests care about beyond needs_review / clip_id.
@@ -39,6 +40,7 @@ def _clip(
             "start_time_sec": start,
             "end_time_sec": start + duration,
             "virality_score": score,
+            "score_breakdown": score_breakdown,
             "needs_review": needs_review,
         }
     )
@@ -74,6 +76,142 @@ def test_weak_pool_backfills_to_min_kept():
     )
     assert len(kept) == 2
     assert [c.virality_score for c in kept] == [0.62, 0.55]
+
+
+def test_composite_ranking_uses_weighted_breakdown():
+    candidates = [
+        _clip(
+            "a",
+            score=0.20,
+            score_breakdown={"message_wow": 0.70, "hook_emotion": 0.70, "catchy": 0.70},
+        ),
+        _clip(
+            "b",
+            score=0.99,
+            start=100,
+            score_breakdown={"message_wow": 1.0, "hook_emotion": 0.0, "catchy": 0.0},
+        ),
+        _clip(
+            "c",
+            score=0.50,
+            start=200,
+            score_breakdown={"message_wow": 0.0, "hook_emotion": 1.0, "catchy": 0.0},
+        ),
+    ]
+
+    kept = rank_and_filter_clips(candidates, threshold=0.00, min_kept=3, max_kept=5)
+
+    assert [c.start_time_sec for c in kept] == [0.0, 100.0, 200.0]
+
+
+def test_legacy_clips_fallback_to_virality_score():
+    candidates = [
+        _clip("a", score=0.55, score_breakdown=None),
+        _clip("b", score=0.80, start=100, score_breakdown=None),
+    ]
+
+    kept = rank_and_filter_clips(candidates, threshold=0.00, min_kept=2, max_kept=5)
+
+    assert [c.virality_score for c in kept] == [0.80, 0.55]
+
+
+def test_mixed_pool_composite_and_legacy_compared_correctly():
+    candidates = [
+        _clip(
+            "a",
+            score=0.60,
+            score_breakdown={"message_wow": 0.80, "hook_emotion": 0.80, "catchy": 0.40},
+        ),
+        _clip("b", score=0.60, start=100, score_breakdown=None),
+    ]
+
+    kept = rank_and_filter_clips(candidates, threshold=0.00, min_kept=2, max_kept=5)
+
+    assert [c.start_time_sec for c in kept] == [0.0, 100.0]
+
+
+def test_single_axis_composite_math(caplog):
+    candidates = [
+        _clip(
+            "a",
+            score=0.99,
+            score_breakdown={"message_wow": 1.0},
+        ),
+        _clip("b", score=0.39, start=100, score_breakdown=None),
+    ]
+
+    with caplog.at_level(logging.WARNING):
+        kept = rank_and_filter_clips(candidates, threshold=0.00, min_kept=2, max_kept=5)
+
+    assert kept[0].start_time_sec == 0.0
+    assert "missing axis(es) hook_emotion, catchy" in caplog.text
+
+
+def test_all_three_axes_max_scores_1_0():
+    candidates = [
+        _clip(
+            "a",
+            score=0.01,
+            score_breakdown={"message_wow": 1.0, "hook_emotion": 1.0, "catchy": 1.0},
+        ),
+        _clip("b", score=0.99, start=100, score_breakdown=None, needs_review=True),
+    ]
+
+    kept = rank_and_filter_clips(candidates, threshold=0.00, min_kept=2, max_kept=5)
+
+    assert kept[0].start_time_sec == 0.0
+
+
+def test_needs_review_penalty_still_applies_on_composite():
+    candidates = [
+        _clip(
+            "a",
+            score=0.10,
+            score_breakdown={"message_wow": 0.90, "hook_emotion": 0.90, "catchy": 0.90},
+            needs_review=True,
+        ),
+        _clip(
+            "b",
+            score=0.10,
+            start=100,
+            score_breakdown={"message_wow": 0.60, "hook_emotion": 0.60, "catchy": 0.60},
+        ),
+    ]
+
+    kept = rank_and_filter_clips(candidates, threshold=0.00, min_kept=2, max_kept=5)
+
+    assert kept[0].start_time_sec == 100.0
+
+
+def test_missing_axes_logs_warning(caplog):
+    candidates = [
+        _clip(
+            "a",
+            score=0.90,
+            score_breakdown={"message_wow": 0.70, "catchy": 0.40},
+        ),
+        _clip("b", score=0.30, start=100, score_breakdown=None),
+    ]
+
+    with caplog.at_level(logging.WARNING):
+        rank_and_filter_clips(candidates, threshold=0.00, min_kept=2, max_kept=5)
+
+    assert "Clip a score_breakdown missing axis(es) hook_emotion; treating as 0.0." in caplog.text
+
+
+def test_legacy_point_based_score_breakdown_falls_back_to_virality_score():
+    candidates = [
+        _clip(
+            "a",
+            score=0.91,
+            score_breakdown={"counter_intuitive_claim": 1.0, "quotable_phrasing": 1.0},
+        ),
+        _clip("b", score=0.60, start=100, score_breakdown=None),
+    ]
+
+    kept = rank_and_filter_clips(candidates, threshold=0.00, min_kept=2, max_kept=5)
+
+    assert kept[0].start_time_sec == 0.0
 
 
 def test_invalid_short_clips_excluded():

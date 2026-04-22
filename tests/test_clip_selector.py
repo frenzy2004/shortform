@@ -137,7 +137,12 @@ def test_parse_clips_preserves_score_breakdown_and_reasoning():
                     "start_time_sec": 10.0,
                     "end_time_sec": 25.0,
                     "duration_sec": 15.0,
-                    "score_breakdown": {"message_wow": 0.8, "hook_emotion": 0.6},
+                    "virality_score": 0.73,
+                    "score_breakdown": {
+                        "message_wow": 0.8,
+                        "hook_emotion": 0.6,
+                        "catchy": 0.7,
+                    },
                     "reasoning": "Strong payoff and clear takeaway.",
                 }
             ]
@@ -147,7 +152,12 @@ def test_parse_clips_preserves_score_breakdown_and_reasoning():
     clips = _parse_clips(raw_json)
 
     assert len(clips) == 1
-    assert clips[0].score_breakdown == {"message_wow": 0.8, "hook_emotion": 0.6}
+    assert clips[0].virality_score == 0.73
+    assert clips[0].score_breakdown == {
+        "message_wow": 0.8,
+        "hook_emotion": 0.6,
+        "catchy": 0.7,
+    }
     assert clips[0].reasoning == "Strong payoff and clear takeaway."
 
 
@@ -192,6 +202,42 @@ def test_load_clips_legacy_fixture_defaults_new_fields():
         assert clip.score_breakdown is None
         assert clip.visual_notes is None
         assert clip.reasoning is None
+
+
+def test_parse_clips_handles_legacy_no_breakdown():
+    from humeo.clip_selector import _parse_clips
+
+    raw_json = json.dumps(
+        {
+            "clips": [
+                {
+                    "clip_id": "123",
+                    "topic": "topic",
+                    "start_time_sec": 10.0,
+                    "end_time_sec": 70.0,
+                    "duration_sec": 60.0,
+                    "virality_score": 0.81,
+                }
+            ]
+        }
+    )
+
+    clips = _parse_clips(raw_json)
+
+    assert len(clips) == 1
+    assert clips[0].virality_score == 0.81
+    assert clips[0].score_breakdown is None
+
+
+def test_build_prompt_includes_ticket3_calibration_text():
+    from humeo.clip_selector import build_prompt
+
+    system, _user = build_prompt(
+        {"segments": [{"start": 0.0, "end": 1.0, "text": "hello"}]},
+    )
+
+    assert "Most moments should land between 0.4 and 0.6 on each axis." in system
+    assert "A response where every clip scores 0.85+ is wrong" in system
 
 
 def test_build_prompt_passes_through_steering_notes():
