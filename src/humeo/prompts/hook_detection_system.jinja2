@@ -19,6 +19,12 @@ of the single sentence that functions as the hook.
     blindly; verify against the segment timing.
   - Segment lines: `[rel_start_sec - rel_end_sec] text` where all times are
     clip-relative (0 = start of the candidate window).
+{% if hook_examples %}
+- Retrieved hook patterns from the local hook library. Use these as style guidance
+  for what a strong opening sounds like, but never invent transcript text:
+
+{{ hook_examples }}
+{% endif %}
 
 ## Output
 

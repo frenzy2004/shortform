@@ -4,6 +4,8 @@ import os
 from dataclasses import dataclass, field
 from pathlib import Path
 
+from humeo_core.schemas import RenderTheme
+
 from humeo.env import bootstrap_env
 
 bootstrap_env()
@@ -29,18 +31,23 @@ TEXT_AXIS_WEIGHTS: dict[str, float] = {
 }
 
 # Gemini model id (override with GEMINI_MODEL in .env or shell). See docs/ENVIRONMENT.md.
-GEMINI_MODEL = (os.environ.get("GEMINI_MODEL") or "gemini-3.1-flash-lite-preview").strip() or "gemini-3.1-flash-lite-preview"
+GEMINI_MODEL = (os.environ.get("GEMINI_MODEL") or "google/gemini-2.5-pro").strip() or "google/gemini-2.5-pro"
 # Optional *only* when layout vision should use a different id than clip selection
 # (e.g. cheaper model per keyframe). Empty unset → ``resolved_vision_model`` uses
 # ``GEMINI_MODEL`` / ``PipelineConfig.gemini_model`` (same multimodal stack).
 GEMINI_VISION_MODEL = (os.environ.get("GEMINI_VISION_MODEL") or "").strip() or None
+DEFAULT_SEGMENTATION_PROVIDER = (
+    (os.environ.get("HUMEO_SEGMENTATION_PROVIDER") or "").strip().lower()
+    or ("replicate" if (os.environ.get("REPLICATE_API_TOKEN") or "").strip() else "off")
+)
 
 # ---------------------------------------------------------------------------
 @dataclass
 class PipelineConfig:
     """Runtime configuration for a single pipeline run."""
 
-    youtube_url: str
+    youtube_url: str | None = None
+    source: str | None = None
     output_dir: Path = field(default_factory=lambda: Path("output"))
     # None = auto: per-video dir under the cache root (see docs/ENVIRONMENT.md).
     work_dir: Path | None = None
@@ -52,6 +59,10 @@ class PipelineConfig:
     gemini_model: str | None = None
     # None = GEMINI_VISION_MODEL env or same as gemini_model (per-keyframe layout + bbox).
     gemini_vision_model: str | None = None
+    render_theme: RenderTheme = RenderTheme.NATIVE_HIGHLIGHT
+    hook_library_path: Path | None = None
+    segmentation_provider: str = DEFAULT_SEGMENTATION_PROVIDER
+    segmentation_model: str = "meta/sam-2-video"
     # When True, always re-run clip-selection LLM (ignore clips.meta.json match).
     force_clip_selection: bool = False
     # When True, always re-run Gemini vision for layouts (ignore layout_vision.meta.json).
@@ -100,12 +111,29 @@ class PipelineConfig:
     # the output resolution via ``original_size``, so ``FontSize`` and ``MarginV``
     # mean what they say. 48px font with a 160px bottom margin lands the caption
     # in the lower third with a readable-but-not-shouting size.
-    subtitle_font_size: int = 48
-    subtitle_margin_v: int = 160
-    subtitle_max_words_per_cue: int = 4
-    subtitle_max_cue_sec: float = 2.2
+    subtitle_font_size: int = 38
+    subtitle_margin_v: int = 166
+    subtitle_max_words_per_cue: int = 10
+    subtitle_max_cue_sec: float = 2.8
 
     def __post_init__(self):
+        youtube_url = (self.youtube_url or "").strip() or None
+        source = (self.source or "").strip() or None
+
+        if source is None and youtube_url is None:
+            raise ValueError("PipelineConfig requires either source or youtube_url.")
+        if source is not None and youtube_url is not None and source != youtube_url:
+            raise ValueError("PipelineConfig source and youtube_url must match when both are set.")
+        if source is None:
+            source = youtube_url
+        if youtube_url is None:
+            youtube_url = source
+
+        self.source = source
+        self.youtube_url = youtube_url
+        if isinstance(self.render_theme, str):
+            self.render_theme = RenderTheme(self.render_theme)
+        self.segmentation_provider = (self.segmentation_provider or "off").strip().lower()
         self.output_dir = Path(self.output_dir)
         self.output_dir.mkdir(parents=True, exist_ok=True)
         if self.cache_root is not None:
@@ -113,3 +141,5 @@ class PipelineConfig:
         if self.work_dir is not None:
             self.work_dir = Path(self.work_dir)
             self.work_dir.mkdir(parents=True, exist_ok=True)
+        if self.hook_library_path is not None:
+            self.hook_library_path = Path(self.hook_library_path)

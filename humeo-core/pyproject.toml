@@ -38,6 +38,9 @@ humeo-mcp = "humeo_core.server:main"
 [tool.setuptools.packages.find]
 where = ["src"]
 
+[tool.setuptools.package-data]
+humeo_core = ["assets/fonts/*"]
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 addopts = "-ra -q"

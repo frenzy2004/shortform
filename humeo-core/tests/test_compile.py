@@ -6,7 +6,7 @@ from humeo_core.primitives.compile import (
     build_ffmpeg_cmd,
     plan_title_drawtext,
 )
-from humeo_core.schemas import Clip, LayoutInstruction, LayoutKind, RenderRequest
+from humeo_core.schemas import Clip, LayoutInstruction, LayoutKind, RenderRequest, RenderTheme
 
 
 def _req(**overrides):
@@ -17,6 +17,7 @@ def _req(**overrides):
         clip=c,
         layout=li,
         output_path="/tmp/out.mp4",
+        render_theme=RenderTheme.LEGACY,
         mode="dry_run",
     )
     data.update(overrides)
@@ -240,6 +241,72 @@ def test_long_title_pipes_through_build_ffmpeg_cmd():
     assert "[vout]" in fg
     assert ";;" not in fg  # no empty chain links
     assert ",," not in fg  # no stray commas
+
+
+def test_reference_theme_draws_title_and_caption_bars():
+    cmd = build_ffmpeg_cmd(
+        _req(
+            title_text="A Multi-Trillion Dollar Opportunity",
+            subtitle_path="/tmp/clip.ass",
+            render_theme=RenderTheme.REFERENCE_LOWER_THIRD,
+        )
+    )
+    fg = cmd[cmd.index("-filter_complex") + 1]
+    assert "drawbox=x=28:y=32" in fg
+    assert "drawbox=x=0:y=" in fg
+    assert "Fontname=Source Sans 3" in fg
+    assert "Alignment=2" in fg
+    assert "Outline=2" in fg
+
+
+def test_reference_theme_wraps_long_titles_inside_the_title_bar():
+    cmd = build_ffmpeg_cmd(
+        _req(
+            title_text="12% Youth Unemployment? Start a Business With AI",
+            render_theme=RenderTheme.REFERENCE_LOWER_THIRD,
+        )
+    )
+    fg = cmd[cmd.index("-filter_complex") + 1]
+    assert fg.count("drawtext=") >= 2
+    assert "..." not in fg
+
+
+def test_reference_theme_draws_frosted_caption_ribbon_when_subtitles_exist():
+    cmd = build_ffmpeg_cmd(
+        _req(
+            title_text="Hook title",
+            subtitle_path="/tmp/clip.ass",
+            render_theme=RenderTheme.REFERENCE_LOWER_THIRD,
+        )
+    )
+    fg = cmd[cmd.index("-filter_complex") + 1]
+    assert "drawbox=x=0:y=" in fg
+
+
+def test_reference_theme_allows_titles_on_split_layouts():
+    cmd = build_ffmpeg_cmd(
+        _req(
+            layout=LayoutInstruction(clip_id="1", layout=LayoutKind.SPLIT_CHART_PERSON),
+            title_text="Hook title",
+            render_theme=RenderTheme.REFERENCE_LOWER_THIRD,
+        )
+    )
+    fg = cmd[cmd.index("-filter_complex") + 1]
+    assert "drawtext=" in fg
+
+
+def test_native_highlight_theme_skips_title_card_and_keeps_ass_styles():
+    cmd = build_ffmpeg_cmd(
+        _req(
+            title_text="This title should not render",
+            subtitle_path="/tmp/clip.ass",
+            render_theme=RenderTheme.NATIVE_HIGHLIGHT,
+        )
+    )
+    fg = cmd[cmd.index("-filter_complex") + 1]
+    assert "drawtext" not in fg
+    assert "subtitles='" in fg
+    assert "force_style='" not in fg
 
 
 def test_ensure_windows_fontconfig_is_noop_off_windows():

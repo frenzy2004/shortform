@@ -2,10 +2,14 @@ import json
 from unittest.mock import patch
 
 from humeo.ingest import (
+    _normalize_elevenlabs_response,
     _merge_transcripts,
     _offset_transcript_timestamps,
     _plan_openai_chunk_ranges,
+    _write_transcript,
+    resolved_transcribe_settings,
     stage_local_video,
+    transcript_cache_valid,
     transcribe_whisperx,
 )
 
@@ -82,3 +86,39 @@ def test_stage_local_video_copies_source_and_records_marker(tmp_path):
     assert staged.read_bytes() == b"video-bytes"
     marker = json.loads((tmp_path / "work" / "source.local.json").read_text(encoding="utf-8"))
     assert marker["local_source_path"] == str(source.resolve())
+
+
+def test_normalize_elevenlabs_response_builds_word_segments():
+    normalized = _normalize_elevenlabs_response(
+        {
+            "language_code": "en",
+            "words": [
+                {"text": "Hello", "start": 0.0, "end": 0.3, "type": "word"},
+                {"text": "world", "start": 0.35, "end": 0.7, "type": "word"},
+                {"text": "(laughter)", "start": 1.8, "end": 2.0, "type": "audio_event"},
+                {"text": "again", "start": 2.1, "end": 2.5, "type": "word"},
+            ],
+        }
+    )
+    assert normalized["language"] == "en"
+    assert len(normalized["segments"]) == 2
+    assert normalized["segments"][0]["text"] == "Hello world"
+    assert normalized["segments"][1]["words"][0]["word"] == "again"
+
+
+def test_transcript_cache_tracks_provider_metadata(monkeypatch, tmp_path):
+    monkeypatch.setenv("HUMEO_TRANSCRIBE_PROVIDER", "elevenlabs")
+    monkeypatch.setenv("ELEVENLABS_NO_VERBATIM", "true")
+    _write_transcript(tmp_path, {"segments": [], "language": "en"})
+    assert transcript_cache_valid(tmp_path)
+
+    monkeypatch.setenv("ELEVENLABS_NO_VERBATIM", "false")
+    assert not transcript_cache_valid(tmp_path)
+
+
+def test_resolved_transcribe_settings_defaults_to_elevenlabs(monkeypatch):
+    monkeypatch.delenv("HUMEO_TRANSCRIBE_PROVIDER", raising=False)
+    monkeypatch.setenv("ELEVENLABS_API_KEY", "test")
+    settings = resolved_transcribe_settings()
+    assert settings["provider"] == "elevenlabs"
+    assert settings["no_verbatim"] is True

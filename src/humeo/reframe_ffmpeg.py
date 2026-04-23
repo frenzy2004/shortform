@@ -11,6 +11,7 @@ from humeo_core.schemas import (
     LayoutInstruction,
     LayoutKind,
     RenderRequest,
+    RenderTheme,
 )
 
 logger = logging.getLogger(__name__)
@@ -37,6 +38,7 @@ def reframe_clip_ffmpeg(
     subtitle_font_size: int = 48,
     subtitle_margin_v: int = 160,
     title_text: str = "",
+    render_theme: RenderTheme = RenderTheme.NATIVE_HIGHLIGHT,
     dry_run: bool = False,
 ) -> RenderRequest:
     """Render a single clip to 9:16 via one ffmpeg call.
@@ -56,6 +58,7 @@ def reframe_clip_ffmpeg(
         subtitle_font_size=subtitle_font_size,
         subtitle_margin_v=subtitle_margin_v,
         title_text=title_text,
+        render_theme=render_theme,
         mode="dry_run" if dry_run else "normal",
     )
     result = compile_mod.render_clip(req)

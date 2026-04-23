@@ -47,6 +47,15 @@ def test_resolve_llm_provider_prefers_google_over_openrouter(monkeypatch):
     assert resolve_llm_provider() == "google"
 
 
+def test_resolve_llm_provider_honors_forced_openrouter(monkeypatch):
+    monkeypatch.setenv("HUMEO_LLM_PROVIDER", "openrouter")
+    monkeypatch.setenv("GOOGLE_API_KEY", "from-google")
+    monkeypatch.setenv("OPENROUTER_API_KEY", "from-openrouter")
+    from humeo.env import resolve_llm_provider
+
+    assert resolve_llm_provider() == "openrouter"
+
+
 def test_resolve_llm_provider_falls_back_to_openrouter(monkeypatch):
     monkeypatch.delenv("GOOGLE_API_KEY", raising=False)
     monkeypatch.delenv("GEMINI_API_KEY", raising=False)
@@ -249,3 +258,35 @@ def test_build_prompt_passes_through_steering_notes():
     )
 
     assert "prefer standalone moments" in system
+
+
+def test_parse_clips_tightens_overlay_titles():
+    from humeo.clip_selector import _parse_clips
+
+    raw_json = json.dumps(
+        {
+            "clips": [
+                {
+                    "clip_id": "001",
+                    "topic": "Drone delivery economics",
+                    "start_time_sec": 10.0,
+                    "end_time_sec": 70.0,
+                    "virality_score": 0.82,
+                    "suggested_overlay_title": "Your Next Delivery Will Cost Less Than $1",
+                },
+                {
+                    "clip_id": "002",
+                    "topic": "AI job disruption",
+                    "start_time_sec": 80.0,
+                    "end_time_sec": 140.0,
+                    "virality_score": 0.8,
+                    "suggested_overlay_title": "AI Is Creating Two Entirely New Worlds",
+                },
+            ]
+        }
+    )
+
+    clips = _parse_clips(raw_json)
+
+    assert clips[0].suggested_overlay_title == "Delivery Under $1"
+    assert clips[1].suggested_overlay_title == "AI Creates Two New Worlds"

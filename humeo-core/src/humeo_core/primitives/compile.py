@@ -28,7 +28,7 @@ import subprocess
 import tempfile
 from pathlib import Path
 
-from ..schemas import SPLIT_LAYOUTS, RenderRequest, RenderResult
+from ..schemas import RenderRequest, RenderResult, RenderTheme, SPLIT_LAYOUTS
 from .layouts import plan_layout
 
 
@@ -134,6 +134,29 @@ _TITLE_LINE_SPACING_RATIO = 1.3
 # sync with the ``Fontname=Arial`` in the subtitle filter if it ever
 # changes.
 _TITLE_FONT_NAME = "Arial"
+_REFERENCE_TITLE_FONT_NAME = "League Spartan"
+_REFERENCE_CAPTION_FONT_NAME = "Source Sans 3"
+_REFERENCE_TITLE_BAR_X = 28
+_REFERENCE_TITLE_BAR_Y = 32
+_REFERENCE_TITLE_BAR_W = 1024
+_REFERENCE_TITLE_BAR_H = 148
+_REFERENCE_TITLE_TEXT_X = 72
+_REFERENCE_TITLE_TEXT_Y = 54
+_REFERENCE_TITLE_SIZE = 64
+_REFERENCE_CAPTION_BAR_X = 0
+_REFERENCE_CAPTION_BAR_W = 1080
+_REFERENCE_CAPTION_BAR_H = 120
+_REFERENCE_CAPTION_TEXT_MARGIN_L = 92
+_REFERENCE_CAPTION_TEXT_MARGIN_R = 92
+
+
+def _fonts_dir() -> Path:
+    return Path(__file__).resolve().parents[1] / "assets" / "fonts"
+
+
+def _bundled_font_path(filename: str) -> Path | None:
+    path = _fonts_dir() / filename
+    return path if path.is_file() else None
 
 
 def _title_char_px(size_px: int) -> float:
@@ -172,6 +195,15 @@ def _drawtext_font_arg() -> str:
         if arial.is_file():
             return f"fontfile='{_escape_filter_path(str(arial))}'"
     return f"font={_TITLE_FONT_NAME}"
+
+
+def _reference_title_font_arg() -> str:
+    bundled = _bundled_font_path("LeagueSpartan-Bold-static.ttf") or _bundled_font_path(
+        "LeagueSpartan-Bold.ttf"
+    )
+    if bundled is not None:
+        return f"fontfile='{_escape_filter_path(str(bundled))}'"
+    return f"font={_REFERENCE_TITLE_FONT_NAME}"
 
 
 def _drawtext_single(text: str, size: int, y: int) -> str:
@@ -238,6 +270,91 @@ def plan_title_drawtext(title_text: str, out_w: int = 1080) -> str | None:
     return _drawtext_single(truncated, _TITLE_MIN_SIZE, _TITLE_Y_TOP)
 
 
+def _reference_title_fragment(title_text: str, out_w: int = 1080) -> str:
+    bar_w = min(_REFERENCE_TITLE_BAR_W, max(320, out_w - 2 * _REFERENCE_TITLE_BAR_X))
+    accent_w = 16
+    title = " ".join((title_text or "").split())
+    usable_w = max(220, bar_w - (_REFERENCE_TITLE_TEXT_X - _REFERENCE_TITLE_BAR_X) - 30)
+    text_filters: list[str] = []
+    if title:
+        if _title_fits(title, _REFERENCE_TITLE_SIZE, usable_w):
+            esc = _escape_drawtext(title)
+            text_filters.append(
+                f"drawtext=text='{esc}':expansion=none:{_reference_title_font_arg()}:"
+                f"fontcolor=white:fontsize={_REFERENCE_TITLE_SIZE}:"
+                "borderw=1.2:bordercolor=0x101010@0.18:"
+                f"x={_REFERENCE_TITLE_TEXT_X}:"
+                f"y={_REFERENCE_TITLE_TEXT_Y}"
+            )
+        else:
+            line1, line2 = _wrap_title_two_lines(title)
+            two_line_size = 54
+            while (
+                line2
+                and two_line_size > 42
+                and not (
+                    _title_fits(line1, two_line_size, usable_w)
+                    and _title_fits(line2, two_line_size, usable_w)
+                )
+            ):
+                two_line_size -= 2
+            if line2 and _title_fits(line1, two_line_size, usable_w) and _title_fits(line2, two_line_size, usable_w):
+                y_top = 36
+                y_bottom = y_top + int(round(two_line_size * 1.08))
+                for line, y in ((line1, y_top), (line2, y_bottom)):
+                    esc = _escape_drawtext(line)
+                    text_filters.append(
+                        f"drawtext=text='{esc}':expansion=none:{_reference_title_font_arg()}:"
+                        f"fontcolor=white:fontsize={two_line_size}:"
+                        "borderw=1.2:bordercolor=0x101010@0.18:"
+                        f"x={_REFERENCE_TITLE_TEXT_X}:y={y}"
+                    )
+            else:
+                size = _REFERENCE_TITLE_SIZE
+                while title and not _title_fits(title, size, usable_w) and size > 38:
+                    size -= 2
+                if title and not _title_fits(title, size, usable_w):
+                    max_chars = max(8, int(usable_w / _title_char_px(size)))
+                    title = title[: max_chars - 1].rstrip() + "..."
+                esc = _escape_drawtext(title)
+                text_filters.append(
+                    f"drawtext=text='{esc}':expansion=none:{_reference_title_font_arg()}:"
+                    f"fontcolor=white:fontsize={size}:"
+                    "borderw=1.2:bordercolor=0x101010@0.18:"
+                    f"x={_REFERENCE_TITLE_TEXT_X}:"
+                    f"y={_REFERENCE_TITLE_TEXT_Y}"
+                )
+    text_filter = f",{','.join(text_filters)}" if text_filters else ""
+    return (
+        f"drawbox=x={_REFERENCE_TITLE_BAR_X}:y={_REFERENCE_TITLE_BAR_Y}:"
+        f"w={bar_w}:h={_REFERENCE_TITLE_BAR_H}:color=0x1F1F1F@0.84:t=fill,"
+        f"drawbox=x={_REFERENCE_TITLE_BAR_X}:y={_REFERENCE_TITLE_BAR_Y}:"
+        f"w={accent_w}:h={_REFERENCE_TITLE_BAR_H}:color=0x2A2453@0.98:t=fill"
+        f"{text_filter}"
+    )
+
+
+def _reference_caption_bar_fragment(
+    *,
+    out_w: int = 1080,
+    out_h: int = 1920,
+    margin_v: int = 166,
+    font_size: int = 38,
+) -> str:
+    bar_w = min(_REFERENCE_CAPTION_BAR_W, max(320, out_w - 2 * _REFERENCE_CAPTION_BAR_X))
+    bar_h = max(_REFERENCE_CAPTION_BAR_H, int(round(font_size * 2.05)))
+    bar_y = max(
+        _REFERENCE_TITLE_BAR_Y + _REFERENCE_TITLE_BAR_H + 36,
+        out_h - max(40, margin_v) - bar_h,
+    )
+    return (
+        f"drawbox=x={_REFERENCE_CAPTION_BAR_X}:y={bar_y}:"
+        f"w={bar_w}:h={bar_h}:color=0x6570E6@1.0:t=fill,"
+        f"drawbox=x={_REFERENCE_CAPTION_BAR_X}:y={bar_y}:"
+        f"w={bar_w}:h=3:color=0xE4E7FF@0.14:t=fill"
+    )
+
+
 def _escape_filter_path(path: str) -> str:
     return path.replace("\\", "/").replace(":", "\\:").replace("'", "\\'")
 
@@ -280,44 +397,96 @@ def build_ffmpeg_cmd(
     )
     fg = plan.filtergraph
 
-    # Skip the drawtext title overlay on split layouts: the top band already
-    # shows a slide/chart with its own baked-in title, so adding an overlay
-    # on top of that is pure noise (and was stacking over the chart title
-    # in the SPLIT_CHART_PERSON Cathy Wood shorts).
-    title_allowed = req.layout.layout not in SPLIT_LAYOUTS
-    if req.title_text and title_allowed:
-        # ``plan_title_drawtext`` returns a full filter fragment (possibly
-        # two chained ``drawtext`` calls) that fits within the output width.
-        # For short titles it is byte-identical to the pre-P2 single-line
-        # form, keeping existing golden tests green while fixing the
-        # "Prediction Markets vs Derivatives" edge-clip report.
-        title_fragment = plan_title_drawtext(req.title_text, out_w=req.width)
-        if title_fragment:
-            fg = fg.replace(
-                "[vout]",
-                f"[v_prepad];[v_prepad]{title_fragment}[vout]",
+    if req.render_theme == RenderTheme.REFERENCE_LOWER_THIRD:
+        chrome_parts = [
+            _reference_title_fragment(req.title_text, out_w=req.width),
+            _reference_caption_bar_fragment(
+                out_w=req.width,
+                out_h=req.height,
+                margin_v=min(req.subtitle_margin_v, 136),
+                font_size=max(req.subtitle_font_size, 124),
             )
+            if req.subtitle_path
+            else "",
+        ]
+        fg = fg.replace(
+            "[vout]",
+            f"[v_prepad];[v_prepad]{','.join(part for part in chrome_parts if part)}[vout]",
+        )
+    elif req.render_theme == RenderTheme.NATIVE_HIGHLIGHT:
+        # The native-highlight theme mirrors the reference short in
+        # videoplayback (12): no separate top title card, just centered
+        # floating captions with per-word highlight timing.
+        pass
+    else:
+        # Skip the drawtext title overlay on split layouts: the top band already
+        # shows a slide/chart with its own baked-in title, so adding an overlay
+        # on top of that is pure noise (and was stacking over the chart title
+        # in the SPLIT_CHART_PERSON Cathy Wood shorts).
+        title_allowed = req.layout.layout not in SPLIT_LAYOUTS
+        if req.title_text and title_allowed:
+            # ``plan_title_drawtext`` returns a full filter fragment (possibly
+            # two chained ``drawtext`` calls) that fits within the output width.
+            # For short titles it is byte-identical to the pre-P2 single-line
+            # form, keeping existing golden tests green while fixing the
+            # "Prediction Markets vs Derivatives" edge-clip report.
+            title_fragment = plan_title_drawtext(req.title_text, out_w=req.width)
+            if title_fragment:
+                fg = fg.replace(
+                    "[vout]",
+                    f"[v_prepad];[v_prepad]{title_fragment}[vout]",
+                )
 
     if req.subtitle_path:
         subtitle_esc = _escape_filter_path(req.subtitle_path)
+        fonts_dir = _fonts_dir()
+        fontsdir_arg = (
+            f":fontsdir='{_escape_filter_path(str(fonts_dir))}'" if fonts_dir.is_dir() else ""
+        )
         # ``original_size`` pins libass's PlayResY to the actual output so
         # ``FontSize`` and ``MarginV`` are interpreted in output pixels. Without
         # this, libass defaults to PlayResY=288 and then upscales to the real
         # canvas (1920) -- blowing font sizes and pushing subtitles to the
         # middle of the frame. ``WrapStyle=0`` enables smart word wrap so long
         # lines break into readable stacks instead of running off-screen.
-        fg = fg.replace(
-            "[vout]",
-            "[v_sub_in];"
-            f"[v_sub_in]subtitles='{subtitle_esc}':"
-            f"original_size={req.width}x{req.height}:"
-            f"force_style='Fontname=Arial,"
-            f"FontSize={req.subtitle_font_size},Alignment=2,"
-            f"MarginV={req.subtitle_margin_v},MarginL=60,MarginR=60,"
-            "WrapStyle=0,BorderStyle=4,"
-            "BackColour=&H70000000&,PrimaryColour=&H00FFFFFF&,"
-            "Outline=0,Shadow=0,Bold=1'[vout]",
-        )
+        if req.render_theme == RenderTheme.REFERENCE_LOWER_THIRD:
+            force_style = (
+                f"Fontname={_REFERENCE_CAPTION_FONT_NAME},"
+                f"FontSize={max(req.subtitle_font_size, 124)},Alignment=2,"
+                f"MarginV={min(req.subtitle_margin_v, 136)},"
+                "MarginL=56,MarginR=56,"
+                "WrapStyle=0,BorderStyle=1,Outline=2,Shadow=0,"
+                "BackColour=&H00000000&,PrimaryColour=&H00FFFFFF&,"
+                "Bold=1,Italic=0,Spacing=-1"
+            )
+            subtitle_filter = (
+                "[v_sub_in];"
+                f"[v_sub_in]subtitles='{subtitle_esc}'{fontsdir_arg}:"
+                f"original_size={req.width}x{req.height}:"
+                f"force_style='{force_style}'[vout]"
+            )
+        elif req.render_theme == RenderTheme.NATIVE_HIGHLIGHT:
+            subtitle_filter = (
+                "[v_sub_in];"
+                f"[v_sub_in]subtitles='{subtitle_esc}'{fontsdir_arg}:"
+                f"original_size={req.width}x{req.height}[vout]"
+            )
+        else:
+            force_style = (
+                f"Fontname=Arial,"
+                f"FontSize={req.subtitle_font_size},Alignment=2,"
+                f"MarginV={req.subtitle_margin_v},MarginL=60,MarginR=60,"
+                "WrapStyle=0,BorderStyle=4,"
+                "BackColour=&H70000000&,PrimaryColour=&H00FFFFFF&,"
+                "Outline=0,Shadow=0,Bold=1"
+            )
+            subtitle_filter = (
+                "[v_sub_in];"
+                f"[v_sub_in]subtitles='{subtitle_esc}'{fontsdir_arg}:"
+                f"original_size={req.width}x{req.height}:"
+                f"force_style='{force_style}'[vout]"
+            )
+        fg = fg.replace("[vout]", subtitle_filter)
 
     start = req.clip.start_time_sec
     dur = max(0.1, req.clip.duration_sec)

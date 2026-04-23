@@ -17,13 +17,14 @@ Clip selection uses the **Google Gen AI SDK for Python** (`google-genai` package
 |----------|----------|
 | **`GOOGLE_API_KEY`** | **Preferred** API key for Gemini. Get a key from [Google AI Studio](https://aistudio.google.com/apikey). The SDK also recognizes **`GEMINI_API_KEY`** in the environment when using `genai.Client()` without an explicit key. |
 | **`GEMINI_API_KEY`** | Fallback only if `GOOGLE_API_KEY` is unset (same kind of key as AI Studio). |
-| **`OPENROUTER_API_KEY`** | Optional fallback backend for the same Gemini-like stages when no Google Gemini key is available. Humeo routes clip selection, hook detection, content pruning, and layout vision through OpenRouter's OpenAI-compatible chat completions API. |
+| **`OPENROUTER_API_KEY`** | Optional Gemini backend through OpenRouter's OpenAI-compatible chat completions API. This is the recommended path for the production shortform preset. |
+| **`HUMEO_LLM_PROVIDER`** | `auto`, `google`, or `openrouter`. Set `openrouter` to force all Gemini-like stages through OpenRouter even if Google keys also exist. |
 
-Gemini-like stages **must** use an explicit API key. Humeo prefers the Google Gemini SDK when `GOOGLE_API_KEY` / `GEMINI_API_KEY` is present. If those are absent and `OPENROUTER_API_KEY` is set, Humeo falls back to OpenRouter instead. Without any of those keys, the pipeline cannot run the LLM stages.
+Gemini-like stages **must** use an explicit API key. In the current default preset, Humeo is intended to run with `HUMEO_LLM_PROVIDER=openrouter` and `OPENROUTER_API_KEY` set. Without either Google Gemini keys or OpenRouter, the pipeline cannot run the LLM stages.
 
 | Variable | Default | Meaning |
 |----------|---------|---------|
-| **`GEMINI_MODEL`** | `gemini-3.1-flash-lite-preview` | Gemini model id for clip selection. Override per run with `--gemini-model`. |
+| **`GEMINI_MODEL`** | `google/gemini-2.5-pro` | Gemini model id for clip selection. Override per run with `--gemini-model`. |
 | **`GEMINI_VISION_MODEL`** | *(unset)* | Optional separate model id for per-keyframe layout + bbox. If unset, the effective clip-selection model is used. Override per run with `--gemini-vision-model`. |
 
 ## Clip selection prompts (Jinja2)
@@ -40,14 +41,26 @@ Clip duration bounds for the LLM match `MIN_CLIP_DURATION_SEC` / `MAX_CLIP_DURAT
 
 After clip selection, the pipeline extracts one keyframe per clip and calls **Gemini vision** with a fixed JSON schema (`layout`, `person_bbox`, `chart_bbox`, `reason`). That produces a full **`LayoutInstruction`** per clip (including optional normalized split regions). Cached artifacts: **`layout_vision.meta.json`** and **`layout_vision.json`** under the work directory. Use **`--force-layout-vision`** to ignore that cache. Full detail: **`docs/PIPELINE.md`**.
 
-## OpenAI (transcription only)
+## Transcription
 
 | Variable | Used for |
 |----------|----------|
+| **`ELEVENLABS_API_KEY`** | ElevenLabs Scribe v2 transcription, including No Verbatim cleanup when enabled. |
+| **`ELEVENLABS_NO_VERBATIM`** | `true` / `false`. When enabled, Scribe removes filler words and normalizes the transcript used by clip selection, captions, and cleanup. |
 | **`OPENAI_API_KEY`** | OpenAI **Whisper** HTTP API when you choose it (see below) or when WhisperX is not installed. Not used for clip selection. |
-| **`HUMEO_TRANSCRIBE_PROVIDER`** | `auto` (default), `openai`, or `whisperx`. With `uv sync --extra whisper`, WhisperX wins unless you set **`openai`** — then **`OPENAI_API_KEY`** is used and you avoid local WhisperX/torch stack noise on Windows. Same video directory still reuses **`transcript.json`** after the first successful run. |
+| **`HUMEO_TRANSCRIBE_PROVIDER`** | `elevenlabs` (recommended default), `openai`, or `whisperx`. `elevenlabs` uses Scribe v2; `openai` uses Whisper API; `whisperx` is the local fallback. Same video directory still reuses **`transcript.json`** after the first successful run. |
 
 Transcription output is always normalized to **`transcript.json`** in the work directory. Re-running the pipeline on the same cached video **skips** ASR when that file already exists (same as skipping re-download of **`source.mp4`**).
+
+## Rendering and speaker lock
+
+| Variable | Used for |
+|----------|----------|
+| **`HUMEO_SEGMENTATION_PROVIDER`** | `off` or `replicate`. When set to `replicate`, Humeo uses Meta SAM2 Video through Replicate for speaker-lock tracking when possible. |
+| **`REPLICATE_API_TOKEN`** | Required for Replicate SAM-based speaker tracking. |
+| **`HUMEO_SEGMENTATION_MODEL`** | Segmentation model id. Default: `meta/sam-2-video`. |
+
+The current production preset defaults to the **`native_highlight`** render theme and uses Replicate SAM speaker-lock whenever `HUMEO_SEGMENTATION_PROVIDER=replicate` and a token is available.
 
 ## Clip selection cache (LLM skip)
 

@@ -22,6 +22,7 @@ def clip_selection_prompts(
     max_dur: float,
     count: int,
     steering_notes: list[str] | None = None,
+    hook_examples: str = "",
 ) -> tuple[str, str]:
     """Return ``(system_instruction, user_message)`` for Gemini clip selection."""
     env = jinja2.Environment(loader=_prompt_loader(), autoescape=False, trim_blocks=True)
@@ -31,20 +32,21 @@ def clip_selection_prompts(
         "count": count,
         "transcript_text": transcript_text,
         "steering_notes": steering_notes or [],
+        "hook_examples": hook_examples,
     }
     system = env.get_template("clip_selection_system.jinja2").render(**ctx)
     user = env.get_template("clip_selection_user.jinja2").render(**ctx)
     return system, user
 
 
-def hook_detection_system_prompt() -> str:
+def hook_detection_system_prompt(*, hook_examples: str = "") -> str:
     """Return the system prompt for Stage 2.25 hook detection.
 
     The user message is built in :mod:`humeo.hook_detector` because the
     segment listing is dynamic per-clip.
     """
     env = jinja2.Environment(loader=_prompt_loader(), autoescape=False, trim_blocks=True)
-    return env.get_template("hook_detection_system.jinja2").render()
+    return env.get_template("hook_detection_system.jinja2").render(hook_examples=hook_examples)
 
 
 def content_pruning_system_prompt(

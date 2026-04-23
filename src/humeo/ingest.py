@@ -15,6 +15,8 @@ import subprocess
 from math import ceil
 from pathlib import Path
 
+import httpx
+
 from humeo.video_cache import local_source_matches, write_local_source_info
 
 logger = logging.getLogger(__name__)
@@ -22,6 +24,12 @@ logger = logging.getLogger(__name__)
 OPENAI_MAX_UPLOAD_BYTES = 25 * 1024 * 1024
 OPENAI_TARGET_UPLOAD_BYTES = 20 * 1024 * 1024
 OPENAI_MIN_CHUNK_SEC = 300.0
+ELEVENLABS_TRANSCRIBE_URL = "https://api.elevenlabs.io/v1/speech-to-text"
+TRANSCRIPT_META_FILENAME = "transcript.meta.json"
+ELEVENLABS_SCRIBE_MODEL = "scribe_v2"
+_ELEVENLABS_SEGMENT_MAX_GAP_SEC = 0.65
+_ELEVENLABS_SEGMENT_MAX_DURATION_SEC = 6.0
+_ELEVENLABS_SEGMENT_MAX_WORDS = 18
 
 
 def stage_local_video(source: str | Path, output_dir: Path) -> Path:
@@ -115,6 +123,148 @@ def extract_audio(video_path: Path, output_dir: Path) -> Path:
     return audio_path
 
 
+def _resolve_elevenlabs_api_key() -> str:
+    key = (os.environ.get("ELEVENLABS_API_KEY") or "").strip()
+    if key:
+        return key
+    raise ValueError("Set ELEVENLABS_API_KEY to use ElevenLabs Scribe v2 transcription.")
+
+
+def _elevenlabs_no_verbatim_enabled() -> bool:
+    raw = (os.environ.get("ELEVENLABS_NO_VERBATIM") or "true").strip().lower()
+    return raw not in {"0", "false", "no", "off"}
+
+
+def resolved_transcribe_settings() -> dict[str, object]:
+    provider = (os.environ.get("HUMEO_TRANSCRIBE_PROVIDER") or "elevenlabs").strip().lower()
+    if provider in ("", "auto"):
+        if (os.environ.get("ELEVENLABS_API_KEY") or "").strip():
+            provider = "elevenlabs"
+        else:
+            provider = "openai"
+
+    if provider in ("api",):
+        provider = "openai"
+    if provider in ("local",):
+        provider = "whisperx"
+
+    settings: dict[str, object] = {"provider": provider}
+    if provider == "elevenlabs":
+        settings.update(
+            {
+                "model_id": ELEVENLABS_SCRIBE_MODEL,
+                "no_verbatim": _elevenlabs_no_verbatim_enabled(),
+            }
+        )
+    return settings
+
+
+def transcript_cache_valid(output_dir: Path) -> bool:
+    transcript_path = output_dir / "transcript.json"
+    meta_path = output_dir / TRANSCRIPT_META_FILENAME
+    if not transcript_path.is_file() or not meta_path.is_file():
+        return False
+    try:
+        meta = json.loads(meta_path.read_text(encoding="utf-8"))
+    except Exception:
+        return False
+    return meta == resolved_transcribe_settings()
+
+
+def _write_transcript(output_dir: Path, transcript: dict) -> None:
+    transcript_path = output_dir / "transcript.json"
+    with open(transcript_path, "w", encoding="utf-8") as f:
+        json.dump(transcript, f, indent=2, ensure_ascii=False)
+    with open(output_dir / TRANSCRIPT_META_FILENAME, "w", encoding="utf-8") as f:
+        json.dump(resolved_transcribe_settings(), f, indent=2, ensure_ascii=False)
+        f.write("\n")
+
+
+def _normalize_elevenlabs_word(raw_word: dict) -> dict | None:
+    if not isinstance(raw_word, dict):
+        return None
+    if str(raw_word.get("type", "word")).strip().lower() not in {"word", ""}:
+        return None
+    text = str(raw_word.get("text", raw_word.get("word", ""))).strip()
+    if not text:
+        return None
+    try:
+        start = float(raw_word["start"])
+        end = float(raw_word["end"])
+    except (KeyError, TypeError, ValueError):
+        return None
+    if end <= start:
+        return None
+    return {"word": text, "start": start, "end": end}
+
+
+def _segment_words_into_transcript(words: list[dict], *, language: str) -> dict:
+    segments: list[dict] = []
+    chunk: list[dict] = []
+
+    def flush() -> None:
+        if not chunk:
+            return
+        segments.append(
+            {
+                "start": chunk[0]["start"],
+                "end": chunk[-1]["end"],
+                "text": " ".join(str(word["word"]) for word in chunk).strip(),
+                "words": list(chunk),
+            }
+        )
+        chunk.clear()
+
+    for word in words:
+        if chunk:
+            gap = float(word["start"]) - float(chunk[-1]["end"])
+            dur = float(word["end"]) - float(chunk[0]["start"])
+            if (
+                gap >= _ELEVENLABS_SEGMENT_MAX_GAP_SEC
+                or dur >= _ELEVENLABS_SEGMENT_MAX_DURATION_SEC
+                or len(chunk) >= _ELEVENLABS_SEGMENT_MAX_WORDS
+            ):
+                flush()
+        chunk.append(word)
+    flush()
+    return {"segments": segments, "language": language}
+
+
+def _normalize_elevenlabs_response(data: dict) -> dict:
+    words = [
+        word
+        for raw_word in data.get("words", []) or []
+        if (word := _normalize_elevenlabs_word(raw_word)) is not None
+    ]
+    language = str(
+        data.get("language_code") or data.get("language") or "en"
+    ).strip() or "en"
+    return _segment_words_into_transcript(words, language=language)
+
+
+def _transcribe_elevenlabs_scribe(audio_path: Path) -> dict:
+    headers = {"xi-api-key": _resolve_elevenlabs_api_key()}
+    form = {
+        "model_id": ELEVENLABS_SCRIBE_MODEL,
+        "timestamps_granularity": "word",
+        "diarize": "false",
+        "tag_audio_events": "false",
+        "file_format": "pcm_s16le_16",
+        "no_verbatim": "true" if _elevenlabs_no_verbatim_enabled() else "false",
+    }
+    with audio_path.open("rb") as handle:
+        files = {"file": (audio_path.name, handle, "audio/wav")}
+        response = httpx.post(
+            ELEVENLABS_TRANSCRIBE_URL,
+            headers=headers,
+            data=form,
+            files=files,
+            timeout=600.0,
+        )
+    response.raise_for_status()
+    return _normalize_elevenlabs_response(response.json())
+
+
 def _transcribe_whisperx_local(audio_path: Path) -> dict:
     """Word-level transcript via WhisperX (local). Raises ImportError if not installed."""
     import whisperx
@@ -150,16 +300,22 @@ def transcribe_whisperx(audio_path: Path, output_dir: Path) -> dict:
     The result is written to ``output_dir / "transcript.json"``. Re-runs with an
     existing transcript are skipped by the pipeline before this function runs.
     """
-    transcript_path = output_dir / "transcript.json"
-    provider = (os.environ.get("HUMEO_TRANSCRIBE_PROVIDER") or "auto").strip().lower()
+    settings = resolved_transcribe_settings()
+    provider = str(settings["provider"])
 
-    if provider in ("openai", "api"):
+    if provider == "elevenlabs":
+        logger.info(
+            "Transcribing with ElevenLabs Scribe v2 (no_verbatim=%s).",
+            bool(settings.get("no_verbatim", False)),
+        )
+        result = _transcribe_elevenlabs_scribe(audio_path)
+    elif provider == "openai":
         logger.info(
             "Transcribing with OpenAI Whisper API (HUMEO_TRANSCRIBE_PROVIDER=%s).",
             provider,
         )
         result = _transcribe_openai_api(audio_path)
-    elif provider in ("whisperx", "local"):
+    elif provider == "whisperx":
         try:
             result = _transcribe_whisperx_local(audio_path)
         except ImportError as e:
@@ -168,22 +324,12 @@ def transcribe_whisperx(audio_path: Path, output_dir: Path) -> dict:
                 "Install with: uv sync --extra whisper"
             ) from e
     else:
-        if provider not in ("auto", ""):
-            logger.warning(
-                "Unknown HUMEO_TRANSCRIBE_PROVIDER=%r; using auto (WhisperX if installed).",
-                provider,
-            )
-        try:
-            result = _transcribe_whisperx_local(audio_path)
-        except ImportError:
-            logger.warning(
-                "WhisperX not installed. Falling back to OpenAI Whisper API. "
-                "Install with: pip install 'humeo[whisper]'"
-            )
-            result = _transcribe_openai_api(audio_path)
+        raise RuntimeError(
+            f"Unknown HUMEO_TRANSCRIBE_PROVIDER={provider!r}. "
+            "Use elevenlabs, openai, or whisperx."
+        )
 
-    with open(transcript_path, "w", encoding="utf-8") as f:
-        json.dump(result, f, indent=2, ensure_ascii=False)
+    _write_transcript(output_dir, result)
 
     return result
 

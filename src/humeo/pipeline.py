@@ -9,13 +9,21 @@ from humeo_core.primitives.ingest import extract_keyframes
 from humeo_core.schemas import LayoutInstruction, LayoutKind, RatingFeedback, Scene
 
 from humeo import interactive, session_state
+from humeo.clip_assembly import apply_render_spans, assemble_clip, write_clip_plan
 from humeo.clip_selection_cache import cache_valid, load_meta, transcript_fingerprint, write_artifacts
 from humeo.clip_selector import load_clips, save_clips, select_clips
 from humeo.config import MAX_CLIP_DURATION_SEC, MIN_CLIP_DURATION_SEC, PipelineConfig
 from humeo.content_pruning import run_content_pruning_stage, snap_render_windows_to_sentence_boundaries
 from humeo.cutter import generate_ass
 from humeo.hook_detector import run_hook_detection_stage
-from humeo.ingest import download_video, extract_audio, stage_local_video, transcribe_whisperx
+from humeo.hook_library import resolve_hook_library_path
+from humeo.ingest import (
+    download_video,
+    extract_audio,
+    stage_local_video,
+    transcript_cache_valid,
+    transcribe_whisperx,
+)
 from humeo.layout_vision import run_layout_vision_stage
 from humeo.render_window import clip_for_render
 from humeo.reframe_ffmpeg import reframe_clip_ffmpeg
@@ -29,6 +37,8 @@ from humeo.video_cache import (
 )
 
 logger = logging.getLogger(__name__)
+
+_WEAK_HOOK_START_WORDS = {"yeah", "so", "well", "right", "okay", "ok", "look", "listen"}
 
 
 def _rerun_config(config: PipelineConfig, steering_notes: list[str]) -> PipelineConfig:
@@ -100,6 +110,44 @@ def _filter_render_valid_clips(clips: list, *, stage_label: str) -> list:
     return valid
 
 
+def _hook_window_text(clip, transcript: dict) -> str:
+    if clip.hook_start_sec is None or clip.hook_end_sec is None:
+        return ""
+    abs_start = clip.start_time_sec + clip.hook_start_sec
+    abs_end = clip.start_time_sec + clip.hook_end_sec
+    parts: list[str] = []
+    for seg in transcript.get("segments", []) or []:
+        start = float(seg.get("start", 0.0))
+        end = float(seg.get("end", start))
+        if end <= abs_start or start >= abs_end:
+            continue
+        text = str(seg.get("text", "")).strip()
+        if text:
+            parts.append(text)
+    return " ".join(parts).strip()
+
+
+def _filter_weak_hook_clips(clips: list, transcript: dict, *, min_kept: int) -> list:
+    if len(clips) <= min_kept:
+        return clips
+    kept: list = []
+    dropped: list[str] = []
+    for clip in clips:
+        hook_start = clip.hook_start_sec
+        if hook_start is not None and hook_start > 10.0 and len(clips) - len(dropped) > min_kept:
+            dropped.append(f"{clip.clip_id} (hook starts at {hook_start:.1f}s)")
+            continue
+        hook_text = _hook_window_text(clip, transcript).lower()
+        first_word = hook_text.split(maxsplit=1)[0] if hook_text else ""
+        if first_word in _WEAK_HOOK_START_WORDS and len(clips) - len(dropped) > min_kept:
+            dropped.append(f"{clip.clip_id} (weak opener: {first_word})")
+            continue
+        kept.append(clip)
+    if dropped:
+        logger.info("Dropped %d weak-hook clip(s): %s", len(dropped), ", ".join(dropped))
+    return kept
+
+
 def run_pipeline(config: PipelineConfig) -> list[Path]:
     """
     Execute the full podcast-to-shorts pipeline.
@@ -157,13 +205,18 @@ def run_pipeline(config: PipelineConfig) -> list[Path]:
     else:
         source_video = download_video(config.youtube_url, config.work_dir)
 
-    if reuse_ingest or (transcript_path.exists() and local_source_path is None):
+    transcript_reusable = transcript_cache_valid(config.work_dir)
+    if reuse_ingest and transcript_reusable:
+        logger.info("Transcript already exists, loading.")
+        with open(transcript_path, "r", encoding="utf-8") as f:
+            transcript = json.load(f)
+    elif transcript_reusable and local_source_path is None:
         logger.info("Transcript already exists, loading.")
         with open(transcript_path, "r", encoding="utf-8") as f:
             transcript = json.load(f)
     else:
-        if transcript_path.exists() and local_source_path is not None:
-            logger.info("Transcript exists but belongs to a different local source; regenerating.")
+        if transcript_path.exists():
+            logger.info("Transcript cache mismatch for current transcription settings; regenerating.")
         audio_path = extract_audio(source_video, config.work_dir)
         transcript = transcribe_whisperx(audio_path, config.work_dir)
 
@@ -202,6 +255,7 @@ def run_pipeline(config: PipelineConfig) -> list[Path]:
         clips, raw = select_clips(
             transcript,
             gemini_model=config.gemini_model,
+            hook_library_path=resolve_hook_library_path(config),
             candidate_count=config.clip_selection_candidate_count,
             quality_threshold=config.clip_selection_quality_threshold,
             min_kept=config.clip_selection_min_kept,
@@ -243,6 +297,11 @@ def run_pipeline(config: PipelineConfig) -> list[Path]:
         transcript_fp=fp,
         config=config,
     )
+    clips = _filter_weak_hook_clips(
+        clips,
+        transcript,
+        min_kept=config.clip_selection_min_kept,
+    )
 
     # ------------------------------------------------------------------
     # Stage 2.5: Content Pruning (HIVE-style inner-clip tightening)
@@ -261,6 +320,19 @@ def run_pipeline(config: PipelineConfig) -> list[Path]:
     )
     clips = snap_render_windows_to_sentence_boundaries(clips, transcript)
     clips = _filter_render_valid_clips(clips, stage_label="Stage 2.5 guardrail")
+
+    # ------------------------------------------------------------------
+    # Stage 2.75: Hard-cut assembly
+    # ------------------------------------------------------------------
+    logger.info("--- STAGE 2.75: CLIP ASSEMBLY ---")
+    clips = apply_render_spans(clips, transcript)
+    assembled_dir = config.work_dir / "assembled"
+    assembled_by_id = {
+        clip.clip_id: assemble_clip(source_video, clip, transcript, assembled_dir)
+        for clip in clips
+    }
+    clips = [assembled_by_id[clip.clip_id].clip for clip in clips]
+    assembled_clips_path = write_clip_plan(config.work_dir / "assembled_clips.json", clips)
 
     if config.interactive and state is not None:
         result = interactive.approve_clips(clips)
@@ -294,18 +366,31 @@ def run_pipeline(config: PipelineConfig) -> list[Path]:
 
     keyframes_dir = config.work_dir / "keyframes"
     clip_scenes: list[Scene] = []
+    source_videos_by_scene: dict[str, Path] = {}
     for clip in clips:
+        assembled = assembled_by_id[clip.clip_id]
         rw = clip_for_render(clip)
         clip_scenes.append(
             Scene(scene_id=clip.clip_id, start_time=rw.start_time_sec, end_time=rw.end_time_sec)
         )
-    clip_scenes = extract_keyframes(str(source_video), clip_scenes, str(keyframes_dir))
+        source_videos_by_scene[clip.clip_id] = assembled.source_path
+    extracted_scenes: list[Scene] = []
+    for scene in clip_scenes:
+        extracted_scenes.extend(
+            extract_keyframes(
+                str(source_videos_by_scene[scene.scene_id]),
+                [scene],
+                str(keyframes_dir / scene.scene_id),
+            )
+        )
+    clip_scenes = extracted_scenes
     layout_instructions = run_layout_vision_stage(
         config.work_dir,
         clip_scenes,
         source_video=source_video,
+        source_videos_by_scene=source_videos_by_scene,
         transcript_fp=fp,
-        clips_path=clips_path,
+        clips_path=assembled_clips_path,
         config=config,
     )
 
@@ -319,6 +404,7 @@ def run_pipeline(config: PipelineConfig) -> list[Path]:
     subtitles_dir.mkdir(parents=True, exist_ok=True)
 
     for clip in clips:
+        assembled = assembled_by_id[clip.clip_id]
         instr = layout_instructions.get(clip.clip_id)
         if instr is None:
             hint = clip.layout_hint or LayoutKind.SIT_CENTER
@@ -329,7 +415,7 @@ def run_pipeline(config: PipelineConfig) -> list[Path]:
         # resolution and libass' font/margin scaling is 1:1.
         subtitle_path = generate_ass(
             rclip,
-            transcript,
+            assembled.transcript,
             subtitles_dir,
             max_words_per_cue=config.subtitle_max_words_per_cue,
             max_cue_sec=config.subtitle_max_cue_sec,
@@ -337,6 +423,7 @@ def run_pipeline(config: PipelineConfig) -> list[Path]:
             play_res_y=1920,
             font_size=config.subtitle_font_size,
             margin_v=config.subtitle_margin_v,
+            render_theme=config.render_theme,
         )
         final_path = config.output_dir / f"short_{clip.clip_id}.mp4"
         if final_path.exists() and not config.overwrite_outputs:
@@ -350,7 +437,7 @@ def run_pipeline(config: PipelineConfig) -> list[Path]:
         # PlayResY=1920, so the compile primitive does not need to override
         # them -- but it still does, harmlessly, for single-source overrides.
         reframe_clip_ffmpeg(
-            input_path=source_video,
+            input_path=assembled.source_path,
             output_path=final_path,
             clip=rclip,
             layout_instruction=instr,
@@ -358,6 +445,7 @@ def run_pipeline(config: PipelineConfig) -> list[Path]:
             subtitle_font_size=config.subtitle_font_size,
             subtitle_margin_v=config.subtitle_margin_v,
             title_text=clip.suggested_overlay_title,
+            render_theme=config.render_theme,
         )
         final_outputs.append(final_path)
 

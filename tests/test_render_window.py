@@ -1,7 +1,7 @@
 """Tests for trim/hook → ffmpeg source window."""
 
 from humeo.render_window import clip_for_render, effective_export_bounds
-from humeo_core.schemas import Clip
+from humeo_core.schemas import Clip, ClipRenderSpan
 
 
 def _clip(**kwargs) -> Clip:
@@ -46,3 +46,17 @@ def test_clip_for_render_clears_timing_fields():
     assert r.end_time_sec == 130.0
     assert r.trim_start_sec == 0.0
     assert r.hook_start_sec is None
+
+
+def test_render_spans_override_contiguous_trim_window():
+    c = _clip(
+        trim_start_sec=5.0,
+        trim_end_sec=5.0,
+        render_spans=[
+            ClipRenderSpan(start_time_sec=101.0, end_time_sec=110.0),
+            ClipRenderSpan(start_time_sec=115.0, end_time_sec=120.0),
+        ],
+    )
+    lo, hi = effective_export_bounds(c)
+    assert lo == 101.0
+    assert hi == 120.0

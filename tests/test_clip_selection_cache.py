@@ -82,3 +82,25 @@ def test_openrouter_backend_roundtrip(monkeypatch, tmp_path):
     assert meta is not None
     assert meta.get("llm_backend") == "openrouter"
     assert cache_valid(meta, transcript_fingerprint(tr), cfg)
+
+
+def test_cache_invalidates_when_hook_library_changes(monkeypatch, tmp_path):
+    tr = {"segments": []}
+    hook_dir = tmp_path / "hooks"
+    hook_dir.mkdir()
+    (hook_dir / "Educational_Hooks.md").write_text(
+        "1. Hook: A<br>Example: B<br>Psychology: C\n",
+        encoding="utf-8",
+    )
+    monkeypatch.setenv("HUMEO_HOOK_LIBRARY_PATH", str(hook_dir))
+    cfg = PipelineConfig(youtube_url="https://youtu.be/x", gemini_model="m")
+    write_artifacts(tmp_path, transcript=tr, config=cfg, raw_response='{"clips":[]}')
+    meta = load_meta(tmp_path)
+    assert meta is not None
+    assert cache_valid(meta, transcript_fingerprint(tr), cfg)
+
+    (hook_dir / "Educational_Hooks.md").write_text(
+        "1. Hook: A<br>Example: Changed<br>Psychology: C\n",
+        encoding="utf-8",
+    )
+    assert not cache_valid(meta, transcript_fingerprint(tr), cfg)

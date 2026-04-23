@@ -74,11 +74,12 @@ def resolve_openrouter_api_key() -> str:
 def current_llm_provider() -> LLMProvider | None:
     """Best-effort active backend detection from the environment.
 
-    Preference order preserves the historical behavior: if a Google Gemini key is
-    configured, use Google's SDK. OpenRouter is the fallback only when no Google
-    Gemini key is present.
+    ``HUMEO_LLM_PROVIDER`` overrides key-based auto-detection when set.
     """
     bootstrap_env()
+    forced = (os.environ.get("HUMEO_LLM_PROVIDER") or "auto").strip().lower()
+    if forced in ("google", "openrouter"):
+        return forced  # type: ignore[return-value]
     if (os.environ.get("GOOGLE_API_KEY") or "").strip():
         return "google"
     if (os.environ.get("GEMINI_API_KEY") or "").strip():
@@ -92,10 +93,15 @@ def resolve_llm_provider() -> LLMProvider:
     """Return the active backend for Gemini-like stages, or raise if none is configured."""
     provider = current_llm_provider()
     if provider is not None:
+        if provider == "google":
+            resolve_gemini_api_key()
+        else:
+            resolve_openrouter_api_key()
         return provider
     raise ValueError(
         "Set GOOGLE_API_KEY or GEMINI_API_KEY for the Google Gemini SDK, "
-        "or set OPENROUTER_API_KEY to route these stages through OpenRouter."
+        "or set OPENROUTER_API_KEY to route these stages through OpenRouter. "
+        "You can also force the backend with HUMEO_LLM_PROVIDER=google|openrouter."
     )
 
 
@@ -120,5 +126,5 @@ def openrouter_default_headers() -> dict[str, str]:
     """Headers that help identify Humeo traffic to OpenRouter."""
     return {
         "HTTP-Referer": "https://github.com/frenzy2004/shortform",
-        "X-Title": "Humeo",
+        "X-OpenRouter-Title": "Humeo",
     }

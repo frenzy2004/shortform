@@ -10,11 +10,12 @@ from typing import Any
 
 from humeo.config import GEMINI_MODEL, PipelineConfig
 from humeo.env import current_llm_provider
+from humeo.hook_library import hook_library_fingerprint, resolve_hook_library_path
 
 logger = logging.getLogger(__name__)
 
-# v2: Gemini-only meta (no llm_provider). v1 legacy supported in cache_valid.
-CURRENT_META_VERSION = 2
+# v3: includes hook-library fingerprint for retrieval-augmented prompts.
+CURRENT_META_VERSION = 3
 META_FILENAME = "clips.meta.json"
 RAW_FILENAME = "clip_selection_raw.json"
 
@@ -50,7 +51,11 @@ def cache_valid(meta: dict[str, Any], fingerprint: str, config: PipelineConfig) 
             return False
     ver = meta.get("version", 1)
     if ver >= CURRENT_META_VERSION:
-        return meta.get("gemini_model") == gm
+        return (
+            meta.get("gemini_model") == gm
+            and meta.get("hook_library_sha256", "")
+            == hook_library_fingerprint(resolve_hook_library_path(config))
+        )
     # Legacy v1: had llm_provider + model fields
     if meta.get("llm_provider") == "openai":
         return False
@@ -71,6 +76,7 @@ def write_artifacts(
         "transcript_sha256": fp,
         "gemini_model": resolved_gemini_model(config),
         "llm_backend": current_llm_provider() or "google",
+        "hook_library_sha256": hook_library_fingerprint(resolve_hook_library_path(config)),
     }
     (work_dir / RAW_FILENAME).write_text(raw_response, encoding="utf-8")
     with open(work_dir / META_FILENAME, "w", encoding="utf-8") as f:

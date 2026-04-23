@@ -9,11 +9,15 @@ import pytest
 from humeo.layout_vision import (
     _call_gemini_vision,
     _face_center_x,
+    _infer_person_tracking_with_segmentation,
     _instruction_from_gemini_json,
+    _segmentation_mask_urls,
+    REPLICATE_SAM2_VIDEO_PINNED,
+    _tracking_is_unstable,
     _tracking_points_from_centers,
     infer_layout_instructions,
 )
-from humeo_core.schemas import BoundingBox, LayoutKind, Scene
+from humeo_core.schemas import BoundingBox, LayoutKind, Scene, TimedCenterPoint
 
 
 def test_instruction_from_gemini_json_split_with_bboxes():
@@ -215,6 +219,55 @@ def test_tracking_points_filter_obvious_outlier_sample():
     assert points[2].x_norm == pytest.approx((0.25 + 0.30) / 2.0)
 
 
+def test_tracking_is_unstable_on_large_jump():
+    points = [
+        TimedCenterPoint(t_sec=0.0, x_norm=0.10),
+        TimedCenterPoint(t_sec=1.0, x_norm=0.12),
+        TimedCenterPoint(t_sec=2.0, x_norm=0.40),
+        TimedCenterPoint(t_sec=3.0, x_norm=0.42),
+        TimedCenterPoint(t_sec=4.0, x_norm=0.44),
+    ]
+    assert _tracking_is_unstable(points)
+
+
+def test_tracking_points_low_spread_becomes_static_center_line():
+    points = _tracking_points_from_centers(
+        10.0,
+        [
+            (0.0, 0.42),
+            (2.0, 0.43),
+            (4.0, 0.425),
+            (6.0, 0.428),
+            (8.0, 0.421),
+        ],
+    )
+
+    assert len(points) == 2
+    assert points[0].t_sec == 0.0
+    assert points[-1].t_sec == 10.0
+    assert points[0].x_norm == pytest.approx(points[-1].x_norm)
+    assert points[0].x_norm == pytest.approx(0.42)
+
+
+def test_segmentation_mask_urls_accepts_iterable_file_outputs():
+    class FakeFileOutput:
+        def __init__(self, url: str):
+            self.url = url
+
+        def __str__(self) -> str:
+            return self.url
+
+    output = (
+        FakeFileOutput("https://example.com/mask-001.png"),
+        FakeFileOutput("https://example.com/mask-002.png"),
+    )
+
+    assert _segmentation_mask_urls(output) == [
+        "https://example.com/mask-001.png",
+        "https://example.com/mask-002.png",
+    ]
+
+
 @patch("humeo.layout_vision._call_gemini_vision")
 @patch("humeo.layout_vision._extract_frame_at_time")
 def test_infer_layout_instructions_adds_person_tracking(
@@ -278,3 +331,220 @@ def test_infer_layout_instructions_adds_person_tracking(
     samples = raw_by_clip["001"]["person_tracking_samples"]
     assert samples
     assert samples[0]["sample_kind"] == "midpoint_keyframe"
+
+
+@patch("humeo.layout_vision._infer_person_tracking_with_segmentation")
+@patch("humeo.layout_vision._infer_person_tracking")
+@patch("humeo.layout_vision._call_gemini_vision")
+def test_infer_layout_instructions_prefers_segmentation_tracking_when_enabled(
+    mock_call_gemini_vision,
+    mock_infer_tracking,
+    mock_segmentation_tracking,
+    tmp_path,
+):
+    source_video = tmp_path / "source.mp4"
+    source_video.write_bytes(b"fake")
+    keyframe_path = tmp_path / "001.jpg"
+    keyframe_path.write_bytes(b"\xff\xd8\xff\xe0fakejpeg")
+    scene = Scene(scene_id="001", start_time=0.0, end_time=10.0, keyframe_path=str(keyframe_path))
+
+    mock_call_gemini_vision.return_value = {
+        "layout": "sit_center",
+        "person_bbox": {"x1": 0.10, "y1": 0.10, "x2": 0.40, "y2": 0.95},
+        "face_bbox": {"x1": 0.16, "y1": 0.12, "x2": 0.26, "y2": 0.28},
+    }
+    mock_segmentation_tracking.return_value = (
+        [
+            TimedCenterPoint(t_sec=0.0, x_norm=0.15),
+            TimedCenterPoint(t_sec=5.0, x_norm=0.18),
+            TimedCenterPoint(t_sec=10.0, x_norm=0.20),
+        ],
+        {"provider": "replicate"},
+    )
+
+    instructions, raw_by_clip = infer_layout_instructions(
+        [scene],
+        gemini_vision_model="gemini-test",
+        source_video=source_video,
+        tracking_dir=tmp_path / "tracking",
+        segmentation_provider="replicate",
+        segmentation_model="meta/sam-2-video",
+    )
+
+    assert instructions["001"].person_tracking[0].x_norm == pytest.approx(0.15)
+    assert raw_by_clip["001"]["segmentation_tracking"]["provider"] == "replicate"
+    mock_segmentation_tracking.assert_called_once()
+    mock_infer_tracking.assert_not_called()
+
+
+@patch("humeo.layout_vision._infer_person_tracking_with_segmentation")
+@patch("humeo.layout_vision._infer_person_tracking")
+@patch("humeo.layout_vision._call_gemini_vision")
+def test_infer_layout_instructions_falls_back_to_gemini_tracking_when_segmentation_fails(
+    mock_call_gemini_vision,
+    mock_infer_tracking,
+    mock_segmentation_tracking,
+    tmp_path,
+):
+    source_video = tmp_path / "source.mp4"
+    source_video.write_bytes(b"fake")
+    keyframe_path = tmp_path / "001.jpg"
+    keyframe_path.write_bytes(b"\xff\xd8\xff\xe0fakejpeg")
+    scene = Scene(scene_id="001", start_time=0.0, end_time=10.0, keyframe_path=str(keyframe_path))
+
+    mock_call_gemini_vision.return_value = {
+        "layout": "sit_center",
+        "person_bbox": {"x1": 0.10, "y1": 0.10, "x2": 0.40, "y2": 0.95},
+        "face_bbox": {"x1": 0.16, "y1": 0.12, "x2": 0.26, "y2": 0.28},
+    }
+    mock_segmentation_tracking.side_effect = RuntimeError("replicate unavailable")
+    mock_infer_tracking.return_value = (
+        [
+            TimedCenterPoint(t_sec=0.0, x_norm=0.10),
+            TimedCenterPoint(t_sec=5.0, x_norm=0.16),
+            TimedCenterPoint(t_sec=10.0, x_norm=0.22),
+            TimedCenterPoint(t_sec=12.0, x_norm=0.22),
+            TimedCenterPoint(t_sec=15.0, x_norm=0.23),
+        ],
+        [{"sample_kind": "midpoint_keyframe"}],
+    )
+
+    instructions, raw_by_clip = infer_layout_instructions(
+        [scene],
+        gemini_vision_model="gemini-test",
+        source_video=source_video,
+        tracking_dir=tmp_path / "tracking",
+        segmentation_provider="replicate",
+        segmentation_model="meta/sam-2-video",
+    )
+
+    assert instructions["001"].person_tracking[0].x_norm == pytest.approx(0.10)
+    assert raw_by_clip["001"]["segmentation_tracking"]["error"] == "replicate unavailable"
+    assert raw_by_clip["001"]["person_tracking_samples"] == [{"sample_kind": "midpoint_keyframe"}]
+    mock_infer_tracking.assert_called_once()
+
+
+@patch("humeo.layout_vision._infer_two_speaker_focus_tracking_with_segmentation")
+@patch("humeo.layout_vision._call_gemini_vision")
+def test_infer_layout_instructions_uses_two_speaker_sam_follow_when_available(
+    mock_call_gemini_vision,
+    mock_two_speaker_follow,
+    tmp_path,
+):
+    source_video = tmp_path / "source.mp4"
+    source_video.write_bytes(b"fake")
+    keyframe_path = tmp_path / "001.jpg"
+    keyframe_path.write_bytes(b"\xff\xd8\xff\xe0fakejpeg")
+    scene = Scene(scene_id="001", start_time=0.0, end_time=10.0, keyframe_path=str(keyframe_path))
+
+    mock_call_gemini_vision.return_value = {
+        "layout": "split_two_persons",
+        "person_bbox": {"x1": 0.08, "y1": 0.08, "x2": 0.42, "y2": 0.95},
+        "face_bbox": {"x1": 0.14, "y1": 0.12, "x2": 0.26, "y2": 0.28},
+        "second_person_bbox": {"x1": 0.58, "y1": 0.08, "x2": 0.92, "y2": 0.95},
+        "second_face_bbox": {"x1": 0.68, "y1": 0.12, "x2": 0.80, "y2": 0.28},
+    }
+    mock_two_speaker_follow.return_value = (
+        [
+            TimedCenterPoint(t_sec=0.0, x_norm=0.20),
+            TimedCenterPoint(t_sec=5.0, x_norm=0.75),
+            TimedCenterPoint(t_sec=10.0, x_norm=0.78),
+        ],
+        {"mode": "two_speaker_follow"},
+    )
+
+    instructions, raw_by_clip = infer_layout_instructions(
+        [scene],
+        gemini_vision_model="gemini-test",
+        source_video=source_video,
+        tracking_dir=tmp_path / "tracking",
+        segmentation_provider="replicate",
+        segmentation_model="meta/sam-2-video",
+    )
+
+    instr = instructions["001"]
+    assert instr.layout == LayoutKind.SIT_CENTER
+    assert instr.person_tracking[0].x_norm == pytest.approx(0.20)
+    assert raw_by_clip["001"]["speaker_follow_tracking"]["mode"] == "two_speaker_follow"
+    mock_two_speaker_follow.assert_called_once()
+
+
+@patch("humeo.layout_vision._infer_two_speaker_focus_tracking_with_segmentation")
+@patch("humeo.layout_vision._call_gemini_vision")
+def test_infer_layout_instructions_keeps_split_layout_when_two_speaker_follow_fails(
+    mock_call_gemini_vision,
+    mock_two_speaker_follow,
+    tmp_path,
+):
+    source_video = tmp_path / "source.mp4"
+    source_video.write_bytes(b"fake")
+    keyframe_path = tmp_path / "001.jpg"
+    keyframe_path.write_bytes(b"\xff\xd8\xff\xe0fakejpeg")
+    scene = Scene(scene_id="001", start_time=0.0, end_time=10.0, keyframe_path=str(keyframe_path))
+
+    mock_call_gemini_vision.return_value = {
+        "layout": "split_two_persons",
+        "person_bbox": {"x1": 0.08, "y1": 0.08, "x2": 0.42, "y2": 0.95},
+        "face_bbox": {"x1": 0.14, "y1": 0.12, "x2": 0.26, "y2": 0.28},
+        "second_person_bbox": {"x1": 0.58, "y1": 0.08, "x2": 0.92, "y2": 0.95},
+        "second_face_bbox": {"x1": 0.68, "y1": 0.12, "x2": 0.80, "y2": 0.28},
+    }
+    mock_two_speaker_follow.side_effect = RuntimeError("replicate unavailable")
+
+    instructions, raw_by_clip = infer_layout_instructions(
+        [scene],
+        gemini_vision_model="gemini-test",
+        source_video=source_video,
+        tracking_dir=tmp_path / "tracking",
+        segmentation_provider="replicate",
+        segmentation_model="meta/sam-2-video",
+    )
+
+    assert instructions["001"].layout == LayoutKind.SPLIT_TWO_PERSONS
+    assert raw_by_clip["001"]["speaker_follow_tracking"]["error"] == "replicate unavailable"
+
+
+@patch("replicate.Client")
+@patch("humeo.layout_vision._probe_video_fps", return_value=30.0)
+@patch("humeo.layout_vision._mask_center_x_from_url")
+def test_segmentation_tracking_retries_with_pinned_sam_version_on_404(
+    mock_mask_center_x,
+    _mock_probe_fps,
+    mock_replicate_client,
+    monkeypatch,
+    tmp_path,
+):
+    monkeypatch.setenv("REPLICATE_API_TOKEN", "token")
+    source_video = tmp_path / "source.mp4"
+    source_video.write_bytes(b"fake-video")
+    scene = Scene(scene_id="001", start_time=0.0, end_time=10.0, keyframe_path="frame.jpg")
+
+    mock_client = mock_replicate_client.return_value
+    mock_client.run.side_effect = [
+        RuntimeError("404 model not found"),
+        ["mask1", "mask2", "mask3", "mask4", "mask5"],
+    ]
+    mock_mask_center_x.side_effect = [0.20, 0.25, 0.30, 0.35, 0.40]
+
+    points, detail = _infer_person_tracking_with_segmentation(
+        scene,
+        source_video=source_video,
+        segmentation_model="meta/sam-2-video",
+        initial_data={
+            "person_bbox": {"x1": 0.10, "y1": 0.10, "x2": 0.40, "y2": 0.95},
+            "face_bbox": {"x1": 0.16, "y1": 0.12, "x2": 0.26, "y2": 0.28},
+        },
+        initial_image_size=(1000, 1000),
+    )
+
+    assert points
+    assert detail is not None
+    assert detail["model"] == REPLICATE_SAM2_VIDEO_PINNED
+    assert detail["prompt_frames"] == [0, 150]
+    assert mock_client.run.call_args_list[0].args[0] == "meta/sam-2-video"
+    assert mock_client.run.call_args_list[1].args[0] == REPLICATE_SAM2_VIDEO_PINNED
+    first_input = mock_client.run.call_args_list[0].kwargs["input"]
+    assert first_input["click_frames"] == "0,150"
+    assert first_input["click_coordinates"] == "[210,200],[210,200]"
+    assert first_input["click_labels"] == "1,1"
+    assert first_input["click_object_ids"] == "speaker,speaker"

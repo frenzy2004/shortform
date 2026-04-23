@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import json
 import logging
+import re
 import time
 from pathlib import Path
 from typing import Callable, TypeVar
@@ -34,6 +35,10 @@ from humeo.env import (
     resolve_gemini_api_key,
     resolve_llm_provider,
     resolve_openrouter_api_key,
+)
+from humeo.hook_library import (
+    format_hook_examples,
+    retrieve_hook_examples,
 )
 from humeo.prompt_loader import clip_selection_prompts
 
@@ -64,6 +69,55 @@ DEFAULT_MAX_KEPT = 8
 # "the same five most-obvious clips every run". Still well below 1.0 so we
 # do not get word-salad IDs or timestamps.
 DEFAULT_CANDIDATE_TEMPERATURE = 0.7
+_TITLE_SMALL_WORDS = {
+    "a",
+    "an",
+    "and",
+    "as",
+    "at",
+    "by",
+    "for",
+    "from",
+    "in",
+    "of",
+    "on",
+    "or",
+    "the",
+    "to",
+    "vs",
+    "with",
+}
+_TITLE_DROP_WORDS = {
+    "actually",
+    "entirely",
+    "just",
+    "next",
+    "really",
+    "still",
+    "that",
+    "their",
+    "these",
+    "this",
+    "those",
+    "very",
+    "will",
+    "your",
+}
+_GENERIC_TITLE_PATTERNS = (
+    "big opportunity",
+    "important lesson",
+    "why this matters",
+    "the future of",
+)
+_TITLE_TOKEN_REPLACEMENTS = {
+    "ai": "AI",
+    "agi": "AGI",
+    "api": "API",
+    "btc": "BTC",
+    "ev": "EV",
+    "evs": "EVs",
+    "us": "US",
+}
 
 
 def _has_valid_duration(clip: Clip) -> bool:
@@ -134,11 +188,77 @@ def _retry_llm(name: str, fn: Callable[[], T], attempts: int = LLM_MAX_ATTEMPTS)
     raise last
 
 
+def _headline_case_title(text: str) -> str:
+    words = text.split()
+    if not words:
+        return ""
+    out: list[str] = []
+    for idx, word in enumerate(words):
+        if any(ch.isdigit() for ch in word) or word.startswith("$"):
+            out.append(word)
+            continue
+        raw = re.sub(r"^[^A-Za-z]+|[^A-Za-z]+$", "", word)
+        lower = raw.lower()
+        if lower in _TITLE_TOKEN_REPLACEMENTS:
+            out.append(word.replace(raw, _TITLE_TOKEN_REPLACEMENTS[lower]))
+            continue
+        if idx not in (0, len(words) - 1) and lower in _TITLE_SMALL_WORDS:
+            out.append(word.replace(raw, lower))
+            continue
+        out.append(word.replace(raw, raw.capitalize()))
+    return " ".join(out)
+
+
+def _tighten_overlay_title_text(text: str) -> str:
+    title = " ".join((text or "").replace("—", "-").split()).strip(" .,!?:;-")
+    if not title:
+        return ""
+    title = re.sub(r"\bwill cost less than\b", "under", title, flags=re.IGNORECASE)
+    title = re.sub(r"\bless than\b", "under", title, flags=re.IGNORECASE)
+    title = re.sub(r"\bmade your\b", "", title, flags=re.IGNORECASE)
+    title = re.sub(r"\bis still\b", "is", title, flags=re.IGNORECASE)
+    title = re.sub(r"\bis creating\b", "creates", title, flags=re.IGNORECASE)
+    title = re.sub(r"\bthere are\b", "", title, flags=re.IGNORECASE)
+    title = re.sub(r"\bentirely\b", "", title, flags=re.IGNORECASE)
+    words = title.split()
+    while len(words) > 6:
+        filtered = [word for word in words if word.lower() not in _TITLE_DROP_WORDS]
+        if len(filtered) == len(words):
+            break
+        words = filtered
+    if len(words) > 4:
+        words = [word for word in words if word.lower() not in {"your", "next"} or len(words) <= 4]
+    if len(words) > 6 and words[0].lower() in {"why", "how", "when"}:
+        words = words[1:]
+    if len(words) > 6:
+        words = words[:6]
+    return _headline_case_title(" ".join(words).strip(" .,!?:;-"))
+
+
+def _polish_overlay_title(clip: Clip) -> str:
+    current = _tighten_overlay_title_text(clip.suggested_overlay_title or "")
+    if current and current.lower() not in _GENERIC_TITLE_PATTERNS:
+        return current
+    for candidate in (clip.topic or "", clip.viral_hook or ""):
+        polished = _tighten_overlay_title_text(candidate)
+        if polished and polished.lower() not in _GENERIC_TITLE_PATTERNS:
+            return polished
+    return current
+
+
+def _polish_clip_metadata(clip: Clip) -> Clip:
+    title = _polish_overlay_title(clip)
+    if not title or title == clip.suggested_overlay_title:
+        return clip
+    return clip.model_copy(update={"suggested_overlay_title": title})
+
+
 def build_prompt(
     transcript: dict,
     *,
     candidate_count: int = DEFAULT_CANDIDATE_COUNT,
     steering_notes: list[str] | None = None,
+    hook_library_path: Path | None = None,
 ) -> tuple[str, str]:
     """Return ``(system_prompt, user_message)`` for the clip-selector LLM call.
 
@@ -156,12 +276,21 @@ def build_prompt(
 
     transcript_text = "\n".join(lines)
 
+    hook_examples = format_hook_examples(
+        retrieve_hook_examples(
+            transcript_text[:8000],
+            path=hook_library_path,
+            limit=8,
+        )
+    )
+
     system, user = clip_selection_prompts(
         transcript_text=transcript_text,
         min_dur=MIN_CLIP_DURATION_SEC,
         max_dur=MAX_CLIP_DURATION_SEC,
         count=candidate_count,
         steering_notes=steering_notes,
+        hook_examples=hook_examples,
     )
     return system, user
 
@@ -283,6 +412,7 @@ def select_clips(
     transcript: dict,
     *,
     gemini_model: str | None = None,
+    hook_library_path: Path | None = None,
     candidate_count: int = DEFAULT_CANDIDATE_COUNT,
     quality_threshold: float = DEFAULT_QUALITY_THRESHOLD,
     min_kept: int = DEFAULT_MIN_KEPT,
@@ -307,6 +437,7 @@ def select_clips(
         transcript,
         candidate_count=candidate_count,
         steering_notes=steering_notes,
+        hook_library_path=hook_library_path,
     )
 
     def _call() -> str:
@@ -392,7 +523,7 @@ def _parse_clips(raw_json: str) -> list[Clip]:
     for item in clips_data:
         payload = dict(item)
         payload.pop("duration_sec", None)
-        clip = Clip.model_validate(payload)
+        clip = _polish_clip_metadata(Clip.model_validate(payload))
 
         actual_dur = clip.end_time_sec - clip.start_time_sec
         stated_dur = item.get("duration_sec")

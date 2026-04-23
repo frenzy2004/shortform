@@ -6,6 +6,7 @@ huge and floating in the middle of the frame" bug.
 from __future__ import annotations
 
 from humeo.transcript_align import format_ass
+from humeo_core.schemas import RenderTheme
 
 
 def test_play_res_matches_output_so_libass_scale_is_one_to_one():
@@ -91,3 +92,18 @@ def test_empty_cue_list_still_produces_valid_header():
         "Format: Layer, Start, End, Style",
     ):
         assert required in ass, f"missing '{required}' in minimal ASS output"
+
+
+def test_reference_theme_uses_bottom_center_bold_style():
+    ass = format_ass(
+        [(0.0, 1.0, "hello world")],
+        play_res_x=1080,
+        play_res_y=1920,
+        font_size=38,
+        margin_v=166,
+        margin_h=76,
+        font_name="Source Sans 3",
+        render_theme=RenderTheme.REFERENCE_LOWER_THIRD,
+    )
+    assert "Style: Default,Source Sans 3,38," in ass
+    assert ",1,3,0,2,76,76,166,0" in ass

@@ -67,6 +67,14 @@ class FocusStackOrder(str, Enum):
     PERSON_THEN_CHART = "person_then_chart"
 
 
+class RenderTheme(str, Enum):
+    """Visual treatment applied by the final renderer."""
+
+    LEGACY = "legacy"
+    REFERENCE_LOWER_THIRD = "reference_lower_third"
+    NATIVE_HIGHLIGHT = "native_highlight"
+
+
 class IngestResult(BaseModel):
     """Everything Stage 1 (deterministic local extraction) produces."""
 
@@ -124,6 +132,25 @@ class TimedCenterPoint(BaseModel):
 
     t_sec: float = Field(ge=0.0)
     x_norm: float = Field(ge=0.0, le=1.0)
+
+
+class ClipRenderSpan(BaseModel):
+    """One kept source-timeline span inside a selected clip."""
+
+    start_time_sec: float = Field(ge=0.0)
+    end_time_sec: float = Field(gt=0.0)
+
+    @field_validator("end_time_sec")
+    @classmethod
+    def _end_after_start(cls, v: float, info) -> float:
+        start = info.data.get("start_time_sec", 0.0)
+        if v <= start:
+            raise ValueError("render span end_time_sec must be greater than start_time_sec")
+        return v
+
+    @property
+    def duration_sec(self) -> float:
+        return self.end_time_sec - self.start_time_sec
 
 
 class LayoutInstruction(BaseModel):
@@ -329,6 +356,13 @@ class Clip(BaseModel):
         ge=0,
         description="Seconds to remove from the end of this segment when exporting.",
     )
+    render_spans: list[ClipRenderSpan] = Field(
+        default_factory=list,
+        description=(
+            "Optional ordered source-timeline spans to keep when exporting. "
+            "When present, these spans override contiguous trim_start/trim_end export."
+        ),
+    )
     shorts_title: str = ""
     description: str = ""
     hashtags: list[str] = Field(default_factory=list)
@@ -365,6 +399,15 @@ class Clip(BaseModel):
                 )
         if self.trim_start_sec + self.trim_end_sec > dur:
             raise ValueError("trim_start_sec + trim_end_sec must not exceed clip duration")
+        last_end = None
+        for span in self.render_spans:
+            if span.start_time_sec < self.start_time_sec - 1e-6:
+                raise ValueError("render_spans must stay within the clip start_time_sec")
+            if span.end_time_sec > self.end_time_sec + 1e-6:
+                raise ValueError("render_spans must stay within the clip end_time_sec")
+            if last_end is not None and span.start_time_sec < last_end - 1e-6:
+                raise ValueError("render_spans must be ordered and non-overlapping")
+            last_end = span.end_time_sec
         return self
 
     @model_serializer(mode="wrap")
@@ -452,6 +495,7 @@ class RenderRequest(BaseModel):
         description="Vertical caption margin in output pixels (bottom-anchored).",
     )
     title_text: str = ""
+    render_theme: RenderTheme = RenderTheme.NATIVE_HIGHLIGHT
     mode: Literal["normal", "dry_run"] = "normal"
 
 

@@ -1,9 +1,37 @@
+---
+title: Humeo
+sdk: docker
+app_port: 7860
+---
+
 # Humeo
+
+Current default preset:
+
+- `native_highlight` captions
+- OpenRouter + `google/gemini-2.5-pro` for Gemini-like stages
+- Replicate SAM speaker-lock when `REPLICATE_API_TOKEN` is available
+- ElevenLabs Scribe v2 transcription when `ELEVENLABS_API_KEY` is set
 
 Long podcast or interview → vertical 9:16 shorts. Pipeline: download, transcribe, Gemini (clip selection, hook detection, content pruning, layout vision), ffmpeg render.
 
 **Architecture (static HTML, GitHub Pages):**  
 [https://bryanthelai.github.io/long-to-shorts/hive_architecture_visualization.html](https://bryanthelai.github.io/long-to-shorts/hive_architecture_visualization.html)
+
+## Hugging Face Space
+
+This repo includes a Hugging Face Docker Space entrypoint in `app.py`.
+
+- Upload one local MP4
+- Watch live pipeline logs and stage progress
+- Download rendered `short_*.mp4` clips from the UI
+
+Required Space secrets:
+
+- `GOOGLE_API_KEY` or `GEMINI_API_KEY`, or `OPENROUTER_API_KEY`
+- `OPENAI_API_KEY` or `ELEVENLABS_API_KEY`
+
+The Docker image pins `HUMEO_TRANSCRIBE_PROVIDER=openai` for the Space demo.
 
 ## Repo layout
 

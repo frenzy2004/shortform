@@ -61,13 +61,19 @@ from humeo.env import (
     resolve_openrouter_api_key,
 )
 from humeo.gemini_generate import gemini_generate_config
+from humeo.hook_library import (
+    format_hook_examples,
+    hook_library_fingerprint,
+    resolve_hook_library_path,
+    retrieve_hook_examples,
+)
 from humeo.prompt_loader import hook_detection_system_prompt
 
 logger = logging.getLogger(__name__)
 
 T = TypeVar("T")
 
-HOOK_META_VERSION = 1
+HOOK_META_VERSION = 2
 HOOK_META_FILENAME = "hooks.meta.json"
 HOOK_ARTIFACT_FILENAME = "hooks.json"
 HOOK_RAW_FILENAME = "hooks_raw.json"
@@ -287,6 +293,7 @@ def _hook_meta(
         "clips_sha256": clips_fp,
         "gemini_model": _resolved_gemini_model(config),
         "llm_backend": current_llm_provider() or "google",
+        "hook_library_sha256": hook_library_fingerprint(resolve_hook_library_path(config)),
     }
 
 
@@ -320,6 +327,8 @@ def _hook_cache_valid(
         if meta_provider not in (None, "google"):
             return False
     if meta.get("gemini_model") != _resolved_gemini_model(config):
+        return False
+    if meta.get("hook_library_sha256", "") != hook_library_fingerprint(resolve_hook_library_path(config)):
         return False
     return True
 
@@ -422,6 +431,7 @@ def request_hook_decisions(
     transcript: dict,
     *,
     gemini_model: str | None = None,
+    hook_library_path: Path | None = None,
 ) -> tuple[list[_HookDecision], str]:
     """Ask Gemini to localise the hook sentence for each clip.
 
@@ -433,7 +443,13 @@ def request_hook_decisions(
     if not clips:
         return [], '{"hooks": []}'
 
-    system = hook_detection_system_prompt()
+    example_query = " ".join(
+        filter(None, [*(clip.topic for clip in clips[:4]), *(clip.viral_hook for clip in clips[:4])])
+    )
+    hook_examples = format_hook_examples(
+        retrieve_hook_examples(example_query, path=hook_library_path, limit=8)
+    )
+    system = hook_detection_system_prompt(hook_examples=hook_examples)
     user_text = _build_user_message(clips, transcript)
 
     provider = resolve_llm_provider()
@@ -526,7 +542,10 @@ def run_hook_detection_stage(
 
     try:
         decisions, raw = request_hook_decisions(
-            clips, transcript, gemini_model=config.gemini_model
+            clips,
+            transcript,
+            gemini_model=config.gemini_model,
+            hook_library_path=resolve_hook_library_path(config),
         )
     except Exception as e:  # noqa: BLE001 - pipeline must not die here
         logger.warning(

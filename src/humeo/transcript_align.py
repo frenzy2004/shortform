@@ -2,11 +2,29 @@
 
 from __future__ import annotations
 
-from humeo_core.schemas import Clip, ClipSubtitleWords, TranscriptWord
+from humeo_core.schemas import Clip, ClipSubtitleWords, RenderTheme, TranscriptWord
 
 # Whisper / WhisperX / OpenAI-normalized segment shapes
 _MAX_WORDS_PER_CUE = 8
 _MAX_CUE_SEC = 4.0
+_PUNCTUATION_BREAK_CHARS = (".", "?", "!", ";", ":")
+_SENTENCE_RESTART_WORDS = frozenset(
+    {
+        "And",
+        "But",
+        "Did",
+        "Now",
+        "So",
+        "That",
+        "Then",
+        "This",
+        "Those",
+        "What",
+        "When",
+        "Where",
+        "Why",
+    }
+)
 
 
 def _iter_words_from_segments(transcript: dict) -> list[TranscriptWord]:
@@ -82,18 +100,53 @@ def _fallback_even_words(clip: Clip) -> list[TranscriptWord]:
     return out
 
 
+def _looks_like_sentence_restart(prev_word: str, next_word: str) -> bool:
+    prev = prev_word.rstrip("\"')]}")
+    nxt = next_word.lstrip("\"'([{")
+    if not prev or not nxt:
+        return False
+    if nxt in _SENTENCE_RESTART_WORDS:
+        return True
+    return any(ch.isdigit() for ch in prev) and nxt[0].isupper()
+
+
 def clip_words_to_srt_lines(
     words: list[TranscriptWord],
     *,
     max_words_per_cue: int = _MAX_WORDS_PER_CUE,
     max_cue_sec: float = _MAX_CUE_SEC,
+    prefer_break_on_punctuation: bool = False,
+    min_words_before_break: int = 1,
 ) -> list[tuple[float, float, str]]:
     """Group words into SRT cues: max N words and max duration per cue."""
+    chunks = group_words_to_cue_chunks(
+        words,
+        max_words_per_cue=max_words_per_cue,
+        max_cue_sec=max_cue_sec,
+        prefer_break_on_punctuation=prefer_break_on_punctuation,
+        min_words_before_break=min_words_before_break,
+    )
+    return [
+        (chunk[0].start_time, chunk[-1].end_time, " ".join(w.word for w in chunk))
+        for chunk in chunks
+    ]
+
+
+def group_words_to_cue_chunks(
+    words: list[TranscriptWord],
+    *,
+    max_words_per_cue: int = _MAX_WORDS_PER_CUE,
+    max_cue_sec: float = _MAX_CUE_SEC,
+    prefer_break_on_punctuation: bool = False,
+    min_words_before_break: int = 1,
+) -> list[list[TranscriptWord]]:
+    """Group words into timed cue chunks while preserving per-word timings."""
     if not words:
         return []
     max_words_per_cue = max(1, int(max_words_per_cue))
     max_cue_sec = max(0.2, float(max_cue_sec))
-    lines: list[tuple[float, float, str]] = []
+    min_words_before_break = max(1, int(min_words_before_break))
+    chunks_out: list[list[TranscriptWord]] = []
     i = 0
     n = len(words)
     while i < n:
@@ -107,13 +160,24 @@ def clip_words_to_srt_lines(
                 break
             if w.start_time - t0 > max_cue_sec:
                 break
+            if (
+                prefer_break_on_punctuation
+                and (len(chunk) >= 2 or end_t - t0 >= 0.45)
+                and _looks_like_sentence_restart(chunk[-1].word, w.word)
+            ):
+                break
             chunk.append(w)
             end_t = w.end_time
             j += 1
-        text = " ".join(w.word for w in chunk)
-        lines.append((t0, end_t, text))
+            if (
+                prefer_break_on_punctuation
+                and len(chunk) >= min_words_before_break
+                and chunk[-1].word.rstrip("\"')]}").endswith(_PUNCTUATION_BREAK_CHARS)
+            ):
+                break
+        chunks_out.append(chunk)
         i = j
-    return lines
+    return chunks_out
 
 
 def format_srt(lines: list[tuple[float, float, str]]) -> str:
@@ -172,6 +236,7 @@ def format_ass(
     margin_v: int,
     margin_h: int = 60,
     font_name: str = "Arial",
+    render_theme: RenderTheme = RenderTheme.LEGACY,
 ) -> str:
     """Render captions as an ASS script whose PlayRes matches the output video.
 
@@ -182,6 +247,19 @@ def format_ass(
     makes that scale factor exactly 1.0, so ``font_size`` and ``margin_v``
     below are honest output pixel values.
     """
+
+    if render_theme == RenderTheme.REFERENCE_LOWER_THIRD:
+        style_line = (
+            f"Style: Default,{font_name},{font_size},&H00FFFFFF,&H000000FF,"
+            "&H00000000,&H00000000,-1,0,0,0,100,100,-1,0,1,3,0,2,"
+            f"{margin_h},{margin_h},{margin_v},0\n"
+        )
+    else:
+        style_line = (
+            f"Style: Default,{font_name},{font_size},&H00FFFFFF,&H000000FF,"
+            f"&H00000000,&H70000000,-1,0,0,0,100,100,0,0,4,0,0,2,"
+            f"{margin_h},{margin_h},{margin_v},0\n"
+        )
 
     header = (
         "[Script Info]\n"
@@ -197,11 +275,7 @@ def format_ass(
         "OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, "
         "ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, "
         "Alignment, MarginL, MarginR, MarginV, Encoding\n"
-        # Bold=-1, Italic=0, ScaleX/Y=100, BorderStyle=4 (opaque box),
-        # Outline=0, Shadow=0, Alignment=2 (bottom-center).
-        f"Style: Default,{font_name},{font_size},&H00FFFFFF,&H000000FF,"
-        f"&H00000000,&H70000000,-1,0,0,0,100,100,0,0,4,0,0,2,"
-        f"{margin_h},{margin_h},{margin_v},0\n"
+        + style_line +
         "\n"
         "[Events]\n"
         "Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\n"

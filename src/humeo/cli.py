@@ -2,12 +2,18 @@
 
 import argparse
 import logging
+import os
 import sys
 from datetime import datetime
 from pathlib import Path
 
 from humeo.config import PipelineConfig
 from humeo.pipeline import run_pipeline
+
+DEFAULT_SEGMENTATION_PROVIDER = (
+    (os.environ.get("HUMEO_SEGMENTATION_PROVIDER") or "").strip().lower()
+    or ("replicate" if (os.environ.get("REPLICATE_API_TOKEN") or "").strip() else "off")
+)
 
 
 def setup_logging(verbose: bool = False):
@@ -78,6 +84,36 @@ Examples:
         "--gemini-model",
         default=None,
         help="Gemini model id for clip selection (default: GEMINI_MODEL env; see humeo.config).",
+    )
+
+    parser.add_argument(
+        "--render-theme",
+        choices=["legacy", "reference_lower_third", "native_highlight"],
+        default="native_highlight",
+        help="Visual theme for title/caption rendering (default: native_highlight).",
+    )
+
+    parser.add_argument(
+        "--hook-library-path",
+        type=Path,
+        default=None,
+        help="Zip or directory containing retrieved viral hook examples (env: HUMEO_HOOK_LIBRARY_PATH).",
+    )
+
+    parser.add_argument(
+        "--segmentation-provider",
+        choices=["off", "replicate"],
+        default=DEFAULT_SEGMENTATION_PROVIDER,
+        help=(
+            "Speaker-centering tracker. Defaults to HUMEO_SEGMENTATION_PROVIDER when set, "
+            "otherwise replicate if REPLICATE_API_TOKEN exists, else off."
+        ),
+    )
+
+    parser.add_argument(
+        "--segmentation-model",
+        default="meta/sam-2-video",
+        help="Segmentation model id used by the fallback tracker (default: meta/sam-2-video).",
     )
 
     parser.add_argument(
@@ -223,6 +259,10 @@ def main():
         cache_root=args.cache_root,
         gemini_model=args.gemini_model,
         gemini_vision_model=args.gemini_vision_model,
+        render_theme=args.render_theme,
+        hook_library_path=args.hook_library_path,
+        segmentation_provider=args.segmentation_provider,
+        segmentation_model=args.segmentation_model,
         force_clip_selection=force_clip_selection,
         force_layout_vision=force_layout_vision,
         clean_run=args.clean_run,

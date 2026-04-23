@@ -5,7 +5,9 @@ import logging
 from pathlib import Path
 from unittest.mock import MagicMock
 
+from humeo.clip_assembly import AssembledClip
 from humeo.config import PipelineConfig
+from humeo.ingest import _write_transcript
 from humeo.pipeline import run_pipeline
 from humeo.session_state import save_state
 from humeo_core.schemas import ApprovalResult, Clip, LayoutInstruction, LayoutKind, RatingFeedback, Scene, SessionState
@@ -24,7 +26,7 @@ def _clip(clip_id: str = "001", *, start: float = 0.0, topic: str = "topic") -> 
     )
 
 
-def _prepare_inputs(tmp_path: Path) -> None:
+def _prepare_inputs(tmp_path: Path) -> dict:
     (tmp_path / "source.mp4").write_text("video", encoding="utf-8")
     transcript = {
         "segments": [
@@ -32,7 +34,34 @@ def _prepare_inputs(tmp_path: Path) -> None:
             {"start": 5.0, "end": 10.0, "text": "world"},
         ]
     }
-    (tmp_path / "transcript.json").write_text(json.dumps(transcript), encoding="utf-8")
+    _write_transcript(tmp_path, transcript)
+    return transcript
+
+
+def _write_dummy_clip_plan(path: Path, clips: list[Clip]) -> Path:
+    payload = {
+        "source_path": "",
+        "clips": [clip.model_dump(mode="json") for clip in clips],
+    }
+    path.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+    return path
+
+
+def _fake_assembled_clip(
+    tmp_path: Path,
+    clip: Clip,
+    transcript: dict,
+) -> AssembledClip:
+    assembled_dir = tmp_path / "assembled"
+    assembled_dir.mkdir(parents=True, exist_ok=True)
+    assembled_path = assembled_dir / f"clip_{clip.clip_id}.mp4"
+    assembled_path.write_text("assembled", encoding="utf-8")
+    return AssembledClip(
+        source_path=assembled_path,
+        clip=clip,
+        transcript=transcript,
+        spans=[],
+    )
 
 
 def _config(
@@ -53,7 +82,7 @@ def _config(
 def _patch_pipeline(monkeypatch, tmp_path: Path, clips: list[Clip]) -> list[list[str]]:
     import humeo.pipeline as pipeline_mod
 
-    _prepare_inputs(tmp_path)
+    transcript = _prepare_inputs(tmp_path)
     call_notes: list[list[str]] = []
 
     def fake_select_clips(*_args, **kwargs):
@@ -63,6 +92,17 @@ def _patch_pipeline(monkeypatch, tmp_path: Path, clips: list[Clip]) -> list[list
     monkeypatch.setattr(pipeline_mod, "select_clips", fake_select_clips)
     monkeypatch.setattr(pipeline_mod, "run_hook_detection_stage", lambda *_args, **_kwargs: list(clips))
     monkeypatch.setattr(pipeline_mod, "run_content_pruning_stage", lambda *_args, **_kwargs: list(clips))
+    monkeypatch.setattr(pipeline_mod, "apply_render_spans", lambda _clips, _transcript: list(_clips))
+    monkeypatch.setattr(
+        pipeline_mod,
+        "assemble_clip",
+        lambda _source_path, clip, _transcript, _output_dir: _fake_assembled_clip(tmp_path, clip, transcript),
+    )
+    monkeypatch.setattr(
+        pipeline_mod,
+        "write_clip_plan",
+        lambda path, plan_clips: _write_dummy_clip_plan(path, list(plan_clips)),
+    )
     monkeypatch.setattr(
         pipeline_mod,
         "extract_keyframes",
@@ -232,7 +272,7 @@ def test_pipeline_local_source_stages_video_without_downloading(monkeypatch, tmp
             {"start": 5.0, "end": 10.0, "text": "world"},
         ]
     }
-    (tmp_path / "transcript.json").write_text(json.dumps(transcript), encoding="utf-8")
+    _write_transcript(tmp_path, transcript)
 
     clips = [_clip("001")]
     monkeypatch.setattr(
@@ -249,6 +289,17 @@ def test_pipeline_local_source_stages_video_without_downloading(monkeypatch, tmp
     monkeypatch.setattr(pipeline_mod, "transcribe_whisperx", lambda *_args, **_kwargs: transcript)
     monkeypatch.setattr(pipeline_mod, "run_hook_detection_stage", lambda *_args, **_kwargs: list(clips))
     monkeypatch.setattr(pipeline_mod, "run_content_pruning_stage", lambda *_args, **_kwargs: list(clips))
+    monkeypatch.setattr(pipeline_mod, "apply_render_spans", lambda _clips, _transcript: list(_clips))
+    monkeypatch.setattr(
+        pipeline_mod,
+        "assemble_clip",
+        lambda _source_path, clip, _transcript, _output_dir: _fake_assembled_clip(tmp_path, clip, transcript),
+    )
+    monkeypatch.setattr(
+        pipeline_mod,
+        "write_clip_plan",
+        lambda path, plan_clips: _write_dummy_clip_plan(path, list(plan_clips)),
+    )
     monkeypatch.setattr(
         pipeline_mod,
         "extract_keyframes",

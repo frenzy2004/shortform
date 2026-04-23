@@ -27,6 +27,11 @@ there, score them honestly, and return strict JSON.
   candidates automatically. Only return fewer than {{ count }} if the
   transcript truly does not contain {{ count }} distinguishable moments.
 - Target clip duration: {{ min_dur }}s to {{ max_dur }}s (hard bounds).
+{% if hook_examples %}
+- Retrieved viral hook examples from the team's hook library. Use these as pattern guidance for the opening, title phrasing, and overall framing style:
+
+{{ hook_examples }}
+{% endif %}
 
 ## Output
 
@@ -79,6 +84,8 @@ Explanation of each field:
   window. No paraphrasing. No added punctuation.
 - `suggested_overlay_title`, `shorts_title`, `description`, `hashtags`:
   platform metadata. Hashtags are short tokens without `#`.
+  `suggested_overlay_title` must be 4-8 words, headline-cased when natural,
+  and should feel specific, provocative, and pattern-rich rather than generic.
 - `hook_start_sec` / `hook_end_sec`: clip-relative seconds (0 = clip start).
   Must satisfy `0 <= hook_start < hook_end <= (end_time_sec - start_time_sec)`.
 - `trim_start_sec` / `trim_end_sec`: default 0. A downstream pruning pass will
@@ -127,6 +134,7 @@ but do not output rule-point maps. Output only the three-axis breakdown.
 - Cuts in the middle of a sentence or in the middle of a thought.
 - Both speakers are on filler ("yeah, totally, right, exactly").
 - No clear hook in the first 3 seconds of the window.
+- The first real hook lands later than 10 seconds into the candidate.
 
 ## Hook Selection (first 3 seconds)
 
@@ -184,3 +192,6 @@ Avoid endings that:
 8. `score_breakdown` must contain exactly `message_wow`, `hook_emotion`, and
    `catchy`. Do not include any other keys.
 9. Return ONLY the JSON object. No markdown, no prose, no trailing text.
+10. If the first 10 seconds do not contain a real hook, do not return the clip.
+11. Avoid generic titles like "Big Opportunity", "Important Lesson", "Why This Matters".
+    Prefer titles whose wording clearly echoes the strongest hook pattern in the clip.

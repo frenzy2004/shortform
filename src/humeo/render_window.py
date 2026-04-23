@@ -13,8 +13,12 @@ def effective_export_bounds(clip: Clip) -> tuple[float, float]:
     """Return ``(start_sec, end_sec)`` on the source timeline for the exported short.
 
     1. **Trim** narrows ``[start_time_sec, end_time_sec]``.
+    2. ``render_spans`` override contiguous trim export when present.
     2. Hook fields remain metadata and do not change the export window.
     """
+    if clip.render_spans:
+        return clip.render_spans[0].start_time_sec, clip.render_spans[-1].end_time_sec
+
     s0 = clip.start_time_sec
     s1 = clip.end_time_sec
 

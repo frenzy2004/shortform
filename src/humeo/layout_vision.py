@@ -6,8 +6,11 @@ import base64
 import hashlib
 import json
 import logging
+import os
 import struct
 import subprocess
+from collections.abc import Iterable
+from io import BytesIO
 from pathlib import Path
 from typing import Any
 
@@ -40,13 +43,19 @@ from humeo.gemini_generate import gemini_generate_config
 
 logger = logging.getLogger(__name__)
 
-LAYOUT_VISION_CACHE_VERSION = 3
+LAYOUT_VISION_CACHE_VERSION = 5
 LAYOUT_VISION_META = "layout_vision.meta.json"
 LAYOUT_VISION_JSON = "layout_vision.json"
 TRACKING_SAMPLE_FRACTIONS = tuple(i / 10.0 for i in range(1, 10))
 TRACKING_MIN_SPREAD_NORM = 0.08
 TRACKING_OUTLIER_DELTA_NORM = 0.16
 TRACKING_OUTLIER_NEIGHBOR_MAX_NORM = 0.10
+TRACKING_DEADBAND_NORM = 0.025
+TRACKING_MIN_USABLE_POINTS = 5
+TRACKING_UNSTABLE_JUMP_NORM = 0.18
+REPLICATE_SAM2_VIDEO_PINNED = (
+    "meta/sam-2-video:2d7219877ca847f463d749d9b224e62f7b078fe035d60a74b58889b455d5cbad"
+)
 
 GEMINI_LAYOUT_VISION_PROMPT = """You are framing a vertical short (9:16) from a 16:9 video frame.
 
@@ -86,6 +95,22 @@ Layout selection (pick exactly one):
 When in doubt prefer ``sit_center``. Never output more than two of {person, chart} items in total.
 No markdown. JSON only."""
 
+ACTIVE_SPEAKER_VISION_PROMPT = """You are analyzing a single frame from a two-person talking video.
+
+Return ONLY a JSON object:
+{
+  "speaker": "left" | "right" | "both" | "unclear",
+  "reason": "short rationale"
+}
+
+Rules:
+- "left" means the LEFT visible person appears to be the one speaking in this exact frame.
+- "right" means the RIGHT visible person appears to be the one speaking in this exact frame.
+- Use visible cues only: open mouth mid-word, facial expression while talking, hand gesture timing, body engagement.
+- If both appear to be talking at once, return "both".
+- If it is impossible to tell from this frame, return "unclear".
+- No markdown. JSON only."""
+
 
 def _openai_message_text(content: object) -> str:
     if isinstance(content, str):
@@ -113,6 +138,8 @@ def layout_cache_valid(
     transcript_fp: str,
     clips_fp: str,
     vision_model: str,
+    segmentation_provider: str = "off",
+    segmentation_model: str = "meta/sam-2-video",
 ) -> bool:
     meta_path = work_dir / LAYOUT_VISION_META
     data_path = work_dir / LAYOUT_VISION_JSON
@@ -128,6 +155,8 @@ def layout_cache_valid(
         meta.get("transcript_sha256") == transcript_fp
         and meta.get("clips_sha256") == clips_fp
         and meta.get("gemini_vision_model") == vision_model
+        and meta.get("segmentation_provider", "off") == segmentation_provider
+        and meta.get("segmentation_model", "meta/sam-2-video") == segmentation_model
         and (
             current_llm_provider() is None
             or (
@@ -158,6 +187,8 @@ def write_layout_cache(
     clips_fp: str,
     vision_model: str,
     clips_payload: dict[str, dict[str, Any]],
+    segmentation_provider: str = "off",
+    segmentation_model: str = "meta/sam-2-video",
 ) -> None:
     work_dir.mkdir(parents=True, exist_ok=True)
     meta = {
@@ -166,6 +197,8 @@ def write_layout_cache(
         "clips_sha256": clips_fp,
         "gemini_vision_model": vision_model,
         "llm_backend": current_llm_provider() or "google",
+        "segmentation_provider": segmentation_provider,
+        "segmentation_model": segmentation_model,
     }
     (work_dir / LAYOUT_VISION_META).write_text(
         json.dumps(meta, indent=2) + "\n", encoding="utf-8"
@@ -486,9 +519,29 @@ def _tracking_points_from_centers(
         ):
             filtered[idx] = (curr_t, (prev_x + next_x) / 2.0)
 
+    smoothed = list(filtered)
+    for idx in range(1, len(filtered) - 1):
+        prev_x = filtered[idx - 1][1]
+        curr_t, curr_x = filtered[idx]
+        next_x = filtered[idx + 1][1]
+        median_x = sorted((prev_x, curr_x, next_x))[1]
+        if abs(curr_x - median_x) > TRACKING_DEADBAND_NORM:
+            smoothed[idx] = (curr_t, median_x)
+
+    filtered = list(smoothed)
+    for idx in range(1, len(filtered)):
+        prev_t, prev_x = filtered[idx - 1]
+        curr_t, curr_x = filtered[idx]
+        if abs(curr_x - prev_x) < TRACKING_DEADBAND_NORM:
+            filtered[idx] = (curr_t, prev_x)
+
     spread = max(x for _, x in filtered) - min(x for _, x in filtered)
     if spread < TRACKING_MIN_SPREAD_NORM:
-        return []
+        stable_x = sum(x for _, x in filtered) / len(filtered)
+        return [
+            TimedCenterPoint(t_sec=0.0, x_norm=stable_x),
+            TimedCenterPoint(t_sec=duration_sec, x_norm=stable_x),
+        ]
 
     if filtered[0][0] > 0.0:
         filtered.insert(0, (0.0, filtered[0][1]))
@@ -501,6 +554,90 @@ def _tracking_points_from_centers(
         filtered[-1] = (duration_sec, filtered[-1][1])
 
     return [TimedCenterPoint(t_sec=t_sec, x_norm=x_norm) for t_sec, x_norm in filtered]
+
+
+def _tracking_is_unstable(points: list[TimedCenterPoint]) -> bool:
+    if len(points) < TRACKING_MIN_USABLE_POINTS:
+        return True
+    return any(
+        abs(points[idx].x_norm - points[idx - 1].x_norm) > TRACKING_UNSTABLE_JUMP_NORM
+        for idx in range(1, len(points))
+    )
+
+
+def _interpolate_tracking_x(points: list[TimedCenterPoint], t_sec: float) -> float | None:
+    if not points:
+        return None
+    if t_sec <= points[0].t_sec:
+        return float(points[0].x_norm)
+    if t_sec >= points[-1].t_sec:
+        return float(points[-1].x_norm)
+    for idx in range(1, len(points)):
+        left = points[idx - 1]
+        right = points[idx]
+        if right.t_sec < t_sec:
+            continue
+        span = right.t_sec - left.t_sec
+        if span <= 1e-6:
+            return float(right.x_norm)
+        alpha = (t_sec - left.t_sec) / span
+        return float(left.x_norm + (right.x_norm - left.x_norm) * alpha)
+    return float(points[-1].x_norm)
+
+
+def _speaker_seed_boxes(
+    data: dict[str, Any], image_size: tuple[int, int] | None
+) -> tuple[BoundingBox, BoundingBox] | None:
+    first_person = _parse_bbox(data.get("person_bbox"), image_size=image_size)
+    first_face = _parse_bbox(data.get("face_bbox"), image_size=image_size)
+    second_person = _parse_bbox(data.get("second_person_bbox"), image_size=image_size)
+    second_face = _parse_bbox(data.get("second_face_bbox"), image_size=image_size)
+    left = first_face or first_person
+    right = second_face or second_person
+    if left is None or right is None:
+        return None
+    ordered = sorted((left, right), key=lambda box: box.center_x)
+    return ordered[0], ordered[1]
+
+
+def _speaker_follow_sample_times(duration_sec: float) -> list[float]:
+    seen: set[float] = set()
+    out: list[float] = []
+    for t_sec in [0.0, *_tracking_sample_times(duration_sec), duration_sec]:
+        key = round(max(0.0, min(duration_sec, t_sec)), 3)
+        if key in seen:
+            continue
+        seen.add(key)
+        out.append(key)
+    return out
+
+
+def _resolve_speaker_focus_samples(
+    samples: list[tuple[float, str]],
+    *,
+    default_side: str = "left",
+) -> list[tuple[float, str]]:
+    resolved: list[list[float | str | None]] = []
+    prev_side: str | None = None
+    for t_sec, side in samples:
+        normalized = side if side in ("left", "right") else None
+        if normalized is None and prev_side is not None:
+            normalized = prev_side
+        if normalized is not None:
+            prev_side = normalized
+        resolved.append([t_sec, normalized])
+
+    next_side: str | None = None
+    for idx in range(len(resolved) - 1, -1, -1):
+        if resolved[idx][1] is None:
+            resolved[idx][1] = next_side
+        else:
+            next_side = str(resolved[idx][1])
+
+    out: list[tuple[float, str]] = []
+    for t_sec, side in resolved:
+        out.append((float(t_sec), str(side or default_side)))
+    return out
 
 
 def _extract_frame_at_time(source_path: Path, time_sec: float, output_path: Path) -> Path:
@@ -525,6 +662,282 @@ def _extract_frame_at_time(source_path: Path, time_sec: float, output_path: Path
         capture_output=True,
     )
     return output_path
+
+
+def _probe_video_fps(source_path: Path) -> float:
+    result = subprocess.run(
+        [
+            "ffprobe",
+            "-v",
+            "error",
+            "-select_streams",
+            "v:0",
+            "-show_entries",
+            "stream=r_frame_rate",
+            "-of",
+            "default=noprint_wrappers=1:nokey=1",
+            str(source_path),
+        ],
+        check=False,
+        capture_output=True,
+        text=True,
+    )
+    rate = (result.stdout or "").strip()
+    if "/" in rate:
+        num, den = rate.split("/", 1)
+        try:
+            return max(1.0, float(num) / max(float(den), 1.0))
+        except ValueError:
+            return 30.0
+    try:
+        return max(1.0, float(rate))
+    except ValueError:
+        return 30.0
+
+
+def _mask_center_x_from_url(mask_url: str) -> float | None:
+    try:
+        import httpx
+        from PIL import Image  # type: ignore
+    except ImportError:
+        return None
+
+    response = httpx.get(mask_url, timeout=120.0)
+    response.raise_for_status()
+    with Image.open(BytesIO(response.content)) as image:
+        image = image.convert("L")
+        width, height = image.size
+        pixels = image.load()
+        xs: list[int] = []
+        for y in range(height):
+            for x in range(width):
+                if pixels[x, y] > 16:
+                    xs.append(x)
+        if not xs or width <= 0:
+            return None
+        return float(sum(xs) / len(xs) / width)
+
+
+def _segmentation_mask_urls(output: object) -> list[str]:
+    def _coerce_urls(items: Iterable[object]) -> list[str]:
+        urls: list[str] = []
+        for item in items:
+            if item is None:
+                continue
+            if isinstance(item, (str, Path)):
+                text = str(item).strip()
+            else:
+                url = getattr(item, "url", None)
+                text = str(url).strip() if isinstance(url, str) else str(item).strip()
+            if text:
+                urls.append(text)
+        return urls
+
+    if isinstance(output, dict):
+        for key in ("black_white_masks", "masks", "output"):
+            value = output.get(key)
+            if isinstance(value, (str, bytes, bytearray)) or value is None:
+                continue
+            try:
+                urls = _coerce_urls(value)
+            except TypeError:
+                continue
+            if urls:
+                return urls
+        return []
+    if isinstance(output, (str, bytes, bytearray)) or output is None:
+        return []
+    try:
+        return _coerce_urls(output)
+    except TypeError:
+        return []
+
+
+def _infer_person_tracking_with_segmentation(
+    scene: Scene,
+    *,
+    source_video: Path,
+    segmentation_model: str,
+    initial_data: dict[str, Any] | None = None,
+    initial_image_size: tuple[int, int] | None = None,
+    seed_bbox: BoundingBox | None = None,
+    object_id: str = "speaker",
+) -> tuple[list[TimedCenterPoint], dict[str, Any] | None]:
+    token = (os.environ.get("REPLICATE_API_TOKEN") or "").strip()
+    if not token:
+        raise RuntimeError("REPLICATE_API_TOKEN is not set")
+    if initial_image_size is None:
+        raise RuntimeError("Segmentation fallback requires the keyframe dimensions")
+    if seed_bbox is None and initial_data is None:
+        raise RuntimeError("Segmentation fallback requires an initial vision bbox")
+
+    if seed_bbox is None:
+        face_bbox = _parse_bbox(initial_data.get("face_bbox"), image_size=initial_image_size)
+        person_bbox = _parse_bbox(initial_data.get("person_bbox"), image_size=initial_image_size)
+        seed_bbox = face_bbox or person_bbox
+    if seed_bbox is None:
+        raise RuntimeError("No seed bbox available for segmentation fallback")
+
+    try:
+        import replicate
+    except ImportError as exc:
+        raise RuntimeError("replicate package is not installed") from exc
+
+    width, height = initial_image_size
+    fps = _probe_video_fps(source_video)
+    midpoint_frame = max(0, int(round((scene.duration / 2.0) * fps)))
+    output_frame_interval = max(1, int(round(max(1.0, scene.duration * fps) / 10.0)))
+    click_x = int(round(seed_bbox.center_x * width))
+    click_y = int(round(seed_bbox.center_y * height))
+    prompt_frames = [0]
+    if midpoint_frame > 0:
+        prompt_frames.append(midpoint_frame)
+    prompt_coordinates = ",".join(f"[{click_x},{click_y}]" for _ in prompt_frames)
+    prompt_labels = ",".join("1" for _ in prompt_frames)
+    prompt_frame_str = ",".join(str(frame_idx) for frame_idx in prompt_frames)
+    prompt_object_ids = ",".join(object_id for _ in prompt_frames)
+    run_input = {
+        "input_video": None,
+        "click_coordinates": prompt_coordinates,
+        "click_labels": prompt_labels,
+        "click_frames": prompt_frame_str,
+        "click_object_ids": prompt_object_ids,
+        "mask_type": "binary",
+        "annotation_type": "mask",
+        "output_video": False,
+        "output_format": "png",
+        "output_frame_interval": output_frame_interval,
+    }
+
+    with source_video.open("rb") as handle:
+        client = replicate.Client(api_token=token)
+        run_input["input_video"] = handle
+        try:
+            output = client.run(segmentation_model, input=run_input)
+            resolved_model = segmentation_model
+        except Exception as exc:
+            if ":" in segmentation_model or "404" not in str(exc):
+                raise
+            handle.seek(0)
+            output = client.run(REPLICATE_SAM2_VIDEO_PINNED, input=run_input)
+            resolved_model = REPLICATE_SAM2_VIDEO_PINNED
+
+    urls = _segmentation_mask_urls(output)
+    if not urls:
+        raise RuntimeError("Segmentation fallback returned no masks")
+
+    centers: list[tuple[float, float]] = []
+    for idx, mask_url in enumerate(urls):
+        center_x = _mask_center_x_from_url(mask_url)
+        if center_x is None:
+            continue
+        rel_time = min(scene.duration, (idx * output_frame_interval) / fps)
+        centers.append((rel_time, center_x))
+
+    points = _tracking_points_from_centers(scene.duration, centers)
+    detail = {
+        "provider": "replicate",
+        "model": resolved_model,
+        "seed_point_px": [click_x, click_y],
+        "seed_frame": midpoint_frame,
+        "prompt_frames": prompt_frames,
+        "output_frame_interval": output_frame_interval,
+        "mask_count": len(urls),
+    }
+    return points, detail
+
+
+def _infer_two_speaker_focus_tracking_with_segmentation(
+    scene: Scene,
+    *,
+    source_video: Path,
+    tracking_dir: Path,
+    model_name: str,
+    segmentation_model: str,
+    initial_data: dict[str, Any],
+    initial_image_size: tuple[int, int] | None,
+) -> tuple[list[TimedCenterPoint], dict[str, Any] | None]:
+    seeds = _speaker_seed_boxes(initial_data, initial_image_size)
+    if seeds is None:
+        raise RuntimeError("Two-speaker SAM follow requires both speaker bboxes")
+
+    left_seed, right_seed = seeds
+    left_points, left_detail = _infer_person_tracking_with_segmentation(
+        scene,
+        source_video=source_video,
+        segmentation_model=segmentation_model,
+        initial_data=initial_data,
+        initial_image_size=initial_image_size,
+        seed_bbox=left_seed,
+        object_id="left_speaker",
+    )
+    right_points, right_detail = _infer_person_tracking_with_segmentation(
+        scene,
+        source_video=source_video,
+        segmentation_model=segmentation_model,
+        initial_data=initial_data,
+        initial_image_size=initial_image_size,
+        seed_bbox=right_seed,
+        object_id="right_speaker",
+    )
+    if not left_points or not right_points:
+        raise RuntimeError("Two-speaker SAM follow did not return both speaker tracks")
+
+    focus_dir = tracking_dir / scene.scene_id / "speaker_focus"
+    focus_samples: list[dict[str, Any]] = []
+    focus_choices: list[tuple[float, str]] = []
+    for rel_time in _speaker_follow_sample_times(max(0.0, scene.duration)):
+        abs_time = scene.start_time + rel_time
+        frame_path = focus_dir / f"{scene.scene_id}_{int(round(rel_time * 1000)):06d}.jpg"
+        try:
+            _extract_frame_at_time(source_video, abs_time, frame_path)
+            data = _call_active_speaker_vision(str(frame_path), model_name)
+            speaker = str(data.get("speaker", "unclear")).strip().lower()
+            if speaker not in ("left", "right", "both", "unclear"):
+                speaker = "unclear"
+            focus_choices.append((rel_time, speaker))
+            focus_samples.append(
+                {
+                    "time_sec": rel_time,
+                    "frame_path": str(frame_path),
+                    "speaker": speaker,
+                    "raw": data,
+                }
+            )
+        except Exception as exc:
+            focus_choices.append((rel_time, "unclear"))
+            focus_samples.append(
+                {
+                    "time_sec": rel_time,
+                    "frame_path": str(frame_path),
+                    "speaker": "unclear",
+                    "error": str(exc),
+                }
+            )
+
+    resolved_focus = _resolve_speaker_focus_samples(focus_choices, default_side="left")
+    centers: list[tuple[float, float]] = []
+    for rel_time, speaker in resolved_focus:
+        x_norm = (
+            _interpolate_tracking_x(left_points, rel_time)
+            if speaker == "left"
+            else _interpolate_tracking_x(right_points, rel_time)
+        )
+        if x_norm is None:
+            x_norm = left_seed.center_x if speaker == "left" else right_seed.center_x
+        centers.append((rel_time, x_norm))
+
+    points = _tracking_points_from_centers(scene.duration, centers)
+    detail = {
+        "mode": "two_speaker_follow",
+        "left_segmentation": left_detail,
+        "right_segmentation": right_detail,
+        "focus_samples": focus_samples,
+        "resolved_focus": [
+            {"time_sec": rel_time, "speaker": speaker} for rel_time, speaker in resolved_focus
+        ],
+    }
+    return points, detail
 
 
 def _infer_person_tracking(
@@ -599,7 +1012,7 @@ def _infer_person_tracking(
     return _tracking_points_from_centers(duration_sec, centers), samples
 
 
-def _call_gemini_vision(keyframe_path: str, model_name: str) -> dict[str, Any]:
+def _call_vision_json(keyframe_path: str, model_name: str, prompt: str) -> dict[str, Any]:
     path = Path(keyframe_path)
     data = path.read_bytes()
     mime = "image/jpeg" if path.suffix.lower() in (".jpg", ".jpeg") else "image/png"
@@ -611,7 +1024,7 @@ def _call_gemini_vision(keyframe_path: str, model_name: str) -> dict[str, Any]:
         response = client.models.generate_content(
             model=resolved_model,
             contents=[
-                types.Part.from_text(text=GEMINI_LAYOUT_VISION_PROMPT),
+                types.Part.from_text(text=prompt),
                 types.Part.from_bytes(data=data, mime_type=mime),
             ],
             config=gemini_generate_config(
@@ -632,7 +1045,7 @@ def _call_gemini_vision(keyframe_path: str, model_name: str) -> dict[str, Any]:
     response = client.chat.completions.create(
         model=resolved_model,
         messages=[
-            {"role": "system", "content": GEMINI_LAYOUT_VISION_PROMPT},
+            {"role": "system", "content": prompt},
             {
                 "role": "user",
                 "content": [
@@ -650,12 +1063,23 @@ def _call_gemini_vision(keyframe_path: str, model_name: str) -> dict[str, Any]:
     return json.loads(text)
 
 
+def _call_gemini_vision(keyframe_path: str, model_name: str) -> dict[str, Any]:
+    return _call_vision_json(keyframe_path, model_name, GEMINI_LAYOUT_VISION_PROMPT)
+
+
+def _call_active_speaker_vision(frame_path: str, model_name: str) -> dict[str, Any]:
+    return _call_vision_json(frame_path, model_name, ACTIVE_SPEAKER_VISION_PROMPT)
+
+
 def infer_layout_instructions(
     scenes: list[Scene],
     *,
     gemini_vision_model: str,
     source_video: Path,
     tracking_dir: Path,
+    source_videos_by_scene: dict[str, Path] | None = None,
+    segmentation_provider: str = "off",
+    segmentation_model: str = "meta/sam-2-video",
 ) -> tuple[dict[str, LayoutInstruction], dict[str, dict[str, Any]]]:
     """Return ``(clip_id -> LayoutInstruction, clip_id -> raw_gemini_json)``."""
 
@@ -679,15 +1103,88 @@ def infer_layout_instructions(
                 image_size=image_size,
             )
             raw_data = dict(data)
+            speaker_follow_applied = False
+            tracking_source = (
+                source_videos_by_scene.get(sid, source_video)
+                if source_videos_by_scene
+                else source_video
+            )
+            if instr.layout == LayoutKind.SPLIT_TWO_PERSONS and segmentation_provider == "replicate":
+                try:
+                    focus_points, focus_detail = _infer_two_speaker_focus_tracking_with_segmentation(
+                        s,
+                        source_video=tracking_source,
+                        tracking_dir=tracking_dir,
+                        model_name=model_name,
+                        segmentation_model=segmentation_model,
+                        initial_data=data,
+                        initial_image_size=image_size,
+                    )
+                    if focus_detail:
+                        raw_data["speaker_follow_tracking"] = focus_detail
+                    if focus_points:
+                        instr = LayoutInstruction(
+                            clip_id=sid,
+                            layout=LayoutKind.SIT_CENTER,
+                            person_x_norm=focus_points[0].x_norm,
+                            person_tracking=focus_points,
+                        )
+                        speaker_follow_applied = True
+                except Exception as exc:
+                    raw_data["speaker_follow_tracking"] = {"error": str(exc)}
             if instr.layout in (LayoutKind.SIT_CENTER, LayoutKind.ZOOM_CALL_CENTER):
-                tracking_points, tracking_samples = _infer_person_tracking(
-                    s,
-                    source_video=source_video,
-                    tracking_dir=tracking_dir,
-                    model_name=model_name,
-                    initial_data=data,
-                    initial_image_size=image_size,
-                )
+                if speaker_follow_applied:
+                    raw_by_clip[sid] = raw_data
+                    out[sid] = instr
+                    continue
+                tracking_points: list[TimedCenterPoint] = []
+                tracking_samples: list[dict[str, Any]] = []
+                attempted_segmentation = False
+
+                if segmentation_provider == "replicate":
+                    attempted_segmentation = True
+                    try:
+                        sam_points, sam_detail = _infer_person_tracking_with_segmentation(
+                            s,
+                            source_video=tracking_source,
+                            segmentation_model=segmentation_model,
+                            initial_data=data,
+                            initial_image_size=image_size,
+                        )
+                        if sam_points:
+                            tracking_points = sam_points
+                        if sam_detail:
+                            raw_data["segmentation_tracking"] = sam_detail
+                    except Exception as exc:
+                        raw_data["segmentation_tracking"] = {"error": str(exc)}
+                if not tracking_points:
+                    tracking_points, tracking_samples = _infer_person_tracking(
+                        s,
+                        source_video=tracking_source,
+                        tracking_dir=tracking_dir,
+                        model_name=model_name,
+                        initial_data=data,
+                        initial_image_size=image_size,
+                    )
+                    if (
+                        segmentation_provider == "replicate"
+                        and _tracking_is_unstable(tracking_points)
+                        and not attempted_segmentation
+                    ):
+                        try:
+                            sam_points, sam_detail = _infer_person_tracking_with_segmentation(
+                                s,
+                                source_video=tracking_source,
+                                segmentation_model=segmentation_model,
+                                initial_data=data,
+                                initial_image_size=image_size,
+                            )
+                            if sam_points:
+                                tracking_points = sam_points
+                            if sam_detail:
+                                raw_data["segmentation_tracking"] = sam_detail
+                        except Exception as exc:
+                            raw_data.setdefault("segmentation_tracking", {"error": str(exc)})
                 if tracking_points:
                     instr = instr.model_copy(update={"person_tracking": tracking_points})
                 if tracking_samples:
@@ -715,6 +1212,7 @@ def run_layout_vision_stage(
     scenes: list[Scene],
     *,
     source_video: Path,
+    source_videos_by_scene: dict[str, Path] | None = None,
     transcript_fp: str,
     clips_path: Path,
     config: PipelineConfig,
@@ -725,7 +1223,14 @@ def run_layout_vision_stage(
 
     if (
         not config.force_layout_vision
-        and layout_cache_valid(work_dir, transcript_fp=transcript_fp, clips_fp=clips_fp, vision_model=vm)
+        and layout_cache_valid(
+            work_dir,
+            transcript_fp=transcript_fp,
+            clips_fp=clips_fp,
+            vision_model=vm,
+            segmentation_provider=config.segmentation_provider,
+            segmentation_model=config.segmentation_model,
+        )
     ):
         cached = load_layout_cache(work_dir)
         if cached:
@@ -741,6 +1246,9 @@ def run_layout_vision_stage(
         gemini_vision_model=vm,
         source_video=source_video,
         tracking_dir=work_dir / "layout_tracking",
+        source_videos_by_scene=source_videos_by_scene,
+        segmentation_provider=config.segmentation_provider,
+        segmentation_model=config.segmentation_model,
     )
 
     payload: dict[str, dict[str, Any]] = {}
@@ -755,5 +1263,7 @@ def run_layout_vision_stage(
         clips_fp=clips_fp,
         vision_model=vm,
         clips_payload=payload,
+        segmentation_provider=config.segmentation_provider,
+        segmentation_model=config.segmentation_model,
     )
     return instructions
