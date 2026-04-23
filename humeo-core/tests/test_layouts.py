@@ -186,7 +186,7 @@ def test_split_seam_is_midpoint_between_bboxes():
 
 
 def test_split_uses_bbox_y_for_tight_band_fill():
-    """bbox y1/y2 constrains vertical crop so the chart fills its band."""
+    """Chart bboxes anchor the crop, with a little extra height for edge safety."""
     instr = LayoutInstruction(
         clip_id="c",
         layout=LayoutKind.SPLIT_CHART_PERSON,
@@ -194,8 +194,20 @@ def test_split_uses_bbox_y_for_tight_band_fill():
         split_person_region=BoundingBox(x1=0.55, y1=0.0, x2=1.0, y2=1.0),
     )
     fg = plan_layout(instr, out_w=1080, out_h=1920, src_w=1920, src_h=1080).filtergraph
-    # Chart bbox y: 0.1..0.7 -> y=108 -> even=108, ch=0.6*1080=648.
-    assert "crop=1008:648:0:108" in fg
+    # Chart bbox y: 0.1..0.7 -> y=108, ch=648, then a modest 12% pad per side.
+    assert "crop=1008:804:0:30" in fg
+
+
+def test_split_chart_person_adds_vertical_pad_to_reduce_chart_side_crop():
+    instr = LayoutInstruction(
+        clip_id="c",
+        layout=LayoutKind.SPLIT_CHART_PERSON,
+        split_chart_region=BoundingBox(x1=0.02, y1=0.03, x2=0.58, y2=0.7),
+        split_person_region=BoundingBox(x1=0.585, y1=0.0, x2=0.995, y2=0.62),
+        top_band_ratio=0.436,
+    )
+    fg = plan_layout(instr, out_w=1080, out_h=1920, src_w=640, src_h=360).filtergraph
+    assert "[src1]crop=372:280:0:0" in fg
 
 
 def test_split_minimum_strip_width_enforced():

@@ -194,6 +194,7 @@ def _tracked_crop_x_expr(
 # Minimum source-strip width for a split, as a fraction of source width.
 # Prevents a chart/person bbox that hugs one edge from starving the other.
 _MIN_SPLIT_STRIP_FRAC = 0.2
+_CHART_STRIP_VERTICAL_PAD_FRAC = 0.12
 
 
 @dataclass(frozen=True)
@@ -246,6 +247,27 @@ def _bbox_strip(
         ch = _even(src_h)
 
     return _SplitStrip(cw=cw, ch=ch, x=x, y=y)
+
+
+def _chart_strip_with_vertical_pad(
+    strip: _SplitStrip,
+    *,
+    src_h: int,
+    pad_frac: float = _CHART_STRIP_VERTICAL_PAD_FRAC,
+) -> _SplitStrip:
+    """Relax chart crops vertically so cover-scaling trims fewer chart edges."""
+
+    pad = _even(max(0, int(round(strip.ch * max(0.0, pad_frac)))))
+    if pad <= 0:
+        return strip
+
+    top = max(0, strip.y - pad)
+    bottom = min(src_h, strip.y + strip.ch + pad)
+    ch = _even(max(2, bottom - top))
+    if ch <= strip.ch:
+        return strip
+    y = _even(max(0, min(src_h - ch, top)))
+    return _SplitStrip(cw=strip.cw, ch=ch, x=strip.x, y=y)
 
 
 def _compute_seam(
@@ -424,6 +446,8 @@ def plan_split_chart_person(
     chart_strip = _bbox_strip(
         chart_box, src_w=src_w, src_h=src_h, x_start=chart_start, x_end=seam
     )
+    if chart_box is not None:
+        chart_strip = _chart_strip_with_vertical_pad(chart_strip, src_h=src_h)
     person_strip = _bbox_strip(
         person_box, src_w=src_w, src_h=src_h, x_start=seam, x_end=src_w
     )
@@ -530,9 +554,13 @@ def plan_split_two_charts(
     left_strip = _bbox_strip(
         left_box, src_w=src_w, src_h=src_h, x_start=0, x_end=seam
     )
+    if left_box is not None:
+        left_strip = _chart_strip_with_vertical_pad(left_strip, src_h=src_h)
     right_strip = _bbox_strip(
         right_box, src_w=src_w, src_h=src_h, x_start=seam, x_end=src_w
     )
+    if right_box is not None:
+        right_strip = _chart_strip_with_vertical_pad(right_strip, src_h=src_h)
     fg = _stack_filtergraph(
         top_strip=left_strip,
         bot_strip=right_strip,

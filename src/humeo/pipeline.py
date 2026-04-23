@@ -6,7 +6,7 @@ import logging
 from pathlib import Path
 
 from humeo_core.primitives.ingest import extract_keyframes
-from humeo_core.schemas import LayoutInstruction, LayoutKind, RatingFeedback, Scene
+from humeo_core.schemas import LayoutInstruction, LayoutKind, RatingFeedback, RenderTheme, Scene
 
 from humeo import interactive, session_state
 from humeo.clip_assembly import apply_render_spans, assemble_clip, write_clip_plan
@@ -39,6 +39,9 @@ from humeo.video_cache import (
 logger = logging.getLogger(__name__)
 
 _WEAK_HOOK_START_WORDS = {"yeah", "so", "well", "right", "okay", "ok", "look", "listen"}
+_NATIVE_HIGHLIGHT_CHART_DOMINANCE_Y2 = 0.68
+_NATIVE_HIGHLIGHT_MIN_PERSON_WIDTH = 0.42
+_NATIVE_HIGHLIGHT_MAX_TOP_ANCHORED_PERSON_Y1 = 0.12
 
 
 def _rerun_config(config: PipelineConfig, steering_notes: list[str]) -> PipelineConfig:
@@ -146,6 +149,36 @@ def _filter_weak_hook_clips(clips: list, transcript: dict, *, min_kept: int) -> 
     if dropped:
         logger.info("Dropped %d weak-hook clip(s): %s", len(dropped), ", ".join(dropped))
     return kept
+
+
+def _normalize_layout_for_render(instruction: LayoutInstruction, *, render_theme: RenderTheme) -> LayoutInstruction:
+    if render_theme != RenderTheme.NATIVE_HIGHLIGHT:
+        return instruction
+    if instruction.layout != LayoutKind.SPLIT_CHART_PERSON:
+        return instruction
+    chart = instruction.split_chart_region
+    person = instruction.split_person_region
+    if chart is None or person is None:
+        return instruction
+    chart_dominates = chart.y2 >= _NATIVE_HIGHLIGHT_CHART_DOMINANCE_Y2
+    person_too_small = person.width <= _NATIVE_HIGHLIGHT_MIN_PERSON_WIDTH
+    # Keep Bryan's newer head-and-shoulders presenter crops in split mode even
+    # when the speaker strip is narrow; the older fallback-to-center rule was
+    # written for lower-anchored full-body crops that rendered badly here.
+    person_is_top_anchored = person.y1 <= _NATIVE_HIGHLIGHT_MAX_TOP_ANCHORED_PERSON_Y1
+    if not (chart_dominates and person_too_small and not person_is_top_anchored):
+        return instruction
+    return instruction.model_copy(
+        update={
+            "layout": LayoutKind.SIT_CENTER,
+            "split_chart_region": None,
+            "split_person_region": None,
+            "split_second_chart_region": None,
+            "split_second_person_region": None,
+            "chart_x_norm": 0.0,
+            "top_band_ratio": 0.5,
+        }
+    )
 
 
 def run_pipeline(config: PipelineConfig) -> list[Path]:
@@ -409,6 +442,7 @@ def run_pipeline(config: PipelineConfig) -> list[Path]:
         if instr is None:
             hint = clip.layout_hint or LayoutKind.SIT_CENTER
             instr = LayoutInstruction(clip_id=clip.clip_id, layout=hint)
+        instr = _normalize_layout_for_render(instr, render_theme=config.render_theme)
         clip.layout = instr.layout
         rclip = clip_for_render(clip)
         # ASS (not SRT) so the caption file's PlayResY matches the output

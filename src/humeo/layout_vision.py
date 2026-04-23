@@ -43,7 +43,7 @@ from humeo.gemini_generate import gemini_generate_config
 
 logger = logging.getLogger(__name__)
 
-LAYOUT_VISION_CACHE_VERSION = 5
+LAYOUT_VISION_CACHE_VERSION = 6
 LAYOUT_VISION_META = "layout_vision.meta.json"
 LAYOUT_VISION_JSON = "layout_vision.json"
 TRACKING_SAMPLE_FRACTIONS = tuple(i / 10.0 for i in range(1, 10))
@@ -53,6 +53,12 @@ TRACKING_OUTLIER_NEIGHBOR_MAX_NORM = 0.10
 TRACKING_DEADBAND_NORM = 0.025
 TRACKING_MIN_USABLE_POINTS = 5
 TRACKING_UNSTABLE_JUMP_NORM = 0.18
+_MIN_SPLIT_STRIP_FRAC = 0.2
+_SPLIT_TOP_RATIO_MIN = 0.32
+_SPLIT_TOP_RATIO_MAX = 0.48
+_SPLIT_FACE_REGION_MIN_HEIGHT = 0.62
+_SPLIT_FACE_REGION_HEIGHT_MULT = 2.0
+_SPLIT_FACE_TOP_PAD_MULT = 0.30
 REPLICATE_SAM2_VIDEO_PINNED = (
     "meta/sam-2-video:2d7219877ca847f463d749d9b224e62f7b078fe035d60a74b58889b455d5cbad"
 )
@@ -415,8 +421,10 @@ def _instruction_from_gemini_json(
         updates["person_x_norm"] = face_center
 
     if kind == LayoutKind.SPLIT_CHART_PERSON and pb is not None and cb is not None:
+        render_person = _render_safe_split_person_region(pb, fb)
         updates["split_chart_region"] = cb
-        updates["split_person_region"] = pb
+        updates["split_person_region"] = render_person
+        updates["top_band_ratio"] = _split_chart_person_top_band_ratio(cb, render_person)
     elif kind == LayoutKind.SPLIT_TWO_PERSONS and pb is not None and p2 is not None:
         # Order by x-center so ``split_person_region`` is always the LEFT speaker.
         left, right = sorted((pb, p2), key=lambda b: b.center_x)
@@ -464,6 +472,49 @@ def _face_center_x(
         if not (person.x1 - 0.02 <= face.center_x <= person.x2 + 0.02):
             return None
     return float(face.center_x)
+
+
+def _render_safe_split_person_region(
+    person: BoundingBox,
+    face: BoundingBox | None,
+) -> BoundingBox:
+    """Bias split speaker crops toward head-and-shoulders instead of torso."""
+
+    if face is None or _face_center_x(face, person) is None:
+        return person
+
+    face_h = max(0.0, face.y2 - face.y1)
+    if face_h <= 0.0:
+        return person
+
+    target_h = min(
+        person.y2 - person.y1,
+        max(_SPLIT_FACE_REGION_MIN_HEIGHT, face_h * _SPLIT_FACE_REGION_HEIGHT_MULT),
+    )
+    top = max(0.0, min(person.y1, face.y1 - face_h * _SPLIT_FACE_TOP_PAD_MULT))
+    bottom = min(person.y2, top + target_h)
+    if bottom - top < target_h:
+        top = max(0.0, bottom - target_h)
+    if bottom - top <= face_h:
+        return person
+
+    return person.model_copy(update={"y1": top, "y2": bottom})
+
+
+def _split_chart_person_top_band_ratio(
+    chart: BoundingBox,
+    person: BoundingBox,
+) -> float:
+    """Allocate top/bottom band height from the chart/person aspect needs."""
+
+    seam = (chart.x2 + person.x1) / 2.0
+    seam = max(_MIN_SPLIT_STRIP_FRAC, min(1.0 - _MIN_SPLIT_STRIP_FRAC, seam))
+    chart_w = max(1e-6, seam)
+    person_w = max(1e-6, 1.0 - seam)
+    chart_need = max(1e-6, (chart.y2 - chart.y1) / chart_w)
+    person_need = max(1e-6, (person.y2 - person.y1) / person_w)
+    ratio = chart_need / (chart_need + person_need)
+    return round(max(_SPLIT_TOP_RATIO_MIN, min(_SPLIT_TOP_RATIO_MAX, ratio)), 3)
 
 
 def _person_center_x_from_data(
@@ -1199,6 +1250,25 @@ def infer_layout_instructions(
     return out, raw_by_clip
 
 
+def _apply_layout_hint_fallbacks(
+    instructions: dict[str, LayoutInstruction],
+    raw_by_clip: dict[str, dict[str, Any]],
+    layout_hints_by_clip: dict[str, LayoutKind],
+) -> None:
+    for clip_id, hint in layout_hints_by_clip.items():
+        instr = instructions.get(clip_id)
+        raw = raw_by_clip.get(clip_id)
+        if instr is None or raw is None or "error" not in raw:
+            continue
+        if instr.layout != LayoutKind.SIT_CENTER:
+            continue
+        instructions[clip_id] = instr.model_copy(update={"layout": hint})
+        updated_raw = dict(raw)
+        updated_raw["layout"] = hint.value
+        updated_raw["layout_hint_fallback"] = hint.value
+        raw_by_clip[clip_id] = updated_raw
+
+
 def resolved_vision_model(config: PipelineConfig) -> str:
     if config.gemini_vision_model:
         return config.gemini_vision_model.strip()
@@ -1218,8 +1288,15 @@ def run_layout_vision_stage(
     config: PipelineConfig,
 ) -> dict[str, LayoutInstruction]:
     """Load cache or call Gemini vision for each keyframe; persist JSON artifacts."""
+    from humeo.clip_selector import load_clips
+
     clips_fp = _clips_fingerprint(clips_path)
     vm = resolved_vision_model(config)
+    layout_hints_by_clip = {
+        clip.clip_id: hint
+        for clip in load_clips(clips_path)
+        if (hint := (clip.layout_hint or clip.layout)) is not None
+    }
 
     if (
         not config.force_layout_vision
@@ -1250,6 +1327,7 @@ def run_layout_vision_stage(
         segmentation_provider=config.segmentation_provider,
         segmentation_model=config.segmentation_model,
     )
+    _apply_layout_hint_fallbacks(instructions, raw_by_clip, layout_hints_by_clip)
 
     payload: dict[str, dict[str, Any]] = {}
     for sid, instr in instructions.items():

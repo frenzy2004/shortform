@@ -1,11 +1,13 @@
 """layout_vision parsing (no API calls)."""
 
+import json
 import math
 from pathlib import Path
 from unittest.mock import MagicMock, patch
 
 import pytest
 
+from humeo.config import PipelineConfig
 from humeo.layout_vision import (
     _call_gemini_vision,
     _face_center_x,
@@ -16,8 +18,10 @@ from humeo.layout_vision import (
     _tracking_is_unstable,
     _tracking_points_from_centers,
     infer_layout_instructions,
+    run_layout_vision_stage,
 )
-from humeo_core.schemas import BoundingBox, LayoutKind, Scene, TimedCenterPoint
+from humeo_core.primitives.layouts import plan_layout
+from humeo_core.schemas import BoundingBox, Clip, ClipPlan, LayoutInstruction, LayoutKind, Scene, TimedCenterPoint
 
 
 def test_instruction_from_gemini_json_split_with_bboxes():
@@ -78,9 +82,43 @@ def test_instruction_from_gemini_json_split_with_mixed_bbox_units():
     assert instr.layout == LayoutKind.SPLIT_CHART_PERSON
     assert instr.split_chart_region is not None
     assert instr.split_person_region is not None
-    assert math.isclose(instr.split_person_region.y1, 0.065, abs_tol=1e-6)
+    assert instr.split_person_region.y1 <= 0.001
+    assert math.isclose(instr.split_person_region.y2, 0.62, abs_tol=1e-6)
     assert math.isclose(instr.split_chart_region.y1, 0.03, abs_tol=1e-6)
     assert math.isclose(instr.person_x_norm, 0.785, abs_tol=1e-6)
+
+
+def test_split_chart_person_face_bbox_emits_render_friendly_regions():
+    data = {
+        "layout": "split_chart_person",
+        "person_bbox": {"x1": 0.59, "y1": 0.072, "x2": 1.00, "y2": 1.00},
+        "face_bbox": {"x1": 0.72, "y1": 0.082, "x2": 0.86, "y2": 0.48},
+        "chart_bbox": {"x1": 0.021, "y1": 0.028, "x2": 0.584, "y2": 0.722},
+        "reason": "chart left, speaker right",
+    }
+    instr = _instruction_from_gemini_json("001", data)
+
+    assert instr.layout == LayoutKind.SPLIT_CHART_PERSON
+    assert instr.split_person_region is not None
+    assert instr.split_person_region.y1 <= 0.001
+    assert instr.split_person_region.y2 < 0.85
+    assert instr.top_band_ratio < 0.45
+
+
+def test_split_chart_person_render_friendly_regions_reduce_crop_pressure():
+    data = {
+        "layout": "split_chart_person",
+        "person_bbox": {"x1": 0.59, "y1": 0.072, "x2": 1.00, "y2": 1.00},
+        "face_bbox": {"x1": 0.72, "y1": 0.082, "x2": 0.86, "y2": 0.48},
+        "chart_bbox": {"x1": 0.021, "y1": 0.028, "x2": 0.584, "y2": 0.722},
+        "reason": "chart left, speaker right",
+    }
+    instr = _instruction_from_gemini_json("001", data)
+    fg = plan_layout(instr, out_w=1080, out_h=1920, src_w=1920, src_h=1080).filtergraph
+
+    assert "scale=1080:730" in fg
+    assert "scale=1080:1190" in fg
+    assert "crop=794:860:1126:0" in fg
 
 
 def test_instruction_from_gemini_json_sit_center():
@@ -548,3 +586,57 @@ def test_segmentation_tracking_retries_with_pinned_sam_version_on_404(
     assert first_input["click_coordinates"] == "[210,200],[210,200]"
     assert first_input["click_labels"] == "1,1"
     assert first_input["click_object_ids"] == "speaker,speaker"
+
+def test_run_layout_vision_stage_uses_layout_hint_when_vision_falls_back(tmp_path, monkeypatch):
+    work_dir = tmp_path / "work"
+    output_dir = tmp_path / "out"
+    source_video = tmp_path / "source.mp4"
+    source_video.write_bytes(b"fake")
+    frame = tmp_path / "frame.jpg"
+    frame.write_bytes(b"\xff\xd8\xff\xe0fakejpeg")
+
+    clip = Clip(
+        clip_id="001",
+        topic="Chart clip",
+        start_time_sec=0.0,
+        end_time_sec=10.0,
+        transcript="",
+        layout_hint=LayoutKind.SPLIT_CHART_PERSON,
+    )
+    clips_path = tmp_path / "clips.json"
+    clips_path.write_text(
+        ClipPlan(source_path=str(source_video), clips=[clip]).model_dump_json(indent=2),
+        encoding="utf-8",
+    )
+    scene = Scene(scene_id="001", start_time=0.0, end_time=10.0, keyframe_path=str(frame))
+
+    def fake_infer(*args, **kwargs):
+        return (
+            {"001": LayoutInstruction(clip_id="001", layout=LayoutKind.SIT_CENTER)},
+            {"001": {"error": "boom", "layout": "sit_center"}},
+        )
+
+    monkeypatch.setattr("humeo.layout_vision.infer_layout_instructions", fake_infer)
+
+    config = PipelineConfig(
+        source=str(source_video),
+        output_dir=output_dir,
+        work_dir=work_dir,
+        gemini_vision_model="gemini-test",
+    )
+    instructions = run_layout_vision_stage(
+        work_dir,
+        [scene],
+        source_video=source_video,
+        transcript_fp="tx",
+        clips_path=clips_path,
+        config=config,
+    )
+
+    assert instructions["001"].layout == LayoutKind.SPLIT_CHART_PERSON
+
+    payload = json.loads((work_dir / "layout_vision.json").read_text(encoding="utf-8"))
+    clip_payload = payload["clips"]["001"]
+    assert clip_payload["instruction"]["layout"] == "split_chart_person"
+    assert clip_payload["raw"]["layout"] == "split_chart_person"
+    assert clip_payload["raw"]["layout_hint_fallback"] == "split_chart_person"
