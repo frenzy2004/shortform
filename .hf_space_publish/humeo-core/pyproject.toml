@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "humeo-core"
+version = "0.1.0"
+description = "Humeo core library: strict schemas, deterministic ffmpeg 9:16 layouts, optional MCP server (humeo-core / humeo-mcp entrypoints)."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Humeo" }]
+keywords = ["mcp", "video", "shorts", "ffmpeg", "editing", "humeo", "hive"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "mcp[cli]>=1.2.0",
+    "pydantic>=2.0",
+    "scenedetect>=0.6",
+]
+
+[project.optional-dependencies]
+transcribe = ["faster-whisper>=1.0"]
+download = ["yt-dlp>=2024.0"]
+face = ["mediapipe>=0.10", "opencv-python>=4.8"]
+vision = ["Pillow>=10.0"]
+dev = ["pytest>=7", "pytest-asyncio>=0.23", "Pillow>=10.0"]
+
+[project.scripts]
+humeo-core = "humeo_core.server:main"
+# Backward-compatible entry point (same module); existing MCP configs may still call `humeo-mcp`.
+humeo-mcp = "humeo_core.server:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra -q"

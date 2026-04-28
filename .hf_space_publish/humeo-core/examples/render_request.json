@@ -1,0 +1,23 @@
+{
+  "source_path": "/absolute/path/to/long.mp4",
+  "clip": {
+    "clip_id": "001",
+    "topic": "Prediction Market Explosion",
+    "start_time_sec": 289.0,
+    "end_time_sec": 331.5,
+    "viral_hook": "Prediction markets could explode to $5 trillion.",
+    "virality_score": 0.94,
+    "transcript": "Full text for subtitle generation...",
+    "suggested_overlay_title": "$5T Prediction Markets"
+  },
+  "layout": {
+    "clip_id": "001",
+    "layout": "split_chart_person",
+    "zoom": 1.0,
+    "person_x_norm": 0.83,
+    "chart_x_norm": 0.0
+  },
+  "output_path": "/absolute/path/to/out/clip_001.mp4",
+  "title_text": "$5T Prediction Markets",
+  "mode": "dry_run"
+}

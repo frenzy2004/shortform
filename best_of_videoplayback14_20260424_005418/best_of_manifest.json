@@ -1,0 +1,24 @@
+{
+  "clips": [
+    {
+      "source": "videoplayback_14",
+      "rank": 1,
+      "score": 0.76,
+      "output_path": "C:\\Users\\HP\\new shortform\\best_of_videoplayback14_20260424_005418\\videoplayback_14__pick01__short_001.mp4",
+      "original_path": "C:\\Users\\HP\\new shortform\\.tmp_batch_review_videoplayback14_20260424_005418\\videoplayback_14\\short_001.mp4",
+      "clip_id": "001",
+      "title": "AI Is Bigger Than the Railroad",
+      "topic": "The AI Revolution Is Bigger Than The Railroads"
+    },
+    {
+      "source": "videoplayback_14",
+      "rank": 2,
+      "score": 0.7125,
+      "output_path": "C:\\Users\\HP\\new shortform\\best_of_videoplayback14_20260424_005418\\videoplayback_14__pick02__short_002.mp4",
+      "original_path": "C:\\Users\\HP\\new shortform\\.tmp_batch_review_videoplayback14_20260424_005418\\videoplayback_14\\short_002.mp4",
+      "clip_id": "002",
+      "title": "Jeff Bezos Spelled \"Profit\" During The",
+      "topic": "Jeff Bezos's \"Prophet\" Moment in the Dot-Com Bubble"
+    }
+  ]
+}

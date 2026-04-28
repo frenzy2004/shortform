@@ -1,0 +1,12 @@
+.git
+.venv
+__pycache__
+.pytest_cache
+.humeo_*
+.tmp_review_frames
+.tmp_review_frames_ticketc
+output
+output*
+*.log
+*.zip
+*.pyc

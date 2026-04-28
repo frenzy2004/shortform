@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "humeo"
+version = "0.1.0"
+description = "Automated podcast-to-shorts pipeline"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "yt-dlp>=2024.0",
+    "openai>=1.0",
+    "google-genai>=1.0",
+    "jinja2>=3.1",
+    "numpy>=1.24",
+    "python-dotenv>=1.0",
+    "tqdm>=4.60",
+    "humeo-core",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest-asyncio>=0.23",
+    "ruff",
+    "pytest",
+]
+whisper = [
+    "whisperx @ git+https://github.com/m-bain/whisperX.git",
+]
+
+[tool.uv.sources]
+humeo-core = { path = "humeo-core", editable = true }
+
+[project.scripts]
+humeo = "humeo.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+humeo = ["prompts/*.jinja2"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests", "humeo-core/tests"]
+addopts = "-ra -q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
