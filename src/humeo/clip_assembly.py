@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 import logging
+import re
 import shutil
 import subprocess
 from dataclasses import dataclass
@@ -18,9 +19,24 @@ logger = logging.getLogger(__name__)
 _SPAN_BREAK_MIN_GAP_SEC = 0.55
 _SPAN_EDGE_PAD_SEC = 0.05
 _SPAN_MIN_DURATION_SEC = 0.30
+_FILLER_SPAN_MIN_DURATION_SEC = 0.12
 _SEGMENT_BREAK_MIN_GAP_SEC = 0.65
 _SEGMENT_MAX_DURATION_SEC = 6.0
 _SEGMENT_MAX_WORDS = 18
+_FILLER_CUT_PAD_SEC = 0.02
+_FILLER_WORD_RE = re.compile(r"^(u+h+|u+m+|e+h+|e+r+|a+h+|h+m+|m+m+)$", re.IGNORECASE)
+_FILLER_WORDS = {
+    "ah",
+    "eh",
+    "er",
+    "hmm",
+    "mm",
+    "uh",
+    "uhh",
+    "uhm",
+    "um",
+    "umm",
+}
 
 
 @dataclass(frozen=True)
@@ -49,6 +65,17 @@ def _iter_words(transcript: dict) -> list[dict]:
     return words
 
 
+def _clean_word_token(text: str) -> str:
+    return re.sub(r"(^[^A-Za-z]+|[^A-Za-z]+$)", "", text or "").lower()
+
+
+def _looks_like_filler_word(text: str) -> bool:
+    token = _clean_word_token(text)
+    if not token:
+        return False
+    return token in _FILLER_WORDS or bool(_FILLER_WORD_RE.fullmatch(token))
+
+
 def derive_render_spans(clip: Clip, transcript: dict) -> list[ClipRenderSpan]:
     if clip.render_spans:
         return list(clip.render_spans)
@@ -63,18 +90,37 @@ def derive_render_spans(clip: Clip, transcript: dict) -> list[ClipRenderSpan]:
         return [ClipRenderSpan(start_time_sec=start_sec, end_time_sec=end_sec)]
 
     spans: list[ClipRenderSpan] = []
-    span_start = max(start_sec, float(words[0]["start"]) - _SPAN_EDGE_PAD_SEC)
-    prev_end = float(words[0]["end"])
+    span_start: float | None = None
+    prev_end: float | None = None
+    resume_after = start_sec
 
-    for word in words[1:]:
+    for word in words:
         word_start = float(word["start"])
         word_end = float(word["end"])
-        if word_start - prev_end >= _SPAN_BREAK_MIN_GAP_SEC:
+        if _looks_like_filler_word(str(word["word"])):
+            if span_start is not None and prev_end is not None:
+                span_end = min(end_sec, max(span_start, word_start - _FILLER_CUT_PAD_SEC))
+                if span_end - span_start >= _FILLER_SPAN_MIN_DURATION_SEC:
+                    spans.append(ClipRenderSpan(start_time_sec=span_start, end_time_sec=span_end))
+            span_start = None
+            prev_end = None
+            resume_after = min(end_sec, word_end + _FILLER_CUT_PAD_SEC)
+            continue
+        if span_start is None:
+            span_start = max(start_sec, word_start - _SPAN_EDGE_PAD_SEC, resume_after)
+            prev_end = word_end
+            continue
+        if prev_end is not None and word_start - prev_end >= _SPAN_BREAK_MIN_GAP_SEC:
             span_end = min(end_sec, prev_end + _SPAN_EDGE_PAD_SEC)
             if span_end - span_start >= _SPAN_MIN_DURATION_SEC:
                 spans.append(ClipRenderSpan(start_time_sec=span_start, end_time_sec=span_end))
             span_start = max(start_sec, word_start - _SPAN_EDGE_PAD_SEC)
         prev_end = word_end
+
+    if span_start is None or prev_end is None:
+        if not spans:
+            spans.append(ClipRenderSpan(start_time_sec=start_sec, end_time_sec=end_sec))
+        return spans
 
     final_end = min(end_sec, prev_end + _SPAN_EDGE_PAD_SEC)
     if final_end - span_start >= _SPAN_MIN_DURATION_SEC:
@@ -132,6 +178,8 @@ def build_assembled_transcript(clip: Clip, transcript: dict) -> dict:
     for span in derive_render_spans(clip, transcript):
         for word in words:
             if word["end"] <= span.start_time_sec or word["start"] >= span.end_time_sec:
+                continue
+            if _looks_like_filler_word(str(word["word"])):
                 continue
             local_words.append(
                 {

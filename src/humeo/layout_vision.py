@@ -43,7 +43,7 @@ from humeo.gemini_generate import gemini_generate_config
 
 logger = logging.getLogger(__name__)
 
-LAYOUT_VISION_CACHE_VERSION = 6
+LAYOUT_VISION_CACHE_VERSION = 8
 LAYOUT_VISION_META = "layout_vision.meta.json"
 LAYOUT_VISION_JSON = "layout_vision.json"
 TRACKING_SAMPLE_FRACTIONS = tuple(i / 10.0 for i in range(1, 10))
@@ -53,15 +53,21 @@ TRACKING_OUTLIER_NEIGHBOR_MAX_NORM = 0.10
 TRACKING_DEADBAND_NORM = 0.025
 TRACKING_MIN_USABLE_POINTS = 5
 TRACKING_UNSTABLE_JUMP_NORM = 0.18
+FOCUS_SWITCH_LEAD_SEC = 0.35
+SPEAKER_FOLLOW_MAX_INTERVAL_SEC = 2.0
+TWO_SPEAKER_ACTIVE_ZOOM = 1.28
+TWO_SPEAKER_BOTH_ZOOM = 1.0
+TWO_SPEAKER_WIDE_ACTIVE_ZOOM = 1.12
+TWO_SPEAKER_BOTH_FIT_MARGIN = 0.88
+REPLICATE_SAM2_VIDEO_PINNED = (
+    "meta/sam-2-video:2d7219877ca847f463d749d9b224e62f7b078fe035d60a74b58889b455d5cbad"
+)
 _MIN_SPLIT_STRIP_FRAC = 0.2
 _SPLIT_TOP_RATIO_MIN = 0.32
 _SPLIT_TOP_RATIO_MAX = 0.48
 _SPLIT_FACE_REGION_MIN_HEIGHT = 0.62
 _SPLIT_FACE_REGION_HEIGHT_MULT = 2.0
 _SPLIT_FACE_TOP_PAD_MULT = 0.30
-REPLICATE_SAM2_VIDEO_PINNED = (
-    "meta/sam-2-video:2d7219877ca847f463d749d9b224e62f7b078fe035d60a74b58889b455d5cbad"
-)
 
 GEMINI_LAYOUT_VISION_PROMPT = """You are framing a vertical short (9:16) from a 16:9 video frame.
 
@@ -651,10 +657,79 @@ def _speaker_seed_boxes(
     return ordered[0], ordered[1]
 
 
+def _nearest_seed_side(
+    center_x: float,
+    *,
+    left_seed: BoundingBox,
+    right_seed: BoundingBox,
+) -> str:
+    left_delta = abs(center_x - left_seed.center_x)
+    right_delta = abs(center_x - right_seed.center_x)
+    return "left" if left_delta <= right_delta else "right"
+
+
+def _focus_frame_visible_speaker_centers(
+    data: dict[str, Any] | None,
+    image_size: tuple[int, int] | None,
+    *,
+    left_seed: BoundingBox,
+    right_seed: BoundingBox,
+) -> tuple[dict[str, float], bool]:
+    if not data:
+        return {}, False
+
+    first_person = _parse_bbox(data.get("person_bbox"), image_size=image_size)
+    first_face = _parse_bbox(data.get("face_bbox"), image_size=image_size)
+    second_person = _parse_bbox(data.get("second_person_bbox"), image_size=image_size)
+    second_face = _parse_bbox(data.get("second_face_bbox"), image_size=image_size)
+
+    visible_boxes = [box for box in (first_face or first_person, second_face or second_person) if box]
+    if not visible_boxes:
+        return {}, False
+
+    if len(visible_boxes) >= 2:
+        ordered = sorted(visible_boxes, key=lambda box: box.center_x)
+        return {"left": ordered[0].center_x, "right": ordered[1].center_x}, True
+
+    only_box = visible_boxes[0]
+    side = _nearest_seed_side(only_box.center_x, left_seed=left_seed, right_seed=right_seed)
+    return {side: only_box.center_x}, False
+
+
+def _two_speaker_full_width_span_norm(image_size: tuple[int, int] | None) -> float:
+    if image_size is None:
+        return 1.0
+    width, height = image_size
+    if width <= 0 or height <= 0:
+        return 1.0
+    target_aspect = 9 / 16
+    if width / height >= target_aspect:
+        return min(1.0, (height * target_aspect) / width)
+    return 1.0
+
+
+def _can_fit_both_speakers(
+    left_x: float,
+    right_x: float,
+    *,
+    image_size: tuple[int, int] | None,
+) -> bool:
+    span = abs(right_x - left_x)
+    allowed = _two_speaker_full_width_span_norm(image_size) * TWO_SPEAKER_BOTH_FIT_MARGIN
+    return span <= allowed
+
+
 def _speaker_follow_sample_times(duration_sec: float) -> list[float]:
     seen: set[float] = set()
     out: list[float] = []
-    for t_sec in [0.0, *_tracking_sample_times(duration_sec), duration_sec]:
+    dense_times: list[float] = []
+    if duration_sec > 0:
+        steps = max(1, int(duration_sec / SPEAKER_FOLLOW_MAX_INTERVAL_SEC))
+        dense_times = [
+            min(duration_sec, idx * SPEAKER_FOLLOW_MAX_INTERVAL_SEC)
+            for idx in range(1, steps + 1)
+        ]
+    for t_sec in [0.0, *_tracking_sample_times(duration_sec), *dense_times, duration_sec]:
         key = round(max(0.0, min(duration_sec, t_sec)), 3)
         if key in seen:
             continue
@@ -668,27 +743,95 @@ def _resolve_speaker_focus_samples(
     *,
     default_side: str = "left",
 ) -> list[tuple[float, str]]:
-    resolved: list[list[float | str | None]] = []
-    prev_side: str | None = None
+    normalized: list[tuple[float, str | None]] = []
+    allowed = {"left", "right", "both"}
     for t_sec, side in samples:
-        normalized = side if side in ("left", "right") else None
-        if normalized is None and prev_side is not None:
-            normalized = prev_side
-        if normalized is not None:
-            prev_side = normalized
-        resolved.append([t_sec, normalized])
-
-    next_side: str | None = None
-    for idx in range(len(resolved) - 1, -1, -1):
-        if resolved[idx][1] is None:
-            resolved[idx][1] = next_side
-        else:
-            next_side = str(resolved[idx][1])
+        normalized.append((float(t_sec), side if side in allowed else None))
 
     out: list[tuple[float, str]] = []
-    for t_sec, side in resolved:
-        out.append((float(t_sec), str(side or default_side)))
+    for idx, (t_sec, side) in enumerate(normalized):
+        if side is not None:
+            out.append((t_sec, side))
+            continue
+
+        prev_side = out[-1][1] if out else None
+        next_side: str | None = None
+        for _, future_side in normalized[idx + 1 :]:
+            if future_side is not None:
+                next_side = future_side
+                break
+
+        resolved_side: str
+        if prev_side is not None and next_side is not None:
+            resolved_side = prev_side if prev_side == next_side else "both"
+        else:
+            resolved_side = prev_side or next_side or default_side
+        out.append((t_sec, resolved_side))
     return out
+
+
+def _tracking_points_from_focus_states(
+    duration_sec: float,
+    framings: list[tuple[float, float, float]],
+) -> list[TimedCenterPoint]:
+    deduped: list[tuple[float, float, float]] = []
+    for t_sec, x_norm, zoom in sorted(framings, key=lambda item: item[0]):
+        clamped_t = max(0.0, min(duration_sec, float(t_sec)))
+        clamped_x = max(0.0, min(1.0, float(x_norm)))
+        clamped_zoom = max(1.0, min(4.0, float(zoom)))
+        if deduped and abs(clamped_t - deduped[-1][0]) < 1e-6:
+            deduped[-1] = (clamped_t, clamped_x, clamped_zoom)
+        else:
+            deduped.append((clamped_t, clamped_x, clamped_zoom))
+
+    if len(deduped) < 2:
+        return []
+
+    if deduped[0][0] > 0.0:
+        deduped.insert(0, (0.0, deduped[0][1], deduped[0][2]))
+    else:
+        deduped[0] = (0.0, deduped[0][1], deduped[0][2])
+
+    if deduped[-1][0] < duration_sec:
+        deduped.append((duration_sec, deduped[-1][1], deduped[-1][2]))
+    else:
+        deduped[-1] = (duration_sec, deduped[-1][1], deduped[-1][2])
+
+    expanded: list[tuple[float, float, float]] = [deduped[0]]
+    for t_sec, x_norm, zoom in deduped[1:]:
+        prev_t, prev_x, prev_zoom = expanded[-1]
+        switch_changed = (
+            abs(x_norm - prev_x) > TRACKING_DEADBAND_NORM
+            or abs(zoom - prev_zoom) > 0.05
+        )
+        if switch_changed:
+            hold_t = max(prev_t, min(t_sec, t_sec - FOCUS_SWITCH_LEAD_SEC))
+            if hold_t - prev_t > 1e-6:
+                expanded.append((hold_t, prev_x, prev_zoom))
+        if abs(t_sec - expanded[-1][0]) < 1e-6:
+            expanded[-1] = (t_sec, x_norm, zoom)
+        else:
+            expanded.append((t_sec, x_norm, zoom))
+
+    return [
+        TimedCenterPoint(t_sec=t_sec, x_norm=x_norm, zoom=zoom)
+        for t_sec, x_norm, zoom in expanded
+    ]
+
+
+def _nearest_non_both_focus_side(
+    resolved_focus: list[tuple[float, str]],
+    start_idx: int,
+    *,
+    step: int,
+) -> str | None:
+    idx = start_idx
+    while 0 <= idx < len(resolved_focus):
+        side = resolved_focus[idx][1]
+        if side in ("left", "right"):
+            return side
+        idx += step
+    return None
 
 
 def _extract_frame_at_time(source_path: Path, time_sec: float, output_path: Path) -> Path:
@@ -940,21 +1083,44 @@ def _infer_two_speaker_focus_tracking_with_segmentation(
     for rel_time in _speaker_follow_sample_times(max(0.0, scene.duration)):
         abs_time = scene.start_time + rel_time
         frame_path = focus_dir / f"{scene.scene_id}_{int(round(rel_time * 1000)):06d}.jpg"
+        visible_centers: dict[str, float] = {}
+        both_visible = False
         try:
             _extract_frame_at_time(source_video, abs_time, frame_path)
+            frame_image_size = _keyframe_dimensions(str(frame_path))
+            layout_data: dict[str, Any] | None = None
+            layout_error: str | None = None
+            try:
+                layout_data = _call_gemini_vision(str(frame_path), model_name)
+                visible_centers, both_visible = _focus_frame_visible_speaker_centers(
+                    layout_data,
+                    frame_image_size,
+                    left_seed=left_seed,
+                    right_seed=right_seed,
+                )
+            except Exception as exc:
+                layout_error = str(exc)
+
             data = _call_active_speaker_vision(str(frame_path), model_name)
             speaker = str(data.get("speaker", "unclear")).strip().lower()
             if speaker not in ("left", "right", "both", "unclear"):
                 speaker = "unclear"
+            if speaker == "unclear" and len(visible_centers) == 1 and not both_visible:
+                speaker = next(iter(visible_centers))
             focus_choices.append((rel_time, speaker))
-            focus_samples.append(
-                {
-                    "time_sec": rel_time,
-                    "frame_path": str(frame_path),
-                    "speaker": speaker,
-                    "raw": data,
-                }
-            )
+            sample = {
+                "time_sec": rel_time,
+                "frame_path": str(frame_path),
+                "speaker": speaker,
+                "raw": data,
+                "visible_centers": visible_centers,
+                "both_visible": both_visible,
+            }
+            if layout_data is not None:
+                sample["layout_raw"] = layout_data
+            if layout_error:
+                sample["layout_error"] = layout_error
+            focus_samples.append(sample)
         except Exception as exc:
             focus_choices.append((rel_time, "unclear"))
             focus_samples.append(
@@ -962,23 +1128,67 @@ def _infer_two_speaker_focus_tracking_with_segmentation(
                     "time_sec": rel_time,
                     "frame_path": str(frame_path),
                     "speaker": "unclear",
+                    "visible_centers": visible_centers,
+                    "both_visible": both_visible,
                     "error": str(exc),
                 }
             )
 
     resolved_focus = _resolve_speaker_focus_samples(focus_choices, default_side="left")
-    centers: list[tuple[float, float]] = []
-    for rel_time, speaker in resolved_focus:
-        x_norm = (
-            _interpolate_tracking_x(left_points, rel_time)
-            if speaker == "left"
-            else _interpolate_tracking_x(right_points, rel_time)
+    framings: list[tuple[float, float, float]] = []
+    for idx, (rel_time, speaker) in enumerate(resolved_focus):
+        sample = focus_samples[idx] if idx < len(focus_samples) else {}
+        sample_visible_centers = sample.get("visible_centers", {})
+        frame_left_x = (
+            float(sample_visible_centers["left"])
+            if isinstance(sample_visible_centers, dict) and "left" in sample_visible_centers
+            else None
         )
-        if x_norm is None:
-            x_norm = left_seed.center_x if speaker == "left" else right_seed.center_x
-        centers.append((rel_time, x_norm))
+        frame_right_x = (
+            float(sample_visible_centers["right"])
+            if isinstance(sample_visible_centers, dict) and "right" in sample_visible_centers
+            else None
+        )
+        both_visible = bool(sample.get("both_visible"))
 
-    points = _tracking_points_from_centers(scene.duration, centers)
+        left_x = frame_left_x if frame_left_x is not None else _interpolate_tracking_x(left_points, rel_time)
+        right_x = (
+            frame_right_x if frame_right_x is not None else _interpolate_tracking_x(right_points, rel_time)
+        )
+        if left_x is None:
+            left_x = left_seed.center_x
+        if right_x is None:
+            right_x = right_seed.center_x
+
+        prev_side = _nearest_non_both_focus_side(resolved_focus, idx - 1, step=-1)
+        next_side = _nearest_non_both_focus_side(resolved_focus, idx + 1, step=1)
+        should_widen = False
+        if both_visible and _can_fit_both_speakers(left_x, right_x, image_size=initial_image_size):
+            if speaker == "both":
+                should_widen = True
+            elif (
+                prev_side is not None
+                and next_side is not None
+                and prev_side != next_side
+            ):
+                should_widen = True
+
+        if should_widen:
+            x_norm = (left_x + right_x) / 2.0
+            zoom = TWO_SPEAKER_BOTH_ZOOM
+        elif speaker == "left":
+            x_norm = left_x
+            zoom = TWO_SPEAKER_ACTIVE_ZOOM
+        elif speaker == "right":
+            x_norm = right_x
+            zoom = TWO_SPEAKER_ACTIVE_ZOOM
+        else:
+            fallback_side = prev_side or next_side or "left"
+            x_norm = left_x if fallback_side == "left" else right_x
+            zoom = TWO_SPEAKER_WIDE_ACTIVE_ZOOM
+        framings.append((rel_time, x_norm, zoom))
+
+    points = _tracking_points_from_focus_states(scene.duration, framings)
     detail = {
         "mode": "two_speaker_follow",
         "left_segmentation": left_detail,
@@ -986,6 +1196,10 @@ def _infer_two_speaker_focus_tracking_with_segmentation(
         "focus_samples": focus_samples,
         "resolved_focus": [
             {"time_sec": rel_time, "speaker": speaker} for rel_time, speaker in resolved_focus
+        ],
+        "framing_samples": [
+            {"time_sec": rel_time, "x_norm": x_norm, "zoom": zoom}
+            for rel_time, x_norm, zoom in framings
         ],
     }
     return points, detail
@@ -1177,6 +1391,7 @@ def infer_layout_instructions(
                         instr = LayoutInstruction(
                             clip_id=sid,
                             layout=LayoutKind.SIT_CENTER,
+                            zoom=focus_points[0].zoom or 1.0,
                             person_x_norm=focus_points[0].x_norm,
                             person_tracking=focus_points,
                         )

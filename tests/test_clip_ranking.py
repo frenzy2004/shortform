@@ -376,3 +376,70 @@ def test_valid_clips_still_sorted_and_renumbered():
 
     assert [c.clip_id for c in kept] == ["001", "002", "003"]
     assert [c.virality_score for c in kept] == [0.91, 0.82, 0.77]
+
+
+def test_generic_title_is_penalized_against_specific_title():
+    candidates = [
+        _clip(
+            "a",
+            score=0.80,
+            score_breakdown={"message_wow": 0.8, "hook_emotion": 0.8, "catchy": 0.8},
+            topic="topic a",
+        ).model_copy(
+            update={
+                "suggested_overlay_title": "Big Opportunity",
+                "viral_hook": "This changes everything",
+            }
+        ),
+        _clip(
+            "b",
+            score=0.80,
+            start=100,
+            score_breakdown={"message_wow": 0.8, "hook_emotion": 0.8, "catchy": 0.8},
+            topic="topic b",
+        ).model_copy(
+            update={
+                "suggested_overlay_title": "Robots Cut Costs 90%",
+                "viral_hook": "Robots cut costs by 90%",
+            }
+        ),
+    ]
+
+    kept = rank_and_filter_clips(candidates, threshold=0.00, min_kept=2, max_kept=5)
+
+    assert [c.virality_score for c in kept] == [0.80, 0.80]
+    assert [c.start_time_sec for c in kept] == [100.0, 0.0]
+
+
+def test_late_hook_is_penalized_against_early_hook():
+    candidates = [
+        _clip(
+            "a",
+            score=0.84,
+            score_breakdown={"message_wow": 0.84, "hook_emotion": 0.84, "catchy": 0.84},
+        ).model_copy(
+            update={
+                "suggested_overlay_title": "Robots Cut Costs 90%",
+                "viral_hook": "Robots cut costs by 90%",
+                "hook_start_sec": 8.0,
+                "hook_end_sec": 11.0,
+            }
+        ),
+        _clip(
+            "b",
+            score=0.84,
+            start=100,
+            score_breakdown={"message_wow": 0.84, "hook_emotion": 0.84, "catchy": 0.84},
+        ).model_copy(
+            update={
+                "suggested_overlay_title": "Robots Cut Costs 90%",
+                "viral_hook": "Robots cut costs by 90%",
+                "hook_start_sec": 1.0,
+                "hook_end_sec": 4.0,
+            }
+        ),
+    ]
+
+    kept = rank_and_filter_clips(candidates, threshold=0.00, min_kept=2, max_kept=5)
+
+    assert [c.start_time_sec for c in kept] == [100.0, 0.0]

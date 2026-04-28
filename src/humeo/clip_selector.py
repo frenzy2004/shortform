@@ -103,11 +103,26 @@ _TITLE_DROP_WORDS = {
     "will",
     "your",
 }
+_TITLE_BLAND_WORDS = {
+    "big",
+    "future",
+    "important",
+    "lesson",
+    "matter",
+    "matters",
+    "opportunity",
+    "reason",
+    "soon",
+    "story",
+    "thing",
+}
 _GENERIC_TITLE_PATTERNS = (
     "big opportunity",
+    "future of",
     "important lesson",
+    "start a business with ai",
     "why this matters",
-    "the future of",
+    "what this means",
 )
 _TITLE_TOKEN_REPLACEMENTS = {
     "ai": "AI",
@@ -118,6 +133,31 @@ _TITLE_TOKEN_REPLACEMENTS = {
     "evs": "EVs",
     "us": "US",
 }
+_POWER_TITLE_TOKENS = {"$", "%", "under", "beats", "fewer", "more", "less", "vs"}
+_FILLER_OPENERS = {
+    "actually",
+    "basically",
+    "i",
+    "kind",
+    "look",
+    "listen",
+    "now",
+    "okay",
+    "ok",
+    "right",
+    "so",
+    "sort",
+    "well",
+    "yeah",
+    "you",
+}
+_FILLER_OPENING_PHRASES = {
+    "i mean",
+    "kind of",
+    "sort of",
+    "you know",
+}
+_PREFERRED_MAX_DURATION_SEC = 72.0
 
 
 def _has_valid_duration(clip: Clip) -> bool:
@@ -157,6 +197,71 @@ def _text_composite_score(clip: Clip) -> float:
             ", ".join(missing),
         )
     return total
+
+
+def _title_quality_penalty(clip: Clip) -> float:
+    title = _tighten_overlay_title_text(clip.suggested_overlay_title or "")
+    if not title:
+        return 0.0
+    penalty = 0.0
+    if _looks_generic_title(title):
+        penalty += 0.18
+    tokens = [token for token in _normalized_title(title).split() if token]
+    if len(tokens) < 2 or len(tokens) > 6:
+        penalty += 0.05
+    if not any(token in title.lower() for token in _POWER_TITLE_TOKENS) and not any(
+        ch.isdigit() for ch in title
+    ):
+        penalty += 0.03
+    return min(0.22, penalty)
+
+
+def _hook_quality_penalty(clip: Clip) -> float:
+    penalty = 0.0
+    if clip.hook_start_sec is not None and clip.hook_start_sec > 5.0:
+        penalty += min(0.18, 0.06 + (clip.hook_start_sec - 5.0) * 0.025)
+    opener = " ".join((clip.viral_hook or clip.transcript or "").split()).lower()
+    if opener:
+        first_words = opener.split()
+        first_word = first_words[0] if first_words else ""
+        opening_phrase = " ".join(first_words[:2])
+        if first_word in _FILLER_OPENERS:
+            penalty += 0.14
+        if opening_phrase in _FILLER_OPENING_PHRASES:
+            penalty += 0.06
+        if len(first_words) >= 12:
+            penalty += 0.03
+    return min(0.24, penalty)
+
+
+def _duration_quality_penalty(clip: Clip) -> float:
+    if clip.duration_sec <= _PREFERRED_MAX_DURATION_SEC:
+        return 0.0
+    drift = clip.duration_sec - _PREFERRED_MAX_DURATION_SEC
+    return min(0.14, 0.03 + drift * 0.01)
+
+
+def clip_quality_penalty(clip: Clip) -> float:
+    return min(
+        0.42,
+        _title_quality_penalty(clip)
+        + _hook_quality_penalty(clip)
+        + _duration_quality_penalty(clip),
+    )
+
+
+def clip_quality_priority_score(clip: Clip) -> float:
+    review_penalty = 0.5 if clip.needs_review else 0.0
+    composite = _text_composite_score(clip)
+    return composite - review_penalty - clip_quality_penalty(clip)
+
+
+def renumber_clips_dense(clips: list[Clip]) -> list[Clip]:
+    renumbered: list[Clip] = []
+    for idx, clip in enumerate(clips, start=1):
+        new_id = f"{idx:03d}"
+        renumbered.append(clip if clip.clip_id == new_id else clip.model_copy(update={"clip_id": new_id}))
+    return renumbered
 
 
 def _openai_message_text(content: object) -> str:
@@ -209,6 +314,21 @@ def _headline_case_title(text: str) -> str:
     return " ".join(out)
 
 
+def _normalized_title(text: str) -> str:
+    return re.sub(r"\s+", " ", re.sub(r"[^a-z0-9$% ]+", " ", (text or "").lower())).strip()
+
+
+def _looks_generic_title(text: str) -> bool:
+    normalized = _normalized_title(text)
+    if not normalized:
+        return True
+    if any(pattern in normalized for pattern in _GENERIC_TITLE_PATTERNS):
+        return True
+    tokens = [token for token in normalized.split() if token]
+    bland_count = sum(token in _TITLE_BLAND_WORDS for token in tokens)
+    return bland_count >= 2
+
+
 def _tighten_overlay_title_text(text: str) -> str:
     title = " ".join((text or "").replace("—", "-").split()).strip(" .,!?:;-")
     if not title:
@@ -237,11 +357,11 @@ def _tighten_overlay_title_text(text: str) -> str:
 
 def _polish_overlay_title(clip: Clip) -> str:
     current = _tighten_overlay_title_text(clip.suggested_overlay_title or "")
-    if current and current.lower() not in _GENERIC_TITLE_PATTERNS:
+    if current and not _looks_generic_title(current):
         return current
-    for candidate in (clip.topic or "", clip.viral_hook or ""):
+    for candidate in (clip.viral_hook or "", clip.topic or ""):
         polished = _tighten_overlay_title_text(candidate)
-        if polished and polished.lower() not in _GENERIC_TITLE_PATTERNS:
+        if polished and not _looks_generic_title(polished):
             return polished
     return current
 
@@ -327,12 +447,10 @@ def rank_and_filter_clips(
         return []
 
     score_signal = {id(c): _text_composite_score(c) for c in clips}
+    priority_signal = {id(c): clip_quality_priority_score(c) for c in clips}
 
     def _priority(c: Clip) -> tuple[float, float]:
-        # needs_review clips fall behind same-score non-reviewed ones.
-        review_penalty = 0.5 if c.needs_review else 0.0
-        composite = score_signal[id(c)]
-        return (composite - review_penalty, composite)
+        return (priority_signal[id(c)], score_signal[id(c)])
 
     valid: list[Clip] = []
     invalid: list[Clip] = []
@@ -359,7 +477,7 @@ def rank_and_filter_clips(
 
     ordered = sorted(valid, key=_priority, reverse=True)
 
-    strong = [c for c in ordered if score_signal[id(c)] >= threshold and not c.needs_review]
+    strong = [c for c in ordered if priority_signal[id(c)] >= threshold and not c.needs_review]
     kept = list(strong)
 
     if len(kept) < min_kept:
@@ -382,10 +500,7 @@ def rank_and_filter_clips(
 
     # Renumber clip_ids so consumers (filenames, layout vision, subtitles)
     # always see 001..NNN in rank order regardless of what the LLM returned.
-    renumbered: list[Clip] = []
-    for i, c in enumerate(kept, start=1):
-        new_id = f"{i:03d}"
-        renumbered.append(c if c.clip_id == new_id else c.model_copy(update={"clip_id": new_id}))
+    renumbered = renumber_clips_dense(kept)
 
     dropped = len(valid) - len(kept) + len(invalid)
     logger.info(
@@ -399,9 +514,11 @@ def rank_and_filter_clips(
     )
     for c in renumbered:
         logger.info(
-            "  [%s] score=%.2f %s %s",
+            "  [%s] score=%.2f priority=%.2f penalty=%.2f %s %s",
             c.clip_id,
             c.virality_score,
+            clip_quality_priority_score(c),
+            clip_quality_penalty(c),
             "(review)" if c.needs_review else "",
             c.topic,
         )

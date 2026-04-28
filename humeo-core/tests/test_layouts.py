@@ -78,6 +78,23 @@ def test_sit_center_tracking_uses_dynamic_crop_expression():
     assert "*(t-4.850)/(0.300)" in fg
 
 
+def test_sit_center_tracking_with_zoom_uses_dynamic_crop_window_expressions():
+    instr = LayoutInstruction(
+        clip_id="c",
+        layout=LayoutKind.SIT_CENTER,
+        person_tracking=[
+            TimedCenterPoint(t_sec=0.0, x_norm=0.2, zoom=1.28),
+            TimedCenterPoint(t_sec=10.0, x_norm=0.8, zoom=1.0),
+        ],
+    )
+    fg = plan_layout(instr, out_w=1080, out_h=1920).filtergraph
+    assert "setpts=PTS-STARTPTS" in fg
+    assert "[vsrc]crop=" in fg
+    assert "out_w/2" in fg
+    assert "out_h/2" in fg
+    assert "floor((min(" in fg
+
+
 def test_split_layout_contains_vstack():
     instr = LayoutInstruction(
         clip_id="c",

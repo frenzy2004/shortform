@@ -2,6 +2,7 @@
 
 import logging
 import os
+import re
 from pathlib import Path
 
 from humeo_core.schemas import Clip, RenderTheme
@@ -18,6 +19,46 @@ logger = logging.getLogger(__name__)
 
 _NATIVE_HIGHLIGHT_FONT_NAME = "Arial"
 _NATIVE_HIGHLIGHT_PURPLE = "&H00F65C8B"
+_NATIVE_HIGHLIGHT_STOPWORDS = {
+    "a",
+    "all",
+    "an",
+    "and",
+    "are",
+    "as",
+    "at",
+    "be",
+    "but",
+    "by",
+    "for",
+    "from",
+    "i",
+    "if",
+    "in",
+    "is",
+    "it",
+    "of",
+    "on",
+    "or",
+    "so",
+    "that",
+    "the",
+    "their",
+    "there",
+    "they",
+    "this",
+    "to",
+    "was",
+    "we",
+    "with",
+    "you",
+    "your",
+    "has",
+    "have",
+    "had",
+    "been",
+    "being",
+}
 
 
 def _balance_reference_caption(text: str) -> str:
@@ -61,6 +102,65 @@ def _split_native_highlight_lines(words):
     return [list(words[:best_idx]), list(words[best_idx:])]
 
 
+def _clean_native_highlight_token(text: str) -> str:
+    return re.sub(r"(^[^A-Za-z0-9$%#]+|[^A-Za-z0-9$%#]+$)", "", text or "")
+
+
+def _native_highlight_span_score(words) -> float:
+    cleaned = [_clean_native_highlight_token(word.word) for word in words]
+    cleaned = [token for token in cleaned if token]
+    if not cleaned:
+        return -1e9
+    if all(token.lower() in _NATIVE_HIGHLIGHT_STOPWORDS for token in cleaned):
+        return -1e9
+
+    score = 0.0
+    for token in cleaned:
+        lower = token.lower()
+        if lower not in _NATIVE_HIGHLIGHT_STOPWORDS:
+            score += 2.0
+        if any(ch.isdigit() for ch in token) or "$" in token or "%" in token:
+            score += 3.0
+        if len(token) >= 6:
+            score += 0.8
+        if token.isupper() and len(token) > 1:
+            score += 0.6
+    if len(cleaned) == 2:
+        score -= 0.55
+        if any(any(ch.isdigit() for ch in token) or "$" in token or "%" in token for token in cleaned):
+            score += 1.1
+        elif cleaned[0].lower() in _NATIVE_HIGHLIGHT_STOPWORDS or cleaned[1].lower() in _NATIVE_HIGHLIGHT_STOPWORDS:
+            score -= 0.6
+        else:
+            score += 0.3
+        if len(" ".join(cleaned)) > 18:
+            score -= 0.6
+    return score
+
+
+def _pick_native_highlight_span(lines):
+    best = None
+    best_score = 0.0
+    offset = 0
+    for line in lines:
+        for start in range(len(line)):
+            for end in range(start, min(len(line), start + 2)):
+                score = _native_highlight_span_score(line[start : end + 1])
+                if score > best_score:
+                    best_score = score
+                    best = (offset + start, offset + end)
+        offset += len(line)
+    return best
+
+
+def _should_render_native_highlight_group(words) -> bool:
+    cleaned = [_clean_native_highlight_token(word.word) for word in words]
+    cleaned = [token for token in cleaned if token]
+    if not cleaned:
+        return False
+    return any(token.lower() not in _NATIVE_HIGHLIGHT_STOPWORDS for token in cleaned)
+
+
 def _native_highlight_font_path() -> Path | None:
     windows_fonts = Path(os.environ.get("WINDIR", r"C:\Windows")) / "Fonts"
     for filename in ("arialbd.ttf", "Arialbd.ttf", "ARIALBD.TTF", "arial.ttf"):
@@ -91,6 +191,16 @@ def _escape_ass_text(text: str) -> str:
         .replace("}", r"\}")
         .replace("\n", r"\N")
     )
+
+
+def _native_highlight_overlay_text(line_words, highlight_idx: int) -> str:
+    parts: list[str] = []
+    for word_idx, word in enumerate(line_words):
+        if word_idx == highlight_idx:
+            parts.append(f"{{\\rHighlight}}{_escape_ass_text(word.word)}{{\\rBase}}")
+        else:
+            parts.append(_escape_ass_text(word.word))
+    return " ".join(parts)
 
 
 def _fmt_ass_time(seconds: float) -> str:
@@ -125,8 +235,6 @@ def _format_native_highlight_ass(
     line_height = max(font_size, _text_height(font) + 6)
     line_gap = max(8, int(round(font_size * 0.08)))
     bottom_anchor = play_res_y - margin_v
-    center_x = play_res_x / 2.0
-    space_width = _text_width(font, " ")
 
     header = (
         "[Script Info]\n"
@@ -143,7 +251,7 @@ def _format_native_highlight_ass(
         "ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, "
         "Alignment, MarginL, MarginR, MarginV, Encoding\n"
         f"Style: Base,{font_name},{font_size},&H00FFFFFF,&H000000FF,&H00101010,&H00000000,-1,0,0,0,100,100,-1,0,1,4,0,8,0,0,0,0\n"
-        f"Style: Highlight,{font_name},{font_size},&H00FFFFFF,&H000000FF,&H00000000,{_NATIVE_HIGHLIGHT_PURPLE},-1,0,0,0,100,100,-1,0,4,0,10,7,0,0,0,0\n"
+        f"Style: Highlight,{font_name},{font_size},&H00FFFFFF,&H000000FF,{_NATIVE_HIGHLIGHT_PURPLE},&H00000000,-1,0,0,0,100,100,-1,0,3,4,0,8,0,0,0,0\n"
         "\n"
         "[Events]\n"
         "Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\n"
@@ -169,22 +277,16 @@ def _format_native_highlight_ass(
                 f"{_fmt_ass_time(cue_start)},{_fmt_ass_time(cue_end)},Base,,0,0,0,,"
                 f"{{\\an7\\pos({line_left:.1f},{line_top:.1f})}}{_escape_ass_text(line_text)}"
             )
-            x_cursor = line_left
             for word_idx, word in enumerate(line_words):
-                if word_idx < len(line_words) - 1:
-                    next_start = line_words[word_idx + 1].start_time
-                elif line_idx < len(lines) - 1 and lines[line_idx + 1]:
-                    next_start = lines[line_idx + 1][0].start_time
-                else:
-                    next_start = cue_end
-                highlight_end = min(cue_end, max(word.end_time, next_start))
-                highlight_end = max(word.start_time + 0.05, highlight_end)
+                cleaned = _clean_native_highlight_token(word.word)
+                if not cleaned:
+                    continue
                 events.append(
                     "Dialogue: 1,"
-                    f"{_fmt_ass_time(word.start_time)},{_fmt_ass_time(highlight_end)},Highlight,,0,0,0,,"
-                    f"{{\\an7\\pos({x_cursor:.1f},{line_top:.1f})\\blur0.8}}{_escape_ass_text(word.word)}"
+                    f"{_fmt_ass_time(word.start_time)},{_fmt_ass_time(word.end_time)},Highlight,,0,0,0,,"
+                    f"{{\\an7\\pos({line_left:.1f},{line_top:.1f})\\blur0.8}}"
+                    f"{_native_highlight_overlay_text(line_words, word_idx)}"
                 )
-                x_cursor += _text_width(font, word.word) + space_width
 
     return header + "\n".join(events) + ("\n" if events else "")
 

@@ -43,11 +43,12 @@ def test_layout_instruction_accepts_sorted_tracking_points():
         clip_id="c",
         layout=LayoutKind.SIT_CENTER,
         person_tracking=[
-            TimedCenterPoint(t_sec=0.0, x_norm=0.2),
-            TimedCenterPoint(t_sec=5.0, x_norm=0.8),
+            TimedCenterPoint(t_sec=0.0, x_norm=0.2, zoom=1.25),
+            TimedCenterPoint(t_sec=5.0, x_norm=0.8, zoom=1.0),
         ],
     )
     assert [point.t_sec for point in li.person_tracking] == [0.0, 5.0]
+    assert li.person_tracking[0].zoom == pytest.approx(1.25)
 
 
 def test_layout_instruction_rejects_unsorted_tracking_points():

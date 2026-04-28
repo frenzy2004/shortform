@@ -217,6 +217,12 @@ Examples:
     )
 
     parser.add_argument(
+        "--no-subtitles",
+        action="store_true",
+        help="Skip burning subtitles. Useful when the source already has captions baked in.",
+    )
+
+    parser.add_argument(
         "--verbose", "-v",
         action="store_true",
         help="Enable debug logging",
@@ -276,6 +282,7 @@ def main():
         subtitle_margin_v=args.subtitle_margin_v,
         subtitle_max_words_per_cue=args.subtitle_max_words,
         subtitle_max_cue_sec=args.subtitle_max_cue_sec,
+        burn_subtitles=not args.no_subtitles,
     )
 
     try:

@@ -10,13 +10,19 @@ import pytest
 from humeo.config import PipelineConfig
 from humeo.layout_vision import (
     _call_gemini_vision,
+    _can_fit_both_speakers,
     _face_center_x,
+    _focus_frame_visible_speaker_centers,
     _infer_person_tracking_with_segmentation,
+    _infer_two_speaker_focus_tracking_with_segmentation,
     _instruction_from_gemini_json,
+    _resolve_speaker_focus_samples,
     _segmentation_mask_urls,
+    _speaker_follow_sample_times,
     REPLICATE_SAM2_VIDEO_PINNED,
     _tracking_is_unstable,
     _tracking_points_from_centers,
+    _tracking_points_from_focus_states,
     infer_layout_instructions,
     run_layout_vision_stage,
 )
@@ -287,6 +293,111 @@ def test_tracking_points_low_spread_becomes_static_center_line():
     assert points[0].x_norm == pytest.approx(0.42)
 
 
+def test_resolve_speaker_focus_samples_preserves_both_state():
+    resolved = _resolve_speaker_focus_samples(
+        [
+            (0.0, "left"),
+            (1.0, "unclear"),
+            (2.0, "right"),
+            (3.0, "both"),
+            (4.0, "unclear"),
+        ],
+        default_side="left",
+    )
+    assert resolved == [
+        (0.0, "left"),
+        (1.0, "both"),
+        (2.0, "right"),
+        (3.0, "both"),
+        (4.0, "both"),
+    ]
+
+
+def test_tracking_points_from_focus_states_preserves_zoom_track():
+    points = _tracking_points_from_focus_states(
+        10.0,
+        [
+            (1.0, 0.18, 1.28),
+            (5.0, 0.50, 1.00),
+            (9.0, 0.82, 1.28),
+        ],
+    )
+    assert points[0].t_sec == pytest.approx(0.0)
+    assert points[0].zoom == pytest.approx(1.28)
+    assert points[1].zoom == pytest.approx(1.28)
+    assert any(point.zoom == pytest.approx(1.00) for point in points)
+    assert points[-1].t_sec == pytest.approx(10.0)
+    assert points[-1].zoom == pytest.approx(1.28)
+
+
+def test_tracking_points_from_focus_states_holds_previous_speaker_until_near_switch():
+    points = _tracking_points_from_focus_states(
+        10.0,
+        [
+            (0.0, 0.75, 1.28),
+            (4.48, 0.33, 1.28),
+            (10.0, 0.33, 1.28),
+        ],
+    )
+
+    assert [round(point.t_sec, 2) for point in points] == [0.0, 4.13, 4.48, 10.0]
+    assert points[1].x_norm == pytest.approx(0.75)
+    assert points[2].x_norm == pytest.approx(0.33)
+
+
+def test_focus_frame_visible_speaker_centers_uses_frame_local_boxes():
+    left_seed = BoundingBox(x1=0.05, y1=0.2, x2=0.30, y2=0.8)
+    right_seed = BoundingBox(x1=0.62, y1=0.2, x2=0.92, y2=0.8)
+    centers, both_visible = _focus_frame_visible_speaker_centers(
+        {
+            "person_bbox": {"x1": 0.08, "y1": 0.18, "x2": 0.30, "y2": 0.78},
+            "face_bbox": {"x1": 0.11, "y1": 0.20, "x2": 0.22, "y2": 0.42},
+            "second_person_bbox": {"x1": 0.66, "y1": 0.18, "x2": 0.90, "y2": 0.78},
+            "second_face_bbox": {"x1": 0.71, "y1": 0.19, "x2": 0.81, "y2": 0.41},
+        },
+        None,
+        left_seed=left_seed,
+        right_seed=right_seed,
+    )
+
+    assert both_visible is True
+    assert centers["left"] == pytest.approx(0.165)
+    assert centers["right"] == pytest.approx(0.76)
+
+
+def test_focus_frame_visible_speaker_centers_assigns_single_closeup_to_nearest_seed():
+    left_seed = BoundingBox(x1=0.05, y1=0.2, x2=0.30, y2=0.8)
+    right_seed = BoundingBox(x1=0.62, y1=0.2, x2=0.92, y2=0.8)
+    centers, both_visible = _focus_frame_visible_speaker_centers(
+        {
+            "layout": "sit_center",
+            "person_bbox": {"x1": 0.52, "y1": 0.10, "x2": 0.82, "y2": 0.92},
+            "face_bbox": {"x1": 0.56, "y1": 0.14, "x2": 0.70, "y2": 0.40},
+        },
+        None,
+        left_seed=left_seed,
+        right_seed=right_seed,
+    )
+
+    assert both_visible is False
+    assert set(centers) == {"right"}
+    assert centers["right"] == pytest.approx(0.63)
+
+
+def test_can_fit_both_speakers_rejects_wide_two_shot_for_single_crop():
+    assert _can_fit_both_speakers(0.24, 0.76, image_size=(640, 360)) is False
+    assert _can_fit_both_speakers(0.40, 0.62, image_size=(640, 360)) is True
+
+
+def test_speaker_follow_sample_times_includes_dense_two_second_points():
+    samples = _speaker_follow_sample_times(6.5)
+    assert 2.0 in samples
+    assert 4.0 in samples
+    assert 6.0 in samples
+    assert samples[0] == pytest.approx(0.0)
+    assert samples[-1] == pytest.approx(6.5)
+
+
 def test_segmentation_mask_urls_accepts_iterable_file_outputs():
     class FakeFileOutput:
         def __init__(self, url: str):
@@ -484,9 +595,9 @@ def test_infer_layout_instructions_uses_two_speaker_sam_follow_when_available(
     }
     mock_two_speaker_follow.return_value = (
         [
-            TimedCenterPoint(t_sec=0.0, x_norm=0.20),
-            TimedCenterPoint(t_sec=5.0, x_norm=0.75),
-            TimedCenterPoint(t_sec=10.0, x_norm=0.78),
+            TimedCenterPoint(t_sec=0.0, x_norm=0.20, zoom=1.28),
+            TimedCenterPoint(t_sec=5.0, x_norm=0.48, zoom=1.00),
+            TimedCenterPoint(t_sec=10.0, x_norm=0.78, zoom=1.28),
         ],
         {"mode": "two_speaker_follow"},
     )
@@ -503,8 +614,68 @@ def test_infer_layout_instructions_uses_two_speaker_sam_follow_when_available(
     instr = instructions["001"]
     assert instr.layout == LayoutKind.SIT_CENTER
     assert instr.person_tracking[0].x_norm == pytest.approx(0.20)
+    assert instr.person_tracking[1].zoom == pytest.approx(1.00)
     assert raw_by_clip["001"]["speaker_follow_tracking"]["mode"] == "two_speaker_follow"
     mock_two_speaker_follow.assert_called_once()
+
+
+def test_two_speaker_follow_prefers_frame_local_visible_center_over_sam_drift(tmp_path, monkeypatch):
+    scene = Scene(scene_id="004", start_time=0.0, end_time=10.0, keyframe_path=str(tmp_path / "kf.jpg"))
+    Path(scene.keyframe_path).write_bytes(b"\xff\xd8\xff\xe0fakejpeg")
+    frame = tmp_path / "focus.jpg"
+    frame.write_bytes(b"\xff\xd8\xff\xe0fakejpeg")
+
+    monkeypatch.setattr(
+        "humeo.layout_vision._infer_person_tracking_with_segmentation",
+        lambda *args, **kwargs: (
+            [TimedCenterPoint(t_sec=0.0, x_norm=0.50), TimedCenterPoint(t_sec=10.0, x_norm=0.50)],
+            {"provider": "replicate"},
+        ),
+    )
+    monkeypatch.setattr("humeo.layout_vision._speaker_follow_sample_times", lambda duration: [0.0, 10.0])
+    monkeypatch.setattr("humeo.layout_vision._extract_frame_at_time", lambda *args, **kwargs: frame)
+    monkeypatch.setattr("humeo.layout_vision._keyframe_dimensions", lambda *args, **kwargs: (640, 360))
+
+    layout_calls = iter(
+        [
+            {
+                "layout": "split_two_persons",
+                "person_bbox": {"x1": 0.12, "y1": 0.15, "x2": 0.33, "y2": 0.88},
+                "face_bbox": {"x1": 0.16, "y1": 0.18, "x2": 0.24, "y2": 0.42},
+                "second_person_bbox": {"x1": 0.66, "y1": 0.15, "x2": 0.90, "y2": 0.88},
+                "second_face_bbox": {"x1": 0.71, "y1": 0.19, "x2": 0.80, "y2": 0.43},
+            },
+            {
+                "layout": "sit_center",
+                "person_bbox": {"x1": 0.57, "y1": 0.08, "x2": 0.86, "y2": 0.94},
+                "face_bbox": {"x1": 0.61, "y1": 0.12, "x2": 0.74, "y2": 0.41},
+            },
+        ]
+    )
+    monkeypatch.setattr("humeo.layout_vision._call_gemini_vision", lambda *args, **kwargs: next(layout_calls))
+    monkeypatch.setattr(
+        "humeo.layout_vision._call_active_speaker_vision",
+        lambda *args, **kwargs: {"speaker": "right", "reason": "test"},
+    )
+
+    points, detail = _infer_two_speaker_focus_tracking_with_segmentation(
+        scene,
+        source_video=tmp_path / "source.mp4",
+        tracking_dir=tmp_path / "tracking",
+        model_name="gemini-test",
+        segmentation_model="meta/sam-2-video",
+        initial_data={
+            "person_bbox": {"x1": 0.08, "y1": 0.16, "x2": 0.30, "y2": 0.88},
+            "face_bbox": {"x1": 0.11, "y1": 0.18, "x2": 0.21, "y2": 0.41},
+            "second_person_bbox": {"x1": 0.63, "y1": 0.16, "x2": 0.92, "y2": 0.88},
+            "second_face_bbox": {"x1": 0.68, "y1": 0.18, "x2": 0.78, "y2": 0.41},
+        },
+        initial_image_size=(640, 360),
+    )
+
+    assert detail["framing_samples"][0]["x_norm"] == pytest.approx(0.755)
+    assert detail["framing_samples"][1]["x_norm"] == pytest.approx(0.675)
+    assert points[0].x_norm == pytest.approx(0.755)
 
 
 @patch("humeo.layout_vision._infer_two_speaker_focus_tracking_with_segmentation")
@@ -586,6 +757,7 @@ def test_segmentation_tracking_retries_with_pinned_sam_version_on_404(
     assert first_input["click_coordinates"] == "[210,200],[210,200]"
     assert first_input["click_labels"] == "1,1"
     assert first_input["click_object_ids"] == "speaker,speaker"
+
 
 def test_run_layout_vision_stage_uses_layout_hint_when_vision_falls_back(tmp_path, monkeypatch):
     work_dir = tmp_path / "work"

@@ -92,6 +92,20 @@ def _bbox_to_crop_pixels(
     return max(2, cw), max(2, ch), _even(x1), _even(y1)
 
 
+def _base_crop_size(
+    src_w: int,
+    src_h: int,
+    target_aspect: float,
+) -> tuple[int, int]:
+    if src_w / src_h >= target_aspect:
+        base_ch = src_h
+        base_cw = int(round(base_ch * target_aspect))
+    else:
+        base_cw = src_w
+        base_ch = int(round(base_cw / target_aspect))
+    return _even(max(2, base_cw)), _even(max(2, base_ch))
+
+
 def _crop_box(
     src_w: int,
     src_h: int,
@@ -107,12 +121,7 @@ def _crop_box(
     """
 
     zoom = max(1.0, zoom)
-    if src_w / src_h >= target_aspect:
-        base_ch = src_h
-        base_cw = int(round(base_ch * target_aspect))
-    else:
-        base_cw = src_w
-        base_ch = int(round(base_cw / target_aspect))
+    base_cw, base_ch = _base_crop_size(src_w, src_h, target_aspect)
 
     cw = _even(max(2, int(round(base_cw / zoom))))
     ch = _even(max(2, int(round(base_ch / zoom))))
@@ -136,6 +145,50 @@ def _crop_x_from_center(src_w: int, cw: int, center_x_norm: float) -> int:
     return _even(max(0, min(src_w - cw, cx - cw // 2)))
 
 
+def _tracked_value_expr(
+    values: list[tuple[float, float]],
+    *,
+    clamp_min: float | None = None,
+    clamp_max: float | None = None,
+    round_even: bool = False,
+) -> str:
+    if not values:
+        raise ValueError("values must not be empty")
+
+    expr = f"{float(values[-1][0]):.3f}"
+    for idx in range(len(values) - 2, -1, -1):
+        v0, t0 = float(values[idx][0]), float(values[idx][1])
+        v1, t1 = float(values[idx + 1][0]), float(values[idx + 1][1])
+        if t1 <= t0:
+            expr = f"if(lt(t\\,{t1:.3f})\\,{v0:.3f}\\,{expr})"
+            continue
+
+        switch_t = (t0 + t1) / 2.0
+        blend_half = TRACKING_BLEND_SEC / 2.0
+        blend_start = max(t0, switch_t - blend_half)
+        blend_end = min(t1, switch_t + blend_half)
+
+        if blend_end <= blend_start:
+            expr = f"if(lt(t\\,{switch_t:.3f})\\,{v0:.3f}\\,{expr})"
+            continue
+
+        blend_expr = (
+            f"{v0:.3f}+({v1 - v0:.3f})*(t-{blend_start:.3f})/({blend_end - blend_start:.3f})"
+        )
+        expr = (
+            f"if(lt(t\\,{blend_start:.3f})\\,{v0:.3f}\\,"
+            f"if(lt(t\\,{blend_end:.3f})\\,{blend_expr}\\,{expr}))"
+        )
+
+    if clamp_min is not None:
+        expr = f"max({clamp_min:.3f}\\,{expr})"
+    if clamp_max is not None:
+        expr = f"min({clamp_max:.3f}\\,{expr})"
+    if round_even:
+        expr = f"floor(({expr})/2)*2"
+    return expr
+
+
 def _tracked_crop_x_expr(
     *,
     src_w: int,
@@ -152,38 +205,62 @@ def _tracked_crop_x_expr(
     if not tracking:
         raise ValueError("tracking must not be empty")
 
-    x_points = [
-        (_crop_x_from_center(src_w, crop_w, point.x_norm), float(point.t_sec))
+    center_points = [
+        (_clamp01(point.x_norm) * src_w, float(point.t_sec))
         for point in tracking
     ]
-
-    expr = f"{x_points[-1][0]:.3f}"
-    for idx in range(len(x_points) - 2, -1, -1):
-        x0, t0 = x_points[idx]
-        x1, t1 = x_points[idx + 1]
-        if t1 <= t0:
-            expr = f"if(lt(t\\,{t1:.3f})\\,{x0:.3f}\\,{expr})"
-            continue
-
-        switch_t = (t0 + t1) / 2.0
-        blend_half = TRACKING_BLEND_SEC / 2.0
-        blend_start = max(t0, switch_t - blend_half)
-        blend_end = min(t1, switch_t + blend_half)
-
-        if blend_end <= blend_start:
-            expr = f"if(lt(t\\,{switch_t:.3f})\\,{x0:.3f}\\,{expr})"
-            continue
-
-        blend_expr = (
-            f"{x0:.3f}+({x1 - x0:.3f})*(t-{blend_start:.3f})/({blend_end - blend_start:.3f})"
-        )
-        expr = (
-            f"if(lt(t\\,{blend_start:.3f})\\,{x0:.3f}\\,"
-            f"if(lt(t\\,{blend_end:.3f})\\,{blend_expr}\\,{expr}))"
-        )
-
+    center_expr = _tracked_value_expr(
+        center_points,
+        clamp_min=0.0,
+        clamp_max=float(src_w),
+    )
     max_x = max(0, src_w - crop_w)
-    return f"floor(max(0\\,min({max_x}\\,{expr}))/2)*2"
+    return f"floor(max(0\\,min({max_x}\\,({center_expr})-{crop_w}/2))/2)*2"
+
+
+def _tracked_crop_exprs(
+    *,
+    src_w: int,
+    src_h: int,
+    target_aspect: float,
+    default_zoom: float,
+    center_y_norm: float,
+    tracking: list[TimedCenterPoint],
+) -> tuple[str, str, str, str]:
+    if not tracking:
+        raise ValueError("tracking must not be empty")
+
+    base_cw, base_ch = _base_crop_size(src_w, src_h, target_aspect)
+    width_points: list[tuple[float, float]] = []
+    height_points: list[tuple[float, float]] = []
+    center_points: list[tuple[float, float]] = []
+    for point in tracking:
+        zoom = max(1.0, float(point.zoom if point.zoom is not None else default_zoom))
+        width_points.append((float(_even(max(2, int(round(base_cw / zoom))))), float(point.t_sec)))
+        height_points.append((float(_even(max(2, int(round(base_ch / zoom))))), float(point.t_sec)))
+        center_points.append((_clamp01(point.x_norm) * src_w, float(point.t_sec)))
+
+    w_expr = _tracked_value_expr(
+        width_points,
+        clamp_min=2.0,
+        clamp_max=float(base_cw),
+        round_even=True,
+    )
+    h_expr = _tracked_value_expr(
+        height_points,
+        clamp_min=2.0,
+        clamp_max=float(base_ch),
+        round_even=True,
+    )
+    center_expr = _tracked_value_expr(
+        center_points,
+        clamp_min=0.0,
+        clamp_max=float(src_w),
+    )
+    center_y_px = _clamp01(center_y_norm) * src_h
+    x_expr = f"floor(max(0\\,min({src_w}-out_w\\,({center_expr})-out_w/2))/2)*2"
+    y_expr = f"floor(max(0\\,min({src_h}-out_h\\,{center_y_px:.3f}-out_h/2))/2)*2"
+    return w_expr, h_expr, x_expr, y_expr
 
 
 # ---------------------------------------------------------------------------
@@ -346,12 +423,27 @@ def plan_zoom_call_center(
     zoom = max(instruction.zoom, 1.25)
     cw, ch, x, y = _center_crop_to_9x16(src_w, src_h, zoom, instruction.person_x_norm)
     if instruction.person_tracking:
-        x_expr = _tracked_crop_x_expr(src_w=src_w, crop_w=cw, tracking=instruction.person_tracking)
-        fg = (
-            f"[0:v]setpts=PTS-STARTPTS[vsrc];"
-            f"[vsrc]crop={cw}:{ch}:{x_expr}:{y},"
-            f"scale={out_w}:{out_h}:flags=lanczos,setsar=1[vout]"
-        )
+        if any(point.zoom is not None for point in instruction.person_tracking):
+            w_expr, h_expr, x_expr, y_expr = _tracked_crop_exprs(
+                src_w=src_w,
+                src_h=src_h,
+                target_aspect=9 / 16,
+                default_zoom=zoom,
+                center_y_norm=0.5,
+                tracking=instruction.person_tracking,
+            )
+            fg = (
+                f"[0:v]setpts=PTS-STARTPTS[vsrc];"
+                f"[vsrc]crop={w_expr}:{h_expr}:{x_expr}:{y_expr},"
+                f"scale={out_w}:{out_h}:flags=lanczos,setsar=1[vout]"
+            )
+        else:
+            x_expr = _tracked_crop_x_expr(src_w=src_w, crop_w=cw, tracking=instruction.person_tracking)
+            fg = (
+                f"[0:v]setpts=PTS-STARTPTS[vsrc];"
+                f"[vsrc]crop={cw}:{ch}:{x_expr}:{y},"
+                f"scale={out_w}:{out_h}:flags=lanczos,setsar=1[vout]"
+            )
     else:
         fg = (
             f"[0:v]crop={cw}:{ch}:{x}:{y},"
@@ -377,12 +469,27 @@ def plan_sit_center(
         src_w, src_h, 9 / 16, zoom, instruction.person_x_norm, 0.48
     )
     if instruction.person_tracking:
-        x_expr = _tracked_crop_x_expr(src_w=src_w, crop_w=cw, tracking=instruction.person_tracking)
-        fg = (
-            f"[0:v]setpts=PTS-STARTPTS[vsrc];"
-            f"[vsrc]crop={cw}:{ch}:{x_expr}:{y},"
-            f"scale={out_w}:{out_h}:flags=lanczos,setsar=1[vout]"
-        )
+        if any(point.zoom is not None for point in instruction.person_tracking):
+            w_expr, h_expr, x_expr, y_expr = _tracked_crop_exprs(
+                src_w=src_w,
+                src_h=src_h,
+                target_aspect=9 / 16,
+                default_zoom=zoom,
+                center_y_norm=0.48,
+                tracking=instruction.person_tracking,
+            )
+            fg = (
+                f"[0:v]setpts=PTS-STARTPTS[vsrc];"
+                f"[vsrc]crop={w_expr}:{h_expr}:{x_expr}:{y_expr},"
+                f"scale={out_w}:{out_h}:flags=lanczos,setsar=1[vout]"
+            )
+        else:
+            x_expr = _tracked_crop_x_expr(src_w=src_w, crop_w=cw, tracking=instruction.person_tracking)
+            fg = (
+                f"[0:v]setpts=PTS-STARTPTS[vsrc];"
+                f"[vsrc]crop={cw}:{ch}:{x_expr}:{y},"
+                f"scale={out_w}:{out_h}:flags=lanczos,setsar=1[vout]"
+            )
     else:
         fg = (
             f"[0:v]crop={cw}:{ch}:{x}:{y},"

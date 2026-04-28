@@ -75,3 +75,50 @@ def test_build_assembled_transcript_rebases_times_after_hard_cuts():
     words = [word for seg in assembled["segments"] for word in seg["words"]]
     assert words[0]["start"] == 0.0
     assert words[-1]["end"] < 3.5
+
+
+def test_derive_render_spans_cuts_out_filler_word_without_large_silence():
+    transcript = {
+        "language": "en",
+        "segments": [
+            {
+                "start": 11.0,
+                "end": 12.0,
+                "text": "first uh second",
+                "words": [
+                    {"word": "first", "start": 11.0, "end": 11.2},
+                    {"word": "uh", "start": 11.23, "end": 11.45},
+                    {"word": "second", "start": 11.48, "end": 12.0},
+                ],
+            }
+        ],
+    }
+
+    spans = derive_render_spans(_clip(), transcript)
+
+    assert len(spans) == 2
+    assert spans[0].end_time_sec <= 11.25
+    assert spans[1].start_time_sec >= 11.43
+
+
+def test_build_assembled_transcript_excludes_removed_filler_words():
+    transcript = {
+        "language": "en",
+        "segments": [
+            {
+                "start": 11.0,
+                "end": 12.0,
+                "text": "first uh second",
+                "words": [
+                    {"word": "first", "start": 11.0, "end": 11.2},
+                    {"word": "uh", "start": 11.23, "end": 11.45},
+                    {"word": "second", "start": 11.48, "end": 12.0},
+                ],
+            }
+        ],
+    }
+
+    assembled = build_assembled_transcript(_clip(), transcript)
+
+    assembled_words = [word["word"] for seg in assembled["segments"] for word in seg["words"]]
+    assert assembled_words == ["first", "second"]

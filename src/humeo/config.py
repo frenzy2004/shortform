@@ -115,6 +115,7 @@ class PipelineConfig:
     subtitle_margin_v: int = 166
     subtitle_max_words_per_cue: int = 10
     subtitle_max_cue_sec: float = 2.8
+    burn_subtitles: bool = True
 
     def __post_init__(self):
         youtube_url = (self.youtube_url or "").strip() or None

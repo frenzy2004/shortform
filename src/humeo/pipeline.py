@@ -11,7 +11,13 @@ from humeo_core.schemas import LayoutInstruction, LayoutKind, RatingFeedback, Re
 from humeo import interactive, session_state
 from humeo.clip_assembly import apply_render_spans, assemble_clip, write_clip_plan
 from humeo.clip_selection_cache import cache_valid, load_meta, transcript_fingerprint, write_artifacts
-from humeo.clip_selector import load_clips, save_clips, select_clips
+from humeo.clip_selector import (
+    clip_quality_priority_score,
+    load_clips,
+    renumber_clips_dense,
+    save_clips,
+    select_clips,
+)
 from humeo.config import MAX_CLIP_DURATION_SEC, MIN_CLIP_DURATION_SEC, PipelineConfig
 from humeo.content_pruning import run_content_pruning_stage, snap_render_windows_to_sentence_boundaries
 from humeo.cutter import generate_ass
@@ -27,6 +33,7 @@ from humeo.ingest import (
 from humeo.layout_vision import run_layout_vision_stage
 from humeo.render_window import clip_for_render
 from humeo.reframe_ffmpeg import reframe_clip_ffmpeg
+from humeo.transcript_align import clip_subtitle_words, group_words_to_cue_chunks
 from humeo.video_cache import (
     extract_youtube_video_id,
     ingest_complete,
@@ -38,7 +45,22 @@ from humeo.video_cache import (
 
 logger = logging.getLogger(__name__)
 
-_WEAK_HOOK_START_WORDS = {"yeah", "so", "well", "right", "okay", "ok", "look", "listen"}
+_WEAK_HOOK_START_WORDS = {
+    "actually",
+    "basically",
+    "honestly",
+    "look",
+    "listen",
+    "okay",
+    "ok",
+    "right",
+    "so",
+    "well",
+    "yeah",
+}
+_WEAK_HOOK_START_PHRASES = {"i mean", "kind of", "sort of", "you know"}
+_STRONG_HOOK_LATEST_START_SEC = 6.0
+_FINAL_QUALITY_THRESHOLD = 0.68
 _NATIVE_HIGHLIGHT_CHART_DOMINANCE_Y2 = 0.68
 _NATIVE_HIGHLIGHT_MIN_PERSON_WIDTH = 0.42
 _NATIVE_HIGHLIGHT_MAX_TOP_ANCHORED_PERSON_Y1 = 0.12
@@ -137,18 +159,100 @@ def _filter_weak_hook_clips(clips: list, transcript: dict, *, min_kept: int) -> 
     dropped: list[str] = []
     for clip in clips:
         hook_start = clip.hook_start_sec
-        if hook_start is not None and hook_start > 10.0 and len(clips) - len(dropped) > min_kept:
-            dropped.append(f"{clip.clip_id} (hook starts at {hook_start:.1f}s)")
+        if (
+            hook_start is not None
+            and hook_start > _STRONG_HOOK_LATEST_START_SEC
+            and len(clips) - len(dropped) > min_kept
+        ):
+            dropped.append(
+                f"{clip.clip_id} (hook starts at {hook_start:.1f}s; target <= {_STRONG_HOOK_LATEST_START_SEC:.1f}s)"
+            )
             continue
         hook_text = _hook_window_text(clip, transcript).lower()
-        first_word = hook_text.split(maxsplit=1)[0] if hook_text else ""
-        if first_word in _WEAK_HOOK_START_WORDS and len(clips) - len(dropped) > min_kept:
-            dropped.append(f"{clip.clip_id} (weak opener: {first_word})")
+        first_words = [word.strip(".,!?;:'\"()[]{}") for word in hook_text.split()]
+        first_words = [word for word in first_words if word]
+        first_word = first_words[0] if first_words else ""
+        first_phrase = " ".join(first_words[:2])
+        if (
+            first_word in _WEAK_HOOK_START_WORDS or first_phrase in _WEAK_HOOK_START_PHRASES
+        ) and len(clips) - len(dropped) > min_kept:
+            weak_text = first_phrase if first_phrase in _WEAK_HOOK_START_PHRASES else first_word
+            dropped.append(f"{clip.clip_id} (weak opener: {weak_text})")
             continue
         kept.append(clip)
     if dropped:
         logger.info("Dropped %d weak-hook clip(s): %s", len(dropped), ", ".join(dropped))
     return kept
+
+
+def _caption_chunk_penalty(clip, transcript: dict, *, render_theme) -> float:
+    words = clip_subtitle_words(transcript, clip).words
+    if not words:
+        return 0.08
+
+    if str(render_theme) == "native_highlight":
+        cue_words = 6
+        cue_sec = 2.4
+        prefer_break_on_punctuation = True
+        min_words_before_break = 4
+    elif str(render_theme) == "reference_lower_third":
+        cue_words = 10
+        cue_sec = 2.8
+        prefer_break_on_punctuation = True
+        min_words_before_break = 5
+    else:
+        cue_words = 10
+        cue_sec = 2.8
+        prefer_break_on_punctuation = False
+        min_words_before_break = 1
+
+    cue_chunks = group_words_to_cue_chunks(
+        words,
+        max_words_per_cue=cue_words,
+        max_cue_sec=cue_sec,
+        prefer_break_on_punctuation=prefer_break_on_punctuation,
+        min_words_before_break=min_words_before_break,
+    )
+    penalty = 0.0
+    for chunk in cue_chunks:
+        duration = chunk[-1].end_time - chunk[0].start_time
+        if len(chunk) == 1 and len(cue_chunks) > 1:
+            penalty += 0.04
+        if len(chunk) >= cue_words and duration < 0.65:
+            penalty += 0.04
+        if duration > cue_sec + 0.35:
+            penalty += 0.03
+    return min(0.18, penalty)
+
+
+def _filter_low_quality_clips(clips: list, transcript: dict, *, min_kept: int, render_theme) -> list:
+    if len(clips) <= min_kept:
+        return renumber_clips_dense(clips)
+
+    ranked: list[tuple[float, object, float]] = []
+    for clip in clips:
+        render_clip = clip_for_render(clip)
+        caption_penalty = _caption_chunk_penalty(render_clip, transcript, render_theme=render_theme)
+        score = clip_quality_priority_score(clip) - caption_penalty
+        ranked.append((score, clip, caption_penalty))
+
+    ranked.sort(key=lambda item: item[0], reverse=True)
+    kept = [clip for score, clip, _ in ranked if score >= _FINAL_QUALITY_THRESHOLD]
+    if len(kept) < min_kept:
+        kept = [clip for _score, clip, _penalty in ranked[:min_kept]]
+
+    dropped = [
+        f"{clip.clip_id} (score={score:.2f}, caption_penalty={caption_penalty:.2f})"
+        for score, clip, caption_penalty in ranked
+        if clip not in kept
+    ]
+    if dropped:
+        logger.info(
+            "Dropped %d low-quality clip(s) after pruning: %s",
+            len(dropped),
+            ", ".join(dropped),
+        )
+    return renumber_clips_dense(kept)
 
 
 def _normalize_layout_for_render(instruction: LayoutInstruction, *, render_theme: RenderTheme) -> LayoutInstruction:
@@ -353,6 +457,12 @@ def run_pipeline(config: PipelineConfig) -> list[Path]:
     )
     clips = snap_render_windows_to_sentence_boundaries(clips, transcript)
     clips = _filter_render_valid_clips(clips, stage_label="Stage 2.5 guardrail")
+    clips = _filter_low_quality_clips(
+        clips,
+        transcript,
+        min_kept=config.clip_selection_min_kept,
+        render_theme=config.render_theme,
+    )
 
     # ------------------------------------------------------------------
     # Stage 2.75: Hard-cut assembly
@@ -445,20 +555,24 @@ def run_pipeline(config: PipelineConfig) -> list[Path]:
         instr = _normalize_layout_for_render(instr, render_theme=config.render_theme)
         clip.layout = instr.layout
         rclip = clip_for_render(clip)
-        # ASS (not SRT) so the caption file's PlayResY matches the output
-        # resolution and libass' font/margin scaling is 1:1.
-        subtitle_path = generate_ass(
-            rclip,
-            assembled.transcript,
-            subtitles_dir,
-            max_words_per_cue=config.subtitle_max_words_per_cue,
-            max_cue_sec=config.subtitle_max_cue_sec,
-            play_res_x=1080,
-            play_res_y=1920,
-            font_size=config.subtitle_font_size,
-            margin_v=config.subtitle_margin_v,
-            render_theme=config.render_theme,
-        )
+        subtitle_path = None
+        if config.burn_subtitles:
+            # ASS (not SRT) so the caption file's PlayResY matches the output
+            # resolution and libass' font/margin scaling is 1:1.
+            subtitle_path = generate_ass(
+                rclip,
+                assembled.transcript,
+                subtitles_dir,
+                max_words_per_cue=config.subtitle_max_words_per_cue,
+                max_cue_sec=config.subtitle_max_cue_sec,
+                play_res_x=1080,
+                play_res_y=1920,
+                font_size=config.subtitle_font_size,
+                margin_v=config.subtitle_margin_v,
+                render_theme=config.render_theme,
+            )
+        else:
+            logger.info("Clip %s: subtitle burn disabled for this run.", clip.clip_id)
         final_path = config.output_dir / f"short_{clip.clip_id}.mp4"
         if final_path.exists() and not config.overwrite_outputs:
             logger.info("Clip %s already rendered, skipping.", clip.clip_id)

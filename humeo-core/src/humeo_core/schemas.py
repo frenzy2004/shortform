@@ -132,6 +132,15 @@ class TimedCenterPoint(BaseModel):
 
     t_sec: float = Field(ge=0.0)
     x_norm: float = Field(ge=0.0, le=1.0)
+    zoom: float | None = Field(
+        default=None,
+        gt=0.0,
+        le=4.0,
+        description=(
+            "Optional per-sample crop zoom. When unset, the layout uses the "
+            "clip-level ``zoom`` value for that moment."
+        ),
+    )
 
 
 class ClipRenderSpan(BaseModel):
@@ -175,8 +184,10 @@ class LayoutInstruction(BaseModel):
     person_tracking: list[TimedCenterPoint] = Field(
         default_factory=list,
         description=(
-            "Optional clip-relative speaker x-center samples for moving 9:16 crops. "
-            "When empty, the compiler uses the static person_x_norm center."
+            "Optional clip-relative speaker framing samples for moving 9:16 crops. "
+            "Each point can shift the x-center and optionally widen/tighten the crop "
+            "for that moment. When empty, the compiler uses the static "
+            "person_x_norm/zoom settings."
         ),
     )
     chart_x_norm: float = Field(
