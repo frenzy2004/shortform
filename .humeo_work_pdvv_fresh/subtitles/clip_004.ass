@@ -1,0 +1,60 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,48,&H00FFFFFF,&H000000FF,&H00000000,&H70000000,-1,0,0,0,100,100,0,0,4,0,0,2,60,60,160,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.84,Default,,0,0,0,,Why It is because
+Dialogue: 0,0:00:01.84,0:00:03.12,Default,,0,0,0,,we like to what
+Dialogue: 0,0:00:03.12,0:00:04.78,Default,,0,0,0,,happened during Reaganomics And
+Dialogue: 0,0:00:04.78,0:00:08.11,Default,,0,0,0,,we think Trumponomics resembles
+Dialogue: 0,0:00:08.11,0:00:10.66,Default,,0,0,0,,greatly actually Reaganomics
+Dialogue: 0,0:00:10.78,0:00:11.56,Default,,0,0,0,,And look what happened
+Dialogue: 0,0:00:11.56,0:00:12.50,Default,,0,0,0,,to the dollar back
+Dialogue: 0,0:00:12.50,0:00:13.66,Default,,0,0,0,,then Now it was
+Dialogue: 0,0:00:13.66,0:00:15.55,Default,,0,0,0,,coming from the of
+Dialogue: 0,0:00:15.55,0:00:16.88,Default,,0,0,0,,in the late 70s
+Dialogue: 0,0:00:16.88,0:00:18.37,Default,,0,0,0,,But it really went
+Dialogue: 0,0:00:18.37,0:00:19.93,Default,,0,0,0,,into overdrive to the
+Dialogue: 0,0:00:19.93,0:00:21.06,Default,,0,0,0,,point where all the
+Dialogue: 0,0:00:21.06,0:00:22.81,Default,,0,0,0,,treasury and ministers around
+Dialogue: 0,0:00:22.81,0:00:24.59,Default,,0,0,0,,the got together and
+Dialogue: 0,0:00:24.59,0:00:26.03,Default,,0,0,0,,said this is becoming
+Dialogue: 0,0:00:26.03,0:00:27.81,Default,,0,0,0,,a deflationary risk to
+Dialogue: 0,0:00:27.81,0:00:28.68,Default,,0,0,0,,the rest of the
+Dialogue: 0,0:00:29.16,0:00:30.37,Default,,0,0,0,,because a lot of
+Dialogue: 0,0:00:30.37,0:00:33.28,Default,,0,0,0,,debt is
+Dialogue: 0,0:00:33.28,0:00:35.15,Default,,0,0,0,,denominated was and still
+Dialogue: 0,0:00:35.15,0:00:37.49,Default,,0,0,0,,is denominated in
+Dialogue: 0,0:00:37.49,0:00:40.18,Default,,0,0,0,,dollars So the debt
+Dialogue: 0,0:00:40.18,0:00:41.34,Default,,0,0,0,,service was getting more
+Dialogue: 0,0:00:41.34,0:00:43.00,Default,,0,0,0,,and expensive back then
+Dialogue: 0,0:00:43.00,0:00:45.27,Default,,0,0,0,,We think we're not
+Dialogue: 0,0:00:45.27,0:00:46.21,Default,,0,0,0,,going to see a
+Dialogue: 0,0:00:46.21,0:00:46.93,Default,,0,0,0,,like we did in
+Dialogue: 0,0:00:46.93,0:00:48.06,Default,,0,0,0,,the early 80s But
+Dialogue: 0,0:00:48.06,0:00:49.33,Default,,0,0,0,,we think the pressure
+Dialogue: 0,0:00:49.33,0:00:50.62,Default,,0,0,0,,is to the upside
+Dialogue: 0,0:00:50.84,0:00:51.84,Default,,0,0,0,,if you look at
+Dialogue: 0,0:00:51.84,0:00:53.75,Default,,0,0,0,,this chart in the
+Dialogue: 0,0:00:53.75,0:00:55.34,Default,,0,0,0,,context of you will
+Dialogue: 0,0:00:55.34,0:00:56.88,Default,,0,0,0,,see that we are
+Dialogue: 0,0:00:56.88,0:00:58.53,Default,,0,0,0,,closer if you take
+Dialogue: 0,0:00:58.53,0:01:00.50,Default,,0,0,0,,out that boom in
+Dialogue: 0,0:01:00.50,0:01:01.46,Default,,0,0,0,,the early 80s we're
+Dialogue: 0,0:01:01.46,0:01:02.77,Default,,0,0,0,,closer to the higher
+Dialogue: 0,0:01:02.77,0:01:05.21,Default,,0,0,0,,end of the
+Dialogue: 0,0:01:05.21,0:01:07.49,Default,,0,0,0,,dollar's than
+Dialogue: 0,0:01:07.49,0:01:08.78,Default,,0,0,0,,we are to the
+Dialogue: 0,0:01:08.78,0:01:10.40,Default,,0,0,0,,end And again I
+Dialogue: 0,0:01:10.40,0:01:11.78,Default,,0,0,0,,think that goes against
+Dialogue: 0,0:01:11.78,0:01:14.03,Default,,0,0,0,,conventional thinking right
+Dialogue: 0,0:01:14.03,0:01:14.36,Default,,0,0,0,,now

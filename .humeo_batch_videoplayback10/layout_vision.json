@@ -1,0 +1,1110 @@
+{
+  "clips": {
+    "003": {
+      "instruction": {
+        "clip_id": "003",
+        "layout": "sit_center",
+        "zoom": 1.0,
+        "person_x_norm": 0.48380127948432744,
+        "person_tracking": [
+          {
+            "t_sec": 0.0,
+            "x_norm": 0.48380127948432744
+          },
+          {
+            "t_sec": 83.61995239257772,
+            "x_norm": 0.48380127948432744
+          }
+        ],
+        "chart_x_norm": 0.0,
+        "focus_stack_order": "chart_then_person",
+        "split_chart_region": null,
+        "split_person_region": null,
+        "split_second_chart_region": null,
+        "split_second_person_region": null,
+        "top_band_ratio": 0.5
+      },
+      "raw": {
+        "layout": "split_two_persons",
+        "person_bbox": {
+          "x1": 0.178,
+          "y1": 0.1733,
+          "x2": 0.4951,
+          "y2": 0.8444
+        },
+        "face_bbox": {
+          "x1": 0.2844,
+          "y1": 0.1822,
+          "x2": 0.3812,
+          "y2": 0.3185
+        },
+        "chart_bbox": null,
+        "second_person_bbox": {
+          "x1": 0.5115,
+          "y1": 0.2022,
+          "x2": 0.8521,
+          "y2": 0.8467
+        },
+        "second_face_bbox": {
+          "x1": 0.5927,
+          "y1": 0.2044,
+          "x2": 0.6833,
+          "y2": 0.3511
+        },
+        "second_chart_bbox": null,
+        "reason": "The frame features two people seated side-by-side in an interview or panel setting, which is a perfect fit for the split_two_persons layout.",
+        "speaker_follow_tracking": {
+          "mode": "two_speaker_follow",
+          "left_segmentation": {
+            "provider": "replicate",
+            "model": "meta/sam-2-video:2d7219877ca847f463d749d9b224e62f7b078fe035d60a74b58889b455d5cbad",
+            "seed_point_px": [
+              213,
+              90
+            ],
+            "seed_frame": 1253,
+            "prompt_frames": [
+              0,
+              1253
+            ],
+            "output_frame_interval": 251,
+            "mask_count": 10
+          },
+          "right_segmentation": {
+            "provider": "replicate",
+            "model": "meta/sam-2-video:2d7219877ca847f463d749d9b224e62f7b078fe035d60a74b58889b455d5cbad",
+            "seed_point_px": [
+              408,
+              100
+            ],
+            "seed_frame": 1253,
+            "prompt_frames": [
+              0,
+              1253
+            ],
+            "output_frame_interval": 251,
+            "mask_count": 10
+          },
+          "focus_samples": [
+            {
+              "time_sec": 0.0,
+              "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_batch_videoplayback10\\layout_tracking\\003\\speaker_focus\\003_000000.jpg",
+              "speaker": "left",
+              "raw": {
+                "speaker": "left",
+                "reason": "The person on the left has her mouth open and is gesturing with her hands, indicating she is speaking. The person on the right has his mouth closed and is looking at her, appearing to be listening."
+              }
+            },
+            {
+              "time_sec": 8.362,
+              "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_batch_videoplayback10\\layout_tracking\\003\\speaker_focus\\003_008362.jpg",
+              "speaker": "unclear",
+              "error": "OpenRouter vision returned empty response"
+            },
+            {
+              "time_sec": 16.724,
+              "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_batch_videoplayback10\\layout_tracking\\003\\speaker_focus\\003_016724.jpg",
+              "speaker": "left",
+              "raw": {
+                "speaker": "left",
+                "reason": "The person on the left has her hands up in a gesturing motion and her mouth is slightly open, suggesting she is speaking. The person on the right has a closed mouth and appears to be listening."
+              }
+            },
+            {
+              "time_sec": 25.086,
+              "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_batch_videoplayback10\\layout_tracking\\003\\speaker_focus\\003_025086.jpg",
+              "speaker": "left",
+              "raw": {
+                "speaker": "left",
+                "reason": "The person on the left has their mouth open in a speaking expression and is actively gesturing with their hands. The person on the right has their mouth closed and appears to be listening."
+              }
+            },
+            {
+              "time_sec": 33.448,
+              "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_batch_videoplayback10\\layout_tracking\\003\\speaker_focus\\003_033448.jpg",
+              "speaker": "left",
+              "raw": {
+                "speaker": "left",
+                "reason": "The person on the left has their mouth slightly open and is actively gesturing with their hands, indicating they are speaking. The person on the right has a closed mouth and is in a listening posture."
+              }
+            },
+            {
+              "time_sec": 41.81,
+              "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_batch_videoplayback10\\layout_tracking\\003\\speaker_focus\\003_041810.jpg",
+              "speaker": "left",
+              "raw": {
+                "speaker": "left",
+                "reason": "The person on the left has their mouth open as if mid-speech and is making a hand gesture, which often accompanies speaking. The person on the right has their mouth closed and appears to be listening."
+              }
+            },
+            {
+              "time_sec": 50.172,
+              "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_batch_videoplayback10\\layout_tracking\\003\\speaker_focus\\003_050172.jpg",
+              "speaker": "left",
+              "raw": {
+                "speaker": "left",
+                "reason": "The person on the left is gesturing with both hands and has a slightly open mouth, indicating they are in the middle of speaking. The person on the right has a closed mouth and is looking down, appearing to be listening."
+              }
+            },
+            {
+              "time_sec": 58.534,
+              "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_batch_videoplayback10\\layout_tracking\\003\\speaker_focus\\003_058534.jpg",
+              "speaker": "right",
+              "raw": {
+                "speaker": "right",
+                "reason": "The person on the right is holding the microphone, which is the strongest indicator of who is speaking. The person on the left appears to be listening attentively."
+              }
+            },
+            {
+              "time_sec": 66.896,
+              "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_batch_videoplayback10\\layout_tracking\\003\\speaker_focus\\003_066896.jpg",
+              "speaker": "left",
+              "raw": {
+                "speaker": "left",
+                "reason": "The person on the left has their mouth open in a speaking expression, while the person on the right has their mouth closed and appears to be listening."
+              }
+            },
+            {
+              "time_sec": 75.258,
+              "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_batch_videoplayback10\\layout_tracking\\003\\speaker_focus\\003_075258.jpg",
+              "speaker": "left",
+              "raw": {
+                "speaker": "left",
+                "reason": "The person on the left has their mouth open in a speaking expression and is making an emphatic hand gesture, while the person on the right has their mouth closed and appears to be listening."
+              }
+            },
+            {
+              "time_sec": 83.62,
+              "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_batch_videoplayback10\\layout_tracking\\003\\speaker_focus\\003_083620.jpg",
+              "speaker": "unclear",
+              "error": "Command '['ffmpeg', '-y', '-loglevel', 'error', '-ss', '83.620', '-i', 'C:\\\\Users\\\\HP\\\\new shortform\\\\.humeo_batch_videoplayback10\\\\assembled\\\\clip_003.mp4', '-frames:v', '1', '-q:v', '2', 'C:\\\\Users\\\\HP\\\\new shortform\\\\.humeo_batch_videoplayback10\\\\layout_tracking\\\\003\\\\speaker_focus\\\\003_083620.jpg']' returned non-zero exit status 4294967274."
+            }
+          ],
+          "resolved_focus": [
+            {
+              "time_sec": 0.0,
+              "speaker": "left"
+            },
+            {
+              "time_sec": 8.362,
+              "speaker": "left"
+            },
+            {
+              "time_sec": 16.724,
+              "speaker": "left"
+            },
+            {
+              "time_sec": 25.086,
+              "speaker": "left"
+            },
+            {
+              "time_sec": 33.448,
+              "speaker": "left"
+            },
+            {
+              "time_sec": 41.81,
+              "speaker": "left"
+            },
+            {
+              "time_sec": 50.172,
+              "speaker": "left"
+            },
+            {
+              "time_sec": 58.534,
+              "speaker": "right"
+            },
+            {
+              "time_sec": 66.896,
+              "speaker": "left"
+            },
+            {
+              "time_sec": 75.258,
+              "speaker": "left"
+            },
+            {
+              "time_sec": 83.62,
+              "speaker": "left"
+            }
+          ]
+        }
+      }
+    },
+    "004": {
+      "instruction": {
+        "clip_id": "004",
+        "layout": "split_two_persons",
+        "zoom": 1.0,
+        "person_x_norm": 0.3381945,
+        "person_tracking": [],
+        "chart_x_norm": 0.0,
+        "focus_stack_order": "chart_then_person",
+        "split_chart_region": null,
+        "split_person_region": {
+          "x1": 0.194444,
+          "y1": 0.205556,
+          "x2": 0.513889,
+          "y2": 0.880556,
+          "label": "",
+          "confidence": 1.0
+        },
+        "split_second_chart_region": null,
+        "split_second_person_region": {
+          "x1": 0.5125,
+          "y1": 0.180556,
+          "x2": 0.861111,
+          "y2": 0.822222,
+          "label": "",
+          "confidence": 1.0
+        },
+        "top_band_ratio": 0.5
+      },
+      "raw": {
+        "layout": "split_two_persons",
+        "person_bbox": {
+          "x1": 0.194444,
+          "y1": 0.205556,
+          "x2": 0.513889,
+          "y2": 0.880556
+        },
+        "face_bbox": {
+          "x1": 0.295833,
+          "y1": 0.222222,
+          "x2": 0.380556,
+          "y2": 0.363889
+        },
+        "chart_bbox": null,
+        "second_person_bbox": {
+          "x1": 0.5125,
+          "y1": 0.180556,
+          "x2": 0.861111,
+          "y2": 0.822222
+        },
+        "second_face_bbox": {
+          "x1": 0.613889,
+          "y1": 0.2,
+          "x2": 0.701389,
+          "y2": 0.341667
+        },
+        "second_chart_bbox": null,
+        "reason": "The frame contains two speakers seated side-by-side, suitable for a split-screen layout focusing on both individuals.",
+        "speaker_follow_tracking": {
+          "error": "Two-speaker SAM follow did not return both speaker tracks"
+        }
+      }
+    },
+    "005": {
+      "instruction": {
+        "clip_id": "005",
+        "layout": "sit_center",
+        "zoom": 1.0,
+        "person_x_norm": 0.46042040454942584,
+        "person_tracking": [
+          {
+            "t_sec": 0.0,
+            "x_norm": 0.46042040454942584
+          },
+          {
+            "t_sec": 5.245,
+            "x_norm": 0.46042040454942584
+          },
+          {
+            "t_sec": 10.49,
+            "x_norm": 0.46042040454942584
+          },
+          {
+            "t_sec": 15.735,
+            "x_norm": 0.46042040454942584
+          },
+          {
+            "t_sec": 20.98,
+            "x_norm": 0.36614661302395207
+          },
+          {
+            "t_sec": 26.225,
+            "x_norm": 0.36614661302395207
+          },
+          {
+            "t_sec": 31.47,
+            "x_norm": 0.36614661302395207
+          },
+          {
+            "t_sec": 36.715,
+            "x_norm": 0.36614661302395207
+          },
+          {
+            "t_sec": 41.96,
+            "x_norm": 0.36614661302395207
+          },
+          {
+            "t_sec": 47.205,
+            "x_norm": 0.36614661302395207
+          },
+          {
+            "t_sec": 52.44999999999948,
+            "x_norm": 0.6182309540150995
+          }
+        ],
+        "chart_x_norm": 0.0,
+        "focus_stack_order": "chart_then_person",
+        "split_chart_region": null,
+        "split_person_region": null,
+        "split_second_chart_region": null,
+        "split_second_person_region": null,
+        "top_band_ratio": 0.5
+      },
+      "raw": {
+        "layout": "split_two_persons",
+        "person_bbox": {
+          "x1": 0.159,
+          "y1": 0.163,
+          "x2": 0.525,
+          "y2": 0.901
+        },
+        "face_bbox": {
+          "x1": 0.294,
+          "y1": 0.211,
+          "x2": 0.395,
+          "y2": 0.372
+        },
+        "chart_bbox": null,
+        "second_person_bbox": {
+          "x1": 0.525,
+          "y1": 0.211,
+          "x2": 0.852,
+          "y2": 0.854
+        },
+        "second_face_bbox": {
+          "x1": 0.592,
+          "y1": 0.24,
+          "x2": 0.68,
+          "y2": 0.39
+        },
+        "second_chart_bbox": null,
+        "reason": "Two speakers are visible on stage in a panel discussion or interview format.",
+        "speaker_follow_tracking": {
+          "mode": "two_speaker_follow",
+          "left_segmentation": {
+            "provider": "replicate",
+            "model": "meta/sam-2-video:2d7219877ca847f463d749d9b224e62f7b078fe035d60a74b58889b455d5cbad",
+            "seed_point_px": [
+              220,
+              105
+            ],
+            "seed_frame": 786,
+            "prompt_frames": [
+              0,
+              786
+            ],
+            "output_frame_interval": 157,
+            "mask_count": 11
+          },
+          "right_segmentation": {
+            "provider": "replicate",
+            "model": "meta/sam-2-video:2d7219877ca847f463d749d9b224e62f7b078fe035d60a74b58889b455d5cbad",
+            "seed_point_px": [
+              407,
+              113
+            ],
+            "seed_frame": 786,
+            "prompt_frames": [
+              0,
+              786
+            ],
+            "output_frame_interval": 157,
+            "mask_count": 11
+          },
+          "focus_samples": [
+            {
+              "time_sec": 0.0,
+              "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_batch_videoplayback10\\layout_tracking\\005\\speaker_focus\\005_000000.jpg",
+              "speaker": "right",
+              "raw": {
+                "speaker": "right",
+                "reason": "The person on the right has their mouth slightly open as if in mid-speech and is holding a microphone. The person on the left has their mouth closed and appears to be listening."
+              }
+            },
+            {
+              "time_sec": 5.245,
+              "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_batch_videoplayback10\\layout_tracking\\005\\speaker_focus\\005_005245.jpg",
+              "speaker": "left",
+              "raw": {
+                "speaker": "left",
+                "reason": "The person on the left has their mouth slightly open and is making an expressive hand gesture, suggesting they are in the middle of speaking. The person on the right has their mouth closed and appears to be listening."
+              }
+            },
+            {
+              "time_sec": 10.49,
+              "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_batch_videoplayback10\\layout_tracking\\005\\speaker_focus\\005_010490.jpg",
+              "speaker": "left",
+              "raw": {
+                "speaker": "left",
+                "reason": "The person on the left has their mouth slightly open and is making a hand gesture, which are strong indicators of speaking. The person on the right has their mouth closed and appears to be listening."
+              }
+            },
+            {
+              "time_sec": 15.735,
+              "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_batch_videoplayback10\\layout_tracking\\005\\speaker_focus\\005_015735.jpg",
+              "speaker": "left",
+              "raw": {
+                "speaker": "left",
+                "reason": "The person on the left has a slightly open mouth and is gesturing with her hands, suggesting she is in the middle of speaking. The person on the right has his mouth closed and appears to be listening."
+              }
+            },
+            {
+              "time_sec": 20.98,
+              "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_batch_videoplayback10\\layout_tracking\\005\\speaker_focus\\005_020980.jpg",
+              "speaker": "left",
+              "raw": {
+                "speaker": "left",
+                "reason": "The person on the left has their mouth open mid-speech and is making an emphatic hand gesture. The person on the right has their mouth closed and appears to be listening."
+              }
+            },
+            {
+              "time_sec": 26.225,
+              "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_batch_videoplayback10\\layout_tracking\\005\\speaker_focus\\005_026225.jpg",
+              "speaker": "left",
+              "raw": {
+                "speaker": "left",
+                "reason": "The person on the left has their mouth open as if speaking and is making active hand gestures. The person on the right has their mouth closed and appears to be listening."
+              }
+            },
+            {
+              "time_sec": 31.47,
+              "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_batch_videoplayback10\\layout_tracking\\005\\speaker_focus\\005_031470.jpg",
+              "speaker": "left",
+              "raw": {
+                "speaker": "left",
+                "reason": "The person on the left has their mouth open as if mid-speech and is actively gesturing with their hands. The person on the right has their mouth closed and appears to be listening."
+              }
+            },
+            {
+              "time_sec": 36.715,
+              "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_batch_videoplayback10\\layout_tracking\\005\\speaker_focus\\005_036715.jpg",
+              "speaker": "left",
+              "raw": {
+                "speaker": "left",
+                "reason": "The person on the left has their mouth open and is gesturing with their hands, indicating they are speaking. The person on the right has their mouth closed and appears to be listening."
+              }
+            },
+            {
+              "time_sec": 41.96,
+              "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_batch_videoplayback10\\layout_tracking\\005\\speaker_focus\\005_041960.jpg",
+              "speaker": "left",
+              "raw": {
+                "speaker": "left",
+                "reason": "The person on the left has their mouth open as if speaking and is making a hand gesture. The person on the right has their mouth closed and appears to be listening."
+              }
+            },
+            {
+              "time_sec": 47.205,
+              "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_batch_videoplayback10\\layout_tracking\\005\\speaker_focus\\005_047205.jpg",
+              "speaker": "left",
+              "raw": {
+                "speaker": "left",
+                "reason": "The person on the left has their mouth open as if mid-speech and is actively gesturing with both hands. The person on the right has their mouth closed and appears to be listening."
+              }
+            },
+            {
+              "time_sec": 52.45,
+              "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_batch_videoplayback10\\layout_tracking\\005\\speaker_focus\\005_052450.jpg",
+              "speaker": "right",
+              "raw": {
+                "speaker": "right",
+                "reason": "The person on the right is holding a microphone and has a slightly open mouth, suggesting they are speaking. The person on the left has their mouth closed and appears to be listening."
+              }
+            }
+          ],
+          "resolved_focus": [
+            {
+              "time_sec": 0.0,
+              "speaker": "right"
+            },
+            {
+              "time_sec": 5.245,
+              "speaker": "left"
+            },
+            {
+              "time_sec": 10.49,
+              "speaker": "left"
+            },
+            {
+              "time_sec": 15.735,
+              "speaker": "left"
+            },
+            {
+              "time_sec": 20.98,
+              "speaker": "left"
+            },
+            {
+              "time_sec": 26.225,
+              "speaker": "left"
+            },
+            {
+              "time_sec": 31.47,
+              "speaker": "left"
+            },
+            {
+              "time_sec": 36.715,
+              "speaker": "left"
+            },
+            {
+              "time_sec": 41.96,
+              "speaker": "left"
+            },
+            {
+              "time_sec": 47.205,
+              "speaker": "left"
+            },
+            {
+              "time_sec": 52.45,
+              "speaker": "right"
+            }
+          ]
+        }
+      }
+    },
+    "006": {
+      "instruction": {
+        "clip_id": "006",
+        "layout": "sit_center",
+        "zoom": 1.0,
+        "person_x_norm": 0.28683389193809605,
+        "person_tracking": [
+          {
+            "t_sec": 0.0,
+            "x_norm": 0.28683389193809605
+          },
+          {
+            "t_sec": 5.248,
+            "x_norm": 0.37073743836771766
+          },
+          {
+            "t_sec": 10.496,
+            "x_norm": 0.37073743836771766
+          },
+          {
+            "t_sec": 15.744,
+            "x_norm": 0.37073743836771766
+          },
+          {
+            "t_sec": 20.992,
+            "x_norm": 0.37073743836771766
+          },
+          {
+            "t_sec": 26.24,
+            "x_norm": 0.37073743836771766
+          },
+          {
+            "t_sec": 31.488,
+            "x_norm": 0.32810691012067705
+          },
+          {
+            "t_sec": 36.736,
+            "x_norm": 0.2862367801534146
+          },
+          {
+            "t_sec": 41.984,
+            "x_norm": 0.2862367801534146
+          },
+          {
+            "t_sec": 47.232,
+            "x_norm": 0.2862367801534146
+          },
+          {
+            "t_sec": 52.479968261718454,
+            "x_norm": 0.2862367801534146
+          }
+        ],
+        "chart_x_norm": 0.0,
+        "focus_stack_order": "chart_then_person",
+        "split_chart_region": null,
+        "split_person_region": null,
+        "split_second_chart_region": null,
+        "split_second_person_region": null,
+        "top_band_ratio": 0.5
+      },
+      "raw": {
+        "layout": "split_two_persons",
+        "person_bbox": {
+          "x1": 0.2818,
+          "y1": 0.3629,
+          "x2": 0.531,
+          "y2": 0.861
+        },
+        "face_bbox": {
+          "x1": 0.354,
+          "y1": 0.382,
+          "x2": 0.421,
+          "y2": 0.481
+        },
+        "chart_bbox": null,
+        "second_person_bbox": {
+          "x1": 0.541,
+          "y1": 0.401,
+          "x2": 0.833,
+          "y2": 0.921
+        },
+        "second_face_bbox": {
+          "x1": 0.601,
+          "y1": 0.423,
+          "x2": 0.671,
+          "y2": 0.528
+        },
+        "second_chart_bbox": null,
+        "reason": "The frame contains two speakers seated on a stage, making the split_two_persons layout the most appropriate choice to feature both individuals in a vertical crop.",
+        "speaker_follow_tracking": {
+          "mode": "two_speaker_follow",
+          "left_segmentation": {
+            "provider": "replicate",
+            "model": "meta/sam-2-video:2d7219877ca847f463d749d9b224e62f7b078fe035d60a74b58889b455d5cbad",
+            "seed_point_px": [
+              248,
+              155
+            ],
+            "seed_frame": 786,
+            "prompt_frames": [
+              0,
+              786
+            ],
+            "output_frame_interval": 157,
+            "mask_count": 11
+          },
+          "right_segmentation": {
+            "provider": "replicate",
+            "model": "meta/sam-2-video:2d7219877ca847f463d749d9b224e62f7b078fe035d60a74b58889b455d5cbad",
+            "seed_point_px": [
+              407,
+              171
+            ],
+            "seed_frame": 786,
+            "prompt_frames": [
+              0,
+              786
+            ],
+            "output_frame_interval": 157,
+            "mask_count": 11
+          },
+          "focus_samples": [
+            {
+              "time_sec": 0.0,
+              "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_batch_videoplayback10\\layout_tracking\\006\\speaker_focus\\006_000000.jpg",
+              "speaker": "unclear",
+              "raw": {
+                "speaker": "unclear",
+                "reason": "Neither person has a clearly open mouth or an expression indicative of speaking in this specific frame. The man on the right holds a microphone, but his expression is passive, and the woman on the left appears to be listening with her mouth closed."
+              }
+            },
+            {
+              "time_sec": 5.248,
+              "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_batch_videoplayback10\\layout_tracking\\006\\speaker_focus\\006_005248.jpg",
+              "speaker": "left",
+              "raw": {
+                "speaker": "left",
+                "reason": "The person on the left has their hand raised in a gesturing motion and their mouth is slightly open, indicating they are speaking. The person on the right has a closed mouth and appears to be listening."
+              }
+            },
+            {
+              "time_sec": 10.496,
+              "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_batch_videoplayback10\\layout_tracking\\006\\speaker_focus\\006_010496.jpg",
+              "speaker": "left",
+              "raw": {
+                "speaker": "left",
+                "reason": "The person on the left has their mouth slightly open and is actively gesturing with their hands, indicating they are speaking. The person on the right has their mouth closed and is looking at the person on the left, appearing to be listening."
+              }
+            },
+            {
+              "time_sec": 15.744,
+              "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_batch_videoplayback10\\layout_tracking\\006\\speaker_focus\\006_015744.jpg",
+              "speaker": "left",
+              "raw": {
+                "speaker": "left",
+                "reason": "The person on the left has their mouth open and is making expressive hand gestures, indicating they are speaking. The person on the right has a closed mouth and is looking at the person on the left, appearing to be listening."
+              }
+            },
+            {
+              "time_sec": 20.992,
+              "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_batch_videoplayback10\\layout_tracking\\006\\speaker_focus\\006_020992.jpg",
+              "speaker": "left",
+              "raw": {
+                "speaker": "left",
+                "reason": "The person on the left is actively gesturing with both hands and has a slightly open mouth, suggesting they are in the middle of speaking. The person on the right has a closed mouth and is leaning back, appearing to be listening."
+              }
+            },
+            {
+              "time_sec": 26.24,
+              "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_batch_videoplayback10\\layout_tracking\\006\\speaker_focus\\006_026240.jpg",
+              "speaker": "left",
+              "raw": {
+                "speaker": "left",
+                "reason": "The person on the left has their mouth slightly open and is using hand gestures, which are strong indicators of speaking. The person on the right has their mouth closed and appears to be listening."
+              }
+            },
+            {
+              "time_sec": 31.488,
+              "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_batch_videoplayback10\\layout_tracking\\006\\speaker_focus\\006_031488.jpg",
+              "speaker": "right",
+              "raw": {
+                "speaker": "right",
+                "reason": "The person on the right is holding a microphone and has their mouth slightly open, consistent with speaking. The person on the left has their hand over their face, suggesting they are listening or reacting."
+              }
+            },
+            {
+              "time_sec": 36.736,
+              "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_batch_videoplayback10\\layout_tracking\\006\\speaker_focus\\006_036736.jpg",
+              "speaker": "left",
+              "raw": {
+                "speaker": "left",
+                "reason": "The person on the left has their mouth slightly open and is making an emphatic hand gesture, indicating they are speaking. The person on the right has their mouth closed and appears to be listening."
+              }
+            },
+            {
+              "time_sec": 41.984,
+              "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_batch_videoplayback10\\layout_tracking\\006\\speaker_focus\\006_041984.jpg",
+              "speaker": "left",
+              "raw": {
+                "speaker": "left",
+                "reason": "The person on the left has their mouth open and is actively gesturing with both hands, indicating they are speaking. The person on the right has their mouth closed and is looking towards the left, appearing to be listening."
+              }
+            },
+            {
+              "time_sec": 47.232,
+              "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_batch_videoplayback10\\layout_tracking\\006\\speaker_focus\\006_047232.jpg",
+              "speaker": "left",
+              "raw": {
+                "speaker": "left",
+                "reason": "The person on the left has their mouth slightly open and is actively gesturing with their hands, indicating they are speaking. The person on the right has their mouth closed and appears to be listening."
+              }
+            },
+            {
+              "time_sec": 52.48,
+              "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_batch_videoplayback10\\layout_tracking\\006\\speaker_focus\\006_052480.jpg",
+              "speaker": "left",
+              "raw": {
+                "speaker": "left",
+                "reason": "The person on the left has their mouth open and is gesturing with their hands, which are common indicators of speaking. The person on the right has their mouth closed and appears to be listening."
+              }
+            }
+          ],
+          "resolved_focus": [
+            {
+              "time_sec": 0.0,
+              "speaker": "left"
+            },
+            {
+              "time_sec": 5.248,
+              "speaker": "left"
+            },
+            {
+              "time_sec": 10.496,
+              "speaker": "left"
+            },
+            {
+              "time_sec": 15.744,
+              "speaker": "left"
+            },
+            {
+              "time_sec": 20.992,
+              "speaker": "left"
+            },
+            {
+              "time_sec": 26.24,
+              "speaker": "left"
+            },
+            {
+              "time_sec": 31.488,
+              "speaker": "right"
+            },
+            {
+              "time_sec": 36.736,
+              "speaker": "left"
+            },
+            {
+              "time_sec": 41.984,
+              "speaker": "left"
+            },
+            {
+              "time_sec": 47.232,
+              "speaker": "left"
+            },
+            {
+              "time_sec": 52.48,
+              "speaker": "left"
+            }
+          ]
+        }
+      }
+    },
+    "007": {
+      "instruction": {
+        "clip_id": "007",
+        "layout": "sit_center",
+        "zoom": 1.0,
+        "person_x_norm": 0.28499659053900017,
+        "person_tracking": [
+          {
+            "t_sec": 0.0,
+            "x_norm": 0.28499659053900017
+          },
+          {
+            "t_sec": 5.051,
+            "x_norm": 0.28499659053900017
+          },
+          {
+            "t_sec": 10.102,
+            "x_norm": 0.37076301248664534
+          },
+          {
+            "t_sec": 15.153,
+            "x_norm": 0.37076301248664534
+          },
+          {
+            "t_sec": 20.204,
+            "x_norm": 0.37076301248664534
+          },
+          {
+            "t_sec": 25.255,
+            "x_norm": 0.37076301248664534
+          },
+          {
+            "t_sec": 30.306,
+            "x_norm": 0.2793910468189541
+          },
+          {
+            "t_sec": 35.357,
+            "x_norm": 0.2793910468189541
+          },
+          {
+            "t_sec": 40.408,
+            "x_norm": 0.2793910468189541
+          },
+          {
+            "t_sec": 45.459,
+            "x_norm": 0.2793910468189541
+          },
+          {
+            "t_sec": 50.51,
+            "x_norm": 0.2793910468189541
+          },
+          {
+            "t_sec": 50.51000671386703,
+            "x_norm": 0.2793910468189541
+          }
+        ],
+        "chart_x_norm": 0.0,
+        "focus_stack_order": "chart_then_person",
+        "split_chart_region": null,
+        "split_person_region": null,
+        "split_second_chart_region": null,
+        "split_second_person_region": null,
+        "top_band_ratio": 0.5
+      },
+      "raw": {
+        "layout": "split_two_persons",
+        "person_bbox": {
+          "x1": 0.2111,
+          "y1": 0.4342,
+          "x2": 0.313,
+          "y2": 0.7185
+        },
+        "face_bbox": {
+          "x1": 0.2229,
+          "y1": 0.4388,
+          "x2": 0.2583,
+          "y2": 0.5111
+        },
+        "chart_bbox": null,
+        "second_person_bbox": {
+          "x1": 0.313,
+          "y1": 0.4138,
+          "x2": 0.463,
+          "y2": 0.7888
+        },
+        "second_face_bbox": {
+          "x1": 0.3442,
+          "y1": 0.4175,
+          "x2": 0.3802,
+          "y2": 0.4925
+        },
+        "second_chart_bbox": null,
+        "reason": "The image contains two people seated on a stage, engaged in a conversation. This fits the 'split_two_persons' layout, capturing both speakers in a panel or interview setting.",
+        "speaker_follow_tracking": {
+          "mode": "two_speaker_follow",
+          "left_segmentation": {
+            "provider": "replicate",
+            "model": "meta/sam-2-video:2d7219877ca847f463d749d9b224e62f7b078fe035d60a74b58889b455d5cbad",
+            "seed_point_px": [
+              154,
+              171
+            ],
+            "seed_frame": 757,
+            "prompt_frames": [
+              0,
+              757
+            ],
+            "output_frame_interval": 151,
+            "mask_count": 11
+          },
+          "right_segmentation": {
+            "provider": "replicate",
+            "model": "meta/sam-2-video:2d7219877ca847f463d749d9b224e62f7b078fe035d60a74b58889b455d5cbad",
+            "seed_point_px": [
+              232,
+              164
+            ],
+            "seed_frame": 757,
+            "prompt_frames": [
+              0,
+              757
+            ],
+            "output_frame_interval": 151,
+            "mask_count": 11
+          },
+          "focus_samples": [
+            {
+              "time_sec": 0.0,
+              "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_batch_videoplayback10\\layout_tracking\\007\\speaker_focus\\007_000000.jpg",
+              "speaker": "right",
+              "raw": {
+                "speaker": "right",
+                "reason": "The person on the right is holding a microphone to their mouth, which appears slightly open, suggesting they are speaking. The person on the left has a closed mouth and is looking at the person on the right, appearing to listen."
+              }
+            },
+            {
+              "time_sec": 5.051,
+              "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_batch_videoplayback10\\layout_tracking\\007\\speaker_focus\\007_005051.jpg",
+              "speaker": "left",
+              "raw": {
+                "speaker": "left",
+                "reason": "The person on the left has their mouth slightly open and is actively gesturing with their hands, indicating they are speaking. The person on the right has their mouth closed and appears to be listening."
+              }
+            },
+            {
+              "time_sec": 10.102,
+              "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_batch_videoplayback10\\layout_tracking\\007\\speaker_focus\\007_010102.jpg",
+              "speaker": "left",
+              "raw": {
+                "speaker": "left",
+                "reason": "The person on the left has their mouth slightly open and is gesturing with their hands, which are common cues for speaking. The person on the right has their mouth closed and appears to be listening."
+              }
+            },
+            {
+              "time_sec": 15.153,
+              "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_batch_videoplayback10\\layout_tracking\\007\\speaker_focus\\007_015153.jpg",
+              "speaker": "left",
+              "raw": {
+                "speaker": "left",
+                "reason": "The person on the left is leaning forward and gesturing with their hands, indicating they are actively speaking. The person on the right is leaning back with a closed mouth, appearing to be in a listening posture."
+              }
+            },
+            {
+              "time_sec": 20.204,
+              "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_batch_videoplayback10\\layout_tracking\\007\\speaker_focus\\007_020204.jpg",
+              "speaker": "left",
+              "raw": {
+                "speaker": "left",
+                "reason": "The person on the left has their mouth open and is gesturing with their hands, indicating they are speaking. The person on the right has their mouth closed and appears to be listening."
+              }
+            },
+            {
+              "time_sec": 25.255,
+              "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_batch_videoplayback10\\layout_tracking\\007\\speaker_focus\\007_025255.jpg",
+              "speaker": "left",
+              "raw": {
+                "speaker": "left",
+                "reason": "The person on the left has her mouth slightly open and is gesturing with her hands, indicating she is speaking. The person on the right has his mouth closed and appears to be listening."
+              }
+            },
+            {
+              "time_sec": 30.306,
+              "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_batch_videoplayback10\\layout_tracking\\007\\speaker_focus\\007_030306.jpg",
+              "speaker": "left",
+              "raw": {
+                "speaker": "left",
+                "reason": "The person on the left has their mouth open mid-speech and is actively gesturing with both hands. The person on the right has their mouth closed and appears to be listening."
+              }
+            },
+            {
+              "time_sec": 35.357,
+              "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_batch_videoplayback10\\layout_tracking\\007\\speaker_focus\\007_035357.jpg",
+              "speaker": "left",
+              "raw": {
+                "speaker": "left",
+                "reason": "The person on the left has their mouth open as if in mid-sentence and is using hand gestures, indicating they are speaking. The person on the right has their mouth closed and appears to be listening."
+              }
+            },
+            {
+              "time_sec": 40.408,
+              "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_batch_videoplayback10\\layout_tracking\\007\\speaker_focus\\007_040408.jpg",
+              "speaker": "left",
+              "raw": {
+                "speaker": "left",
+                "reason": "The person on the left has their mouth open and is actively gesturing with both hands, indicating they are speaking. The person on the right has their mouth closed and is looking at the person on the left, indicating they are listening."
+              }
+            },
+            {
+              "time_sec": 45.459,
+              "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_batch_videoplayback10\\layout_tracking\\007\\speaker_focus\\007_045459.jpg",
+              "speaker": "left",
+              "raw": {
+                "speaker": "left",
+                "reason": "The person on the left has their mouth open mid-speech and is actively gesturing with their hands. The person on the right has their mouth closed and is looking down, appearing to be listening."
+              }
+            },
+            {
+              "time_sec": 50.51,
+              "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_batch_videoplayback10\\layout_tracking\\007\\speaker_focus\\007_050510.jpg",
+              "speaker": "unclear",
+              "error": "Command '['ffmpeg', '-y', '-loglevel', 'error', '-ss', '50.510', '-i', 'C:\\\\Users\\\\HP\\\\new shortform\\\\.humeo_batch_videoplayback10\\\\assembled\\\\clip_007.mp4', '-frames:v', '1', '-q:v', '2', 'C:\\\\Users\\\\HP\\\\new shortform\\\\.humeo_batch_videoplayback10\\\\layout_tracking\\\\007\\\\speaker_focus\\\\007_050510.jpg']' returned non-zero exit status 4294967274."
+            }
+          ],
+          "resolved_focus": [
+            {
+              "time_sec": 0.0,
+              "speaker": "right"
+            },
+            {
+              "time_sec": 5.051,
+              "speaker": "left"
+            },
+            {
+              "time_sec": 10.102,
+              "speaker": "left"
+            },
+            {
+              "time_sec": 15.153,
+              "speaker": "left"
+            },
+            {
+              "time_sec": 20.204,
+              "speaker": "left"
+            },
+            {
+              "time_sec": 25.255,
+              "speaker": "left"
+            },
+            {
+              "time_sec": 30.306,
+              "speaker": "left"
+            },
+            {
+              "time_sec": 35.357,
+              "speaker": "left"
+            },
+            {
+              "time_sec": 40.408,
+              "speaker": "left"
+            },
+            {
+              "time_sec": 45.459,
+              "speaker": "left"
+            },
+            {
+              "time_sec": 50.51,
+              "speaker": "left"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

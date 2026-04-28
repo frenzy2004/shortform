@@ -1,0 +1,22 @@
+{
+  "clip_id": "006",
+  "source_spans": [
+    {
+      "start_time_sec": 763.9,
+      "end_time_sec": 768.2599975585937
+    },
+    {
+      "start_time_sec": 768.9800048828125,
+      "end_time_sec": 776.7199890136718
+    },
+    {
+      "start_time_sec": 777.2000061035156,
+      "end_time_sec": 812.2799865722656
+    },
+    {
+      "start_time_sec": 812.9999938964844,
+      "end_time_sec": 818.3
+    }
+  ],
+  "assembled_duration_sec": 52.479968261718454
+}

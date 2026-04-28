@@ -1,0 +1,8 @@
+{
+  "version": 2,
+  "transcript_sha256": "86e6698b82ccfb598bc50b079c69ac2ee9939eac8e7f5428937beb8484b11a6a",
+  "clips_sha256": "5a42cdc14843ca85ad11ade13a1934fe067139887b1c97884b3915c84bf09d14",
+  "gemini_model": "google/gemini-2.5-pro",
+  "llm_backend": "openrouter",
+  "hook_library_sha256": "a91f2c07cd8e7ec3e7a2073919d7c7545ff8d5398ad967ef055f8ebdf0052ec1"
+}

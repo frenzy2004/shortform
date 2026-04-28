@@ -1,0 +1,1050 @@
+{
+  "clips": {
+    "001": {
+      "instruction": {
+        "clip_id": "001",
+        "layout": "sit_center",
+        "zoom": 1.0,
+        "person_x_norm": 0.5960000000000001,
+        "person_tracking": [
+          {
+            "t_sec": 0.0,
+            "x_norm": 0.6515
+          },
+          {
+            "t_sec": 5.0,
+            "x_norm": 0.6515
+          },
+          {
+            "t_sec": 10.0,
+            "x_norm": 0.651
+          },
+          {
+            "t_sec": 15.0,
+            "x_norm": 0.628
+          },
+          {
+            "t_sec": 20.0,
+            "x_norm": 0.605
+          },
+          {
+            "t_sec": 25.0,
+            "x_norm": 0.5960000000000001
+          },
+          {
+            "t_sec": 30.0,
+            "x_norm": 0.5960000000000001
+          },
+          {
+            "t_sec": 35.0,
+            "x_norm": 0.585
+          },
+          {
+            "t_sec": 40.0,
+            "x_norm": 0.5900000000000001
+          },
+          {
+            "t_sec": 45.0,
+            "x_norm": 0.35
+          },
+          {
+            "t_sec": 50.0,
+            "x_norm": 0.35
+          }
+        ],
+        "chart_x_norm": 0.0,
+        "focus_stack_order": "chart_then_person",
+        "split_chart_region": null,
+        "split_person_region": null,
+        "split_second_chart_region": null,
+        "split_second_person_region": null,
+        "top_band_ratio": 0.5
+      },
+      "raw": {
+        "layout": "sit_center",
+        "person_bbox": {
+          "x1": 0.198,
+          "y1": 0.093,
+          "x2": 858,
+          "y2": 1.0
+        },
+        "face_bbox": {
+          "x1": 0.514,
+          "y1": 0.101,
+          "x2": 0.678,
+          "y2": 0.354
+        },
+        "chart_bbox": null,
+        "second_person_bbox": null,
+        "second_face_bbox": null,
+        "second_chart_bbox": null,
+        "reason": "The frame features a single speaker in a podcast-style setup. The person is centered, and the framing is appropriate for a sit_center layout.",
+        "person_tracking_samples": [
+          {
+            "sample_kind": "midpoint_keyframe",
+            "time_sec": 25.0,
+            "frame_path": ".humeo_realuse_videoplayback3\\keyframes\\001.jpg",
+            "center_x_norm": 0.5960000000000001,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 0.198,
+                "y1": 0.093,
+                "x2": 858,
+                "y2": 1.0
+              },
+              "face_bbox": {
+                "x1": 0.514,
+                "y1": 0.101,
+                "x2": 0.678,
+                "y2": 0.354
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame features a single speaker in a podcast-style setup. The person is centered, and the framing is appropriate for a sit_center layout."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 5.0,
+            "frame_path": ".humeo_realuse_videoplayback3\\layout_tracking\\001\\001_005000.jpg",
+            "center_x_norm": 0.6515,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 0.32,
+                "y1": 0.1,
+                "x2": 0.88,
+                "y2": 1.0
+              },
+              "face_bbox": {
+                "x1": 545,
+                "y1": 103,
+                "x2": 758,
+                "y2": 526
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame features a single speaker centered in the composition. The laptop in the bottom left is a minor element and not a primary chart, so the sit_center layout is most appropriate."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 10.0,
+            "frame_path": ".humeo_realuse_videoplayback3\\layout_tracking\\001\\001_010000.jpg",
+            "center_x_norm": 0.651,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 330,
+                "y1": 118,
+                "x2": 841,
+                "y2": 1000
+              },
+              "face_bbox": {
+                "x1": 546,
+                "y1": 118,
+                "x2": 756,
+                "y2": 550
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame features a single speaker in a podcast-style setup. The person is centered in the frame, making sit_center the most appropriate layout."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 15.0,
+            "frame_path": ".humeo_realuse_videoplayback3\\layout_tracking\\001\\001_015000.jpg",
+            "center_x_norm": 0.36,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 150,
+                "y1": 40,
+                "x2": 570,
+                "y2": 1000
+              },
+              "face_bbox": {
+                "x1": 270,
+                "y1": 40,
+                "x2": 450,
+                "y2": 480
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame features a single speaker in a podcast-style setup. I am centering the framing on the speaker."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 20.0,
+            "frame_path": ".humeo_realuse_videoplayback3\\layout_tracking\\001\\001_020000.jpg",
+            "center_x_norm": 0.605,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 340,
+                "y1": 100,
+                "x2": 845,
+                "y2": 1000
+              },
+              "face_bbox": {
+                "x1": 525,
+                "y1": 100,
+                "x2": 685,
+                "y2": 450
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame features a single speaker in a podcast-style setup. The sit_center layout is appropriate for focusing on the speaker."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 30.0,
+            "frame_path": ".humeo_realuse_videoplayback3\\layout_tracking\\001\\001_030000.jpg",
+            "center_x_norm": 0.5960000000000001,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 165,
+                "y1": 108,
+                "x2": 825,
+                "y2": 1000
+              },
+              "face_bbox": {
+                "x1": 512,
+                "y1": 108,
+                "x2": 680,
+                "y2": 450
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame shows a single person speaking into a microphone. The sit_center layout is appropriate for this interview-style framing."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 35.0,
+            "frame_path": ".humeo_realuse_videoplayback3\\layout_tracking\\001\\001_035000.jpg",
+            "center_x_norm": 0.585,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 0.175,
+                "y1": 110,
+                "x2": 0.825,
+                "y2": 1.0
+              },
+              "face_bbox": {
+                "x1": 0.485,
+                "y1": 0.11,
+                "x2": 0.685,
+                "y2": 0.45
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame features a single speaker in a podcast-style setup. The person is centered and the primary focus."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 40.0,
+            "frame_path": ".humeo_realuse_videoplayback3\\layout_tracking\\001\\001_040000.jpg",
+            "center_x_norm": 0.5900000000000001,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 170,
+                "y1": 98,
+                "x2": 790,
+                "y2": 1000
+              },
+              "face_bbox": {
+                "x1": 505,
+                "y1": 98,
+                "x2": 675,
+                "y2": 350
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame features a single person speaking into a microphone. The sit_center layout is appropriate for this interview-style shot."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 45.0,
+            "frame_path": ".humeo_realuse_videoplayback3\\layout_tracking\\001\\001_045000.jpg",
+            "center_x_norm": 0.35,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 145,
+                "y1": 60,
+                "x2": 580,
+                "y2": 1000
+              },
+              "face_bbox": {
+                "x1": 255,
+                "y1": 60,
+                "x2": 445,
+                "y2": 420
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame features a single speaker in a podcast-style setup. I am centering the framing on her to maintain focus on the subject."
+            }
+          }
+        ]
+      }
+    },
+    "002": {
+      "instruction": {
+        "clip_id": "002",
+        "layout": "split_two_persons",
+        "zoom": 1.0,
+        "person_x_norm": 0.3375,
+        "person_tracking": [],
+        "chart_x_norm": 0.0,
+        "focus_stack_order": "chart_then_person",
+        "split_chart_region": null,
+        "split_person_region": {
+          "x1": 0.235,
+          "y1": 0.24,
+          "x2": 0.44,
+          "y2": 0.99,
+          "label": "",
+          "confidence": 1.0
+        },
+        "split_second_chart_region": null,
+        "split_second_person_region": {
+          "x1": 0.595,
+          "y1": 0.235,
+          "x2": 0.835,
+          "y2": 0.93,
+          "label": "",
+          "confidence": 1.0
+        },
+        "top_band_ratio": 0.5
+      },
+      "raw": {
+        "layout": "split_two_persons",
+        "person_bbox": {
+          "x1": 235,
+          "y1": 240,
+          "x2": 440,
+          "y2": 990
+        },
+        "face_bbox": {
+          "x1": 270,
+          "y1": 240,
+          "x2": 340,
+          "y2": 350
+        },
+        "chart_bbox": null,
+        "second_person_bbox": {
+          "x1": 595,
+          "y1": 235,
+          "x2": 835,
+          "y2": 930
+        },
+        "second_face_bbox": {
+          "x1": 730,
+          "y1": 235,
+          "x2": 810,
+          "y2": 360
+        },
+        "second_chart_bbox": null,
+        "reason": "The frame shows two people in a podcast interview setting. I am selecting split_two_persons to capture both speakers."
+      }
+    },
+    "003": {
+      "instruction": {
+        "clip_id": "003",
+        "layout": "sit_center",
+        "zoom": 1.0,
+        "person_x_norm": 0.62,
+        "person_tracking": [],
+        "chart_x_norm": 0.0,
+        "focus_stack_order": "chart_then_person",
+        "split_chart_region": null,
+        "split_person_region": null,
+        "split_second_chart_region": null,
+        "split_second_person_region": null,
+        "top_band_ratio": 0.5
+      },
+      "raw": {
+        "layout": "sit_center",
+        "person_bbox": {
+          "x1": 320,
+          "y1": 110,
+          "x2": 840,
+          "y2": 1000
+        },
+        "face_bbox": {
+          "x1": 525,
+          "y1": 110,
+          "x2": 715,
+          "y2": 450
+        },
+        "chart_bbox": null,
+        "second_person_bbox": null,
+        "second_face_bbox": null,
+        "second_chart_bbox": null,
+        "reason": "The frame features a single speaker in a podcast-style setup. The person is the primary subject, so sit_center is the most appropriate layout.",
+        "person_tracking_samples": [
+          {
+            "sample_kind": "midpoint_keyframe",
+            "time_sec": 39.25499999999988,
+            "frame_path": ".humeo_realuse_videoplayback3\\keyframes\\003.jpg",
+            "center_x_norm": 0.62,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 320,
+                "y1": 110,
+                "x2": 840,
+                "y2": 1000
+              },
+              "face_bbox": {
+                "x1": 525,
+                "y1": 110,
+                "x2": 715,
+                "y2": 450
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame features a single speaker in a podcast-style setup. The person is the primary subject, so sit_center is the most appropriate layout."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 7.850999999999977,
+            "frame_path": ".humeo_realuse_videoplayback3\\layout_tracking\\003\\003_007851.jpg",
+            "center_x_norm": 0.62,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 320,
+                "y1": 130,
+                "x2": 840,
+                "y2": 1000
+              },
+              "face_bbox": {
+                "x1": 520,
+                "y1": 130,
+                "x2": 720,
+                "y2": 400
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame features a single speaker in a podcast-style setup. The sit_center layout is appropriate for this framing."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 15.701999999999954,
+            "frame_path": ".humeo_realuse_videoplayback3\\layout_tracking\\003\\003_015702.jpg",
+            "center_x_norm": 0.636,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 206,
+                "y1": 0,
+                "x2": 836,
+                "y2": 1000
+              },
+              "face_bbox": {
+                "x1": 548,
+                "y1": 111,
+                "x2": 724,
+                "y2": 435
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame features a single speaker in an interview-style setup. The person is the primary focus, so sit_center is the most appropriate layout."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 23.55299999999993,
+            "frame_path": ".humeo_realuse_videoplayback3\\layout_tracking\\003\\003_023553.jpg",
+            "center_x_norm": 0.625,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 320,
+                "y1": 118,
+                "x2": 850,
+                "y2": 1000
+              },
+              "face_bbox": {
+                "x1": 535,
+                "y1": 118,
+                "x2": 715,
+                "y2": 450
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame features a single person speaking into a microphone. The person is the primary focus, so sit_center is the appropriate layout."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 31.403999999999908,
+            "frame_path": ".humeo_realuse_videoplayback3\\layout_tracking\\003\\003_031404.jpg",
+            "center_x_norm": 0.64,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 150,
+                "y1": 120,
+                "x2": 840,
+                "y2": 1000
+              },
+              "face_bbox": {
+                "x1": 530,
+                "y1": 120,
+                "x2": 750,
+                "y2": 450
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame features a single speaker in a podcast-style setup. The sit_center layout is appropriate for this interview-style framing."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 47.10599999999986,
+            "frame_path": ".humeo_realuse_videoplayback3\\layout_tracking\\003\\003_047106.jpg",
+            "center_x_norm": 0.64,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 264,
+                "y1": 53,
+                "x2": 843,
+                "y2": 1000
+              },
+              "face_bbox": {
+                "x1": 540,
+                "y1": 53,
+                "x2": 740,
+                "y2": 450
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame features a single speaker in a podcast-style setup. I am centering the framing on the speaker."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 54.95699999999983,
+            "frame_path": ".humeo_realuse_videoplayback3\\layout_tracking\\003\\003_054957.jpg",
+            "center_x_norm": 0.595,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 315,
+                "y1": 118,
+                "x2": 885,
+                "y2": 1000
+              },
+              "face_bbox": {
+                "x1": 500,
+                "y1": 118,
+                "x2": 690,
+                "y2": 450
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame features a single speaker in a podcast-style setup. The laptop in the bottom left is a minor element and not a primary chart, so a single-person layout is most appropriate."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 62.807999999999815,
+            "frame_path": ".humeo_realuse_videoplayback3\\layout_tracking\\003\\003_062808.jpg",
+            "center_x_norm": 0.6525000000000001,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 155,
+                "y1": 111,
+                "x2": 841,
+                "y2": 1000
+              },
+              "face_bbox": {
+                "x1": 527,
+                "y1": 111,
+                "x2": 778,
+                "y2": 583
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame features a single speaker. While there is a mug and a microphone, these are props associated with the speaker, not distinct charts or additional people, so sit_center is the appropriate layout."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 70.65899999999979,
+            "frame_path": ".humeo_realuse_videoplayback3\\layout_tracking\\003\\003_070659.jpg",
+            "center_x_norm": 0.6000000000000001,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 154,
+                "y1": 94,
+                "x2": 840,
+                "y2": 1000
+              },
+              "face_bbox": {
+                "x1": 520,
+                "y1": 150,
+                "x2": 680,
+                "y2": 450
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame features a single speaker in a podcast-style setup. The mug and microphone are secondary elements, so the focus is on the person."
+            }
+          }
+        ]
+      }
+    },
+    "004": {
+      "instruction": {
+        "clip_id": "004",
+        "layout": "split_chart_person",
+        "zoom": 1.0,
+        "person_x_norm": 0.475,
+        "person_tracking": [],
+        "chart_x_norm": 0.51,
+        "focus_stack_order": "chart_then_person",
+        "split_chart_region": {
+          "x1": 0.51,
+          "y1": 0.42,
+          "x2": 0.855,
+          "y2": 0.985,
+          "label": "",
+          "confidence": 1.0
+        },
+        "split_person_region": {
+          "x1": 0.19,
+          "y1": 0.05,
+          "x2": 0.65,
+          "y2": 1.0,
+          "label": "",
+          "confidence": 1.0
+        },
+        "split_second_chart_region": null,
+        "split_second_person_region": null,
+        "top_band_ratio": 0.5
+      },
+      "raw": {
+        "layout": "split_chart_person",
+        "person_bbox": {
+          "x1": 0.19,
+          "y1": 0.05,
+          "x2": 0.65,
+          "y2": 1.0
+        },
+        "face_bbox": {
+          "x1": 365,
+          "y1": 60,
+          "x2": 585,
+          "y2": 450
+        },
+        "chart_bbox": {
+          "x1": 510,
+          "y1": 420,
+          "x2": 855,
+          "y2": 985
+        },
+        "second_person_bbox": null,
+        "second_face_bbox": null,
+        "second_chart_bbox": null,
+        "reason": "The frame contains one speaker holding a clipboard with a diagram. Using split_chart_person layout to capture both the speaker and the visual aid."
+      }
+    },
+    "005": {
+      "instruction": {
+        "clip_id": "005",
+        "layout": "sit_center",
+        "zoom": 1.0,
+        "person_x_norm": 0.5515,
+        "person_tracking": [
+          {
+            "t_sec": 0.0,
+            "x_norm": 0.7669999999999999
+          },
+          {
+            "t_sec": 6.5150000000000095,
+            "x_norm": 0.7669999999999999
+          },
+          {
+            "t_sec": 13.030000000000019,
+            "x_norm": 0.8006875
+          },
+          {
+            "t_sec": 19.545000000000027,
+            "x_norm": 0.834375
+          },
+          {
+            "t_sec": 26.060000000000038,
+            "x_norm": 0.495
+          },
+          {
+            "t_sec": 32.575000000000045,
+            "x_norm": 0.5515
+          },
+          {
+            "t_sec": 39.09000000000005,
+            "x_norm": 0.5
+          },
+          {
+            "t_sec": 45.60500000000006,
+            "x_norm": 0.44921875
+          },
+          {
+            "t_sec": 52.120000000000076,
+            "x_norm": 0.562
+          },
+          {
+            "t_sec": 58.63500000000008,
+            "x_norm": 0.5915
+          },
+          {
+            "t_sec": 65.15000000000009,
+            "x_norm": 0.5915
+          }
+        ],
+        "chart_x_norm": 0.0,
+        "focus_stack_order": "chart_then_person",
+        "split_chart_region": null,
+        "split_person_region": null,
+        "split_second_chart_region": null,
+        "split_second_person_region": null,
+        "top_band_ratio": 0.5
+      },
+      "raw": {
+        "layout": "sit_center",
+        "person_bbox": {
+          "x1": 0.203,
+          "y1": 79,
+          "x2": 0.738,
+          "y2": 0.999
+        },
+        "face_bbox": {
+          "x1": 0.465,
+          "y1": 0.079,
+          "x2": 0.638,
+          "y2": 0.355
+        },
+        "chart_bbox": null,
+        "second_person_bbox": null,
+        "second_face_bbox": null,
+        "second_chart_bbox": null,
+        "reason": "The frame features a single person speaking into a microphone. The sit_center layout is appropriate for this interview-style shot.",
+        "person_tracking_samples": [
+          {
+            "sample_kind": "midpoint_keyframe",
+            "time_sec": 32.575000000000045,
+            "frame_path": ".humeo_realuse_videoplayback3\\keyframes\\005.jpg",
+            "center_x_norm": 0.5515,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 0.203,
+                "y1": 79,
+                "x2": 0.738,
+                "y2": 0.999
+              },
+              "face_bbox": {
+                "x1": 0.465,
+                "y1": 0.079,
+                "x2": 0.638,
+                "y2": 0.355
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame features a single person speaking into a microphone. The sit_center layout is appropriate for this interview-style shot."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 6.5150000000000095,
+            "frame_path": ".humeo_realuse_videoplayback3\\layout_tracking\\005\\005_006515.jpg",
+            "center_x_norm": 0.7669999999999999,
+            "raw": {
+              "layout": "split_chart_person",
+              "person_bbox": {
+                "x1": 547,
+                "y1": 226,
+                "x2": 819,
+                "y2": 956
+              },
+              "face_bbox": {
+                "x1": 721,
+                "y1": 226,
+                "x2": 813,
+                "y2": 378
+              },
+              "chart_bbox": {
+                "x1": 323,
+                "y1": 107,
+                "x2": 677,
+                "y2": 468
+              },
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame features a speaker and a central screen. I am focusing on the speaker on the right and the screen as the two primary items for the vertical crop."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 13.030000000000019,
+            "frame_path": ".humeo_realuse_videoplayback3\\layout_tracking\\005\\005_013030.jpg",
+            "center_x_norm": 0.2815,
+            "raw": {
+              "layout": "split_two_persons",
+              "person_bbox": {
+                "x1": 0.218,
+                "y1": 243,
+                "x2": 0.445,
+                "y2": 0.936
+              },
+              "face_bbox": {
+                "x1": 0.258,
+                "y1": 0.243,
+                "x2": 0.305,
+                "y2": 0.338
+              },
+              "chart_bbox": null,
+              "second_person_bbox": {
+                "x1": 0.555,
+                "y1": 0.228,
+                "x2": 0.82,
+                "y2": 0.945
+              },
+              "second_face_bbox": {
+                "x1": 0.742,
+                "y1": 0.228,
+                "x2": 0.793,
+                "y2": 0.325
+              },
+              "second_chart_bbox": null,
+              "reason": "The frame features two speakers in a podcast setting. I have selected the split_two_persons layout to capture both individuals effectively."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 19.545000000000027,
+            "frame_path": ".humeo_realuse_videoplayback3\\layout_tracking\\005\\005_019545.jpg",
+            "center_x_norm": 0.834375,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 125,
+                "y1": 93,
+                "x2": 841,
+                "y2": 1000
+              },
+              "face_bbox": {
+                "x1": 458,
+                "y1": 93,
+                "x2": 610,
+                "y2": 350
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame features a single speaker in a podcast-style setup. The person is centered and occupies the majority of the frame."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 26.060000000000038,
+            "frame_path": ".humeo_realuse_videoplayback3\\layout_tracking\\005\\005_026060.jpg",
+            "center_x_norm": 0.495,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 0.17,
+                "y1": 0.1,
+                "x2": 0.82,
+                "y2": 1.0
+              },
+              "face_bbox": {
+                "x1": 468,
+                "y1": 105,
+                "x2": 612,
+                "y2": 315
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame features a single speaker in a podcast-style setup. The face bbox is calculated based on the visible head area."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 39.09000000000005,
+            "frame_path": ".humeo_realuse_videoplayback3\\layout_tracking\\005\\005_039090.jpg",
+            "center_x_norm": 0.5,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 250,
+                "y1": 130,
+                "x2": 750,
+                "y2": 1000
+              },
+              "face_bbox": {
+                "x1": 390,
+                "y1": 130,
+                "x2": 610,
+                "y2": 450
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame features a single speaker in a podcast-style setup. I am centering the framing on the speaker's upper body and face."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 45.60500000000006,
+            "frame_path": ".humeo_realuse_videoplayback3\\layout_tracking\\005\\005_045605.jpg",
+            "center_x_norm": 0.44921875,
+            "raw": {
+              "layout": "split_two_persons",
+              "person_bbox": {
+                "x1": 225,
+                "y1": 247,
+                "x2": 443,
+                "y2": 938
+              },
+              "face_bbox": {
+                "x1": 253,
+                "y1": 247,
+                "x2": 322,
+                "y2": 355
+              },
+              "chart_bbox": null,
+              "second_person_bbox": {
+                "x1": 539,
+                "y1": 231,
+                "x2": 820,
+                "y2": 951
+              },
+              "second_face_bbox": {
+                "x1": 725,
+                "y1": 231,
+                "x2": 809,
+                "y2": 376
+              },
+              "second_chart_bbox": null,
+              "reason": "The frame features two speakers in a podcast setting. I have selected the split_two_persons layout to capture both individuals."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 52.120000000000076,
+            "frame_path": ".humeo_realuse_videoplayback3\\layout_tracking\\005\\005_052120.jpg",
+            "center_x_norm": 0.562,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 312,
+                "y1": 100,
+                "x2": 812,
+                "y2": 1000
+              },
+              "face_bbox": {
+                "x1": 488,
+                "y1": 100,
+                "x2": 640,
+                "y2": 350
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame features a single person speaking into a microphone. The sit_center layout is appropriate for this interview-style shot."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 58.63500000000008,
+            "frame_path": ".humeo_realuse_videoplayback3\\layout_tracking\\005\\005_058635.jpg",
+            "center_x_norm": 0.5915,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 0.312,
+                "y1": 0.073,
+                "x2": 815,
+                "y2": 1.0
+              },
+              "face_bbox": {
+                "x1": 498,
+                "y1": 73,
+                "x2": 685,
+                "y2": 455
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame features a single speaker in a podcast-style setup. The person_bbox captures the speaker and microphone, while the face_bbox is tightly focused on the head."
+            }
+          }
+        ]
+      }
+    }
+  }
+}

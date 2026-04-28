@@ -1,0 +1,11 @@
+{
+  "decisions": [
+    {
+      "clip_id": "001",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "reason": "The clip is already concise and within the target duration range.",
+      "thought": "The clip is 65 seconds long, which is within the 50-90 second requirement. Trimming would risk cutting into the setup or the conclusion, so I am keeping the full duration."
+    }
+  ]
+}

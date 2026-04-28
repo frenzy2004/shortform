@@ -1,0 +1,39 @@
+{
+  "hooks": [
+    {
+      "clip_id": "001",
+      "hook_start_sec": 47.48,
+      "hook_end_sec": 53.0,
+      "hook_text": "This could be the beginning of a resurgence in active equity management.",
+      "reason": "The initial sentence is a rambling lead-in; this concluding statement provides a clear, punchy claim that summarizes the entire topic."
+    },
+    {
+      "clip_id": "002",
+      "hook_start_sec": 5.7,
+      "hook_end_sec": 11.26,
+      "hook_text": "this market could explode up to $5 trillion in notional volume.",
+      "reason": "This sentence contains a hard, attention-grabbing number that provides immediate context for the market's potential."
+    },
+    {
+      "clip_id": "003",
+      "hook_start_sec": 24.69,
+      "hook_end_sec": 29.85,
+      "hook_text": "Really, you should be comparing debt to equity.",
+      "reason": "This is a contrarian, actionable insight that challenges standard economic thinking, making it a much stronger hook than the preceding technical explanation."
+    },
+    {
+      "clip_id": "004",
+      "hook_start_sec": 0.05,
+      "hook_end_sec": 5.42,
+      "hook_text": "last year, the narrative was the U.S. exceptionalism is dead,",
+      "reason": "This sentence immediately introduces a high-stakes narrative conflict that invites the viewer to see if the premise holds true."
+    },
+    {
+      "clip_id": "005",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 7.15,
+      "hook_text": "And we think that productivity growth is going to soar in the next few years.",
+      "reason": "This is a bold, forward-looking claim that sets the stage for the entire clip and is compelling enough to stand on its own."
+    }
+  ]
+}

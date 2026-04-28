@@ -1,0 +1,17 @@
+﻿[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,88,&H00FFFFFF,&H000000FF,&H00101010,&H00000000,-1,0,0,0,100,100,-1,0,1,4,0,2,80,80,300,0
+Style: Highlight,Arial,88,&H00FFFFFF,&H000000FF,&H00101010,&H00ED3A7C,-1,0,0,0,100,100,-1,0,4,2,7,2,80,80,300,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:05.00,Default,,0,0,0,,Did you know there are already
+Dialogue: 1,0:00:00.00,0:00:05.00,Default,,0,0,0,,Did you know there are {\rHighlight}already{\rDefault}

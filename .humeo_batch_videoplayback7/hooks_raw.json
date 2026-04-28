@@ -1,0 +1,39 @@
+{
+  "hooks": [
+    {
+      "clip_id": "001",
+      "hook_start_sec": 9.32,
+      "hook_end_sec": 14.36,
+      "hook_text": "four million deliveries per year by drones?",
+      "reason": "This is a highly specific and surprising number that immediately establishes the scale of the topic and creates curiosity."
+    },
+    {
+      "clip_id": "002",
+      "hook_start_sec": 37.55,
+      "hook_end_sec": 40.17,
+      "hook_text": "try and figure out how much is a cure worth.",
+      "reason": "This poses a direct, high-stakes question to the audience, creating immediate curiosity about the monetary value of a medical breakthrough."
+    },
+    {
+      "clip_id": "003",
+      "hook_start_sec": 21.5,
+      "hook_end_sec": 28.54,
+      "hook_text": "electricity costs today would be 40% lower than they are now.",
+      "reason": "This presents a shocking counterfactual with a hard number (40%) that directly relates to the viewer's wallet, making the topic immediately relevant."
+    },
+    {
+      "clip_id": "004",
+      "hook_start_sec": 5.77,
+      "hook_end_sec": 11.49,
+      "hook_text": "delivered $50 million per employee.",
+      "reason": "This phrase contains the most shocking part of the opening claim—a massive number—and implies the subject (Tether) just mentioned, making it a powerful and concise hook."
+    },
+    {
+      "clip_id": "005",
+      "hook_start_sec": 24.76,
+      "hook_end_sec": 29.72,
+      "hook_text": "Today, the GPUs are driving this cycle.",
+      "reason": "This is a concise, declarative statement that pivots from a historical comparison to the present reality, establishing the core thesis of the clip."
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "decisions": [
+    {
+      "clip_id": "001",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "reason": "The clip is already well-paced with a coherent setup, a clear core argument, and a strong concluding statement, so no trim is necessary.",
+      "thought": "The first 22 seconds are setup, giving credit to the researchers. While this could be cut for a more aggressive edit, the 'balanced' approach suggests keeping it for context and credibility. The most logical cut point within the balanced budget (10.23s) would create a weak opening that refers to people and projects not yet introduced. The ending is already punchy and on-topic, so no trim was needed there."
+    }
+  ]
+}

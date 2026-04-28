@@ -1,0 +1,39 @@
+{
+  "hooks": [
+    {
+      "clip_id": "001",
+      "hook_start_sec": 10.37,
+      "hook_end_sec": 14.15,
+      "hook_text": "If the founder only has one VC who's showing interest, they're like, everything is hinged on this one VC.",
+      "reason": "This sentence immediately presents a relatable, high-stakes problem for founders that creates immediate tension."
+    },
+    {
+      "clip_id": "002",
+      "hook_start_sec": 26.21,
+      "hook_end_sec": 31.91,
+      "hook_text": "That night, every crab started breaking each other apart.",
+      "reason": "This is a shocking, visceral image that immediately grabs attention and sets up the 'Crab Bucket' metaphor."
+    },
+    {
+      "clip_id": "003",
+      "hook_start_sec": 2.01,
+      "hook_end_sec": 7.71,
+      "hook_text": "There's this concept that I learned and we developed at Fandroid early on. It's called walking up the ladder, then down the ladder.",
+      "reason": "The speaker introduces a proprietary, actionable framework that promises a solution to a common fundraising challenge."
+    },
+    {
+      "clip_id": "004",
+      "hook_start_sec": 44.84,
+      "hook_end_sec": 46.68,
+      "hook_text": "You know, like everything is terrible, right?",
+      "reason": "This captures the current sentiment of the market and invites the viewer to hear a contrarian perspective on why it might not be as bad as it seems."
+    },
+    {
+      "clip_id": "005",
+      "hook_start_sec": 8.24,
+      "hook_end_sec": 12.84,
+      "hook_text": "and they're using Buy Now Pay Later to buy things online, and then they're spending it on not very productive things.",
+      "reason": "This highlights a specific, controversial financial behavior that challenges the viewer's perception of modern consumer habits."
+    }
+  ]
+}

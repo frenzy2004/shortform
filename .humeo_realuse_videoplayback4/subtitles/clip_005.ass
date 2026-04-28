@@ -1,0 +1,60 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,48,&H00FFFFFF,&H000000FF,&H00000000,&H70000000,-1,0,0,0,100,100,0,0,4,0,0,2,60,60,160,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:00.88,Default,,0,0,0,,How big do you
+Dialogue: 0,0:00:00.88,0:00:01.92,Default,,0,0,0,,think is the risk
+Dialogue: 0,0:00:01.92,0:00:04.24,Default,,0,0,0,,of a backlash against
+Dialogue: 0,0:00:04.24,0:00:06.08,Default,,0,0,0,,AI that will somehow
+Dialogue: 0,0:00:06.08,0:00:08.40,Default,,0,0,0,,kind cause governments to
+Dialogue: 0,0:00:08.40,0:00:09.90,Default,,0,0,0,,do what from your
+Dialogue: 0,0:00:09.90,0:00:10.74,Default,,0,0,0,,perspective might be stupid
+Dialogue: 0,0:00:10.74,0:00:12.02,Default,,0,0,0,,things Because I'm just
+Dialogue: 0,0:00:12.02,0:00:13.62,Default,,0,0,0,,thinking back to the
+Dialogue: 0,0:00:13.62,0:00:15.32,Default,,0,0,0,,era of globalization in
+Dialogue: 0,0:00:15.32,0:00:16.98,Default,,0,0,0,,the 1990s when there
+Dialogue: 0,0:00:16.98,0:00:18.44,Default,,0,0,0,,was indeed some displacement
+Dialogue: 0,0:00:18.44,0:00:20.22,Default,,0,0,0,,of governments didn't do
+Dialogue: 0,0:00:20.22,0:00:21.90,Default,,0,0,0,,enough The public backlash
+Dialogue: 0,0:00:21.90,0:00:23.42,Default,,0,0,0,,was such that we've
+Dialogue: 0,0:00:23.42,0:00:24.18,Default,,0,0,0,,up sort where we
+Dialogue: 0,0:00:24.18,0:00:26.02,Default,,0,0,0,,are now Do you
+Dialogue: 0,0:00:26.02,0:00:26.78,Default,,0,0,0,,think that there is
+Dialogue: 0,0:00:26.78,0:00:27.60,Default,,0,0,0,,a risk that there
+Dialogue: 0,0:00:27.60,0:00:29.20,Default,,0,0,0,,will be a growing
+Dialogue: 0,0:00:29.20,0:00:30.90,Default,,0,0,0,,antipathy towards what you
+Dialogue: 0,0:00:30.90,0:00:31.90,Default,,0,0,0,,are doing and your
+Dialogue: 0,0:00:31.90,0:00:33.20,Default,,0,0,0,,companies in the kind
+Dialogue: 0,0:00:33.20,0:00:35.28,Default,,0,0,0,,body politic I think
+Dialogue: 0,0:00:35.28,0:00:37.48,Default,,0,0,0,,there's definitely a I
+Dialogue: 0,0:00:37.48,0:00:38.90,Default,,0,0,0,,think that's kind of
+Dialogue: 0,0:00:39.18,0:00:40.36,Default,,0,0,0,,There's fear and there's
+Dialogue: 0,0:00:40.36,0:00:41.40,Default,,0,0,0,,about these things like
+Dialogue: 0,0:00:41.40,0:00:43.72,Default,,0,0,0,,jobs and livelihoods I
+Dialogue: 0,0:00:43.72,0:00:45.10,Default,,0,0,0,,think there's a of
+Dialogue: 0,0:00:45.10,0:00:45.80,Default,,0,0,0,,that I it's going
+Dialogue: 0,0:00:45.80,0:00:46.50,Default,,0,0,0,,to be very complicated
+Dialogue: 0,0:00:46.50,0:00:47.42,Default,,0,0,0,,the next few years
+Dialogue: 0,0:00:47.42,0:00:49.04,Default,,0,0,0,,I think geopolitically but
+Dialogue: 0,0:00:49.04,0:00:50.36,Default,,0,0,0,,also the various factors
+Dialogue: 0,0:00:50.36,0:00:51.28,Default,,0,0,0,,here Like we want
+Dialogue: 0,0:00:51.28,0:00:52.18,Default,,0,0,0,,to and we're trying
+Dialogue: 0,0:00:52.18,0:00:52.80,Default,,0,0,0,,to do this with
+Dialogue: 0,0:00:52.80,0:00:53.82,Default,,0,0,0,,AlphaFold and our science
+Dialogue: 0,0:00:53.82,0:00:55.50,Default,,0,0,0,,work and Isomorphic our
+Dialogue: 0,0:00:55.50,0:00:56.48,Default,,0,0,0,,spin out company solve
+Dialogue: 0,0:00:56.48,0:00:58.32,Default,,0,0,0,,all diseases
+Dialogue: 0,0:00:58.76,0:00:59.34,Default,,0,0,0,,come up with new
+Dialogue: 0,0:00:59.34,0:01:00.22,Default,,0,0,0,,energy sources I think
+Dialogue: 0,0:01:00.22,0:01:01.26,Default,,0,0,0,,as a it's clear
+Dialogue: 0,0:01:01.26,0:01:01.99,Default,,0,0,0,,we'd want that

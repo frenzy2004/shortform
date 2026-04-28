@@ -1,0 +1,42 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,48,&H00FFFFFF,&H000000FF,&H00000000,&H70000000,-1,0,0,0,100,100,0,0,4,0,0,2,60,60,160,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.27,Default,,0,0,0,,You really terrify me
+Dialogue: 0,0:00:03.77,0:00:05.95,Default,,0,0,0,,No I'm serious If
+Dialogue: 0,0:00:05.95,0:00:07.71,Default,,0,0,0,,Hollywood was to ever
+Dialogue: 0,0:00:07.71,0:00:09.05,Default,,0,0,0,,make a in which
+Dialogue: 0,0:00:09.05,0:00:11.61,Default,,0,0,0,,humanity opened Pandora's
+Dialogue: 0,0:00:11.61,0:00:13.05,Default,,0,0,0,,and everything went crazy
+Dialogue: 0,0:00:13.55,0:00:15.05,Default,,0,0,0,,you seriously could be
+Dialogue: 0,0:00:15.05,0:00:16.11,Default,,0,0,0,,cast as the star
+Dialogue: 0,0:00:16.11,0:00:18.93,Default,,0,0,0,,character Yeah
+Dialogue: 0,0:00:19.23,0:00:20.37,Default,,0,0,0,,Because the story we're
+Dialogue: 0,0:00:20.37,0:00:22.13,Default,,0,0,0,,told is that AI
+Dialogue: 0,0:00:22.13,0:00:24.39,Default,,0,0,0,,researchers are all great
+Dialogue: 0,0:00:24.39,0:00:26.35,Default,,0,0,0,,stuff they're taking all
+Dialogue: 0,0:00:26.35,0:00:28.11,Default,,0,0,0,,great efforts to ensure
+Dialogue: 0,0:00:28.11,0:00:29.25,Default,,0,0,0,,safety and make sure
+Dialogue: 0,0:00:29.25,0:00:30.21,Default,,0,0,0,,nothing bad could happen
+Dialogue: 0,0:00:31.25,0:00:34.43,Default,,0,0,0,,You take glee in
+Dialogue: 0,0:00:34.43,0:00:35.53,Default,,0,0,0,,seeing what might happen
+Dialogue: 0,0:00:35.53,0:00:36.25,Default,,0,0,0,,if you just put
+Dialogue: 0,0:00:36.25,0:00:37.37,Default,,0,0,0,,it out there Like
+Dialogue: 0,0:00:37.43,0:00:38.67,Default,,0,0,0,,is any part of
+Dialogue: 0,0:00:38.67,0:00:40.65,Default,,0,0,0,,you feeling that that's
+Dialogue: 0,0:00:40.65,0:00:42.25,Default,,0,0,0,,a little bit reckless
+Dialogue: 0,0:00:43.73,0:00:45.53,Default,,0,0,0,,I wouldn't say so
+Dialogue: 0,0:00:46.01,0:00:46.91,Default,,0,0,0,,I see my work
+Dialogue: 0,0:00:46.91,0:00:49.35,Default,,0,0,0,,as a I
+Dialogue: 0,0:00:49.35,0:00:49.89,Default,,0,0,0,,see it as a
+Dialogue: 0,0:00:49.89,0:00:50.67,Default,,0,0,0,,window into the

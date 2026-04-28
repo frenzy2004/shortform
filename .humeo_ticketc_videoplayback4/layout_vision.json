@@ -1,0 +1,1916 @@
+{
+  "clips": {
+    "001": {
+      "instruction": {
+        "clip_id": "001",
+        "layout": "sit_center",
+        "zoom": 1.0,
+        "person_x_norm": 0.4875,
+        "person_tracking": [
+          {
+            "t_sec": 0.0,
+            "x_norm": 0.73828125
+          },
+          {
+            "t_sec": 7.672000122070313,
+            "x_norm": 0.73828125
+          },
+          {
+            "t_sec": 15.344000244140625,
+            "x_norm": 0.49
+          },
+          {
+            "t_sec": 23.016000366210935,
+            "x_norm": 0.51
+          },
+          {
+            "t_sec": 38.36000061035156,
+            "x_norm": 0.4875
+          },
+          {
+            "t_sec": 46.03200073242187,
+            "x_norm": 0.5035
+          },
+          {
+            "t_sec": 53.704000854492186,
+            "x_norm": 0.55
+          },
+          {
+            "t_sec": 61.3760009765625,
+            "x_norm": 0.5125
+          },
+          {
+            "t_sec": 69.04800109863281,
+            "x_norm": 0.5195
+          },
+          {
+            "t_sec": 76.72000122070312,
+            "x_norm": 0.5195
+          }
+        ],
+        "chart_x_norm": 0.0,
+        "focus_stack_order": "chart_then_person",
+        "split_chart_region": null,
+        "split_person_region": null,
+        "split_second_chart_region": null,
+        "split_second_person_region": null,
+        "top_band_ratio": 0.5
+      },
+      "raw": {
+        "layout": "sit_center",
+        "person_bbox": {
+          "x1": 0.24,
+          "y1": 0.05,
+          "x2": 0.81,
+          "y2": 1.0
+        },
+        "face_bbox": {
+          "x1": 0.405,
+          "y1": 0.14,
+          "x2": 0.57,
+          "y2": 0.36
+        },
+        "chart_bbox": null,
+        "second_person_bbox": null,
+        "second_face_bbox": null,
+        "second_chart_bbox": null,
+        "reason": "The frame features a single primary speaker in a panel setting. I am centering the framing on him.",
+        "person_tracking_samples": [
+          {
+            "sample_kind": "midpoint_keyframe",
+            "time_sec": 38.36000061035156,
+            "frame_path": ".humeo_ticketc_videoplayback4\\keyframes\\001.jpg",
+            "center_x_norm": 0.4875,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 0.24,
+                "y1": 0.05,
+                "x2": 0.81,
+                "y2": 1.0
+              },
+              "face_bbox": {
+                "x1": 0.405,
+                "y1": 0.14,
+                "x2": 0.57,
+                "y2": 0.36
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame features a single primary speaker in a panel setting. I am centering the framing on him."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 7.672000122070313,
+            "frame_path": ".humeo_ticketc_videoplayback4\\layout_tracking\\001\\001_007672.jpg",
+            "center_x_norm": 0.73828125,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 243,
+                "y1": 53,
+                "x2": 780,
+                "y2": 1000
+              },
+              "face_bbox": {
+                "x1": 385,
+                "y1": 133,
+                "x2": 560,
+                "y2": 353
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame features a single speaker centered in the shot, making sit_center the most appropriate layout."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 15.344000244140625,
+            "frame_path": ".humeo_ticketc_videoplayback4\\layout_tracking\\001\\001_015344.jpg",
+            "center_x_norm": 0.49,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 0.235,
+                "y1": 0.05,
+                "x2": 0.765,
+                "y2": 1.0
+              },
+              "face_bbox": {
+                "x1": 0.395,
+                "y1": 0.15,
+                "x2": 0.585,
+                "y2": 0.45
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame features a single primary speaker in a panel setting. A sit_center layout is appropriate to focus on the speaker."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 23.016000366210935,
+            "frame_path": ".humeo_ticketc_videoplayback4\\layout_tracking\\001\\001_023016.jpg",
+            "center_x_norm": 0.51,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 232,
+                "y1": 57,
+                "x2": 788,
+                "y2": 1000
+              },
+              "face_bbox": {
+                "x1": 425,
+                "y1": 145,
+                "x2": 595,
+                "y2": 405
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame features a single speaker centered in the shot, suitable for a sit_center layout."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 30.68800048828125,
+            "frame_path": ".humeo_ticketc_videoplayback4\\layout_tracking\\001\\001_030688.jpg",
+            "center_x_norm": null,
+            "raw": {
+              "layout": "split_two_persons",
+              "person_bbox": {
+                "x1": 323,
+                "y1": 236,
+                "x2": 446,
+                "y2": 673
+              },
+              "face_bbox": {
+                "x1": 368,
+                "y1": 236,
+                "x2": 405,
+                "y2": 286
+              },
+              "chart_bbox": null,
+              "second_person_bbox": {
+                "x1": 697,
+                "y1": 172,
+                "x2": 938,
+                "y2": 866
+              },
+              "second_face_bbox": {
+                "x1": 818,
+                "y1": 172,
+                "x2": 863,
+                "y2": 237
+              },
+              "second_chart_bbox": null,
+              "reason": "The frame shows two primary speakers in a panel discussion. I have selected the split_two_persons layout to capture both individuals clearly."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 46.03200073242187,
+            "frame_path": ".humeo_ticketc_videoplayback4\\layout_tracking\\001\\001_046032.jpg",
+            "center_x_norm": 0.5035,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 264,
+                "y1": 53,
+                "x2": 837,
+                "y2": 1000
+              },
+              "face_bbox": {
+                "x1": 422,
+                "y1": 142,
+                "x2": 585,
+                "y2": 372
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame features a single speaker in a panel setting, best captured by a centered portrait layout."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 53.704000854492186,
+            "frame_path": ".humeo_ticketc_videoplayback4\\layout_tracking\\001\\001_053704.jpg",
+            "center_x_norm": 0.55,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 250,
+                "y1": 45,
+                "x2": 840,
+                "y2": 1000
+              },
+              "face_bbox": {
+                "x1": 465,
+                "y1": 125,
+                "x2": 635,
+                "y2": 385
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame features a single speaker centered in the shot, making sit_center the most appropriate layout."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 61.3760009765625,
+            "frame_path": ".humeo_ticketc_videoplayback4\\layout_tracking\\001\\001_061376.jpg",
+            "center_x_norm": 0.5125,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 250,
+                "y1": 65,
+                "x2": 835,
+                "y2": 1000
+              },
+              "face_bbox": {
+                "x1": 405,
+                "y1": 130,
+                "x2": 620,
+                "y2": 420
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame features a single speaker in a panel discussion setting, which is best captured using the sit_center layout."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 69.04800109863281,
+            "frame_path": ".humeo_ticketc_videoplayback4\\layout_tracking\\001\\001_069048.jpg",
+            "center_x_norm": 0.5195,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 248,
+                "y1": 58,
+                "x2": 834,
+                "y2": 1000
+              },
+              "face_bbox": {
+                "x1": 427,
+                "y1": 58,
+                "x2": 612,
+                "y2": 375
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame features a single primary speaker in a panel setting. I am centering the framing on him."
+            }
+          }
+        ]
+      }
+    },
+    "002": {
+      "instruction": {
+        "clip_id": "002",
+        "layout": "sit_center",
+        "zoom": 1.0,
+        "person_x_norm": 0.21999999999999997,
+        "person_tracking": [
+          {
+            "t_sec": 0.0,
+            "x_norm": 0.545
+          },
+          {
+            "t_sec": 7.2,
+            "x_norm": 0.545
+          },
+          {
+            "t_sec": 14.4,
+            "x_norm": 0.505
+          },
+          {
+            "t_sec": 21.599999999999998,
+            "x_norm": 0.49
+          },
+          {
+            "t_sec": 28.8,
+            "x_norm": 0.7890625
+          },
+          {
+            "t_sec": 36.0,
+            "x_norm": 0.21999999999999997
+          },
+          {
+            "t_sec": 43.199999999999996,
+            "x_norm": 0.49849999999999994
+          },
+          {
+            "t_sec": 50.4,
+            "x_norm": 0.54
+          },
+          {
+            "t_sec": 64.8,
+            "x_norm": 0.7890625
+          },
+          {
+            "t_sec": 72.0,
+            "x_norm": 0.7890625
+          }
+        ],
+        "chart_x_norm": 0.0,
+        "focus_stack_order": "chart_then_person",
+        "split_chart_region": null,
+        "split_person_region": null,
+        "split_second_chart_region": null,
+        "split_second_person_region": null,
+        "top_band_ratio": 0.5
+      },
+      "raw": {
+        "layout": "split_two_persons",
+        "person_bbox": {
+          "x1": 0.175,
+          "y1": 198,
+          "x2": 0.338,
+          "y2": 583
+        },
+        "face_bbox": {
+          "x1": 0.205,
+          "y1": 200,
+          "x2": 0.235,
+          "y2": 245
+        },
+        "chart_bbox": null,
+        "second_person_bbox": {
+          "x1": 0.598,
+          "y1": 188,
+          "x2": 0.731,
+          "y2": 575
+        },
+        "second_face_bbox": {
+          "x1": 0.665,
+          "y1": 188,
+          "x2": 0.695,
+          "y2": 235
+        },
+        "second_chart_bbox": null,
+        "reason": "The frame shows two primary speakers seated on stage, making split_two_persons the best layout to capture the interaction.",
+        "person_tracking_samples": [
+          {
+            "sample_kind": "midpoint_keyframe",
+            "time_sec": 36.0,
+            "frame_path": ".humeo_ticketc_videoplayback4\\keyframes\\002.jpg",
+            "center_x_norm": 0.21999999999999997,
+            "raw": {
+              "layout": "split_two_persons",
+              "person_bbox": {
+                "x1": 0.175,
+                "y1": 198,
+                "x2": 0.338,
+                "y2": 583
+              },
+              "face_bbox": {
+                "x1": 0.205,
+                "y1": 200,
+                "x2": 0.235,
+                "y2": 245
+              },
+              "chart_bbox": null,
+              "second_person_bbox": {
+                "x1": 0.598,
+                "y1": 188,
+                "x2": 0.731,
+                "y2": 575
+              },
+              "second_face_bbox": {
+                "x1": 0.665,
+                "y1": 188,
+                "x2": 0.695,
+                "y2": 235
+              },
+              "second_chart_bbox": null,
+              "reason": "The frame shows two primary speakers seated on stage, making split_two_persons the best layout to capture the interaction."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 7.2,
+            "frame_path": ".humeo_ticketc_videoplayback4\\layout_tracking\\002\\002_007200.jpg",
+            "center_x_norm": 0.545,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 298,
+                "y1": 68,
+                "x2": 882,
+                "y2": 1000
+              },
+              "face_bbox": {
+                "x1": 455,
+                "y1": 135,
+                "x2": 635,
+                "y2": 450
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The main speaker is the clear focus of the frame, occupying the center. While other people are partially visible in the background, they are not the primary subjects."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 14.4,
+            "frame_path": ".humeo_ticketc_videoplayback4\\layout_tracking\\002\\002_014400.jpg",
+            "center_x_norm": 0.505,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 300,
+                "y1": 68,
+                "x2": 808,
+                "y2": 1000
+              },
+              "face_bbox": {
+                "x1": 425,
+                "y1": 145,
+                "x2": 585,
+                "y2": 370
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame focuses on a single primary speaker in a panel discussion setting. The other individuals are partially visible but secondary, so the layout centers on the main speaker."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 21.599999999999998,
+            "frame_path": ".humeo_ticketc_videoplayback4\\layout_tracking\\002\\002_021600.jpg",
+            "center_x_norm": 0.49,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 300,
+                "y1": 65,
+                "x2": 810,
+                "y2": 1000
+              },
+              "face_bbox": {
+                "x1": 405,
+                "y1": 145,
+                "x2": 575,
+                "y2": 365
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame focuses on a single primary speaker in a panel setting. While other people are partially visible in the background, the main subject is clearly the man in the center, making sit_center the most appropriate layout."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 28.8,
+            "frame_path": ".humeo_ticketc_videoplayback4\\layout_tracking\\002\\002_028800.jpg",
+            "center_x_norm": 0.7890625,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 300,
+                "y1": 50,
+                "x2": 815,
+                "y2": 1000
+              },
+              "face_bbox": {
+                "x1": 430,
+                "y1": 50,
+                "x2": 580,
+                "y2": 350
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame focuses on a single primary speaker in the center, making sit_center the most appropriate layout."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 43.199999999999996,
+            "frame_path": ".humeo_ticketc_videoplayback4\\layout_tracking\\002\\002_043200.jpg",
+            "center_x_norm": 0.49849999999999994,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 303,
+                "y1": 81,
+                "x2": 800,
+                "y2": 1000
+              },
+              "face_bbox": {
+                "x1": 423,
+                "y1": 154,
+                "x2": 574,
+                "y2": 378
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame focuses on a single primary speaker in a panel discussion setting. The other individuals are out of focus and secondary, so the layout centers on the main speaker."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 50.4,
+            "frame_path": ".humeo_ticketc_videoplayback4\\layout_tracking\\002\\002_050400.jpg",
+            "center_x_norm": 0.54,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 305,
+                "y1": 83,
+                "x2": 803,
+                "y2": 1000
+              },
+              "face_bbox": {
+                "x1": 465,
+                "y1": 150,
+                "x2": 615,
+                "y2": 375
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The main speaker is the clear focus of the frame. While other people are visible in the background, they are out of focus and not part of the primary interaction, so I am framing for the central speaker."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 57.6,
+            "frame_path": ".humeo_ticketc_videoplayback4\\layout_tracking\\002\\002_057600.jpg",
+            "center_x_norm": null,
+            "raw": {
+              "layout": "split_two_persons",
+              "person_bbox": {
+                "x1": 228,
+                "y1": 175,
+                "x2": 389,
+                "y2": 711
+              },
+              "face_bbox": {
+                "x1": 290,
+                "y1": 175,
+                "x2": 333,
+                "y2": 245
+              },
+              "chart_bbox": null,
+              "second_person_bbox": {
+                "x1": 643,
+                "y1": 91,
+                "x2": 926,
+                "y2": 923
+              },
+              "second_face_bbox": {
+                "x1": 776,
+                "y1": 91,
+                "x2": 859,
+                "y2": 223
+              },
+              "second_chart_bbox": null,
+              "reason": "The frame features two primary speakers in an interview setting, so a split_two_persons layout is appropriate to capture both individuals."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 64.8,
+            "frame_path": ".humeo_ticketc_videoplayback4\\layout_tracking\\002\\002_064800.jpg",
+            "center_x_norm": 0.7890625,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 315,
+                "y1": 70,
+                "x2": 815,
+                "y2": 1000
+              },
+              "face_bbox": {
+                "x1": 430,
+                "y1": 140,
+                "x2": 580,
+                "y2": 350
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The main speaker is clearly the focus of the frame, positioned centrally. The other individuals are out of focus and secondary."
+            }
+          }
+        ]
+      }
+    },
+    "003": {
+      "instruction": {
+        "clip_id": "003",
+        "layout": "sit_center",
+        "zoom": 1.0,
+        "person_x_norm": 0.5225,
+        "person_tracking": [],
+        "chart_x_norm": 0.0,
+        "focus_stack_order": "chart_then_person",
+        "split_chart_region": null,
+        "split_person_region": null,
+        "split_second_chart_region": null,
+        "split_second_person_region": null,
+        "top_band_ratio": 0.5
+      },
+      "raw": {
+        "layout": "sit_center",
+        "person_bbox": {
+          "x1": 335,
+          "y1": 80,
+          "x2": 710,
+          "y2": 1000
+        },
+        "face_bbox": {
+          "x1": 468,
+          "y1": 80,
+          "x2": 585,
+          "y2": 295
+        },
+        "chart_bbox": null,
+        "second_person_bbox": null,
+        "second_face_bbox": null,
+        "second_chart_bbox": null,
+        "reason": "The frame focuses on a single primary speaker in a panel setting. The sit_center layout is appropriate to highlight the main speaker.",
+        "person_tracking_samples": [
+          {
+            "sample_kind": "midpoint_keyframe",
+            "time_sec": 40.849999999999994,
+            "frame_path": ".humeo_ticketc_videoplayback4\\keyframes\\003.jpg",
+            "center_x_norm": 0.5225,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 335,
+                "y1": 80,
+                "x2": 710,
+                "y2": 1000
+              },
+              "face_bbox": {
+                "x1": 468,
+                "y1": 80,
+                "x2": 585,
+                "y2": 295
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame focuses on a single primary speaker in a panel setting. The sit_center layout is appropriate to highlight the main speaker."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 8.17,
+            "frame_path": ".humeo_ticketc_videoplayback4\\layout_tracking\\003\\003_008170.jpg",
+            "center_x_norm": 0.525,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 275,
+                "y1": 50,
+                "x2": 775,
+                "y2": 1000
+              },
+              "face_bbox": {
+                "x1": 445,
+                "y1": 50,
+                "x2": 590,
+                "y2": 350
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame focuses on a single speaker in a panel setting. I am cropping to center him for a vertical format."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 16.34,
+            "frame_path": ".humeo_ticketc_videoplayback4\\layout_tracking\\003\\003_016340.jpg",
+            "center_x_norm": 0.532,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 298,
+                "y1": 55,
+                "x2": 766,
+                "y2": 1000
+              },
+              "face_bbox": {
+                "x1": 435,
+                "y1": 55,
+                "x2": 615,
+                "y2": 335
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame focuses on the primary speaker in the center, who is the clear subject of the shot."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 24.509999999999994,
+            "frame_path": ".humeo_ticketc_videoplayback4\\layout_tracking\\003\\003_024510.jpg",
+            "center_x_norm": null,
+            "raw": {
+              "layout": "split_two_persons",
+              "person_bbox": {
+                "x1": 75,
+                "y1": 170,
+                "x2": 355,
+                "y2": 755
+              },
+              "face_bbox": {
+                "x1": 105,
+                "y1": 170,
+                "x2": 155,
+                "y2": 250
+              },
+              "chart_bbox": null,
+              "second_person_bbox": {
+                "x1": 735,
+                "y1": 140,
+                "x2": 960,
+                "y2": 755
+              },
+              "second_face_bbox": {
+                "x1": 860,
+                "y1": 140,
+                "x2": 925,
+                "y2": 230
+              },
+              "second_chart_bbox": null,
+              "reason": "The frame features two primary speakers in an interview setting. I am focusing on the two main participants on the stage."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 32.68,
+            "frame_path": ".humeo_ticketc_videoplayback4\\layout_tracking\\003\\003_032680.jpg",
+            "center_x_norm": 0.519,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 335,
+                "y1": 77,
+                "x2": 703,
+                "y2": 1000
+              },
+              "face_bbox": {
+                "x1": 435,
+                "y1": 77,
+                "x2": 575,
+                "y2": 325
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The main speaker is centrally located and is the primary focus of the frame."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 49.01999999999999,
+            "frame_path": ".humeo_ticketc_videoplayback4\\layout_tracking\\003\\003_049020.jpg",
+            "center_x_norm": null,
+            "raw": {
+              "layout": "split_two_persons",
+              "person_bbox": {
+                "x1": 116,
+                "y1": 161,
+                "x2": 369,
+                "y2": 692
+              },
+              "face_bbox": {
+                "x1": 119,
+                "y1": 161,
+                "x2": 188,
+                "y2": 268
+              },
+              "chart_bbox": null,
+              "second_person_bbox": {
+                "x1": 711,
+                "y1": 133,
+                "x2": 936,
+                "y2": 709
+              },
+              "second_face_bbox": {
+                "x1": 831,
+                "y1": 133,
+                "x2": 898,
+                "y2": 240
+              },
+              "second_chart_bbox": null,
+              "reason": "The frame shows two primary speakers in an interview setting. I am focusing on the two main participants on the left and right to create a balanced split-screen effect."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 57.18999999999999,
+            "frame_path": ".humeo_ticketc_videoplayback4\\layout_tracking\\003\\003_057190.jpg",
+            "center_x_norm": 0.522,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 335,
+                "y1": 90,
+                "x2": 709,
+                "y2": 1000
+              },
+              "face_bbox": {
+                "x1": 445,
+                "y1": 90,
+                "x2": 565,
+                "y2": 325
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame features a central speaker as the primary subject. While other people are visible in the background, they are out of focus and not the focus of the shot, so I am framing for the main speaker."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 65.36,
+            "frame_path": ".humeo_ticketc_videoplayback4\\layout_tracking\\003\\003_065360.jpg",
+            "center_x_norm": 0.5245,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 338,
+                "y1": 81,
+                "x2": 711,
+                "y2": 1000
+              },
+              "face_bbox": {
+                "x1": 477,
+                "y1": 81,
+                "x2": 588,
+                "y2": 308
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame shows a panel discussion. The primary speaker is centered and clearly the focus of the shot, so I am framing him using the sit_center layout."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 73.52999999999999,
+            "frame_path": ".humeo_ticketc_videoplayback4\\layout_tracking\\003\\003_073530.jpg",
+            "center_x_norm": null,
+            "raw": {
+              "layout": "split_two_persons",
+              "person_bbox": {
+                "x1": 0.108,
+                "y1": 208,
+                "x2": 0.346,
+                "y2": 0.708
+              },
+              "face_bbox": {
+                "x1": 0.121,
+                "y1": 0.208,
+                "x2": 0.184,
+                "y2": 0.306
+              },
+              "chart_bbox": null,
+              "second_person_bbox": {
+                "x1": 0.679,
+                "y1": 0.175,
+                "x2": 0.881,
+                "y2": 0.729
+              },
+              "second_face_bbox": {
+                "x1": 0.789,
+                "y1": 0.175,
+                "x2": 0.848,
+                "y2": 0.273
+              },
+              "second_chart_bbox": null,
+              "reason": "The frame shows two primary speakers seated on stage, making split_two_persons the best layout to capture both."
+            }
+          }
+        ]
+      }
+    },
+    "004": {
+      "instruction": {
+        "clip_id": "004",
+        "layout": "sit_center",
+        "zoom": 1.0,
+        "person_x_norm": 0.88,
+        "person_tracking": [
+          {
+            "t_sec": 0.0,
+            "x_norm": 0.575
+          },
+          {
+            "t_sec": 6.013100244140628,
+            "x_norm": 0.575
+          },
+          {
+            "t_sec": 12.026200488281257,
+            "x_norm": 0.65
+          },
+          {
+            "t_sec": 18.039300732421882,
+            "x_norm": 0.65
+          },
+          {
+            "t_sec": 24.052400976562513,
+            "x_norm": 0.895
+          },
+          {
+            "t_sec": 30.06550122070314,
+            "x_norm": 0.88
+          },
+          {
+            "t_sec": 36.078601464843764,
+            "x_norm": 0.5874999999999999
+          },
+          {
+            "t_sec": 42.091701708984395,
+            "x_norm": 0.617
+          },
+          {
+            "t_sec": 48.104801953125026,
+            "x_norm": 0.6465000000000001
+          },
+          {
+            "t_sec": 54.11790219726566,
+            "x_norm": 0.375
+          },
+          {
+            "t_sec": 60.13100244140628,
+            "x_norm": 0.375
+          }
+        ],
+        "chart_x_norm": 0.0,
+        "focus_stack_order": "chart_then_person",
+        "split_chart_region": null,
+        "split_person_region": null,
+        "split_second_chart_region": null,
+        "split_second_person_region": null,
+        "top_band_ratio": 0.5
+      },
+      "raw": {
+        "layout": "sit_center",
+        "person_bbox": {
+          "x1": 0.42,
+          "y1": 0.0,
+          "x2": 1.0,
+          "y2": 1.0
+        },
+        "face_bbox": {
+          "x1": 0.78,
+          "y1": 0.0,
+          "x2": 0.98,
+          "y2": 0.35
+        },
+        "chart_bbox": null,
+        "second_person_bbox": null,
+        "second_face_bbox": null,
+        "second_chart_bbox": null,
+        "reason": "The frame focuses on the speaker in the foreground who is gesturing, making them the primary subject for a vertical crop.",
+        "person_tracking_samples": [
+          {
+            "sample_kind": "midpoint_keyframe",
+            "time_sec": 30.06550122070314,
+            "frame_path": ".humeo_ticketc_videoplayback4\\keyframes\\004.jpg",
+            "center_x_norm": 0.88,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 0.42,
+                "y1": 0.0,
+                "x2": 1.0,
+                "y2": 1.0
+              },
+              "face_bbox": {
+                "x1": 0.78,
+                "y1": 0.0,
+                "x2": 0.98,
+                "y2": 0.35
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame focuses on the speaker in the foreground who is gesturing, making them the primary subject for a vertical crop."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 6.013100244140628,
+            "frame_path": ".humeo_ticketc_videoplayback4\\layout_tracking\\004\\004_006013.jpg",
+            "center_x_norm": 0.575,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 280,
+                "y1": 100,
+                "x2": 870,
+                "y2": 1000
+              },
+              "face_bbox": {
+                "x1": 460,
+                "y1": 100,
+                "x2": 690,
+                "y2": 450
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame focuses on a single speaker holding a microphone, making sit_center the most appropriate layout."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 12.026200488281257,
+            "frame_path": ".humeo_ticketc_videoplayback4\\layout_tracking\\004\\004_012026.jpg",
+            "center_x_norm": 0.65,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 292,
+                "y1": 75,
+                "x2": 892,
+                "y2": 1000
+              },
+              "face_bbox": {
+                "x1": 545,
+                "y1": 75,
+                "x2": 755,
+                "y2": 525
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The main speaker is clearly the focus of the frame. While other people are partially visible on the sides, the primary subject is the man in the center, so sit_center is the most appropriate layout."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 18.039300732421882,
+            "frame_path": ".humeo_ticketc_videoplayback4\\layout_tracking\\004\\004_018039.jpg",
+            "center_x_norm": 0.65,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 335,
+                "y1": 62,
+                "x2": 900,
+                "y2": 1000
+              },
+              "face_bbox": {
+                "x1": 560,
+                "y1": 62,
+                "x2": 740,
+                "y2": 340
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The main speaker is centered and clearly the focus of the frame. While other people are partially visible, the primary subject is the speaker in the center."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 24.052400976562513,
+            "frame_path": ".humeo_ticketc_videoplayback4\\layout_tracking\\004\\004_024052.jpg",
+            "center_x_norm": 0.895,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 0.78,
+                "y1": 0.0,
+                "x2": 1.0,
+                "y2": 1.0
+              },
+              "face_bbox": {
+                "x1": 0.79,
+                "y1": 0.0,
+                "x2": 1.0,
+                "y2": 0.45
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame features a speaker in the foreground on the right, gesturing. I am focusing on this speaker as the primary subject."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 36.078601464843764,
+            "frame_path": ".humeo_ticketc_videoplayback4\\layout_tracking\\004\\004_036079.jpg",
+            "center_x_norm": 0.5874999999999999,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 330,
+                "y1": 115,
+                "x2": 870,
+                "y2": 1000
+              },
+              "face_bbox": {
+                "x1": 485,
+                "y1": 115,
+                "x2": 690,
+                "y2": 415
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame features a central speaker as the primary subject. While others are partially visible, the main focus is on the speaker in the center."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 42.091701708984395,
+            "frame_path": ".humeo_ticketc_videoplayback4\\layout_tracking\\004\\004_042092.jpg",
+            "center_x_norm": 0.38,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 0.198,
+                "y1": 138,
+                "x2": 0.635,
+                "y2": 1.0
+              },
+              "face_bbox": {
+                "x1": 0.305,
+                "y1": 138,
+                "x2": 0.455,
+                "y2": 0.485
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame shows a group of people, but the central subject is clearly the man in the white shirt and blue blazer. I am framing him as the primary speaker."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 48.104801953125026,
+            "frame_path": ".humeo_ticketc_videoplayback4\\layout_tracking\\004\\004_048105.jpg",
+            "center_x_norm": 0.6465000000000001,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 338,
+                "y1": 125,
+                "x2": 883,
+                "y2": 1000
+              },
+              "face_bbox": {
+                "x1": 538,
+                "y1": 125,
+                "x2": 755,
+                "y2": 400
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame focuses on a single speaker in the center, making sit_center the most appropriate layout."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 54.11790219726566,
+            "frame_path": ".humeo_ticketc_videoplayback4\\layout_tracking\\004\\004_054118.jpg",
+            "center_x_norm": 0.375,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 0.23,
+                "y1": 125,
+                "x2": 0.53,
+                "y2": 0.98
+              },
+              "face_bbox": {
+                "x1": 0.32,
+                "y1": 0.12,
+                "x2": 0.43,
+                "y2": 0.35
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame shows a group of people, but the most prominent, well-lit subject is the man in the center wearing a suit. I have framed him as the primary subject."
+            }
+          }
+        ]
+      }
+    },
+    "005": {
+      "instruction": {
+        "clip_id": "005",
+        "layout": "sit_center",
+        "zoom": 1.0,
+        "person_x_norm": 0.5,
+        "person_tracking": [],
+        "chart_x_norm": 0.0,
+        "focus_stack_order": "chart_then_person",
+        "split_chart_region": null,
+        "split_person_region": null,
+        "split_second_chart_region": null,
+        "split_second_person_region": null,
+        "top_band_ratio": 0.5
+      },
+      "raw": {
+        "layout": "sit_center",
+        "person_bbox": {
+          "x1": 228,
+          "y1": 80,
+          "x2": 772,
+          "y2": 1000
+        },
+        "face_bbox": {
+          "x1": 408,
+          "y1": 80,
+          "x2": 592,
+          "y2": 470
+        },
+        "chart_bbox": null,
+        "second_person_bbox": null,
+        "second_face_bbox": null,
+        "second_chart_bbox": null,
+        "reason": "The frame features a single primary speaker in a panel setting, making sit_center the most appropriate layout for a 9:16 crop.",
+        "person_tracking_samples": [
+          {
+            "sample_kind": "midpoint_keyframe",
+            "time_sec": 28.349999999999966,
+            "frame_path": ".humeo_ticketc_videoplayback4\\keyframes\\005.jpg",
+            "center_x_norm": 0.5,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 228,
+                "y1": 80,
+                "x2": 772,
+                "y2": 1000
+              },
+              "face_bbox": {
+                "x1": 408,
+                "y1": 80,
+                "x2": 592,
+                "y2": 470
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame features a single primary speaker in a panel setting, making sit_center the most appropriate layout for a 9:16 crop."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 5.669999999999994,
+            "frame_path": ".humeo_ticketc_videoplayback4\\layout_tracking\\005\\005_005670.jpg",
+            "center_x_norm": 0.5,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 235,
+                "y1": 55,
+                "x2": 800,
+                "y2": 1000
+              },
+              "face_bbox": {
+                "x1": 420,
+                "y1": 130,
+                "x2": 580,
+                "y2": 370
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame features a single primary speaker in a panel setting, making sit_center the most appropriate layout for a 9:16 crop."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 11.339999999999987,
+            "frame_path": ".humeo_ticketc_videoplayback4\\layout_tracking\\005\\005_011340.jpg",
+            "center_x_norm": 0.78125,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 230,
+                "y1": 48,
+                "x2": 770,
+                "y2": 1000
+              },
+              "face_bbox": {
+                "x1": 390,
+                "y1": 48,
+                "x2": 610,
+                "y2": 350
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame focuses on a single primary speaker in a panel discussion setting. The sit_center layout is appropriate for this medium shot."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 17.00999999999998,
+            "frame_path": ".humeo_ticketc_videoplayback4\\layout_tracking\\005\\005_017010.jpg",
+            "center_x_norm": null,
+            "raw": {
+              "layout": "split_two_persons",
+              "person_bbox": {
+                "x1": 0.0,
+                "y1": 95.0,
+                "x2": 448.0,
+                "y2": 1000.0
+              },
+              "face_bbox": {
+                "x1": 215.0,
+                "y1": 150.0,
+                "x2": 305.0,
+                "y2": 300.0
+              },
+              "chart_bbox": null,
+              "second_person_bbox": {
+                "x1": 710.0,
+                "y1": 240.0,
+                "x2": 955.0,
+                "y2": 1000.0
+              },
+              "second_face_bbox": {
+                "x1": 800.0,
+                "y1": 240.0,
+                "x2": 870.0,
+                "y2": 350.0
+              },
+              "second_chart_bbox": null,
+              "reason": "The frame features two primary subjects: the speaker on the left and Demis Hassabis on the right. I have selected split_two_persons to capture both individuals."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 22.679999999999975,
+            "frame_path": ".humeo_ticketc_videoplayback4\\layout_tracking\\005\\005_022680.jpg",
+            "center_x_norm": 0.485,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 240,
+                "y1": 65,
+                "x2": 815,
+                "y2": 1000
+              },
+              "face_bbox": {
+                "x1": 385,
+                "y1": 65,
+                "x2": 585,
+                "y2": 385
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame features a single primary speaker in a panel setting. The person_bbox captures the speaker's head and torso, while the face_bbox is tightly focused on the face."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 34.01999999999996,
+            "frame_path": ".humeo_ticketc_videoplayback4\\layout_tracking\\005\\005_034020.jpg",
+            "center_x_norm": null,
+            "raw": {
+              "layout": "split_two_persons",
+              "person_bbox": {
+                "x1": 0.0,
+                "y1": 150.0,
+                "x2": 260.0,
+                "y2": 780.0
+              },
+              "face_bbox": {
+                "x1": 10.0,
+                "y1": 150.0,
+                "x2": 70.0,
+                "y2": 250.0
+              },
+              "chart_bbox": null,
+              "second_person_bbox": {
+                "x1": 670.0,
+                "y1": 140.0,
+                "x2": 900.0,
+                "y2": 770.0
+              },
+              "second_face_bbox": {
+                "x1": 790.0,
+                "y1": 140.0,
+                "x2": 850.0,
+                "y2": 230.0
+              },
+              "second_chart_bbox": null,
+              "reason": "The frame shows two main speakers in a panel discussion. I am focusing on the two primary participants on the left and right to create a split-screen effect."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 39.68999999999995,
+            "frame_path": ".humeo_ticketc_videoplayback4\\layout_tracking\\005\\005_039690.jpg",
+            "center_x_norm": 0.485,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 248,
+                "y1": 66,
+                "x2": 798,
+                "y2": 1000
+              },
+              "face_bbox": {
+                "x1": 405,
+                "y1": 147,
+                "x2": 565,
+                "y2": 413
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame features a single primary speaker in a panel setting. A sit_center layout is appropriate to focus on the speaker."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 45.35999999999995,
+            "frame_path": ".humeo_ticketc_videoplayback4\\layout_tracking\\005\\005_045360.jpg",
+            "center_x_norm": 0.495,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 230,
+                "y1": 65,
+                "x2": 810,
+                "y2": 1000
+              },
+              "face_bbox": {
+                "x1": 415,
+                "y1": 145,
+                "x2": 575,
+                "y2": 410
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The main speaker is the clear focus of the frame, occupying the center. Other people are partially visible in the background but are not active speakers."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 51.02999999999994,
+            "frame_path": ".humeo_ticketc_videoplayback4\\layout_tracking\\005\\005_051030.jpg",
+            "center_x_norm": 0.5,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 250,
+                "y1": 85,
+                "x2": 800,
+                "y2": 1000
+              },
+              "face_bbox": {
+                "x1": 415,
+                "y1": 150,
+                "x2": 585,
+                "y2": 430
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame focuses on a single primary speaker in a panel discussion setting. The sit_center layout is appropriate for this interview-style framing."
+            }
+          }
+        ]
+      }
+    },
+    "006": {
+      "instruction": {
+        "clip_id": "006",
+        "layout": "sit_center",
+        "zoom": 1.0,
+        "person_x_norm": 0.4275,
+        "person_tracking": [
+          {
+            "t_sec": 0.0,
+            "x_norm": 0.404
+          },
+          {
+            "t_sec": 7.080000000000002,
+            "x_norm": 0.404
+          },
+          {
+            "t_sec": 28.320000000000007,
+            "x_norm": 0.485
+          },
+          {
+            "t_sec": 35.400000000000006,
+            "x_norm": 0.4275
+          },
+          {
+            "t_sec": 49.56,
+            "x_norm": 0.43500000000000005
+          },
+          {
+            "t_sec": 56.640000000000015,
+            "x_norm": 0.38
+          },
+          {
+            "t_sec": 63.72000000000001,
+            "x_norm": 0.44000000000000006
+          },
+          {
+            "t_sec": 70.80000000000001,
+            "x_norm": 0.44000000000000006
+          }
+        ],
+        "chart_x_norm": 0.0,
+        "focus_stack_order": "chart_then_person",
+        "split_chart_region": null,
+        "split_person_region": null,
+        "split_second_chart_region": null,
+        "split_second_person_region": null,
+        "top_band_ratio": 0.5
+      },
+      "raw": {
+        "layout": "sit_center",
+        "person_bbox": {
+          "x1": 120,
+          "y1": 120,
+          "x2": 697,
+          "y2": 1000
+        },
+        "face_bbox": {
+          "x1": 330,
+          "y1": 120,
+          "x2": 525,
+          "y2": 410
+        },
+        "chart_bbox": null,
+        "second_person_bbox": null,
+        "second_face_bbox": null,
+        "second_chart_bbox": null,
+        "reason": "The frame focuses on a single primary speaker in a panel setting. While others are partially visible, the main subject is clearly the man in the foreground.",
+        "person_tracking_samples": [
+          {
+            "sample_kind": "midpoint_keyframe",
+            "time_sec": 35.400000000000006,
+            "frame_path": ".humeo_ticketc_videoplayback4\\keyframes\\006.jpg",
+            "center_x_norm": 0.4275,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 120,
+                "y1": 120,
+                "x2": 697,
+                "y2": 1000
+              },
+              "face_bbox": {
+                "x1": 330,
+                "y1": 120,
+                "x2": 525,
+                "y2": 410
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame focuses on a single primary speaker in a panel setting. While others are partially visible, the main subject is clearly the man in the foreground."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 7.080000000000002,
+            "frame_path": ".humeo_ticketc_videoplayback4\\layout_tracking\\006\\006_007080.jpg",
+            "center_x_norm": 0.404,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 133,
+                "y1": 97,
+                "x2": 694,
+                "y2": 1000
+              },
+              "face_bbox": {
+                "x1": 311,
+                "y1": 97,
+                "x2": 497,
+                "y2": 464
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame focuses on a single primary speaker in a panel setting. While others are partially visible, the main subject is clearly the man in the center, making sit_center the most appropriate layout."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 14.160000000000004,
+            "frame_path": ".humeo_ticketc_videoplayback4\\layout_tracking\\006\\006_014160.jpg",
+            "center_x_norm": null,
+            "raw": {
+              "layout": "split_two_persons",
+              "person_bbox": {
+                "x1": 0.07,
+                "y1": 150,
+                "x2": 0.4,
+                "y2": 0.82
+              },
+              "face_bbox": {
+                "x1": 0.13,
+                "y1": 150,
+                "x2": 0.17,
+                "y2": 250
+              },
+              "chart_bbox": null,
+              "second_person_bbox": {
+                "x1": 0.82,
+                "y1": 150,
+                "x2": 0.98,
+                "y2": 0.82
+              },
+              "second_face_bbox": {
+                "x1": 0.94,
+                "y1": 150,
+                "x2": 0.98,
+                "y2": 250
+              },
+              "second_chart_bbox": null,
+              "reason": "The frame shows two primary speakers on opposite sides of the stage. I am framing the two main participants in a split-person layout."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 21.240000000000002,
+            "frame_path": ".humeo_ticketc_videoplayback4\\layout_tracking\\006\\006_021240.jpg",
+            "center_x_norm": null,
+            "raw": {
+              "layout": "split_two_persons",
+              "person_bbox": {
+                "x1": 95,
+                "y1": 68,
+                "x2": 510,
+                "y2": 950
+              },
+              "face_bbox": {
+                "x1": 140,
+                "y1": 68,
+                "x2": 275,
+                "y2": 260
+              },
+              "chart_bbox": null,
+              "second_person_bbox": {
+                "x1": 695,
+                "y1": 135,
+                "x2": 885,
+                "y2": 880
+              },
+              "second_face_bbox": {
+                "x1": 780,
+                "y1": 135,
+                "x2": 855,
+                "y2": 270
+              },
+              "second_chart_bbox": null,
+              "reason": "The frame features two primary speakers in a panel discussion setting. I have framed both individuals to capture their interaction."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 28.320000000000007,
+            "frame_path": ".humeo_ticketc_videoplayback4\\layout_tracking\\006\\006_028320.jpg",
+            "center_x_norm": 0.485,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 0.13,
+                "y1": 0.14,
+                "x2": 0.76,
+                "y2": 1.0
+              },
+              "face_bbox": {
+                "x1": 0.4,
+                "y1": 0.14,
+                "x2": 0.57,
+                "y2": 0.44
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The main speaker is the clear focus of the frame. While other people are partially visible, they are not the primary subjects, so a sit_center layout focusing on the main speaker is most appropriate."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 42.480000000000004,
+            "frame_path": ".humeo_ticketc_videoplayback4\\layout_tracking\\006\\006_042480.jpg",
+            "center_x_norm": null,
+            "raw": {
+              "layout": "split_two_persons",
+              "person_bbox": {
+                "x1": 98,
+                "y1": 66,
+                "x2": 465,
+                "y2": 933
+              },
+              "face_bbox": {
+                "x1": 185,
+                "y1": 66,
+                "x2": 258,
+                "y2": 242
+              },
+              "chart_bbox": null,
+              "second_person_bbox": {
+                "x1": 688,
+                "y1": 130,
+                "x2": 894,
+                "y2": 875
+              },
+              "second_face_bbox": {
+                "x1": 775,
+                "y1": 167,
+                "x2": 828,
+                "y2": 270
+              },
+              "second_chart_bbox": null,
+              "reason": "The frame features two primary speakers in an interview setting. I have framed both individuals to capture their interaction."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 49.56,
+            "frame_path": ".humeo_ticketc_videoplayback4\\layout_tracking\\006\\006_049560.jpg",
+            "center_x_norm": 0.43500000000000005,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 0.05,
+                "y1": 0.08,
+                "x2": 0.7,
+                "y2": 1.0
+              },
+              "face_bbox": {
+                "x1": 0.32,
+                "y1": 0.08,
+                "x2": 0.55,
+                "y2": 0.45
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The primary subject is the speaker in the foreground. While another person is partially visible in the background, the speaker is the clear focus of the frame."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 56.640000000000015,
+            "frame_path": ".humeo_ticketc_videoplayback4\\layout_tracking\\006\\006_056640.jpg",
+            "center_x_norm": 0.38,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 0.08,
+                "y1": 0.09,
+                "x2": 0.69,
+                "y2": 1.0
+              },
+              "face_bbox": {
+                "x1": 0.27,
+                "y1": 0.09,
+                "x2": 0.49,
+                "y2": 0.44
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame focuses on a single primary speaker in a panel setting. While others are visible, the main subject is clearly the man in the center foreground."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 63.72000000000001,
+            "frame_path": ".humeo_ticketc_videoplayback4\\layout_tracking\\006\\006_063720.jpg",
+            "center_x_norm": 0.44000000000000006,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 0.08,
+                "y1": 0.09,
+                "x2": 0.69,
+                "y2": 1.0
+              },
+              "face_bbox": {
+                "x1": 0.32,
+                "y1": 0.09,
+                "x2": 0.56,
+                "y2": 0.45
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame features a single primary speaker in the foreground. While other people are visible in the background, they are out of focus and not the subject of the shot, so I am focusing on the main speaker."
+            }
+          }
+        ]
+      }
+    }
+  }
+}

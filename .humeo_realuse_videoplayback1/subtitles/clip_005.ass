@@ -1,0 +1,42 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,48,&H00FFFFFF,&H000000FF,&H00000000,&H70000000,-1,0,0,0,100,100,0,0,4,0,0,2,60,60,160,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:00.90,Default,,0,0,0,,because yes we have
+Dialogue: 0,0:00:00.90,0:00:01.86,Default,,0,0,0,,conferences already
+Dialogue: 0,0:00:03.96,0:00:05.60,Default,,0,0,0,,and people wear lobster
+Dialogue: 0,0:00:05.60,0:00:07.92,Default,,0,0,0,,headbands I met
+Dialogue: 0,0:00:07.92,0:00:10.16,Default,,0,0,0,,Stefan and his
+Dialogue: 0,0:00:10.16,0:00:11.88,Default,,0,0,0,,60 year old dad
+Dialogue: 0,0:00:11.88,0:00:14.16,Default,,0,0,0,,Gerhard a beer sommelier
+Dialogue: 0,0:00:14.16,0:00:16.66,Default,,0,0,0,,who never wrote a
+Dialogue: 0,0:00:16.66,0:00:17.90,Default,,0,0,0,,single line of code
+Dialogue: 0,0:00:18.96,0:00:21.72,Default,,0,0,0,,They connected OpenClaw via
+Dialogue: 0,0:00:21.72,0:00:23.74,Default,,0,0,0,,Bluetooth sent it one
+Dialogue: 0,0:00:23.74,0:00:25.24,Default,,0,0,0,,prompt and the agent
+Dialogue: 0,0:00:25.24,0:00:27.04,Default,,0,0,0,,did the whole 90
+Dialogue: 0,0:00:27.04,0:00:29.18,Default,,0,0,0,,minute brew Temperature ramps
+Dialogue: 0,0:00:29.44,0:00:30.96,Default,,0,0,0,,hop additions everything
+Dialogue: 0,0:00:31.78,0:00:32.98,Default,,0,0,0,,And then they were
+Dialogue: 0,0:00:32.98,0:00:34.60,Default,,0,0,0,,like what are we
+Dialogue: 0,0:00:34.60,0:00:35.16,Default,,0,0,0,,doing with all this
+Dialogue: 0,0:00:35.16,0:00:37.38,Default,,0,0,0,,beer And the
+Dialogue: 0,0:00:37.38,0:00:38.90,Default,,0,0,0,,was let's make a
+Dialogue: 0,0:00:38.90,0:00:40.82,Default,,0,0,0,,website So they built
+Dialogue: 0,0:00:40.82,0:00:41.99,Default,,0,0,0,,a website and then
+Dialogue: 0,0:00:41.99,0:00:43.08,Default,,0,0,0,,they added payments and
+Dialogue: 0,0:00:43.08,0:00:43.54,Default,,0,0,0,,now they have a
+Dialogue: 0,0:00:43.54,0:00:44.10,Default,,0,0,0,,real product
+Dialogue: 0,0:00:45.76,0:00:47.14,Default,,0,0,0,,And almost all of
+Dialogue: 0,0:00:47.14,0:00:48.28,Default,,0,0,0,,it was just done
+Dialogue: 0,0:00:48.28,0:00:49.50,Default,,0,0,0,,via the phone

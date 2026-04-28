@@ -1,0 +1,68 @@
+{
+  "source_path": "",
+  "clips": [
+    {
+      "clip_id": "001",
+      "topic": "Why traction is a myth",
+      "start_time_sec": 1713.5,
+      "end_time_sec": 1767.3,
+      "viral_hook": "We found that to be a false positive. It's almost like a myth.",
+      "virality_score": 0.7,
+      "transcript": "We found that to be a false positive. It's almost like a myth. And it's very scary when we cross that data. Because when we found our biggest, most significant markups, our biggest outcomes that drive fund returns, a lot of them were just ideas. They start off, they had very little traction. But what else did they have is that they had a proven business model that you can call them copycats, but not essentially copycats, but they already have a lot of references that sized up the market, that made it a bit more familiar of a business model. So, if you can get in at those types of companies, those patterns, and that kind of informs how we invest in today, we're not totally attracted by just traction alone. We need to make sure that this traction is leading you to somewhere big. I'll kind of make it crispy, the way of saying it is like this. It's easy to find a good idea, but it's a bit harder to find a big idea. Not all good ideas are big ideas, right? So that's kind of like one big lesson from our decade of investing here.",
+      "suggested_overlay_title": "Traction is a Myth",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.8,
+        "hook_emotion": 0.6,
+        "catchy": 0.65
+      },
+      "reasoning": "Counter-intuitive point about startups that challenges common advice, making it highly engaging for founders.",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 2.5,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "shorts_title": "Don't Just Look at Traction",
+      "description": "Why investors look for big ideas, not just early traction.",
+      "hashtags": [
+        "startups",
+        "investing",
+        "businessadvice"
+      ],
+      "layout_hint": "sit_center",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "002",
+      "topic": "The purpose of technology",
+      "start_time_sec": 2340.5,
+      "end_time_sec": 2396.6,
+      "viral_hook": "Like money is just a means to an end. We are at a juncture of like humanity's evolution now",
+      "virality_score": 0.55,
+      "transcript": "Like money is just a means to an end. We are at a juncture of like humanity's evolution now that technology is mainstream, right? Any age group, mother, grandmother, everyone is connected to technology and seeing like incredible productivity yield, right? So to the extent that Malaysia, Southeast Asia, all of us can actually take these weapons of productivity, these weapons of creation and kind of arm everyone from the villages all the way to the cities, you can see a time where capitalism is actually doing more good than ever, right? So I really appreciate all of you having me on the show and like talking a lot about these things, but I just want to leave like the viewers with that thought, right? Like we're not here just to kind of invest and make billion dollar, that's just besides the point. Behind every single funding round, there are like millions and billions of beneficiaries. Like even a company like Grab is so many drivers, and so many folks who are in gig economy and so much additional income. So if we can make this new economy, the most inclusive economy the world has ever seen, like that's the job that we need to do.",
+      "suggested_overlay_title": "Tech's True Purpose",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.6,
+        "hook_emotion": 0.55,
+        "catchy": 0.5
+      },
+      "reasoning": "An inspirational closing segment that gives the viewer a sense of purpose beyond the financial details.",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 3.5,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "shorts_title": "Capitalism Doing Good",
+      "description": "Redefining the purpose of technology beyond just making money.",
+      "hashtags": [
+        "tech",
+        "purpose",
+        "impact",
+        "capitalism"
+      ],
+      "layout_hint": "sit_center",
+      "needs_review": false,
+      "review_reason": ""
+    }
+  ]
+}

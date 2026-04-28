@@ -1,0 +1,11 @@
+{
+  "hooks": [
+    {
+      "clip_id": "001",
+      "hook_start_sec": 50.07,
+      "hook_end_sec": 52.05,
+      "hook_text": "It could be worth $11 million.",
+      "reason": "This is a direct, shocking claim with a hard number ($11 million) that immediately raises questions, whereas earlier sentences have weak lead-ins or are too long."
+    }
+  ]
+}

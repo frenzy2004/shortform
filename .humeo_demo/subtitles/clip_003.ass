@@ -1,0 +1,56 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,48,&H00FFFFFF,&H000000FF,&H00000000,&H70000000,-1,0,0,0,100,100,0,0,4,0,0,2,60,60,160,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.22,Default,,0,0,0,,they raised 200 million
+Dialogue: 0,0:00:01.22,0:00:02.32,Default,,0,0,0,,US dollars at a
+Dialogue: 0,0:00:02.32,0:00:03.20,Default,,0,0,0,,1 4 billion dollar
+Dialogue: 0,0:00:03.20,0:00:04.38,Default,,0,0,0,,valuation and this is
+Dialogue: 0,0:00:04.38,0:00:06.58,Default,,0,0,0,,get Indonesian farming company
+Dialogue: 0,0:00:06.58,0:00:08.98,Default,,0,0,0,,Fish farmers like get
+Dialogue: 0,0:00:09.44,0:00:11.22,Default,,0,0,0,,IOT to just automatically
+Dialogue: 0,0:00:11.22,0:00:12.64,Default,,0,0,0,,feed the and help
+Dialogue: 0,0:00:12.64,0:00:13.42,Default,,0,0,0,,those fish farms then
+Dialogue: 0,0:00:13.42,0:00:14.16,Default,,0,0,0,,sell the fish get
+Dialogue: 0,0:00:14.16,0:00:15.24,Default,,0,0,0,,cheaper feed on demand
+Dialogue: 0,0:00:15.24,0:00:16.20,Default,,0,0,0,,24 hour support It's
+Dialogue: 0,0:00:16.20,0:00:18.52,Default,,0,0,0,,like a farmers cooperative
+Dialogue: 0,0:00:18.66,0:00:19.62,Default,,0,0,0,,Yeah you're that way
+Dialogue: 0,0:00:20.30,0:00:21.38,Default,,0,0,0,,last year they did
+Dialogue: 0,0:00:22.02,0:00:23.24,Default,,0,0,0,,372 million US dollars
+Dialogue: 0,0:00:23.24,0:00:24.54,Default,,0,0,0,,in revenue and this
+Dialogue: 0,0:00:24.54,0:00:25.28,Default,,0,0,0,,year they're closing out
+Dialogue: 0,0:00:25.28,0:00:26.34,Default,,0,0,0,,700 million US dollars
+Dialogue: 0,0:00:26.34,0:00:27.28,Default,,0,0,0,,and past five years
+Dialogue: 0,0:00:27.28,0:00:28.06,Default,,0,0,0,,including this year all
+Dialogue: 0,0:00:28.06,0:00:30.78,Default,,0,0,0,,profitable completely profitable company
+Dialogue: 0,0:00:30.78,0:00:33.32,Default,,0,0,0,,right so Agriculture there
+Dialogue: 0,0:00:33.32,0:00:34.08,Default,,0,0,0,,is a lot of
+Dialogue: 0,0:00:34.08,0:00:34.62,Default,,0,0,0,,money in it and
+Dialogue: 0,0:00:34.62,0:00:35.92,Default,,0,0,0,,it's so under penetrated
+Dialogue: 0,0:00:35.92,0:00:37.62,Default,,0,0,0,,by technology So many
+Dialogue: 0,0:00:37.62,0:00:38.68,Default,,0,0,0,,countries not just Indonesia
+Dialogue: 0,0:00:38.68,0:00:39.64,Default,,0,0,0,,Malaysia and elsewhere It's
+Dialogue: 0,0:00:39.64,0:00:40.54,Default,,0,0,0,,like the per for
+Dialogue: 0,0:00:40.54,0:00:41.38,Default,,0,0,0,,any crop or any
+Dialogue: 0,0:00:41.38,0:00:42.32,Default,,0,0,0,,yield any livestock or
+Dialogue: 0,0:00:42.32,0:00:43.36,Default,,0,0,0,,whatever the productivity is
+Dialogue: 0,0:00:43.36,0:00:44.14,Default,,0,0,0,,much less than other
+Dialogue: 0,0:00:44.14,0:00:45.64,Default,,0,0,0,,countries so the extent
+Dialogue: 0,0:00:45.64,0:00:46.32,Default,,0,0,0,,that we can find
+Dialogue: 0,0:00:46.32,0:00:47.34,Default,,0,0,0,,financial like any kind
+Dialogue: 0,0:00:47.34,0:00:48.50,Default,,0,0,0,,of like Fintech tech
+Dialogue: 0,0:00:48.50,0:00:49.74,Default,,0,0,0,,means or kind of
+Dialogue: 0,0:00:49.74,0:00:50.44,Default,,0,0,0,,IOT kind of means
+Dialogue: 0,0:00:50.44,0:00:51.70,Default,,0,0,0,,to increase the productivity
+Dialogue: 0,0:00:51.98,0:00:52.84,Default,,0,0,0,,It's fantastic

@@ -1,0 +1,167 @@
+{
+  "source_path": "",
+  "clips": [
+    {
+      "clip_id": "001",
+      "topic": "The hunting metaphor for deals",
+      "start_time_sec": 1168.0,
+      "end_time_sec": 1218.0,
+      "viral_hook": "If you're, let's say you're hunting, right, and you're hunting, and you don't know what you're hunting for",
+      "virality_score": 0.92,
+      "transcript": "He told me this. If you're, let's say you're hunting, right, and you're hunting, and you don't know what you're hunting for, when the animal shows up, you'll be like, oh, am I going to shoot? Am I going to pull the trigger? Am I going to do, do I really want to, you know? But if you set your intention, like, this is the kind of, like, animal I'm going to hunt for, the moment it comes in your crosshair, boom, you pull the trigger, right? So that really informed the way, 500, and the way we look at things. We study the business models very, very, very deeply. We study business models to avoid, even. Like, we completely avoid quick commerce and dark store, where you get, like, a toothbrush in five minutes type thing. We completely avoided that because we studied that to be ****. So we don't want to see anything come across and invest in that. However, like, with other business models, like, say, the secondhand car one, right, or certain fintech models, right, we've already studied all of them. The moment we find the entrepreneur who's qualified enough to get that job done, we pull the trigger.",
+      "suggested_overlay_title": "How To Spot A Winner",
+      "layout": null,
+      "score_breakdown": {
+        "story_payoff": 1.0,
+        "strong_metaphor": 1.0,
+        "first_person_conviction": 1.0,
+        "quotable_phrasing": 1.0
+      },
+      "reasoning": "Strong metaphor, clear setup-payoff story, and high-conviction strategy.",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 4.0,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "shorts_title": "The Hunting Strategy for Investors",
+      "description": "Kylie Yong explains his investment philosophy using a hunting metaphor to describe how they identify winning deals.",
+      "hashtags": [
+        "investing",
+        "strategy",
+        "venturecapital",
+        "business"
+      ],
+      "layout_hint": "sit_center",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "002",
+      "topic": "Why traction is a false positive",
+      "start_time_sec": 1479.3,
+      "end_time_sec": 1540.9,
+      "viral_hook": "What we've learned from our years of investing is that a lot of folks get really excited about what the company has done, the traction",
+      "virality_score": 0.88,
+      "transcript": "What we've learned from our years of investing is that a lot of folks get really excited about what the company has done, the traction, right? Like, oh, how much traction do you have? Like, oh, look at, oh, how many customers and returning customers you have, and get really excited about that. We found that to be a false positive. It's almost like a myth. And it's very scary when we cross that data, because when we found our biggest, most significant markups, our biggest outcomes that drive fund returns, a lot of them were just ideas. They start all, they had very little traction. But what else did they have is that they had a proven business model that you can call them copycats, but not essentially copycats, but they already have a lot of references that sized up the market that made it a bit more familiar of a business model. So if you can get in at those types of companies, those patterns, and that kind of informs how we invest in today, we're not totally attracted by just traction alone. We need to make sure that this traction is leading you to somewhere big. I'll kind of make it crispy the way of saying it is like this. It's easy to find a good idea, but it's a bit harder to find a big idea.",
+      "suggested_overlay_title": "Why Traction Is A Myth",
+      "layout": null,
+      "score_breakdown": {
+        "counter_intuitive_claim": 1.0,
+        "first_principles_reframe": 1.0,
+        "quotable_phrasing": 1.0,
+        "first_person_conviction": 1.0
+      },
+      "reasoning": "Counter-intuitive claim (traction is a myth), high-conviction, and quotable phrasing.",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 4.0,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "shorts_title": "Stop Obsessing Over Traction",
+      "description": "Is traction a lie? Kylie Yong explains why early-stage investors focus more on the business model than current metrics.",
+      "hashtags": [
+        "startup",
+        "investing",
+        "metrics",
+        "business"
+      ],
+      "layout_hint": "sit_center",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "003",
+      "topic": "The eFishery case study",
+      "start_time_sec": 444.0,
+      "end_time_sec": 510.4,
+      "viral_hook": "So we were early investors in a fishery from a seed fund in early days and recently in the series D",
+      "virality_score": 0.82,
+      "transcript": "So we were early investors in a fishery from a seed fund in early days and recently in the series D. You know, we invest about 18 million dollars in their round. So they raised 200 million US dollars at a 1.4 billion dollar valuation and this is get Indonesian farming company. Fish farmers like get IOT to just automatically feed the fish and help those fish farms then sell the fish get cheaper feed on-demand 24-hour support. It's like a digital farmers cooperative. Yeah, you're looking that way last year they did 372 million US dollars in revenue and this year they're closing out 700 million US dollars and past five years including this year all profitable completely profitable company right so Agriculture there is a lot of money in it and it's so under penetrated by technology So many countries not just Indonesia Malaysia and elsewhere It's like the per hectare for any crop or any yield any livestock or whatever the productivity is much less than other countries so the extent that we can find financial like any kind of like Fintech tech means or kind of IOT kind of means to increase the productivity. It's fantastic. The second thing is that like a lot of countries including Malaysia in the world Like if we don't have enough of our own domestic local protein production",
+      "suggested_overlay_title": "The Digital Fish Farm",
+      "layout": null,
+      "score_breakdown": {
+        "hard_number_reveal": 1.0,
+        "story_payoff": 1.0,
+        "first_principles_reframe": 1.0
+      },
+      "reasoning": "Concrete data reveal, chart/industry reference, and strong story arc.",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 3.0,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "shorts_title": "How A Fish Farm Made $700M",
+      "description": "Kylie Yong explains how eFishery used IoT to disrupt a stagnant industry and build a massive, profitable company.",
+      "hashtags": [
+        "agtech",
+        "startup",
+        "innovation",
+        "iot"
+      ],
+      "layout_hint": "sit_center",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "004",
+      "topic": "Getting hands dirty in VC",
+      "start_time_sec": 1593.4,
+      "end_time_sec": 1658.4,
+      "viral_hook": "I think you got to get that work done. So for eFishery, for example, most recently, it's not just myself, I sent my team there too.",
+      "virality_score": 0.78,
+      "transcript": "I think you got to get that work done. So for eFishery, for example, most recently, it's not just myself, I sent my team there too. I said, you go four and a half hours in the van, go and look at the fish farms, right? And then go ask the fish farmers, like when I was on the field, right? I was asking the fish farmers, how much do you make a month? Okay, when did you start your pond? You got to get pretty deep into this. So the kind of kung fu that I train my team here at 500, is really a hands-on, hand-to-hand combat, right? There's no desktop, you can't win on the desktop. You got to get your hands dirty. That's it, that's right, right? But that aside, I'll tell you that over time, things have changed. In the early days, you do more and more hand-to-hand combat. Right now, we just get a lot of referrals. The way it works is this. If you've a high quality entrepreneur, somehow they're going to make friends with, say, Eric from Carson. And they'll be like, hey, Eric, I want to raise money. I want to get some advice. Who should I talk to? Eric's like, hey, let me just WhatsApp Kylie, right? So over time, this is the power law at play. Once you become the top brand and you're part of the top companies, which 500 Global in Southeast Asia, us in Sequoia, we have the most unicorns, right? So it's like founders know where to find us and how to get us.",
+      "suggested_overlay_title": "VC Is Hand-To-Hand Combat",
+      "layout": null,
+      "score_breakdown": {
+        "concrete_scene": 1.0,
+        "story_payoff": 1.0,
+        "strong_metaphor": 1.0
+      },
+      "reasoning": "Concrete scene, personal anecdote, andstrong metaphor (hand-to-hand combat).",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 3.5,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "shorts_title": "You Can't Win VC From A Desk",
+      "description": "Kylie Yong explains why venture capital requires getting out of the office and into the field.",
+      "hashtags": [
+        "venturecapital",
+        "hustle",
+        "workethic",
+        "startup"
+      ],
+      "layout_hint": "sit_center",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "005",
+      "topic": "Money is just a means",
+      "start_time_sec": 2005.9,
+      "end_time_sec": 2065.5,
+      "viral_hook": "I think a lot of the talk we had so far is about money and just investing in money. Money is just a means to an end.",
+      "virality_score": 0.7,
+      "transcript": "I think a lot of the talk we had so far is about money and just investing in money. Money is just a means to an end. We are at a juncture of like humanity's evolution now that technology is mainstream, right? Any age group, mother, grandmother, everyone is connected to technology and seeing like incredible productivity yield, right? So to the extent that Malaysia, Southeast Asia, all of us can actually take these weapons of productivity, these weapons of creation and kind of arm everyone from the villages all the way to the cities, you can see a time where capitalism is actually doing more good than ever, right? So I really appreciate all of you having me on the show and like talking a lot about these things, but I just want to leave like the viewers with that thought, right? Like we're not here just to kind of invest and make billion dollar, that's just besides the point. Behind every single funding round, there are like millions and billions of beneficiaries. Like even a company like Grab is so many drivers, and so many folks who are in gig economy and so much additional income. So if we can make this new economy, the most inclusive economy the world has ever seen, like that's the job that we need to do.",
+      "suggested_overlay_title": "Money Is Just A Tool",
+      "layout": null,
+      "score_breakdown": {
+        "emotional_resonance": 1.0,
+        "quotable_phrasing": 1.0,
+        "climax": 1.0
+      },
+      "reasoning": "Strong rhetorical power, emotional resonance, and a clear, inspiring vision.",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 4.0,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "shorts_title": "The Real Purpose Of Tech Investment",
+      "description": "Kylie Yong shares his perspective on why technology and venture capital are about more than just making money.",
+      "hashtags": [
+        "tech",
+        "impact",
+        "capitalism",
+        "future"
+      ],
+      "layout_hint": "sit_center",
+      "needs_review": false,
+      "review_reason": ""
+    }
+  ]
+}

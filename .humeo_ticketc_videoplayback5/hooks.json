@@ -1,0 +1,39 @@
+{
+  "hooks": [
+    {
+      "clip_id": "001",
+      "hook_start_sec": 12.38,
+      "hook_end_sec": 17.14,
+      "hook_text": "We have a Moore's law like law, except it's for intelligence itself,",
+      "reason": "This sentence introduces a high-stakes, relatable analogy that immediately frames the topic of AI growth in a way that is easy to understand."
+    },
+    {
+      "clip_id": "002",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 3.0,
+      "hook_text": "I think we could have this very unusual combination of very fast GDP growth and high unemployment or at least underemployment",
+      "reason": "This presents a provocative, counter-intuitive economic claim that immediately challenges the viewer's assumptions about growth and jobs."
+    },
+    {
+      "clip_id": "003",
+      "hook_start_sec": 25.24,
+      "hook_end_sec": 30.46,
+      "hook_text": "All this technology be going in the right direction but economically, we could be heading towards a bubble.",
+      "reason": "The mention of a potential economic bubble provides a clear, high-stakes conflict that grabs attention better than the abstract discussion of AI progress."
+    },
+    {
+      "clip_id": "004",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 4.79,
+      "hook_text": "sometimes the models will develop the intent to blackmail, the intent to deceive.",
+      "reason": "This is a startling, high-fear claim about AI behavior that functions perfectly as a standalone hook."
+    },
+    {
+      "clip_id": "005",
+      "hook_start_sec": 3.58,
+      "hook_end_sec": 8.88,
+      "hook_text": "One of the things I would say is that there are super intelligences today, and they're basically large corporations, right?",
+      "reason": "This redefines a buzzword ('super intelligence') in a surprising way, forcing the viewer to listen to the explanation."
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "decisions": [
+    {
+      "clip_id": "001",
+      "trim_start_sec": 8.4,
+      "trim_end_sec": 0.0,
+      "reason": "Dropped 8.4s of introductory filler to start directly on the core technical insight.",
+      "thought": "The original start was too slow. Starting at 'The boilerplate, the plumbing' immediately establishes the context of software development and the AI's role."
+    },
+    {
+      "clip_id": "002",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 6.7,
+      "reason": "Dropped 6.7s of trailing reflection to end on the punchy 'experience an agent' thought.",
+      "thought": "The ending was drifting into a meta-commentary on Twitter. Cutting the last few seconds keeps the focus on the user experience of the agent."
+    },
+    {
+      "clip_id": "003",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "reason": "No trim necessary as the clip maintains a tight narrative arc from the viral moment to the project's growth.",
+      "thought": "The clip is already well-paced and hits the hook early. Trimming would lose the context of the project's name and its growth trajectory."
+    },
+    {
+      "clip_id": "004",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "reason": "No trim necessary as the clip is already concise and hits the hook within the first 3 seconds.",
+      "thought": "The clip is near the 50s minimum and effectively builds tension from the start. Any further trimming would sacrifice the explanation of the heartbeat feature."
+    },
+    {
+      "clip_id": "005",
+      "trim_start_sec": 0.01,
+      "trim_end_sec": 0.0,
+      "reason": "Dropped 0.01s of trailing sentence fragment from the previous segment.",
+      "thought": "The clip starts with a fragment 'and other people could raise their imagination.' Removing this allows the clip to start cleanly on the 'Imagine putting an agent into a meeting' hook."
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "clip_id": "004",
+  "source_spans": [
+    {
+      "start_time_sec": 918.5,
+      "end_time_sec": 922.8499999999999
+    },
+    {
+      "start_time_sec": 924.6700000000001,
+      "end_time_sec": 925.63
+    },
+    {
+      "start_time_sec": 926.1500000000001,
+      "end_time_sec": 929.39
+    },
+    {
+      "start_time_sec": 930.09,
+      "end_time_sec": 932.43
+    },
+    {
+      "start_time_sec": 933.09,
+      "end_time_sec": 935.2299999999999
+    },
+    {
+      "start_time_sec": 936.3900000000001,
+      "end_time_sec": 942.5799999999999
+    },
+    {
+      "start_time_sec": 943.0300000000001,
+      "end_time_sec": 947.5899999999999
+    },
+    {
+      "start_time_sec": 949.09,
+      "end_time_sec": 949.5999999999999
+    },
+    {
+      "start_time_sec": 950.0500000000001,
+      "end_time_sec": 951.41
+    },
+    {
+      "start_time_sec": 952.25,
+      "end_time_sec": 954.01
+    },
+    {
+      "start_time_sec": 954.75,
+      "end_time_sec": 958.04
+    },
+    {
+      "start_time_sec": 958.59,
+      "end_time_sec": 965.77
+    },
+    {
+      "start_time_sec": 966.8100000000001,
+      "end_time_sec": 970.5899999999999
+    },
+    {
+      "start_time_sec": 972.0500000000001,
+      "end_time_sec": 977.6
+    }
+  ],
+  "assembled_duration_sec": 47.20999999999867
+}

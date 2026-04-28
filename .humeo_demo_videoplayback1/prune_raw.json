@@ -1,0 +1,32 @@
+{
+  "decisions": [
+    {
+      "clip_id": "001",
+      "trim_start_sec": 4.96,
+      "trim_end_sec": 0.0,
+      "reason": "Removed slow setup and throat-clearing to start directly on the core distinction between chatbots and agents.",
+      "thought": "The original start was a bit rambling. Starting with 'This is not a chatbot' immediately sets the stakes and hooks the viewer into the topic of AI agents."
+    },
+    {
+      "clip_id": "002",
+      "trim_start_sec": 11.76,
+      "trim_end_sec": 0.0,
+      "reason": "Removed the technical setup about voice support to jump straight into the moment of discovery.",
+      "thought": "The story is more gripping when it starts with the agent's unexpected response rather than the technical backstory of the build."
+    },
+    {
+      "clip_id": "003",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 7.12,
+      "reason": "Removed the post-hook narrative about trademark claims to keep the focus on the viral growth story.",
+      "thought": "The clip is stronger if it ends on the 'stripper pole' punchline rather than trailing off into the legal troubles that followed."
+    },
+    {
+      "clip_id": "004",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "reason": "No trimming required as the clip is already concise and starts with a strong, standalone hook.",
+      "thought": "The opening statement about the bottleneck is punchy and sets the context for the rest of the clip perfectly."
+    }
+  ]
+}

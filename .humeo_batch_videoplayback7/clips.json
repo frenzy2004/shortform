@@ -1,0 +1,175 @@
+{
+  "source_path": "",
+  "clips": [
+    {
+      "clip_id": "001",
+      "topic": "The Future of Drone Delivery",
+      "start_time_sec": 1545.6,
+      "end_time_sec": 1609.9,
+      "viral_hook": "Drones and rolling robots are also going to cut delivery costs dramatically. Did you know there are already four million deliveries per year by drones?",
+      "virality_score": 0.8,
+      "transcript": "Drones and rolling robots are also going to cut delivery costs dramatically. Did you know there are already four million deliveries per year by drones? Now, to be sure, Zipline, one of the companies in our venture fund, is responsible for, I think, half of those. But we believe that the cost to deliver by drone will cut delivery costs, right now, DoorDash, $15 per, to less than a dollar, so a 90% reduction over time. So this is another huge market percolating out there. And we're so excited because we believe we're now in the prime time for the reason I founded Ark. I founded Ark in 2014 for this reason.",
+      "suggested_overlay_title": "$15 Delivery Soon Cost $1",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.9,
+        "hook_emotion": 0.8,
+        "catchy": 0.6
+      },
+      "reasoning": "The clip has a fantastic hook with a surprising statistic (4M drone deliveries) and an even better payoff: a 90% cost reduction ($15 to <$1). This is a tangible, mind-blowing prediction for a service millions of people use.",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 8.9,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "render_spans": [],
+      "shorts_title": "Drone delivery will be 90% cheaper.",
+      "description": "Cathie Wood reveals how drone delivery is poised to slash costs from $15 down to less than $1, a 90% reduction that will revolutionize the logistics market.",
+      "hashtags": [
+        "drones",
+        "delivery",
+        "logistics",
+        "zipline",
+        "doordash"
+      ],
+      "layout_hint": "split_chart_person",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "002",
+      "topic": "The True Value of a Medical Cure",
+      "start_time_sec": 992.0,
+      "end_time_sec": 1065.4,
+      "viral_hook": "We're collapsing the cost of drug discovery and development. We think it could drop from 2.4 billion for one drug to roughly 700 million over the next four years",
+      "virality_score": 0.8275,
+      "transcript": "cost of drug discovery and development. We think it could drop from 2.4 billion for one drug to roughly 700 million over the next four years, and that, of course, includes the failures along the way. And then most provocatively, and Shay has done an amazing job of documenting what a cure is going to be worth. And I have to give Brett Winton incredible credit as he partnered with Shay on this project to try and figure out how much is a cure worth. And we think while the cure for HAE, which is a very rare disease, would be worth $11 million. One and done. You get this treatment and you're done. That's Intellia's trial right now, and it's in vivo. You don't have to go through any excruciating preconditioning. It could be worth 11 million. That's how much it would save the system.",
+      "suggested_overlay_title": "A Single Medical Cure Worth $11",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.9,
+        "hook_emotion": 0.85,
+        "catchy": 0.7
+      },
+      "reasoning": "Starts with a strong hook about collapsing drug development costs, then pivots to a provocative and specific example of an $11 million cure. The numbers are huge and the topic of health is inherently emotional, leading to high scores.",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 7.3,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "render_spans": [],
+      "shorts_title": "The math behind an $11 million medical cure.",
+      "description": "With the cost of drug discovery collapsing, what is a cure actually worth? Cathie Wood breaks down the economics, revealing how a one-time treatment could be valued at $11 million.",
+      "hashtags": [
+        "biotech",
+        "healthcare",
+        "investing",
+        "geneediting",
+        "arkinvest"
+      ],
+      "layout_hint": "split_chart_person",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "003",
+      "topic": "Regulation Stunted Nuclear Power",
+      "start_time_sec": 1225.0,
+      "end_time_sec": 1277.6,
+      "viral_hook": "it is shocking to see how regulation stunted the growth of nuclear in the mid-'70s.",
+      "virality_score": 0.7925,
+      "transcript": "it is shocking to see how regulation stunted the growth of nuclear in the mid-'70s. If regulation had not stopped the cost declines for developing nuclear plants from continuing, electricity costs today would be 40% lower than they are now. So we have high hopes that nuclear power is going to help us, once again, as they scale, drive down the cost of electricity and be a counterforce to the demands that AI and data centers are placing on our grid right now.",
+      "suggested_overlay_title": "Why Electricity Bill Is 40% Higher",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.85,
+        "hook_emotion": 0.85,
+        "catchy": 0.6
+      },
+      "reasoning": "The hook uses a strong emotional word (\"shocking\") and presents a clear antagonist (regulation). The core message—a specific, large number (40% lower costs)—is a powerful 'what if' scenario that grabs attention.",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 4.2,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "render_spans": [],
+      "shorts_title": "How regulation cost us 40% on our electricity bills.",
+      "description": "Cathie Wood explains the shocking impact of 1970s regulation on the nuclear industry, arguing that without it, electricity costs today would be 40% lower.",
+      "hashtags": [
+        "nuclear",
+        "energy",
+        "regulation",
+        "electricity",
+        "history"
+      ],
+      "layout_hint": "split_chart_person",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "004",
+      "topic": "Tether's $50M Per Employee Productivity",
+      "start_time_sec": 846.1,
+      "end_time_sec": 927.7,
+      "viral_hook": "Tether, for example, last year, we believe delivered $50 million per employee. That is unheard of.",
+      "virality_score": 0.86,
+      "transcript": "Tether, for example, last year, we believe delivered $50 million per employee. That is unheard of. But we think that the capitalizing on all of these new technologies is going to drive productivity gains much higher than people can even postulate right now. And with that, while many people are afraid, given the robotics movement and AI, everyone being thrown out of jobs, we disagree. We think this is going to be one of the greatest opportunities for the entrepreneurial spirit in history, especially because you can go to ChatGPT or Grok and say, \"I think there's a huge unmet need for this, that, or the other product or service.\" Think about it. And I would like to start that business. Boy, when we started Ark, I would have loved to have a starting point like that. And you can work with ChatGPT, xAI, Grok to build your business. Try it. If you're looking for a job,",
+      "suggested_overlay_title": "Company Makes $50 Million Per Employee",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.9,
+        "hook_emotion": 0.9,
+        "catchy": 0.8
+      },
+      "reasoning": "The hook is an absolutely staggering and memorable number ($50M/employee), giving it extremely high scores on message wow, emotion (shock), and catchiness. The clip then pivots to an empowering message about entrepreneurship.",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 5.8,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "render_spans": [],
+      "shorts_title": "This company's productivity is UNHEARD OF.",
+      "description": "ARK Invest's Cathie Wood reveals the shocking productivity of companies like Tether, which are delivering $50 million per employee, and explains why this is the greatest opportunity for entrepreneurs in history.",
+      "hashtags": [
+        "productivity",
+        "tether",
+        "crypto",
+        "entrepreneurship",
+        "ai"
+      ],
+      "layout_hint": "split_chart_person",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "005",
+      "topic": "Why This AI Boom Is Not the Dot-Com Bubble",
+      "start_time_sec": 68.8,
+      "end_time_sec": 137.0,
+      "viral_hook": "Sure, it feels like it's a hype cycle because capital spending in the tech and telecom sectors as a percent of GDP is nearly as high now as it was during the tech and telecom bubble.",
+      "virality_score": 0.765,
+      "transcript": "Sure, it feels like it's a hype cycle because capital spending in the tech and telecom sectors as a percent of GDP is nearly as high now as it was during the tech and telecom bubble. But if you will remember, the tech and telecom bubble laid fiber, and most of it remained dark. Today, the GPUs are driving this cycle. And I'll steal from Brad Gerstner at Altimeter. He's saying, \"Those aren't dark. They're in short supply, and they are being used.\" And we agree completely with that. We compare this capital spending cycle to the railroads in the 1800s. That got up to 5% to 6% of GDP. And then the automobile explosion in the early 1900s. That got up to 3% to 4% of GDP.",
+      "suggested_overlay_title": "This Isn't Another Dot-com Bubble",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.75,
+        "hook_emotion": 0.7,
+        "catchy": 0.85
+      },
+      "reasoning": "This clip effectively addresses a major viewer skepticism head-on. The 'dark fiber' vs. 'GPUs in short supply' analogy is very sticky and quotable, making it highly catchy. The message provides valuable context for investors.",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 9.6,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "render_spans": [],
+      "shorts_title": "Why the AI boom is different from the dot-com bubble.",
+      "description": "Is the current AI boom just another hype cycle like the dot-com bubble? Cathie Wood explains the key difference between then and now, using a great analogy about 'dark fiber' vs. GPUs in high demand.",
+      "hashtags": [
+        "ai",
+        "techbubble",
+        "investing",
+        "gpus",
+        "nvidia"
+      ],
+      "layout_hint": "split_chart_person",
+      "needs_review": false,
+      "review_reason": ""
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,48,&H00FFFFFF,&H000000FF,&H00000000,&H70000000,-1,0,0,0,100,100,0,0,4,0,0,2,60,60,160,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.07,Default,,0,0,0,,to load up your
+Dialogue: 0,0:00:01.07,0:00:02.45,Default,,0,0,0,,fundraising odds of success
+Dialogue: 0,0:00:02.77,0:00:04.39,Default,,0,0,0,,is that it gives
+Dialogue: 0,0:00:04.39,0:00:06.59,Default,,0,0,0,,the confidence If
+Dialogue: 0,0:00:06.59,0:00:08.49,Default,,0,0,0,,the only has one
+Dialogue: 0,0:00:08.49,0:00:10.59,Default,,0,0,0,,who's showing interest they're
+Dialogue: 0,0:00:10.59,0:00:12.33,Default,,0,0,0,,like everything is hinged
+Dialogue: 0,0:00:12.33,0:00:13.13,Default,,0,0,0,,on this one VC
+Dialogue: 0,0:00:13.23,0:00:13.99,Default,,0,0,0,,Yeah it's like super
+Dialogue: 0,0:00:13.99,0:00:15.49,Default,,0,0,0,,tunnel vision Super tunnel
+Dialogue: 0,0:00:15.49,0:00:17.15,Default,,0,0,0,,vision desperate like live
+Dialogue: 0,0:00:17.15,0:00:18.29,Default,,0,0,0,,or die kind situation
+Dialogue: 0,0:00:18.55,0:00:19.81,Default,,0,0,0,,then the interaction between
+Dialogue: 0,0:00:19.81,0:00:20.93,Default,,0,0,0,,that then the VC
+Dialogue: 0,0:00:20.93,0:00:21.77,Default,,0,0,0,,will be like hey
+Dialogue: 0,0:00:21.81,0:00:22.63,Default,,0,0,0,,is this founder actually
+Dialogue: 0,0:00:23.07,0:00:23.61,Default,,0,0,0,,you know do people
+Dialogue: 0,0:00:23.61,0:00:24.91,Default,,0,0,0,,actually want this Do
+Dialogue: 0,0:00:24.91,0:00:27.03,Default,,0,0,0,,market forces support the
+Dialogue: 0,0:00:27.03,0:00:27.93,Default,,0,0,0,,success of this company
+Dialogue: 0,0:00:28.47,0:00:29.15,Default,,0,0,0,,Right They may not
+Dialogue: 0,0:00:29.15,0:00:30.19,Default,,0,0,0,,say that I smell
+Dialogue: 0,0:00:30.19,0:00:31.45,Default,,0,0,0,,desperation I should go
+Dialogue: 0,0:00:31.45,0:00:32.09,Default,,0,0,0,,away You it's not
+Dialogue: 0,0:00:32.09,0:00:33.99,Default,,0,0,0,,like that It's more
+Dialogue: 0,0:00:33.99,0:00:35.69,Default,,0,0,0,,like they see that
+Dialogue: 0,0:00:35.69,0:00:36.37,Default,,0,0,0,,And then they get
+Dialogue: 0,0:00:36.37,0:00:37.29,Default,,0,0,0,,a that if I'm
+Dialogue: 0,0:00:37.29,0:00:38.29,Default,,0,0,0,,the one backing it
+Dialogue: 0,0:00:38.53,0:00:39.15,Default,,0,0,0,,the founder is not
+Dialogue: 0,0:00:39.15,0:00:39.67,Default,,0,0,0,,gonna have enough money
+Dialogue: 0,0:00:39.67,0:00:40.19,Default,,0,0,0,,to build a big
+Dialogue: 0,0:00:40.19,0:00:42.01,Default,,0,0,0,,business You know and
+Dialogue: 0,0:00:42.01,0:00:42.53,Default,,0,0,0,,even though I have
+Dialogue: 0,0:00:42.53,0:00:43.53,Default,,0,0,0,,full conviction if nobody
+Dialogue: 0,0:00:43.53,0:00:44.39,Default,,0,0,0,,else has conviction down
+Dialogue: 0,0:00:44.39,0:00:45.69,Default,,0,0,0,,the line like this
+Dialogue: 0,0:00:45.69,0:00:46.17,Default,,0,0,0,,is dead if you
+Dialogue: 0,0:00:46.17,0:00:48.07,Default,,0,0,0,,see customers and and
+Dialogue: 0,0:00:48.07,0:00:49.09,Default,,0,0,0,,whatever all in line
+Dialogue: 0,0:00:49.23,0:00:50.00,Default,,0,0,0,,makes you yeah sure

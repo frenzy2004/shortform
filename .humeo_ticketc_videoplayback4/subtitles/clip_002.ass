@@ -1,0 +1,65 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,48,&H00FFFFFF,&H000000FF,&H00000000,&H70000000,-1,0,0,0,100,100,0,0,4,0,0,2,60,60,160,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:00.88,Default,,0,0,0,,you there's this scene
+Dialogue: 0,0:00:00.88,0:00:02.50,Default,,0,0,0,,from Carl Sagan's Contact
+Dialogue: 0,0:00:02.64,0:00:03.80,Default,,0,0,0,,the movie version of
+Dialogue: 0,0:00:03.80,0:00:05.14,Default,,0,0,0,,it where you they
+Dialogue: 0,0:00:05.14,0:00:06.72,Default,,0,0,0,,kind of alien life
+Dialogue: 0,0:00:06.72,0:00:07.94,Default,,0,0,0,,and it's this international
+Dialogue: 0,0:00:07.94,0:00:10.82,Default,,0,0,0,,panel that's like you
+Dialogue: 0,0:00:10.82,0:00:11.90,Default,,0,0,0,,know people to be
+Dialogue: 0,0:00:11.90,0:00:13.42,Default,,0,0,0,,humanities representative to meet
+Dialogue: 0,0:00:13.42,0:00:13.90,Default,,0,0,0,,the
+Dialogue: 0,0:00:15.66,0:00:17.16,Default,,0,0,0,,And one of the
+Dialogue: 0,0:00:17.16,0:00:18.04,Default,,0,0,0,,questions they asked one
+Dialogue: 0,0:00:18.04,0:00:19.18,Default,,0,0,0,,of the is you
+Dialogue: 0,0:00:19.18,0:00:19.70,Default,,0,0,0,,if you could ask
+Dialogue: 0,0:00:19.70,0:00:21.36,Default,,0,0,0,,the any one question
+Dialogue: 0,0:00:21.48,0:00:23.04,Default,,0,0,0,,what would it be
+Dialogue: 0,0:00:23.38,0:00:24.96,Default,,0,0,0,,And one of the
+Dialogue: 0,0:00:24.96,0:00:25.86,Default,,0,0,0,,characters says I would
+Dialogue: 0,0:00:25.86,0:00:27.08,Default,,0,0,0,,ask how did you
+Dialogue: 0,0:00:27.08,0:00:27.82,Default,,0,0,0,,do it How did
+Dialogue: 0,0:00:27.82,0:00:29.46,Default,,0,0,0,,you manage to get
+Dialogue: 0,0:00:29.46,0:00:31.62,Default,,0,0,0,,through this technological adolescence
+Dialogue: 0,0:00:31.82,0:00:33.66,Default,,0,0,0,,without destroying yourselves How
+Dialogue: 0,0:00:33.66,0:00:34.34,Default,,0,0,0,,did you make it
+Dialogue: 0,0:00:34.34,0:00:36.22,Default,,0,0,0,,through And ever since
+Dialogue: 0,0:00:36.22,0:00:36.80,Default,,0,0,0,,I saw it it
+Dialogue: 0,0:00:36.80,0:00:37.48,Default,,0,0,0,,like 20 years ago
+Dialogue: 0,0:00:37.56,0:00:38.04,Default,,0,0,0,,I think I saw
+Dialogue: 0,0:00:38.04,0:00:38.74,Default,,0,0,0,,that movie it's kind
+Dialogue: 0,0:00:38.74,0:00:40.30,Default,,0,0,0,,of with me And
+Dialogue: 0,0:00:40.30,0:00:41.46,Default,,0,0,0,,that's the frame that
+Dialogue: 0,0:00:41.46,0:00:42.68,Default,,0,0,0,,I used which is
+Dialogue: 0,0:00:42.68,0:00:44.98,Default,,0,0,0,,that you know we
+Dialogue: 0,0:00:44.98,0:00:46.42,Default,,0,0,0,,are knocking on the
+Dialogue: 0,0:00:46.56,0:00:48.48,Default,,0,0,0,,of these incredible capabilities
+Dialogue: 0,0:00:48.68,0:00:50.88,Default,,0,0,0,,right The ability to
+Dialogue: 0,0:00:50.88,0:00:52.88,Default,,0,0,0,,basically machines out of
+Dialogue: 0,0:00:52.94,0:00:54.22,Default,,0,0,0,,right I think it
+Dialogue: 0,0:00:54.22,0:00:55.68,Default,,0,0,0,,was inevitable that the
+Dialogue: 0,0:00:55.68,0:00:56.62,Default,,0,0,0,,instant we started working
+Dialogue: 0,0:00:56.62,0:00:57.14,Default,,0,0,0,,with fire
+Dialogue: 0,0:00:58.86,0:00:59.99,Default,,0,0,0,,but how we handle
+Dialogue: 0,0:00:59.99,0:01:01.94,Default,,0,0,0,,it is not inevitable
+Dialogue: 0,0:01:02.18,0:01:02.66,Default,,0,0,0,,And so I think
+Dialogue: 0,0:01:02.66,0:01:03.78,Default,,0,0,0,,the next few years
+Dialogue: 0,0:01:04.32,0:01:05.68,Default,,0,0,0,,we're going to be
+Dialogue: 0,0:01:05.68,0:01:07.30,Default,,0,0,0,,with you how do
+Dialogue: 0,0:01:07.30,0:01:08.38,Default,,0,0,0,,we keep these systems
+Dialogue: 0,0:01:08.38,0:01:09.66,Default,,0,0,0,,under control that are
+Dialogue: 0,0:01:09.66,0:01:11.32,Default,,0,0,0,,highly autonomous and smarter
+Dialogue: 0,0:01:11.32,0:01:11.96,Default,,0,0,0,,than any human

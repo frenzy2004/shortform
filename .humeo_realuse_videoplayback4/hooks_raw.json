@@ -1,0 +1,39 @@
+{
+  "hooks": [
+    {
+      "clip_id": "001",
+      "hook_start_sec": 18.28,
+      "hook_end_sec": 26.2,
+      "hook_text": "We are now, in terms of the models that write code, I have engineers within Anthropa who say, I don't write any code anymore.",
+      "reason": "This provides a concrete, startling claim about job displacement that is far more engaging than the abstract setup about 'mechanisms' at the start of the clip."
+    },
+    {
+      "clip_id": "002",
+      "hook_start_sec": 27.52,
+      "hook_end_sec": 33.24,
+      "hook_text": "How did you manage to get through this technological adolescence without destroying yourselves?",
+      "reason": "This is a powerful, provocative question that serves as a perfect standalone hook, whereas the preceding context about the movie 'Contact' is unnecessary filler."
+    },
+    {
+      "clip_id": "003",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 2.93,
+      "hook_text": "The sort of strongest argument for Doomerism, to me, is the Fermi paradox, the idea that we don't see intelligent life in our galaxy.",
+      "reason": "This sentence immediately introduces a high-stakes intellectual conflict (Doomerism vs. Fermi Paradox) that captures attention instantly."
+    },
+    {
+      "clip_id": "004",
+      "hook_start_sec": 11.92,
+      "hook_end_sec": 21.32,
+      "hook_text": "I can kind of look forward to a time where on the more junior end and then on the more intermediate end, we actually need less and not more people.",
+      "reason": "This is a direct, controversial prediction about labor demand that is much more compelling than the vague 'beginnings of it' mentioned in the opening sentence."
+    },
+    {
+      "clip_id": "005",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 11.0,
+      "hook_text": "How big do you think is the risk of a popular backlash against AI that will somehow kind of cause governments to do what from your perspective might be stupid things?",
+      "reason": "This is a direct, high-stakes question that immediately frames the tension between AI development and political regulation."
+    }
+  ]
+}

@@ -1,0 +1,167 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Base,Arial,86,&H00FFFFFF,&H000000FF,&H00101010,&H00000000,-1,0,0,0,100,100,-1,0,1,4,0,8,0,0,0,0
+Style: Highlight,Arial,86,&H00FFFFFF,&H000000FF,&H00000000,&H00F65C8B,-1,0,0,0,100,100,-1,0,4,0,10,7,0,0,0,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.46,Base,,0,0,0,,{\an7\pos(229.5,1440.0)}happening that
+Dialogue: 1,0:00:00.00,0:00:00.56,Highlight,,0,0,0,,{\an7\pos(229.5,1440.0)\blur0.8}happening
+Dialogue: 1,0:00:00.56,0:00:01.62,Highlight,,0,0,0,,{\an7\pos(691.5,1440.0)\blur0.8}that
+Dialogue: 0,0:00:00.00,0:00:02.46,Base,,0,0,0,,{\an7\pos(357.5,1534.0)}I know is
+Dialogue: 1,0:00:01.62,0:00:01.84,Highlight,,0,0,0,,{\an7\pos(357.5,1534.0)\blur0.8}I
+Dialogue: 1,0:00:01.84,0:00:02.04,Highlight,,0,0,0,,{\an7\pos(405.5,1534.0)\blur0.8}know
+Dialogue: 1,0:00:02.04,0:00:02.46,Highlight,,0,0,0,,{\an7\pos(650.5,1534.0)\blur0.8}is
+Dialogue: 0,0:00:02.46,0:00:05.50,Base,,0,0,0,,{\an7\pos(129.5,1440.0)}concerning to many
+Dialogue: 1,0:00:02.46,0:00:02.84,Highlight,,0,0,0,,{\an7\pos(129.5,1440.0)\blur0.8}concerning
+Dialogue: 1,0:00:02.84,0:00:03.12,Highlight,,0,0,0,,{\an7\pos(619.5,1440.0)\blur0.8}to
+Dialogue: 1,0:00:03.12,0:00:03.32,Highlight,,0,0,0,,{\an7\pos(725.5,1440.0)\blur0.8}many
+Dialogue: 0,0:00:02.46,0:00:05.50,Base,,0,0,0,,{\an7\pos(-7.5,1534.0)}people The unemployment
+Dialogue: 1,0:00:03.32,0:00:03.82,Highlight,,0,0,0,,{\an7\pos(-7.5,1534.0)\blur0.8}people
+Dialogue: 1,0:00:03.82,0:00:04.66,Highlight,,0,0,0,,{\an7\pos(295.5,1534.0)\blur0.8}The
+Dialogue: 1,0:00:04.66,0:00:05.50,Highlight,,0,0,0,,{\an7\pos(473.5,1534.0)\blur0.8}unemployment
+Dialogue: 0,0:00:05.50,0:00:07.98,Base,,0,0,0,,{\an7\pos(391.5,1440.0)}rate for
+Dialogue: 1,0:00:05.50,0:00:06.10,Highlight,,0,0,0,,{\an7\pos(391.5,1440.0)\blur0.8}rate
+Dialogue: 1,0:00:06.10,0:00:07.06,Highlight,,0,0,0,,{\an7\pos(573.5,1440.0)\blur0.8}for
+Dialogue: 0,0:00:05.50,0:00:07.98,Base,,0,0,0,,{\an7\pos(439.0,1534.0)}16 to
+Dialogue: 1,0:00:07.06,0:00:07.78,Highlight,,0,0,0,,{\an7\pos(439.0,1534.0)\blur0.8}16
+Dialogue: 1,0:00:07.78,0:00:07.98,Highlight,,0,0,0,,{\an7\pos(559.0,1534.0)\blur0.8}to
+Dialogue: 0,0:00:07.98,0:00:10.42,Base,,0,0,0,,{\an7\pos(391.5,1440.0)}24 year
+Dialogue: 1,0:00:07.98,0:00:08.60,Highlight,,0,0,0,,{\an7\pos(391.5,1440.0)\blur0.8}24
+Dialogue: 1,0:00:08.60,0:00:09.08,Highlight,,0,0,0,,{\an7\pos(511.5,1440.0)\blur0.8}year
+Dialogue: 0,0:00:07.98,0:00:10.42,Base,,0,0,0,,{\an7\pos(364.5,1534.0)}olds has
+Dialogue: 1,0:00:09.08,0:00:09.30,Highlight,,0,0,0,,{\an7\pos(364.5,1534.0)\blur0.8}olds
+Dialogue: 1,0:00:09.30,0:00:10.42,Highlight,,0,0,0,,{\an7\pos(566.5,1534.0)\blur0.8}has
+Dialogue: 0,0:00:10.42,0:00:13.32,Base,,0,0,0,,{\an7\pos(348.0,1440.0)}moved to
+Dialogue: 1,0:00:10.42,0:00:10.80,Highlight,,0,0,0,,{\an7\pos(348.0,1440.0)\blur0.8}moved
+Dialogue: 1,0:00:10.80,0:00:11.22,Highlight,,0,0,0,,{\an7\pos(650.0,1440.0)\blur0.8}to
+Dialogue: 0,0:00:10.42,0:00:13.32,Base,,0,0,0,,{\an7\pos(432.0,1534.0)}12 12
+Dialogue: 1,0:00:11.22,0:00:12.40,Highlight,,0,0,0,,{\an7\pos(432.0,1534.0)\blur0.8}12
+Dialogue: 1,0:00:12.40,0:00:13.32,Highlight,,0,0,0,,{\an7\pos(552.0,1534.0)\blur0.8}12
+Dialogue: 0,0:00:13.32,0:00:14.22,Base,,0,0,0,,{\an7\pos(288.0,1534.0)}big increase
+Dialogue: 1,0:00:13.32,0:00:13.66,Highlight,,0,0,0,,{\an7\pos(288.0,1534.0)\blur0.8}big
+Dialogue: 1,0:00:13.66,0:00:14.22,Highlight,,0,0,0,,{\an7\pos(442.0,1534.0)\blur0.8}increase
+Dialogue: 0,0:00:14.32,0:00:16.34,Base,,0,0,0,,{\an7\pos(297.5,1440.0)}And what is
+Dialogue: 1,0:00:14.32,0:00:14.74,Highlight,,0,0,0,,{\an7\pos(297.5,1440.0)\blur0.8}And
+Dialogue: 1,0:00:14.74,0:00:15.22,Highlight,,0,0,0,,{\an7\pos(489.5,1440.0)\blur0.8}what
+Dialogue: 1,0:00:15.22,0:00:15.36,Highlight,,0,0,0,,{\an7\pos(710.5,1440.0)\blur0.8}is
+Dialogue: 0,0:00:14.32,0:00:16.34,Base,,0,0,0,,{\an7\pos(174.0,1534.0)}that saying That's
+Dialogue: 1,0:00:15.36,0:00:15.64,Highlight,,0,0,0,,{\an7\pos(174.0,1534.0)\blur0.8}that
+Dialogue: 1,0:00:15.64,0:00:15.90,Highlight,,0,0,0,,{\an7\pos(357.0,1534.0)\blur0.8}saying
+Dialogue: 1,0:00:15.90,0:00:16.34,Highlight,,0,0,0,,{\an7\pos(655.0,1534.0)\blur0.8}That's
+Dialogue: 0,0:00:16.34,0:00:19.44,Base,,0,0,0,,{\an7\pos(194.0,1440.0)}saying that entry
+Dialogue: 1,0:00:16.34,0:00:16.60,Highlight,,0,0,0,,{\an7\pos(194.0,1440.0)\blur0.8}saying
+Dialogue: 1,0:00:16.60,0:00:16.96,Highlight,,0,0,0,,{\an7\pos(492.0,1440.0)\blur0.8}that
+Dialogue: 1,0:00:16.96,0:00:17.40,Highlight,,0,0,0,,{\an7\pos(675.0,1440.0)\blur0.8}entry
+Dialogue: 0,0:00:16.34,0:00:19.44,Base,,0,0,0,,{\an7\pos(266.5,1534.0)}level jobs are
+Dialogue: 1,0:00:17.40,0:00:17.82,Highlight,,0,0,0,,{\an7\pos(266.5,1534.0)\blur0.8}level
+Dialogue: 1,0:00:17.82,0:00:18.40,Highlight,,0,0,0,,{\an7\pos(482.5,1534.0)\blur0.8}jobs
+Dialogue: 1,0:00:18.40,0:00:19.44,Highlight,,0,0,0,,{\an7\pos(684.5,1534.0)\blur0.8}are
+Dialogue: 0,0:00:19.44,0:00:21.06,Base,,0,0,0,,{\an7\pos(179.5,1440.0)}not being created
+Dialogue: 1,0:00:19.44,0:00:19.70,Highlight,,0,0,0,,{\an7\pos(179.5,1440.0)\blur0.8}not
+Dialogue: 1,0:00:19.70,0:00:20.02,Highlight,,0,0,0,,{\an7\pos(338.5,1440.0)\blur0.8}being
+Dialogue: 1,0:00:20.02,0:00:20.34,Highlight,,0,0,0,,{\an7\pos(593.5,1440.0)\blur0.8}created
+Dialogue: 0,0:00:19.44,0:00:21.06,Base,,0,0,0,,{\an7\pos(280.5,1534.0)}the way they
+Dialogue: 1,0:00:20.34,0:00:20.58,Highlight,,0,0,0,,{\an7\pos(280.5,1534.0)\blur0.8}the
+Dialogue: 1,0:00:20.58,0:00:20.82,Highlight,,0,0,0,,{\an7\pos(434.5,1534.0)\blur0.8}way
+Dialogue: 1,0:00:20.82,0:00:21.06,Highlight,,0,0,0,,{\an7\pos(621.5,1534.0)\blur0.8}they
+Dialogue: 0,0:00:21.06,0:00:23.72,Base,,0,0,0,,{\an7\pos(323.5,1440.0)}used to be
+Dialogue: 1,0:00:21.06,0:00:21.36,Highlight,,0,0,0,,{\an7\pos(323.5,1440.0)\blur0.8}used
+Dialogue: 1,0:00:21.36,0:00:21.56,Highlight,,0,0,0,,{\an7\pos(549.5,1440.0)\blur0.8}to
+Dialogue: 1,0:00:21.56,0:00:21.92,Highlight,,0,0,0,,{\an7\pos(655.5,1440.0)\blur0.8}be
+Dialogue: 0,0:00:21.06,0:00:23.72,Base,,0,0,0,,{\an7\pos(249.0,1534.0)}those people I
+Dialogue: 1,0:00:21.92,0:00:22.36,Highlight,,0,0,0,,{\an7\pos(249.0,1534.0)\blur0.8}those
+Dialogue: 1,0:00:22.36,0:00:23.26,Highlight,,0,0,0,,{\an7\pos(504.0,1534.0)\blur0.8}people
+Dialogue: 1,0:00:23.26,0:00:23.72,Highlight,,0,0,0,,{\an7\pos(807.0,1534.0)\blur0.8}I
+Dialogue: 0,0:00:23.72,0:00:26.20,Base,,0,0,0,,{\an7\pos(379.0,1440.0)}say you
+Dialogue: 1,0:00:23.72,0:00:24.18,Highlight,,0,0,0,,{\an7\pos(379.0,1440.0)\blur0.8}say
+Dialogue: 1,0:00:24.18,0:00:25.24,Highlight,,0,0,0,,{\an7\pos(547.0,1440.0)\blur0.8}you
+Dialogue: 0,0:00:23.72,0:00:26.20,Base,,0,0,0,,{\an7\pos(319.0,1534.0)}know have
+Dialogue: 1,0:00:25.24,0:00:25.82,Highlight,,0,0,0,,{\an7\pos(319.0,1534.0)\blur0.8}know
+Dialogue: 1,0:00:25.82,0:00:26.20,Highlight,,0,0,0,,{\an7\pos(564.0,1534.0)\blur0.8}have
+Dialogue: 0,0:00:26.20,0:00:28.72,Base,,0,0,0,,{\an7\pos(281.0,1440.0)}in your mind
+Dialogue: 1,0:00:26.20,0:00:26.40,Highlight,,0,0,0,,{\an7\pos(281.0,1440.0)\blur0.8}in
+Dialogue: 1,0:00:26.40,0:00:26.62,Highlight,,0,0,0,,{\an7\pos(382.0,1440.0)\blur0.8}your
+Dialogue: 1,0:00:26.62,0:00:27.04,Highlight,,0,0,0,,{\an7\pos(593.0,1440.0)\blur0.8}mind
+Dialogue: 0,0:00:26.20,0:00:28.72,Base,,0,0,0,,{\an7\pos(321.5,1534.0)}an idea for
+Dialogue: 1,0:00:27.04,0:00:27.76,Highlight,,0,0,0,,{\an7\pos(321.5,1534.0)\blur0.8}an
+Dialogue: 1,0:00:27.76,0:00:28.22,Highlight,,0,0,0,,{\an7\pos(446.5,1534.0)\blur0.8}idea
+Dialogue: 1,0:00:28.22,0:00:28.72,Highlight,,0,0,0,,{\an7\pos(643.5,1534.0)\blur0.8}for
+Dialogue: 0,0:00:28.72,0:00:31.52,Base,,0,0,0,,{\an7\pos(220.5,1440.0)}a new business
+Dialogue: 1,0:00:28.72,0:00:28.99,Highlight,,0,0,0,,{\an7\pos(220.5,1440.0)\blur0.8}a
+Dialogue: 1,0:00:28.99,0:00:29.16,Highlight,,0,0,0,,{\an7\pos(292.5,1440.0)\blur0.8}new
+Dialogue: 1,0:00:29.16,0:00:29.86,Highlight,,0,0,0,,{\an7\pos(484.5,1440.0)\blur0.8}business
+Dialogue: 0,0:00:28.72,0:00:31.52,Base,,0,0,0,,{\an7\pos(141.0,1534.0)}something that you
+Dialogue: 1,0:00:29.86,0:00:30.12,Highlight,,0,0,0,,{\an7\pos(141.0,1534.0)\blur0.8}something
+Dialogue: 1,0:00:30.12,0:00:30.99,Highlight,,0,0,0,,{\an7\pos(602.0,1534.0)\blur0.8}that
+Dialogue: 1,0:00:30.99,0:00:31.52,Highlight,,0,0,0,,{\an7\pos(785.0,1534.0)\blur0.8}you
+Dialogue: 0,0:00:31.96,0:00:34.06,Base,,0,0,0,,{\an7\pos(235.0,1440.0)}an unmet need
+Dialogue: 1,0:00:31.96,0:00:32.52,Highlight,,0,0,0,,{\an7\pos(235.0,1440.0)\blur0.8}an
+Dialogue: 1,0:00:32.52,0:00:32.86,Highlight,,0,0,0,,{\an7\pos(360.0,1440.0)\blur0.8}unmet
+Dialogue: 1,0:00:32.86,0:00:33.54,Highlight,,0,0,0,,{\an7\pos(643.0,1440.0)\blur0.8}need
+Dialogue: 0,0:00:31.96,0:00:34.06,Base,,0,0,0,,{\an7\pos(264.0,1534.0)}Well now you
+Dialogue: 1,0:00:33.54,0:00:33.82,Highlight,,0,0,0,,{\an7\pos(264.0,1534.0)\blur0.8}Well
+Dialogue: 1,0:00:33.82,0:00:33.98,Highlight,,0,0,0,,{\an7\pos(465.0,1534.0)\blur0.8}now
+Dialogue: 1,0:00:33.98,0:00:34.06,Highlight,,0,0,0,,{\an7\pos(662.0,1534.0)\blur0.8}you
+Dialogue: 0,0:00:34.06,0:00:36.58,Base,,0,0,0,,{\an7\pos(347.5,1440.0)}can go to
+Dialogue: 1,0:00:34.06,0:00:34.28,Highlight,,0,0,0,,{\an7\pos(347.5,1440.0)\blur0.8}can
+Dialogue: 1,0:00:34.28,0:00:34.44,Highlight,,0,0,0,,{\an7\pos(520.5,1440.0)\blur0.8}go
+Dialogue: 1,0:00:34.44,0:00:34.72,Highlight,,0,0,0,,{\an7\pos(650.5,1440.0)\blur0.8}to
+Dialogue: 0,0:00:34.06,0:00:36.58,Base,,0,0,0,,{\an7\pos(264.0,1534.0)}ChatGBT you
+Dialogue: 1,0:00:34.72,0:00:36.02,Highlight,,0,0,0,,{\an7\pos(264.0,1534.0)\blur0.8}ChatGBT
+Dialogue: 1,0:00:36.02,0:00:36.58,Highlight,,0,0,0,,{\an7\pos(662.0,1534.0)\blur0.8}you
+Dialogue: 0,0:00:36.58,0:00:38.26,Base,,0,0,0,,{\an7\pos(347.5,1440.0)}can go to
+Dialogue: 1,0:00:36.58,0:00:36.76,Highlight,,0,0,0,,{\an7\pos(347.5,1440.0)\blur0.8}can
+Dialogue: 1,0:00:36.76,0:00:36.88,Highlight,,0,0,0,,{\an7\pos(520.5,1440.0)\blur0.8}go
+Dialogue: 1,0:00:36.88,0:00:37.46,Highlight,,0,0,0,,{\an7\pos(650.5,1440.0)\blur0.8}to
+Dialogue: 0,0:00:36.58,0:00:38.26,Base,,0,0,0,,{\an7\pos(287.5,1534.0)}and you can
+Dialogue: 1,0:00:37.46,0:00:37.74,Highlight,,0,0,0,,{\an7\pos(287.5,1534.0)\blur0.8}and
+Dialogue: 1,0:00:37.74,0:00:37.96,Highlight,,0,0,0,,{\an7\pos(465.5,1534.0)\blur0.8}you
+Dialogue: 1,0:00:37.96,0:00:38.26,Highlight,,0,0,0,,{\an7\pos(643.5,1534.0)\blur0.8}can
+Dialogue: 0,0:00:38.26,0:00:40.04,Base,,0,0,0,,{\an7\pos(179.5,1440.0)}have an assistant
+Dialogue: 1,0:00:38.26,0:00:38.70,Highlight,,0,0,0,,{\an7\pos(179.5,1440.0)\blur0.8}have
+Dialogue: 1,0:00:38.70,0:00:38.96,Highlight,,0,0,0,,{\an7\pos(400.5,1440.0)\blur0.8}an
+Dialogue: 1,0:00:38.96,0:00:39.22,Highlight,,0,0,0,,{\an7\pos(525.5,1440.0)\blur0.8}assistant
+Dialogue: 0,0:00:38.26,0:00:40.04,Base,,0,0,0,,{\an7\pos(246.5,1534.0)}help you build
+Dialogue: 1,0:00:39.22,0:00:39.60,Highlight,,0,0,0,,{\an7\pos(246.5,1534.0)\blur0.8}help
+Dialogue: 1,0:00:39.60,0:00:39.94,Highlight,,0,0,0,,{\an7\pos(448.5,1534.0)\blur0.8}you
+Dialogue: 1,0:00:39.94,0:00:40.04,Highlight,,0,0,0,,{\an7\pos(626.5,1534.0)\blur0.8}build
+Dialogue: 0,0:00:40.04,0:00:42.74,Base,,0,0,0,,{\an7\pos(181.5,1440.0)}out that business
+Dialogue: 1,0:00:40.04,0:00:40.28,Highlight,,0,0,0,,{\an7\pos(181.5,1440.0)\blur0.8}out
+Dialogue: 1,0:00:40.28,0:00:40.64,Highlight,,0,0,0,,{\an7\pos(340.5,1440.0)\blur0.8}that
+Dialogue: 1,0:00:40.64,0:00:40.99,Highlight,,0,0,0,,{\an7\pos(523.5,1440.0)\blur0.8}business
+Dialogue: 0,0:00:40.04,0:00:42.74,Base,,0,0,0,,{\an7\pos(182.5,1534.0)}Just interview for
+Dialogue: 1,0:00:40.99,0:00:41.68,Highlight,,0,0,0,,{\an7\pos(182.5,1534.0)\blur0.8}Just
+Dialogue: 1,0:00:41.68,0:00:42.36,Highlight,,0,0,0,,{\an7\pos(384.5,1534.0)\blur0.8}interview
+Dialogue: 1,0:00:42.36,0:00:42.74,Highlight,,0,0,0,,{\an7\pos(782.5,1534.0)\blur0.8}for
+Dialogue: 0,0:00:42.74,0:00:45.08,Base,,0,0,0,,{\an7\pos(273.0,1440.0)}jobs but also
+Dialogue: 1,0:00:42.74,0:00:43.38,Highlight,,0,0,0,,{\an7\pos(273.0,1440.0)\blur0.8}jobs
+Dialogue: 1,0:00:43.38,0:00:43.43,Highlight,,0,0,0,,{\an7\pos(475.0,1440.0)\blur0.8}but
+Dialogue: 1,0:00:43.40,0:00:43.84,Highlight,,0,0,0,,{\an7\pos(634.0,1440.0)\blur0.8}also
+Dialogue: 0,0:00:42.74,0:00:45.08,Base,,0,0,0,,{\an7\pos(210.5,1534.0)}think about new
+Dialogue: 1,0:00:43.84,0:00:44.40,Highlight,,0,0,0,,{\an7\pos(210.5,1534.0)\blur0.8}think
+Dialogue: 1,0:00:44.40,0:00:44.70,Highlight,,0,0,0,,{\an7\pos(441.5,1534.0)\blur0.8}about
+Dialogue: 1,0:00:44.70,0:00:45.08,Highlight,,0,0,0,,{\an7\pos(701.5,1534.0)\blur0.8}new
+Dialogue: 0,0:00:45.08,0:00:46.52,Base,,0,0,0,,{\an7\pos(206.0,1440.0)}business ideas I
+Dialogue: 1,0:00:45.08,0:00:45.46,Highlight,,0,0,0,,{\an7\pos(206.0,1440.0)\blur0.8}business
+Dialogue: 1,0:00:45.46,0:00:45.94,Highlight,,0,0,0,,{\an7\pos(605.0,1440.0)\blur0.8}ideas
+Dialogue: 1,0:00:45.94,0:00:46.14,Highlight,,0,0,0,,{\an7\pos(850.0,1440.0)\blur0.8}I
+Dialogue: 0,0:00:45.08,0:00:46.52,Base,,0,0,0,,{\an7\pos(186.5,1534.0)}think we're going
+Dialogue: 1,0:00:46.14,0:00:46.26,Highlight,,0,0,0,,{\an7\pos(186.5,1534.0)\blur0.8}think
+Dialogue: 1,0:00:46.26,0:00:46.48,Highlight,,0,0,0,,{\an7\pos(417.5,1534.0)\blur0.8}we're
+Dialogue: 1,0:00:46.48,0:00:46.53,Highlight,,0,0,0,,{\an7\pos(657.5,1534.0)\blur0.8}going
+Dialogue: 0,0:00:46.52,0:00:48.76,Base,,0,0,0,,{\an7\pos(89.0,1440.0)}to see entrepreneurial
+Dialogue: 1,0:00:46.52,0:00:46.70,Highlight,,0,0,0,,{\an7\pos(89.0,1440.0)\blur0.8}to
+Dialogue: 1,0:00:46.70,0:00:47.06,Highlight,,0,0,0,,{\an7\pos(195.0,1440.0)\blur0.8}see
+Dialogue: 1,0:00:47.06,0:00:47.66,Highlight,,0,0,0,,{\an7\pos(363.0,1440.0)\blur0.8}entrepreneurial
+Dialogue: 0,0:00:46.52,0:00:48.76,Base,,0,0,0,,{\an7\pos(235.0,1534.0)}explosion here
+Dialogue: 1,0:00:47.66,0:00:48.42,Highlight,,0,0,0,,{\an7\pos(235.0,1534.0)\blur0.8}explosion
+Dialogue: 1,0:00:48.42,0:00:48.76,Highlight,,0,0,0,,{\an7\pos(663.0,1534.0)\blur0.8}here

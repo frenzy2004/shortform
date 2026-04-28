@@ -1,0 +1,42 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,48,&H00FFFFFF,&H000000FF,&H00000000,&H70000000,-1,0,0,0,100,100,0,0,4,0,0,2,60,60,160,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:02.03,Default,,0,0,0,,And we saw this
+Dialogue: 0,0:00:02.03,0:00:04.25,Default,,0,0,0,,in the 50 years
+Dialogue: 0,0:00:04.25,0:00:06.85,Default,,0,0,0,,that ended in
+Dialogue: 0,0:00:06.85,0:00:09.47,Default,,0,0,0,,the late 20s the
+Dialogue: 0,0:00:09.47,0:00:10.97,Default,,0,0,0,,late 20s in the
+Dialogue: 0,0:00:10.97,0:00:13.73,Default,,0,0,0,,1900s which was also
+Dialogue: 0,0:00:13.73,0:00:16.55,Default,,0,0,0,,ripe with innovation
+Dialogue: 0,0:00:17.07,0:00:18.79,Default,,0,0,0,,So telephone electricity internal
+Dialogue: 0,0:00:18.79,0:00:21.37,Default,,0,0,0,,combustion engine all
+Dialogue: 0,0:00:21.37,0:00:23.57,Default,,0,0,0,,riding on top of
+Dialogue: 0,0:00:23.57,0:00:25.03,Default,,0,0,0,,the railroads that were
+Dialogue: 0,0:00:25.03,0:00:26.09,Default,,0,0,0,,built out in the
+Dialogue: 0,0:00:26.09,0:00:28.61,Default,,0,0,0,,1800s Well
+Dialogue: 0,0:00:28.61,0:00:29.73,Default,,0,0,0,,the equivalent to the
+Dialogue: 0,0:00:29.73,0:00:32.11,Default,,0,0,0,,railroads this time is
+Dialogue: 0,0:00:32.11,0:00:34.49,Default,,0,0,0,,the internet in the
+Dialogue: 0,0:00:34.49,0:00:36.15,Default,,0,0,0,,digital world And now
+Dialogue: 0,0:00:36.15,0:00:39.11,Default,,0,0,0,,we have robotics
+Dialogue: 0,0:00:39.41,0:00:41.33,Default,,0,0,0,,energy storage AI very
+Dialogue: 0,0:00:41.33,0:00:42.53,Default,,0,0,0,,importantly AI
+Dialogue: 0,0:00:44.07,0:00:45.91,Default,,0,0,0,,blockchain technology
+Dialogue: 0,0:00:46.29,0:00:48.51,Default,,0,0,0,,and multiomics technology
+Dialogue: 0,0:00:48.91,0:00:50.01,Default,,0,0,0,,All of those are
+Dialogue: 0,0:00:50.01,0:00:52.71,Default,,0,0,0,,highly deflationary trends And
+Dialogue: 0,0:00:52.71,0:00:53.71,Default,,0,0,0,,could the yield curve
+Dialogue: 0,0:00:53.71,0:00:55.05,Default,,0,0,0,,be picking up on
+Dialogue: 0,0:00:55.05,0:00:56.49,Default,,0,0,0,,that We think it
+Dialogue: 0,0:00:56.49,0:00:56.80,Default,,0,0,0,,might

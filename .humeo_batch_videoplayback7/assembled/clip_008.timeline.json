@@ -1,0 +1,34 @@
+{
+  "clip_id": "008",
+  "source_spans": [
+    {
+      "start_time_sec": 1223.8959981689454,
+      "end_time_sec": 1233.7860021362305
+    },
+    {
+      "start_time_sec": 1234.4260000000002,
+      "end_time_sec": 1245.2060003051758
+    },
+    {
+      "start_time_sec": 1246.106000305176,
+      "end_time_sec": 1250.6060018310548
+    },
+    {
+      "start_time_sec": 1251.0860036621095,
+      "end_time_sec": 1253.6259984741212
+    },
+    {
+      "start_time_sec": 1254.5259984741213,
+      "end_time_sec": 1262.0459966430665
+    },
+    {
+      "start_time_sec": 1262.6659978637697,
+      "end_time_sec": 1264.0859975585938
+    },
+    {
+      "start_time_sec": 1264.9459966430666,
+      "end_time_sec": 1277.7
+    }
+  ],
+  "assembled_duration_sec": 49.404001831054075
+}

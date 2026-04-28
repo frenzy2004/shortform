@@ -1,0 +1,39 @@
+{
+  "decisions": [
+    {
+      "clip_id": "001",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 10.0,
+      "reason": "Removed the repetitive closing summary to focus on the core argument about fundraising psychology.",
+      "thought": "The clip starts strong with the hook and ends with a repetitive summary. Trimming the last 10 seconds keeps the focus on the psychological insight about VC behavior."
+    },
+    {
+      "clip_id": "002",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 3.0,
+      "reason": "Trimmed the final sentence which drifted into a vague observation about water and nutrients.",
+      "thought": "The story of the crabs is the core hook; the ending was trailing off into a metaphor that didn't land as clearly as the story itself."
+    },
+    {
+      "clip_id": "003",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 1.6,
+      "reason": "Removed the trailing, incoherent sentence at the end.",
+      "thought": "The clip provides a clear step-by-step strategy. The final sentence was a stuttered, incomplete thought that added no value."
+    },
+    {
+      "clip_id": "004",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 1.1,
+      "reason": "Removed the incomplete final sentence to ensure a clean finish.",
+      "thought": "The clip ends on a strong point about historical context; the final fragment was unnecessary and cut off mid-thought."
+    },
+    {
+      "clip_id": "005",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "reason": "No trimming required as the clip maintains a consistent narrative arc.",
+      "thought": "The clip is well-paced and the ending provides a concise summary of the economic point being made."
+    }
+  ]
+}

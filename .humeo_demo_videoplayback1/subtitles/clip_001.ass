@@ -1,0 +1,43 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,48,&H00FFFFFF,&H000000FF,&H00000000,&H70000000,-1,0,0,0,100,100,0,0,4,0,0,2,60,60,160,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:00.84,Default,,0,0,0,,This is not a
+Dialogue: 0,0:00:00.84,0:00:02.74,Default,,0,0,0,,chatbot give up
+Dialogue: 0,0:00:04.40,0:00:05.44,Default,,0,0,0,,Agents improvise
+Dialogue: 0,0:00:07.58,0:00:09.06,Default,,0,0,0,,And you know I
+Dialogue: 0,0:00:09.06,0:00:10.32,Default,,0,0,0,,was sold I wanted
+Dialogue: 0,0:00:10.32,0:00:11.04,Default,,0,0,0,,to share this I
+Dialogue: 0,0:00:11.04,0:00:11.80,Default,,0,0,0,,wanted to tell people
+Dialogue: 0,0:00:11.80,0:00:14.12,Default,,0,0,0,,on Twitter And
+Dialogue: 0,0:00:14.12,0:00:15.76,Default,,0,0,0,,nobody really got it
+Dialogue: 0,0:00:16.82,0:00:19.14,Default,,0,0,0,,It's almost like you
+Dialogue: 0,0:00:19.14,0:00:20.48,Default,,0,0,0,,have to experience an
+Dialogue: 0,0:00:20.48,0:00:21.94,Default,,0,0,0,,It's kind of hard
+Dialogue: 0,0:00:21.94,0:00:23.12,Default,,0,0,0,,to
+Dialogue: 0,0:00:24.72,0:00:27.04,Default,,0,0,0,,me a few And
+Dialogue: 0,0:00:27.04,0:00:27.66,Default,,0,0,0,,then I did something
+Dialogue: 0,0:00:27.66,0:00:28.06,Default,,0,0,0,,stupid
+Dialogue: 0,0:00:30.80,0:00:33.14,Default,,0,0,0,,Remember this agent
+Dialogue: 0,0:00:33.28,0:00:35.76,Default,,0,0,0,,by can do anything
+Dialogue: 0,0:00:35.76,0:00:37.14,Default,,0,0,0,,that you can do
+Dialogue: 0,0:00:37.14,0:00:39.66,Default,,0,0,0,,on your computer So
+Dialogue: 0,0:00:39.66,0:00:40.76,Default,,0,0,0,,obviously I put it
+Dialogue: 0,0:00:40.76,0:00:41.64,Default,,0,0,0,,in a public Discord
+Dialogue: 0,0:00:41.78,0:00:43.02,Default,,0,0,0,,and I random people
+Dialogue: 0,0:00:45.12,0:00:46.92,Default,,0,0,0,,And I was looking
+Dialogue: 0,0:00:46.92,0:00:47.68,Default,,0,0,0,,at it the whole
+Dialogue: 0,0:00:47.68,0:00:48.90,Default,,0,0,0,,night People were talking
+Dialogue: 0,0:00:48.90,0:00:49.68,Default,,0,0,0,,with it People were
+Dialogue: 0,0:00:49.68,0:00:50.58,Default,,0,0,0,,having fun with it
+Dialogue: 0,0:00:50.82,0:00:52.40,Default,,0,0,0,,People tried to it

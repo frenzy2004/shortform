@@ -1,0 +1,44 @@
+{
+  "clips": [
+    {
+      "clip_id": "001",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0
+    },
+    {
+      "clip_id": "002",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0
+    },
+    {
+      "clip_id": "003",
+      "trim_start_sec": 0.7850054931640216,
+      "trim_end_sec": 0.0
+    },
+    {
+      "clip_id": "004",
+      "trim_start_sec": 0.04,
+      "trim_end_sec": 0.0
+    },
+    {
+      "clip_id": "005",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0
+    },
+    {
+      "clip_id": "006",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0
+    },
+    {
+      "clip_id": "007",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.03899816894545438
+    },
+    {
+      "clip_id": "008",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0
+    }
+  ]
+}

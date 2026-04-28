@@ -1,0 +1,39 @@
+{
+  "source_path": "",
+  "clips": [
+    {
+      "clip_id": "001",
+      "topic": "The Economics of Curing a Disease",
+      "start_time_sec": 1010.0,
+      "end_time_sec": 1073.5,
+      "viral_hook": "And then most provocatively, and Shay has done an amazing job of documenting what a cure is going to be worth.",
+      "virality_score": 0.92,
+      "transcript": "And then most provocatively, and Shay has done an amazing job of documenting what a cure is going to be worth. And I have to give Brett Winton incredible credit as he partnered with Shay on this project to try and figure out, how much is a cure worth? And we think, while the cure for HAE, which is a very rare disease, would be worth $11 million, one and done. You get this treatment, and you're done. That's in Telia's trial right now. And it's in vivo. You don't have to go through any excruciating preconditioning. It could be worth $11 million. That's how much it would save the system. But they'll probably be able to charge $3 million. And believe me, insurance companies, they will have no problem with that.",
+      "suggested_overlay_title": "A Single Cure Could Be Worth",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.95,
+        "hook_emotion": 0.9,
+        "catchy": 0.9
+      },
+      "reasoning": "This clip has an incredibly strong 'wow' factor due to the provocative idea of pricing a cure and the shocking $11M and $3M figures. The hook is excellent, and the numbers are extremely memorable and shareable.",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 6.2,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "render_spans": [],
+      "shorts_title": "This Medical Cure Is Worth $11,000,000",
+      "description": "A single, one-and-done gene editing treatment could be valued at $11 million, but will likely only charge $3 million. Here's why insurance companies would be happy to pay it.",
+      "hashtags": [
+        "biotech",
+        "healthcare",
+        "economics",
+        "geneediting",
+        "investing"
+      ],
+      "layout_hint": "split_chart_person",
+      "needs_review": false,
+      "review_reason": ""
+    }
+  ]
+}

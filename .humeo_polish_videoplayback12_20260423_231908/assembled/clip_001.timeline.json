@@ -1,0 +1,10 @@
+{
+  "clip_id": "001",
+  "source_spans": [
+    {
+      "start_time_sec": 0.0,
+      "end_time_sec": 19.349999237060548
+    }
+  ],
+  "assembled_duration_sec": 19.349999237060548
+}

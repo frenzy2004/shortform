@@ -1,0 +1,57 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,48,&H00FFFFFF,&H000000FF,&H00000000,&H70000000,-1,0,0,0,100,100,0,0,4,0,0,2,60,60,160,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.06,Default,,0,0,0,,I think we could
+Dialogue: 0,0:00:01.06,0:00:02.40,Default,,0,0,0,,have this very unusual
+Dialogue: 0,0:00:02.40,0:00:04.86,Default,,0,0,0,,combination of very fast
+Dialogue: 0,0:00:04.86,0:00:07.16,Default,,0,0,0,,GDP growth and high
+Dialogue: 0,0:00:07.16,0:00:09.18,Default,,0,0,0,,unemployment or at least
+Dialogue: 0,0:00:09.18,0:00:11.98,Default,,0,0,0,,underemployment or low
+Dialogue: 0,0:00:11.98,0:00:13.00,Default,,0,0,0,,wage jobs a lot
+Dialogue: 0,0:00:13.00,0:00:13.98,Default,,0,0,0,,of low wage jobs
+Dialogue: 0,0:00:14.20,0:00:15.78,Default,,0,0,0,,high inequality I don't
+Dialogue: 0,0:00:15.78,0:00:16.66,Default,,0,0,0,,think that's a macro
+Dialogue: 0,0:00:16.66,0:00:17.32,Default,,0,0,0,,correct me if I'm
+Dialogue: 0,0:00:17.32,0:00:18.06,Default,,0,0,0,,wrong don't think that's
+Dialogue: 0,0:00:18.06,0:00:20.32,Default,,0,0,0,,a macroeconomic combination we've
+Dialogue: 0,0:00:20.32,0:00:21.54,Default,,0,0,0,,ever seen before You
+Dialogue: 0,0:00:21.54,0:00:22.52,Default,,0,0,0,,think of fast growth
+Dialogue: 0,0:00:22.70,0:00:23.46,Default,,0,0,0,,you're like well okay
+Dialogue: 0,0:00:23.46,0:00:24.68,Default,,0,0,0,,maybe there's inflation but
+Dialogue: 0,0:00:24.68,0:00:26.08,Default,,0,0,0,,you're not gonna have
+Dialogue: 0,0:00:26.08,0:00:27.68,Default,,0,0,0,,high unemployment when there's
+Dialogue: 0,0:00:27.68,0:00:30.18,Default,,0,0,0,,fast growth I think
+Dialogue: 0,0:00:30.18,0:00:31.42,Default,,0,0,0,,this technology is a
+Dialogue: 0,0:00:31.42,0:00:32.96,Default,,0,0,0,,different because it's extreme
+Dialogue: 0,0:00:32.96,0:00:35.00,Default,,0,0,0,,in the way it's
+Dialogue: 0,0:00:35.00,0:00:36.90,Default,,0,0,0,,gonna generate value
+Dialogue: 0,0:00:37.28,0:00:38.86,Default,,0,0,0,,but also because it's
+Dialogue: 0,0:00:38.86,0:00:39.96,Default,,0,0,0,,moving up the cognitive
+Dialogue: 0,0:00:39.96,0:00:41.68,Default,,0,0,0,,waterline there's gonna be
+Dialogue: 0,0:00:41.68,0:00:42.90,Default,,0,0,0,,unfortunately a whole class
+Dialogue: 0,0:00:42.90,0:00:43.90,Default,,0,0,0,,of people who are
+Dialogue: 0,0:00:44.40,0:00:45.94,Default,,0,0,0,,think across a of
+Dialogue: 0,0:00:46.02,0:00:47.10,Default,,0,0,0,,going to have a
+Dialogue: 0,0:00:47.10,0:00:48.68,Default,,0,0,0,,hard time coping And
+Dialogue: 0,0:00:48.68,0:00:49.82,Default,,0,0,0,,that's really a problem
+Dialogue: 0,0:00:49.82,0:00:52.00,Default,,0,0,0,,we need to to
+Dialogue: 0,0:00:52.00,0:00:53.16,Default,,0,0,0,,get to the you
+Dialogue: 0,0:00:53.16,0:00:54.22,Default,,0,0,0,,just asked there's a
+Dialogue: 0,0:00:54.22,0:00:55.28,Default,,0,0,0,,few things Anthropic is
+Dialogue: 0,0:00:55.28,0:00:58.12,Default,,0,0,0,,doing One is we've
+Dialogue: 0,0:00:58.12,0:00:59.68,Default,,0,0,0,,for almost a now
+Dialogue: 0,0:00:59.68,0:01:01.20,Default,,0,0,0,,what we call the
+Dialogue: 0,0:01:01.20,0:01:03.32,Default,,0,0,0,,Economic Index which is
+Dialogue: 0,0:01:03.32,0:01:05.56,Default,,0,0,0,,tracking how our are
+Dialogue: 0,0:01:05.56,0:01:06.22,Default,,0,0,0,,in real time

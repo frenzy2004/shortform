@@ -1,0 +1,36 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,48,&H00FFFFFF,&H000000FF,&H00000000,&H70000000,-1,0,0,0,100,100,0,0,4,0,0,2,60,60,160,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.17,Default,,0,0,0,,How can we make
+Dialogue: 0,0:00:01.17,0:00:01.91,Default,,0,0,0,,it more scary
+Dialogue: 0,0:00:03.81,0:00:05.59,Default,,0,0,0,,So I added a
+Dialogue: 0,0:00:05.59,0:00:07.19,Default,,0,0,0,,new feature a heartbeat
+Dialogue: 0,0:00:07.87,0:00:09.69,Default,,0,0,0,,You by default the
+Dialogue: 0,0:00:09.69,0:00:10.41,Default,,0,0,0,,agent would only wake
+Dialogue: 0,0:00:10.41,0:00:11.49,Default,,0,0,0,,up when you send
+Dialogue: 0,0:00:11.49,0:00:13.39,Default,,0,0,0,,it a With the
+Dialogue: 0,0:00:13.39,0:00:15.47,Default,,0,0,0,,heartbeat the would just
+Dialogue: 0,0:00:15.47,0:00:17.67,Default,,0,0,0,,wake up periodically check
+Dialogue: 0,0:00:17.67,0:00:19.67,Default,,0,0,0,,your emails check your
+Dialogue: 0,0:00:19.67,0:00:21.55,Default,,0,0,0,,calendar follow up on
+Dialogue: 0,0:00:21.55,0:00:23.25,Default,,0,0,0,,loose ends My initial
+Dialogue: 0,0:00:23.25,0:00:25.67,Default,,0,0,0,,prompt was simply surprise
+Dialogue: 0,0:00:25.67,0:00:27.89,Default,,0,0,0,,me And yes
+Dialogue: 0,0:00:28.39,0:00:29.49,Default,,0,0,0,,That's kind of as
+Dialogue: 0,0:00:29.49,0:00:31.75,Default,,0,0,0,,as it So
+Dialogue: 0,0:00:31.75,0:00:33.97,Default,,0,0,0,,no large company would
+Dialogue: 0,0:00:33.97,0:00:34.93,Default,,0,0,0,,ship something like that
+Dialogue: 0,0:00:35.49,0:00:37.65,Default,,0,0,0,,But I'm a builder
+Dialogue: 0,0:00:37.65,0:00:38.77,Default,,0,0,0,,from Austria I don't
+Dialogue: 0,0:00:38.77,0:00:40.19,Default,,0,0,0,,have a legal department

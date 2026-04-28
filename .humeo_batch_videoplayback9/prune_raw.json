@@ -1,0 +1,39 @@
+{
+  "decisions": [
+    {
+      "clip_id": "002",
+      "trim_start_sec": 14.2,
+      "trim_end_sec": 0.14,
+      "reason": "Trimmed 14.2s of slow lead-in about a chart and 0.14s of transition to a new topic at the end.",
+      "thought": "The start at 14.20s still has a minor reference to a chart, but it immediately pivots to the core claim. Trimming further to the hook at 22.84s would be a stronger start but would be too aggressive for a 'balanced' cut. The end trim removes a clear topic change."
+    },
+    {
+      "clip_id": "003",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "reason": "The clip starts with a strong hook and ends with a powerful concluding statement, with no filler at the edges.",
+      "thought": "The clip is well-structured as is. While there are minor conversational tangents in the middle (crediting a source, mentioning an economics background), they are not at the start or end and cannot be trimmed without breaking the narrative flow."
+    },
+    {
+      "clip_id": "004",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 8.04,
+      "reason": "Trimmed the final 8s which started a new tangent about benchmark-sensitive portfolio managers.",
+      "thought": "The start of the clip is a single cohesive thought that provides necessary context for the hook, so no trim was applied. The end was trimmed to create a stronger concluding statement ('...we think is the right thing to do') and remove a drift into a new topic."
+    },
+    {
+      "clip_id": "005",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "reason": "The clip starts with an effective hook and ends with a powerful summary, making it tight and effective as is.",
+      "thought": "The clip is already well-formed for a short video. While there is some rambling and self-correction in the middle regarding the FTC and specific prices, it's not at the start or end, so it cannot be trimmed without damaging the clip's flow."
+    },
+    {
+      "clip_id": "006",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 14.46,
+      "reason": "Trimmed 14.5s from the end to remove repetitive and self-correcting sentences about when the cloud was developed.",
+      "thought": "The start of the clip provides essential context for the hook and is well-paced. The end, however, gets bogged down in repeating the same point about the cloud's arrival date. Trimming at 72.24s removes this redundancy and creates a cleaner ending."
+    }
+  ]
+}

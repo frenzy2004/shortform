@@ -1,0 +1,38 @@
+{
+  "source_path": "",
+  "clips": [
+    {
+      "clip_id": "001",
+      "topic": "AI as the acceleration catalyst",
+      "start_time_sec": 0.0,
+      "end_time_sec": 65.0,
+      "viral_hook": "AI has been the big story for the past two years, and it's still the big story.",
+      "virality_score": 0.585,
+      "transcript": "AI has been the big story for the past two years, and it's still the big story. In fact, it is the biggest catalyst to all of the innovation taking place out there. It is the reason that the world seems to be speeding up. And I'll just give you a few examples of how quickly things are happening.",
+      "suggested_overlay_title": "Why the World Is Speeding Up",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.65,
+        "hook_emotion": 0.55,
+        "catchy": 0.5
+      },
+      "reasoning": "The clip provides a strong, high-level thesis about AI being the catalyst for global acceleration, which is a compelling hook for tech-focused audiences.",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 4.9,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "render_spans": [],
+      "shorts_title": "AI is the biggest catalyst for innovation",
+      "description": "The speaker argues that AI is the primary engine behind the world's rapid acceleration.",
+      "hashtags": [
+        "ai",
+        "innovation",
+        "technology",
+        "future"
+      ],
+      "layout_hint": "sit_center",
+      "needs_review": true,
+      "review_reason": "The candidate segment is shorter than the 50s minimum requirement but represents the entire available transcript."
+    }
+  ]
+}

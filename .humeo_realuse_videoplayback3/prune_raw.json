@@ -1,0 +1,39 @@
+{
+  "decisions": [
+    {
+      "clip_id": "001",
+      "trim_start_sec": 10.41,
+      "trim_end_sec": 0.0,
+      "reason": "Dropped 10.4s of rambling setup to start directly on the core hook about VC interest.",
+      "thought": "The original start was a bit wordy. Starting at the hook creates immediate tension regarding the founder's situation."
+    },
+    {
+      "clip_id": "002",
+      "trim_start_sec": 26.21,
+      "trim_end_sec": 15.29,
+      "reason": "Removed the long personal anecdote at the start and the repetitive conclusion to focus on the 'crab bucket' metaphor.",
+      "thought": "The story about being 15 is too long for a punchy clip. Starting at the moment the crabs turn on each other is much more gripping."
+    },
+    {
+      "clip_id": "003",
+      "trim_start_sec": 2.03,
+      "trim_end_sec": 2.61,
+      "reason": "Trimmed the intro filler and the trailing sentence fragment to keep the focus on the strategy.",
+      "thought": "The clip is strong, but removing the 'this is for everyone' intro and the trailing 'so that VC would be like' makes it a complete, actionable tip."
+    },
+    {
+      "clip_id": "004",
+      "trim_start_sec": 3.38,
+      "trim_end_sec": 2.66,
+      "reason": "Removed the conversational preamble and the trailing unfinished thought to focus on the Buy Now Pay Later critique.",
+      "thought": "The clip now starts directly on the claim about Buy Now Pay Later and ends on a strong, coherent point about the negative ROI of consumer spending."
+    },
+    {
+      "clip_id": "005",
+      "trim_start_sec": 11.11,
+      "trim_end_sec": 0.59,
+      "reason": "Cut the conversational setup to start directly on the definition of 'founder friendly' perversion.",
+      "thought": "Starting with the core argument about the term 'founder friendly' being misused provides a much stronger hook than the preceding small talk."
+    }
+  ]
+}

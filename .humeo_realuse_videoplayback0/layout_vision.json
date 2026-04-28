@@ -1,0 +1,441 @@
+{
+  "clips": {
+    "002": {
+      "instruction": {
+        "clip_id": "002",
+        "layout": "sit_center",
+        "zoom": 1.0,
+        "person_x_norm": 0.5,
+        "person_tracking": [],
+        "chart_x_norm": 0.0,
+        "focus_stack_order": "chart_then_person",
+        "split_chart_region": null,
+        "split_person_region": null,
+        "split_second_chart_region": null,
+        "split_second_person_region": null,
+        "top_band_ratio": 0.5
+      },
+      "raw": {
+        "layout": "sit_center",
+        "person_bbox": {
+          "x1": 0.11,
+          "y1": 0.0,
+          "x2": 0.89,
+          "y2": 1.0
+        },
+        "face_bbox": {
+          "x1": 0.31,
+          "y1": 0.05,
+          "x2": 0.69,
+          "y2": 0.55
+        },
+        "chart_bbox": null,
+        "second_person_bbox": null,
+        "second_face_bbox": null,
+        "second_chart_bbox": null,
+        "reason": "The frame features a single speaker centered in the shot. The text overlay at the bottom is not a chart, so it is ignored for layout purposes.",
+        "person_tracking_samples": [
+          {
+            "sample_kind": "midpoint_keyframe",
+            "time_sec": 26.30000000000001,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realuse_videoplayback0\\keyframes\\002.jpg",
+            "center_x_norm": 0.5,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 0.11,
+                "y1": 0.0,
+                "x2": 0.89,
+                "y2": 1.0
+              },
+              "face_bbox": {
+                "x1": 0.31,
+                "y1": 0.05,
+                "x2": 0.69,
+                "y2": 0.55
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame features a single speaker centered in the shot. The text overlay at the bottom is not a chart, so it is ignored for layout purposes."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 5.2600000000000025,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realuse_videoplayback0\\layout_tracking\\002\\002_005260.jpg",
+            "center_x_norm": 0.495,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 0.11,
+                "y1": 0.0,
+                "x2": 0.89,
+                "y2": 1.0
+              },
+              "face_bbox": {
+                "x1": 0.31,
+                "y1": 0.05,
+                "x2": 0.68,
+                "y2": 0.55
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame features a single speaker centered in the shot. While there is a text overlay at the bottom, it is not a chart or data visual, so sit_center is the most appropriate layout."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 10.520000000000005,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realuse_videoplayback0\\layout_tracking\\002\\002_010520.jpg",
+            "center_x_norm": 0.4625,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 116,
+                "y1": 0,
+                "x2": 808,
+                "y2": 1000
+              },
+              "face_bbox": {
+                "x1": 319,
+                "y1": 0,
+                "x2": 606,
+                "y2": 450
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame features a single speaker in a standard interview-style setup. The text overlay at the bottom is not a primary chart or data visual, so it is excluded."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 15.780000000000006,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realuse_videoplayback0\\layout_tracking\\002\\002_015780.jpg",
+            "center_x_norm": 0.5,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 0.11,
+                "y1": 0.0,
+                "x2": 0.89,
+                "y2": 1.0
+              },
+              "face_bbox": {
+                "x1": 0.3,
+                "y1": 0.05,
+                "x2": 0.7,
+                "y2": 0.65
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame features a single speaker centered in the shot. The text overlay at the bottom is a graphic element but does not constitute a 'chart' in the context of the layout rules, so sit_center is the most appropriate choice."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 21.04000000000001,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realuse_videoplayback0\\layout_tracking\\002\\002_021040.jpg",
+            "center_x_norm": 0.5,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 0.11,
+                "y1": 0.0,
+                "x2": 0.89,
+                "y2": 1.0
+              },
+              "face_bbox": {
+                "x1": 0.31,
+                "y1": 0.05,
+                "x2": 0.69,
+                "y2": 0.65
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame features a single speaker centered in the shot. The text overlay at the bottom is a graphic element, not a chart, so it is excluded from the layout logic."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 31.560000000000013,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realuse_videoplayback0\\layout_tracking\\002\\002_031560.jpg",
+            "center_x_norm": 0.5,
+            "raw": {
+              "layout": "zoom_call_center",
+              "person_bbox": {
+                "x1": 0.11,
+                "y1": 0.0,
+                "x2": 0.89,
+                "y2": 1.0
+              },
+              "face_bbox": {
+                "x1": 0.31,
+                "y1": 0.05,
+                "x2": 0.69,
+                "y2": 0.55
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame features a single speaker in a webcam-style setup. The text overlay is a lower-third graphic and not a primary chart, so zoom_call_center is the most appropriate layout."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 36.820000000000014,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realuse_videoplayback0\\layout_tracking\\002\\002_036820.jpg",
+            "center_x_norm": 0.5,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 0.116,
+                "y1": 0.0,
+                "x2": 884.0,
+                "y2": 1.0
+              },
+              "face_bbox": {
+                "x1": 0.294,
+                "y1": 0.05,
+                "x2": 0.706,
+                "y2": 0.55
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame features a single speaker centered in the shot, making sit_center the most appropriate layout."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 42.08000000000002,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realuse_videoplayback0\\layout_tracking\\002\\002_042080.jpg",
+            "center_x_norm": 0.5,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 0.11,
+                "y1": 0.0,
+                "x2": 0.89,
+                "y2": 1.0
+              },
+              "face_bbox": {
+                "x1": 0.3,
+                "y1": 0.05,
+                "x2": 0.7,
+                "y2": 0.65
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame features a single speaker centered in the shot. The text overlay at the bottom is not a chart, so it is excluded from the layout."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 47.340000000000025,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realuse_videoplayback0\\layout_tracking\\002\\002_047340.jpg",
+            "center_x_norm": 0.49,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 0.11,
+                "y1": 0.18,
+                "x2": 0.89,
+                "y2": 1.0
+              },
+              "face_bbox": {
+                "x1": 0.3,
+                "y1": 0.18,
+                "x2": 0.68,
+                "y2": 0.65
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame features a single speaker in a standard interview-style setup. The text overlay at the bottom is not a chart, so it is excluded from the layout."
+            }
+          }
+        ]
+      }
+    },
+    "003": {
+      "instruction": {
+        "clip_id": "003",
+        "layout": "split_chart_person",
+        "zoom": 1.0,
+        "person_x_norm": 0.7929999999999999,
+        "person_tracking": [],
+        "chart_x_norm": 0.02,
+        "focus_stack_order": "chart_then_person",
+        "split_chart_region": {
+          "x1": 0.02,
+          "y1": 0.028,
+          "x2": 0.583,
+          "y2": 0.707,
+          "label": "",
+          "confidence": 1.0
+        },
+        "split_person_region": {
+          "x1": 0.583,
+          "y1": 0.064,
+          "x2": 0.999,
+          "y2": 0.999,
+          "label": "",
+          "confidence": 1.0
+        },
+        "split_second_chart_region": null,
+        "split_second_person_region": null,
+        "top_band_ratio": 0.5
+      },
+      "raw": {
+        "layout": "split_chart_person",
+        "person_bbox": {
+          "x1": 583,
+          "y1": 64,
+          "x2": 999,
+          "y2": 999
+        },
+        "face_bbox": {
+          "x1": 711,
+          "y1": 64,
+          "x2": 875,
+          "y2": 315
+        },
+        "chart_bbox": {
+          "x1": 20,
+          "y1": 28,
+          "x2": 583,
+          "y2": 707
+        },
+        "second_person_bbox": null,
+        "second_face_bbox": null,
+        "second_chart_bbox": null,
+        "reason": "The frame contains a speaker on the right and a chart on the left, making it a perfect candidate for a split layout."
+      }
+    },
+    "004": {
+      "instruction": {
+        "clip_id": "004",
+        "layout": "split_chart_person",
+        "zoom": 1.0,
+        "person_x_norm": 0.76,
+        "person_tracking": [],
+        "chart_x_norm": 0.02,
+        "focus_stack_order": "chart_then_person",
+        "split_chart_region": {
+          "x1": 0.02,
+          "y1": 0.03,
+          "x2": 0.58,
+          "y2": 0.7,
+          "label": "",
+          "confidence": 1.0
+        },
+        "split_person_region": {
+          "x1": 0.585,
+          "y1": 0.05,
+          "x2": 0.98,
+          "y2": 0.98,
+          "label": "",
+          "confidence": 1.0
+        },
+        "split_second_chart_region": null,
+        "split_second_person_region": null,
+        "top_band_ratio": 0.5
+      },
+      "raw": {
+        "layout": "split_chart_person",
+        "person_bbox": {
+          "x1": 0.585,
+          "y1": 0.05,
+          "x2": 0.98,
+          "y2": 0.98
+        },
+        "face_bbox": {
+          "x1": 0.675,
+          "y1": 0.06,
+          "x2": 0.845,
+          "y2": 0.32
+        },
+        "chart_bbox": {
+          "x1": 0.02,
+          "y1": 0.03,
+          "x2": 0.58,
+          "y2": 0.7
+        },
+        "second_person_bbox": null,
+        "second_face_bbox": null,
+        "second_chart_bbox": null,
+        "reason": "The frame contains a speaker on the right and a chart on the left, making split_chart_person the ideal layout."
+      }
+    },
+    "005": {
+      "instruction": {
+        "clip_id": "005",
+        "layout": "split_chart_person",
+        "zoom": 1.0,
+        "person_x_norm": 0.8300000000000001,
+        "person_tracking": [],
+        "chart_x_norm": 0.02,
+        "focus_stack_order": "chart_then_person",
+        "split_chart_region": {
+          "x1": 0.02,
+          "y1": 0.025,
+          "x2": 0.58,
+          "y2": 0.7,
+          "label": "",
+          "confidence": 1.0
+        },
+        "split_person_region": {
+          "x1": 0.56,
+          "y1": 0.045,
+          "x2": 0.99,
+          "y2": 0.99,
+          "label": "",
+          "confidence": 1.0
+        },
+        "split_second_chart_region": null,
+        "split_second_person_region": null,
+        "top_band_ratio": 0.5
+      },
+      "raw": {
+        "layout": "split_chart_person",
+        "person_bbox": {
+          "x1": 560,
+          "y1": 45,
+          "x2": 990,
+          "y2": 990
+        },
+        "face_bbox": {
+          "x1": 745,
+          "y1": 45,
+          "x2": 915,
+          "y2": 310
+        },
+        "chart_bbox": {
+          "x1": 20,
+          "y1": 25,
+          "x2": 580,
+          "y2": 700
+        },
+        "second_person_bbox": null,
+        "second_face_bbox": null,
+        "second_chart_bbox": null,
+        "reason": "The frame contains a speaker on the right and a chart on the left, making split_chart_person the ideal layout."
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "hooks": [
+    {
+      "clip_id": "001",
+      "hook_start_sec": 4.0,
+      "hook_end_sec": 14.0,
+      "hook_text": "We are now, in terms of, you know, the models that write code, I have engineers within Anthropa who say, I don't write any code anymore. I just let the model write the code.",
+      "reason": "This provides a concrete, relatable example of AI replacing human labor, which is more compelling than the abstract technical explanation that precedes it."
+    },
+    {
+      "clip_id": "002",
+      "hook_start_sec": 27.52,
+      "hook_end_sec": 33.24,
+      "hook_text": "How did you manage to get through this technological adolescence without destroying yourselves?",
+      "reason": "This is a high-stakes, existential question that immediately frames the topic of AI safety in a dramatic and universally understandable way."
+    },
+    {
+      "clip_id": "003",
+      "hook_start_sec": 15.52,
+      "hook_end_sec": 21.32,
+      "hook_text": "on the more intermediate end, we actually need less and not more people.",
+      "reason": "This is a provocative, counter-intuitive claim about the job market that immediately grabs the viewer's attention regarding the impact of AI."
+    },
+    {
+      "clip_id": "004",
+      "hook_start_sec": 1.58,
+      "hook_end_sec": 7.22,
+      "hook_text": "I was always very confident we would get back to sort of the top of the leaderboards and the SOTA type of models across the board",
+      "reason": "This establishes a clear narrative of competition and comeback, which is a strong hook for anyone interested in the AI arms race."
+    },
+    {
+      "clip_id": "005",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 2.93,
+      "hook_text": "The sort of strongest argument for Doomerism, to me, is the Fermi paradox, the idea that we don't see intelligent life in our galaxy.",
+      "reason": "This immediately introduces a famous, high-concept scientific mystery and links it to the popular topic of AI existential risk."
+    }
+  ]
+}

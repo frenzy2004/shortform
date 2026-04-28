@@ -1,0 +1,24 @@
+{
+  "source_key": "local:C:\\Users\\HP\\Downloads\\videoplayback (3).mp4",
+  "iteration": 4,
+  "steering_notes": [
+    "longer standalone clips",
+    "only pick 50-90 second clips that fully stand alone",
+    "only pick 50-90 second clips that fully stand alone",
+    "Clip durations felt off. Respect the duration bounds strictly."
+  ],
+  "last_rating": {
+    "rating": 2,
+    "issues": [
+      "length_off"
+    ],
+    "free_text": null
+  },
+  "last_selected_ids": [
+    "001",
+    "002",
+    "003",
+    "004",
+    "005"
+  ]
+}

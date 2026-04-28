@@ -1,0 +1,39 @@
+{
+  "decisions": [
+    {
+      "clip_id": "001",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 5.55,
+      "reason": "Removed the trailing question to the other host to end on a stronger, self-contained statement.",
+      "thought": "The clip's hook is at the very beginning, so no start trim was possible. The ending question \"why do you think that's happening?\" weakens the clip's impact, so cutting after 67.65s makes the preceding sentence the punchline."
+    },
+    {
+      "clip_id": "002",
+      "trim_start_sec": 10.48,
+      "trim_end_sec": 0.0,
+      "reason": "Removed over 10 seconds of rambling setup to start closer to the core claim.",
+      "thought": "The original opening was very slow and full of filler. The ideal start is at the hook (12.98s), but that would make the clip too short. Starting at 10.48s (\"no, because...\") is a good compromise that creates intrigue while respecting the duration constraints."
+    },
+    {
+      "clip_id": "003",
+      "trim_start_sec": 3.45,
+      "trim_end_sec": 0.08,
+      "reason": "Trimmed the context-dependent opening and the start of the other speaker's reply at the end.",
+      "thought": "The best opening starts at \"where the struggle is kind of the point,\" which is much stronger than the original start. The clip is one long, well-structured question, so the end was only trimmed to remove the other person's interjection, preserving the full question."
+    },
+    {
+      "clip_id": "004",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "reason": "No trim is possible as the clip is already at the minimum allowed duration of 50 seconds.",
+      "thought": "While the opening \"is that we haven't found the end yet\" is slightly weak, the clip's duration of 50.20s is too close to the 50s minimum to allow for any meaningful trimming without violating the length constraint."
+    },
+    {
+      "clip_id": "005",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "reason": "The clip's duration is at the 50-second minimum, which prevents any trimming.",
+      "thought": "The clip is already at the lower bound of the acceptable duration range (50-90s). Even though the end trails off slightly, any trim would make the clip too short, so no changes can be made."
+    }
+  ]
+}

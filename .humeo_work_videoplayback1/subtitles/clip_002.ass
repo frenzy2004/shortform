@@ -1,0 +1,52 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,48,&H00FFFFFF,&H000000FF,&H00000000,&H70000000,-1,0,0,0,100,100,0,0,4,0,0,2,60,60,160,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:00.60,Default,,0,0,0,,I was standing there
+Dialogue: 0,0:00:00.62,0:00:01.22,Default,,0,0,0,,and I was like
+Dialogue: 0,0:00:01.99,0:00:02.70,Default,,0,0,0,,how did you do
+Dialogue: 0,0:00:02.70,0:00:05.30,Default,,0,0,0,,that And the
+Dialogue: 0,0:00:05.30,0:00:06.30,Default,,0,0,0,,replied I'm not kidding
+Dialogue: 0,0:00:06.30,0:00:07.82,Default,,0,0,0,,you the mad lad
+Dialogue: 0,0:00:07.82,0:00:09.12,Default,,0,0,0,,figured it out on
+Dialogue: 0,0:00:09.12,0:00:11.64,Default,,0,0,0,,its own And then
+Dialogue: 0,0:00:11.64,0:00:12.76,Default,,0,0,0,,it walked me through
+Dialogue: 0,0:00:12.76,0:00:14.04,Default,,0,0,0,,every single step How
+Dialogue: 0,0:00:14.04,0:00:15.02,Default,,0,0,0,,it got a from
+Dialogue: 0,0:00:15.02,0:00:16.12,Default,,0,0,0,,me but there was
+Dialogue: 0,0:00:16.12,0:00:17.66,Default,,0,0,0,,no file ending So
+Dialogue: 0,0:00:17.66,0:00:19.06,Default,,0,0,0,,it the file It
+Dialogue: 0,0:00:19.06,0:00:19.74,Default,,0,0,0,,found that it was
+Dialogue: 0,0:00:19.74,0:00:21.32,Default,,0,0,0,,audio but a format
+Dialogue: 0,0:00:21.40,0:00:22.82,Default,,0,0,0,,so it it And
+Dialogue: 0,0:00:22.82,0:00:23.28,Default,,0,0,0,,then it was looking
+Dialogue: 0,0:00:23.28,0:00:26.68,Default,,0,0,0,,for something to the
+Dialogue: 0,0:00:26.82,0:00:27.56,Default,,0,0,0,,but I didn't have
+Dialogue: 0,0:00:27.56,0:00:28.99,Default,,0,0,0,,it But then it
+Dialogue: 0,0:00:28.99,0:00:30.06,Default,,0,0,0,,found an OpenAI key
+Dialogue: 0,0:00:30.34,0:00:31.04,Default,,0,0,0,,It sent the whole
+Dialogue: 0,0:00:31.04,0:00:32.20,Default,,0,0,0,,thing to the It
+Dialogue: 0,0:00:32.20,0:00:33.42,Default,,0,0,0,,got it back and
+Dialogue: 0,0:00:33.42,0:00:35.56,Default,,0,0,0,,then it All of
+Dialogue: 0,0:00:35.56,0:00:37.54,Default,,0,0,0,,that in nine seconds
+Dialogue: 0,0:00:37.54,0:00:39.36,Default,,0,0,0,,Can you imagine I
+Dialogue: 0,0:00:39.36,0:00:40.22,Default,,0,0,0,,didn't build any of
+Dialogue: 0,0:00:40.22,0:00:42.18,Default,,0,0,0,,that For me this
+Dialogue: 0,0:00:42.18,0:00:43.30,Default,,0,0,0,,was the moment where
+Dialogue: 0,0:00:43.30,0:00:44.06,Default,,0,0,0,,I thought
+Dialogue: 0,0:00:45.76,0:00:46.62,Default,,0,0,0,,this is something new
+Dialogue: 0,0:00:46.66,0:00:47.50,Default,,0,0,0,,This is not a
+Dialogue: 0,0:00:47.50,0:00:49.40,Default,,0,0,0,,chatbot give up
+Dialogue: 0,0:00:51.06,0:00:52.10,Default,,0,0,0,,Agents improvise
+Dialogue: 0,0:00:54.24,0:00:55.72,Default,,0,0,0,,And you know I
+Dialogue: 0,0:00:55.72,0:00:56.56,Default,,0,0,0,,was sold

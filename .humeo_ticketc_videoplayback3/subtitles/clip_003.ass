@@ -1,0 +1,90 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,48,&H00FFFFFF,&H000000FF,&H00000000,&H70000000,-1,0,0,0,100,100,0,0,4,0,0,2,60,60,160,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.05,Default,,0,0,0,,This for everyone for
+Dialogue: 0,0:00:01.05,0:00:02.77,Default,,0,0,0,,fundraising okay There's this
+Dialogue: 0,0:00:02.77,0:00:03.89,Default,,0,0,0,,concept that I learned
+Dialogue: 0,0:00:03.89,0:00:05.11,Default,,0,0,0,,and we developed at
+Dialogue: 0,0:00:05.11,0:00:06.39,Default,,0,0,0,,early on called walking
+Dialogue: 0,0:00:06.39,0:00:07.33,Default,,0,0,0,,up the then down
+Dialogue: 0,0:00:07.33,0:00:09.05,Default,,0,0,0,,the What this means
+Dialogue: 0,0:00:09.05,0:00:10.35,Default,,0,0,0,,is that most founders
+Dialogue: 0,0:00:10.59,0:00:11.47,Default,,0,0,0,,they're go for the
+Dialogue: 0,0:00:11.47,0:00:12.57,Default,,0,0,0,,biggest names VCs first
+Dialogue: 0,0:00:12.79,0:00:13.45,Default,,0,0,0,,They go for like
+Dialogue: 0,0:00:13.45,0:00:14.31,Default,,0,0,0,,the hottest names They
+Dialogue: 0,0:00:14.31,0:00:15.07,Default,,0,0,0,,go for like people
+Dialogue: 0,0:00:15.07,0:00:15.53,Default,,0,0,0,,who have like good
+Dialogue: 0,0:00:15.53,0:00:17.05,Default,,0,0,0,,signal right But those
+Dialogue: 0,0:00:17.05,0:00:17.69,Default,,0,0,0,,people are at the
+Dialogue: 0,0:00:17.69,0:00:18.23,Default,,0,0,0,,top of the ladder
+Dialogue: 0,0:00:18.67,0:00:19.71,Default,,0,0,0,,We encourage founders to
+Dialogue: 0,0:00:19.71,0:00:20.71,Default,,0,0,0,,walk up the first
+Dialogue: 0,0:00:21.25,0:00:22.25,Default,,0,0,0,,So you go for
+Dialogue: 0,0:00:22.25,0:00:23.11,Default,,0,0,0,,other folks who are
+Dialogue: 0,0:00:23.11,0:00:24.29,Default,,0,0,0,,like you and maybe
+Dialogue: 0,0:00:24.29,0:00:24.89,Default,,0,0,0,,there's like a new
+Dialogue: 0,0:00:24.89,0:00:26.29,Default,,0,0,0,,VC in and then
+Dialogue: 0,0:00:26.29,0:00:26.99,Default,,0,0,0,,they just raised like
+Dialogue: 0,0:00:26.99,0:00:27.89,Default,,0,0,0,,a small pocket of
+Dialogue: 0,0:00:28.07,0:00:29.75,Default,,0,0,0,,but they're you they're
+Dialogue: 0,0:00:29.75,0:00:31.61,Default,,0,0,0,,to Like get some
+Dialogue: 0,0:00:31.61,0:00:32.33,Default,,0,0,0,,of these newer names
+Dialogue: 0,0:00:32.33,0:00:33.57,Default,,0,0,0,,first Maybe there certain
+Dialogue: 0,0:00:33.57,0:00:35.65,Default,,0,0,0,,angels whatever Like in
+Dialogue: 0,0:00:35.65,0:00:36.29,Default,,0,0,0,,multiple rounds you can
+Dialogue: 0,0:00:36.29,0:00:37.27,Default,,0,0,0,,still get angels involved
+Dialogue: 0,0:00:37.83,0:00:38.95,Default,,0,0,0,,Angels like I customers
+Dialogue: 0,0:00:38.95,0:00:39.71,Default,,0,0,0,,or something So you
+Dialogue: 0,0:00:39.71,0:00:41.21,Default,,0,0,0,,kind of stack up
+Dialogue: 0,0:00:41.39,0:00:42.11,Default,,0,0,0,,And some of these
+Dialogue: 0,0:00:42.29,0:00:43.09,Default,,0,0,0,,like they could even
+Dialogue: 0,0:00:43.09,0:00:43.99,Default,,0,0,0,,be like we've gotten
+Dialogue: 0,0:00:43.99,0:00:44.91,Default,,0,0,0,,a of Taiwanese capital
+Dialogue: 0,0:00:44.91,0:00:46.05,Default,,0,0,0,,into Southeast Asian startups
+Dialogue: 0,0:00:46.05,0:00:48.07,Default,,0,0,0,,recently Like we've always
+Dialogue: 0,0:00:48.07,0:00:48.71,Default,,0,0,0,,had a great relationship
+Dialogue: 0,0:00:48.71,0:00:49.69,Default,,0,0,0,,with Taiwan and VCs
+Dialogue: 0,0:00:50.15,0:00:51.21,Default,,0,0,0,,And so maybe you
+Dialogue: 0,0:00:51.21,0:00:51.91,Default,,0,0,0,,get some of the
+Dialogue: 0,0:00:51.91,0:00:52.81,Default,,0,0,0,,who are like say
+Dialogue: 0,0:00:52.81,0:00:53.99,Default,,0,0,0,,not the usual suspects
+Dialogue: 0,0:00:54.49,0:00:55.41,Default,,0,0,0,,Now if you start
+Dialogue: 0,0:00:55.41,0:00:56.07,Default,,0,0,0,,stacking up let's say
+Dialogue: 0,0:00:56.07,0:00:56.69,Default,,0,0,0,,you're raising 2 million
+Dialogue: 0,0:00:57.01,0:00:57.55,Default,,0,0,0,,right And you got
+Dialogue: 0,0:00:57.55,0:00:58.49,Default,,0,0,0,,like one and million
+Dialogue: 0,0:00:58.49,0:01:00.03,Default,,0,0,0,,dollars from all kinds
+Dialogue: 0,0:01:00.03,0:01:01.47,Default,,0,0,0,,of then you go
+Dialogue: 0,0:01:01.47,0:01:02.05,Default,,0,0,0,,to the name that
+Dialogue: 0,0:01:02.05,0:01:03.57,Default,,0,0,0,,you want And you
+Dialogue: 0,0:01:03.57,0:01:05.45,Default,,0,0,0,,say hey Studio 65
+Dialogue: 0,0:01:05.45,0:01:07.55,Default,,0,0,0,,VC I have half
+Dialogue: 0,0:01:07.55,0:01:08.41,Default,,0,0,0,,my round of my
+Dialogue: 0,0:01:08.41,0:01:10.19,Default,,0,0,0,,3 closed You want
+Dialogue: 0,0:01:10.19,0:01:10.69,Default,,0,0,0,,to get in or
+Dialogue: 0,0:01:10.69,0:01:11.63,Default,,0,0,0,,not Yeah you and
+Dialogue: 0,0:01:11.63,0:01:12.47,Default,,0,0,0,,we're closing out the
+Dialogue: 0,0:01:12.47,0:01:12.95,Default,,0,0,0,,rest of the tough
+Dialogue: 0,0:01:12.95,0:01:14.35,Default,,0,0,0,,pretty soon but somebody
+Dialogue: 0,0:01:14.35,0:01:15.49,Default,,0,0,0,,recommended I speak to
+Dialogue: 0,0:01:15.49,0:01:16.85,Default,,0,0,0,,you right My friend
+Dialogue: 0,0:01:16.85,0:01:17.71,Default,,0,0,0,,who is your profile
+Dialogue: 0,0:01:17.71,0:01:18.61,Default,,0,0,0,,company environment I speak
+Dialogue: 0,0:01:18.61,0:01:19.49,Default,,0,0,0,,to you but we
+Dialogue: 0,0:01:19.49,0:01:19.97,Default,,0,0,0,,don't have too much
+Dialogue: 0,0:01:19.97,0:01:20.79,Default,,0,0,0,,time But just you
+Dialogue: 0,0:01:20.79,0:01:21.59,Default,,0,0,0,,know wanted to just
+Dialogue: 0,0:01:21.59,0:01:22.21,Default,,0,0,0,,take up on this
+Dialogue: 0,0:01:22.21,0:01:22.61,Default,,0,0,0,,thing right

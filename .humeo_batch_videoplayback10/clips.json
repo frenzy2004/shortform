@@ -1,0 +1,243 @@
+{
+  "source_path": "",
+  "clips": [
+    {
+      "clip_id": "001",
+      "topic": "AI will cause an entrepreneurial explosion",
+      "start_time_sec": 503.4,
+      "end_time_sec": 592.3,
+      "viral_hook": "So, what I tell young people, and I think this is going to be the most exciting entrepreneurial explosion in history.",
+      "virality_score": 0.84,
+      "transcript": "So, what I tell young people, and I think this is going to be the most exciting entrepreneurial explosion in history. Now that we're talking about generative AI. And it's all about natural language. And we can speak that. We can do that. We can vibe code. We can get a lot of help from ChatGVT or Claude, Cursor, Repl.it. And we can actually create our own businesses. So my advice is the average duration of unemployment today is six months. So, okay, fine. Keep looking for the job, but why don't you try and figure out a solution to a problem you have that frustrates you, that you think AI can help. And if it frustrates you, it probably frustrates a lot of people. Create a business, just try it out. And the reason you really want to do that is anyone looking for a job now, just they have to devour AI in all kinds of ways. Using it, understanding it, taking a point of view of where it's taking us, because those are the people who are going to become very valuable in terms of entering, if they decide to enter big corporations and not start their own jobs, their own businesses, they'll be very valuable with that skillset in a company.",
+      "suggested_overlay_title": "AI Creates an Entrepreneurial Explosion",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.9,
+        "hook_emotion": 0.8,
+        "catchy": 0.8
+      },
+      "reasoning": "This clip offers a highly optimistic and actionable message for a young audience, directly addressing anxieties about AI and jobs with a call to entrepreneurship. The hook is strong and the advice is concrete.",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 5.4,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "render_spans": [],
+      "shorts_title": "Her Advice To Young People In The Age of AI",
+      "description": "Kathy Wood explains why she believes generative AI will lead to the most exciting entrepreneurial explosion in history and gives actionable advice for young people.",
+      "hashtags": [
+        "ai",
+        "entrepreneurship",
+        "careeradvice",
+        "kathywood",
+        "innovation"
+      ],
+      "layout_hint": "zoom_call_center",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "002",
+      "topic": "This AI revolution is twice as big as the industrial revolution",
+      "start_time_sec": 223.9,
+      "end_time_sec": 277.7,
+      "viral_hook": "we in our lifetimes have never seen anything like today.",
+      "virality_score": 0.815,
+      "transcript": "we in our lifetimes have never seen anything like today. You have to go back, in order to get into the right mindset, you have to go back to really the end of railroad construction and then telephone, electricity, and internal combustion engine. That was a technology revolution and we call it the industrial revolution. This one is going to be probably twice as big. So, the capital spending in the telephone, electricity, internal combustion engine, capital spending as a percent of GDP topped out at about 6%. We think this capital spending cycle is going to go north of 12% of GDP. And we think we're in really early stages.",
+      "suggested_overlay_title": "AI Revolution Is Twice as Big",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.9,
+        "hook_emotion": 0.8,
+        "catchy": 0.7
+      },
+      "reasoning": "This clip makes a massive, historically-grounded prediction and backs it up with specific numbers (6% vs 12% of GDP). The scale of the claim creates a huge 'wow' factor and sense of awe.",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 3.5,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "render_spans": [],
+      "shorts_title": "Why This AI Revolution Is Different",
+      "description": "Kathy Wood compares the current AI revolution to the industrial revolution, predicting it will be at least twice as large in terms of capital spending as a percentage of GDP.",
+      "hashtags": [
+        "ai",
+        "industrialrevolution",
+        "innovation",
+        "investing",
+        "economy"
+      ],
+      "layout_hint": "zoom_call_center",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "003",
+      "topic": "The best time to start a business is in a bear market",
+      "start_time_sec": 1281.7,
+      "end_time_sec": 1368.4,
+      "viral_hook": "We went to founders. We just and we used our research saying you're on our wish list",
+      "virality_score": 0.79,
+      "transcript": "We went to founders. We just and we used our research saying you're on our wish list. Here, here's some of our research. Well, the odds were very high. We learned they already knew who we were and very often they were using some of our big ideas in their pitch decks because what we were doing is sizing markets, trying to help people understand how big these markets are going to be and how quickly they're going to evolve and Again, we were in that the markets were in such tough shape. The founders wanted to talk to someone positive and so that's how it was really great timing and Kudos to Charlie Roberts and Chase Prather who are in the audience here really spearheading this movement. And so we were able to talk to most founders. We would go to them and say you're on our wish list. Here are our big ideas and we got on to almost every cap table directly which today, given how different the environment is and how there's just a race for capital into all of these companies, we couldn't have we couldn't have started it as successfully today as we did in a bear market. That's a lesson always start your business in a recession or a bear market. It's true. It's that it's it's usually a very good time",
+      "suggested_overlay_title": "The Secret to Starting a Business",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.8,
+        "hook_emotion": 0.7,
+        "catchy": 0.9
+      },
+      "reasoning": "This clip tells a compelling story with a very clear, contrarian, and highly quotable takeaway. The punchline, 'always start your business in a recession or a bear market,' is extremely catchy.",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 4.4,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "render_spans": [],
+      "shorts_title": "Always Start Your Business in a Bear Market",
+      "description": "Kathy Wood shares the story of how ARK was able to get into the best venture deals by launching during a bear market, offering a powerful lesson for entrepreneurs.",
+      "hashtags": [
+        "entrepreneurship",
+        "startup",
+        "bearmarket",
+        "businessadvice",
+        "investing"
+      ],
+      "layout_hint": "zoom_call_center",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "004",
+      "topic": "Why today's AI boom is different from the dot-com bubble",
+      "start_time_sec": 106.7,
+      "end_time_sec": 196.0,
+      "viral_hook": "Well, I was there throughout the early internet into the tech and telecom bubble and then the bust. And this time is 180 degrees the opposite.",
+      "virality_score": 0.78,
+      "transcript": "Well, I was there throughout the early internet into the tech and telecom bubble and then the bust. And this time is 180 degrees the opposite. Back then, given the research and the way we do our research, back then we were thinking that there was too much capital chasing too few opportunities too soon. The technologies were not ready. We didn't get the cloud until 06. We didn't get the first big breakthrough in AI until 2012, the deep learning. And then the more provocative one, transformer architecture till December 18th. But the 20 years that led up to the tech and telecom bubble were the seeds being planted for what is happening now. And when I say the technologies weren't ready, I gave you some examples. When I say the costs were too high, just to give you a sense, biotech was part of the tech and telecom bubble. And we sequenced the first whole human genome. It cost $2.7 billion and everybody was so excited about personalized medicine, right? 2.7 billion, not a scalable model. Today, that number is down to $150 or less.",
+      "suggested_overlay_title": "Dot-com Bust vs. Today's AI Boom",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.9,
+        "hook_emotion": 0.7,
+        "catchy": 0.7
+      },
+      "reasoning": "The clip uses a strong contrast hook ('180 degrees the opposite') and provides clear historical context. The payoff with the $2.7 billion to $150 genome sequencing statistic is a massive 'wow' moment.",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 8.3,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "render_spans": [],
+      "shorts_title": "This Time It's Different (Here's Why)",
+      "description": "Kathy Wood explains why the current AI moment is '180 degrees the opposite' of the dot-com bubble, using the incredible cost reduction in genome sequencing as a prime example.",
+      "hashtags": [
+        "ai",
+        "dotcom",
+        "investing",
+        "technology",
+        "kathywood"
+      ],
+      "layout_hint": "zoom_call_center",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "005",
+      "topic": "The 'Saskopelips' and predicting market shifts",
+      "start_time_sec": 962.1,
+      "end_time_sec": 1025.9,
+      "viral_hook": "you did talk about a Saskopelips, right?",
+      "virality_score": 0.765,
+      "transcript": "you did talk about a Saskopelips, right? Two years ago, I believe it was two years ago, we basically showed the tech stack. So the three parts of the tech stack, so infrastructure, so chips and data centers, that's one. Platform as a service, think Palantir, that's another. And then applications, SAS, an important one, that's the third. And you could see in the last five years versus the five years prior that, and this is subtle, but it was very important that incremental growth, while they were all growing quickly, the incremental growth was going to the platform even more than the infrastructure, right? And that's why Palantir surprised enormously. Many people thought Palantir was a consultant, not a software company. So again, defining the companies correctly and understanding how the tech stack is moving over time.",
+      "suggested_overlay_title": "The 'Saskopelips' That Predicted the Market",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.8,
+        "hook_emotion": 0.7,
+        "catchy": 0.8
+      },
+      "reasoning": "The hook uses a catchy, made-up word ('Saskopelips') that creates immediate curiosity. The clip then delivers a clear, 'insider' explanation of how they analyze markets, which feels like a valuable secret.",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 2.2,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "render_spans": [],
+      "shorts_title": "How They Predicted The SaaS Crash",
+      "description": "Using the concept of the 'Saskopelips', Kathy Wood explains how analyzing the tech stack allowed them to see the shift away from SaaS and towards platforms like Palantir.",
+      "hashtags": [
+        "investing",
+        "saas",
+        "palantir",
+        "techstocks",
+        "marketanalysis"
+      ],
+      "layout_hint": "zoom_call_center",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "006",
+      "topic": "How Wall Street misunderstands Tesla",
+      "start_time_sec": 763.9,
+      "end_time_sec": 818.3,
+      "viral_hook": "The reason the traditional world is going to have a little trouble with this is research is not organized correctly.",
+      "virality_score": 0.7375,
+      "transcript": "The reason the traditional world is going to have a little trouble with this is research is not organized correctly. It's very siloed by sector or industry or sub-industry. So five consumer analysts, five healthcare analysts. I don't think that works. I think what's going to work in this new world is, and how we've set up our research team, is by technology. Those 14 different technologies that are converging. So very collaborative. So in the case of Tesla, for example, that was an interesting case or proof of concept. We did not define Tesla as an auto manufacturer. We defined it, and you could just have used Elon's master plans to figure this out. We weren't that brilliant. But as a robotics company, think autonomous vehicles. They are robots.",
+      "suggested_overlay_title": "Why Wall Street Gets Tesla Wrong",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.85,
+        "hook_emotion": 0.6,
+        "catchy": 0.75
+      },
+      "reasoning": "This clip provides a strong reframe for a very famous company, Tesla, explaining why the 'old way' of thinking is wrong. It gives viewers an 'aha' moment and a new lens to view the market.",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 5.1,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "render_spans": [],
+      "shorts_title": "Tesla Isn't A Car Company",
+      "description": "Kathy Wood explains why traditional, siloed Wall Street research fails to correctly value innovative companies like Tesla, which ARK defines as a robotics, energy, and AI company.",
+      "hashtags": [
+        "tesla",
+        "investing",
+        "wallstreet",
+        "innovation",
+        "kathywood"
+      ],
+      "layout_hint": "zoom_call_center",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "007",
+      "topic": "Why ARK was started",
+      "start_time_sec": 663.3,
+      "end_time_sec": 714.6,
+      "viral_hook": "Yeah, so one of the reasons I did start ARK is I saw an unmet need.",
+      "virality_score": 0.7,
+      "transcript": "Yeah, so one of the reasons I did start ARK is I saw an unmet need. What was that? The traditional financial world was going passive or benchmark sensitive, which to me is almost the same thing. And by the way, that is going to be completely destroyed by AI. It's much cheaper to do this with a machine. But what I thought was unfortunate about that is we lost a lot of research on innovation. And a lot of these companies in the broad-based benchmarks, those at the top are there because of past success. If there is the kind of disruptive innovation that we see today coming out of five major platforms,",
+      "suggested_overlay_title": "The Unmet Need That Launched Ark",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.7,
+        "hook_emotion": 0.7,
+        "catchy": 0.7
+      },
+      "reasoning": "A solid founder story with a clear mission. The bold prediction that passive investing will be 'completely destroyed by AI' adds a strong emotional and catchy element to an otherwise standard explanation.",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 4.9,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "render_spans": [],
+      "shorts_title": "Why She Started ARK Invest",
+      "description": "Kathy Wood reveals the unmet need that inspired her to start ARK: the traditional financial world was abandoning innovation research in favor of passive investing.",
+      "hashtags": [
+        "arkinvest",
+        "kathywood",
+        "investing",
+        "innovation",
+        "founderstory"
+      ],
+      "layout_hint": "zoom_call_center",
+      "needs_review": false,
+      "review_reason": ""
+    }
+  ]
+}

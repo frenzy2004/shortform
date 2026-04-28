@@ -1,0 +1,84 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,48,&H00FFFFFF,&H000000FF,&H00000000,&H70000000,-1,0,0,0,100,100,0,0,4,0,0,2,60,60,160,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.22,Default,,0,0,0,,We're crabs in the
+Dialogue: 0,0:00:01.22,0:00:02.02,Default,,0,0,0,,right now Yeah okay
+Dialogue: 0,0:00:02.02,0:00:03.04,Default,,0,0,0,,I think it's just
+Dialogue: 0,0:00:03.04,0:00:03.84,Default,,0,0,0,,like a waste of
+Dialogue: 0,0:00:03.84,0:00:04.96,Default,,0,0,0,,energy to spend too
+Dialogue: 0,0:00:04.96,0:00:05.86,Default,,0,0,0,,time on that And
+Dialogue: 0,0:00:05.86,0:00:06.88,Default,,0,0,0,,I'm about the viewing
+Dialogue: 0,0:00:06.88,0:00:07.58,Default,,0,0,0,,of the compass of
+Dialogue: 0,0:00:07.58,0:00:08.46,Default,,0,0,0,,balance right So number
+Dialogue: 0,0:00:08.46,0:00:09.54,Default,,0,0,0,,one is that I
+Dialogue: 0,0:00:09.54,0:00:10.14,Default,,0,0,0,,think that there is
+Dialogue: 0,0:00:10.14,0:00:11.80,Default,,0,0,0,,a degree of understanding
+Dialogue: 0,0:00:11.80,0:00:13.08,Default,,0,0,0,,that's required for journalists
+Dialogue: 0,0:00:13.08,0:00:14.38,Default,,0,0,0,,to be able to
+Dialogue: 0,0:00:14.38,0:00:16.92,Default,,0,0,0,,complete the balance of
+Dialogue: 0,0:00:16.92,0:00:18.18,Default,,0,0,0,,what is a transaction
+Dialogue: 0,0:00:18.18,0:00:18.98,Default,,0,0,0,,in that piece or
+Dialogue: 0,0:00:18.98,0:00:19.66,Default,,0,0,0,,any kind of topic
+Dialogue: 0,0:00:19.66,0:00:20.78,Default,,0,0,0,,that they're There are
+Dialogue: 0,0:00:20.78,0:00:21.96,Default,,0,0,0,,a of folks who
+Dialogue: 0,0:00:21.96,0:00:23.66,Default,,0,0,0,,opining on like market
+Dialogue: 0,0:00:23.66,0:00:25.60,Default,,0,0,0,,norms for DPI They're
+Dialogue: 0,0:00:25.60,0:00:26.82,Default,,0,0,0,,opining on say LP
+Dialogue: 0,0:00:26.82,0:00:27.84,Default,,0,0,0,,dollars on it They're
+Dialogue: 0,0:00:27.84,0:00:29.32,Default,,0,0,0,,on how LPs want
+Dialogue: 0,0:00:29.32,0:00:30.08,Default,,0,0,0,,or what VC should
+Dialogue: 0,0:00:30.08,0:00:31.00,Default,,0,0,0,,do and da da
+Dialogue: 0,0:00:31.00,0:00:31.80,Default,,0,0,0,,da But there's like
+Dialogue: 0,0:00:31.94,0:00:32.88,Default,,0,0,0,,so like maybe they
+Dialogue: 0,0:00:32.88,0:00:34.04,Default,,0,0,0,,would understand 20 of
+Dialogue: 0,0:00:34.04,0:00:35.26,Default,,0,0,0,,actually the dynamics and
+Dialogue: 0,0:00:35.26,0:00:35.98,Default,,0,0,0,,what are in the
+Dialogue: 0,0:00:35.98,0:00:37.32,Default,,0,0,0,,larger limited partner agreement
+Dialogue: 0,0:00:37.32,0:00:38.38,Default,,0,0,0,,clauses and some of
+Dialogue: 0,0:00:38.38,0:00:39.20,Default,,0,0,0,,those things And the
+Dialogue: 0,0:00:39.20,0:00:39.74,Default,,0,0,0,,thing is I'm not
+Dialogue: 0,0:00:39.74,0:00:40.68,Default,,0,0,0,,saying that to kind
+Dialogue: 0,0:00:40.68,0:00:41.40,Default,,0,0,0,,of fault anyone I'm
+Dialogue: 0,0:00:41.40,0:00:42.18,Default,,0,0,0,,saying that even within
+Dialogue: 0,0:00:42.18,0:00:43.78,Default,,0,0,0,,us as VCs like
+Dialogue: 0,0:00:43.78,0:00:44.70,Default,,0,0,0,,when we started raising
+Dialogue: 0,0:00:44.70,0:00:45.38,Default,,0,0,0,,our funds we didn't
+Dialogue: 0,0:00:45.38,0:00:46.06,Default,,0,0,0,,even know what were
+Dialogue: 0,0:00:46.06,0:00:47.00,Default,,0,0,0,,the market terms with
+Dialogue: 0,0:00:47.00,0:00:48.28,Default,,0,0,0,,our LPs Then we
+Dialogue: 0,0:00:48.28,0:00:49.50,Default,,0,0,0,,ask our and the
+Dialogue: 0,0:00:49.90,0:00:50.74,Default,,0,0,0,,whether they knew it
+Dialogue: 0,0:00:50.74,0:00:51.32,Default,,0,0,0,,or they didn't know
+Dialogue: 0,0:00:51.32,0:00:51.76,Default,,0,0,0,,it they have to
+Dialogue: 0,0:00:51.76,0:00:52.20,Default,,0,0,0,,act like they know
+Dialogue: 0,0:00:52.20,0:00:52.98,Default,,0,0,0,,it Do know I
+Dialogue: 0,0:00:52.98,0:00:53.56,Default,,0,0,0,,mean And so everyone
+Dialogue: 0,0:00:53.56,0:00:54.18,Default,,0,0,0,,was like trying to
+Dialogue: 0,0:00:54.18,0:00:55.36,Default,,0,0,0,,like shape what the
+Dialogue: 0,0:00:55.36,0:00:56.34,Default,,0,0,0,,norms is as they
+Dialogue: 0,0:00:56.34,0:00:57.08,Default,,0,0,0,,went You're setting it
+Dialogue: 0,0:00:57.08,0:00:57.58,Default,,0,0,0,,as you go Yeah
+Dialogue: 0,0:00:57.58,0:00:58.72,Default,,0,0,0,,okay So nobody knows
+Dialogue: 0,0:00:58.76,0:00:59.54,Default,,0,0,0,,right Nobody knows what
+Dialogue: 0,0:00:59.54,0:01:00.28,Default,,0,0,0,,the are And then
+Dialogue: 0,0:01:00.28,0:01:01.02,Default,,0,0,0,,we talk about this
+Dialogue: 0,0:01:01.02,0:01:01.92,Default,,0,0,0,,isn't the norm They
+Dialogue: 0,0:01:01.92,0:01:02.52,Default,,0,0,0,,analyze it No that's
+Dialogue: 0,0:01:02.52,0:01:03.28,Default,,0,0,0,,the norm Everyone's got
+Dialogue: 0,0:01:03.28,0:01:04.24,Default,,0,0,0,,their own norm right
+Dialogue: 0,0:01:04.24,0:01:04.98,Default,,0,0,0,,And then we blast
+Dialogue: 0,0:01:04.98,0:01:05.74,Default,,0,0,0,,around this market Oh
+Dialogue: 0,0:01:05.74,0:01:06.66,Default,,0,0,0,,you're off market That's
+Dialogue: 0,0:01:06.66,0:01:07.18,Default,,0,0,0,,such an off market
+Dialogue: 0,0:01:07.18,0:01:07.80,Default,,0,0,0,,term right

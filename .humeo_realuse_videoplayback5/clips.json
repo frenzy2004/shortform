@@ -1,0 +1,165 @@
+{
+  "source_path": "",
+  "clips": [
+    {
+      "clip_id": "001",
+      "topic": "AI's exponential growth",
+      "start_time_sec": 50.6,
+      "end_time_sec": 105.0,
+      "viral_hook": "We have a Moore's law like law, except it's for intelligence itself",
+      "virality_score": 0.88,
+      "transcript": "Just like in the 90s, you saw Moore's law that the amount of computing power would double every 12 months or every 18 months. We have a Moore's law like law, except it's for intelligence itself, for the cognitive ability of the model across many tasks. So what we are seeing is that that cognitive ability is, depending on how you measure it, doubling every four to 12 months. So we're just climbing the ladder of cognitive ability, and where we are now is to take coding as one example, that's been exploding really fast over the last year or two, I have engineers, in fact, the team that leads one of our lead products, Claude Code, which is the way you use our models for coding. He says he hasn't written any code in the last two months. It's all Claude.",
+      "suggested_overlay_title": "AI's Moore's Law",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.95,
+        "hook_emotion": 0.8,
+        "catchy": 0.85
+      },
+      "reasoning": "The analogy to Moore's Law is highly sticky and provides a clear, high-wow insight into how fast AI is evolving.",
+      "hook_start_sec": 1.4,
+      "hook_end_sec": 4.5,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "shorts_title": "The AI Moore's Law is Real",
+      "description": "Dario Amadei explains how AI cognitive ability is doubling every few months, mirroring Moore's Law.",
+      "hashtags": [
+        "ai",
+        "tech",
+        "coding",
+        "mooreslaw"
+      ],
+      "layout_hint": "sit_center",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "002",
+      "topic": "AI and national security",
+      "start_time_sec": 380.0,
+      "end_time_sec": 433.9,
+      "viral_hook": "Imagine 100 million people smarter than any Nobel Prize winner",
+      "virality_score": 0.78,
+      "transcript": "You know, the analogy I thought of, if you think about the incredible national security implications of building models that are essentially cognition, that are essentially intelligence, right? I've called where we're going with this a country of geniuses and a data center, right? So imagine 100 million people smarter than any Nobel Prize winner, and it's going to be under the control of one country or another. So I think this is crazy. I think it's, you know, it's a bit like, you know, I don't know, like selling, you know, nuclear weapons to North Korea and, you know, bragging, oh yeah, Boeing made the case. So your friend David Sachs is basically arming the Chinese. No, I wouldn't refer to any particular people, but, you know, I would just say that this particular policy, I think, is, you know- Akin to- Yeah, it's not well advised.",
+      "suggested_overlay_title": "The Danger of AI Exports",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.85,
+        "hook_emotion": 0.85,
+        "catchy": 0.6
+      },
+      "reasoning": "Uses a powerful, provocative analogy ('nuclear weapons') to frame the stakes of AI development, which creates immediate emotional engagement.",
+      "hook_start_sec": 2.2,
+      "hook_end_sec": 5.0,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "shorts_title": "AI is a National Security Risk",
+      "description": "Amadei compares shipping advanced chips to China to selling nuclear weapons, highlighting the stakes of AI.",
+      "hashtags": [
+        "geopolitics",
+        "ai",
+        "security",
+        "tech"
+      ],
+      "layout_hint": "sit_center",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "003",
+      "topic": "The AI economic bubble",
+      "start_time_sec": 605.6,
+      "end_time_sec": 662.9,
+      "viral_hook": "And you don't want to buy too much because you could financially overextend yourself",
+      "virality_score": 0.79,
+      "transcript": "And you don't want to buy too much because you could financially overextend yourself, and you don't want to buy too little because then you can't serve all the revenue. And so that's where the kind of economic and financial- That's where the bubble is. But you are involved in that, building data centers, you're finding vast fortunes, you've got the deals with Nvidia. Do you worry that that's going to come back and bite you? So we have some advantages in this. There's a stability to enterprise business that there is not to consumer, right? Consumer is very fickle. Enterprise purchasing, enterprise predictions are predictable. Also, enterprise tends to have better margins. The margin is basically how much buffer you have between buying too little and buying too much, between what you have to pay for and what you have to support in revenue. So we have a number of advantages here, but I won't deny that there is some inherent risk in all of the companies to this process.",
+      "suggested_overlay_title": "Is There an AI Bubble?",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.8,
+        "hook_emotion": 0.75,
+        "catchy": 0.8
+      },
+      "reasoning": "Addresses a high-stakes, common fear about the current AI boom with a nuanced, credible perspective from an industry leader.",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 3.5,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "shorts_title": "Are We In An AI Bubble?",
+      "description": "Dario Amadei discusses the risks of over-investing in AI infrastructure and whether we are heading for a bubble.",
+      "hashtags": [
+        "economy",
+        "ai",
+        "business",
+        "tech"
+      ],
+      "layout_hint": "sit_center",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "004",
+      "topic": "The white-collar bloodbath",
+      "start_time_sec": 797.9,
+      "end_time_sec": 885.4,
+      "viral_hook": "I think we could have this very unusual combination of very fast GDP growth and high unemployment",
+      "virality_score": 0.76,
+      "transcript": "My view is on the extreme side of AI is a big deal. But I'm kind of in both side, both top quadrants, where I think some really good things will happen. And if we don't act to prevent them, some really bad things will happen. I wouldn't be building this technology if I didn't believe that the good outweighed the bad and that we could mitigate the bad. That's why I warned about the bad, so that we could- How do you think we mitigate it? Does that mean things like taxation? Yeah, well, let me just get to what I think kind of the situation is. I think exactly what you said. I think we could have this very unusual combination of very fast GDP growth and high unemployment or at least underemployment or low-wage jobs, a lot of low-wage jobs, high inequality. I don't think that's a macro, correct me if I'm wrong, I don't think that's a macroeconomic combination we've ever seen before. You think of fast growth, you're like, well, okay, maybe there's inflation. But you're not gonna have high unemployment when there's fast growth. I think this technology is a bit different, because it's extreme in the way it's gonna generate value. But also, because it's moving up the cognitive waterline, there's gonna be, unfortunately, a whole class of people who are, I think, across a lot of industries, going to have a hard time coping. And that's really a problem we need to solve.",
+      "suggested_overlay_title": "The AI Unemployment Crisis",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.9,
+        "hook_emotion": 0.75,
+        "catchy": 0.55
+      },
+      "reasoning": "Directly addresses a major fear about the future of work with a high-wow economic prediction that is counter-intuitive.",
+      "hook_start_sec": 14.5,
+      "hook_end_sec": 17.8,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "shorts_title": "AI Will Cause High Unemployment",
+      "description": "Dario Amadei predicts a unique economic crisis with high growth and high unemployment due to AI.",
+      "hashtags": [
+        "economy",
+        "ai",
+        "jobs",
+        "future"
+      ],
+      "layout_hint": "sit_center",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "005",
+      "topic": "Corporations as superintelligence",
+      "start_time_sec": 220.2,
+      "end_time_sec": 280.0,
+      "viral_hook": "One of the things I would say is that, you know, there are super intelligences today, and they're basically large corporations, right?",
+      "virality_score": 0.72,
+      "transcript": "And so that gives very different incentives, right? If you want to get things done, you know, we talked about AGI and super intelligence before. One of the things I would say is that, you know, there are super intelligences today, and they're basically large corporations, right? They're smarter than any human can be at, you know, solving the problem of, you know, shipping commerce at the lowest possible cost, or making solar panels at the lowest possible cost, or launching rockets at the lowest possible cost. And so there's really high returns to intelligence in this area, which I think incentivizes us to kind of build the right thing. It's also, you know, I think it's a business that is more stable than consumer. We don't need, you know, we don't need ads. We don't need, you know, large numbers of free users. We can just very directly create value, right? There aren't all these weird externalities of like you're prioritizing engagement, you're prioritizing these other things, you're generating all this slop. We just make stuff that people can use.",
+      "suggested_overlay_title": "Corporations Are Superintelligent",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.8,
+        "hook_emotion": 0.6,
+        "catchy": 0.7
+      },
+      "reasoning": "A unique, counter-intuitive reframe that changes the viewer's mental model of what 'superintelligence' actually is today.",
+      "hook_start_sec": 3.0,
+      "hook_end_sec": 6.0,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "shorts_title": "Corporations Are Already Superintelligence",
+      "description": "Amadei argues that large corporations already act as superintelligences by maximizing efficiency in specific domains.",
+      "hashtags": [
+        "business",
+        "ai",
+        "corporations",
+        "intelligence"
+      ],
+      "layout_hint": "sit_center",
+      "needs_review": false,
+      "review_reason": ""
+    }
+  ]
+}

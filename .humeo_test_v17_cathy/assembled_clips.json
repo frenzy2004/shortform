@@ -1,0 +1,170 @@
+{
+  "source_path": "",
+  "clips": [
+    {
+      "clip_id": "001",
+      "topic": "Prediction Markets and Equity Management",
+      "start_time_sec": 0.0,
+      "end_time_sec": 51.21998901367195,
+      "viral_hook": "wait a minute, this movement is the beginnings, I think, of bringing active equity management back into style",
+      "virality_score": 0.81,
+      "transcript": "wait a minute, this movement is the beginnings, I think, of bringing active equity management back into style because we're talking about events that should move stocks. And if we have more people looking for and at those events, they're going to be interested in investing in some of these opportunities and maybe taking a little bit out of that passive portfolio that is tied to the indexes. So I'm pretty excited about this. This could be the beginning of a resurgence in active equity management.",
+      "suggested_overlay_title": "Is Passive Investing Dying",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.85,
+        "hook_emotion": 0.8,
+        "catchy": 0.75
+      },
+      "reasoning": "This clip offers a contrarian industry prediction that challenges the dominant passive investing narrative, making it highly shareable for finance-focused audiences.",
+      "hook_start_sec": null,
+      "hook_end_sec": null,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "render_spans": [],
+      "shorts_title": "Active vs Passive Management",
+      "description": "Kathy Wood explains why prediction markets like Kalshi could signal a major shift back to active stock picking.",
+      "hashtags": [
+        "investing",
+        "stocks",
+        "finance",
+        "kathywood"
+      ],
+      "layout_hint": "sit_center",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "002",
+      "topic": "Prediction Market Growth Potential",
+      "start_time_sec": 0.0,
+      "end_time_sec": 51.34000854492194,
+      "viral_hook": "in the medium term. So over the next few years, we believe that this market could explode up to $5 trillion",
+      "virality_score": 0.76,
+      "transcript": "in the medium term. So over the next few years, we believe that this market could explode up to $5 trillion in notional volume. Now, right now, Cal, she is on an annualized run rate to do around 120 $130 billion in notional volume for this year. So we're talking about a massive explosion of where this total market is headed. But when you put it the perspective of the total derivatives market, which in 2024, was around $715 trillion in notional volume, you're only talking about 70 basis points, right, that $5 trillion figure over 715. So it's a drop in the bucket, compared to where traditional derivatives sit today. And as you point out, I think this is an expansion of the addressable market that derivatives don't necessarily give you today in terms of the risk profile.",
+      "suggested_overlay_title": "The $5 Trillion Prediction Market",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.8,
+        "hook_emotion": 0.75,
+        "catchy": 0.7
+      },
+      "reasoning": "Hard numbers and massive growth projections always perform well in financial content. The comparison to the $715T derivatives market provides necessary scale.",
+      "hook_start_sec": null,
+      "hook_end_sec": null,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "render_spans": [],
+      "shorts_title": "Prediction Markets Exploding",
+      "description": "An analysis of the massive growth potential for prediction markets compared to traditional derivatives.",
+      "hashtags": [
+        "economy",
+        "investing",
+        "data",
+        "finance"
+      ],
+      "layout_hint": "sit_center",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "003",
+      "topic": "US Debt and Equity Reality",
+      "start_time_sec": 0.0,
+      "end_time_sec": 57.075010375976376,
+      "viral_hook": "when you compare debt to GDP, what you're comparing is a balance sheet item to an income statement item",
+      "virality_score": 0.75,
+      "transcript": "when you compare debt to GDP, what you're comparing is a balance sheet item to an income statement item, the equivalent of. Really, you should be comparing debt to equity. So equity is the black line, debt is the purple, and GDP is the red. And if we go to the next chart, you will see that while debt to GDP is above one here, the one ratio, you can see debt to equity is at 0.5. And actually it's very low by historical standards.",
+      "suggested_overlay_title": "Stop Comparing Debt to Gdp",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.8,
+        "hook_emotion": 0.7,
+        "catchy": 0.7
+      },
+      "reasoning": "This is a strong 'reframe' moment that takes a common economic metric and challenges its validity, which is highly engaging for viewers interested in macroeconomics.",
+      "hook_start_sec": null,
+      "hook_end_sec": null,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "render_spans": [],
+      "shorts_title": "The Debt to Equity Reframe",
+      "description": "Kathy Wood explains why debt-to-GDP is a flawed metric for the US economy.",
+      "hashtags": [
+        "economy",
+        "debt",
+        "finance",
+        "data"
+      ],
+      "layout_hint": "split_chart_person",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "004",
+      "topic": "The Dollar's Future",
+      "start_time_sec": 0.0,
+      "end_time_sec": 59.23500488281229,
+      "viral_hook": "last year, the narrative was the U.S. exceptionalism is dead, the dollar is in decline, and it's inexorable.",
+      "virality_score": 0.7,
+      "transcript": "last year, the narrative was the U.S. exceptionalism is dead, the dollar is in decline, and it's inexorable. It's going to continue. And you can see here, many people believe that the dollar will end the year as measured by the DXY at 1036. Now, that is very interesting to us because you can see on the next page where we are in the context of history. We are just below 99. So what Cal-She is suggesting is the people who are willing to trade or make a prediction, they actually think the dollar is going to go up. And that goes against conventional wisdom.",
+      "suggested_overlay_title": "The Dollar Is Not Dying",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.75,
+        "hook_emotion": 0.65,
+        "catchy": 0.65
+      },
+      "reasoning": "Contrarian takes on the strength of the dollar create immediate curiosity. It positions the speaker as having 'insider' insight.",
+      "hook_start_sec": null,
+      "hook_end_sec": null,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "render_spans": [],
+      "shorts_title": "Why the Dollar Could Rise",
+      "description": "Counter-intuitive analysis on why the US dollar might be stronger than the current narrative suggests.",
+      "hashtags": [
+        "dollar",
+        "economy",
+        "macro",
+        "investing"
+      ],
+      "layout_hint": "split_chart_person",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "005",
+      "topic": "AI and Productivity",
+      "start_time_sec": 0.0,
+      "end_time_sec": 50.39000854492133,
+      "viral_hook": "We think that productivity growth is going to soar in the next few years.",
+      "virality_score": 0.68,
+      "transcript": "We think that productivity growth is going to soar in the next few years. So here we ask the question, will non-farm productivity increase above 3% in any quarter? This is on a year-over-year basis, in any quarter in 26. And you can see there's a 42% probability. Well, we think the probability actually is much higher than that. And it's actually for a statistical reason. If you look at productivity today, you can see we're at roughly 2.5%. And you can also see, again, if you look across this chart, this is in the higher half of the history of this chart. So pretty strong. And as we have said in the know many times, we've been in a rolling recession. And this is what has happened.",
+      "suggested_overlay_title": "AI Will Skyrocket Productivity",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.75,
+        "hook_emotion": 0.65,
+        "catchy": 0.6
+      },
+      "reasoning": "AI-driven productivity is a trending topic. The bold prediction of 'soaring' growth is a strong hook.",
+      "hook_start_sec": null,
+      "hook_end_sec": null,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "render_spans": [],
+      "shorts_title": "AI & Productivity Boom",
+      "description": "Kathy Wood explains why she expects a massive surge in productivity growth driven by AI.",
+      "hashtags": [
+        "ai",
+        "productivity",
+        "economy",
+        "future"
+      ],
+      "layout_hint": "split_chart_person",
+      "needs_review": false,
+      "review_reason": ""
+    }
+  ]
+}

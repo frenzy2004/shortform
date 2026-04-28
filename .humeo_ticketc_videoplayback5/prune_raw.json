@@ -1,0 +1,39 @@
+{
+  "decisions": [
+    {
+      "clip_id": "001",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "reason": "The clip is well-paced and provides a clear, self-contained explanation of AI intelligence growth.",
+      "thought": "The clip starts directly on the topic and ends on a strong, concrete example of the technology's impact. No trimming is needed to maintain the narrative flow."
+    },
+    {
+      "clip_id": "002",
+      "trim_start_sec": 0.6,
+      "trim_end_sec": 0.0,
+      "reason": "Dropped 0.6s of conversational filler at the start.",
+      "thought": "Removing the 'I think exactly what you said' allows the clip to start immediately on the core economic premise, which is more engaging for a cold viewer."
+    },
+    {
+      "clip_id": "003",
+      "trim_start_sec": 22.4,
+      "trim_end_sec": 0.0,
+      "reason": "Dropped 22.4s of irrelevant political banter to focus on the economic bubble argument.",
+      "thought": "The initial segment about nuclear weapons and David Sachs is a tangent that distracts from the core topic of AI economic trends. Starting at 22.4s creates a much tighter, more focused clip."
+    },
+    {
+      "clip_id": "004",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "reason": "The clip is already concise and hits the hook immediately.",
+      "thought": "The opening is strong and the explanation of safety measures provides a good balance to the initial risk statement. No trimming required."
+    },
+    {
+      "clip_id": "005",
+      "trim_start_sec": 3.58,
+      "trim_end_sec": 0.0,
+      "reason": "Dropped 3.58s of conversational setup.",
+      "thought": "Starting directly with the definition of superintelligence as large corporations is more punchy than the conversational lead-in about previous discussions."
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,48,&H00FFFFFF,&H000000FF,&H00000000,&H70000000,-1,0,0,0,100,100,0,0,4,0,0,2,60,60,160,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.44,Default,,0,0,0,,a false positive It's
+Dialogue: 0,0:00:01.44,0:00:03.08,Default,,0,0,0,,almost like a And
+Dialogue: 0,0:00:03.08,0:00:03.78,Default,,0,0,0,,it's very scary when
+Dialogue: 0,0:00:03.78,0:00:04.42,Default,,0,0,0,,we cross that data
+Dialogue: 0,0:00:04.52,0:00:05.36,Default,,0,0,0,,because when we found
+Dialogue: 0,0:00:05.36,0:00:07.30,Default,,0,0,0,,our biggest significant markups
+Dialogue: 0,0:00:07.66,0:00:09.22,Default,,0,0,0,,our biggest outcomes that
+Dialogue: 0,0:00:09.22,0:00:10.84,Default,,0,0,0,,drive fund returns a
+Dialogue: 0,0:00:10.84,0:00:11.94,Default,,0,0,0,,lot of them were
+Dialogue: 0,0:00:11.94,0:00:13.28,Default,,0,0,0,,just ideas They start
+Dialogue: 0,0:00:13.28,0:00:14.34,Default,,0,0,0,,all had very little
+Dialogue: 0,0:00:14.34,0:00:15.72,Default,,0,0,0,,traction But what else
+Dialogue: 0,0:00:15.72,0:00:16.48,Default,,0,0,0,,did they have is
+Dialogue: 0,0:00:16.48,0:00:18.10,Default,,0,0,0,,that they had a
+Dialogue: 0,0:00:18.10,0:00:19.96,Default,,0,0,0,,business model that you
+Dialogue: 0,0:00:19.96,0:00:20.72,Default,,0,0,0,,can call them copycats
+Dialogue: 0,0:00:20.78,0:00:21.78,Default,,0,0,0,,but not essentially copycats
+Dialogue: 0,0:00:21.90,0:00:22.52,Default,,0,0,0,,but they already have
+Dialogue: 0,0:00:22.52,0:00:24.02,Default,,0,0,0,,a of references that
+Dialogue: 0,0:00:24.02,0:00:25.32,Default,,0,0,0,,sized up the that
+Dialogue: 0,0:00:25.32,0:00:26.08,Default,,0,0,0,,made it a more
+Dialogue: 0,0:00:26.08,0:00:26.98,Default,,0,0,0,,familiar of a business
+Dialogue: 0,0:00:26.98,0:00:28.44,Default,,0,0,0,,model So if you
+Dialogue: 0,0:00:28.44,0:00:30.06,Default,,0,0,0,,can get in at
+Dialogue: 0,0:00:30.06,0:00:31.66,Default,,0,0,0,,those types of companies
+Dialogue: 0,0:00:31.94,0:00:32.82,Default,,0,0,0,,patterns and that kind
+Dialogue: 0,0:00:32.82,0:00:33.82,Default,,0,0,0,,of how we invest
+Dialogue: 0,0:00:33.82,0:00:34.80,Default,,0,0,0,,in today we're not
+Dialogue: 0,0:00:34.80,0:00:36.40,Default,,0,0,0,,totally attracted by just
+Dialogue: 0,0:00:36.40,0:00:37.04,Default,,0,0,0,,traction alone We need
+Dialogue: 0,0:00:37.04,0:00:37.54,Default,,0,0,0,,to make sure that
+Dialogue: 0,0:00:37.54,0:00:38.58,Default,,0,0,0,,this traction is you
+Dialogue: 0,0:00:38.58,0:00:39.90,Default,,0,0,0,,to somewhere big I'll
+Dialogue: 0,0:00:39.90,0:00:40.56,Default,,0,0,0,,kind make it crispy
+Dialogue: 0,0:00:40.70,0:00:41.50,Default,,0,0,0,,the way of saying
+Dialogue: 0,0:00:41.50,0:00:42.32,Default,,0,0,0,,it is like this
+Dialogue: 0,0:00:42.99,0:00:44.40,Default,,0,0,0,,It's easy to find
+Dialogue: 0,0:00:44.40,0:00:45.58,Default,,0,0,0,,a good idea but
+Dialogue: 0,0:00:45.58,0:00:46.30,Default,,0,0,0,,it's a harder to
+Dialogue: 0,0:00:46.30,0:00:47.86,Default,,0,0,0,,a big idea Not
+Dialogue: 0,0:00:47.86,0:00:48.60,Default,,0,0,0,,all good ideas are
+Dialogue: 0,0:00:48.60,0:00:49.90,Default,,0,0,0,,big ideas right So
+Dialogue: 0,0:00:49.90,0:00:50.68,Default,,0,0,0,,that's kind of like
+Dialogue: 0,0:00:50.68,0:00:51.56,Default,,0,0,0,,one big lesson from
+Dialogue: 0,0:00:51.56,0:00:52.00,Default,,0,0,0,,our decade of

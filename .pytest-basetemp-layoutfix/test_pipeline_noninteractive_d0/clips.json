@@ -1,0 +1,26 @@
+{
+  "source_path": "",
+  "clips": [
+    {
+      "clip_id": "001",
+      "topic": "topic",
+      "start_time_sec": 0.0,
+      "end_time_sec": 60.0,
+      "viral_hook": "",
+      "virality_score": 0.9,
+      "transcript": "topic transcript",
+      "suggested_overlay_title": "",
+      "layout": null,
+      "hook_start_sec": null,
+      "hook_end_sec": null,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "shorts_title": "",
+      "description": "",
+      "hashtags": [],
+      "layout_hint": null,
+      "needs_review": false,
+      "review_reason": ""
+    }
+  ]
+}

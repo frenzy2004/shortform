@@ -1,0 +1,7 @@
+{
+  "layout_vision_cache_version": 3,
+  "transcript_sha256": "e92d51a9052a81b51296859a2eccc61c1197766c5a65784da1cc0570a356a9a5",
+  "clips_sha256": "7c65b863c0856fa5411285daa0c4a6973538534b3f671423fbfe7d9f8bbc4260",
+  "gemini_vision_model": "gemini-3.1-flash-lite-preview",
+  "llm_backend": "openrouter"
+}

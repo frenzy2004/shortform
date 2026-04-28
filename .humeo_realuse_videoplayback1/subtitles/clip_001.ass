@@ -1,0 +1,48 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,48,&H00FFFFFF,&H000000FF,&H00000000,&H70000000,-1,0,0,0,100,100,0,0,4,0,0,2,60,60,160,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:00.82,Default,,0,0,0,,even that took hours
+Dialogue: 0,0:00:01.66,0:00:03.34,Default,,0,0,0,,So I was at
+Dialogue: 0,0:00:03.34,0:00:05.80,Default,,0,0,0,,the typing indicator and
+Dialogue: 0,0:00:05.80,0:00:06.88,Default,,0,0,0,,then the responded
+Dialogue: 0,0:00:08.14,0:00:09.52,Default,,0,0,0,,And I very vividly
+Dialogue: 0,0:00:09.52,0:00:10.82,Default,,0,0,0,,remember the situation I
+Dialogue: 0,0:00:10.82,0:00:11.50,Default,,0,0,0,,was standing there and
+Dialogue: 0,0:00:11.50,0:00:13.08,Default,,0,0,0,,I was like how
+Dialogue: 0,0:00:13.08,0:00:13.78,Default,,0,0,0,,did you do that
+Dialogue: 0,0:00:15.10,0:00:16.72,Default,,0,0,0,,And the replied I'm
+Dialogue: 0,0:00:16.72,0:00:17.90,Default,,0,0,0,,not kidding you the
+Dialogue: 0,0:00:17.90,0:00:19.28,Default,,0,0,0,,mad lad figured it
+Dialogue: 0,0:00:19.28,0:00:20.42,Default,,0,0,0,,out on its own
+Dialogue: 0,0:00:20.42,0:00:22.70,Default,,0,0,0,,And then it
+Dialogue: 0,0:00:22.70,0:00:23.88,Default,,0,0,0,,walked me through every
+Dialogue: 0,0:00:23.88,0:00:24.94,Default,,0,0,0,,single step How it
+Dialogue: 0,0:00:24.94,0:00:26.16,Default,,0,0,0,,got a from me
+Dialogue: 0,0:00:26.50,0:00:27.20,Default,,0,0,0,,but there was no
+Dialogue: 0,0:00:27.20,0:00:29.02,Default,,0,0,0,,file ending So it
+Dialogue: 0,0:00:29.02,0:00:30.08,Default,,0,0,0,,the file It found
+Dialogue: 0,0:00:30.08,0:00:30.98,Default,,0,0,0,,that it was audio
+Dialogue: 0,0:00:31.14,0:00:32.28,Default,,0,0,0,,but a format so
+Dialogue: 0,0:00:32.28,0:00:33.70,Default,,0,0,0,,it it And then
+Dialogue: 0,0:00:33.70,0:00:34.82,Default,,0,0,0,,it was looking for
+Dialogue: 0,0:00:34.82,0:00:37.48,Default,,0,0,0,,something to the
+Dialogue: 0,0:00:37.62,0:00:38.36,Default,,0,0,0,,but I didn't have
+Dialogue: 0,0:00:38.36,0:00:39.80,Default,,0,0,0,,it But then it
+Dialogue: 0,0:00:39.80,0:00:40.86,Default,,0,0,0,,found an OpenAI key
+Dialogue: 0,0:00:41.14,0:00:41.84,Default,,0,0,0,,It sent the whole
+Dialogue: 0,0:00:41.84,0:00:42.99,Default,,0,0,0,,thing to the It
+Dialogue: 0,0:00:42.99,0:00:44.22,Default,,0,0,0,,got it back and
+Dialogue: 0,0:00:44.22,0:00:46.36,Default,,0,0,0,,then it All of
+Dialogue: 0,0:00:46.36,0:00:48.34,Default,,0,0,0,,that in nine seconds
+Dialogue: 0,0:00:48.34,0:00:49.98,Default,,0,0,0,,Can you imagine

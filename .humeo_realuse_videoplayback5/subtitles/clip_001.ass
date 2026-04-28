@@ -1,0 +1,45 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,48,&H00FFFFFF,&H000000FF,&H00000000,&H70000000,-1,0,0,0,100,100,0,0,4,0,0,2,60,60,160,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.34,Default,,0,0,0,,the amount of power
+Dialogue: 0,0:00:01.34,0:00:02.50,Default,,0,0,0,,would double every 12
+Dialogue: 0,0:00:02.50,0:00:03.42,Default,,0,0,0,,months or every 18
+Dialogue: 0,0:00:03.42,0:00:05.04,Default,,0,0,0,,months We have a
+Dialogue: 0,0:00:05.04,0:00:06.34,Default,,0,0,0,,Moore's law like law
+Dialogue: 0,0:00:06.68,0:00:07.98,Default,,0,0,0,,except it's for intelligence
+Dialogue: 0,0:00:07.98,0:00:09.88,Default,,0,0,0,,itself for the cognitive
+Dialogue: 0,0:00:09.88,0:00:11.64,Default,,0,0,0,,ability of the across
+Dialogue: 0,0:00:11.64,0:00:13.40,Default,,0,0,0,,many tasks So what
+Dialogue: 0,0:00:13.40,0:00:14.86,Default,,0,0,0,,we are seeing is
+Dialogue: 0,0:00:14.86,0:00:16.82,Default,,0,0,0,,that that ability is
+Dialogue: 0,0:00:18.16,0:00:18.92,Default,,0,0,0,,depending on how you
+Dialogue: 0,0:00:18.92,0:00:21.26,Default,,0,0,0,,measure it every four
+Dialogue: 0,0:00:21.26,0:00:23.58,Default,,0,0,0,,to 12 months So
+Dialogue: 0,0:00:23.58,0:00:25.38,Default,,0,0,0,,we're just the of
+Dialogue: 0,0:00:25.38,0:00:26.34,Default,,0,0,0,,cognitive ability and where
+Dialogue: 0,0:00:26.34,0:00:27.46,Default,,0,0,0,,we are now is
+Dialogue: 0,0:00:27.46,0:00:28.86,Default,,0,0,0,,to take coding as
+Dialogue: 0,0:00:28.86,0:00:30.04,Default,,0,0,0,,one example that's been
+Dialogue: 0,0:00:30.04,0:00:31.92,Default,,0,0,0,,exploding really fast over
+Dialogue: 0,0:00:31.92,0:00:33.14,Default,,0,0,0,,the last year or
+Dialogue: 0,0:00:33.14,0:00:34.90,Default,,0,0,0,,two I have engineers
+Dialogue: 0,0:00:35.04,0:00:37.12,Default,,0,0,0,,in the team that
+Dialogue: 0,0:00:37.12,0:00:38.40,Default,,0,0,0,,one of our lead
+Dialogue: 0,0:00:38.40,0:00:39.82,Default,,0,0,0,,products Code which is
+Dialogue: 0,0:00:39.82,0:00:40.38,Default,,0,0,0,,the way you use
+Dialogue: 0,0:00:40.38,0:00:41.76,Default,,0,0,0,,our for coding
+Dialogue: 0,0:00:42.68,0:00:44.90,Default,,0,0,0,,He says he hasn't
+Dialogue: 0,0:00:44.90,0:00:46.52,Default,,0,0,0,,written any code in
+Dialogue: 0,0:00:46.52,0:00:49.22,Default,,0,0,0,,the last two It's
+Dialogue: 0,0:00:49.22,0:00:50.00,Default,,0,0,0,,all Claude He's

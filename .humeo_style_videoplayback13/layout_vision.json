@@ -1,0 +1,104 @@
+{
+  "clips": {
+    "001": {
+      "instruction": {
+        "clip_id": "001",
+        "layout": "sit_center",
+        "zoom": 1.0,
+        "person_x_norm": 0.46099999999999997,
+        "person_tracking": [
+          {
+            "t_sec": 0.0,
+            "x_norm": 0.49502228441127694
+          },
+          {
+            "t_sec": 5.6056,
+            "x_norm": 0.42662576053889617
+          },
+          {
+            "t_sec": 11.2112,
+            "x_norm": 0.42662576053889617
+          },
+          {
+            "t_sec": 16.8168,
+            "x_norm": 0.42662576053889617
+          },
+          {
+            "t_sec": 22.4224,
+            "x_norm": 0.42662576053889617
+          },
+          {
+            "t_sec": 28.028000000000002,
+            "x_norm": 0.42662576053889617
+          },
+          {
+            "t_sec": 33.6336,
+            "x_norm": 0.39664360663334547
+          },
+          {
+            "t_sec": 39.239200000000004,
+            "x_norm": 0.39664360663334547
+          },
+          {
+            "t_sec": 44.8448,
+            "x_norm": 0.39664360663334547
+          },
+          {
+            "t_sec": 50.4504,
+            "x_norm": 0.39664360663334547
+          },
+          {
+            "t_sec": 56.056000000000004,
+            "x_norm": 0.39664360663334547
+          },
+          {
+            "t_sec": 56.15199633788984,
+            "x_norm": 0.39664360663334547
+          }
+        ],
+        "chart_x_norm": 0.0,
+        "focus_stack_order": "chart_then_person",
+        "split_chart_region": null,
+        "split_person_region": null,
+        "split_second_chart_region": null,
+        "split_second_person_region": null,
+        "top_band_ratio": 0.5
+      },
+      "raw": {
+        "layout": "sit_center",
+        "person_bbox": {
+          "x1": 0.254,
+          "y1": 0.062,
+          "x2": 0.754,
+          "y2": 1.0
+        },
+        "face_bbox": {
+          "x1": 0.352,
+          "y1": 0.113,
+          "x2": 0.57,
+          "y2": 0.45
+        },
+        "chart_bbox": null,
+        "second_person_bbox": null,
+        "second_face_bbox": null,
+        "second_chart_bbox": null,
+        "reason": "A single speaker is centrally framed in a seated interview or podcast setting.",
+        "segmentation_tracking": {
+          "provider": "replicate",
+          "model": "meta/sam-2-video:2d7219877ca847f463d749d9b224e62f7b078fe035d60a74b58889b455d5cbad",
+          "seed_point_px": [
+            295,
+            101
+          ],
+          "seed_frame": 841,
+          "prompt_frames": [
+            0,
+            841
+          ],
+          "output_frame_interval": 168,
+          "mask_count": 11
+        }
+      }
+    }
+  }
+}

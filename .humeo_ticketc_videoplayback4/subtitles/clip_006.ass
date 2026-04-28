@@ -1,0 +1,70 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,48,&H00FFFFFF,&H000000FF,&H00000000,&H70000000,-1,0,0,0,100,100,0,0,4,0,0,2,60,60,160,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:00.76,Default,,0,0,0,,This time a year
+Dialogue: 0,0:00:00.76,0:00:02.04,Default,,0,0,0,,ago we just had
+Dialogue: 0,0:00:02.04,0:00:02.92,Default,,0,0,0,,the deep seek moment
+Dialogue: 0,0:00:02.92,0:00:04.12,Default,,0,0,0,,and everyone was incredibly
+Dialogue: 0,0:00:04.12,0:00:05.12,Default,,0,0,0,,excited about what happened
+Dialogue: 0,0:00:05.12,0:00:06.26,Default,,0,0,0,,there And there was
+Dialogue: 0,0:00:06.26,0:00:08.92,Default,,0,0,0,,still a you that
+Dialogue: 0,0:00:08.92,0:00:10.18,Default,,0,0,0,,Google DeepMind was kind
+Dialogue: 0,0:00:10.18,0:00:11.72,Default,,0,0,0,,of lagging OpenAI I
+Dialogue: 0,0:00:11.72,0:00:12.78,Default,,0,0,0,,would say that now
+Dialogue: 0,0:00:12.78,0:00:14.00,Default,,0,0,0,,it's looking quite different
+Dialogue: 0,0:00:14.06,0:00:15.02,Default,,0,0,0,,I they've declared code
+Dialogue: 0,0:00:15.02,0:00:16.66,Default,,0,0,0,,red right It's been
+Dialogue: 0,0:00:16.66,0:00:18.04,Default,,0,0,0,,quite a year So
+Dialogue: 0,0:00:18.04,0:00:20.46,Default,,0,0,0,,talk me through what
+Dialogue: 0,0:00:20.46,0:00:21.78,Default,,0,0,0,,specifically you've been surprised
+Dialogue: 0,0:00:21.78,0:00:22.98,Default,,0,0,0,,by and how well
+Dialogue: 0,0:00:22.98,0:00:23.92,Default,,0,0,0,,you've done this year
+Dialogue: 0,0:00:23.92,0:00:24.66,Default,,0,0,0,,and whether you think
+Dialogue: 0,0:00:24.66,0:00:24.98,Default,,0,0,0,,And then I'm to
+Dialogue: 0,0:00:24.98,0:00:25.60,Default,,0,0,0,,ask you about the
+Dialogue: 0,0:00:25.60,0:00:27.06,Default,,0,0,0,,line up Well look
+Dialogue: 0,0:00:27.08,0:00:27.98,Default,,0,0,0,,I think we were
+Dialogue: 0,0:00:27.98,0:00:28.74,Default,,0,0,0,,I was always very
+Dialogue: 0,0:00:28.74,0:00:31.00,Default,,0,0,0,,confident we would get
+Dialogue: 0,0:00:31.00,0:00:31.84,Default,,0,0,0,,back to sort the
+Dialogue: 0,0:00:31.84,0:00:33.16,Default,,0,0,0,,top of the leaderboards
+Dialogue: 0,0:00:33.16,0:00:34.44,Default,,0,0,0,,and the SOTA type
+Dialogue: 0,0:00:34.44,0:00:36.04,Default,,0,0,0,,of across the because
+Dialogue: 0,0:00:36.04,0:00:37.16,Default,,0,0,0,,I think we've always
+Dialogue: 0,0:00:37.16,0:00:38.92,Default,,0,0,0,,had the deepest and
+Dialogue: 0,0:00:38.92,0:00:40.04,Default,,0,0,0,,broadest research bench And
+Dialogue: 0,0:00:40.04,0:00:41.08,Default,,0,0,0,,it was about kind
+Dialogue: 0,0:00:41.08,0:00:41.96,Default,,0,0,0,,marshalling that all together
+Dialogue: 0,0:00:41.96,0:00:44.30,Default,,0,0,0,,and getting the
+Dialogue: 0,0:00:44.30,0:00:45.22,Default,,0,0,0,,and focus and the
+Dialogue: 0,0:00:45.22,0:00:46.26,Default,,0,0,0,,kind start up mentality
+Dialogue: 0,0:00:46.26,0:00:47.20,Default,,0,0,0,,back to the whole
+Dialogue: 0,0:00:47.20,0:00:48.68,Default,,0,0,0,,organisation And it's been
+Dialogue: 0,0:00:48.68,0:00:49.78,Default,,0,0,0,,a lot of work
+Dialogue: 0,0:00:50.50,0:00:52.20,Default,,0,0,0,,but I think we're
+Dialogue: 0,0:00:52.20,0:00:52.68,Default,,0,0,0,,still a lot of
+Dialogue: 0,0:00:52.68,0:00:53.98,Default,,0,0,0,,work to do but
+Dialogue: 0,0:00:53.98,0:00:54.46,Default,,0,0,0,,I think you can
+Dialogue: 0,0:00:54.46,0:00:56.58,Default,,0,0,0,,start seeing the you
+Dialogue: 0,0:00:56.64,0:00:58.22,Default,,0,0,0,,the kind of the
+Dialogue: 0,0:00:58.22,0:00:59.20,Default,,0,0,0,,progress that's been made
+Dialogue: 0,0:00:59.20,0:01:00.02,Default,,0,0,0,,in both the models
+Dialogue: 0,0:01:00.02,0:01:01.04,Default,,0,0,0,,with Gemini 3 but
+Dialogue: 0,0:01:01.04,0:01:02.86,Default,,0,0,0,,also on the product
+Dialogue: 0,0:01:02.86,0:01:03.78,Default,,0,0,0,,side with Gemini app
+Dialogue: 0,0:01:03.78,0:01:05.90,Default,,0,0,0,,getting increasing market share
+Dialogue: 0,0:01:05.98,0:01:07.20,Default,,0,0,0,,So I feel like
+Dialogue: 0,0:01:07.20,0:01:08.60,Default,,0,0,0,,we're making great progress
+Dialogue: 0,0:01:09.00,0:01:09.98,Default,,0,0,0,,but there's a tonne
+Dialogue: 0,0:01:09.98,0:01:10.76,Default,,0,0,0,,more work to do

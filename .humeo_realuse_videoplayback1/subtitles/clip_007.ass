@@ -1,0 +1,48 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,48,&H00FFFFFF,&H000000FF,&H00000000,&H70000000,-1,0,0,0,100,100,0,0,4,0,0,2,60,60,160,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.30,Default,,0,0,0,,Remember this agent
+Dialogue: 0,0:00:02.44,0:00:04.92,Default,,0,0,0,,by can do anything
+Dialogue: 0,0:00:04.92,0:00:06.30,Default,,0,0,0,,that you can do
+Dialogue: 0,0:00:06.30,0:00:08.82,Default,,0,0,0,,on your computer So
+Dialogue: 0,0:00:08.82,0:00:09.92,Default,,0,0,0,,obviously I put it
+Dialogue: 0,0:00:09.92,0:00:10.80,Default,,0,0,0,,in a public Discord
+Dialogue: 0,0:00:10.94,0:00:12.18,Default,,0,0,0,,and I random people
+Dialogue: 0,0:00:14.28,0:00:16.08,Default,,0,0,0,,And I was looking
+Dialogue: 0,0:00:16.08,0:00:16.84,Default,,0,0,0,,at it the whole
+Dialogue: 0,0:00:16.84,0:00:18.06,Default,,0,0,0,,night People were talking
+Dialogue: 0,0:00:18.06,0:00:18.84,Default,,0,0,0,,with it People were
+Dialogue: 0,0:00:18.84,0:00:19.74,Default,,0,0,0,,having fun with it
+Dialogue: 0,0:00:19.98,0:00:21.56,Default,,0,0,0,,People tried to it
+Dialogue: 0,0:00:22.30,0:00:23.66,Default,,0,0,0,,And when my were
+Dialogue: 0,0:00:24.72,0:00:26.40,Default,,0,0,0,,like falling off almost
+Dialogue: 0,0:00:28.80,0:00:30.82,Default,,0,0,0,,I exited the process
+Dialogue: 0,0:00:31.14,0:00:32.30,Default,,0,0,0,,and I to
+Dialogue: 0,0:00:35.56,0:00:37.20,Default,,0,0,0,,Though I forgot I
+Dialogue: 0,0:00:37.20,0:00:37.96,Default,,0,0,0,,built a system to
+Dialogue: 0,0:00:37.96,0:00:40.22,Default,,0,0,0,,be resilient So
+Dialogue: 0,0:00:40.22,0:00:41.22,Default,,0,0,0,,while I was walking
+Dialogue: 0,0:00:41.22,0:00:42.58,Default,,0,0,0,,to the bedroom the
+Dialogue: 0,0:00:42.58,0:00:44.00,Default,,0,0,0,,happily booted up again
+Dialogue: 0,0:00:44.38,0:00:45.66,Default,,0,0,0,,and talked to everyone
+Dialogue: 0,0:00:45.66,0:00:48.26,Default,,0,0,0,,in the world The
+Dialogue: 0,0:00:48.26,0:00:49.66,Default,,0,0,0,,next morning woke up
+Dialogue: 0,0:00:50.38,0:00:52.94,Default,,0,0,0,,Over 800 messages I
+Dialogue: 0,0:00:52.94,0:00:55.02,Default,,0,0,0,,panicked I pulled the
+Dialogue: 0,0:00:55.56,0:00:56.64,Default,,0,0,0,,I read every single
+Dialogue: 0,0:00:56.64,0:00:58.90,Default,,0,0,0,,message just
+Dialogue: 0,0:00:58.90,0:01:00.24,Default,,0,0,0,,to see if the
+Dialogue: 0,0:01:00.24,0:01:01.36,Default,,0,0,0,,leaked my private life
+Dialogue: 0,0:01:03.14,0:01:05.44,Default,,0,0,0,,Nothing happened But
+Dialogue: 0,0:01:05.44,0:01:06.00,Default,,0,0,0,,it could have

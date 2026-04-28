@@ -1,0 +1,39 @@
+{
+  "decisions": [
+    {
+      "clip_id": "001",
+      "trim_start_sec": 2.0,
+      "trim_end_sec": 0.0,
+      "reason": "Removed 2s of conversational filler to start directly on the hunting metaphor.",
+      "thought": "The clip starts with a weak 'He told me this' which adds no value. Starting at 2.0s with the hunting premise is much stronger and sets the stage immediately."
+    },
+    {
+      "clip_id": "002",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "reason": "No trimming required as the setup flows directly into the hook.",
+      "thought": "The intro provides necessary context for why traction is being discussed, and the hook is well-positioned within the flow."
+    },
+    {
+      "clip_id": "003",
+      "trim_start_sec": 1.42,
+      "trim_end_sec": 0.0,
+      "reason": "Removed the conversational preamble to start directly on the eFishery case study.",
+      "thought": "The first 1.42s is just filler about the show. Starting at 1.42s immediately introduces the subject matter."
+    },
+    {
+      "clip_id": "004",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "reason": "No trimming required as the narrative builds effectively to the hook.",
+      "thought": "The lead-in provides the necessary context about the team's field work, which makes the 'no desktop' hook land with more impact."
+    },
+    {
+      "clip_id": "005",
+      "trim_start_sec": 3.5,
+      "trim_end_sec": 0.0,
+      "reason": "Removed 3.5s of conversational filler to start on the core thesis.",
+      "thought": "The opening lines are generic podcast filler. Starting at 3.5s with 'Money is just a means to an end' is a much more compelling hook."
+    }
+  ]
+}

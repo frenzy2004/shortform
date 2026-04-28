@@ -1,0 +1,39 @@
+{
+  "hooks": [
+    {
+      "clip_id": "001",
+      "hook_start_sec": 54.08,
+      "hook_end_sec": 59.86,
+      "hook_text": "We do not think we're in the equivalent of the tech and telecom bubble.",
+      "reason": "This is a strong, contrarian claim that hooks the viewer by directly addressing a common fear, whereas the clip's opening is weak as it refers to an unseen chart."
+    },
+    {
+      "clip_id": "002",
+      "hook_start_sec": 61.48,
+      "hook_end_sec": 65.68,
+      "hook_text": "And he spelled it P-R-O-P-H-E-T.",
+      "reason": "This line is a powerful pattern-interrupt that creates immediate curiosity about who \"he\" is and what \"it\" refers to, making it a much stronger hook than the slower story setup at the beginning of the clip."
+    },
+    {
+      "clip_id": "003",
+      "hook_start_sec": 15.24,
+      "hook_end_sec": 17.68,
+      "hook_text": "the big three have been identified.",
+      "reason": "This is a bold, declarative claim that resolves a major uncertainty in its niche, creating immediate curiosity about who the \"big three\" are."
+    },
+    {
+      "clip_id": "004",
+      "hook_start_sec": 53.6,
+      "hook_end_sec": 59.06,
+      "hook_text": "Back in the '90s, we didn't get the cloud even until 2006.",
+      "reason": "This is a specific, surprising historical fact that creates intrigue and implies a larger argument, while the stronger narrative opening of the clip violates the 7-second length constraint."
+    },
+    {
+      "clip_id": "005",
+      "hook_start_sec": 51.14,
+      "hook_end_sec": 56.6,
+      "hook_text": "We didn't realize how much, how soon.",
+      "reason": "This sentence acts as a powerful curiosity hook, compelling the viewer to find out what the speaker underestimated, and it is a complete, self-contained thought unlike other powerful phrases in the clip."
+    }
+  ]
+}

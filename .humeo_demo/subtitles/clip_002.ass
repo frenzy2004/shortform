@@ -1,0 +1,63 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,48,&H00FFFFFF,&H000000FF,&H00000000,&H70000000,-1,0,0,0,100,100,0,0,4,0,0,2,60,60,160,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.31,Default,,0,0,0,,Like is just a
+Dialogue: 0,0:00:01.31,0:00:01.99,Default,,0,0,0,,means to an end
+Dialogue: 0,0:00:02.47,0:00:03.69,Default,,0,0,0,,We are at a
+Dialogue: 0,0:00:03.69,0:00:05.21,Default,,0,0,0,,of like humanity's evolution
+Dialogue: 0,0:00:05.21,0:00:07.51,Default,,0,0,0,,now that technology is
+Dialogue: 0,0:00:07.51,0:00:09.45,Default,,0,0,0,,mainstream right Any age
+Dialogue: 0,0:00:09.45,0:00:11.33,Default,,0,0,0,,group mother grandmother everyone
+Dialogue: 0,0:00:11.33,0:00:12.55,Default,,0,0,0,,is connected to technology
+Dialogue: 0,0:00:12.55,0:00:14.65,Default,,0,0,0,,and seeing like productivity
+Dialogue: 0,0:00:14.65,0:00:16.15,Default,,0,0,0,,yield right So to
+Dialogue: 0,0:00:16.15,0:00:17.61,Default,,0,0,0,,the extent that Southeast
+Dialogue: 0,0:00:17.61,0:00:18.33,Default,,0,0,0,,Asia all of us
+Dialogue: 0,0:00:18.33,0:00:19.53,Default,,0,0,0,,can actually take these
+Dialogue: 0,0:00:19.53,0:00:21.01,Default,,0,0,0,,weapons of productivity these
+Dialogue: 0,0:00:21.01,0:00:22.35,Default,,0,0,0,,of creation and kind
+Dialogue: 0,0:00:22.35,0:00:23.09,Default,,0,0,0,,of arm everyone from
+Dialogue: 0,0:00:23.09,0:00:23.87,Default,,0,0,0,,the villages all the
+Dialogue: 0,0:00:23.87,0:00:25.15,Default,,0,0,0,,way to the you
+Dialogue: 0,0:00:25.15,0:00:27.39,Default,,0,0,0,,can see a time
+Dialogue: 0,0:00:27.39,0:00:28.77,Default,,0,0,0,,where capitalism is actually
+Dialogue: 0,0:00:28.77,0:00:29.43,Default,,0,0,0,,doing more good than
+Dialogue: 0,0:00:29.43,0:00:30.83,Default,,0,0,0,,ever right So I
+Dialogue: 0,0:00:30.83,0:00:31.63,Default,,0,0,0,,really appreciate all of
+Dialogue: 0,0:00:31.63,0:00:32.15,Default,,0,0,0,,you having me on
+Dialogue: 0,0:00:32.15,0:00:32.91,Default,,0,0,0,,the show and like
+Dialogue: 0,0:00:32.91,0:00:33.53,Default,,0,0,0,,talking a about these
+Dialogue: 0,0:00:33.53,0:00:33.95,Default,,0,0,0,,things but I just
+Dialogue: 0,0:00:33.95,0:00:34.61,Default,,0,0,0,,want to leave like
+Dialogue: 0,0:00:34.61,0:00:35.53,Default,,0,0,0,,the with that thought
+Dialogue: 0,0:00:35.59,0:00:36.45,Default,,0,0,0,,right Like we're not
+Dialogue: 0,0:00:36.45,0:00:37.77,Default,,0,0,0,,here just to kind
+Dialogue: 0,0:00:37.77,0:00:38.55,Default,,0,0,0,,and make billion dollar
+Dialogue: 0,0:00:38.69,0:00:39.85,Default,,0,0,0,,that's just besides the
+Dialogue: 0,0:00:40.27,0:00:41.31,Default,,0,0,0,,Behind every single funding
+Dialogue: 0,0:00:41.31,0:00:42.25,Default,,0,0,0,,round there are like
+Dialogue: 0,0:00:42.25,0:00:43.59,Default,,0,0,0,,and billions of beneficiaries
+Dialogue: 0,0:00:43.59,0:00:44.65,Default,,0,0,0,,Like even a company
+Dialogue: 0,0:00:44.65,0:00:45.65,Default,,0,0,0,,like is so many
+Dialogue: 0,0:00:45.65,0:00:46.91,Default,,0,0,0,,drivers and so many
+Dialogue: 0,0:00:46.91,0:00:47.81,Default,,0,0,0,,folks who are in
+Dialogue: 0,0:00:47.81,0:00:48.63,Default,,0,0,0,,gig economy and so
+Dialogue: 0,0:00:48.63,0:00:50.59,Default,,0,0,0,,much additional income So
+Dialogue: 0,0:00:50.59,0:00:51.65,Default,,0,0,0,,if we can make
+Dialogue: 0,0:00:51.65,0:00:52.75,Default,,0,0,0,,this new economy the
+Dialogue: 0,0:00:52.75,0:00:54.09,Default,,0,0,0,,most inclusive economy the
+Dialogue: 0,0:00:54.09,0:00:54.65,Default,,0,0,0,,world has ever seen
+Dialogue: 0,0:00:54.77,0:00:55.27,Default,,0,0,0,,like that's the job
+Dialogue: 0,0:00:55.27,0:00:55.77,Default,,0,0,0,,that we need to
+Dialogue: 0,0:00:55.77,0:00:56.07,Default,,0,0,0,,do

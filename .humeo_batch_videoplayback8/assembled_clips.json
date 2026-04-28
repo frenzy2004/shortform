@@ -1,0 +1,178 @@
+{
+  "source_path": "",
+  "clips": [
+    {
+      "clip_id": "001",
+      "topic": "Advice for young entrepreneurs using AI",
+      "start_time_sec": 0.0,
+      "end_time_sec": 47.97899999999947,
+      "viral_hook": "The unemployment rate for 16 to 24 year olds has moved to 12%. And what is that saying? That's saying that entry-level jobs are not being created the way they used to be.",
+      "virality_score": 0.875,
+      "transcript": "The unemployment rate for 16 to 24 year olds- Mm-hmm. Mm-hmm, right has moved to 12%. 12%, big increase. And what is that saying? That's saying that entry-level jobs are not being created the way they used to be. To those people, I say, you must have in your mind an idea for a new business, something that frustrates you, an unmet need. Well, now you can go to ChatGPT, you can go to Grok, and you can have an assistant help you build out that business. Just interview for jobs, but also think about new business ideas. I think we're going to see entrepreneurial explosion here.",
+      "suggested_overlay_title": "Youth Unemployment Is 12%-Here's the Solution",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.9,
+        "hook_emotion": 0.9,
+        "catchy": 0.8
+      },
+      "reasoning": "This clip scores extremely high because it addresses a high-stakes, emotional problem (youth unemployment) with a concrete, empowering, and modern solution (using AI to start a business). The hook is a shocking statistic, and the message is highly actionable.",
+      "hook_start_sec": null,
+      "hook_end_sec": null,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "render_spans": [],
+      "shorts_title": "Cathie Wood's advice for young people facing a tough job market.",
+      "description": "With youth unemployment rising to 12%, Cathie Wood explains why this is the perfect time for young people to become entrepreneurs by leveraging AI tools like ChatGPT to build new businesses.",
+      "hashtags": [
+        "entrepreneurship",
+        "ai",
+        "chatgpt",
+        "careeradvice",
+        "cathiewood"
+      ],
+      "layout_hint": "zoom_call_center",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "002",
+      "topic": "Prediction of 7% annual GDP growth",
+      "start_time_sec": 0.0,
+      "end_time_sec": 59.39999999999998,
+      "viral_hook": "productivity growth will accelerate to the 4% to 6% range and be sustained there.",
+      "virality_score": 0.8325,
+      "transcript": "also that productivity growth will accelerate to the 4% to 6% range and be sustained there. Normally, we see a cyclical peak around there and then it falls back. We think it will be sustained, and we think that by the end of this decade, real GDP growth could be averaging more than 7% per year. Wow. And I know that sounds shocking- Yeah given that we've been at 3% for 125 years. But it is the history associated with technology revolutions, a step change upIn GDP growth The productivity increase, the GDP growth that you are forecasting as a result of these disruptive technologies, to what extent is that the result of fewer people doing more? My question is about job losses as a result of this technology, because if everything that investors are betting on when it comes to this AI revolution comes true, it means that companies aren't going to need as many people to do a lot more. What does that look like?",
+      "suggested_overlay_title": "Her Prediction for the Economy Is",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.9,
+        "hook_emotion": 0.85,
+        "catchy": 0.7
+      },
+      "reasoning": "The core message is a single, massive, and almost unbelievable number (7% GDP growth) which creates immediate shock and awe. The hook is the number itself, and the clip provides historical context that makes the claim even more dramatic. The host's 'Wow' reaction amplifies the effect.",
+      "hook_start_sec": null,
+      "hook_end_sec": null,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "render_spans": [],
+      "shorts_title": "Cathie Wood predicts GDP will average 7% growth per year.",
+      "description": "Cathie Wood makes a shocking prediction that sustained productivity growth from new technologies will push real GDP growth to average over 7% per year by the end of the decade, a massive leap from the historical 3% average.",
+      "hashtags": [
+        "economy",
+        "gdp",
+        "investing",
+        "technology",
+        "cathiewood",
+        "prediction"
+      ],
+      "layout_hint": "zoom_call_center",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "003",
+      "topic": "Tesla's $26 trillion humanoid robot opportunity",
+      "start_time_sec": 0.0,
+      "end_time_sec": 65.27999999999918,
+      "viral_hook": "Without a doubt. We've always said Tesla is not an auto company.",
+      "virality_score": 0.84,
+      "transcript": "Without a doubt. We've always said Tesla is not an auto company. It is actually the convergence of three of the platforms I mentioned, so robotics, energy storage, and AI. Each one of those technologies has its own S-curve, and now they're feeding each other, and we're seeing that in robotaxis. Robotaxis, we believe, will account for 90% of Tesla's valuation by the end of the decade. We're in print at 2,600. That includes nothing for Optimus robots. And we're beginning to understand how quickly Tesla is moving on that front. Why? Mm. Because it's the convergence of the same three technologies- Mm-hmm robotics, energy storage, and AI. So I think that price target, obviously, if Optimus is successful, and we believe it will be. We think that humanoid robots is evolving into a $26 trillion opportunity, half in the home, half in manufacturing plants.",
+      "suggested_overlay_title": "Tesla Isn't a Car Company. It's",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.9,
+        "hook_emotion": 0.8,
+        "catchy": 0.8
+      },
+      "reasoning": "The clip has a powerful, contrarian hook that reframes a well-known company. The message contains huge, specific numbers ($26 trillion) and a bold prediction (90% of valuation from robotaxis), making it highly shareable and provocative.",
+      "hook_start_sec": null,
+      "hook_end_sec": null,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "render_spans": [],
+      "shorts_title": "Why Cathie Wood says Tesla's real value is in robots, not cars.",
+      "description": "Cathie Wood explains her thesis that Tesla is not an auto company, but a convergence of robotics, AI, and energy storage. She predicts robotaxis will be 90% of its value and sees a $26 trillion market for humanoid robots like Optimus.",
+      "hashtags": [
+        "tesla",
+        "cathiewood",
+        "elonmusk",
+        "optimus",
+        "robotics",
+        "ai"
+      ],
+      "layout_hint": "zoom_call_center",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "004",
+      "topic": "Cathie Wood's top stock ideas for 2026",
+      "start_time_sec": 0.0,
+      "end_time_sec": 46.65999999999951,
+      "viral_hook": "Just 30 seconds, though, what's your best idea, you think, for 2026 at this point?",
+      "virality_score": 0.775,
+      "transcript": "of the companies that are in that. Just 30 seconds, though, what's your best idea, you think, for 2026 at this point? And I know there's a lot in your research, but is there a best idea or narrative? Just quickly, if you could. Well, so the top three stocks in our flagship are Tesla. We think it has miles to go. We do take profits from time to time, but it could break out here in a big way as more and more analysts do their homework on robotaxis. Mm. Crispr Therapeutics has moved into the second position. That company is curing sickle cell disease and beta thalassemia and has its eyes set on not just rare diseases, but curing the bad cholesterol problem, especially for those who have hereditary issues in that realm. That could be an enormous market, and I don't think anyone is doing the modeling work there the way we are. I love it. All right. Hopefully,",
+      "suggested_overlay_title": "Cathie Wood's Top Stock Ideas For",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.8,
+        "hook_emotion": 0.8,
+        "catchy": 0.7
+      },
+      "reasoning": "Directly answering 'what's your best idea' is always a strong hook. The clip provides specific, actionable stock names and a compelling, easy-to-understand thesis for Crispr ('curing sickle cell disease'), creating high value for an investment-focused audience.",
+      "hook_start_sec": null,
+      "hook_end_sec": null,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "render_spans": [],
+      "shorts_title": "Cathie Wood reveals her top stock ideas, including one that's curing disease.",
+      "description": "Asked for her best idea for 2026, Cathie Wood names Tesla and highlights Crispr Therapeutics, a company she believes is not only curing diseases like sickle cell but also targeting the enormous market for high cholesterol.",
+      "hashtags": [
+        "investing",
+        "stocks",
+        "cathiewood",
+        "tesla",
+        "crispr",
+        "biotech"
+      ],
+      "layout_hint": "zoom_call_center",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "005",
+      "topic": "Creating new worlds in space and digital realms",
+      "start_time_sec": 0.0,
+      "end_time_sec": 50.16800000000018,
+      "viral_hook": "we're seeing new worlds being created, and by that I mean most of us think about Earth. But now, we're moving into space.",
+      "virality_score": 0.74,
+      "transcript": "is we're seeing new worlds being created, and by that I mean most of us think about Earth. But now, we're moving into space. Even data centers, we think, Elon leading that charge, will start moving into space, and we won't have the \"not in my backyard\" and the bureaucracy associated with data centers. There's going to be huge job creation around the space exploration and all of the opportunities out there. And then the other one, and you'll find this in our digital assets section of Big Ideas, is the digital world. Immutable private property rights. Mm-hmm. We know from economic history, the best way to lift people and countries out of poverty is with private property rights that are immutable. Well, that is now moving into the digital world for the first time, thanks to blockchain technology.",
+      "suggested_overlay_title": "We're Moving Beyond Earth and Creating",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.8,
+        "hook_emotion": 0.7,
+        "catchy": 0.7
+      },
+      "reasoning": "The hook 'we're seeing new worlds being created' is highly evocative and creates a sense of awe. The message combines two major futuristic themes—space and blockchain—into a single grand vision, which is conceptually impressive and thought-provoking.",
+      "hook_start_sec": null,
+      "hook_end_sec": null,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "render_spans": [],
+      "shorts_title": "Cathie Wood on the next frontiers: Space and the Digital World.",
+      "description": "Cathie Wood shares a futuristic vision where new worlds are being created, from moving data centers into space to establishing immutable private property rights in the digital world through blockchain technology.",
+      "hashtags": [
+        "futuretech",
+        "spaceexploration",
+        "blockchain",
+        "digitalassets",
+        "cathiewood"
+      ],
+      "layout_hint": "zoom_call_center",
+      "needs_review": false,
+      "review_reason": ""
+    }
+  ]
+}

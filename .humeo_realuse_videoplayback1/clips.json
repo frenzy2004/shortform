@@ -1,0 +1,165 @@
+{
+  "source_path": "",
+  "clips": [
+    {
+      "clip_id": "001",
+      "topic": "The AI Agent Breakthrough",
+      "start_time_sec": 80.7,
+      "end_time_sec": 151.7,
+      "viral_hook": "And I had what I can only describe as a holy shit moment.",
+      "virality_score": 0.885,
+      "transcript": "And I had what I can only describe as a holy shit moment. The boilerplate, the plumbing, all the boring parts that was software development, AI could do all of it. The bottleneck is no longer typing. It's syncing. And syncing was the part I did 25 years. Building software felt like playing a video game again. I was back. I built 44 projects in just a few months. And the latest one was a WhatsApp bot. I put it on my computer. It talks through the apps that you already know. And then I took it on a trip to Marrakech. You know, just to navigate around, to find restaurants, do translations. And at first, it didn't really feel right.",
+      "suggested_overlay_title": "My Holy Shit AI Moment",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.95,
+        "hook_emotion": 0.85,
+        "catchy": 0.8
+      },
+      "reasoning": "Strong, relatable tech epiphany with a clear before-and-after narrative that hooks the viewer instantly.",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 3.5,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "shorts_title": "AI Coding Just Changed Forever",
+      "description": "The moment software development changed from typing to syncing with AI.",
+      "hashtags": [
+        "ai",
+        "coding",
+        "software",
+        "tech"
+      ],
+      "layout_hint": "sit_center",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "002",
+      "topic": "Agent Autonomy Story",
+      "start_time_sec": 206.2,
+      "end_time_sec": 273.3,
+      "viral_hook": "I was standing there, and I was like, how did you do that?",
+      "virality_score": 0.835,
+      "transcript": "I was standing there, and I was like, how did you do that? And the agent replied, I'm not kidding you, the mad lad figured it out on its own. And then it walked me through every single step. How it got a message from me, but there was no file ending. So it inspected the file. It found that it was audio, but a weird format, so it converted it. And then it was looking for something to translate the audio, but I didn't have it installed. But then it found an OpenAI key. It sent the whole thing to the server. It got it back, and then it replied. All of that in nine seconds. Can you imagine? I didn't build any of that. For me, this was the moment where I thought, this is something new. This is not a chatbot. Chatbots give up. Agents improvise. And you know, I was sold. I wanted to share this. I wanted to tell people on Twitter. And nobody really got it. It's almost like you have to experience an agent.",
+      "suggested_overlay_title": "Agents Improvise, Chatbots Give Up",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.9,
+        "hook_emotion": 0.8,
+        "catchy": 0.75
+      },
+      "reasoning": "This clip perfectly defines the shift from static AI to autonomous agents with a gripping personal anecdote.",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 3.8,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "shorts_title": "AI Agents vs Chatbots",
+      "description": "The difference between a static chatbot and an autonomous agent that improvises.",
+      "hashtags": [
+        "ai",
+        "agents",
+        "tech",
+        "innovation"
+      ],
+      "layout_hint": "sit_center",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "003",
+      "topic": "The Lobster Goes Viral",
+      "start_time_sec": 319.3,
+      "end_time_sec": 383.3,
+      "viral_hook": "The next morning, I woke up. Over 800 messages. I panicked.",
+      "virality_score": 0.825,
+      "transcript": "Though I forgot, I built a system to be resilient. So while I was walking to the bedroom, the agent happily booted up again and talked to everyone in the world. The next morning, I woke up. Over 800 messages. I panicked. I pulled the plug. I read every single message just to see if the agent leaked my private life. Nothing happened. But it could have. But there was the moment where it went viral. Today, the project is called OpenClaw. It's pretty much the fastest-growing open-source project. Its mascot is a lobster. It claws into your machine. Chenxin Huang calls it the operating system for personal AI. But by far, my favorite quote is from a friend who looked at this statistic and said, Peter, this is not hockey stick growth. This is stripper pole.",
+      "suggested_overlay_title": "My AI Project Went Viral",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.75,
+        "hook_emotion": 0.9,
+        "catchy": 0.85
+      },
+      "reasoning": "High emotional stakes (panicked) paired with a humorous viral growth analogy.",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 4.5,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "shorts_title": "My AI Project Exploded",
+      "description": "When an autonomous agent project goes viral overnight.",
+      "hashtags": [
+        "ai",
+        "opensource",
+        "growth",
+        "fail"
+      ],
+      "layout_hint": "sit_center",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "004",
+      "topic": "The Scary AI Feature",
+      "start_time_sec": 582.3,
+      "end_time_sec": 635.2,
+      "viral_hook": "How can we make it more scary? So I added a new feature, a heartbeat.",
+      "virality_score": 0.755,
+      "transcript": "And it's also a little bit scary. How can we make it more scary? So I added a new feature, a heartbeat. You know, by default, the agent would only wake up when you send it a prompt. With the heartbeat, the agent would just wake up periodically, check your emails, check your calendar, follow up on loose ends. My initial prompt was simply, surprise me. And yes, that's true. That's kind of as scary as it sounds. So no large company would ship something like that. But I'm a random builder from Austria. I don't have a legal department. I built this sandbox, this sandcastle for me, and I made it open source, so other people could play with it and other people could raise their imagination.",
+      "suggested_overlay_title": "The 'Heartbeat' AI Feature",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.8,
+        "hook_emotion": 0.7,
+        "catchy": 0.75
+      },
+      "reasoning": "Intriguing premise about building features that big companies are too afraid to ship.",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 4.5,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "shorts_title": "Is This AI Feature Reckless?",
+      "description": "Adding a 'heartbeat' feature to an AI that acts on its own.",
+      "hashtags": [
+        "ai",
+        "tech",
+        "innovation",
+        "scary"
+      ],
+      "layout_hint": "sit_center",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "005",
+      "topic": "The Future of Meetings",
+      "start_time_sec": 640.6,
+      "end_time_sec": 693.4,
+      "viral_hook": "Imagine putting an agent into a meeting. Not for notes, we figured that out.",
+      "virality_score": 0.725,
+      "transcript": "Imagine putting an agent into a meeting. Not for notes, we figured that out. A bidirectional model that can listen and hear at the same time. Somebody mentions a statistic, a sub-agent can spin off and check it for you. A decision is made, the agent can send a follow-up before the meeting even ends. In the future, we're not just going to have one agent. You might have your work agent, your personal claw, maybe one for health, maybe one for a relationship. And they all should work together in a secure way, because how did humanity level up? By specializing and collaborating. And agents are about to do the same.",
+      "suggested_overlay_title": "AI Agents In Meetings",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.8,
+        "hook_emotion": 0.6,
+        "catchy": 0.75
+      },
+      "reasoning": "Futuristic and highly relevant to professional audiences.",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 4.0,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "shorts_title": "The Future of Meetings",
+      "description": "How AI agents will transform meeting productivity forever.",
+      "hashtags": [
+        "ai",
+        "meetings",
+        "productivity",
+        "future"
+      ],
+      "layout_hint": "sit_center",
+      "needs_review": false,
+      "review_reason": ""
+    }
+  ]
+}

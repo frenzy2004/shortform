@@ -1,0 +1,55 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,48,&H00FFFFFF,&H000000FF,&H00000000,&H70000000,-1,0,0,0,100,100,0,0,4,0,0,2,60,60,160,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:01.10,0:00:02.76,Default,,0,0,0,,And one of the
+Dialogue: 0,0:00:02.76,0:00:03.64,Default,,0,0,0,,questions they asked one
+Dialogue: 0,0:00:03.64,0:00:04.74,Default,,0,0,0,,of the is you
+Dialogue: 0,0:00:04.74,0:00:05.30,Default,,0,0,0,,if you could ask
+Dialogue: 0,0:00:05.30,0:00:06.66,Default,,0,0,0,,the aliens any one
+Dialogue: 0,0:00:06.66,0:00:08.36,Default,,0,0,0,,question what would it
+Dialogue: 0,0:00:08.36,0:00:10.30,Default,,0,0,0,,be And one of
+Dialogue: 0,0:00:10.30,0:00:11.26,Default,,0,0,0,,the characters says I
+Dialogue: 0,0:00:11.26,0:00:12.52,Default,,0,0,0,,would ask how did
+Dialogue: 0,0:00:12.52,0:00:13.22,Default,,0,0,0,,you do it How
+Dialogue: 0,0:00:13.22,0:00:14.80,Default,,0,0,0,,did you manage to
+Dialogue: 0,0:00:14.80,0:00:16.42,Default,,0,0,0,,get through this technological
+Dialogue: 0,0:00:16.42,0:00:18.84,Default,,0,0,0,,adolescence without destroying yourselves
+Dialogue: 0,0:00:19.12,0:00:19.72,Default,,0,0,0,,How did you make
+Dialogue: 0,0:00:19.72,0:00:21.70,Default,,0,0,0,,it through And ever
+Dialogue: 0,0:00:21.70,0:00:22.26,Default,,0,0,0,,since I saw it
+Dialogue: 0,0:00:22.26,0:00:22.98,Default,,0,0,0,,it like 20 years
+Dialogue: 0,0:00:22.98,0:00:23.54,Default,,0,0,0,,ago I think I
+Dialogue: 0,0:00:23.54,0:00:24.14,Default,,0,0,0,,saw that movie it's
+Dialogue: 0,0:00:24.14,0:00:25.26,Default,,0,0,0,,kind of with me
+Dialogue: 0,0:00:25.42,0:00:26.86,Default,,0,0,0,,And that's the frame
+Dialogue: 0,0:00:26.86,0:00:28.28,Default,,0,0,0,,that I use is
+Dialogue: 0,0:00:28.28,0:00:30.58,Default,,0,0,0,,that you know we
+Dialogue: 0,0:00:30.58,0:00:32.02,Default,,0,0,0,,are knocking on the
+Dialogue: 0,0:00:32.16,0:00:34.08,Default,,0,0,0,,of these incredible capabilities
+Dialogue: 0,0:00:34.28,0:00:36.48,Default,,0,0,0,,right The ability to
+Dialogue: 0,0:00:36.48,0:00:38.48,Default,,0,0,0,,basically machines out of
+Dialogue: 0,0:00:38.54,0:00:39.82,Default,,0,0,0,,right I think it
+Dialogue: 0,0:00:39.82,0:00:41.28,Default,,0,0,0,,was inevitable that the
+Dialogue: 0,0:00:41.28,0:00:42.22,Default,,0,0,0,,instant we started working
+Dialogue: 0,0:00:42.22,0:00:42.74,Default,,0,0,0,,with fire
+Dialogue: 0,0:00:44.46,0:00:45.60,Default,,0,0,0,,but how we handle
+Dialogue: 0,0:00:45.60,0:00:47.54,Default,,0,0,0,,it is not inevitable
+Dialogue: 0,0:00:47.78,0:00:48.26,Default,,0,0,0,,And so I think
+Dialogue: 0,0:00:48.26,0:00:49.38,Default,,0,0,0,,the next few years
+Dialogue: 0,0:00:49.92,0:00:51.28,Default,,0,0,0,,we're going to be
+Dialogue: 0,0:00:51.28,0:00:52.90,Default,,0,0,0,,with you how do
+Dialogue: 0,0:00:52.90,0:00:53.98,Default,,0,0,0,,we keep these systems
+Dialogue: 0,0:00:53.98,0:00:55.26,Default,,0,0,0,,under control that are
+Dialogue: 0,0:00:55.26,0:00:56.92,Default,,0,0,0,,highly autonomous and smarter
+Dialogue: 0,0:00:56.92,0:00:57.56,Default,,0,0,0,,than any human

@@ -1,0 +1,42 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,48,&H00FFFFFF,&H000000FF,&H00000000,&H70000000,-1,0,0,0,100,100,0,0,4,0,0,2,60,60,160,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.06,Default,,0,0,0,,And what he does
+Dialogue: 0,0:00:01.20,0:00:02.52,Default,,0,0,0,,trying to help people
+Dialogue: 0,0:00:02.52,0:00:05.06,Default,,0,0,0,,understand the
+Dialogue: 0,0:00:05.06,0:00:07.90,Default,,0,0,0,,debt and the situation
+Dialogue: 0,0:00:08.12,0:00:10.18,Default,,0,0,0,,is he says you
+Dialogue: 0,0:00:10.18,0:00:12.84,Default,,0,0,0,,know when you debt
+Dialogue: 0,0:00:12.84,0:00:15.08,Default,,0,0,0,,to
+Dialogue: 0,0:00:15.08,0:00:16.98,Default,,0,0,0,,GDP what you're comparing
+Dialogue: 0,0:00:16.98,0:00:19.36,Default,,0,0,0,,is a balance
+Dialogue: 0,0:00:19.36,0:00:21.74,Default,,0,0,0,,sheet item to an
+Dialogue: 0,0:00:21.74,0:00:23.32,Default,,0,0,0,,income statement item the
+Dialogue: 0,0:00:23.32,0:00:25.94,Default,,0,0,0,,equivalent of Really you
+Dialogue: 0,0:00:25.94,0:00:28.62,Default,,0,0,0,,should be debt
+Dialogue: 0,0:00:28.62,0:00:31.26,Default,,0,0,0,,to equity So
+Dialogue: 0,0:00:31.26,0:00:33.10,Default,,0,0,0,,equity is the black
+Dialogue: 0,0:00:33.10,0:00:36.00,Default,,0,0,0,,line is the
+Dialogue: 0,0:00:36.60,0:00:38.52,Default,,0,0,0,,and GDP is the
+Dialogue: 0,0:00:39.02,0:00:40.14,Default,,0,0,0,,And if we go
+Dialogue: 0,0:00:40.14,0:00:41.34,Default,,0,0,0,,to the next chart
+Dialogue: 0,0:00:41.54,0:00:42.92,Default,,0,0,0,,you will see that
+Dialogue: 0,0:00:42.92,0:00:45.26,Default,,0,0,0,,while debt to
+Dialogue: 0,0:00:45.26,0:00:48.60,Default,,0,0,0,,is above one
+Dialogue: 0,0:00:48.60,0:00:50.26,Default,,0,0,0,,here the one ratio
+Dialogue: 0,0:00:50.50,0:00:51.92,Default,,0,0,0,,you can see debt
+Dialogue: 0,0:00:51.92,0:00:54.14,Default,,0,0,0,,to is at 0
+Dialogue: 0,0:00:54.14,0:00:56.74,Default,,0,0,0,,5 And actually
+Dialogue: 0,0:00:56.74,0:00:58.16,Default,,0,0,0,,it's very low by
+Dialogue: 0,0:00:58.16,0:00:59.41,Default,,0,0,0,,historical standards

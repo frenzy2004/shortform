@@ -1,0 +1,39 @@
+{
+  "hooks": [
+    {
+      "clip_id": "001",
+      "hook_start_sec": 10.41,
+      "hook_end_sec": 14.15,
+      "hook_text": "If the founder only has one VC who's showing interest, they're like, everything is hinged on this one VC.",
+      "reason": "This sentence immediately establishes the 'doom loop' problem (desperation) without needing the preceding filler."
+    },
+    {
+      "clip_id": "002",
+      "hook_start_sec": 26.21,
+      "hook_end_sec": 31.91,
+      "hook_text": "That night, every crab started breaking each other apart.",
+      "reason": "This is the core, shocking narrative hook that explains the 'crab bucket' metaphor immediately."
+    },
+    {
+      "clip_id": "003",
+      "hook_start_sec": 2.03,
+      "hook_end_sec": 7.71,
+      "hook_text": "There's this concept that I learned and we developed at Fandroid early on. It's called walking up the ladder, then down the ladder.",
+      "reason": "This clearly defines the unique strategy being discussed, providing immediate value to the viewer."
+    },
+    {
+      "clip_id": "004",
+      "hook_start_sec": 3.38,
+      "hook_end_sec": 12.94,
+      "hook_text": "is that if individuals are earning money now and they're using Buy Now Pay Later to buy things online,",
+      "reason": "This presents a relatable, controversial economic observation that immediately sets up the 'doom loop' argument."
+    },
+    {
+      "clip_id": "005",
+      "hook_start_sec": 11.11,
+      "hook_end_sec": 14.99,
+      "hook_text": "is that the term founder friendly got perverse to a way where if a VC doesn't act like the exceptional,",
+      "reason": "This challenges a common industry assumption ('founder friendly') and creates immediate intrigue about why that term might be problematic."
+    }
+  ]
+}

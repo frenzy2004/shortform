@@ -1,0 +1,46 @@
+{
+  "hooks": [
+    {
+      "clip_id": "001",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 8.0,
+      "hook_text": "",
+      "reason": ""
+    },
+    {
+      "clip_id": "002",
+      "hook_start_sec": 12.0,
+      "hook_end_sec": 16.0,
+      "hook_text": "",
+      "reason": ""
+    },
+    {
+      "clip_id": "003",
+      "hook_start_sec": 5.0,
+      "hook_end_sec": 15.0,
+      "hook_text": "",
+      "reason": ""
+    },
+    {
+      "clip_id": "004",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 5.0,
+      "hook_text": "",
+      "reason": ""
+    },
+    {
+      "clip_id": "005",
+      "hook_start_sec": 20.0,
+      "hook_end_sec": 30.0,
+      "hook_text": "",
+      "reason": ""
+    },
+    {
+      "clip_id": "006",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 4.0,
+      "hook_text": "",
+      "reason": ""
+    }
+  ]
+}

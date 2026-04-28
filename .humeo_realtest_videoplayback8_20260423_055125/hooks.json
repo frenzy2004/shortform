@@ -1,0 +1,46 @@
+{
+  "hooks": [
+    {
+      "clip_id": "001",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 5.49,
+      "hook_text": "The unemployment rate for 16 to 24",
+      "reason": "This opening phrase creates immediate suspense by presenting a specific topic and demographic, making the viewer wait for the crucial number."
+    },
+    {
+      "clip_id": "002",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 5.78,
+      "hook_text": "productivity growth will accelerate to the 4% to 6% range and",
+      "reason": "This opening makes a bold, specific numerical prediction, immediately establishing authority and creating intrigue about the cause."
+    },
+    {
+      "clip_id": "003",
+      "hook_start_sec": 20.47,
+      "hook_end_sec": 26.01,
+      "hook_text": "humanoid robots is evolving into a $26 trillion",
+      "reason": "This is a massive, specific monetary claim about an exciting technology, making it an irresistible hook for a tech-interested audience."
+    },
+    {
+      "clip_id": "004",
+      "hook_start_sec": 29.41,
+      "hook_end_sec": 35.26,
+      "hook_text": "Crispr Therapeutics has moved into the second position. That company is curing sickle cell disease and",
+      "reason": "This segment makes a massive claim about a specific company curing a major disease, which is far more compelling than the preceding stock talk."
+    },
+    {
+      "clip_id": "005",
+      "hook_start_sec": 9.38,
+      "hook_end_sec": 15.1,
+      "hook_text": "But today, instead of just one major platform evolving, we have five.",
+      "reason": "This sentence creates a powerful hook by contrasting with the well-understood internet revolution and promising a list of five new, important platforms."
+    },
+    {
+      "clip_id": "006",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 5.83,
+      "hook_text": "Without a doubt. We've always said Tesla is not an auto company.",
+      "reason": "This is a perfect hook because it makes a strong, counter-intuitive claim about a well-known company right at the start of the clip."
+    }
+  ]
+}

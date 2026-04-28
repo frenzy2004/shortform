@@ -1,0 +1,39 @@
+{
+  "hooks": [
+    {
+      "clip_id": "001",
+      "hook_start_sec": 50.07,
+      "hook_end_sec": 52.05,
+      "hook_text": "It could be worth $11 million.",
+      "reason": "This is the most direct and shocking claim in the clip, using a massive number to create immediate intrigue, despite its late placement."
+    },
+    {
+      "clip_id": "002",
+      "hook_start_sec": 2.74,
+      "hook_end_sec": 8.46,
+      "hook_text": "how many autonomous vehicles would Tesla have to produce,",
+      "reason": "This is a direct, intriguing question that names a major company (Tesla) and a specific technology, immediately establishing the topic and creating curiosity."
+    },
+    {
+      "clip_id": "003",
+      "hook_start_sec": 17.51,
+      "hook_end_sec": 22.47,
+      "hook_text": "delivered $50 million per employee.",
+      "reason": "This phrase contains the most shocking fact in the clip\u2014a hard number that is so extreme it forces the viewer to seek context."
+    },
+    {
+      "clip_id": "004",
+      "hook_start_sec": 0.02,
+      "hook_end_sec": 4.5,
+      "hook_text": "Autonomous trucks will cut delivery costs by 60%.",
+      "reason": "This is a perfect hook that opens the clip with a specific, impactful, and forward-looking claim containing a hard number (60%)."
+    },
+    {
+      "clip_id": "005",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 3.71,
+      "hook_text": "Bitcoin's role as digital gold has miles to go.",
+      "reason": "This opening sentence is a concise and compelling thesis statement that immediately establishes the topic and a clear point of view for the viewer."
+    }
+  ]
+}

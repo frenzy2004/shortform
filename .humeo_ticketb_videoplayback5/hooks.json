@@ -1,0 +1,39 @@
+{
+  "hooks": [
+    {
+      "clip_id": "001",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 3.4,
+      "hook_text": "That's where the bubble is.",
+      "reason": "This is a punchy, definitive statement that immediately identifies the core subject of the clip."
+    },
+    {
+      "clip_id": "002",
+      "hook_start_sec": 15.38,
+      "hook_end_sec": 17.14,
+      "hook_text": "except it's for intelligence itself,",
+      "reason": "This creates an immediate sense of intrigue by framing AI progress as a fundamental shift in intelligence rather than just computing power."
+    },
+    {
+      "clip_id": "003",
+      "hook_start_sec": 1.86,
+      "hook_end_sec": 9.66,
+      "hook_text": "I think we could have this very unusual combination of very fast GDP growth and high unemployment",
+      "reason": "This presents a provocative, counter-intuitive economic prediction that immediately grabs the viewer's attention."
+    },
+    {
+      "clip_id": "004",
+      "hook_start_sec": 1.92,
+      "hook_end_sec": 6.26,
+      "hook_text": "You know, I think they never really caught up that much.",
+      "reason": "This is a bold, contrarian claim regarding the AI race that directly answers the viewer's curiosity about China's progress."
+    },
+    {
+      "clip_id": "005",
+      "hook_start_sec": 27.2,
+      "hook_end_sec": 29.06,
+      "hook_text": "So I think this is crazy.",
+      "reason": "This is a strong, emotional opinion that sets the stage for the controversial analogy that follows."
+    }
+  ]
+}

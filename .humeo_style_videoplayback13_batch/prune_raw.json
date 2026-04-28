@@ -1,0 +1,39 @@
+{
+  "decisions": [
+    {
+      "clip_id": "001",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.49,
+      "reason": "Removed the final meta-commentary 'So take a look at that section' for a stronger ending on the main point.",
+      "thought": "The 22-second intro is slow preamble, but trimming it would make the clip too short (under 50s). Keeping the intro was necessary to satisfy the duration constraint, so only a minor trim at the end was possible."
+    },
+    {
+      "clip_id": "002",
+      "trim_start_sec": 2.74,
+      "trim_end_sec": 10.58,
+      "reason": "Trimmed the weak lead-in and cut the explanatory tail to end on a suspenseful cliffhanger about the auto market shrinking.",
+      "thought": "The original start was weak with an undefined pronoun and filler. Starting on the hook question is much stronger. The original ending explained the 'why' (utilization), but ending on the dramatic possibility of the market shrinking is more powerful for a short clip."
+    },
+    {
+      "clip_id": "003",
+      "trim_start_sec": 6.41,
+      "trim_end_sec": 0.0,
+      "reason": "Removed the slow, repetitive lead-in to start on the clearer claim about astonishing productivity.",
+      "thought": "The first 6 seconds were conversational filler and repetition. Starting at 6.41s makes the opening more direct. A more aggressive trim to start with the 'Tether' example would have been ideal but would have made the clip too short. The ending is strong and was kept intact."
+    },
+    {
+      "clip_id": "004",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "reason": "The clip is already very tight at 51 seconds and starts with a strong hook, so no trimming is possible without violating the minimum duration.",
+      "thought": "The clip starts strong with its hook and ends on a powerful summary. Any trim would either remove essential information or make the clip too short. It's a good example of a clip that doesn't need editing."
+    },
+    {
+      "clip_id": "005",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 14.97,
+      "reason": "Kept the strong opening hook and trimmed the final 15 seconds which drifted into a new topic of intergenerational wealth transfer.",
+      "thought": "The original ending about wealth transfer felt like the start of a new idea. Ending on the conclusion that Bitcoin will be an 'important store of value' provides a much cleaner and more focused closing statement for the clip, while staying within the balanced trim budget."
+    }
+  ]
+}

@@ -1,0 +1,180 @@
+{
+  "source_path": "",
+  "clips": [
+    {
+      "clip_id": "002",
+      "topic": "SaaS is a Victim of the AI Revolution",
+      "start_time_sec": 0.0,
+      "end_time_sec": 66.94000854492197,
+      "viral_hook": "The big loser, we thought, was going to be the application layer, largely Software as a Service.",
+      "virality_score": 0.78,
+      "transcript": "the application layer, largely Software as a Service. Now, if there's something wrong with this chart, you can see it is in our projection for Software as a Service going forward on the top there, 20% plus. It's not going to be anything like that. In fact, we do believe that Software as a Service is becoming a victim of this AI revolution. There will be consolidators and Software as a Service providers who do survive this route, they will consolidate the market. But we underestimated ourselves, we were saying that SaaS was going to lose share, we didn't realize how much, how soon. That gives you a sense of how quickly this revolution is happening. 142% for Palantir US commercial in one quarter, we didn't expect that either. In fact, our CAGR, our compound annual rate of revenue growth assumption, which we thought was enormous at the time, for the next five years, for Palantir itself, is 55%. That could be wrong too,",
+      "suggested_overlay_title": "Saas Is a Victim of AI",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.9,
+        "hook_emotion": 0.7,
+        "catchy": 0.7
+      },
+      "reasoning": "Presents a strong, counter-intuitive thesis that SaaS is a 'victim' of AI, which grabs attention. The argument is backed by a shocking data point (Palantir's 142% growth) that makes the abstract idea concrete and impressive.",
+      "hook_start_sec": null,
+      "hook_end_sec": null,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "render_spans": [],
+      "shorts_title": "The AI Revolution Is Crushing Software-as-a-Service",
+      "description": "Most people think AI will boost all software, but the opposite is happening. Software-as-a-Service (SaaS) is becoming a victim as platforms like Palantir, growing at 142%, take over.",
+      "hashtags": [
+        "saas",
+        "ai",
+        "investing",
+        "palantir",
+        "tech",
+        "cathiewood"
+      ],
+      "layout_hint": "split_chart_person",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "003",
+      "topic": "Dark Fiber vs. Live GPUs",
+      "start_time_sec": 0.0,
+      "end_time_sec": 71.49997558593668,
+      "viral_hook": "One thing we can say about this cycle is the demand for GPUs is voracious. And they are landing in these data centers, which are saying, we need more capacity. We need more chips. Those GPUs are not dark.",
+      "virality_score": 0.7775,
+      "transcript": "One thing we can say about this cycle is the demand for GPUs is voracious. And they are landing in these data centers, which are saying, we need more capacity. We need more chips. Those GPUs are not dark. And I'm stealing that from Brad Gerstner at Altimeter. I thought that was a very good analogy. The fiber went dark. GPUs are alive. And there's a big scramble for them. Now, the risk here is, and, you know, I have an economics background, and I'm always looking for those risks. Whenever I hear the word shortage, I usually believe that there's going to be a glut, an inventory glut at some point. And I'm sure there will be in the chip space. But I don't think it's going to be for a long time. You need to listen to Elon Musk, who's talking about chips and power as, you know, for as far as the eye can see, being in short supply.",
+      "suggested_overlay_title": "Today's AI Boom Isn't Like The",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.8,
+        "hook_emotion": 0.7,
+        "catchy": 0.85
+      },
+      "reasoning": "The core message is a brilliant reframe of a classic economic fear (shortage leads to glut). The central analogy, comparing the 'dark fiber' of the dot-com era to today's 'live GPUs', is extremely catchy and makes the point stick.",
+      "hook_start_sec": null,
+      "hook_end_sec": null,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "render_spans": [],
+      "shorts_title": "The AI Chip Boom Won't End Like The Dot-Com Bubble",
+      "description": "During the dot-com bust, we had 'dark fiber'—unused infrastructure. Today's AI boom is different. The GPUs getting installed are 'alive' and in voracious demand, a key reason why a chip glut isn't coming anytime soon.",
+      "hashtags": [
+        "ai",
+        "nvidia",
+        "investing",
+        "tech",
+        "cathiewood",
+        "elonmusk"
+      ],
+      "layout_hint": "sit_center",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "004",
+      "topic": "The Shocking Cost of the AI Arms Race",
+      "start_time_sec": 0.0,
+      "end_time_sec": 70.73998046875022,
+      "viral_hook": "So I think that the shareholder base holding the MAG-6, they have gotten so used to cash hordes and massive free cash flow generation, that this is a big shock to them, seeing these hyperscalers take their capital spending budgets up 100% in one year.",
+      "virality_score": 0.735,
+      "transcript": "So I think that the shareholder base holding the MAG-6, they have gotten so used to a cash hordes and massive free cash flow generation, that this is a big shock to them, seeing these hyperscalers take their capital spending budgets up 100% in one year. I think Amazon announced it would go from roughly $90 billion to $180 billion this year, in 2026. That's shocking to people. And we're seeing some of the MAG-6 raising debt even. That has been anathema to this group. So we do think we're seeing a shareholder turnover, not massive because of what I just described about benchmarks. But we don't think necessarily that they are doing the wrong things, meaning the hyperscalers. We think Google is doing the right thing. And all of the Amazon, all of the spending we think is the right thing to do. But this is not what traditional portfolio managers who are benchmark sensitive are used to grappling with.",
+      "suggested_overlay_title": "Why Big Tech Stocks Are Dropping",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.85,
+        "hook_emotion": 0.7,
+        "catchy": 0.6
+      },
+      "reasoning": "This clip provides a clear, compelling explanation for a recent market phenomenon (Mag 6 stocks dropping). The specific, massive number—Amazon's spending doubling from $90B to $180B—is a huge 'wow' moment that anchors the entire clip.",
+      "hook_start_sec": null,
+      "hook_end_sec": null,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "render_spans": [],
+      "shorts_title": "Amazon Is Spending $180 Billion On AI And Investors Are Freaking Out",
+      "description": "Big Tech investors are used to massive profits, so when companies like Amazon announce they are doubling their spending to $180 billion for AI, it causes a shockwave and a turnover in shareholders.",
+      "hashtags": [
+        "investing",
+        "ai",
+        "amazon",
+        "google",
+        "techstocks",
+        "cathiewood"
+      ],
+      "layout_hint": "sit_center",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "005",
+      "topic": "The Truth About Deflation",
+      "start_time_sec": 0.0,
+      "end_time_sec": 55.79488573074832,
+      "viral_hook": "Look what trueflation is telling us. It's telling us inflation is resolving to the downside. It is not moving up.",
+      "virality_score": 0.7275,
+      "transcript": "Look what trueflation is telling us. It's telling us inflation is resolving to the downside. It is not moving up. And there are a few things going on. Gasoline prices, until very recently maybe. Housing prices, and that's going to continue as rents come down. And even potato chips, Pepsi, Frito-Lay, Doritos, cutting prices, 15%. And hims and hers. although the FTC, or no, yes, I think the FTC is going after them, cutting the price of GLP-1s to 40, I think at $49, whereas I think Novo Nordisk has cut its entry price or introductory price to $149, and then it's going to move them up to $199. This is deflation. This is deflation. And we're going to see a lot more of it, we believe.",
+      "suggested_overlay_title": "Proof That Deflation Is Already Here",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.8,
+        "hook_emotion": 0.7,
+        "catchy": 0.65
+      },
+      "reasoning": "A strong contrarian take on the hot-button issue of inflation. The message is made highly effective and relatable by using specific, everyday examples like Doritos and popular GLP-1 drugs, which creates a strong connection with the viewer.",
+      "hook_start_sec": null,
+      "hook_end_sec": null,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "render_spans": [],
+      "shorts_title": "You're Seeing Deflation And Don't Even Realize It",
+      "description": "Forget what the headlines say. Trueflation data shows prices are falling. From potato chips to GLP-1 weight-loss drugs, the signs of deflation are already here, and we're going to see a lot more of it.",
+      "hashtags": [
+        "deflation",
+        "inflation",
+        "economy",
+        "investing",
+        "cathiewood",
+        "prices"
+      ],
+      "layout_hint": "split_chart_person",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "006",
+      "topic": "Why Investors Fear the AI Boom",
+      "start_time_sec": 0.0,
+      "end_time_sec": 66.98500366210874,
+      "viral_hook": "Many of the most seasoned investors today were very young when the tech and telecom bubble took off. And now they are the gray hairs.",
+      "virality_score": 0.715,
+      "transcript": "Many of the most seasoned investors today were very young when the tech and telecom bubble took off. And now they are the gray hairs. And I'm friends with a lot of them. And many of them are saying, been there, done that. I'm leading this organization now, and I'm going to protect it from this bubble. And we understand that. But as I just described, we have really just started this journey. And we expect the capital spending cycle to go much further for much longer. And the reason is the technologies are ready. You know, back in the 90s, we didn't get the cloud even until 2006. But there were visions of, you know, eyeballs in 10 years being the source of valuation today. We didn't get the cloud till or back then. We didn't get the cloud until 06. We didn't get the first big breakthrough in AI until deep learning, ImageNet, in 2012.",
+      "suggested_overlay_title": "Investors Have Ptsd from the Dot-com",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.8,
+        "hook_emotion": 0.7,
+        "catchy": 0.6
+      },
+      "reasoning": "This clip offers a compelling psychological explanation for market skepticism, framing it as a kind of institutional PTSD. The 'gray hairs' and 'been there, done that' framing is relatable and effectively sets up the counter-argument that 'this time is different.'",
+      "hook_start_sec": null,
+      "hook_end_sec": null,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "render_spans": [],
+      "shorts_title": "Why So Many Investors Are Wrong About The AI Bubble",
+      "description": "Seasoned investors who lived through the dot-com bust are now the 'gray hairs' saying 'been there, done that' to the AI boom. But they're missing the point: this time, the technology is actually ready.",
+      "hashtags": [
+        "investing",
+        "ai",
+        "techbubble",
+        "psychology",
+        "cathiewood",
+        "stocks"
+      ],
+      "layout_hint": "split_chart_person",
+      "needs_review": false,
+      "review_reason": ""
+    }
+  ]
+}

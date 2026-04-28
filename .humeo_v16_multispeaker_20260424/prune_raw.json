@@ -1,0 +1,39 @@
+{
+  "decisions": [
+    {
+      "clip_id": "001",
+      "trim_start_sec": 7.45,
+      "trim_end_sec": 1.21,
+      "reason": "Trimmed a weak lead-in and an incomplete sentence at the end to start on the concrete 'Llama 3' example.",
+      "thought": "The original start was a vague reference to a prior topic. Starting with the Llama 3/4/5 progression is much more gripping, and trimming the final cut-off words creates a cleaner ending."
+    },
+    {
+      "clip_id": "002",
+      "trim_start_sec": 12.86,
+      "trim_end_sec": 0.0,
+      "reason": "Trimmed 12.8 seconds of slow, rambling lead-in to start directly on the core claim.",
+      "thought": "The first 12 seconds consisted of filler phrases like 'my answer to that is' and 'no, because'. Starting on the hook itself makes the clip much more direct and impactful, which justifies keeping the slightly weak ending to stay within the trim budget."
+    },
+    {
+      "clip_id": "003",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 4.35,
+      "reason": "Trimmed the beginning of the answer to end the clip on a strong, unresolved question.",
+      "thought": "The hook protected the start, which was already strong. The end of the clip started to provide an answer, but cutting it off right after the climactic question '...stronger and not weaker?' creates a much more compelling and suspenseful ending."
+    },
+    {
+      "clip_id": "004",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 3.22,
+      "reason": "Trimmed 3.2 seconds of trailing filler at the end to create a cleaner finish, keeping the start intact due to the clip's short initial duration.",
+      "thought": "The clip is already near the minimum length, so a large trim was not possible. While the opening is a bit slow, trimming it would have made the clip too short. Removing the final hesitant phrase 'Now, and... So I think' was a small but effective improvement."
+    },
+    {
+      "clip_id": "005",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "reason": "No trim was applied as the clip is already at the minimum viable duration.",
+      "thought": "The clip is only 51 seconds long, and any meaningful trim would push it below the 50-second minimum length. Although the last 10 seconds are off-topic, preserving the clip's duration was prioritized as per the length constraints."
+    }
+  ]
+}

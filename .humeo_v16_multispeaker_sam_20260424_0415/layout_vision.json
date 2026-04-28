@@ -1,0 +1,2371 @@
+{
+  "clips": {
+    "001": {
+      "instruction": {
+        "clip_id": "001",
+        "layout": "sit_center",
+        "zoom": 1.0,
+        "person_x_norm": 0.4825,
+        "person_tracking": [
+          {
+            "t_sec": 0.0,
+            "x_norm": 0.48151183485479226,
+            "zoom": null
+          },
+          {
+            "t_sec": 60.475999999999885,
+            "x_norm": 0.48151183485479226,
+            "zoom": null
+          }
+        ],
+        "chart_x_norm": 0.0,
+        "focus_stack_order": "chart_then_person",
+        "split_chart_region": null,
+        "split_person_region": null,
+        "split_second_chart_region": null,
+        "split_second_person_region": null,
+        "top_band_ratio": 0.5
+      },
+      "raw": {
+        "layout": "sit_center",
+        "person_bbox": {
+          "x1": 0.252,
+          "y1": 0.101,
+          "x2": 0.82,
+          "y2": 1.0
+        },
+        "face_bbox": {
+          "x1": 0.362,
+          "y1": 0.201,
+          "x2": 0.603,
+          "y2": 0.551
+        },
+        "chart_bbox": null,
+        "second_person_bbox": null,
+        "second_face_bbox": null,
+        "second_chart_bbox": null,
+        "reason": "A single speaker is present in a medium shot, characteristic of an interview or podcast setting. The `sit_center` layout is appropriate for this framing.",
+        "segmentation_tracking": {
+          "provider": "replicate",
+          "model": "meta/sam-2-video:2d7219877ca847f463d749d9b224e62f7b078fe035d60a74b58889b455d5cbad",
+          "seed_point_px": [
+            309,
+            135
+          ],
+          "seed_frame": 725,
+          "prompt_frames": [
+            0,
+            725
+          ],
+          "output_frame_interval": 145,
+          "mask_count": 10
+        }
+      }
+    },
+    "002": {
+      "instruction": {
+        "clip_id": "002",
+        "layout": "sit_center",
+        "zoom": 1.0,
+        "person_x_norm": 0.527965,
+        "person_tracking": [
+          {
+            "t_sec": 0.0,
+            "x_norm": 0.49543198701999813,
+            "zoom": null
+          },
+          {
+            "t_sec": 4.546208333333333,
+            "x_norm": 0.49543198701999813,
+            "zoom": null
+          },
+          {
+            "t_sec": 9.092416666666667,
+            "x_norm": 0.49543198701999813,
+            "zoom": null
+          },
+          {
+            "t_sec": 13.638625,
+            "x_norm": 0.49543198701999813,
+            "zoom": null
+          },
+          {
+            "t_sec": 18.184833333333334,
+            "x_norm": 0.49543198701999813,
+            "zoom": null
+          },
+          {
+            "t_sec": 22.731041666666666,
+            "x_norm": 0.49543198701999813,
+            "zoom": null
+          },
+          {
+            "t_sec": 27.27725,
+            "x_norm": 0.7670381659088065,
+            "zoom": null
+          },
+          {
+            "t_sec": 31.82345833333333,
+            "x_norm": 0.7670381659088065,
+            "zoom": null
+          },
+          {
+            "t_sec": 36.36966666666667,
+            "x_norm": 0.4953378756454915,
+            "zoom": null
+          },
+          {
+            "t_sec": 40.915875,
+            "x_norm": 0.4953378756454915,
+            "zoom": null
+          },
+          {
+            "t_sec": 45.46208333333333,
+            "x_norm": 0.4953378756454915,
+            "zoom": null
+          },
+          {
+            "t_sec": 45.65999999999963,
+            "x_norm": 0.4953378756454915,
+            "zoom": null
+          }
+        ],
+        "chart_x_norm": 0.0,
+        "focus_stack_order": "chart_then_person",
+        "split_chart_region": null,
+        "split_person_region": null,
+        "split_second_chart_region": null,
+        "split_second_person_region": null,
+        "top_band_ratio": 0.5
+      },
+      "raw": {
+        "layout": "sit_center",
+        "person_bbox": {
+          "x1": 0.25757,
+          "y1": 0.10111,
+          "x2": 0.9161,
+          "y2": 1.0
+        },
+        "face_bbox": {
+          "x1": 0.35165,
+          "y1": 0.10111,
+          "x2": 0.70428,
+          "y2": 0.60111
+        },
+        "chart_bbox": null,
+        "second_person_bbox": null,
+        "second_face_bbox": null,
+        "second_chart_bbox": null,
+        "reason": "The frame contains a single person in a medium close-up, typical of a seated interview or podcast recording, making the sit_center layout the most appropriate choice.",
+        "segmentation_tracking": {
+          "provider": "replicate",
+          "model": "meta/sam-2-video:2d7219877ca847f463d749d9b224e62f7b078fe035d60a74b58889b455d5cbad",
+          "seed_point_px": [
+            338,
+            126
+          ],
+          "seed_frame": 547,
+          "prompt_frames": [
+            0,
+            547
+          ],
+          "output_frame_interval": 109,
+          "mask_count": 11
+        }
+      }
+    },
+    "003": {
+      "instruction": {
+        "clip_id": "003",
+        "layout": "sit_center",
+        "zoom": 1.0,
+        "person_x_norm": 0.49805,
+        "person_tracking": [
+          {
+            "t_sec": 0.0,
+            "x_norm": 0.46765,
+            "zoom": null
+          },
+          {
+            "t_sec": 6.950899999999979,
+            "x_norm": 0.46765,
+            "zoom": null
+          },
+          {
+            "t_sec": 13.901799999999959,
+            "x_norm": 0.332,
+            "zoom": null
+          },
+          {
+            "t_sec": 20.852699999999935,
+            "x_norm": 0.332,
+            "zoom": null
+          },
+          {
+            "t_sec": 27.803599999999918,
+            "x_norm": 0.509,
+            "zoom": null
+          },
+          {
+            "t_sec": 34.754499999999894,
+            "x_norm": 0.509,
+            "zoom": null
+          },
+          {
+            "t_sec": 41.70539999999987,
+            "x_norm": 0.509,
+            "zoom": null
+          },
+          {
+            "t_sec": 48.656299999999845,
+            "x_norm": 0.509,
+            "zoom": null
+          },
+          {
+            "t_sec": 55.607199999999835,
+            "x_norm": 0.45655,
+            "zoom": null
+          },
+          {
+            "t_sec": 62.55809999999981,
+            "x_norm": 0.275,
+            "zoom": null
+          },
+          {
+            "t_sec": 69.50899999999979,
+            "x_norm": 0.275,
+            "zoom": null
+          }
+        ],
+        "chart_x_norm": 0.0,
+        "focus_stack_order": "chart_then_person",
+        "split_chart_region": null,
+        "split_person_region": null,
+        "split_second_chart_region": null,
+        "split_second_person_region": null,
+        "top_band_ratio": 0.5
+      },
+      "raw": {
+        "layout": "sit_center",
+        "person_bbox": {
+          "x1": 0.2801,
+          "y1": 0.1508,
+          "x2": 0.8033,
+          "y2": 1.0
+        },
+        "face_bbox": {
+          "x1": 0.3541,
+          "y1": 0.1648,
+          "x2": 0.642,
+          "y2": 0.5833
+        },
+        "chart_bbox": null,
+        "second_person_bbox": null,
+        "second_face_bbox": null,
+        "second_chart_bbox": null,
+        "reason": "The image contains a single person in a seated, interview-style setting, making 'sit_center' the most appropriate layout.",
+        "segmentation_tracking": {
+          "error": "Server disconnected without sending a response."
+        },
+        "person_tracking_samples": [
+          {
+            "sample_kind": "midpoint_keyframe",
+            "time_sec": 34.754499999999894,
+            "frame_path": ".humeo_v16_multispeaker_sam_20260424_0415\\keyframes\\003\\003.jpg",
+            "center_x_norm": 0.49805,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 0.2801,
+                "y1": 0.1508,
+                "x2": 0.8033,
+                "y2": 1.0
+              },
+              "face_bbox": {
+                "x1": 0.3541,
+                "y1": 0.1648,
+                "x2": 0.642,
+                "y2": 0.5833
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The image contains a single person in a seated, interview-style setting, making 'sit_center' the most appropriate layout."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 6.950899999999979,
+            "frame_path": ".humeo_v16_multispeaker_sam_20260424_0415\\layout_tracking\\003\\003_006951.jpg",
+            "center_x_norm": 0.46765,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 0.2465,
+                "y1": 0.1019,
+                "x2": 0.8521,
+                "y2": 1.0
+              },
+              "face_bbox": {
+                "x1": 0.3423,
+                "y1": 0.1611,
+                "x2": 0.593,
+                "y2": 0.5139
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The image features a single person speaking into a microphone in a typical podcast or interview setup, which is best framed using the 'sit_center' layout."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 13.901799999999959,
+            "frame_path": ".humeo_v16_multispeaker_sam_20260424_0415\\layout_tracking\\003\\003_013902.jpg",
+            "center_x_norm": 0.332,
+            "raw": {
+              "layout": "split_two_persons",
+              "person_bbox": {
+                "x1": 0.1259,
+                "y1": 0.223,
+                "x2": 0.536,
+                "y2": 0.938
+              },
+              "face_bbox": {
+                "x1": 0.276,
+                "y1": 0.301,
+                "x2": 0.388,
+                "y2": 0.499
+              },
+              "chart_bbox": null,
+              "second_person_bbox": {
+                "x1": 0.56,
+                "y1": 0.245,
+                "x2": 0.941,
+                "y2": 0.985
+              },
+              "second_face_bbox": {
+                "x1": 0.62,
+                "y1": 0.29,
+                "x2": 0.72,
+                "y2": 0.488
+              },
+              "second_chart_bbox": null,
+              "reason": "The frame contains two speakers seated at a table, characteristic of a podcast or interview, making the split_two_persons layout the most suitable choice."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 20.852699999999935,
+            "frame_path": ".humeo_v16_multispeaker_sam_20260424_0415\\layout_tracking\\003\\003_020853.jpg",
+            "center_x_norm": 0.3075,
+            "raw": {
+              "layout": "split_two_persons",
+              "person_bbox": {
+                "x1": 0.135,
+                "y1": 0.306,
+                "x2": 0.48,
+                "y2": 0.925
+              },
+              "face_bbox": {
+                "x1": 0.253,
+                "y1": 0.311,
+                "x2": 0.362,
+                "y2": 0.514
+              },
+              "chart_bbox": null,
+              "second_person_bbox": {
+                "x1": 0.57,
+                "y1": 0.29,
+                "x2": 0.933,
+                "y2": 0.963
+              },
+              "second_face_bbox": {
+                "x1": 0.663,
+                "y1": 0.301,
+                "x2": 0.762,
+                "y2": 0.504
+              },
+              "second_chart_bbox": null,
+              "reason": "The frame features two people sitting across from each other at a table, which is a classic two-person interview setup."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 27.803599999999918,
+            "frame_path": ".humeo_v16_multispeaker_sam_20260424_0415\\layout_tracking\\003\\003_027804.jpg",
+            "center_x_norm": 0.509,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 0.2989,
+                "y1": 0.1546,
+                "x2": 0.8213,
+                "y2": 1.0
+              },
+              "face_bbox": {
+                "x1": 0.406,
+                "y1": 0.201,
+                "x2": 0.612,
+                "y2": 0.563
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The image contains a single person in a seated, interview-style setting, making 'sit_center' the most appropriate layout."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 41.70539999999987,
+            "frame_path": ".humeo_v16_multispeaker_sam_20260424_0415\\layout_tracking\\003\\003_041705.jpg",
+            "center_x_norm": 0.513,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 0.211,
+                "y1": 0.101,
+                "x2": 0.911,
+                "y2": 1.0
+              },
+              "face_bbox": {
+                "x1": 0.382,
+                "y1": 0.221,
+                "x2": 0.644,
+                "y2": 0.583
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "A single person is visible, speaking into a microphone in what appears to be a podcast or interview setting. The framing is a medium shot, making 'sit_center' the appropriate layout."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 48.656299999999845,
+            "frame_path": ".humeo_v16_multispeaker_sam_20260424_0415\\layout_tracking\\003\\003_048656.jpg",
+            "center_x_norm": 0.50275,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 0.261899,
+                "y1": 0.0,
+                "x2": 0.864388,
+                "y2": 1.0
+              },
+              "face_bbox": {
+                "x1": 0.36384,
+                "y1": 0.164381,
+                "x2": 0.64166,
+                "y2": 0.621759
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The image contains a single person in a medium close-up, characteristic of a seated interview or podcast recording. The sit_center layout is the most suitable choice."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 55.607199999999835,
+            "frame_path": ".humeo_v16_multispeaker_sam_20260424_0415\\layout_tracking\\003\\003_055607.jpg",
+            "center_x_norm": 0.45655,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 0.2041,
+                "y1": 0.1011,
+                "x2": 0.8242,
+                "y2": 1.0
+              },
+              "face_bbox": {
+                "x1": 0.3223,
+                "y1": 0.1122,
+                "x2": 0.5908,
+                "y2": 0.5889
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The image contains a single person in a seated, interview-style shot, making 'sit_center' the most appropriate layout to focus on the speaker."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 62.55809999999981,
+            "frame_path": ".humeo_v16_multispeaker_sam_20260424_0415\\layout_tracking\\003\\003_062558.jpg",
+            "center_x_norm": 0.275,
+            "raw": {
+              "layout": "split_two_persons",
+              "person_bbox": {
+                "x1": 0.0,
+                "y1": 0.40384,
+                "x2": 0.463281,
+                "y2": 0.922222
+              },
+              "face_bbox": {
+                "x1": 0.225,
+                "y1": 0.407407,
+                "x2": 0.325,
+                "y2": 0.572222
+              },
+              "chart_bbox": null,
+              "second_person_bbox": {
+                "x1": 0.542969,
+                "y1": 0.390741,
+                "x2": 1.0,
+                "y2": 0.981481
+              },
+              "second_face_bbox": {
+                "x1": 0.607031,
+                "y1": 0.401852,
+                "x2": 0.710156,
+                "y2": 0.581481
+              },
+              "second_chart_bbox": null,
+              "reason": "The image features two people sitting at a table in a podcast or interview setting, making the split_two_persons layout the most suitable choice."
+            }
+          }
+        ]
+      }
+    },
+    "004": {
+      "instruction": {
+        "clip_id": "004",
+        "layout": "split_two_persons",
+        "zoom": 1.0,
+        "person_x_norm": 0.309,
+        "person_tracking": [],
+        "chart_x_norm": 0.0,
+        "focus_stack_order": "chart_then_person",
+        "split_chart_region": null,
+        "split_person_region": {
+          "x1": 0.127,
+          "y1": 0.235,
+          "x2": 0.495,
+          "y2": 0.908,
+          "label": "",
+          "confidence": 1.0
+        },
+        "split_second_chart_region": null,
+        "split_second_person_region": {
+          "x1": 0.56,
+          "y1": 0.21,
+          "x2": 0.918,
+          "y2": 0.908,
+          "label": "",
+          "confidence": 1.0
+        },
+        "top_band_ratio": 0.5
+      },
+      "raw": {
+        "layout": "split_two_persons",
+        "person_bbox": {
+          "x1": 0.127,
+          "y1": 0.235,
+          "x2": 0.495,
+          "y2": 0.908
+        },
+        "face_bbox": {
+          "x1": 0.263,
+          "y1": 0.244,
+          "x2": 0.355,
+          "y2": 0.413
+        },
+        "chart_bbox": null,
+        "second_person_bbox": {
+          "x1": 0.56,
+          "y1": 0.21,
+          "x2": 0.918,
+          "y2": 0.908
+        },
+        "second_face_bbox": {
+          "x1": 0.602,
+          "y1": 0.218,
+          "x2": 0.704,
+          "y2": 0.413
+        },
+        "second_chart_bbox": null,
+        "reason": "The frame contains two speakers sitting across from each other in a podcast or interview setting, which is a perfect fit for the split_two_persons layout.",
+        "speaker_follow_tracking": {
+          "error": "Server disconnected without sending a response."
+        }
+      }
+    },
+    "005": {
+      "instruction": {
+        "clip_id": "005",
+        "layout": "sit_center",
+        "zoom": 1.28,
+        "person_x_norm": 0.5165,
+        "person_tracking": [
+          {
+            "t_sec": 0.0,
+            "x_norm": 0.5165,
+            "zoom": 1.28
+          },
+          {
+            "t_sec": 2.0,
+            "x_norm": 0.5124385,
+            "zoom": 1.28
+          },
+          {
+            "t_sec": 4.0,
+            "x_norm": 0.53055,
+            "zoom": 1.28
+          },
+          {
+            "t_sec": 4.215000000000001,
+            "x_norm": 0.53055,
+            "zoom": 1.28
+          },
+          {
+            "t_sec": 4.565,
+            "x_norm": 0.5557,
+            "zoom": 1.28
+          },
+          {
+            "t_sec": 5.65,
+            "x_norm": 0.5557,
+            "zoom": 1.28
+          },
+          {
+            "t_sec": 6.0,
+            "x_norm": 0.5037,
+            "zoom": 1.28
+          },
+          {
+            "t_sec": 8.0,
+            "x_norm": 0.5047,
+            "zoom": 1.28
+          },
+          {
+            "t_sec": 9.13,
+            "x_norm": 0.5225,
+            "zoom": 1.28
+          },
+          {
+            "t_sec": 10.0,
+            "x_norm": 0.50465,
+            "zoom": 1.28
+          },
+          {
+            "t_sec": 12.0,
+            "x_norm": 0.49724999999999997,
+            "zoom": 1.28
+          },
+          {
+            "t_sec": 13.345,
+            "x_norm": 0.49724999999999997,
+            "zoom": 1.28
+          },
+          {
+            "t_sec": 13.695,
+            "x_norm": 0.56065,
+            "zoom": 1.28
+          },
+          {
+            "t_sec": 14.0,
+            "x_norm": 0.502,
+            "zoom": 1.28
+          },
+          {
+            "t_sec": 16.0,
+            "x_norm": 0.5045,
+            "zoom": 1.28
+          },
+          {
+            "t_sec": 17.65,
+            "x_norm": 0.5045,
+            "zoom": 1.28
+          },
+          {
+            "t_sec": 18.0,
+            "x_norm": 0.6462,
+            "zoom": 1.28
+          },
+          {
+            "t_sec": 18.26,
+            "x_norm": 0.646094,
+            "zoom": 1.28
+          },
+          {
+            "t_sec": 20.0,
+            "x_norm": 0.6630499999999999,
+            "zoom": 1.28
+          },
+          {
+            "t_sec": 22.0,
+            "x_norm": 0.65375,
+            "zoom": 1.28
+          },
+          {
+            "t_sec": 22.825,
+            "x_norm": 0.6645,
+            "zoom": 1.28
+          },
+          {
+            "t_sec": 24.0,
+            "x_norm": 0.663,
+            "zoom": 1.28
+          },
+          {
+            "t_sec": 26.0,
+            "x_norm": 0.653,
+            "zoom": 1.28
+          },
+          {
+            "t_sec": 27.389,
+            "x_norm": 0.676755,
+            "zoom": 1.28
+          },
+          {
+            "t_sec": 28.0,
+            "x_norm": 0.6665,
+            "zoom": 1.28
+          },
+          {
+            "t_sec": 30.0,
+            "x_norm": 0.6822222222222222,
+            "zoom": 1.28
+          },
+          {
+            "t_sec": 31.604,
+            "x_norm": 0.6822222222222222,
+            "zoom": 1.28
+          },
+          {
+            "t_sec": 31.954,
+            "x_norm": 0.511,
+            "zoom": 1.28
+          },
+          {
+            "t_sec": 32.0,
+            "x_norm": 0.53,
+            "zoom": 1.28
+          },
+          {
+            "t_sec": 34.0,
+            "x_norm": 0.546,
+            "zoom": 1.28
+          },
+          {
+            "t_sec": 35.65,
+            "x_norm": 0.546,
+            "zoom": 1.28
+          },
+          {
+            "t_sec": 36.0,
+            "x_norm": 0.50295,
+            "zoom": 1.28
+          },
+          {
+            "t_sec": 36.519,
+            "x_norm": 0.5028,
+            "zoom": 1.28
+          },
+          {
+            "t_sec": 38.0,
+            "x_norm": 0.47845,
+            "zoom": 1.28
+          },
+          {
+            "t_sec": 39.65,
+            "x_norm": 0.47845,
+            "zoom": 1.28
+          },
+          {
+            "t_sec": 40.0,
+            "x_norm": 0.5325,
+            "zoom": 1.28
+          },
+          {
+            "t_sec": 41.084,
+            "x_norm": 0.534,
+            "zoom": 1.28
+          },
+          {
+            "t_sec": 41.65,
+            "x_norm": 0.534,
+            "zoom": 1.28
+          },
+          {
+            "t_sec": 42.0,
+            "x_norm": 0.5855,
+            "zoom": 1.28
+          },
+          {
+            "t_sec": 43.65,
+            "x_norm": 0.5855,
+            "zoom": 1.28
+          },
+          {
+            "t_sec": 44.0,
+            "x_norm": 0.532,
+            "zoom": 1.28
+          },
+          {
+            "t_sec": 45.649000000001934,
+            "x_norm": 0.5273,
+            "zoom": 1.28
+          }
+        ],
+        "chart_x_norm": 0.0,
+        "focus_stack_order": "chart_then_person",
+        "split_chart_region": null,
+        "split_person_region": null,
+        "split_second_chart_region": null,
+        "split_second_person_region": null,
+        "top_band_ratio": 0.5
+      },
+      "raw": {
+        "layout": "split_two_persons",
+        "person_bbox": {
+          "x1": 0.0,
+          "y1": 0.31113,
+          "x2": 0.48002,
+          "y2": 0.94936
+        },
+        "face_bbox": {
+          "x1": 0.25433,
+          "y1": 0.31113,
+          "x2": 0.35242,
+          "y2": 0.49339
+        },
+        "chart_bbox": null,
+        "second_person_bbox": {
+          "x1": 0.5428,
+          "y1": 0.31113,
+          "x2": 0.9928,
+          "y2": 0.96191
+        },
+        "second_face_bbox": {
+          "x1": 0.60156,
+          "y1": 0.31113,
+          "x2": 0.70469,
+          "y2": 0.50111
+        },
+        "second_chart_bbox": null,
+        "reason": "The frame contains two speakers seated at a table for a podcast-style interview, making the split_two_persons layout the most suitable choice.",
+        "speaker_follow_tracking": {
+          "mode": "two_speaker_follow",
+          "left_segmentation": {
+            "provider": "replicate",
+            "model": "meta/sam-2-video:2d7219877ca847f463d749d9b224e62f7b078fe035d60a74b58889b455d5cbad",
+            "seed_point_px": [
+              194,
+              145
+            ],
+            "seed_frame": 547,
+            "prompt_frames": [
+              0,
+              547
+            ],
+            "output_frame_interval": 109,
+            "mask_count": 11
+          },
+          "right_segmentation": {
+            "provider": "replicate",
+            "model": "meta/sam-2-video:2d7219877ca847f463d749d9b224e62f7b078fe035d60a74b58889b455d5cbad",
+            "seed_point_px": [
+              418,
+              146
+            ],
+            "seed_frame": 547,
+            "prompt_frames": [
+              0,
+              547
+            ],
+            "output_frame_interval": 109,
+            "mask_count": 11
+          },
+          "focus_samples": [
+            {
+              "time_sec": 0.0,
+              "frame_path": ".humeo_v16_multispeaker_sam_20260424_0415\\layout_tracking\\005\\speaker_focus\\005_000000.jpg",
+              "speaker": "right",
+              "raw": {
+                "speaker": "right",
+                "reason": "The person on the right has their mouth open in a shape consistent with speaking. The person on the left is not visible in the frame."
+              },
+              "visible_centers": {
+                "right": 0.5165
+              },
+              "both_visible": false,
+              "layout_raw": {
+                "layout": "sit_center",
+                "person_bbox": {
+                  "x1": 0.263,
+                  "y1": 0.116,
+                  "x2": 0.85,
+                  "y2": 1.0
+                },
+                "face_bbox": {
+                  "x1": 0.383,
+                  "y1": 0.127,
+                  "x2": 0.65,
+                  "y2": 0.55
+                },
+                "chart_bbox": null,
+                "second_person_bbox": null,
+                "second_face_bbox": null,
+                "second_chart_bbox": null,
+                "reason": "A single person is visible in a seated, interview-style framing."
+              }
+            },
+            {
+              "time_sec": 4.565,
+              "frame_path": ".humeo_v16_multispeaker_sam_20260424_0415\\layout_tracking\\005\\speaker_focus\\005_004565.jpg",
+              "speaker": "right",
+              "raw": {
+                "speaker": "right",
+                "reason": "The person on the right has their mouth open in a mid-speech position, while the person on the left is only partially visible and appears to be listening."
+              },
+              "visible_centers": {
+                "right": 0.5557
+              },
+              "both_visible": false,
+              "layout_raw": {
+                "layout": "sit_center",
+                "person_bbox": {
+                  "x1": 0.2486,
+                  "y1": 0.0481,
+                  "x2": 0.8385,
+                  "y2": 1.0
+                },
+                "face_bbox": {
+                  "x1": 0.4135,
+                  "y1": 0.1093,
+                  "x2": 0.6979,
+                  "y2": 0.6111
+                },
+                "chart_bbox": null,
+                "second_person_bbox": null,
+                "second_face_bbox": null,
+                "second_chart_bbox": null,
+                "reason": "A single person is visible in a seated, interview-style shot, making 'sit_center' the appropriate layout."
+              }
+            },
+            {
+              "time_sec": 9.13,
+              "frame_path": ".humeo_v16_multispeaker_sam_20260424_0415\\layout_tracking\\005\\speaker_focus\\005_009130.jpg",
+              "speaker": "right",
+              "raw": {
+                "speaker": "right",
+                "reason": "The person on the right is the only one visible, and their mouth is open as if they are in the middle of speaking."
+              },
+              "visible_centers": {
+                "right": 0.5225
+              },
+              "both_visible": false,
+              "layout_raw": {
+                "layout": "sit_center",
+                "person_bbox": {
+                  "x1": 0.214,
+                  "y1": 0.111,
+                  "x2": 0.923,
+                  "y2": 1.0
+                },
+                "face_bbox": {
+                  "x1": 0.364,
+                  "y1": 0.144,
+                  "x2": 0.681,
+                  "y2": 0.62
+                },
+                "chart_bbox": null,
+                "second_person_bbox": null,
+                "second_face_bbox": null,
+                "second_chart_bbox": null,
+                "reason": "The image features a single person in a classic interview or podcast setting, making 'sit_center' the ideal layout to frame the speaker."
+              }
+            },
+            {
+              "time_sec": 13.695,
+              "frame_path": ".humeo_v16_multispeaker_sam_20260424_0415\\layout_tracking\\005\\speaker_focus\\005_013695.jpg",
+              "speaker": "right",
+              "raw": {
+                "speaker": "right",
+                "reason": "The person on the right has their mouth open in a speaking posture and is actively gesturing with their hands, indicating they are the speaker. The person on the left is not visible."
+              },
+              "visible_centers": {
+                "right": 0.56065
+              },
+              "both_visible": false,
+              "layout_raw": {
+                "layout": "sit_center",
+                "person_bbox": {
+                  "x1": 0.2611,
+                  "y1": 0.1132,
+                  "x2": 0.9317,
+                  "y2": 1.0
+                },
+                "face_bbox": {
+                  "x1": 0.421,
+                  "y1": 0.1537,
+                  "x2": 0.7003,
+                  "y2": 0.555
+                },
+                "chart_bbox": null,
+                "second_person_bbox": null,
+                "second_face_bbox": null,
+                "second_chart_bbox": null,
+                "reason": "The image features a single person in a seated, interview-style setting, which is best described by the 'sit_center' layout."
+              }
+            },
+            {
+              "time_sec": 18.26,
+              "frame_path": ".humeo_v16_multispeaker_sam_20260424_0415\\layout_tracking\\005\\speaker_focus\\005_018260.jpg",
+              "speaker": "right",
+              "raw": {
+                "speaker": "right",
+                "reason": "The person on the right has their mouth open as if in the middle of speaking a word, while the person on the left has a more neutral, listening expression with their mouth mostly closed."
+              },
+              "visible_centers": {
+                "left": 0.253125,
+                "right": 0.646094
+              },
+              "both_visible": true,
+              "layout_raw": {
+                "layout": "split_two_persons",
+                "person_bbox": {
+                  "x1": 0.0,
+                  "y1": 0.268098,
+                  "x2": 0.457813,
+                  "y2": 0.890432
+                },
+                "face_bbox": {
+                  "x1": 0.203125,
+                  "y1": 0.322767,
+                  "x2": 0.303125,
+                  "y2": 0.501441
+                },
+                "chart_bbox": null,
+                "second_person_bbox": {
+                  "x1": 0.535937,
+                  "y1": 0.256484,
+                  "x2": 0.921875,
+                  "y2": 0.982709
+                },
+                "second_face_bbox": {
+                  "x1": 0.58125,
+                  "y1": 0.302594,
+                  "x2": 0.710938,
+                  "y2": 0.544669
+                },
+                "second_chart_bbox": null,
+                "reason": "The image features two people sitting at a table in a podcast-style interview setup, making the split_two_persons layout the most appropriate choice."
+              }
+            },
+            {
+              "time_sec": 22.825,
+              "frame_path": ".humeo_v16_multispeaker_sam_20260424_0415\\layout_tracking\\005\\speaker_focus\\005_022825.jpg",
+              "speaker": "right",
+              "raw": {
+                "speaker": "right",
+                "reason": "The person on the right has their mouth open in a speaking expression and is using hand gestures, while the person on the left appears to be listening."
+              },
+              "visible_centers": {
+                "left": 0.3365,
+                "right": 0.6645
+              },
+              "both_visible": true,
+              "layout_raw": {
+                "layout": "split_two_persons",
+                "person_bbox": {
+                  "x1": 0.1189,
+                  "y1": 0.2519,
+                  "x2": 0.505,
+                  "y2": 0.963
+                },
+                "face_bbox": {
+                  "x1": 0.289,
+                  "y1": 0.287,
+                  "x2": 0.384,
+                  "y2": 0.491
+                },
+                "chart_bbox": null,
+                "second_person_bbox": {
+                  "x1": 0.558,
+                  "y1": 0.179,
+                  "x2": 0.92,
+                  "y2": 0.96
+                },
+                "second_face_bbox": {
+                  "x1": 0.609,
+                  "y1": 0.208,
+                  "x2": 0.72,
+                  "y2": 0.412
+                },
+                "second_chart_bbox": null,
+                "reason": "The image features two people sitting at a table in a classic interview or podcast setup, making the split_two_persons layout the most appropriate choice."
+              }
+            },
+            {
+              "time_sec": 27.389,
+              "frame_path": ".humeo_v16_multispeaker_sam_20260424_0415\\layout_tracking\\005\\speaker_focus\\005_027389.jpg",
+              "speaker": "right",
+              "raw": {
+                "speaker": "right",
+                "reason": "The person on the right has their mouth open as if mid-speech, while the person on the left has a more neutral, listening expression with a closed mouth."
+              },
+              "visible_centers": {
+                "left": 0.30452500000000005,
+                "right": 0.676755
+              },
+              "both_visible": true,
+              "layout_raw": {
+                "layout": "split_two_persons",
+                "person_bbox": {
+                  "x1": 0.0,
+                  "y1": 0.23414,
+                  "x2": 0.48425,
+                  "y2": 0.90234
+                },
+                "face_bbox": {
+                  "x1": 0.24507,
+                  "y1": 0.2526,
+                  "x2": 0.36398,
+                  "y2": 0.48307
+                },
+                "chart_bbox": null,
+                "second_person_bbox": {
+                  "x1": 0.5413,
+                  "y1": 0.19141,
+                  "x2": 0.99902,
+                  "y2": 0.95312
+                },
+                "second_face_bbox": {
+                  "x1": 0.6123,
+                  "y1": 0.21484,
+                  "x2": 0.74121,
+                  "y2": 0.46484
+                },
+                "second_chart_bbox": null,
+                "reason": "The frame features two people sitting across from each other at a table, which is a classic two-person interview or podcast setup."
+              }
+            },
+            {
+              "time_sec": 31.954,
+              "frame_path": ".humeo_v16_multispeaker_sam_20260424_0415\\layout_tracking\\005\\speaker_focus\\005_031954.jpg",
+              "speaker": "right",
+              "raw": {
+                "speaker": "right",
+                "reason": "The person on the right has their mouth open in a speaking posture and is using hand gestures that are consistent with talking."
+              },
+              "visible_centers": {
+                "right": 0.511
+              },
+              "both_visible": false,
+              "layout_raw": {
+                "layout": "sit_center",
+                "person_bbox": {
+                  "x1": 0.2088,
+                  "y1": 0.1018,
+                  "x2": 0.963,
+                  "y2": 1.0
+                },
+                "face_bbox": {
+                  "x1": 0.359,
+                  "y1": 0.154,
+                  "x2": 0.663,
+                  "y2": 0.555
+                },
+                "chart_bbox": null,
+                "second_person_bbox": null,
+                "second_face_bbox": null,
+                "second_chart_bbox": null,
+                "reason": "The image contains a single person in a seated interview or podcast setting, making 'sit_center' the most appropriate layout."
+              }
+            },
+            {
+              "time_sec": 36.519,
+              "frame_path": ".humeo_v16_multispeaker_sam_20260424_0415\\layout_tracking\\005\\speaker_focus\\005_036519.jpg",
+              "speaker": "right",
+              "raw": {
+                "speaker": "right",
+                "reason": "The person on the right has their mouth open in a speaking posture and is gesturing with their hands. The person on the left is not visible in the frame."
+              },
+              "visible_centers": {
+                "right": 0.5028
+              },
+              "both_visible": false,
+              "layout_raw": {
+                "layout": "sit_center",
+                "person_bbox": {
+                  "x1": 0.2783,
+                  "y1": 0.1139,
+                  "x2": 0.9667,
+                  "y2": 1.0
+                },
+                "face_bbox": {
+                  "x1": 0.3639,
+                  "y1": 0.1639,
+                  "x2": 0.6417,
+                  "y2": 0.5417
+                },
+                "chart_bbox": null,
+                "second_person_bbox": null,
+                "second_face_bbox": null,
+                "second_chart_bbox": null,
+                "reason": "The image features a single person in a classic interview or podcast-style shot, which fits the 'sit_center' layout."
+              }
+            },
+            {
+              "time_sec": 41.084,
+              "frame_path": ".humeo_v16_multispeaker_sam_20260424_0415\\layout_tracking\\005\\speaker_focus\\005_041084.jpg",
+              "speaker": "right",
+              "raw": {
+                "speaker": "right",
+                "reason": "The person on the right has their mouth open as if in the middle of speaking. The person on the left is mostly out of frame and not visible enough to determine if they are speaking."
+              },
+              "visible_centers": {
+                "right": 0.534
+              },
+              "both_visible": false,
+              "layout_raw": {
+                "layout": "sit_center",
+                "person_bbox": {
+                  "x1": 0.261,
+                  "y1": 0.102,
+                  "x2": 0.961,
+                  "y2": 1.0
+                },
+                "face_bbox": {
+                  "x1": 0.384,
+                  "y1": 0.131,
+                  "x2": 0.684,
+                  "y2": 0.602
+                },
+                "chart_bbox": null,
+                "second_person_bbox": null,
+                "second_face_bbox": null,
+                "second_chart_bbox": null,
+                "reason": "The image contains a single speaker in a medium close-up, which is characteristic of a seated interview or podcast. The sit_center layout is most appropriate for this framing."
+              }
+            },
+            {
+              "time_sec": 2.0,
+              "frame_path": ".humeo_v16_multispeaker_sam_20260424_0415\\layout_tracking\\005\\speaker_focus\\005_002000.jpg",
+              "speaker": "right",
+              "raw": {
+                "speaker": "right",
+                "reason": "The person on the right has their mouth slightly pursed in a shape consistent with forming a word, and their facial expression is actively engaged in conversation."
+              },
+              "visible_centers": {
+                "right": 0.5124385
+              },
+              "both_visible": false,
+              "layout_raw": {
+                "layout": "sit_center",
+                "person_bbox": {
+                  "x1": 0.261895,
+                  "y1": 0.12484,
+                  "x2": 0.844321,
+                  "y2": 1.0
+                },
+                "face_bbox": {
+                  "x1": 0.371385,
+                  "y1": 0.201728,
+                  "x2": 0.653492,
+                  "y2": 0.614676
+                },
+                "chart_bbox": null,
+                "second_person_bbox": null,
+                "second_face_bbox": null,
+                "second_chart_bbox": null,
+                "reason": "The frame features a single person in a classic seated interview or podcast setup, which is a perfect fit for the sit_center layout."
+              }
+            },
+            {
+              "time_sec": 4.0,
+              "frame_path": ".humeo_v16_multispeaker_sam_20260424_0415\\layout_tracking\\005\\speaker_focus\\005_004000.jpg",
+              "speaker": "right",
+              "raw": {
+                "speaker": "right",
+                "reason": "The person on the right has their mouth open in a shape consistent with speaking. The person on the left is mostly out of frame and their mouth is not visible."
+              },
+              "visible_centers": {
+                "right": 0.53055
+              },
+              "both_visible": false,
+              "layout_raw": {
+                "layout": "sit_center",
+                "person_bbox": {
+                  "x1": 0.2811,
+                  "y1": 0.1537,
+                  "x2": 0.8529,
+                  "y2": 1.0
+                },
+                "face_bbox": {
+                  "x1": 0.3905,
+                  "y1": 0.1633,
+                  "x2": 0.6706,
+                  "y2": 0.6508
+                },
+                "chart_bbox": null,
+                "second_person_bbox": null,
+                "second_face_bbox": null,
+                "second_chart_bbox": null,
+                "reason": "A single speaker is centrally framed in a typical podcast or interview setting."
+              }
+            },
+            {
+              "time_sec": 6.0,
+              "frame_path": ".humeo_v16_multispeaker_sam_20260424_0415\\layout_tracking\\005\\speaker_focus\\005_006000.jpg",
+              "speaker": "right",
+              "raw": {
+                "speaker": "right",
+                "reason": "The person on the right has their mouth open in a speaking posture. The person on the left is almost entirely out of frame and cannot be assessed."
+              },
+              "visible_centers": {
+                "right": 0.5037
+              },
+              "both_visible": false,
+              "layout_raw": {
+                "layout": "sit_center",
+                "person_bbox": {
+                  "x1": 0.23703,
+                  "y1": 0.10303,
+                  "x2": 0.9134,
+                  "y2": 1.0
+                },
+                "face_bbox": {
+                  "x1": 0.34722,
+                  "y1": 0.14747,
+                  "x2": 0.66018,
+                  "y2": 0.5606
+                },
+                "chart_bbox": null,
+                "second_person_bbox": null,
+                "second_face_bbox": null,
+                "second_chart_bbox": null,
+                "reason": "The image features a single person in a medium shot, typical of a seated interview or podcast. The 'sit_center' layout is the most appropriate choice for this framing."
+              }
+            },
+            {
+              "time_sec": 8.0,
+              "frame_path": ".humeo_v16_multispeaker_sam_20260424_0415\\layout_tracking\\005\\speaker_focus\\005_008000.jpg",
+              "speaker": "right",
+              "raw": {
+                "speaker": "right",
+                "reason": "The person on the right is the only one clearly visible, and their mouth is open in a shape consistent with speaking."
+              },
+              "visible_centers": {
+                "right": 0.5047
+              },
+              "both_visible": false,
+              "layout_raw": {
+                "layout": "sit_center",
+                "person_bbox": {
+                  "x1": 0.2052,
+                  "y1": 0.0556,
+                  "x2": 0.901,
+                  "y2": 1.0
+                },
+                "face_bbox": {
+                  "x1": 0.3594,
+                  "y1": 0.1069,
+                  "x2": 0.65,
+                  "y2": 0.6014
+                },
+                "chart_bbox": null,
+                "second_person_bbox": null,
+                "second_face_bbox": null,
+                "second_chart_bbox": null,
+                "reason": "A single speaker is shown in a medium close-up, typical for a podcast or interview setting, making 'sit_center' the appropriate layout."
+              }
+            },
+            {
+              "time_sec": 10.0,
+              "frame_path": ".humeo_v16_multispeaker_sam_20260424_0415\\layout_tracking\\005\\speaker_focus\\005_010000.jpg",
+              "speaker": "right",
+              "raw": {
+                "speaker": "right",
+                "reason": "The person on the right has their mouth slightly pursed in a shape consistent with forming a word, and their facial expression is engaged as if they are in the middle of a sentence."
+              },
+              "visible_centers": {
+                "right": 0.50465
+              },
+              "both_visible": false,
+              "layout_raw": {
+                "layout": "sit_center",
+                "person_bbox": {
+                  "x1": 0.2812,
+                  "y1": 0.1041,
+                  "x2": 0.9218,
+                  "y2": 1.0
+                },
+                "face_bbox": {
+                  "x1": 0.3791,
+                  "y1": 0.177,
+                  "x2": 0.6302,
+                  "y2": 0.5606
+                },
+                "chart_bbox": null,
+                "second_person_bbox": null,
+                "second_face_bbox": null,
+                "second_chart_bbox": null,
+                "reason": "A single person is visible in a medium close-up, seated interview or podcast setting."
+              }
+            },
+            {
+              "time_sec": 12.0,
+              "frame_path": ".humeo_v16_multispeaker_sam_20260424_0415\\layout_tracking\\005\\speaker_focus\\005_012000.jpg",
+              "speaker": "right",
+              "raw": {
+                "speaker": "right",
+                "reason": "The person on the right has their mouth open in a clear speaking posture, directed towards the microphone. The person on the left is mostly out of frame and appears to be listening."
+              },
+              "visible_centers": {
+                "right": 0.49724999999999997
+              },
+              "both_visible": false,
+              "layout_raw": {
+                "layout": "sit_center",
+                "person_bbox": {
+                  "x1": 0.2805,
+                  "y1": 0.0,
+                  "x2": 0.8994,
+                  "y2": 1.0
+                },
+                "face_bbox": {
+                  "x1": 0.3636,
+                  "y1": 0.1778,
+                  "x2": 0.6309,
+                  "y2": 0.5822
+                },
+                "chart_bbox": null,
+                "second_person_bbox": null,
+                "second_face_bbox": null,
+                "second_chart_bbox": null,
+                "reason": "The image features a single person in a seated, interview-style setting, making 'sit_center' the most appropriate layout."
+              }
+            },
+            {
+              "time_sec": 14.0,
+              "frame_path": ".humeo_v16_multispeaker_sam_20260424_0415\\layout_tracking\\005\\speaker_focus\\005_014000.jpg",
+              "speaker": "right",
+              "raw": {
+                "speaker": "right",
+                "reason": "The person on the right has their mouth open in a speaking posture. The person on the left is almost entirely out of frame and cannot be assessed."
+              },
+              "visible_centers": {
+                "right": 0.502
+              },
+              "both_visible": false,
+              "layout_raw": {
+                "layout": "sit_center",
+                "person_bbox": {
+                  "x1": 0.2486,
+                  "y1": 0.1511,
+                  "x2": 0.929,
+                  "y2": 1.0
+                },
+                "face_bbox": {
+                  "x1": 0.363,
+                  "y1": 0.1511,
+                  "x2": 0.641,
+                  "y2": 0.583
+                },
+                "chart_bbox": null,
+                "second_person_bbox": null,
+                "second_face_bbox": null,
+                "second_chart_bbox": null,
+                "reason": "The image contains a single person in a medium close-up, typical of an interview or podcast setting. The 'sit_center' layout is most appropriate for this framing."
+              }
+            },
+            {
+              "time_sec": 16.0,
+              "frame_path": ".humeo_v16_multispeaker_sam_20260424_0415\\layout_tracking\\005\\speaker_focus\\005_016000.jpg",
+              "speaker": "right",
+              "raw": {
+                "speaker": "right",
+                "reason": "The person on the right has their mouth open in a speaking posture. The person on the left is not visible in the frame."
+              },
+              "visible_centers": {
+                "right": 0.5045
+              },
+              "both_visible": false,
+              "layout_raw": {
+                "layout": "sit_center",
+                "person_bbox": {
+                  "x1": 0.254,
+                  "y1": 0.101,
+                  "x2": 0.911,
+                  "y2": 1.0
+                },
+                "face_bbox": {
+                  "x1": 0.355,
+                  "y1": 0.15,
+                  "x2": 0.654,
+                  "y2": 0.557
+                },
+                "chart_bbox": null,
+                "second_person_bbox": null,
+                "second_face_bbox": null,
+                "second_chart_bbox": null,
+                "reason": "The image contains a single speaker in a seated interview or podcast setting, making 'sit_center' the most appropriate layout."
+              }
+            },
+            {
+              "time_sec": 18.0,
+              "frame_path": ".humeo_v16_multispeaker_sam_20260424_0415\\layout_tracking\\005\\speaker_focus\\005_018000.jpg",
+              "speaker": "right",
+              "raw": {
+                "speaker": "right",
+                "reason": "The person on the right has their mouth open in a shape consistent with forming a word, while the person on the left has a more neutral, listening expression with their mouth mostly closed."
+              },
+              "visible_centers": {
+                "left": 0.28764999999999996,
+                "right": 0.6462
+              },
+              "both_visible": true,
+              "layout_raw": {
+                "layout": "split_two_persons",
+                "person_bbox": {
+                  "x1": 0.0,
+                  "y1": 0.3148,
+                  "x2": 0.4619,
+                  "y2": 0.9037
+                },
+                "face_bbox": {
+                  "x1": 0.242,
+                  "y1": 0.3148,
+                  "x2": 0.3333,
+                  "y2": 0.4815
+                },
+                "chart_bbox": null,
+                "second_person_bbox": {
+                  "x1": 0.541,
+                  "y1": 0.3037,
+                  "x2": 0.9638,
+                  "y2": 0.963
+                },
+                "second_face_bbox": {
+                  "x1": 0.5914,
+                  "y1": 0.3037,
+                  "x2": 0.701,
+                  "y2": 0.4926
+                },
+                "second_chart_bbox": null,
+                "reason": "The frame features two speakers sitting across from each other at a table, which is a classic two-person interview or podcast setup."
+              }
+            },
+            {
+              "time_sec": 20.0,
+              "frame_path": ".humeo_v16_multispeaker_sam_20260424_0415\\layout_tracking\\005\\speaker_focus\\005_020000.jpg",
+              "speaker": "right",
+              "raw": {
+                "speaker": "right",
+                "reason": "The person on the right has their mouth open as if mid-speech and is gesturing with their hands. The person on the left has their mouth closed and appears to be listening."
+              },
+              "visible_centers": {
+                "left": 0.30695,
+                "right": 0.6630499999999999
+              },
+              "both_visible": true,
+              "layout_raw": {
+                "layout": "split_two_persons",
+                "person_bbox": {
+                  "x1": 0.0,
+                  "y1": 0.3342,
+                  "x2": 0.4811,
+                  "y2": 0.9638
+                },
+                "face_bbox": {
+                  "x1": 0.2519,
+                  "y1": 0.3527,
+                  "x2": 0.362,
+                  "y2": 0.5212
+                },
+                "chart_bbox": null,
+                "second_person_bbox": {
+                  "x1": 0.534,
+                  "y1": 0.2916,
+                  "x2": 1.0,
+                  "y2": 1.0
+                },
+                "second_face_bbox": {
+                  "x1": 0.6041,
+                  "y1": 0.3231,
+                  "x2": 0.722,
+                  "y2": 0.5212
+                },
+                "second_chart_bbox": null,
+                "reason": "The frame features two speakers seated across from each other at a table, which is a classic two-person interview or podcast setup."
+              }
+            },
+            {
+              "time_sec": 22.0,
+              "frame_path": ".humeo_v16_multispeaker_sam_20260424_0415\\layout_tracking\\005\\speaker_focus\\005_022000.jpg",
+              "speaker": "right",
+              "raw": {
+                "speaker": "right",
+                "reason": "The person on the right has their mouth open in a speaking expression and is gesturing with their hands. The person on the left appears to be listening."
+              },
+              "visible_centers": {
+                "left": 0.30025,
+                "right": 0.65375
+              },
+              "both_visible": true,
+              "layout_raw": {
+                "layout": "split_two_persons",
+                "person_bbox": {
+                  "x1": 0.0818,
+                  "y1": 0.3005,
+                  "x2": 0.4984,
+                  "y2": 0.8988
+                },
+                "face_bbox": {
+                  "x1": 0.2472,
+                  "y1": 0.3005,
+                  "x2": 0.3533,
+                  "y2": 0.4822
+                },
+                "chart_bbox": null,
+                "second_person_bbox": {
+                  "x1": 0.5656,
+                  "y1": 0.2483,
+                  "x2": 0.9583,
+                  "y2": 0.9633
+                },
+                "second_face_bbox": {
+                  "x1": 0.6033,
+                  "y1": 0.2483,
+                  "x2": 0.7042,
+                  "y2": 0.4511
+                },
+                "second_chart_bbox": null,
+                "reason": "The frame contains two people sitting across from each other at a table, which is a classic two-person interview or podcast setup."
+              }
+            },
+            {
+              "time_sec": 24.0,
+              "frame_path": ".humeo_v16_multispeaker_sam_20260424_0415\\layout_tracking\\005\\speaker_focus\\005_024000.jpg",
+              "speaker": "right",
+              "raw": {
+                "speaker": "right",
+                "reason": "The person on the right has their mouth open in a shape consistent with speaking, while the person on the left has a more neutral, listening expression."
+              },
+              "visible_centers": {
+                "left": 0.29259999999999997,
+                "right": 0.663
+              },
+              "both_visible": true,
+              "layout_raw": {
+                "layout": "split_two_persons",
+                "person_bbox": {
+                  "x1": 0.0,
+                  "y1": 0.2037,
+                  "x2": 0.4889,
+                  "y2": 0.9426
+                },
+                "face_bbox": {
+                  "x1": 0.2435,
+                  "y1": 0.3019,
+                  "x2": 0.3417,
+                  "y2": 0.4833
+                },
+                "chart_bbox": null,
+                "second_person_bbox": {
+                  "x1": 0.55,
+                  "y1": 0.2019,
+                  "x2": 0.9991,
+                  "y2": 1.0
+                },
+                "second_face_bbox": {
+                  "x1": 0.613,
+                  "y1": 0.2963,
+                  "x2": 0.713,
+                  "y2": 0.4926
+                },
+                "second_chart_bbox": null,
+                "reason": "The frame contains two speakers in a classic interview or podcast setup, making 'split_two_persons' the appropriate layout."
+              }
+            },
+            {
+              "time_sec": 26.0,
+              "frame_path": ".humeo_v16_multispeaker_sam_20260424_0415\\layout_tracking\\005\\speaker_focus\\005_026000.jpg",
+              "speaker": "right",
+              "raw": {
+                "speaker": "right",
+                "reason": "The person on the right has their mouth open in a shape consistent with speaking and is using their hands to gesture. The person on the left appears to be listening."
+              },
+              "visible_centers": {
+                "left": 0.2875,
+                "right": 0.653
+              },
+              "both_visible": true,
+              "layout_raw": {
+                "layout": "split_two_persons",
+                "person_bbox": {
+                  "x1": 0.148,
+                  "y1": 0.401,
+                  "x2": 0.48,
+                  "y2": 0.999
+                },
+                "face_bbox": {
+                  "x1": 0.245,
+                  "y1": 0.413,
+                  "x2": 0.33,
+                  "y2": 0.58
+                },
+                "chart_bbox": null,
+                "second_person_bbox": {
+                  "x1": 0.58,
+                  "y1": 0.301,
+                  "x2": 0.999,
+                  "y2": 1.0
+                },
+                "second_face_bbox": {
+                  "x1": 0.604,
+                  "y1": 0.312,
+                  "x2": 0.702,
+                  "y2": 0.51
+                },
+                "second_chart_bbox": null,
+                "reason": "The frame features two speakers sitting across from each other at a table, which is a classic two-person interview or podcast setup."
+              }
+            },
+            {
+              "time_sec": 28.0,
+              "frame_path": ".humeo_v16_multispeaker_sam_20260424_0415\\layout_tracking\\005\\speaker_focus\\005_028000.jpg",
+              "speaker": "right",
+              "raw": {
+                "speaker": "right",
+                "reason": "The person on the right has their mouth open in a speaking expression and is using hand gestures, while the person on the left appears to be listening."
+              },
+              "visible_centers": {
+                "left": 0.307,
+                "right": 0.6665
+              },
+              "both_visible": true,
+              "layout_raw": {
+                "layout": "split_two_persons",
+                "person_bbox": {
+                  "x1": 0.0,
+                  "y1": 0.224,
+                  "x2": 0.467,
+                  "y2": 0.903
+                },
+                "face_bbox": {
+                  "x1": 0.253,
+                  "y1": 0.312,
+                  "x2": 0.361,
+                  "y2": 0.511
+                },
+                "chart_bbox": null,
+                "second_person_bbox": {
+                  "x1": 0.542,
+                  "y1": 0.221,
+                  "x2": 1.0,
+                  "y2": 1.0
+                },
+                "second_face_bbox": {
+                  "x1": 0.611,
+                  "y1": 0.261,
+                  "x2": 0.722,
+                  "y2": 0.471
+                },
+                "second_chart_bbox": null,
+                "reason": "A classic two-person podcast interview setup, suitable for a split-screen layout."
+              }
+            },
+            {
+              "time_sec": 30.0,
+              "frame_path": ".humeo_v16_multispeaker_sam_20260424_0415\\layout_tracking\\005\\speaker_focus\\005_030000.jpg",
+              "speaker": "right",
+              "raw": {
+                "speaker": "right",
+                "reason": "The person on the right has their mouth open and is gesturing with their hands, indicating they are speaking. The person on the left has a listening posture with their mouth closed."
+              },
+              "visible_centers": {
+                "left": 0.31833333333333336,
+                "right": 0.6822222222222222
+              },
+              "both_visible": true,
+              "layout_raw": {
+                "layout": "split_two_persons",
+                "person_bbox": {
+                  "x1": 0.1088888888888889,
+                  "y1": 0.2722222222222222,
+                  "x2": 0.48,
+                  "y2": 0.801111111111111
+                },
+                "face_bbox": {
+                  "x1": 0.2722222222222222,
+                  "y1": 0.28,
+                  "x2": 0.36444444444444446,
+                  "y2": 0.4633333333333333
+                },
+                "chart_bbox": null,
+                "second_person_bbox": {
+                  "x1": 0.5711111111111111,
+                  "y1": 0.2011111111111111,
+                  "x2": 0.94,
+                  "y2": 0.8633333333333333
+                },
+                "second_face_bbox": {
+                  "x1": 0.6333333333333333,
+                  "y1": 0.21222222222222223,
+                  "x2": 0.731111111111111,
+                  "y2": 0.4211111111111111
+                },
+                "second_chart_bbox": null,
+                "reason": "The frame contains two people sitting at a table, characteristic of a two-person interview or podcast."
+              }
+            },
+            {
+              "time_sec": 32.0,
+              "frame_path": ".humeo_v16_multispeaker_sam_20260424_0415\\layout_tracking\\005\\speaker_focus\\005_032000.jpg",
+              "speaker": "right",
+              "raw": {
+                "speaker": "right",
+                "reason": "The person on the right has their mouth open in a speaking posture and is using hand gestures to emphasize their point. The person on the left is not visible."
+              },
+              "visible_centers": {
+                "right": 0.53
+              },
+              "both_visible": false,
+              "layout_raw": {
+                "layout": "sit_center",
+                "person_bbox": {
+                  "x1": 0.26,
+                  "y1": 0.14,
+                  "x2": 0.9,
+                  "y2": 1.0
+                },
+                "face_bbox": {
+                  "x1": 0.4,
+                  "y1": 0.18,
+                  "x2": 0.66,
+                  "y2": 0.6
+                },
+                "chart_bbox": null,
+                "second_person_bbox": null,
+                "second_face_bbox": null,
+                "second_chart_bbox": null,
+                "reason": "The image features a single person in a medium shot, consistent with an interview or podcast setting. The sit_center layout is chosen to keep the focus on the speaker."
+              }
+            },
+            {
+              "time_sec": 34.0,
+              "frame_path": ".humeo_v16_multispeaker_sam_20260424_0415\\layout_tracking\\005\\speaker_focus\\005_034000.jpg",
+              "speaker": "right",
+              "raw": {
+                "speaker": "right",
+                "reason": "The person on the right has their mouth open in a speaking posture and is using hand gestures, which strongly suggests they are the one talking. The person on the left is not visible."
+              },
+              "visible_centers": {
+                "right": 0.546
+              },
+              "both_visible": false,
+              "layout_raw": {
+                "layout": "sit_center",
+                "person_bbox": {
+                  "x1": 0.257,
+                  "y1": 0.102,
+                  "x2": 0.886,
+                  "y2": 1.0
+                },
+                "face_bbox": {
+                  "x1": 0.413,
+                  "y1": 0.241,
+                  "x2": 0.679,
+                  "y2": 0.648
+                },
+                "chart_bbox": null,
+                "second_person_bbox": null,
+                "second_face_bbox": null,
+                "second_chart_bbox": null,
+                "reason": "The image features a single person in a medium close-up, speaking into a microphone. This is a classic seated interview or podcast setup, making 'sit_center' the most suitable layout."
+              }
+            },
+            {
+              "time_sec": 36.0,
+              "frame_path": ".humeo_v16_multispeaker_sam_20260424_0415\\layout_tracking\\005\\speaker_focus\\005_036000.jpg",
+              "speaker": "right",
+              "raw": {
+                "speaker": "right",
+                "reason": "The person on the right has their mouth open mid-speech and is using hand gestures, indicating they are the one talking. The person on the left is not visible."
+              },
+              "visible_centers": {
+                "right": 0.50295
+              },
+              "both_visible": false,
+              "layout_raw": {
+                "layout": "sit_center",
+                "person_bbox": {
+                  "x1": 0.2801,
+                  "y1": 0.1018,
+                  "x2": 0.989,
+                  "y2": 1.0
+                },
+                "face_bbox": {
+                  "x1": 0.3639,
+                  "y1": 0.1611,
+                  "x2": 0.642,
+                  "y2": 0.5833
+                },
+                "chart_bbox": null,
+                "second_person_bbox": null,
+                "second_face_bbox": null,
+                "second_chart_bbox": null,
+                "reason": "The image features a single person in a classic seated interview or podcast setup, making 'sit_center' the most appropriate layout."
+              }
+            },
+            {
+              "time_sec": 38.0,
+              "frame_path": ".humeo_v16_multispeaker_sam_20260424_0415\\layout_tracking\\005\\speaker_focus\\005_038000.jpg",
+              "speaker": "right",
+              "raw": {
+                "speaker": "right",
+                "reason": "The person on the right has their mouth open in a speaking posture and an engaged facial expression. The person on the left is not visible in the frame."
+              },
+              "visible_centers": {
+                "right": 0.47845
+              },
+              "both_visible": false,
+              "layout_raw": {
+                "layout": "sit_center",
+                "person_bbox": {
+                  "x1": 0.225,
+                  "y1": 0.0639,
+                  "x2": 0.9861,
+                  "y2": 1.0
+                },
+                "face_bbox": {
+                  "x1": 0.3125,
+                  "y1": 0.1111,
+                  "x2": 0.6444,
+                  "y2": 0.6111
+                },
+                "chart_bbox": null,
+                "second_person_bbox": null,
+                "second_face_bbox": null,
+                "second_chart_bbox": null,
+                "reason": "The image contains a single speaker in a seated interview or podcast setting, making the 'sit_center' layout the most appropriate choice."
+              }
+            },
+            {
+              "time_sec": 40.0,
+              "frame_path": ".humeo_v16_multispeaker_sam_20260424_0415\\layout_tracking\\005\\speaker_focus\\005_040000.jpg",
+              "speaker": "right",
+              "raw": {
+                "speaker": "right",
+                "reason": "The person on the right has their mouth open in a manner consistent with speaking. The person on the left is not visible enough to determine if they are speaking."
+              },
+              "visible_centers": {
+                "right": 0.5325
+              },
+              "both_visible": false,
+              "layout_raw": {
+                "layout": "sit_center",
+                "person_bbox": {
+                  "x1": 0.204,
+                  "y1": 0.101,
+                  "x2": 0.859,
+                  "y2": 1.0
+                },
+                "face_bbox": {
+                  "x1": 0.381,
+                  "y1": 0.122,
+                  "x2": 0.684,
+                  "y2": 0.582
+                },
+                "chart_bbox": null,
+                "second_person_bbox": null,
+                "second_face_bbox": null,
+                "second_chart_bbox": null,
+                "reason": "The image contains a single speaker in a medium shot, characteristic of a seated interview or podcast. The sit_center layout is chosen to focus on this individual."
+              }
+            },
+            {
+              "time_sec": 42.0,
+              "frame_path": ".humeo_v16_multispeaker_sam_20260424_0415\\layout_tracking\\005\\speaker_focus\\005_042000.jpg",
+              "speaker": "right",
+              "raw": {
+                "speaker": "right",
+                "reason": "The person on the right has their mouth open in a shape consistent with speaking. The person on the left is not visible in the frame."
+              },
+              "visible_centers": {
+                "right": 0.5855
+              },
+              "both_visible": false,
+              "layout_raw": {
+                "layout": "sit_center",
+                "person_bbox": {
+                  "x1": 0.329,
+                  "y1": 0.103,
+                  "x2": 0.999,
+                  "y2": 1.0
+                },
+                "face_bbox": {
+                  "x1": 0.437,
+                  "y1": 0.211,
+                  "x2": 0.734,
+                  "y2": 0.604
+                },
+                "chart_bbox": null,
+                "second_person_bbox": null,
+                "second_face_bbox": null,
+                "second_chart_bbox": null,
+                "reason": "A single speaker is visible in a medium shot, characteristic of an interview or podcast setting. The `sit_center` layout is appropriate for this framing."
+              }
+            },
+            {
+              "time_sec": 44.0,
+              "frame_path": ".humeo_v16_multispeaker_sam_20260424_0415\\layout_tracking\\005\\speaker_focus\\005_044000.jpg",
+              "speaker": "right",
+              "raw": {
+                "speaker": "right",
+                "reason": "The person on the right has their mouth open in a speaking posture and an engaged facial expression. The person on the left is not visible in the frame."
+              },
+              "visible_centers": {
+                "right": 0.532
+              },
+              "both_visible": false,
+              "layout_raw": {
+                "layout": "sit_center",
+                "person_bbox": {
+                  "x1": 0.281,
+                  "y1": 0.08,
+                  "x2": 0.96,
+                  "y2": 1.0
+                },
+                "face_bbox": {
+                  "x1": 0.38,
+                  "y1": 0.103,
+                  "x2": 0.684,
+                  "y2": 0.555
+                },
+                "chart_bbox": null,
+                "second_person_bbox": null,
+                "second_face_bbox": null,
+                "second_chart_bbox": null,
+                "reason": "The frame features a single person in a medium close-up, typical of a seated interview or podcast. The 'sit_center' layout is the best fit."
+              }
+            },
+            {
+              "time_sec": 45.649,
+              "frame_path": ".humeo_v16_multispeaker_sam_20260424_0415\\layout_tracking\\005\\speaker_focus\\005_045649.jpg",
+              "speaker": "unclear",
+              "visible_centers": {
+                "right": 0.5273
+              },
+              "both_visible": false,
+              "error": "Connection error."
+            }
+          ],
+          "resolved_focus": [
+            {
+              "time_sec": 0.0,
+              "speaker": "right"
+            },
+            {
+              "time_sec": 4.565,
+              "speaker": "right"
+            },
+            {
+              "time_sec": 9.13,
+              "speaker": "right"
+            },
+            {
+              "time_sec": 13.695,
+              "speaker": "right"
+            },
+            {
+              "time_sec": 18.26,
+              "speaker": "right"
+            },
+            {
+              "time_sec": 22.825,
+              "speaker": "right"
+            },
+            {
+              "time_sec": 27.389,
+              "speaker": "right"
+            },
+            {
+              "time_sec": 31.954,
+              "speaker": "right"
+            },
+            {
+              "time_sec": 36.519,
+              "speaker": "right"
+            },
+            {
+              "time_sec": 41.084,
+              "speaker": "right"
+            },
+            {
+              "time_sec": 2.0,
+              "speaker": "right"
+            },
+            {
+              "time_sec": 4.0,
+              "speaker": "right"
+            },
+            {
+              "time_sec": 6.0,
+              "speaker": "right"
+            },
+            {
+              "time_sec": 8.0,
+              "speaker": "right"
+            },
+            {
+              "time_sec": 10.0,
+              "speaker": "right"
+            },
+            {
+              "time_sec": 12.0,
+              "speaker": "right"
+            },
+            {
+              "time_sec": 14.0,
+              "speaker": "right"
+            },
+            {
+              "time_sec": 16.0,
+              "speaker": "right"
+            },
+            {
+              "time_sec": 18.0,
+              "speaker": "right"
+            },
+            {
+              "time_sec": 20.0,
+              "speaker": "right"
+            },
+            {
+              "time_sec": 22.0,
+              "speaker": "right"
+            },
+            {
+              "time_sec": 24.0,
+              "speaker": "right"
+            },
+            {
+              "time_sec": 26.0,
+              "speaker": "right"
+            },
+            {
+              "time_sec": 28.0,
+              "speaker": "right"
+            },
+            {
+              "time_sec": 30.0,
+              "speaker": "right"
+            },
+            {
+              "time_sec": 32.0,
+              "speaker": "right"
+            },
+            {
+              "time_sec": 34.0,
+              "speaker": "right"
+            },
+            {
+              "time_sec": 36.0,
+              "speaker": "right"
+            },
+            {
+              "time_sec": 38.0,
+              "speaker": "right"
+            },
+            {
+              "time_sec": 40.0,
+              "speaker": "right"
+            },
+            {
+              "time_sec": 42.0,
+              "speaker": "right"
+            },
+            {
+              "time_sec": 44.0,
+              "speaker": "right"
+            },
+            {
+              "time_sec": 45.649,
+              "speaker": "right"
+            }
+          ],
+          "framing_samples": [
+            {
+              "time_sec": 0.0,
+              "x_norm": 0.5165,
+              "zoom": 1.28
+            },
+            {
+              "time_sec": 4.565,
+              "x_norm": 0.5557,
+              "zoom": 1.28
+            },
+            {
+              "time_sec": 9.13,
+              "x_norm": 0.5225,
+              "zoom": 1.28
+            },
+            {
+              "time_sec": 13.695,
+              "x_norm": 0.56065,
+              "zoom": 1.28
+            },
+            {
+              "time_sec": 18.26,
+              "x_norm": 0.646094,
+              "zoom": 1.28
+            },
+            {
+              "time_sec": 22.825,
+              "x_norm": 0.6645,
+              "zoom": 1.28
+            },
+            {
+              "time_sec": 27.389,
+              "x_norm": 0.676755,
+              "zoom": 1.28
+            },
+            {
+              "time_sec": 31.954,
+              "x_norm": 0.511,
+              "zoom": 1.28
+            },
+            {
+              "time_sec": 36.519,
+              "x_norm": 0.5028,
+              "zoom": 1.28
+            },
+            {
+              "time_sec": 41.084,
+              "x_norm": 0.534,
+              "zoom": 1.28
+            },
+            {
+              "time_sec": 2.0,
+              "x_norm": 0.5124385,
+              "zoom": 1.28
+            },
+            {
+              "time_sec": 4.0,
+              "x_norm": 0.53055,
+              "zoom": 1.28
+            },
+            {
+              "time_sec": 6.0,
+              "x_norm": 0.5037,
+              "zoom": 1.28
+            },
+            {
+              "time_sec": 8.0,
+              "x_norm": 0.5047,
+              "zoom": 1.28
+            },
+            {
+              "time_sec": 10.0,
+              "x_norm": 0.50465,
+              "zoom": 1.28
+            },
+            {
+              "time_sec": 12.0,
+              "x_norm": 0.49724999999999997,
+              "zoom": 1.28
+            },
+            {
+              "time_sec": 14.0,
+              "x_norm": 0.502,
+              "zoom": 1.28
+            },
+            {
+              "time_sec": 16.0,
+              "x_norm": 0.5045,
+              "zoom": 1.28
+            },
+            {
+              "time_sec": 18.0,
+              "x_norm": 0.6462,
+              "zoom": 1.28
+            },
+            {
+              "time_sec": 20.0,
+              "x_norm": 0.6630499999999999,
+              "zoom": 1.28
+            },
+            {
+              "time_sec": 22.0,
+              "x_norm": 0.65375,
+              "zoom": 1.28
+            },
+            {
+              "time_sec": 24.0,
+              "x_norm": 0.663,
+              "zoom": 1.28
+            },
+            {
+              "time_sec": 26.0,
+              "x_norm": 0.653,
+              "zoom": 1.28
+            },
+            {
+              "time_sec": 28.0,
+              "x_norm": 0.6665,
+              "zoom": 1.28
+            },
+            {
+              "time_sec": 30.0,
+              "x_norm": 0.6822222222222222,
+              "zoom": 1.28
+            },
+            {
+              "time_sec": 32.0,
+              "x_norm": 0.53,
+              "zoom": 1.28
+            },
+            {
+              "time_sec": 34.0,
+              "x_norm": 0.546,
+              "zoom": 1.28
+            },
+            {
+              "time_sec": 36.0,
+              "x_norm": 0.50295,
+              "zoom": 1.28
+            },
+            {
+              "time_sec": 38.0,
+              "x_norm": 0.47845,
+              "zoom": 1.28
+            },
+            {
+              "time_sec": 40.0,
+              "x_norm": 0.5325,
+              "zoom": 1.28
+            },
+            {
+              "time_sec": 42.0,
+              "x_norm": 0.5855,
+              "zoom": 1.28
+            },
+            {
+              "time_sec": 44.0,
+              "x_norm": 0.532,
+              "zoom": 1.28
+            },
+            {
+              "time_sec": 45.649,
+              "x_norm": 0.5273,
+              "zoom": 1.28
+            }
+          ]
+        }
+      }
+    }
+  }
+}

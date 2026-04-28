@@ -1,0 +1,180 @@
+{
+  "source_path": "",
+  "clips": [
+    {
+      "clip_id": "001",
+      "topic": "The AI Revolution Is Bigger Than The Railroads",
+      "start_time_sec": 0.0,
+      "end_time_sec": 50.9100000000044,
+      "viral_hook": "This is how we think that innovation is going to play out in the equity markets, the market cap.",
+      "virality_score": 0.82,
+      "transcript": "this is how we think that innovation is going to play out in the equity markets, the market cap. On the right-hand side there, you can see what happened to railroad stocks as a percent of the total global equity market cap, 65%. You can see where we are now, and we think this revolution is even bigger, as I mentioned. And really just starting in its first few years at least. And you can see where we think innovation's going to go as a percent of global market cap. Again, we've just begun. We don't think AI hype is where we are at all. We do not think we're in the equivalent of the tech and telecom bubble. We're very happy that many people are worried about it.",
+      "suggested_overlay_title": "AI Is Bigger Than the Railroad",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.85,
+        "hook_emotion": 0.8,
+        "catchy": 0.8
+      },
+      "reasoning": "This clip makes a massive, headline-worthy claim by comparing the AI revolution to the railroad boom (65% of market cap) and saying it will be bigger. This creates a strong sense of awe and has a very sticky historical analogy.",
+      "hook_start_sec": null,
+      "hook_end_sec": null,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "render_spans": [],
+      "shorts_title": "This AI Boom Could Dwarf the Railroad Bubble",
+      "description": "Cathie Wood explains why the current innovation cycle is bigger than the railroad boom, which reached 65% of the total global equity market cap, and why today's fear is a good thing.",
+      "hashtags": [
+        "ai",
+        "investing",
+        "cathiewood",
+        "stockmarket",
+        "innovation",
+        "history"
+      ],
+      "layout_hint": "split_chart_person",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "002",
+      "topic": "Jeff Bezos's \"Prophet\" Moment in the Dot-Com Bubble",
+      "start_time_sec": 0.0,
+      "end_time_sec": 64.33600000000479,
+      "viral_hook": "I'll remember clearly, Jeff Bezos at Amazon, and I think this was in 1999. He, with some glee, announced on Amazon's earnings call that Amazon was going to lose so much more money in the next year.",
+      "virality_score": 0.9125,
+      "transcript": "Jeff Bezos at Amazon, and I think this was in 1999. He, with some glee, announced on Amazon's earnings call that Amazon was going to lose so much more money in the next year because Amazon, Jeff, had decided this opportunity was so much bigger than anyone understood. And by the way, he was right. It was going to take much longer. That he had to up the capital spending budget. And what happened that day? The stock just soared. And one of our panelists on our brainstorm this week reminded me that a journalist asked Jeff, \"Well, how do you spell profit in this new world? What does that mean?\" And he spelled it P-R-O-P-H-E-T. So that's how cavalier CEOs of innovation-based companies were back then, those driving the innovation. And then, of course, they paid a heavy price for that over the next three to four years.",
+      "suggested_overlay_title": "Jeff Bezos Spelled \"Profit\" During The",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.9,
+        "hook_emotion": 0.9,
+        "catchy": 0.95
+      },
+      "reasoning": "This clip is a perfect narrative with a setup, a shocking middle, and a killer punchline ('P-R-O-P-H-E-T'). It's highly memorable, emotional (humor, shock), and tells a powerful story about market psychology, making it score high on all axes.",
+      "hook_start_sec": null,
+      "hook_end_sec": null,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "render_spans": [],
+      "shorts_title": "The Time Jeff Bezos Called Himself a \"Prophet\"",
+      "description": "During the dot-com bubble, Jeff Bezos told investors Amazon would lose more money. When a journalist asked how to spell 'profit', he spelled 'prophet'. Here's what that says about market psychology.",
+      "hashtags": [
+        "jeffbezos",
+        "amazon",
+        "dotcombubble",
+        "investing",
+        "cathiewood",
+        "history"
+      ],
+      "layout_hint": "sit_center",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "003",
+      "topic": "The Big Three Winners of Crypto Are Emerging",
+      "start_time_sec": 0.0,
+      "end_time_sec": 44.17099999999914,
+      "viral_hook": "It won't be, of course, just Bitcoin. It'll be Ether, importantly Ether. Solana, maybe Hyperliquid. We shall see. But what's interesting about this period is the big three have been identified.",
+      "virality_score": 0.7425,
+      "transcript": "it won't be, of course, just Bitcoin. It'll be Ether, importantly Ether. Solana, maybe Hyperliquid. We shall see. But what's interesting about this period is the big three have been identified. And those are Bitcoin, Ether, and Solana. The worry historically has been how many of these things are there going to be? Is this going to be a very fragmented situation? And we're learning who the big winners are going to be, who the big winners are. And I think that's very important. And then the third revolution is this is a new asset class. Bitcoin is leading the way. It is the most secure of all the cryptocurrencies out there, backed by the largest computer network in the world.",
+      "suggested_overlay_title": "The 3 Big Winners of Crypto",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.8,
+        "hook_emotion": 0.6,
+        "catchy": 0.85
+      },
+      "reasoning": "This clip makes a very strong, declarative statement ('the big three have been identified') that provides clarity in a chaotic market. Naming the specific winners (Bitcoin, Ether, Solana) is a powerful hook and takeaway for any crypto investor.",
+      "hook_start_sec": null,
+      "hook_end_sec": null,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "render_spans": [],
+      "shorts_title": "Cathie Wood Names the \"Big Three\" of Crypto",
+      "description": "According to Cathie Wood, the crypto market is consolidating around three main winners: Bitcoin, Ether, and Solana. This reduces the risk of fragmentation that has worried investors.",
+      "hashtags": [
+        "crypto",
+        "bitcoin",
+        "ethereum",
+        "solana",
+        "investing",
+        "cathiewood"
+      ],
+      "layout_hint": "sit_center",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "004",
+      "topic": "Why Veteran Investors Fear an AI Bubble",
+      "start_time_sec": 0.0,
+      "end_time_sec": 47.20999999999867,
+      "viral_hook": "Many of the most seasoned investors today were very young when the tech and telecom bubble took off, and now they are the gray hairs.",
+      "virality_score": 0.785,
+      "transcript": "Many of the most seasoned investors today were very young when the tech and telecom bubble took off, and now they are the gray hairs. And I'm friends with a lot of them. And many of them are saying, \"Been there, done that. I'm leading this organization now, and I'm going to protect it from this bubble.\" And we understand that. But as I just described, we have really just started this journey, and we expect the capital spending cycle to go much further for much longer. And the reason is the technologies are ready. Back in the '90s, we didn't get the cloud even until 2006.",
+      "suggested_overlay_title": "Investors Who Lived the Dot-com Crash",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.85,
+        "hook_emotion": 0.7,
+        "catchy": 0.8
+      },
+      "reasoning": "The clip offers a strong psychological insight into market behavior, framing today's skepticism through the lens of past trauma. Phrases like 'now they are the gray hairs' and 'Been there, done that' are highly relatable and catchy, making the message stick.",
+      "hook_start_sec": null,
+      "hook_end_sec": null,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "render_spans": [],
+      "shorts_title": "Why Today's Top Investors Fear the AI Boom",
+      "description": "Cathie Wood explains the psychology of seasoned investors who were scarred by the dot-com bubble and are now overly cautious about AI, arguing why this time is different.",
+      "hashtags": [
+        "investing",
+        "psychology",
+        "aistocks",
+        "dotcombubble",
+        "cathiewood",
+        "arkinvest"
+      ],
+      "layout_hint": "split_chart_person",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "005",
+      "topic": "SaaS Is Becoming a Victim of the AI Revolution",
+      "start_time_sec": 0.0,
+      "end_time_sec": 48.24200000000019,
+      "viral_hook": "You can see the big loser we thought was going to be the application layer. Largely software as a service.",
+      "virality_score": 0.8175,
+      "transcript": "You can see the big loser we thought was going to be the application layer. Largely software as a service. Now, if there's something wrong with this chart, you can see it is in our projection for software as a service going forward on the top there, 20% plus. It's not going to be anything like that. In fact, we do believe that software as a service is becoming a victim of this AI revolution. There will be consolidators and software as a service providers who do survive this route. They will consolidate the market. But we underestimated ourselves. We were saying that SaaS was going to lose share. We didn't realize how much, how soon. And that gives you a sense of how quickly this revolution is happening.",
+      "suggested_overlay_title": "Saas Companies Are the New Victims",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.9,
+        "hook_emotion": 0.7,
+        "catchy": 0.85
+      },
+      "reasoning": "This clip has a powerful, contrarian message ('SaaS is becoming a victim') that creates urgency for a huge industry. The admission of 'we underestimated ourselves' adds authenticity and drama. The phrase 'victim of this AI revolution' is extremely catchy.",
+      "hook_start_sec": null,
+      "hook_end_sec": null,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "render_spans": [],
+      "shorts_title": "Cathie Wood: We Underestimated How Fast AI Would Disrupt SaaS",
+      "description": "Cathie Wood explains why traditional Software-as-a-Service (SaaS) is a major loser in the AI revolution, and how ARK's own projections were not bearish enough.",
+      "hashtags": [
+        "saas",
+        "ai",
+        "investing",
+        "disruption",
+        "cathiewood",
+        "tech"
+      ],
+      "layout_hint": "split_chart_person",
+      "needs_review": false,
+      "review_reason": ""
+    }
+  ]
+}

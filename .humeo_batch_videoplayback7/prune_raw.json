@@ -1,0 +1,39 @@
+{
+  "decisions": [
+    {
+      "clip_id": "001",
+      "trim_start_sec": 3.46,
+      "trim_end_sec": 6.24,
+      "reason": "Trimmed a slow lead-in to start with a direct question and removed a trailing tangent about the company's founding.",
+      "thought": "Starting with 'Did you know...' is much stronger. The ending at '...we're now in the prime time' is energetic and conclusive, while cutting the personal anecdote about founding the company which is off-topic. This trim is well within the balanced budget."
+    },
+    {
+      "clip_id": "002",
+      "trim_start_sec": 18.11,
+      "trim_end_sec": 0.0,
+      "reason": "Removed the first 18 seconds which discussed a separate topic (drug discovery costs) to focus the clip on its main topic, the value of a cure.",
+      "thought": "The first part of the clip was on a different topic. To create a focused narrative, I trimmed it entirely, despite the new opening 'And then...' being slightly imperfect. This was a more aggressive trim than the 'balanced' target, but necessary for coherence with the stated topic. The ending was strong and required no trim."
+    },
+    {
+      "clip_id": "003",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "reason": "The clip is already concise at 52.6 seconds and any trim would risk pushing it below the minimum duration and would not improve its strong narrative structure.",
+      "thought": "The clip is tight, with a clear setup and payoff. The start is attention-grabbing and the end connects the topic to a current event (AI demands on the grid). Given its short initial length, no trimming is warranted."
+    },
+    {
+      "clip_id": "004",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 16.27,
+      "reason": "Trimmed a trailing personal anecdote and a list of examples to end on a stronger, more imaginative call to action.",
+      "thought": "The start was acceptable, but the end had a personal tangent about founding Ark and then a list of AI tools that weakened the conclusion. By cutting after the powerful 'I would like to start that business' line, the clip becomes much more focused and ends with a strong, inspiring thought."
+    },
+    {
+      "clip_id": "005",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 11.68,
+      "reason": "Removed the final historical comparison (automobiles) to create a tighter conclusion that still supports the main argument.",
+      "thought": "The clip's core argument is made early on. The subsequent historical analogies to railroads and automobiles add color but are not essential. Cutting the final analogy (automobiles) tightens the clip significantly while keeping it over 50 seconds and staying within the 'balanced' trim budget."
+    }
+  ]
+}

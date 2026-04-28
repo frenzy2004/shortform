@@ -1,0 +1,60 @@
+{
+  "hooks": [
+    {
+      "clip_id": "001",
+      "hook_start_sec": 21.92,
+      "hook_end_sec": 25.28,
+      "hook_text": "Normally, depreciation takes place over 30.",
+      "reason": "This sentence establishes a baseline of 'normal' that creates immediate curiosity about the 'abnormal' change being introduced, making it an effective setup."
+    },
+    {
+      "clip_id": "002",
+      "hook_start_sec": 15.72,
+      "hook_end_sec": 22.54,
+      "hook_text": "go for it, go for it. We're in such an early stage of AI. Learn to vibe code,",
+      "reason": "The claim 'We're in such an early stage of AI' is a powerful, forward-looking statement that creates urgency and is the first rule-compliant hook in the clip."
+    },
+    {
+      "clip_id": "003",
+      "hook_start_sec": 42.5,
+      "hook_end_sec": 49.28,
+      "hook_text": "because I think companies held on to workers, and you're starting to see the Challenger layoff survey, I think it was the latest month, was up 175% in reduction in force announcements.",
+      "reason": "The hard number 'up 175%' is a shocking statistic that functions as a powerful hook, outweighing the weak conjunction at the start of the segment."
+    },
+    {
+      "clip_id": "004",
+      "hook_start_sec": 23.48,
+      "hook_end_sec": 32.36,
+      "hook_text": "Employment lags, so the unemployment rate probably will continue moving up, even as this rolling recovery gets underway.",
+      "reason": "This is a strong, counter-intuitive economic claim that starts cleanly, making it the best hook despite violating the duration constraint due to poor source segmentation."
+    },
+    {
+      "clip_id": "005",
+      "hook_start_sec": 18.48,
+      "hook_end_sec": 21.58,
+      "hook_text": "Many people think it lasted throughout the 30s.",
+      "reason": "This sentence challenges a common misconception, which is an effective technique to create intrigue and encourage the viewer to learn the 'real' story."
+    },
+    {
+      "clip_id": "006",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 5.46,
+      "hook_text": "are complicating the picture. If we are right, we are moving into a highly deflationary age.",
+      "reason": "This segment opens with the bold, forward-looking claim of a 'highly deflationary age,' which immediately establishes high stakes and captures attention."
+    },
+    {
+      "clip_id": "007",
+      "hook_start_sec": 15.62,
+      "hook_end_sec": 20.92,
+      "hook_text": "saying, well, wait a minute, hasn't the poverty rate in the United States gone down? And yes,",
+      "reason": "This segment poses a direct, intriguing question with a conversational lead-in, effectively pulling the viewer in by creating a knowledge gap they want filled."
+    },
+    {
+      "clip_id": "008",
+      "hook_start_sec": 12.56,
+      "hook_end_sec": 17.36,
+      "hook_text": "I think it's partly because where are the excesses in the markets?",
+      "reason": "This segment hooks the viewer by asking a compelling and timely question about market excesses, making them want to stay for the answer."
+    }
+  ]
+}

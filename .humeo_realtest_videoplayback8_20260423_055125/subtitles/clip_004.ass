@@ -1,0 +1,50 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Source Sans 3,48,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,-1,-1,0,0,100,100,0,0,1,0,0,1,60,60,160,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.72,Default,,0,0,0,,2026 at this point?
+Dialogue: 0,0:00:01.74,0:00:02.29,Default,,0,0,0,,And I know there's
+Dialogue: 0,0:00:02.34,0:00:03.15,Default,,0,0,0,,a lot in your
+Dialogue: 0,0:00:03.40,0:00:04.06,Default,,0,0,0,,research, but is there
+Dialogue: 0,0:00:04.18,0:00:04.75,Default,,0,0,0,,a best idea or
+Dialogue: 0,0:00:04.82,0:00:05.79,Default,,0,0,0,,narrative? Just quickly, if
+Dialogue: 0,0:00:05.82,0:00:07.88,Default,,0,0,0,,you could. Well, so
+Dialogue: 0,0:00:07.92,0:00:09.60,Default,,0,0,0,,the top three stocks
+Dialogue: 0,0:00:09.86,0:00:12.14,Default,,0,0,0,,in our flagship are
+Dialogue: 0,0:00:12.20,0:00:13.22,Default,,0,0,0,,Tesla. We think it
+Dialogue: 0,0:00:13.26,0:00:14.38,Default,,0,0,0,,has miles to go.
+Dialogue: 0,0:00:14.66,0:00:15.71,Default,,0,0,0,,We do take profits
+Dialogue: 0,0:00:15.78,0:00:16.54,Default,,0,0,0,,from time to time,
+Dialogue: 0,0:00:16.60,0:00:17.50,Default,,0,0,0,,but it could break
+Dialogue: 0,0:00:17.60,0:00:18.24,Default,,0,0,0,,out here in a
+Dialogue: 0,0:00:18.32,0:00:18.98,Default,,0,0,0,,big way as more
+Dialogue: 0,0:00:18.99,0:00:19.92,Default,,0,0,0,,and more analysts do
+Dialogue: 0,0:00:19.96,0:00:21.75,Default,,0,0,0,,their homework on robotaxis.
+Dialogue: 0,0:00:21.84,0:00:23.89,Default,,0,0,0,,Mm. Crispr Therapeutics has
+Dialogue: 0,0:00:23.92,0:00:25.50,Default,,0,0,0,,moved into the second
+Dialogue: 0,0:00:25.54,0:00:27.62,Default,,0,0,0,,position. That company is
+Dialogue: 0,0:00:27.70,0:00:29.64,Default,,0,0,0,,curing sickle cell disease
+Dialogue: 0,0:00:29.68,0:00:31.56,Default,,0,0,0,,and beta thalassemia and
+Dialogue: 0,0:00:31.62,0:00:33.14,Default,,0,0,0,,has its eyes set
+Dialogue: 0,0:00:33.24,0:00:34.36,Default,,0,0,0,,on not just rare
+Dialogue: 0,0:00:34.40,0:00:36.72,Default,,0,0,0,,diseases, but curing the
+Dialogue: 0,0:00:36.82,0:00:39.12,Default,,0,0,0,,bad cholesterol problem, especially
+Dialogue: 0,0:00:39.24,0:00:41.80,Default,,0,0,0,,for those who have
+Dialogue: 0,0:00:41.84,0:00:43.90,Default,,0,0,0,,hereditary issues in that
+Dialogue: 0,0:00:43.96,0:00:44.78,Default,,0,0,0,,realm. That could be
+Dialogue: 0,0:00:44.82,0:00:46.43,Default,,0,0,0,,an enormous market, and
+Dialogue: 0,0:00:46.56,0:00:48.12,Default,,0,0,0,,I don't think anyone
+Dialogue: 0,0:00:48.20,0:00:49.22,Default,,0,0,0,,is doing the modeling
+Dialogue: 0,0:00:49.26,0:00:50.06,Default,,0,0,0,,work there the way
+Dialogue: 0,0:00:50.12,0:00:50.94,Default,,0,0,0,,we are. I love
+Dialogue: 0,0:00:50.98,0:00:51.86,Default,,0,0,0,,it. All right. Hopefully,

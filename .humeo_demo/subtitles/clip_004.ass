@@ -1,0 +1,79 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,48,&H00FFFFFF,&H000000FF,&H00000000,&H70000000,-1,0,0,0,100,100,0,0,4,0,0,2,60,60,160,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:00.85,Default,,0,0,0,,do think media is
+Dialogue: 0,0:00:00.85,0:00:03.21,Default,,0,0,0,,obviously a critical ecosystem
+Dialogue: 0,0:00:03.21,0:00:04.37,Default,,0,0,0,,player It does keep
+Dialogue: 0,0:00:04.37,0:00:05.79,Default,,0,0,0,,checks and balances Our
+Dialogue: 0,0:00:05.79,0:00:06.85,Default,,0,0,0,,job more than maybe
+Dialogue: 0,0:00:06.85,0:00:07.69,Default,,0,0,0,,the founder's job maybe
+Dialogue: 0,0:00:07.69,0:00:08.31,Default,,0,0,0,,the founder's job is
+Dialogue: 0,0:00:08.31,0:00:08.93,Default,,0,0,0,,not to vent but
+Dialogue: 0,0:00:08.93,0:00:09.57,Default,,0,0,0,,also figure out how
+Dialogue: 0,0:00:09.57,0:00:10.23,Default,,0,0,0,,to build their leverage
+Dialogue: 0,0:00:10.35,0:00:11.17,Default,,0,0,0,,But our job is
+Dialogue: 0,0:00:11.17,0:00:12.61,Default,,0,0,0,,to kind of some
+Dialogue: 0,0:00:12.61,0:00:13.47,Default,,0,0,0,,of these things and
+Dialogue: 0,0:00:13.47,0:00:14.41,Default,,0,0,0,,call out things that
+Dialogue: 0,0:00:14.41,0:00:15.71,Default,,0,0,0,,actually everybody in the
+Dialogue: 0,0:00:15.71,0:00:16.87,Default,,0,0,0,,ecosystem knows is happening
+Dialogue: 0,0:00:17.77,0:00:18.45,Default,,0,0,0,,I don't know how
+Dialogue: 0,0:00:18.45,0:00:19.13,Default,,0,0,0,,did you feel about
+Dialogue: 0,0:00:19.13,0:00:20.13,Default,,0,0,0,,Glass Wall last year
+Dialogue: 0,0:00:20.23,0:00:21.89,Default,,0,0,0,,Yeah fantastic Like was
+Dialogue: 0,0:00:21.89,0:00:22.95,Default,,0,0,0,,truth seeking exercise right
+Dialogue: 0,0:00:22.95,0:00:24.11,Default,,0,0,0,,We every single bit
+Dialogue: 0,0:00:24.15,0:00:25.55,Default,,0,0,0,,and then I took
+Dialogue: 0,0:00:25.55,0:00:26.69,Default,,0,0,0,,my team together and
+Dialogue: 0,0:00:26.69,0:00:27.45,Default,,0,0,0,,I say hey look
+Dialogue: 0,0:00:27.45,0:00:28.75,Default,,0,0,0,,there's a of Let's
+Dialogue: 0,0:00:28.75,0:00:29.85,Default,,0,0,0,,just imagine because we
+Dialogue: 0,0:00:29.85,0:00:30.39,Default,,0,0,0,,don't know who are
+Dialogue: 0,0:00:30.79,0:00:31.73,Default,,0,0,0,,let's imagine ourselves saying
+Dialogue: 0,0:00:31.73,0:00:32.51,Default,,0,0,0,,sorry to them if
+Dialogue: 0,0:00:32.51,0:00:33.39,Default,,0,0,0,,they were you know
+Dialogue: 0,0:00:33.49,0:00:34.41,Default,,0,0,0,,this is like exercise
+Dialogue: 0,0:00:34.61,0:00:35.17,Default,,0,0,0,,ho no po no
+Dialogue: 0,0:00:35.27,0:00:36.07,Default,,0,0,0,,like you can Google
+Dialogue: 0,0:00:36.07,0:00:37.19,Default,,0,0,0,,it nobody can probably
+Dialogue: 0,0:00:37.19,0:00:38.33,Default,,0,0,0,,spell it But you
+Dialogue: 0,0:00:38.33,0:00:40.47,Default,,0,0,0,,go to like you
+Dialogue: 0,0:00:40.47,0:00:41.93,Default,,0,0,0,,visualize a is suffering
+Dialogue: 0,0:00:41.93,0:00:42.65,Default,,0,0,0,,and you go like
+Dialogue: 0,0:00:42.65,0:00:43.63,Default,,0,0,0,,I'm sorry I love
+Dialogue: 0,0:00:43.63,0:00:44.53,Default,,0,0,0,,you please forgive me
+Dialogue: 0,0:00:44.67,0:00:45.67,Default,,0,0,0,,thank you right And
+Dialogue: 0,0:00:45.67,0:00:46.57,Default,,0,0,0,,you just repeat that
+Dialogue: 0,0:00:46.75,0:00:48.33,Default,,0,0,0,,it's not I you
+Dialogue: 0,0:00:48.33,0:00:49.27,Default,,0,0,0,,can think that you
+Dialogue: 0,0:00:49.27,0:00:50.05,Default,,0,0,0,,healing somebody But you're
+Dialogue: 0,0:00:50.05,0:00:51.65,Default,,0,0,0,,actually trying to create
+Dialogue: 0,0:00:51.65,0:00:52.93,Default,,0,0,0,,like a conversation of
+Dialogue: 0,0:00:52.97,0:00:54.41,Default,,0,0,0,,because clearly like any
+Dialogue: 0,0:00:54.41,0:00:55.61,Default,,0,0,0,,and every VC had
+Dialogue: 0,0:00:55.61,0:00:56.49,Default,,0,0,0,,their missteps along the
+Dialogue: 0,0:00:56.49,0:00:58.19,Default,,0,0,0,,way Every VC who's
+Dialogue: 0,0:00:58.19,0:00:58.85,Default,,0,0,0,,born in this ecosystem
+Dialogue: 0,0:00:58.87,0:00:59.93,Default,,0,0,0,,has a bad meeting
+Dialogue: 0,0:00:59.93,0:01:01.01,Default,,0,0,0,,or whatever Yeah everyone's
+Dialogue: 0,0:01:01.01,0:01:01.65,Default,,0,0,0,,got a bad day
+Dialogue: 0,0:01:01.77,0:01:02.31,Default,,0,0,0,,and it's on both
+Dialogue: 0,0:01:02.31,0:01:03.15,Default,,0,0,0,,sides and people have
+Dialogue: 0,0:01:03.15,0:01:03.89,Default,,0,0,0,,bad days and worse
+Dialogue: 0,0:01:03.99,0:01:04.57,Default,,0,0,0,,you So I feel
+Dialogue: 0,0:01:04.57,0:01:06.09,Default,,0,0,0,,like what I always
+Dialogue: 0,0:01:06.09,0:01:06.79,Default,,0,0,0,,want my team members
+Dialogue: 0,0:01:06.79,0:01:07.55,Default,,0,0,0,,to do is to
+Dialogue: 0,0:01:07.55,0:01:08.61,Default,,0,0,0,,just take ownership as
+Dialogue: 0,0:01:08.61,0:01:09.00,Default,,0,0,0,,a

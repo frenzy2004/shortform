@@ -1,0 +1,39 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,48,&H00FFFFFF,&H000000FF,&H00000000,&H70000000,-1,0,0,0,100,100,0,0,4,0,0,2,60,60,160,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.48,Default,,0,0,0,,And I had what
+Dialogue: 0,0:00:02.48,0:00:03.22,Default,,0,0,0,,I can only describe
+Dialogue: 0,0:00:03.22,0:00:05.52,Default,,0,0,0,,as a holy shit
+Dialogue: 0,0:00:05.52,0:00:06.40,Default,,0,0,0,,moment
+Dialogue: 0,0:00:08.40,0:00:10.26,Default,,0,0,0,,The boilerplate the
+Dialogue: 0,0:00:10.68,0:00:12.90,Default,,0,0,0,,all the parts that
+Dialogue: 0,0:00:12.90,0:00:14.99,Default,,0,0,0,,was software development
+Dialogue: 0,0:00:15.66,0:00:17.36,Default,,0,0,0,,AI could do all
+Dialogue: 0,0:00:17.36,0:00:19.62,Default,,0,0,0,,of it The bottleneck
+Dialogue: 0,0:00:19.62,0:00:20.58,Default,,0,0,0,,is no longer typing
+Dialogue: 0,0:00:21.62,0:00:24.06,Default,,0,0,0,,It's And syncing was
+Dialogue: 0,0:00:24.06,0:00:25.90,Default,,0,0,0,,the part I did
+Dialogue: 0,0:00:25.90,0:00:26.96,Default,,0,0,0,,25 years
+Dialogue: 0,0:00:28.86,0:00:31.36,Default,,0,0,0,,Building software felt
+Dialogue: 0,0:00:31.36,0:00:32.12,Default,,0,0,0,,like playing a video
+Dialogue: 0,0:00:32.12,0:00:34.34,Default,,0,0,0,,game again I was
+Dialogue: 0,0:00:34.34,0:00:36.66,Default,,0,0,0,,back I built
+Dialogue: 0,0:00:36.66,0:00:39.16,Default,,0,0,0,,44 projects
+Dialogue: 0,0:00:39.16,0:00:41.30,Default,,0,0,0,,in just a months
+Dialogue: 0,0:00:41.90,0:00:44.46,Default,,0,0,0,,And the one was
+Dialogue: 0,0:00:44.46,0:00:47.26,Default,,0,0,0,,a WhatsApp bot I
+Dialogue: 0,0:00:47.26,0:00:47.88,Default,,0,0,0,,put it on my
+Dialogue: 0,0:00:47.88,0:00:50.48,Default,,0,0,0,,computer It talks through
+Dialogue: 0,0:00:50.48,0:00:52.02,Default,,0,0,0,,the apps that you
+Dialogue: 0,0:00:52.02,0:00:52.70,Default,,0,0,0,,already know

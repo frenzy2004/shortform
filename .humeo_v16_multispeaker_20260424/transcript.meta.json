@@ -1,0 +1,5 @@
+{
+  "provider": "elevenlabs",
+  "model_id": "scribe_v2",
+  "no_verbatim": true
+}

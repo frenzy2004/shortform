@@ -1,0 +1,18 @@
+{
+  "hooks": [
+    {
+      "clip_id": "001",
+      "hook_start_sec": 11.65,
+      "hook_end_sec": 13.77,
+      "hook_text": "a lot of them were just ideas.",
+      "reason": "This statement challenges the conventional wisdom that traction is necessary for success, serving as a strong, counter-intuitive claim that immediately grabs the viewer's attention."
+    },
+    {
+      "clip_id": "002",
+      "hook_start_sec": 24.71,
+      "hook_end_sec": 30.41,
+      "hook_text": "you can see a time where capitalism is actually doing more good than ever, right?",
+      "reason": "This is a bold, provocative claim about the positive potential of capitalism that functions as a standalone hook, unlike the vague opening sentences."
+    }
+  ]
+}

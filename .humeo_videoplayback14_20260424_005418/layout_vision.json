@@ -1,0 +1,284 @@
+{
+  "clips": {
+    "001": {
+      "instruction": {
+        "clip_id": "001",
+        "layout": "split_chart_person",
+        "zoom": 1.0,
+        "person_x_norm": 0.755,
+        "person_tracking": [],
+        "chart_x_norm": 0.021,
+        "focus_stack_order": "chart_then_person",
+        "split_chart_region": {
+          "x1": 0.021,
+          "y1": 0.04,
+          "x2": 0.674,
+          "y2": 0.813,
+          "label": "",
+          "confidence": 1.0
+        },
+        "split_person_region": {
+          "x1": 0.598,
+          "y1": 0.355,
+          "x2": 0.999,
+          "y2": 1.0,
+          "label": "",
+          "confidence": 1.0
+        },
+        "split_second_chart_region": null,
+        "split_second_person_region": null,
+        "top_band_ratio": 0.5
+      },
+      "raw": {
+        "layout": "split_chart_person",
+        "person_bbox": {
+          "x1": 0.598,
+          "y1": 0.355,
+          "x2": 0.999,
+          "y2": 1.0
+        },
+        "face_bbox": {
+          "x1": 0.665,
+          "y1": 0.425,
+          "x2": 0.845,
+          "y2": 0.665
+        },
+        "chart_bbox": {
+          "x1": 0.021,
+          "y1": 0.04,
+          "x2": 0.674,
+          "y2": 0.813
+        },
+        "second_person_bbox": null,
+        "second_face_bbox": null,
+        "second_chart_bbox": null,
+        "reason": "A single speaker is on the right, presenting a large chart on the left, which is a classic split-screen layout."
+      }
+    },
+    "002": {
+      "instruction": {
+        "clip_id": "002",
+        "layout": "sit_center",
+        "zoom": 1.0,
+        "person_x_norm": 0.444531,
+        "person_tracking": [
+          {
+            "t_sec": 0.0,
+            "x_norm": 0.5145215971254241
+          },
+          {
+            "t_sec": 64.33600000000479,
+            "x_norm": 0.5145215971254241
+          }
+        ],
+        "chart_x_norm": 0.0,
+        "focus_stack_order": "chart_then_person",
+        "split_chart_region": null,
+        "split_person_region": null,
+        "split_second_chart_region": null,
+        "split_second_person_region": null,
+        "top_band_ratio": 0.5
+      },
+      "raw": {
+        "layout": "sit_center",
+        "person_bbox": {
+          "x1": 0.278125,
+          "y1": 0.188889,
+          "x2": 0.814063,
+          "y2": 0.913889
+        },
+        "face_bbox": {
+          "x1": 0.353906,
+          "y1": 0.222222,
+          "x2": 0.535156,
+          "y2": 0.5125
+        },
+        "chart_bbox": null,
+        "second_person_bbox": null,
+        "second_face_bbox": null,
+        "second_chart_bbox": null,
+        "reason": "The image contains a single person sitting at a desk, which is a classic setup for the 'sit_center' layout.",
+        "segmentation_tracking": {
+          "provider": "replicate",
+          "model": "meta/sam-2-video:2d7219877ca847f463d749d9b224e62f7b078fe035d60a74b58889b455d5cbad",
+          "seed_point_px": [
+            284,
+            132
+          ],
+          "seed_frame": 964,
+          "prompt_frames": [
+            0,
+            964
+          ],
+          "output_frame_interval": 193,
+          "mask_count": 11
+        }
+      }
+    },
+    "003": {
+      "instruction": {
+        "clip_id": "003",
+        "layout": "split_chart_person",
+        "zoom": 1.0,
+        "person_x_norm": 0.8025,
+        "person_tracking": [],
+        "chart_x_norm": 0.022,
+        "focus_stack_order": "chart_then_person",
+        "split_chart_region": {
+          "x1": 0.022,
+          "y1": 0.05,
+          "x2": 0.663,
+          "y2": 0.684,
+          "label": "",
+          "confidence": 1.0
+        },
+        "split_person_region": {
+          "x1": 0.6542,
+          "y1": 0.263,
+          "x2": 0.999,
+          "y2": 0.953,
+          "label": "",
+          "confidence": 1.0
+        },
+        "split_second_chart_region": null,
+        "split_second_person_region": null,
+        "top_band_ratio": 0.5
+      },
+      "raw": {
+        "layout": "split_chart_person",
+        "person_bbox": {
+          "x1": 0.6542,
+          "y1": 0.263,
+          "x2": 0.999,
+          "y2": 0.953
+        },
+        "face_bbox": {
+          "x1": 0.721,
+          "y1": 0.421,
+          "x2": 0.884,
+          "y2": 0.624
+        },
+        "chart_bbox": {
+          "x1": 0.022,
+          "y1": 0.05,
+          "x2": 0.663,
+          "y2": 0.684
+        },
+        "second_person_bbox": null,
+        "second_face_bbox": null,
+        "second_chart_bbox": null,
+        "reason": "The frame clearly shows a single speaker on the right and a large chart on the left, making it a perfect candidate for the split_chart_person layout."
+      }
+    },
+    "004": {
+      "instruction": {
+        "clip_id": "004",
+        "layout": "split_chart_person",
+        "zoom": 1.0,
+        "person_x_norm": 0.778125,
+        "person_tracking": [],
+        "chart_x_norm": 0.030208,
+        "focus_stack_order": "chart_then_person",
+        "split_chart_region": {
+          "x1": 0.030208,
+          "y1": 0.059259,
+          "x2": 0.664583,
+          "y2": 0.722222,
+          "label": "",
+          "confidence": 1.0
+        },
+        "split_person_region": {
+          "x1": 0.654167,
+          "y1": 0.351852,
+          "x2": 0.998958,
+          "y2": 0.94537,
+          "label": "",
+          "confidence": 1.0
+        },
+        "split_second_chart_region": null,
+        "split_second_person_region": null,
+        "top_band_ratio": 0.5
+      },
+      "raw": {
+        "layout": "split_chart_person",
+        "person_bbox": {
+          "x1": 0.654167,
+          "y1": 0.351852,
+          "x2": 0.998958,
+          "y2": 0.94537
+        },
+        "face_bbox": {
+          "x1": 0.69375,
+          "y1": 0.423148,
+          "x2": 0.8625,
+          "y2": 0.625
+        },
+        "chart_bbox": {
+          "x1": 0.030208,
+          "y1": 0.059259,
+          "x2": 0.664583,
+          "y2": 0.722222
+        },
+        "second_person_bbox": null,
+        "second_face_bbox": null,
+        "second_chart_bbox": null,
+        "reason": "The frame clearly shows a speaker on the right and a large graphic containing two charts on the left, making it a classic split_chart_person layout."
+      }
+    },
+    "005": {
+      "instruction": {
+        "clip_id": "005",
+        "layout": "split_chart_person",
+        "zoom": 1.0,
+        "person_x_norm": 0.7879499999999999,
+        "person_tracking": [],
+        "chart_x_norm": 0.0215,
+        "focus_stack_order": "chart_then_person",
+        "split_chart_region": {
+          "x1": 0.0215,
+          "y1": 0.0407,
+          "x2": 0.662,
+          "y2": 0.7111,
+          "label": "",
+          "confidence": 1.0
+        },
+        "split_person_region": {
+          "x1": 0.6511,
+          "y1": 0.2801,
+          "x2": 0.9991,
+          "y2": 0.9324,
+          "label": "",
+          "confidence": 1.0
+        },
+        "split_second_chart_region": null,
+        "split_second_person_region": null,
+        "top_band_ratio": 0.5
+      },
+      "raw": {
+        "layout": "split_chart_person",
+        "person_bbox": {
+          "x1": 0.6511,
+          "y1": 0.2801,
+          "x2": 0.9991,
+          "y2": 0.9324
+        },
+        "face_bbox": {
+          "x1": 0.7118,
+          "y1": 0.3023,
+          "x2": 0.8641,
+          "y2": 0.5222
+        },
+        "chart_bbox": {
+          "x1": 0.0215,
+          "y1": 0.0407,
+          "x2": 0.662,
+          "y2": 0.7111
+        },
+        "second_person_bbox": null,
+        "second_face_bbox": null,
+        "second_chart_bbox": null,
+        "reason": "The frame contains a single speaker on the right and a large, detailed chart on the left, making it a classic split_chart_person layout."
+      }
+    }
+  }
+}

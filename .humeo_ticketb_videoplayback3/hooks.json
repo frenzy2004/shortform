@@ -1,0 +1,39 @@
+{
+  "hooks": [
+    {
+      "clip_id": "001",
+      "hook_start_sec": 10.37,
+      "hook_end_sec": 14.15,
+      "hook_text": "If the founder only has one VC who's showing interest, they're like, everything is hinged on this one VC.",
+      "reason": "This sentence immediately introduces a relatable, high-stakes problem (founder desperation) that hooks the viewer better than the abstract opening about fundraising odds."
+    },
+    {
+      "clip_id": "002",
+      "hook_start_sec": 25.91,
+      "hook_end_sec": 31.61,
+      "hook_text": "That night, every crab started breaking each other apart.",
+      "reason": "This is a shocking, visceral image that creates immediate curiosity about the story's outcome, far more effective than the slow setup about being 15 years old."
+    },
+    {
+      "clip_id": "003",
+      "hook_start_sec": 2.01,
+      "hook_end_sec": 7.71,
+      "hook_text": "There's this concept that I learned and we developed at Fandroid early on. It's called walking up the ladder, then down the ladder.",
+      "reason": "This frames the content as a proprietary, actionable framework, which is a classic high-performing hook for business/advice content."
+    },
+    {
+      "clip_id": "004",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 3.8,
+      "hook_text": "Let's talk about the doom loop.",
+      "reason": "The phrase 'doom loop' is a strong, negative-interest trigger that immediately signals a high-stakes topic."
+    },
+    {
+      "clip_id": "005",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 3.5,
+      "hook_text": "if individuals are earning money now and they're using Buy Now Pay Later to buy things online, and then they're spending it on not very productive things.",
+      "reason": "This presents a clear, controversial economic observation that challenges common consumer behavior, making it a compelling hook."
+    }
+  ]
+}

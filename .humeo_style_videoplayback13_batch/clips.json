@@ -1,0 +1,175 @@
+{
+  "source_path": "",
+  "clips": [
+    {
+      "clip_id": "001",
+      "topic": "The $11 Million Cure",
+      "start_time_sec": 1010.0,
+      "end_time_sec": 1074.0,
+      "viral_hook": "And then most provocatively, and Shay has done an amazing job of documenting what a cure is going to be worth.",
+      "virality_score": 0.8425,
+      "transcript": "And then most provocatively, and Shay has done an amazing job of documenting what a cure is going to be worth. And I have to give Brett Winton incredible credit as he partnered with Shay on this project to try and figure out, how much is a cure worth? And we think, while the cure for HAE, which is a very rare disease, would be worth $11 million, one and done. You get this treatment, and you're done. That's in Telia's trial right now. And it's in vivo. You don't have to go through any excruciating preconditioning. It could be worth $11 million. That's how much it would save the system. But they'll probably be able to charge $3 million. And believe me, insurance companies, they will have no problem with that.",
+      "suggested_overlay_title": "A Single Medical Cure Worth $11",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.9,
+        "hook_emotion": 0.85,
+        "catchy": 0.8
+      },
+      "reasoning": "The hook explicitly calls the topic 'provocative,' creating immediate intrigue. The central message, anchored by the shocking '$11 million' and '$3 million' figures for a 'one and done' cure, is incredibly powerful and memorable.",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 5.2,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "render_spans": [],
+      "shorts_title": "What is a cure for a disease actually worth?",
+      "description": "Gene editing is making one-and-done cures a reality. For one rare disease, the value to the healthcare system could be $11 million per patient, with a price tag of $3 million that insurance companies would happily pay.",
+      "hashtags": [
+        "biotech",
+        "genetics",
+        "healthcare",
+        "investing",
+        "crispr"
+      ],
+      "layout_hint": "sit_center",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "002",
+      "topic": "The Shrinking Auto Market Due to Robotaxis",
+      "start_time_sec": 1386.2,
+      "end_time_sec": 1465.0,
+      "viral_hook": "And so we did a calculation, how many autonomous vehicles would Tesla have to produce, or Waymo, to cover 1% of urban miles?",
+      "virality_score": 0.85,
+      "transcript": "And so we did a calculation, how many autonomous vehicles would Tesla have to produce, or Waymo, to cover 1% of urban miles? That would be 140,000 units. Now, what would be the number, how many vehicles would it take to cover all urban miles? And that number is only 24 million. That is less than 10% of the installed base of autos in the US today. So that is a US, that is US analysis. And we know that auto sales right now, they're at roughly 15 million per year. That gives you a sense of how much the auto market in terms of vehicles produced could shrink, and yet we could still cover with autonomous vehicles, which obviously have much higher utilization than personal vehicles. We drive our cars 4% to 5% of the day,",
+      "suggested_overlay_title": "Why We'll Need 90% Fewer Cars",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.95,
+        "hook_emotion": 0.7,
+        "catchy": 0.9
+      },
+      "reasoning": "This clip contains a massive 'wow' moment with its counterintuitive math. The core idea—that we need 90% fewer cars—is shocking, memorable, and supported by a clear utilization rate comparison.",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 8.5,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "render_spans": [],
+      "shorts_title": "The shocking math that could end the auto industry.",
+      "description": "A stunning calculation reveals that we would only need 24 million robotaxis—less than 10% of the current US fleet—to cover all urban miles, thanks to skyrocketing vehicle utilization.",
+      "hashtags": [
+        "robotaxi",
+        "tesla",
+        "waymo",
+        "autotech",
+        "future"
+      ],
+      "layout_hint": "sit_center",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "003",
+      "topic": "The Insane Productivity of New Tech Companies",
+      "start_time_sec": 834.8,
+      "end_time_sec": 893.0,
+      "viral_hook": "The other thing we'd like to highlight is these companies, their productivity, the companies that are emerging, their productivity is astonishing.",
+      "virality_score": 0.8175,
+      "transcript": "The other thing we'd like to highlight is these companies, their productivity, the companies that are emerging, their productivity is astonishing. Tether, for example, last year, we believe, delivered $50 million per employee. That is unheard of, unheard of. But we think that capitalizing on all of these new technologies is going to drive productivity gains much higher than people can even postulate right now. And with that, while many people are afraid, given the robotics movement and AI, everyone being thrown out of jobs, we disagree. We think this is going to be one of the greatest opportunities for the entrepreneurial spirit in history,",
+      "suggested_overlay_title": "Company Makes $50 Million Per Employee",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.85,
+        "hook_emotion": 0.7,
+        "catchy": 0.95
+      },
+      "reasoning": "The hook sets up an 'astonishing' claim, which is immediately paid off with the '$50 million per employee' stat. This number is so extreme it's incredibly catchy and effectively communicates the core message about unprecedented productivity.",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 9.3,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "render_spans": [],
+      "shorts_title": "$50 MILLION per employee?! This is the future of productivity.",
+      "description": "Forget what you know about corporate productivity. One new tech company, Tether, is delivering an astonishing $50 million per employee. This isn't about job loss; it's about the greatest entrepreneurial opportunity in history.",
+      "hashtags": [
+        "productivity",
+        "tether",
+        "futureofwork",
+        "tech",
+        "ai"
+      ],
+      "layout_hint": "sit_center",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "004",
+      "topic": "Drone Delivery Cost Collapse",
+      "start_time_sec": 1539.0,
+      "end_time_sec": 1590.0,
+      "viral_hook": "Autonomous trucks will cut delivery costs by 60%.",
+      "virality_score": 0.7725,
+      "transcript": "Autonomous trucks will cut delivery costs by 60%. Drones and rolling robots are also going to cut delivery costs dramatically. Did you know there are already 4 million deliveries per year by drones? Now to be sure, Zipline, one of the companies in our venture fund, is responsible for I think half of those. But we believe that the cost to deliver by drone will cut delivery costs right now, DoorDash, $15 per, to less than a dollar. So a 90% reduction over time.",
+      "suggested_overlay_title": "Delivery: $15 vs $1",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.8,
+        "hook_emotion": 0.65,
+        "catchy": 0.9
+      },
+      "reasoning": "The clip provides a powerful and easily digestible financial comparison ($15 vs <$1) that makes the message about cost reduction incredibly clear and catchy. The hook starts with a strong number (60%) and builds to an even more dramatic conclusion.",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 4.5,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "render_spans": [],
+      "shorts_title": "Drone delivery will cost less than $1.",
+      "description": "Autonomous logistics are set to slash delivery costs. While autonomous trucks will cut costs by 60%, delivery by drone will be the real game-changer, dropping the price from a $15 DoorDash fee to less than $1.",
+      "hashtags": [
+        "drones",
+        "delivery",
+        "logistics",
+        "zipline",
+        "futuretech"
+      ],
+      "layout_hint": "sit_center",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "005",
+      "topic": "Why Bitcoin is Still Digital Gold",
+      "start_time_sec": 679.3,
+      "end_time_sec": 754.1,
+      "viral_hook": "Bitcoin's role as digital gold has miles to go.",
+      "virality_score": 0.7675,
+      "transcript": "Bitcoin's role as digital gold has miles to go. Interestingly, and you'll see this in my New Year letter, the correlation between Bitcoin and gold has been almost nonexistent over Bitcoin's life, 0.14. Nonetheless, we do think it is not only a risk-on asset, thanks to the new technology, but it is also a risk-off asset. It's a hedge against inflation. Its growth rate is lower than gold's growth rate. And I'll bet gold miners are doing their darndest to get more of that stuff out of the ground now that they're being paid so much more. That can't happen with Bitcoin and Bitcoin miners. Mathematically metered to top out at 21 million units. So we do think it will be a very important store of value going forward, particularly as we go through the intergenerational wealth transfer that we expect during the next 5, 10, 15 years.",
+      "suggested_overlay_title": "Why Bitcoin Is Better Than Gold",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.85,
+        "hook_emotion": 0.65,
+        "catchy": 0.8
+      },
+      "reasoning": "This clip provides a clear, strong thesis for Bitcoin's long-term value. The hook is a confident declaration, and the 'digital gold' analogy combined with the 'mathematically metered' supply creates a very sticky and understandable message.",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 3.7,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "render_spans": [],
+      "shorts_title": "Bitcoin's ultimate purpose isn't what you think.",
+      "description": "While stablecoins handle payments, Bitcoin's true role is 'digital gold.' With a mathematically fixed supply of 21 million units, it's a superior inflation hedge to physical gold, especially during the coming great wealth transfer.",
+      "hashtags": [
+        "bitcoin",
+        "crypto",
+        "digitalgold",
+        "investing",
+        "inflation"
+      ],
+      "layout_hint": "sit_center",
+      "needs_review": false,
+      "review_reason": ""
+    }
+  ]
+}

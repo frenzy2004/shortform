@@ -1,0 +1,60 @@
+{
+  "decisions": [
+    {
+      "clip_id": "001",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "reason": "The clip is already at an optimal length and starts with a strong narrative hook.",
+      "thought": "The clip is 52.7s, which is within the required 50-90s range. Trimming would remove context about the speaker's background."
+    },
+    {
+      "clip_id": "002",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "reason": "The clip is 56.6s and provides a clear, self-contained story about AI improvisation.",
+      "thought": "The duration is perfect. The narrative arc from the initial confusion to the 'agents improvise' payoff is tight."
+    },
+    {
+      "clip_id": "003",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "reason": "The clip is 33.6s, which is below the 50s minimum requirement.",
+      "thought": "Since the clip is already short, I cannot trim it further without violating the 50s minimum constraint."
+    },
+    {
+      "clip_id": "004",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "reason": "The clip is 62.1s and maintains a consistent narrative about the project's growth.",
+      "thought": "The progression from the 'viral' moment to the 'stripper pole' punchline is effective and within the length constraints."
+    },
+    {
+      "clip_id": "005",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "reason": "The clip is 40.2s, which is below the 50s minimum requirement.",
+      "thought": "I am unable to trim this clip as it is already below the minimum duration threshold."
+    },
+    {
+      "clip_id": "006",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "reason": "The clip is 47.7s, which is just below the 50s minimum requirement.",
+      "thought": "The clip is nearly at the minimum length; trimming would make it too short."
+    },
+    {
+      "clip_id": "007",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "reason": "The clip is 49.0s, which is just below the 50s minimum requirement.",
+      "thought": "The clip is essentially at the minimum length; no trimming is possible."
+    },
+    {
+      "clip_id": "008",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "reason": "The clip is 50.7s, which is within the required 50-90s range.",
+      "thought": "The clip is at the minimum length, so no trimming is needed to maintain the 50s floor."
+    }
+  ]
+}

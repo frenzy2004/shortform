@@ -1,0 +1,84 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,48,&H00FFFFFF,&H000000FF,&H00000000,&H70000000,-1,0,0,0,100,100,0,0,4,0,0,2,60,60,160,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:00.68,Default,,0,0,0,,It's like when I
+Dialogue: 0,0:00:00.68,0:00:01.46,Default,,0,0,0,,was 15 years old
+Dialogue: 0,0:00:01.56,0:00:02.14,Default,,0,0,0,,like I went on
+Dialogue: 0,0:00:02.14,0:00:03.30,Default,,0,0,0,,a and me and
+Dialogue: 0,0:00:03.30,0:00:03.82,Default,,0,0,0,,my friends were on
+Dialogue: 0,0:00:03.82,0:00:04.78,Default,,0,0,0,,this beach And for
+Dialogue: 0,0:00:04.78,0:00:05.50,Default,,0,0,0,,some reason we decided
+Dialogue: 0,0:00:05.50,0:00:06.98,Default,,0,0,0,,to the on the
+Dialogue: 0,0:00:07.48,0:00:08.38,Default,,0,0,0,,Like I don't know
+Dialogue: 0,0:00:08.40,0:00:09.30,Default,,0,0,0,,I was 15 Anyways
+Dialogue: 0,0:00:09.30,0:00:10.66,Default,,0,0,0,,we put a bunch
+Dialogue: 0,0:00:10.66,0:00:11.96,Default,,0,0,0,,of into this And
+Dialogue: 0,0:00:11.96,0:00:12.84,Default,,0,0,0,,like oh we've caught
+Dialogue: 0,0:00:12.84,0:00:13.66,Default,,0,0,0,,so many crabs What
+Dialogue: 0,0:00:13.66,0:00:13.90,Default,,0,0,0,,are we going to
+Dialogue: 0,0:00:13.90,0:00:14.70,Default,,0,0,0,,do now We're like
+Dialogue: 0,0:00:14.72,0:00:15.48,Default,,0,0,0,,okay well let's just
+Dialogue: 0,0:00:15.48,0:00:15.94,Default,,0,0,0,,take it back to
+Dialogue: 0,0:00:15.94,0:00:17.22,Default,,0,0,0,,the Okay great idea
+Dialogue: 0,0:00:17.42,0:00:18.10,Default,,0,0,0,,15 year old Kylie
+Dialogue: 0,0:00:18.38,0:00:19.02,Default,,0,0,0,,So we go back
+Dialogue: 0,0:00:19.02,0:00:19.96,Default,,0,0,0,,to this hotel and
+Dialogue: 0,0:00:19.96,0:00:20.30,Default,,0,0,0,,we're like oh yeah
+Dialogue: 0,0:00:20.30,0:00:21.42,Default,,0,0,0,,now we brought the
+Dialogue: 0,0:00:21.42,0:00:22.14,Default,,0,0,0,,crabs back to What
+Dialogue: 0,0:00:22.14,0:00:22.72,Default,,0,0,0,,do we do We're
+Dialogue: 0,0:00:22.72,0:00:23.12,Default,,0,0,0,,like okay let's just
+Dialogue: 0,0:00:23.12,0:00:23.56,Default,,0,0,0,,put it in a
+Dialogue: 0,0:00:24.04,0:00:24.88,Default,,0,0,0,,Okay let's put the
+Dialogue: 0,0:00:24.88,0:00:26.90,Default,,0,0,0,,in a That night
+Dialogue: 0,0:00:27.36,0:00:30.18,Default,,0,0,0,,every crab started
+Dialogue: 0,0:00:30.18,0:00:31.96,Default,,0,0,0,,breaking each other apart
+Dialogue: 0,0:00:32.16,0:00:32.94,Default,,0,0,0,,They killed each other
+Dialogue: 0,0:00:32.94,0:00:34.06,Default,,0,0,0,,in that tub Such
+Dialogue: 0,0:00:34.06,0:00:35.22,Default,,0,0,0,,a dark story okay
+Dialogue: 0,0:00:35.22,0:00:35.82,Default,,0,0,0,,It is the most
+Dialogue: 0,0:00:35.82,0:00:36.40,Default,,0,0,0,,gruesome thing I've done
+Dialogue: 0,0:00:36.40,0:00:37.20,Default,,0,0,0,,at 15 I'm like
+Dialogue: 0,0:00:37.86,0:00:38.28,Default,,0,0,0,,and then we were
+Dialogue: 0,0:00:38.28,0:00:38.72,Default,,0,0,0,,like hey let's get
+Dialogue: 0,0:00:38.72,0:00:39.22,Default,,0,0,0,,them out Let's put
+Dialogue: 0,0:00:39.22,0:00:39.68,Default,,0,0,0,,them back on the
+Dialogue: 0,0:00:39.68,0:00:40.24,Default,,0,0,0,,beach Like what the
+Dialogue: 0,0:00:40.24,0:00:40.98,Default,,0,0,0,,heck's going on And
+Dialogue: 0,0:00:40.98,0:00:42.72,Default,,0,0,0,,they just they kill
+Dialogue: 0,0:00:42.72,0:00:43.72,Default,,0,0,0,,each other in that
+Dialogue: 0,0:00:43.72,0:00:44.32,Default,,0,0,0,,tub And I was
+Dialogue: 0,0:00:44.32,0:00:45.80,Default,,0,0,0,,really sad right I
+Dialogue: 0,0:00:45.80,0:00:46.42,Default,,0,0,0,,mean maybe that's why
+Dialogue: 0,0:00:46.42,0:00:46.92,Default,,0,0,0,,I've been a vegan
+Dialogue: 0,0:00:46.92,0:00:47.52,Default,,0,0,0,,for nine years I
+Dialogue: 0,0:00:47.52,0:00:48.06,Default,,0,0,0,,don't know right But
+Dialogue: 0,0:00:48.06,0:00:49.50,Default,,0,0,0,,it's like it was
+Dialogue: 0,0:00:49.50,0:00:50.68,Default,,0,0,0,,just like horrible to
+Dialogue: 0,0:00:50.68,0:00:51.28,Default,,0,0,0,,watch And I always
+Dialogue: 0,0:00:51.28,0:00:52.06,Default,,0,0,0,,wondered like why did
+Dialogue: 0,0:00:52.06,0:00:53.26,Default,,0,0,0,,the kill each other
+Dialogue: 0,0:00:53.78,0:00:55.12,Default,,0,0,0,,So I think that
+Dialogue: 0,0:00:55.12,0:00:56.40,Default,,0,0,0,,like I just don't
+Dialogue: 0,0:00:56.40,0:00:57.12,Default,,0,0,0,,want us to each
+Dialogue: 0,0:00:57.12,0:00:59.06,Default,,0,0,0,,other You we're in
+Dialogue: 0,0:00:59.06,0:01:00.58,Default,,0,0,0,,a bucket right now
+Dialogue: 0,0:01:00.70,0:01:01.42,Default,,0,0,0,,We're in this tub
+Dialogue: 0,0:01:01.74,0:01:02.64,Default,,0,0,0,,And like this it's
+Dialogue: 0,0:01:02.64,0:01:03.46,Default,,0,0,0,,not like new water
+Dialogue: 0,0:01:03.60,0:01:04.76,Default,,0,0,0,,new nutrients It's not
+Dialogue: 0,0:01:04.76,0:01:05.52,Default,,0,0,0,,like an abundant ocean
+Dialogue: 0,0:01:05.54,0:01:06.56,Default,,0,0,0,,our echo chamber or
+Dialogue: 0,0:01:06.56,0:01:07.22,Default,,0,0,0,,whatever We're in this
+Dialogue: 0,0:01:07.22,0:01:08.20,Default,,0,0,0,,echo chamber tub

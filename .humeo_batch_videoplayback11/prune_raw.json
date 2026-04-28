@@ -1,0 +1,39 @@
+{
+  "decisions": [
+    {
+      "clip_id": "004",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "reason": "The clip is too short to trim the filler at the start or end without falling below the 50-second minimum duration.",
+      "thought": "The ideal trim would remove the slow lead-in (~10s) and the meta-commentary at the end (~11s), but this would make the clip far too short. Given the 50s minimum duration constraint, no trim is possible without cutting mid-sentence."
+    },
+    {
+      "clip_id": "005",
+      "trim_start_sec": 0.92,
+      "trim_end_sec": 0.0,
+      "reason": "Removed a 0.9s sentence fragment at the start for a cleaner opening on 'One was in the Great Depression.'",
+      "thought": "The original opening was the end of a previous question, which was awkward. Starting at 0.92s makes the clip stand alone and begin with a strong, historical statement. The ending is a series of punchy, dramatic claims and works very well."
+    },
+    {
+      "clip_id": "006",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "reason": "No trim was applied as the hook is at the very start and the ending sentence is strong and conclusive.",
+      "thought": "The hook's position at 0.00s prevents any start trim. The end of the clip contains some minor trailing filler ('And believe me, I know...'), but it's part of the last timestamped segment which concludes on a strong note ('...will become clear.'). Without a more granular timestamp, removing the filler isn't possible without risking the clean ending."
+    },
+    {
+      "clip_id": "007",
+      "trim_start_sec": 15.62,
+      "trim_end_sec": 0.0,
+      "reason": "Trimmed 15.6s of slow setup to start directly on the intriguing question 'wait a minute, hasn't the poverty rate... gone down?'.",
+      "thought": "The original opening was a weak lead-in that referenced prior context. Cutting to the question at 15.62s creates a much stronger hook that immediately engages the viewer. The end of the clip trails off, but trimming it would make the final clip too short, so it was left as is."
+    },
+    {
+      "clip_id": "008",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "reason": "The clip is short and any trim at the start would make it fall below the 50-second minimum, while the ending is a strong, predictive statement.",
+      "thought": "The ideal start trim would remove the first 12 seconds to get to the core question about market excesses, but this would make the clip too short. The existing opening, while referring to a chart, sets the scene adequately. The ending is a strong prediction and requires no changes."
+    }
+  ]
+}

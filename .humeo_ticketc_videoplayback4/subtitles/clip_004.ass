@@ -1,0 +1,67 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,48,&H00FFFFFF,&H000000FF,&H00000000,&H70000000,-1,0,0,0,100,100,0,0,4,0,0,2,60,60,160,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:01.01,Default,,0,0,0,,The sort of argument
+Dialogue: 0,0:00:01.01,0:00:02.41,Default,,0,0,0,,for Doomerism to me
+Dialogue: 0,0:00:02.41,0:00:03.15,Default,,0,0,0,,is the Fermi Paradox
+Dialogue: 0,0:00:03.31,0:00:04.19,Default,,0,0,0,,the that we don't
+Dialogue: 0,0:00:04.19,0:00:04.97,Default,,0,0,0,,see intelligent life in
+Dialogue: 0,0:00:04.97,0:00:06.21,Default,,0,0,0,,our galaxy I was
+Dialogue: 0,0:00:06.21,0:00:06.65,Default,,0,0,0,,if you guys have
+Dialogue: 0,0:00:06.65,0:00:07.11,Default,,0,0,0,,any thoughts on Yeah
+Dialogue: 0,0:00:07.11,0:00:07.77,Default,,0,0,0,,I've a lot about
+Dialogue: 0,0:00:07.77,0:00:08.61,Default,,0,0,0,,that That can't be
+Dialogue: 0,0:00:08.61,0:00:10.21,Default,,0,0,0,,the reason because we
+Dialogue: 0,0:00:10.21,0:00:11.15,Default,,0,0,0,,should see all the
+Dialogue: 0,0:00:11.15,0:00:13.07,Default,,0,0,0,,AIs that have just
+Dialogue: 0,0:00:13.07,0:00:14.21,Default,,0,0,0,,to clear everyone's The
+Dialogue: 0,0:00:14.21,0:00:15.69,Default,,0,0,0,,idea is well it's
+Dialogue: 0,0:00:15.69,0:00:16.51,Default,,0,0,0,,sort of unclear why
+Dialogue: 0,0:00:16.51,0:00:17.59,Default,,0,0,0,,that would happen right
+Dialogue: 0,0:00:17.59,0:00:18.69,Default,,0,0,0,,So if the reason
+Dialogue: 0,0:00:18.69,0:00:19.39,Default,,0,0,0,,there's a Fermi Paradox
+Dialogue: 0,0:00:19.39,0:00:20.37,Default,,0,0,0,,there are no aliens
+Dialogue: 0,0:00:20.37,0:00:21.53,Default,,0,0,0,,cos they get taken
+Dialogue: 0,0:00:21.53,0:00:22.29,Default,,0,0,0,,out by their own
+Dialogue: 0,0:00:22.29,0:00:23.93,Default,,0,0,0,,technology we should be
+Dialogue: 0,0:00:23.93,0:00:25.21,Default,,0,0,0,,seeing paperclips coming towards
+Dialogue: 0,0:00:25.21,0:00:26.45,Default,,0,0,0,,us from some part
+Dialogue: 0,0:00:26.45,0:00:27.91,Default,,0,0,0,,of the and apparently
+Dialogue: 0,0:00:27.91,0:00:28.69,Default,,0,0,0,,we don't We don't
+Dialogue: 0,0:00:28.69,0:00:30.27,Default,,0,0,0,,see any structures Dyson
+Dialogue: 0,0:00:30.27,0:00:31.39,Default,,0,0,0,,spheres nothing whether they're
+Dialogue: 0,0:00:31.39,0:00:33.11,Default,,0,0,0,,AI or sort of
+Dialogue: 0,0:00:33.11,0:00:34.91,Default,,0,0,0,,biological So to me
+Dialogue: 0,0:00:34.91,0:00:35.67,Default,,0,0,0,,there has to be
+Dialogue: 0,0:00:35.67,0:00:36.31,Default,,0,0,0,,a different answer to
+Dialogue: 0,0:00:36.31,0:00:36.85,Default,,0,0,0,,the Fermi Paradox I
+Dialogue: 0,0:00:36.85,0:00:37.71,Default,,0,0,0,,have my own about
+Dialogue: 0,0:00:37.71,0:00:38.41,Default,,0,0,0,,that but it's out
+Dialogue: 0,0:00:38.41,0:00:38.91,Default,,0,0,0,,of scope for the
+Dialogue: 0,0:00:38.91,0:00:40.85,Default,,0,0,0,,next minute But you
+Dialogue: 0,0:00:40.85,0:00:43.41,Default,,0,0,0,,I just feel like
+Dialogue: 0,0:00:44.35,0:00:45.61,Default,,0,0,0,,My feeling is that
+Dialogue: 0,0:00:45.61,0:00:46.53,Default,,0,0,0,,we're past the Great
+Dialogue: 0,0:00:46.53,0:00:47.51,Default,,0,0,0,,Filter It was probably
+Dialogue: 0,0:00:47.51,0:00:48.97,Default,,0,0,0,,multicellular life if I
+Dialogue: 0,0:00:48.97,0:00:49.61,Default,,0,0,0,,would have to guess
+Dialogue: 0,0:00:49.93,0:00:50.99,Default,,0,0,0,,It was incredibly hard
+Dialogue: 0,0:00:50.99,0:00:52.65,Default,,0,0,0,,for biology to evolve
+Dialogue: 0,0:00:52.65,0:00:54.67,Default,,0,0,0,,that So we're on
+Dialogue: 0,0:00:54.67,0:00:55.51,Default,,0,0,0,,You there isn't a
+Dialogue: 0,0:00:55.51,0:00:56.47,Default,,0,0,0,,comfort of what's going
+Dialogue: 0,0:00:56.47,0:00:57.41,Default,,0,0,0,,to next I think
+Dialogue: 0,0:00:57.41,0:00:58.49,Default,,0,0,0,,it's for us to
+Dialogue: 0,0:00:58.49,0:00:59.55,Default,,0,0,0,,write as humanity what's
+Dialogue: 0,0:00:59.55,0:01:00.13,Default,,0,0,0,,going to next

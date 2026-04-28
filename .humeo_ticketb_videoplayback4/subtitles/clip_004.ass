@@ -1,0 +1,55 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,48,&H00FFFFFF,&H000000FF,&H00000000,&H70000000,-1,0,0,0,100,100,0,0,4,0,0,2,60,60,160,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.20,Default,,0,0,0,,Well look I think
+Dialogue: 0,0:00:01.20,0:00:01.84,Default,,0,0,0,,we were I was
+Dialogue: 0,0:00:01.84,0:00:03.32,Default,,0,0,0,,always very confident we
+Dialogue: 0,0:00:03.32,0:00:05.04,Default,,0,0,0,,would get back to
+Dialogue: 0,0:00:05.04,0:00:05.78,Default,,0,0,0,,sort the top of
+Dialogue: 0,0:00:05.78,0:00:07.66,Default,,0,0,0,,the leaderboards and the
+Dialogue: 0,0:00:07.66,0:00:08.86,Default,,0,0,0,,SOTA type of across
+Dialogue: 0,0:00:08.86,0:00:10.34,Default,,0,0,0,,the because I think
+Dialogue: 0,0:00:10.34,0:00:11.76,Default,,0,0,0,,we've always had the
+Dialogue: 0,0:00:11.76,0:00:13.16,Default,,0,0,0,,deepest and broadest research
+Dialogue: 0,0:00:13.16,0:00:13.74,Default,,0,0,0,,bench and it was
+Dialogue: 0,0:00:13.74,0:00:15.12,Default,,0,0,0,,about kind marshalling that
+Dialogue: 0,0:00:15.12,0:00:17.22,Default,,0,0,0,,all together and getting
+Dialogue: 0,0:00:17.22,0:00:18.52,Default,,0,0,0,,the intensity and focus
+Dialogue: 0,0:00:18.52,0:00:19.26,Default,,0,0,0,,and the kind start
+Dialogue: 0,0:00:19.26,0:00:20.40,Default,,0,0,0,,up mentality back to
+Dialogue: 0,0:00:20.40,0:00:21.98,Default,,0,0,0,,the whole organisation And
+Dialogue: 0,0:00:21.98,0:00:22.88,Default,,0,0,0,,it's been a lot
+Dialogue: 0,0:00:22.88,0:00:24.99,Default,,0,0,0,,of work but I
+Dialogue: 0,0:00:24.99,0:00:26.12,Default,,0,0,0,,think we're still a
+Dialogue: 0,0:00:26.12,0:00:27.58,Default,,0,0,0,,of to do but
+Dialogue: 0,0:00:27.58,0:00:28.04,Default,,0,0,0,,I think you can
+Dialogue: 0,0:00:28.04,0:00:30.32,Default,,0,0,0,,start seeing the
+Dialogue: 0,0:00:30.32,0:00:32.12,Default,,0,0,0,,kind of The progress
+Dialogue: 0,0:00:32.12,0:00:32.99,Default,,0,0,0,,that's been made in
+Dialogue: 0,0:00:32.99,0:00:34.06,Default,,0,0,0,,both the with Gemini
+Dialogue: 0,0:00:34.06,0:00:36.08,Default,,0,0,0,,3 but also on
+Dialogue: 0,0:00:36.08,0:00:36.88,Default,,0,0,0,,the product side with
+Dialogue: 0,0:00:36.88,0:00:38.58,Default,,0,0,0,,Gemini app getting increasing
+Dialogue: 0,0:00:38.58,0:00:40.34,Default,,0,0,0,,market share So I
+Dialogue: 0,0:00:40.34,0:00:41.42,Default,,0,0,0,,feel like we're making
+Dialogue: 0,0:00:41.42,0:00:43.24,Default,,0,0,0,,great progress but there's
+Dialogue: 0,0:00:43.24,0:00:43.86,Default,,0,0,0,,a tonne more work
+Dialogue: 0,0:00:43.86,0:00:45.72,Default,,0,0,0,,to do and you
+Dialogue: 0,0:00:45.72,0:00:46.74,Default,,0,0,0,,know we're bringing to
+Dialogue: 0,0:00:46.74,0:00:47.94,Default,,0,0,0,,bear Google DeepMind's kind
+Dialogue: 0,0:00:47.94,0:00:48.56,Default,,0,0,0,,of like the engine
+Dialogue: 0,0:00:48.56,0:00:49.64,Default,,0,0,0,,room of where we're
+Dialogue: 0,0:00:49.64,0:00:51.94,Default,,0,0,0,,getting used to our
+Dialogue: 0,0:00:51.94,0:00:53.20,Default,,0,0,0,,more and quickly into
+Dialogue: 0,0:00:53.20,0:00:54.00,Default,,0,0,0,,the product surfaces

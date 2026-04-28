@@ -1,0 +1,61 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,48,&H00FFFFFF,&H000000FF,&H00000000,&H70000000,-1,0,0,0,100,100,0,0,4,0,0,2,60,60,160,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.42,Default,,0,0,0,,So the mechanism whereby
+Dialogue: 0,0:00:02.42,0:00:03.92,Default,,0,0,0,,I imagined it would
+Dialogue: 0,0:00:03.92,0:00:05.20,Default,,0,0,0,,happen is that we
+Dialogue: 0,0:00:05.20,0:00:06.20,Default,,0,0,0,,would make models that
+Dialogue: 0,0:00:06.20,0:00:07.06,Default,,0,0,0,,were good at coding
+Dialogue: 0,0:00:07.06,0:00:08.24,Default,,0,0,0,,and good at AI
+Dialogue: 0,0:00:08.24,0:00:09.44,Default,,0,0,0,,research and we would
+Dialogue: 0,0:00:09.44,0:00:11.56,Default,,0,0,0,,use that to produce
+Dialogue: 0,0:00:11.56,0:00:12.56,Default,,0,0,0,,the next generation of
+Dialogue: 0,0:00:12.56,0:00:13.32,Default,,0,0,0,,model and speed it
+Dialogue: 0,0:00:13.32,0:00:14.26,Default,,0,0,0,,up to create a
+Dialogue: 0,0:00:14.26,0:00:16.46,Default,,0,0,0,,loop that would increase
+Dialogue: 0,0:00:16.46,0:00:17.32,Default,,0,0,0,,the speed of model
+Dialogue: 0,0:00:17.32,0:00:19.10,Default,,0,0,0,,development We are now
+Dialogue: 0,0:00:19.42,0:00:20.86,Default,,0,0,0,,in terms of the
+Dialogue: 0,0:00:20.86,0:00:22.04,Default,,0,0,0,,models that write code
+Dialogue: 0,0:00:22.38,0:00:24.22,Default,,0,0,0,,I have engineers within
+Dialogue: 0,0:00:24.22,0:00:25.22,Default,,0,0,0,,Anthropa who say don't
+Dialogue: 0,0:00:25.22,0:00:26.20,Default,,0,0,0,,write any code anymore
+Dialogue: 0,0:00:26.36,0:00:27.78,Default,,0,0,0,,I just let the
+Dialogue: 0,0:00:27.78,0:00:29.16,Default,,0,0,0,,model write the I
+Dialogue: 0,0:00:29.16,0:00:30.10,Default,,0,0,0,,edit it I do
+Dialogue: 0,0:00:30.10,0:00:31.84,Default,,0,0,0,,the around it I
+Dialogue: 0,0:00:31.84,0:00:33.04,Default,,0,0,0,,think I don't know
+Dialogue: 0,0:00:33.10,0:00:34.12,Default,,0,0,0,,we might be 6
+Dialogue: 0,0:00:34.12,0:00:35.36,Default,,0,0,0,,to 12 months away
+Dialogue: 0,0:00:35.36,0:00:37.08,Default,,0,0,0,,from when the is
+Dialogue: 0,0:00:37.08,0:00:38.92,Default,,0,0,0,,doing most all of
+Dialogue: 0,0:00:38.92,0:00:40.99,Default,,0,0,0,,what do end to
+Dialogue: 0,0:00:40.99,0:00:41.94,Default,,0,0,0,,end And then it's
+Dialogue: 0,0:00:41.94,0:00:43.14,Default,,0,0,0,,a of how fast
+Dialogue: 0,0:00:43.14,0:00:44.18,Default,,0,0,0,,does that loop close
+Dialogue: 0,0:00:44.70,0:00:45.82,Default,,0,0,0,,Not every part of
+Dialogue: 0,0:00:45.82,0:00:47.58,Default,,0,0,0,,that is something that
+Dialogue: 0,0:00:47.58,0:00:48.22,Default,,0,0,0,,can be sped up
+Dialogue: 0,0:00:48.22,0:00:49.16,Default,,0,0,0,,by AI right There's
+Dialogue: 0,0:00:49.16,0:00:51.38,Default,,0,0,0,,like There's manufacture of
+Dialogue: 0,0:00:51.78,0:00:52.96,Default,,0,0,0,,There's training time for
+Dialogue: 0,0:00:52.96,0:00:54.82,Default,,0,0,0,,the it's you I
+Dialogue: 0,0:00:54.82,0:00:55.36,Default,,0,0,0,,think there's a lot
+Dialogue: 0,0:00:55.36,0:00:56.74,Default,,0,0,0,,of It's easy to
+Dialogue: 0,0:00:56.74,0:00:58.04,Default,,0,0,0,,see how this could
+Dialogue: 0,0:00:58.04,0:01:00.26,Default,,0,0,0,,take a years I
+Dialogue: 0,0:01:00.26,0:01:01.64,Default,,0,0,0,,don't it's very hard
+Dialogue: 0,0:01:01.64,0:01:02.02,Default,,0,0,0,,for me to see
+Dialogue: 0,0:01:02.02,0:01:02.58,Default,,0,0,0,,how it could take
+Dialogue: 0,0:01:02.58,0:01:03.04,Default,,0,0,0,,longer than that

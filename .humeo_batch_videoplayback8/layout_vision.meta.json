@@ -1,0 +1,9 @@
+{
+  "layout_vision_cache_version": 5,
+  "transcript_sha256": "e7baa9ce281b4c15db6bdb33208af66d20233e41528f34b92c992496af23f6ea",
+  "clips_sha256": "450d51b8310df9ac59f56225459b4c71c1cf468fa684016ccade91331c992d81",
+  "gemini_vision_model": "google/gemini-2.5-pro",
+  "llm_backend": "openrouter",
+  "segmentation_provider": "replicate",
+  "segmentation_model": "meta/sam-2-video"
+}

@@ -1,0 +1,131 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Base,Arial,86,&H00FFFFFF,&H000000FF,&H00101010,&H00000000,-1,0,0,0,100,100,-1,0,1,4,0,8,0,0,0,0
+Style: Highlight,Arial,86,&H00FFFFFF,&H000000FF,&H00000000,&H00F65C8B,-1,0,0,0,100,100,-1,0,4,0,10,7,0,0,0,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.02,0:00:02.74,Base,,0,0,0,,{\an7\pos(132.0,1440.0)}Autonomous trucks
+Dialogue: 1,0:00:00.02,0:00:00.58,Highlight,,0,0,0,,{\an7\pos(132.0,1440.0)\blur0.8}Autonomous
+Dialogue: 1,0:00:00.58,0:00:00.99,Highlight,,0,0,0,,{\an7\pos(689.0,1440.0)\blur0.8}trucks
+Dialogue: 0,0:00:00.02,0:00:02.74,Base,,0,0,0,,{\an7\pos(393.5,1534.0)}will cut
+Dialogue: 1,0:00:00.99,0:00:02.36,Highlight,,0,0,0,,{\an7\pos(393.5,1534.0)\blur0.8}will
+Dialogue: 1,0:00:02.36,0:00:02.74,Highlight,,0,0,0,,{\an7\pos(556.5,1534.0)\blur0.8}cut
+Dialogue: 0,0:00:02.74,0:00:04.50,Base,,0,0,0,,{\an7\pos(252.0,1440.0)}delivery costs
+Dialogue: 1,0:00:02.74,0:00:03.22,Highlight,,0,0,0,,{\an7\pos(252.0,1440.0)\blur0.8}delivery
+Dialogue: 1,0:00:03.22,0:00:03.60,Highlight,,0,0,0,,{\an7\pos(602.0,1440.0)\blur0.8}costs
+Dialogue: 0,0:00:02.74,0:00:04.50,Base,,0,0,0,,{\an7\pos(429.5,1534.0)}by 60
+Dialogue: 1,0:00:03.60,0:00:03.94,Highlight,,0,0,0,,{\an7\pos(429.5,1534.0)\blur0.8}by
+Dialogue: 1,0:00:03.94,0:00:04.50,Highlight,,0,0,0,,{\an7\pos(554.5,1534.0)\blur0.8}60
+Dialogue: 0,0:00:04.60,0:00:07.32,Base,,0,0,0,,{\an7\pos(302.5,1440.0)}Drones and
+Dialogue: 1,0:00:04.60,0:00:05.48,Highlight,,0,0,0,,{\an7\pos(302.5,1440.0)\blur0.8}Drones
+Dialogue: 1,0:00:05.48,0:00:06.36,Highlight,,0,0,0,,{\an7\pos(623.5,1440.0)\blur0.8}and
+Dialogue: 0,0:00:04.60,0:00:07.32,Base,,0,0,0,,{\an7\pos(261.5,1534.0)}rolling robots
+Dialogue: 1,0:00:06.36,0:00:06.76,Highlight,,0,0,0,,{\an7\pos(261.5,1534.0)\blur0.8}rolling
+Dialogue: 1,0:00:06.76,0:00:07.32,Highlight,,0,0,0,,{\an7\pos(549.5,1534.0)\blur0.8}robots
+Dialogue: 0,0:00:07.32,0:00:09.82,Base,,0,0,0,,{\an7\pos(247.0,1440.0)}are also going
+Dialogue: 1,0:00:07.32,0:00:08.40,Highlight,,0,0,0,,{\an7\pos(247.0,1440.0)\blur0.8}are
+Dialogue: 1,0:00:08.40,0:00:08.70,Highlight,,0,0,0,,{\an7\pos(400.0,1440.0)\blur0.8}also
+Dialogue: 1,0:00:08.70,0:00:08.96,Highlight,,0,0,0,,{\an7\pos(597.0,1440.0)\blur0.8}going
+Dialogue: 0,0:00:07.32,0:00:09.82,Base,,0,0,0,,{\an7\pos(247.0,1534.0)}to cut delivery
+Dialogue: 1,0:00:08.96,0:00:09.30,Highlight,,0,0,0,,{\an7\pos(247.0,1534.0)\blur0.8}to
+Dialogue: 1,0:00:09.30,0:00:09.40,Highlight,,0,0,0,,{\an7\pos(353.0,1534.0)\blur0.8}cut
+Dialogue: 1,0:00:09.40,0:00:09.82,Highlight,,0,0,0,,{\an7\pos(507.0,1534.0)\blur0.8}delivery
+Dialogue: 0,0:00:09.82,0:00:10.82,Base,,0,0,0,,{\an7\pos(163.5,1534.0)}costs dramatically
+Dialogue: 1,0:00:09.82,0:00:10.26,Highlight,,0,0,0,,{\an7\pos(163.5,1534.0)\blur0.8}costs
+Dialogue: 1,0:00:10.26,0:00:10.82,Highlight,,0,0,0,,{\an7\pos(413.5,1534.0)\blur0.8}dramatically
+Dialogue: 0,0:00:11.28,0:00:13.76,Base,,0,0,0,,{\an7\pos(259.0,1440.0)}Did you know
+Dialogue: 1,0:00:11.28,0:00:11.72,Highlight,,0,0,0,,{\an7\pos(259.0,1440.0)\blur0.8}Did
+Dialogue: 1,0:00:11.72,0:00:11.98,Highlight,,0,0,0,,{\an7\pos(422.0,1440.0)\blur0.8}you
+Dialogue: 1,0:00:11.98,0:00:12.36,Highlight,,0,0,0,,{\an7\pos(600.0,1440.0)\blur0.8}know
+Dialogue: 0,0:00:11.28,0:00:13.76,Base,,0,0,0,,{\an7\pos(195.0,1534.0)}there are already
+Dialogue: 1,0:00:12.36,0:00:12.78,Highlight,,0,0,0,,{\an7\pos(195.0,1534.0)\blur0.8}there
+Dialogue: 1,0:00:12.78,0:00:13.10,Highlight,,0,0,0,,{\an7\pos(430.0,1534.0)\blur0.8}are
+Dialogue: 1,0:00:13.10,0:00:13.76,Highlight,,0,0,0,,{\an7\pos(583.0,1534.0)\blur0.8}already
+Dialogue: 0,0:00:13.90,0:00:16.56,Base,,0,0,0,,{\an7\pos(365.0,1440.0)}4 million
+Dialogue: 1,0:00:13.90,0:00:14.78,Highlight,,0,0,0,,{\an7\pos(365.0,1440.0)\blur0.8}4
+Dialogue: 1,0:00:14.78,0:00:15.06,Highlight,,0,0,0,,{\an7\pos(437.0,1440.0)\blur0.8}million
+Dialogue: 0,0:00:13.90,0:00:16.56,Base,,0,0,0,,{\an7\pos(262.0,1534.0)}deliveries per
+Dialogue: 1,0:00:15.06,0:00:15.72,Highlight,,0,0,0,,{\an7\pos(262.0,1534.0)\blur0.8}deliveries
+Dialogue: 1,0:00:15.72,0:00:16.56,Highlight,,0,0,0,,{\an7\pos(684.0,1534.0)\blur0.8}per
+Dialogue: 0,0:00:16.56,0:00:18.90,Base,,0,0,0,,{\an7\pos(233.0,1534.0)}year by drones
+Dialogue: 1,0:00:16.56,0:00:17.08,Highlight,,0,0,0,,{\an7\pos(233.0,1534.0)\blur0.8}year
+Dialogue: 1,0:00:17.08,0:00:18.50,Highlight,,0,0,0,,{\an7\pos(434.0,1534.0)\blur0.8}by
+Dialogue: 1,0:00:18.50,0:00:18.90,Highlight,,0,0,0,,{\an7\pos(559.0,1534.0)\blur0.8}drones
+Dialogue: 0,0:00:18.99,0:00:21.42,Base,,0,0,0,,{\an7\pos(333.5,1440.0)}Now to be
+Dialogue: 1,0:00:18.99,0:00:19.66,Highlight,,0,0,0,,{\an7\pos(333.5,1440.0)\blur0.8}Now
+Dialogue: 1,0:00:19.66,0:00:19.90,Highlight,,0,0,0,,{\an7\pos(539.5,1440.0)\blur0.8}to
+Dialogue: 1,0:00:19.90,0:00:20.20,Highlight,,0,0,0,,{\an7\pos(645.5,1440.0)\blur0.8}be
+Dialogue: 0,0:00:18.99,0:00:21.42,Base,,0,0,0,,{\an7\pos(208.5,1534.0)}sure Zipline one
+Dialogue: 1,0:00:20.20,0:00:20.88,Highlight,,0,0,0,,{\an7\pos(208.5,1534.0)\blur0.8}sure
+Dialogue: 1,0:00:20.88,0:00:21.30,Highlight,,0,0,0,,{\an7\pos(414.5,1534.0)\blur0.8}Zipline
+Dialogue: 1,0:00:21.30,0:00:21.42,Highlight,,0,0,0,,{\an7\pos(717.5,1534.0)\blur0.8}one
+Dialogue: 0,0:00:21.42,0:00:23.08,Base,,0,0,0,,{\an7\pos(371.5,1440.0)}of the in
+Dialogue: 1,0:00:21.42,0:00:21.54,Highlight,,0,0,0,,{\an7\pos(371.5,1440.0)\blur0.8}of
+Dialogue: 1,0:00:21.54,0:00:21.96,Highlight,,0,0,0,,{\an7\pos(477.5,1440.0)\blur0.8}the
+Dialogue: 1,0:00:21.96,0:00:22.20,Highlight,,0,0,0,,{\an7\pos(631.5,1440.0)\blur0.8}in
+Dialogue: 0,0:00:21.42,0:00:23.08,Base,,0,0,0,,{\an7\pos(196.5,1534.0)}our venture fund
+Dialogue: 1,0:00:22.20,0:00:22.36,Highlight,,0,0,0,,{\an7\pos(196.5,1534.0)\blur0.8}our
+Dialogue: 1,0:00:22.36,0:00:22.68,Highlight,,0,0,0,,{\an7\pos(359.5,1534.0)\blur0.8}venture
+Dialogue: 1,0:00:22.68,0:00:23.08,Highlight,,0,0,0,,{\an7\pos(695.5,1534.0)\blur0.8}fund
+Dialogue: 0,0:00:23.54,0:00:26.22,Base,,0,0,0,,{\an7\pos(249.5,1440.0)}is responsible
+Dialogue: 1,0:00:23.54,0:00:24.82,Highlight,,0,0,0,,{\an7\pos(249.5,1440.0)\blur0.8}is
+Dialogue: 1,0:00:24.82,0:00:25.38,Highlight,,0,0,0,,{\an7\pos(345.5,1440.0)\blur0.8}responsible
+Dialogue: 0,0:00:23.54,0:00:26.22,Base,,0,0,0,,{\an7\pos(458.5,1534.0)}for I
+Dialogue: 1,0:00:25.38,0:00:25.72,Highlight,,0,0,0,,{\an7\pos(458.5,1534.0)\blur0.8}for
+Dialogue: 1,0:00:25.72,0:00:26.22,Highlight,,0,0,0,,{\an7\pos(597.5,1534.0)\blur0.8}I
+Dialogue: 0,0:00:26.22,0:00:26.86,Base,,0,0,0,,{\an7\pos(282.5,1534.0)}half of those
+Dialogue: 1,0:00:26.22,0:00:26.28,Highlight,,0,0,0,,{\an7\pos(282.5,1534.0)\blur0.8}half
+Dialogue: 1,0:00:26.28,0:00:26.60,Highlight,,0,0,0,,{\an7\pos(460.5,1534.0)\blur0.8}of
+Dialogue: 1,0:00:26.60,0:00:26.86,Highlight,,0,0,0,,{\an7\pos(566.5,1534.0)\blur0.8}those
+Dialogue: 0,0:00:26.96,0:00:30.06,Base,,0,0,0,,{\an7\pos(398.5,1440.0)}But we
+Dialogue: 1,0:00:26.96,0:00:27.84,Highlight,,0,0,0,,{\an7\pos(398.5,1440.0)\blur0.8}But
+Dialogue: 1,0:00:27.84,0:00:28.72,Highlight,,0,0,0,,{\an7\pos(566.5,1440.0)\blur0.8}we
+Dialogue: 0,0:00:26.96,0:00:30.06,Base,,0,0,0,,{\an7\pos(302.0,1534.0)}believe that
+Dialogue: 1,0:00:28.72,0:00:29.34,Highlight,,0,0,0,,{\an7\pos(302.0,1534.0)\blur0.8}believe
+Dialogue: 1,0:00:29.34,0:00:30.06,Highlight,,0,0,0,,{\an7\pos(619.0,1534.0)\blur0.8}that
+Dialogue: 0,0:00:30.06,0:00:32.62,Base,,0,0,0,,{\an7\pos(374.0,1440.0)}the cost
+Dialogue: 1,0:00:30.06,0:00:30.66,Highlight,,0,0,0,,{\an7\pos(374.0,1440.0)\blur0.8}the
+Dialogue: 1,0:00:30.66,0:00:31.18,Highlight,,0,0,0,,{\an7\pos(528.0,1440.0)\blur0.8}cost
+Dialogue: 0,0:00:30.06,0:00:32.62,Base,,0,0,0,,{\an7\pos(436.5,1534.0)}to by
+Dialogue: 1,0:00:31.18,0:00:31.84,Highlight,,0,0,0,,{\an7\pos(436.5,1534.0)\blur0.8}to
+Dialogue: 1,0:00:31.84,0:00:32.62,Highlight,,0,0,0,,{\an7\pos(542.5,1534.0)\blur0.8}by
+Dialogue: 0,0:00:32.62,0:00:35.45,Base,,0,0,0,,{\an7\pos(338.5,1440.0)}drone will
+Dialogue: 1,0:00:32.62,0:00:33.10,Highlight,,0,0,0,,{\an7\pos(338.5,1440.0)\blur0.8}drone
+Dialogue: 1,0:00:33.10,0:00:33.53,Highlight,,0,0,0,,{\an7\pos(602.5,1440.0)\blur0.8}will
+Dialogue: 0,0:00:32.62,0:00:35.45,Base,,0,0,0,,{\an7\pos(300.0,1534.0)}cut delivery
+Dialogue: 1,0:00:33.53,0:00:34.29,Highlight,,0,0,0,,{\an7\pos(300.0,1534.0)\blur0.8}cut
+Dialogue: 1,0:00:34.29,0:00:35.45,Highlight,,0,0,0,,{\an7\pos(454.0,1534.0)\blur0.8}delivery
+Dialogue: 0,0:00:35.45,0:00:37.63,Base,,0,0,0,,{\an7\pos(319.0,1440.0)}costs right
+Dialogue: 1,0:00:35.45,0:00:35.93,Highlight,,0,0,0,,{\an7\pos(319.0,1440.0)\blur0.8}costs
+Dialogue: 1,0:00:35.93,0:00:36.27,Highlight,,0,0,0,,{\an7\pos(569.0,1440.0)\blur0.8}right
+Dialogue: 0,0:00:35.45,0:00:37.63,Base,,0,0,0,,{\an7\pos(235.5,1534.0)}now DoorDash
+Dialogue: 1,0:00:36.27,0:00:37.19,Highlight,,0,0,0,,{\an7\pos(235.5,1534.0)\blur0.8}now
+Dialogue: 1,0:00:37.19,0:00:37.63,Highlight,,0,0,0,,{\an7\pos(432.5,1534.0)\blur0.8}DoorDash
+Dialogue: 0,0:00:37.87,0:00:40.33,Base,,0,0,0,,{\an7\pos(360.0,1440.0)}15 per to
+Dialogue: 1,0:00:37.87,0:00:38.43,Highlight,,0,0,0,,{\an7\pos(360.0,1440.0)\blur0.8}15
+Dialogue: 1,0:00:38.43,0:00:39.47,Highlight,,0,0,0,,{\an7\pos(480.0,1440.0)\blur0.8}per
+Dialogue: 1,0:00:39.47,0:00:39.93,Highlight,,0,0,0,,{\an7\pos(638.0,1440.0)\blur0.8}to
+Dialogue: 0,0:00:37.87,0:00:40.33,Base,,0,0,0,,{\an7\pos(352.5,1534.0)}less than
+Dialogue: 1,0:00:39.93,0:00:40.15,Highlight,,0,0,0,,{\an7\pos(352.5,1534.0)\blur0.8}less
+Dialogue: 1,0:00:40.15,0:00:40.33,Highlight,,0,0,0,,{\an7\pos(544.5,1534.0)\blur0.8}than
+Dialogue: 0,0:00:40.33,0:00:40.73,Base,,0,0,0,,{\an7\pos(386.5,1534.0)}a dollar
+Dialogue: 1,0:00:40.33,0:00:40.65,Highlight,,0,0,0,,{\an7\pos(386.5,1534.0)\blur0.8}a
+Dialogue: 1,0:00:40.65,0:00:40.73,Highlight,,0,0,0,,{\an7\pos(458.5,1534.0)\blur0.8}dollar
+Dialogue: 0,0:00:40.87,0:00:43.33,Base,,0,0,0,,{\an7\pos(389.0,1440.0)}So a 90
+Dialogue: 1,0:00:40.87,0:00:41.03,Highlight,,0,0,0,,{\an7\pos(389.0,1440.0)\blur0.8}So
+Dialogue: 1,0:00:41.03,0:00:41.33,Highlight,,0,0,0,,{\an7\pos(523.0,1440.0)\blur0.8}a
+Dialogue: 1,0:00:41.33,0:00:42.15,Highlight,,0,0,0,,{\an7\pos(595.0,1440.0)\blur0.8}90
+Dialogue: 0,0:00:40.87,0:00:43.33,Base,,0,0,0,,{\an7\pos(240.0,1534.0)}reduction over
+Dialogue: 1,0:00:42.15,0:00:42.75,Highlight,,0,0,0,,{\an7\pos(240.0,1534.0)\blur0.8}reduction
+Dialogue: 1,0:00:42.75,0:00:43.33,Highlight,,0,0,0,,{\an7\pos(658.0,1534.0)\blur0.8}over
+Dialogue: 0,0:00:43.33,0:00:43.55,Base,,0,0,0,,{\an7\pos(451.5,1534.0)}time
+Dialogue: 1,0:00:43.33,0:00:43.55,Highlight,,0,0,0,,{\an7\pos(451.5,1534.0)\blur0.8}time

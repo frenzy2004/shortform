@@ -1,0 +1,1239 @@
+{
+  "clips": {
+    "001": {
+      "instruction": {
+        "clip_id": "001",
+        "layout": "sit_center",
+        "zoom": 1.0,
+        "person_x_norm": 0.51,
+        "person_tracking": [],
+        "chart_x_norm": 0.0,
+        "focus_stack_order": "chart_then_person",
+        "split_chart_region": null,
+        "split_person_region": null,
+        "split_second_chart_region": null,
+        "split_second_person_region": null,
+        "top_band_ratio": 0.5
+      },
+      "raw": {
+        "layout": "sit_center",
+        "person_bbox": {
+          "x1": 0.291,
+          "y1": 0.086,
+          "x2": 0.786,
+          "y2": 0.951
+        },
+        "face_bbox": {
+          "x1": 0.398,
+          "y1": 0.161,
+          "x2": 0.622,
+          "y2": 0.462
+        },
+        "chart_bbox": null,
+        "second_person_bbox": null,
+        "second_face_bbox": null,
+        "second_chart_bbox": null,
+        "reason": "The image features a single speaker in a seated interview setting, making 'sit_center' the most appropriate layout.",
+        "segmentation_tracking": {
+          "error": "0"
+        },
+        "person_tracking_samples": [
+          {
+            "sample_kind": "midpoint_keyframe",
+            "time_sec": 23.989499999999737,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realtest_videoplayback8_20260423_055125\\keyframes\\001\\001.jpg",
+            "center_x_norm": 0.51,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 0.291,
+                "y1": 0.086,
+                "x2": 0.786,
+                "y2": 0.951
+              },
+              "face_bbox": {
+                "x1": 0.398,
+                "y1": 0.161,
+                "x2": 0.622,
+                "y2": 0.462
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The image features a single speaker in a seated interview setting, making 'sit_center' the most appropriate layout."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 4.797899999999948,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realtest_videoplayback8_20260423_055125\\layout_tracking\\001\\001_004798.jpg",
+            "center_x_norm": 0.48705,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 0.2341,
+                "y1": 0.1435,
+                "x2": 0.763,
+                "y2": 0.8019
+              },
+              "face_bbox": {
+                "x1": 0.3611,
+                "y1": 0.1519,
+                "x2": 0.613,
+                "y2": 0.463
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "A single person is speaking in a medium shot, centered in the frame. This is a classic seated interview or presentation setup, making 'sit_center' the most appropriate layout."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 9.595799999999896,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realtest_videoplayback8_20260423_055125\\layout_tracking\\001\\001_009596.jpg",
+            "center_x_norm": 0.481,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 0.267,
+                "y1": 0.115,
+                "x2": 0.77,
+                "y2": 0.811
+              },
+              "face_bbox": {
+                "x1": 0.356,
+                "y1": 0.132,
+                "x2": 0.606,
+                "y2": 0.463
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The image contains a single speaker in a medium shot, which is best framed using the 'sit_center' layout. The lower-third graphic is not a primary content element requiring a split screen."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 14.393699999999841,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realtest_videoplayback8_20260423_055125\\layout_tracking\\001\\001_014394.jpg",
+            "center_x_norm": 0.5334,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 0.3546,
+                "y1": 0.1278,
+                "x2": 0.8033,
+                "y2": 0.9611
+              },
+              "face_bbox": {
+                "x1": 0.418,
+                "y1": 0.1361,
+                "x2": 0.6488,
+                "y2": 0.4472
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The image contains a single person in a seated, interview-style setting, making 'sit_center' the most appropriate layout."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 19.19159999999979,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realtest_videoplayback8_20260423_055125\\layout_tracking\\001\\001_019192.jpg",
+            "center_x_norm": 0.5037,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 0.2244,
+                "y1": 0.1019,
+                "x2": 0.8213,
+                "y2": 0.8546
+              },
+              "face_bbox": {
+                "x1": 0.3546,
+                "y1": 0.1537,
+                "x2": 0.6528,
+                "y2": 0.5009
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The image features a single speaker in a standard medium shot, which is best suited for a centered layout."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 28.787399999999682,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realtest_videoplayback8_20260423_055125\\layout_tracking\\001\\001_028787.jpg",
+            "center_x_norm": 0.481,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 0.251,
+                "y1": 0.101,
+                "x2": 0.754,
+                "y2": 1.0
+              },
+              "face_bbox": {
+                "x1": 0.351,
+                "y1": 0.113,
+                "x2": 0.611,
+                "y2": 0.483
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The image features a single person in a medium shot, typical of a seated interview or presentation. The 'sit_center' layout is the best choice to frame this subject."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 33.58529999999963,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realtest_videoplayback8_20260423_055125\\layout_tracking\\001\\001_033585.jpg",
+            "center_x_norm": 0.46349999999999997,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 0.254,
+                "y1": 0.118,
+                "x2": 0.791,
+                "y2": 0.961
+              },
+              "face_bbox": {
+                "x1": 0.353,
+                "y1": 0.161,
+                "x2": 0.574,
+                "y2": 0.472
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The image contains a single person in a standard seated interview setup, making 'sit_center' the most appropriate layout."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 38.38319999999958,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realtest_videoplayback8_20260423_055125\\layout_tracking\\001\\001_038383.jpg",
+            "center_x_norm": 0.46149999999999997,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 0.264,
+                "y1": 0.157,
+                "x2": 0.702,
+                "y2": 0.811
+              },
+              "face_bbox": {
+                "x1": 0.351,
+                "y1": 0.189,
+                "x2": 0.572,
+                "y2": 0.472
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "A single speaker is shown in a medium shot, consistent with a seated interview or podcast recording."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 43.181099999999525,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realtest_videoplayback8_20260423_055125\\layout_tracking\\001\\001_043181.jpg",
+            "center_x_norm": 0.5003905,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 0.28125,
+                "y1": 0.126389,
+                "x2": 0.719531,
+                "y2": 0.8625
+              },
+              "face_bbox": {
+                "x1": 0.382812,
+                "y1": 0.126389,
+                "x2": 0.617969,
+                "y2": 0.456944
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The image features a single person in a medium shot, suitable for a centered interview-style layout."
+            }
+          }
+        ]
+      }
+    },
+    "002": {
+      "instruction": {
+        "clip_id": "002",
+        "layout": "sit_center",
+        "zoom": 1.0,
+        "person_x_norm": 0.5029,
+        "person_tracking": [
+          {
+            "t_sec": 0.0,
+            "x_norm": 0.5013
+          },
+          {
+            "t_sec": 5.938,
+            "x_norm": 0.5013
+          },
+          {
+            "t_sec": 11.876,
+            "x_norm": 0.5013
+          },
+          {
+            "t_sec": 17.813999999999997,
+            "x_norm": 0.5013
+          },
+          {
+            "t_sec": 23.752,
+            "x_norm": 0.5013
+          },
+          {
+            "t_sec": 29.689999999999998,
+            "x_norm": 0.5013
+          },
+          {
+            "t_sec": 35.62799999999999,
+            "x_norm": 0.4364
+          },
+          {
+            "t_sec": 41.565999999999995,
+            "x_norm": 0.3165
+          },
+          {
+            "t_sec": 47.504,
+            "x_norm": 0.3165
+          },
+          {
+            "t_sec": 53.442,
+            "x_norm": 0.3165
+          },
+          {
+            "t_sec": 59.379999999999995,
+            "x_norm": 0.3165
+          }
+        ],
+        "chart_x_norm": 0.0,
+        "focus_stack_order": "chart_then_person",
+        "split_chart_region": null,
+        "split_person_region": null,
+        "split_second_chart_region": null,
+        "split_second_person_region": null,
+        "top_band_ratio": 0.5
+      },
+      "raw": {
+        "layout": "sit_center",
+        "person_bbox": {
+          "x1": 0.2541,
+          "y1": 0.0889,
+          "x2": 0.7625,
+          "y2": 0.8556
+        },
+        "face_bbox": {
+          "x1": 0.3925,
+          "y1": 0.1222,
+          "x2": 0.6133,
+          "y2": 0.5028
+        },
+        "chart_bbox": null,
+        "second_person_bbox": null,
+        "second_face_bbox": null,
+        "second_chart_bbox": null,
+        "reason": "A single speaker is centrally framed in a typical interview-style shot, making 'sit_center' the most appropriate layout.",
+        "segmentation_tracking": {
+          "error": "0"
+        },
+        "person_tracking_samples": [
+          {
+            "sample_kind": "midpoint_keyframe",
+            "time_sec": 29.689999999999998,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realtest_videoplayback8_20260423_055125\\keyframes\\002\\002.jpg",
+            "center_x_norm": 0.5029,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 0.2541,
+                "y1": 0.0889,
+                "x2": 0.7625,
+                "y2": 0.8556
+              },
+              "face_bbox": {
+                "x1": 0.3925,
+                "y1": 0.1222,
+                "x2": 0.6133,
+                "y2": 0.5028
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "A single speaker is centrally framed in a typical interview-style shot, making 'sit_center' the most appropriate layout."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 5.938,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realtest_videoplayback8_20260423_055125\\layout_tracking\\002\\002_005938.jpg",
+            "center_x_norm": 0.5013,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 0.2804,
+                "y1": 0.0,
+                "x2": 0.791,
+                "y2": 0.9531
+              },
+              "face_bbox": {
+                "x1": 0.3916,
+                "y1": 0.118,
+                "x2": 0.611,
+                "y2": 0.4628
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The image features a single person in a seated interview or podcast setting, which is best captured by the 'sit_center' layout."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 11.876,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realtest_videoplayback8_20260423_055125\\layout_tracking\\002\\002_011876.jpg",
+            "center_x_norm": 0.539,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 0.291,
+                "y1": 0.121,
+                "x2": 0.815,
+                "y2": 0.858
+              },
+              "face_bbox": {
+                "x1": 0.418,
+                "y1": 0.14,
+                "x2": 0.66,
+                "y2": 0.581
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The image features a single person in a seated interview or presentation format, making 'sit_center' the most suitable layout. There are no charts or other speakers present."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 17.813999999999997,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realtest_videoplayback8_20260423_055125\\layout_tracking\\002\\002_017814.jpg",
+            "center_x_norm": 0.504,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 0.234,
+                "y1": 0.0,
+                "x2": 0.802,
+                "y2": 0.949
+              },
+              "face_bbox": {
+                "x1": 0.383,
+                "y1": 0.165,
+                "x2": 0.625,
+                "y2": 0.463
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The image contains a single speaker in a centered, seated position, which is best framed using the 'sit_center' layout."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 23.752,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realtest_videoplayback8_20260423_055125\\layout_tracking\\002\\002_023752.jpg",
+            "center_x_norm": 0.47785,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 0.2811,
+                "y1": 0.1018,
+                "x2": 0.727,
+                "y2": 0.9018
+              },
+              "face_bbox": {
+                "x1": 0.362,
+                "y1": 0.1518,
+                "x2": 0.5937,
+                "y2": 0.4851
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The image features a single person in a seated, interview-style setting, which is best captured by the sit_center layout."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 35.62799999999999,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realtest_videoplayback8_20260423_055125\\layout_tracking\\002\\002_035628.jpg",
+            "center_x_norm": 0.4364,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 0.2285,
+                "y1": 0.1018,
+                "x2": 0.7571,
+                "y2": 0.966
+              },
+              "face_bbox": {
+                "x1": 0.3128,
+                "y1": 0.162,
+                "x2": 0.56,
+                "y2": 0.4821
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The image contains a single person in a medium shot, which is characteristic of an interview or seated presentation. The 'sit_center' layout is the most appropriate for this framing."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 41.565999999999995,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realtest_videoplayback8_20260423_055125\\layout_tracking\\002\\002_041566.jpg",
+            "center_x_norm": 0.2695,
+            "raw": {
+              "layout": "split_two_persons",
+              "person_bbox": {
+                "x1": 0.109,
+                "y1": 0.11,
+                "x2": 0.5,
+                "y2": 0.789
+              },
+              "face_bbox": {
+                "x1": 0.205,
+                "y1": 0.165,
+                "x2": 0.334,
+                "y2": 0.458
+              },
+              "chart_bbox": null,
+              "second_person_bbox": {
+                "x1": 0.5,
+                "y1": 0.11,
+                "x2": 0.891,
+                "y2": 0.789
+              },
+              "second_face_bbox": {
+                "x1": 0.586,
+                "y1": 0.167,
+                "x2": 0.727,
+                "y2": 0.5
+              },
+              "second_chart_bbox": null,
+              "reason": "The image displays two people in a split-screen format, characteristic of a remote interview. Therefore, the split_two_persons layout is the most appropriate."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 47.504,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realtest_videoplayback8_20260423_055125\\layout_tracking\\002\\002_047504.jpg",
+            "center_x_norm": 0.3165,
+            "raw": {
+              "layout": "split_two_persons",
+              "person_bbox": {
+                "x1": 0.085,
+                "y1": 0.165,
+                "x2": 0.485,
+                "y2": 0.819
+              },
+              "face_bbox": {
+                "x1": 0.238,
+                "y1": 0.176,
+                "x2": 0.395,
+                "y2": 0.404
+              },
+              "chart_bbox": null,
+              "second_person_bbox": {
+                "x1": 0.501,
+                "y1": 0.098,
+                "x2": 0.963,
+                "y2": 0.819
+              },
+              "second_face_bbox": {
+                "x1": 0.605,
+                "y1": 0.119,
+                "x2": 0.784,
+                "y2": 0.381
+              },
+              "second_chart_bbox": null,
+              "reason": "The frame shows two speakers in a split-screen interview format."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 53.442,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realtest_videoplayback8_20260423_055125\\layout_tracking\\002\\002_053442.jpg",
+            "center_x_norm": 0.317,
+            "raw": {
+              "layout": "split_two_persons",
+              "person_bbox": {
+                "x1": 0.091,
+                "y1": 0.121,
+                "x2": 0.5,
+                "y2": 0.781
+              },
+              "face_bbox": {
+                "x1": 0.224,
+                "y1": 0.16,
+                "x2": 0.41,
+                "y2": 0.46
+              },
+              "chart_bbox": null,
+              "second_person_bbox": {
+                "x1": 0.5,
+                "y1": 0.121,
+                "x2": 0.909,
+                "y2": 0.781
+              },
+              "second_face_bbox": {
+                "x1": 0.622,
+                "y1": 0.173,
+                "x2": 0.801,
+                "y2": 0.471
+              },
+              "second_chart_bbox": null,
+              "reason": "The frame shows two speakers in a split-screen interview format, making it ideal for a two-person layout."
+            }
+          }
+        ]
+      }
+    },
+    "004": {
+      "instruction": {
+        "clip_id": "004",
+        "layout": "split_chart_person",
+        "zoom": 1.0,
+        "person_x_norm": 0.5,
+        "person_tracking": [],
+        "chart_x_norm": 0.0,
+        "focus_stack_order": "chart_then_person",
+        "split_chart_region": {
+          "x1": 0.0,
+          "y1": 0.70092593,
+          "x2": 1.0,
+          "y2": 1.0,
+          "label": "",
+          "confidence": 1.0
+        },
+        "split_person_region": {
+          "x1": 0.20703125,
+          "y1": 0.10185185,
+          "x2": 0.803125,
+          "y2": 0.83055556,
+          "label": "",
+          "confidence": 1.0
+        },
+        "split_second_chart_region": null,
+        "split_second_person_region": null,
+        "top_band_ratio": 0.5
+      },
+      "raw": {
+        "layout": "split_chart_person",
+        "person_bbox": {
+          "x1": 0.20703125,
+          "y1": 0.10185185,
+          "x2": 0.803125,
+          "y2": 0.83055556
+        },
+        "face_bbox": {
+          "x1": 0.3546875,
+          "y1": 0.15555556,
+          "x2": 0.6453125,
+          "y2": 0.46018519
+        },
+        "chart_bbox": {
+          "x1": 0.0,
+          "y1": 0.70092593,
+          "x2": 1.0,
+          "y2": 1.0
+        },
+        "second_person_bbox": null,
+        "second_face_bbox": null,
+        "second_chart_bbox": null,
+        "reason": "The frame features a single speaker and a prominent lower-third graphic containing stock market data, making the split_chart_person layout the most suitable choice."
+      }
+    },
+    "005": {
+      "instruction": {
+        "clip_id": "005",
+        "layout": "sit_center",
+        "zoom": 1.0,
+        "person_x_norm": 0.50025,
+        "person_tracking": [],
+        "chart_x_norm": 0.0,
+        "focus_stack_order": "chart_then_person",
+        "split_chart_region": null,
+        "split_person_region": null,
+        "split_second_chart_region": null,
+        "split_second_person_region": null,
+        "top_band_ratio": 0.5
+      },
+      "raw": {
+        "layout": "sit_center",
+        "person_bbox": {
+          "x1": 0.291,
+          "y1": 0.0931,
+          "x2": 0.7635,
+          "y2": 0.9986
+        },
+        "face_bbox": {
+          "x1": 0.3734,
+          "y1": 0.1014,
+          "x2": 0.6271,
+          "y2": 0.4625
+        },
+        "chart_bbox": null,
+        "second_person_bbox": null,
+        "second_face_bbox": null,
+        "second_chart_bbox": null,
+        "reason": "The image contains a single person in a seated, interview-style setting. This makes the 'sit_center' layout the most appropriate choice.",
+        "segmentation_tracking": {
+          "error": "0"
+        },
+        "person_tracking_samples": [
+          {
+            "sample_kind": "midpoint_keyframe",
+            "time_sec": 31.74000000000015,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realtest_videoplayback8_20260423_055125\\keyframes\\005\\005.jpg",
+            "center_x_norm": 0.50025,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 0.291,
+                "y1": 0.0931,
+                "x2": 0.7635,
+                "y2": 0.9986
+              },
+              "face_bbox": {
+                "x1": 0.3734,
+                "y1": 0.1014,
+                "x2": 0.6271,
+                "y2": 0.4625
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The image contains a single person in a seated, interview-style setting. This makes the 'sit_center' layout the most appropriate choice."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 6.348000000000031,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realtest_videoplayback8_20260423_055125\\layout_tracking\\005\\005_006348.jpg",
+            "center_x_norm": 0.47724999999999995,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 0.2801,
+                "y1": 0.1519,
+                "x2": 0.7411,
+                "y2": 0.8556
+              },
+              "face_bbox": {
+                "x1": 0.3615,
+                "y1": 0.2222,
+                "x2": 0.593,
+                "y2": 0.525
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame features a single person in a classic seated interview setup, making 'sit_center' the ideal layout."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 12.696000000000062,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realtest_videoplayback8_20260423_055125\\layout_tracking\\005\\005_012696.jpg",
+            "center_x_norm": 0.5015499999999999,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 0.2981,
+                "y1": 0.1768,
+                "x2": 0.7766,
+                "y2": 1.0
+              },
+              "face_bbox": {
+                "x1": 0.3615,
+                "y1": 0.2194,
+                "x2": 0.6416,
+                "y2": 0.5555
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The image features a single person in a seated, interview-style shot, which is best framed using the 'sit_center' layout."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 19.04400000000009,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realtest_videoplayback8_20260423_055125\\layout_tracking\\005\\005_019044.jpg",
+            "center_x_norm": 0.50135,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 0.2791,
+                "y1": 0.1182,
+                "x2": 0.7345,
+                "y2": 0.8519
+              },
+              "face_bbox": {
+                "x1": 0.3611,
+                "y1": 0.159,
+                "x2": 0.6416,
+                "y2": 0.5222
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The image features a single person speaking in a medium shot, suitable for a centered layout."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 25.392000000000124,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realtest_videoplayback8_20260423_055125\\layout_tracking\\005\\005_025392.jpg",
+            "center_x_norm": 0.50105,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 0.2812,
+                "y1": 0.0815,
+                "x2": 0.7229,
+                "y2": 0.8009
+              },
+              "face_bbox": {
+                "x1": 0.3802,
+                "y1": 0.1009,
+                "x2": 0.6219,
+                "y2": 0.4509
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "A single speaker is centrally framed in a medium shot, which is best described by the sit_center layout."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 38.08800000000018,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realtest_videoplayback8_20260423_055125\\layout_tracking\\005\\005_038088.jpg",
+            "center_x_norm": 0.5,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 0.26,
+                "y1": 0.11,
+                "x2": 0.79,
+                "y2": 0.88
+              },
+              "face_bbox": {
+                "x1": 0.39,
+                "y1": 0.18,
+                "x2": 0.61,
+                "y2": 0.49
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The image contains a single person in a medium shot, which is best framed using the sit_center layout. There are no other people or distinct charts present."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 44.436000000000206,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realtest_videoplayback8_20260423_055125\\layout_tracking\\005\\005_044436.jpg",
+            "center_x_norm": 0.5025,
+            "raw": {
+              "layout": "split_chart_person",
+              "person_bbox": {
+                "x1": 0.283,
+                "y1": 0.143,
+                "x2": 0.782,
+                "y2": 0.801
+              },
+              "face_bbox": {
+                "x1": 0.361,
+                "y1": 0.161,
+                "x2": 0.644,
+                "y2": 0.522
+              },
+              "chart_bbox": {
+                "x1": 0.0,
+                "y1": 0.804,
+                "x2": 1.0,
+                "y2": 1.0
+              },
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame contains a single speaker and a large lower-third graphic, making it suitable for a split-screen layout."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 50.78400000000025,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realtest_videoplayback8_20260423_055125\\layout_tracking\\005\\005_050784.jpg",
+            "center_x_norm": 0.503,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 0.285,
+                "y1": 0.183,
+                "x2": 0.811,
+                "y2": 0.857
+              },
+              "face_bbox": {
+                "x1": 0.392,
+                "y1": 0.211,
+                "x2": 0.614,
+                "y2": 0.493
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The image features a single person in a medium shot, suitable for a centered layout. The lower-third graphic is present but is an overlay, not a distinct content item like a slide, making 'sit_center' the most appropriate choice."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 57.132000000000275,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realtest_videoplayback8_20260423_055125\\layout_tracking\\005\\005_057132.jpg",
+            "center_x_norm": 0.4805,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 0.234,
+                "y1": 0.065,
+                "x2": 0.781,
+                "y2": 0.85
+              },
+              "face_bbox": {
+                "x1": 0.36,
+                "y1": 0.17,
+                "x2": 0.601,
+                "y2": 0.461
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The image contains a single person in a seated interview-style shot, making the sit_center layout the most appropriate choice to focus on the speaker."
+            }
+          }
+        ]
+      }
+    },
+    "006": {
+      "instruction": {
+        "clip_id": "006",
+        "layout": "sit_center",
+        "zoom": 1.0,
+        "person_x_norm": 0.5006318688392639,
+        "person_tracking": [],
+        "chart_x_norm": 0.0,
+        "focus_stack_order": "chart_then_person",
+        "split_chart_region": null,
+        "split_person_region": null,
+        "split_second_chart_region": null,
+        "split_second_person_region": null,
+        "top_band_ratio": 0.5
+      },
+      "raw": {
+        "layout": "sit_center",
+        "person_bbox": {
+          "x1": 0.2581639289855957,
+          "y1": 0.12111163139343262,
+          "x2": 0.7711464166641235,
+          "y2": 0.8524419069290161
+        },
+        "face_bbox": {
+          "x1": 0.3705021142959595,
+          "y1": 0.13401764631271362,
+          "x2": 0.6307616233825684,
+          "y2": 0.4651336073875427
+        },
+        "chart_bbox": null,
+        "second_person_bbox": null,
+        "second_face_bbox": null,
+        "second_chart_bbox": null,
+        "reason": "The image contains a single person in a medium shot, centrally framed, which is ideal for the 'sit_center' layout.",
+        "segmentation_tracking": {
+          "error": "0"
+        },
+        "person_tracking_samples": [
+          {
+            "sample_kind": "midpoint_keyframe",
+            "time_sec": 23.939999999999827,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realtest_videoplayback8_20260423_055125\\keyframes\\006\\006.jpg",
+            "center_x_norm": 0.5006318688392639,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 0.2581639289855957,
+                "y1": 0.12111163139343262,
+                "x2": 0.7711464166641235,
+                "y2": 0.8524419069290161
+              },
+              "face_bbox": {
+                "x1": 0.3705021142959595,
+                "y1": 0.13401764631271362,
+                "x2": 0.6307616233825684,
+                "y2": 0.4651336073875427
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The image contains a single person in a medium shot, centrally framed, which is ideal for the 'sit_center' layout."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 4.787999999999966,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realtest_videoplayback8_20260423_055125\\layout_tracking\\006\\006_004788.jpg",
+            "center_x_norm": 0.5,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 0.298,
+                "y1": 0.15,
+                "x2": 0.75,
+                "y2": 0.85
+              },
+              "face_bbox": {
+                "x1": 0.38,
+                "y1": 0.2,
+                "x2": 0.62,
+                "y2": 0.52
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The image features a single speaker in a seated, interview-style setting, making 'sit_center' the most appropriate layout."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 9.575999999999931,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realtest_videoplayback8_20260423_055125\\layout_tracking\\006\\006_009576.jpg",
+            "center_x_norm": 0.4773,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 0.2031,
+                "y1": 0.1046,
+                "x2": 0.8218,
+                "y2": 0.8592
+              },
+              "face_bbox": {
+                "x1": 0.3609,
+                "y1": 0.1629,
+                "x2": 0.5937,
+                "y2": 0.4435
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The image features a single person in a classic seated interview setup, which is best captured by the 'sit_center' layout."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 14.363999999999896,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realtest_videoplayback8_20260423_055125\\layout_tracking\\006\\006_014364.jpg",
+            "center_x_norm": 0.5035000000000001,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 0.244,
+                "y1": 0.111,
+                "x2": 0.824,
+                "y2": 0.919
+              },
+              "face_bbox": {
+                "x1": 0.364,
+                "y1": 0.162,
+                "x2": 0.643,
+                "y2": 0.511
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame features a single person in a standard interview or seated presentation setup, making 'sit_center' the most appropriate layout."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 19.151999999999862,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realtest_videoplayback8_20260423_055125\\layout_tracking\\006\\006_019152.jpg",
+            "center_x_norm": 0.501,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 0.219,
+                "y1": 0.109,
+                "x2": 0.885,
+                "y2": 0.811
+              },
+              "face_bbox": {
+                "x1": 0.361,
+                "y1": 0.161,
+                "x2": 0.641,
+                "y2": 0.492
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The image contains a single speaker in a medium shot, typical of an interview or seated presentation. The 'sit_center' layout is the most appropriate choice."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 28.727999999999792,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realtest_videoplayback8_20260423_055125\\layout_tracking\\006\\006_028728.jpg",
+            "center_x_norm": 0.501,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 0.279,
+                "y1": 0.179,
+                "x2": 0.758,
+                "y2": 0.958
+              },
+              "face_bbox": {
+                "x1": 0.378,
+                "y1": 0.179,
+                "x2": 0.624,
+                "y2": 0.529
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame contains a single speaker in a medium close-up, which is best described by the sit_center layout."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 33.51599999999976,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realtest_videoplayback8_20260423_055125\\layout_tracking\\006\\006_033516.jpg",
+            "center_x_norm": 0.503,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 0.257,
+                "y1": 0.118,
+                "x2": 0.81,
+                "y2": 1.0
+              },
+              "face_bbox": {
+                "x1": 0.351,
+                "y1": 0.118,
+                "x2": 0.655,
+                "y2": 0.496
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "A single speaker is present in a medium shot, consistent with an interview or seated presentation. This fits the 'sit_center' layout."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 38.303999999999725,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realtest_videoplayback8_20260423_055125\\layout_tracking\\006\\006_038304.jpg",
+            "center_x_norm": 0.4865,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 0.2608,
+                "y1": 0.141,
+                "x2": 0.7818,
+                "y2": 0.954
+              },
+              "face_bbox": {
+                "x1": 0.361,
+                "y1": 0.154,
+                "x2": 0.612,
+                "y2": 0.463
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The image features a single person in a seated, interview-style framing, which is best captured by the sit_center layout."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 43.09199999999969,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realtest_videoplayback8_20260423_055125\\layout_tracking\\006\\006_043092.jpg",
+            "center_x_norm": 0.501,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 0.211,
+                "y1": 0.101,
+                "x2": 0.81,
+                "y2": 0.801
+              },
+              "face_bbox": {
+                "x1": 0.379,
+                "y1": 0.15,
+                "x2": 0.623,
+                "y2": 0.505
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The image features a single speaker in a medium shot, making the sit_center layout the most appropriate choice to focus on her."
+            }
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,48,&H00FFFFFF,&H000000FF,&H00000000,&H70000000,-1,0,0,0,100,100,0,0,4,0,0,2,60,60,160,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.09,Default,,0,0,0,,In the future we're
+Dialogue: 0,0:00:02.09,0:00:02.83,Default,,0,0,0,,not just to have
+Dialogue: 0,0:00:02.83,0:00:05.05,Default,,0,0,0,,one agent You
+Dialogue: 0,0:00:05.05,0:00:06.37,Default,,0,0,0,,might have your work
+Dialogue: 0,0:00:06.37,0:00:08.49,Default,,0,0,0,,agent your personal claw
+Dialogue: 0,0:00:09.03,0:00:09.89,Default,,0,0,0,,maybe one for health
+Dialogue: 0,0:00:10.25,0:00:11.63,Default,,0,0,0,,maybe one for a
+Dialogue: 0,0:00:12.07,0:00:13.99,Default,,0,0,0,,And they all should
+Dialogue: 0,0:00:13.99,0:00:15.57,Default,,0,0,0,,work together in a
+Dialogue: 0,0:00:15.57,0:00:18.33,Default,,0,0,0,,secure way because how
+Dialogue: 0,0:00:18.33,0:00:19.43,Default,,0,0,0,,did level up
+Dialogue: 0,0:00:20.85,0:00:23.49,Default,,0,0,0,,By specializing and collaborating
+Dialogue: 0,0:00:23.93,0:00:25.51,Default,,0,0,0,,And agents are about
+Dialogue: 0,0:00:25.51,0:00:27.73,Default,,0,0,0,,to do the Imagine
+Dialogue: 0,0:00:27.73,0:00:29.77,Default,,0,0,0,,a company a small
+Dialogue: 0,0:00:29.77,0:00:32.21,Default,,0,0,0,,business that has
+Dialogue: 0,0:00:32.21,0:00:33.43,Default,,0,0,0,,10 agents that are
+Dialogue: 0,0:00:33.43,0:00:35.87,Default,,0,0,0,,all over various
+Dialogue: 0,0:00:35.87,0:00:37.11,Default,,0,0,0,,parts of the business
+Dialogue: 0,0:00:37.65,0:00:38.63,Default,,0,0,0,,We don't even have
+Dialogue: 0,0:00:38.63,0:00:39.89,Default,,0,0,0,,a for what it
+Dialogue: 0,0:00:39.89,0:00:40.83,Default,,0,0,0,,might become but we're
+Dialogue: 0,0:00:40.83,0:00:41.59,Default,,0,0,0,,about to out
+Dialogue: 0,0:00:43.19,0:00:45.57,Default,,0,0,0,,So I created
+Dialogue: 0,0:00:45.57,0:00:47.70,Default,,0,0,0,,the Open Claw Foundation

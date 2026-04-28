@@ -1,0 +1,39 @@
+{
+  "hooks": [
+    {
+      "clip_id": "001",
+      "hook_start_sec": 8.08,
+      "hook_end_sec": 12.84,
+      "hook_text": "We have a Moore's law like law, except it's for intelligence itself",
+      "reason": "This sentence introduces a high-stakes, provocative comparison that immediately frames the topic of AI growth as an inevitable, exponential force."
+    },
+    {
+      "clip_id": "002",
+      "hook_start_sec": 17.2,
+      "hook_end_sec": 22.54,
+      "hook_text": "So imagine 100 million people smarter than any Nobel Prize winner",
+      "reason": "This creates a vivid, terrifying mental image that instantly grabs the viewer's attention by quantifying the scale of the threat."
+    },
+    {
+      "clip_id": "003",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 4.94,
+      "hook_text": "And you don't want to buy too much because you could financially overextend yourself,",
+      "reason": "This starts with a direct, relatable piece of financial advice that immediately establishes the tension of high-stakes business decision-making."
+    },
+    {
+      "clip_id": "004",
+      "hook_start_sec": 37.4,
+      "hook_end_sec": 43.42,
+      "hook_text": "I think we could have this very unusual combination of very fast GDP growth and",
+      "reason": "This presents a counter-intuitive economic prediction that challenges the viewer's understanding of growth and unemployment."
+    },
+    {
+      "clip_id": "005",
+      "hook_start_sec": 5.68,
+      "hook_end_sec": 10.88,
+      "hook_text": "One of the things I would say is that, you know, there are super intelligences today, and they're basically large corporations, right?",
+      "reason": "This redefines a common buzzword ('super intelligence') in a way that is immediately surprising and shifts the viewer's perspective on modern business."
+    }
+  ]
+}

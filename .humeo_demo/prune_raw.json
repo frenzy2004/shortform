@@ -1,0 +1,18 @@
+{
+  "decisions": [
+    {
+      "clip_id": "001",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "reason": "The clip is already at an optimal length and starts directly on the core premise.",
+      "thought": "The clip starts strong with the 'false positive' claim and flows logically through the argument about traction vs. business models. Trimming would remove necessary context for the conclusion."
+    },
+    {
+      "clip_id": "002",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "reason": "The clip provides a cohesive narrative arc from the role of technology to the broader societal impact.",
+      "thought": "The opening sets the stage for the technological evolution argument, and the ending provides a strong, mission-driven conclusion. Trimming would lose the connection between the 'weapons of productivity' and the 'inclusive economy' payoff."
+    }
+  ]
+}

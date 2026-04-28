@@ -1,0 +1,46 @@
+{
+  "hooks": [
+    {
+      "clip_id": "001",
+      "hook_start_sec": 18.28,
+      "hook_hook_end_sec": 26.2,
+      "hook_text": "We are now, in terms of the models that write code, I have engineers within Anthropa who say, I don't write any code anymore. I just let the model write the code.",
+      "reason": "This provides a concrete, relatable example of AI's impact on professional work, which is more engaging than the abstract technical setup that precedes it."
+    },
+    {
+      "clip_id": "002",
+      "hook_start_sec": 27.52,
+      "hook_end_sec": 33.24,
+      "hook_text": "How did you manage to get through this technological adolescence without destroying yourselves?",
+      "reason": "This is a provocative, high-stakes question that immediately frames the existential risk of AI in a compelling, narrative way."
+    },
+    {
+      "clip_id": "003",
+      "hook_start_sec": 18.65,
+      "hook_end_sec": 28.51,
+      "hook_text": "So our revenue has grown 10x in the last three years from zero to 100 million in 2023, 100 million to a billion in 2024, and 1 billion to 10 billion in 2025.",
+      "reason": "Hard, exponential growth numbers are inherently attention-grabbing and establish the scale of the company's success immediately."
+    },
+    {
+      "clip_id": "004",
+      "hook_start_sec": 0.01,
+      "hook_end_sec": 5.33,
+      "hook_text": "The sort of strongest argument for Doomerism to me is the Fermi Paradox, the idea that we don't see intelligent life in our galaxy.",
+      "reason": "It connects a popular scientific mystery (Fermi Paradox) directly to the controversial topic of AI 'Doomerism' in a single, punchy sentence."
+    },
+    {
+      "clip_id": "005",
+      "hook_start_sec": 42.86,
+      "hook_end_sec": 54.28,
+      "hook_text": "But my worry is as this exponential keeps compounding, and I don't think it's going to take that long, again, somewhere between a year and five years, it will overwhelm our ability to adapt.",
+      "reason": "This sentence clearly states the core conflict of the clip—the speed of AI versus human adaptability—without requiring the preceding context."
+    },
+    {
+      "clip_id": "006",
+      "hook_start_sec": 11.54,
+      "hook_end_sec": 15.56,
+      "hook_text": "I would say that now it's looking quite different. I mean, they've declared code red, right?",
+      "reason": "The mention of a 'code red' at a major tech company creates immediate tension and suggests a significant shift in the competitive landscape."
+    }
+  ]
+}

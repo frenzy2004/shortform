@@ -1,0 +1,74 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,48,&H00FFFFFF,&H000000FF,&H00000000,&H70000000,-1,0,0,0,100,100,0,0,4,0,0,2,60,60,160,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.10,Default,,0,0,0,,if you had started
+Dialogue: 0,0:00:01.10,0:00:03.48,Default,,0,0,0,,a venture career let's
+Dialogue: 0,0:00:03.48,0:00:04.84,Default,,0,0,0,,say five or seven
+Dialogue: 0,0:00:04.84,0:00:05.82,Default,,0,0,0,,years ago like you're
+Dialogue: 0,0:00:05.82,0:00:06.62,Default,,0,0,0,,starting at a high
+Dialogue: 0,0:00:06.66,0:00:07.90,Default,,0,0,0,,where venture capital is
+Dialogue: 0,0:00:07.90,0:00:08.72,Default,,0,0,0,,like easy to come
+Dialogue: 0,0:00:08.72,0:00:09.64,Default,,0,0,0,,by And then so
+Dialogue: 0,0:00:09.64,0:00:10.24,Default,,0,0,0,,you had that waves
+Dialogue: 0,0:00:10.24,0:00:11.28,Default,,0,0,0,,of FinTech for example
+Dialogue: 0,0:00:11.60,0:00:13.40,Default,,0,0,0,,going to 2017 2018
+Dialogue: 0,0:00:13.64,0:00:14.62,Default,,0,0,0,,2019 where it was
+Dialogue: 0,0:00:14.62,0:00:15.82,Default,,0,0,0,,very easy to and
+Dialogue: 0,0:00:15.82,0:00:16.64,Default,,0,0,0,,your fundraising cycles were
+Dialogue: 0,0:00:16.64,0:00:17.34,Default,,0,0,0,,C to Series A
+Dialogue: 0,0:00:17.34,0:00:17.70,Default,,0,0,0,,and so on and
+Dialogue: 0,0:00:17.70,0:00:18.10,Default,,0,0,0,,so forth like they
+Dialogue: 0,0:00:18.10,0:00:18.94,Default,,0,0,0,,can be pretty fast
+Dialogue: 0,0:00:19.76,0:00:20.22,Default,,0,0,0,,Terms and were pretty
+Dialogue: 0,0:00:20.22,0:00:21.20,Default,,0,0,0,,loose diligence was pretty
+Dialogue: 0,0:00:21.20,0:00:22.04,Default,,0,0,0,,light you know and
+Dialogue: 0,0:00:22.04,0:00:22.66,Default,,0,0,0,,you'd kind of get
+Dialogue: 0,0:00:22.66,0:00:23.26,Default,,0,0,0,,away with a lot
+Dialogue: 0,0:00:23.26,0:00:23.92,Default,,0,0,0,,if you're a founder
+Dialogue: 0,0:00:24.54,0:00:25.42,Default,,0,0,0,,And some founders did
+Dialogue: 0,0:00:25.42,0:00:26.00,Default,,0,0,0,,get away with a
+Dialogue: 0,0:00:26.04,0:00:26.98,Default,,0,0,0,,right And so but
+Dialogue: 0,0:00:26.98,0:00:27.50,Default,,0,0,0,,then you come to
+Dialogue: 0,0:00:27.50,0:00:28.96,Default,,0,0,0,,the 2020s going into
+Dialogue: 0,0:00:28.96,0:00:29.78,Default,,0,0,0,,COVID you think that
+Dialogue: 0,0:00:29.88,0:00:30.44,Default,,0,0,0,,things are gonna get
+Dialogue: 0,0:00:30.44,0:00:31.04,Default,,0,0,0,,bad No but things
+Dialogue: 0,0:00:31.04,0:00:31.92,Default,,0,0,0,,got better for venture
+Dialogue: 0,0:00:32.24,0:00:32.94,Default,,0,0,0,,know valuation is gonna
+Dialogue: 0,0:00:32.94,0:00:33.68,Default,,0,0,0,,be more crazy And
+Dialogue: 0,0:00:33.68,0:00:34.08,Default,,0,0,0,,we don't need to
+Dialogue: 0,0:00:34.08,0:00:34.54,Default,,0,0,0,,talk about the reasons
+Dialogue: 0,0:00:34.54,0:00:35.12,Default,,0,0,0,,for all of that
+Dialogue: 0,0:00:35.36,0:00:36.02,Default,,0,0,0,,but it was like
+Dialogue: 0,0:00:36.02,0:00:36.46,Default,,0,0,0,,up and up and
+Dialogue: 0,0:00:36.46,0:00:37.24,Default,,0,0,0,,up and up And
+Dialogue: 0,0:00:37.24,0:00:37.92,Default,,0,0,0,,then right now when
+Dialogue: 0,0:00:37.92,0:00:39.02,Default,,0,0,0,,it's kind of like
+Dialogue: 0,0:00:39.02,0:00:40.52,Default,,0,0,0,,rationalized I would say
+Dialogue: 0,0:00:40.70,0:00:41.58,Default,,0,0,0,,or normalized to where
+Dialogue: 0,0:00:41.58,0:00:42.30,Default,,0,0,0,,it's at right now
+Dialogue: 0,0:00:42.52,0:00:43.18,Default,,0,0,0,,people are like my
+Dialogue: 0,0:00:43.18,0:00:44.12,Default,,0,0,0,,God it's winter game
+Dialogue: 0,0:00:44.12,0:00:45.16,Default,,0,0,0,,over You know like
+Dialogue: 0,0:00:45.16,0:00:46.66,Default,,0,0,0,,everything is right But
+Dialogue: 0,0:00:46.66,0:00:48.08,Default,,0,0,0,,again if you were
+Dialogue: 0,0:00:48.08,0:00:49.42,Default,,0,0,0,,building companies in like
+Dialogue: 0,0:00:49.42,0:00:50.46,Default,,0,0,0,,an even earlier vintage
+Dialogue: 0,0:00:50.82,0:00:52.26,Default,,0,0,0,,there were almost no
+Dialogue: 0,0:00:52.26,0:00:53.36,Default,,0,0,0,,VCs And if anybody
+Dialogue: 0,0:00:53.36,0:00:54.18,Default,,0,0,0,,was an HR or
+Dialogue: 0,0:00:54.18,0:00:55.88,Default,,0,0,0,,VC the are incredibly
+Dialogue: 0,0:00:55.88,0:00:57.26,Default,,0,0,0,,bad right They look
+Dialogue: 0,0:00:57.26,0:00:58.04,Default,,0,0,0,,more like private equity
+Dialogue: 0,0:00:58.04,0:00:58.32,Default,,0,0,0,,terms

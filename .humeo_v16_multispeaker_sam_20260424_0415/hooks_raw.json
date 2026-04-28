@@ -1,0 +1,39 @@
+{
+  "hooks": [
+    {
+      "clip_id": "001",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 5.58,
+      "hook_text": "research that says that the average American has fewer friends now than they did 15 years ago.",
+      "reason": "This opening line presents a strong, data-backed claim about a relatable societal trend, immediately capturing interest without needing prior context."
+    },
+    {
+      "clip_id": "002",
+      "hook_start_sec": 12.98,
+      "hook_end_sec": 16.99,
+      "hook_text": "people already don't have as much connection as they would like to have.",
+      "reason": "This sentence makes a clear, relatable claim about a universal human experience, serving as a strong hook after a weak opening question with an unclear pronoun."
+    },
+    {
+      "clip_id": "003",
+      "hook_start_sec": 8.51,
+      "hook_end_sec": 14.65,
+      "hook_text": "I can think of so many times in my life where the reason why I was doing something was not the output, it was the fact that I was trying so hard to do it.",
+      "reason": "This sentence is a strong narrative hook, framing a personal and relatable experience that introduces the clip's core theme more effectively than the fragmented opening lines."
+    },
+    {
+      "clip_id": "004",
+      "hook_start_sec": 7.45,
+      "hook_end_sec": 12.45,
+      "hook_text": "Llama 4, we could train on more than 100,000 GPUs.",
+      "reason": "This sentence is an excellent hook because it combines a specific named entity (Llama 4) with a massive, concrete number (100,000 GPUs), creating immediate intrigue about technological scale."
+    },
+    {
+      "clip_id": "005",
+      "hook_start_sec": 22.33,
+      "hook_end_sec": 28.07,
+      "hook_text": "each creator can basically make an AI artifact that their community can interact with, people will be clear- that it's not the actual creator themselves,",
+      "reason": "This sentence presents a novel and compelling solution ('AI artifact') for a known problem, making it a stronger and cleaner hook than the fragmented opening lines."
+    }
+  ]
+}

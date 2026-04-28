@@ -1,0 +1,60 @@
+{
+  "hooks": [
+    {
+      "clip_id": "001",
+      "hook_start_sec": 41.06,
+      "hook_end_sec": 47.48,
+      "hook_text": "This could be the beginning of a resurgence in active equity management.",
+      "reason": "The opening sentence is too wordy and lacks a clear subject, whereas this sentence provides a strong, punchy claim that summarizes the entire topic."
+    },
+    {
+      "clip_id": "002",
+      "hook_start_sec": 5.7,
+      "hook_end_sec": 11.26,
+      "hook_text": "this market could explode up to $5 trillion in notional volume.",
+      "reason": "This sentence contains a hard, high-impact number that immediately grabs the viewer's attention regarding the market's potential."
+    },
+    {
+      "clip_id": "003",
+      "hook_start_sec": 25.49,
+      "hook_end_sec": 30.65,
+      "hook_text": "Really, you should be comparing debt to equity.",
+      "reason": "This is a direct, contrarian claim that challenges conventional financial wisdom, making it an ideal hook."
+    },
+    {
+      "clip_id": "004",
+      "hook_start_sec": 4.79,
+      "hook_end_sec": 10.7,
+      "hook_text": "And we think Trumponomics resembles greatly, actually, Reaganomics.",
+      "reason": "This sentence introduces a named political institution and a provocative historical comparison that is immediately engaging."
+    },
+    {
+      "clip_id": "005",
+      "hook_start_sec": 2.05,
+      "hook_end_sec": 8.8,
+      "hook_text": "Entry-level jobs are not there for college graduates the way they have been in the past.",
+      "reason": "This is a strong, relatable claim about the current job market that resonates immediately with a broad audience."
+    },
+    {
+      "clip_id": "006",
+      "hook_start_sec": 0.04,
+      "hook_end_sec": 7.59,
+      "hook_text": "And so if we really thought about this, we could sell some of our land, and I forget how much land the government owns.",
+      "reason": "This presents a provocative and unconventional solution to a national problem, which is inherently attention-grabbing."
+    },
+    {
+      "clip_id": "007",
+      "hook_start_sec": 28.34,
+      "hook_end_sec": 36.0,
+      "hook_text": "I have too much on my plate and so we're bringing in younger people with one foot through the AI door and very eager to introduce us to new productivity enhancing ideas.",
+      "reason": "This sentence highlights a relatable workplace struggle and offers a specific, modern solution involving AI and younger talent."
+    },
+    {
+      "clip_id": "008",
+      "hook_start_sec": 48.91,
+      "hook_end_sec": 51.55,
+      "hook_text": "All of those are highly deflationary trends.",
+      "reason": "This is a bold, definitive claim that summarizes the previous list of technologies and provides a clear economic thesis."
+    }
+  ]
+}

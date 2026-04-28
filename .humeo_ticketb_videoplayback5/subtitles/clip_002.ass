@@ -1,0 +1,62 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,48,&H00FFFFFF,&H000000FF,&H00000000,&H70000000,-1,0,0,0,100,100,0,0,4,0,0,2,60,60,160,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.48,Default,,0,0,0,,is this very smooth
+Dialogue: 0,0:00:01.48,0:00:03.92,Default,,0,0,0,,exponential process
+Dialogue: 0,0:00:04.32,0:00:05.60,Default,,0,0,0,,Just like in the
+Dialogue: 0,0:00:05.60,0:00:06.88,Default,,0,0,0,,90s you saw Moore's
+Dialogue: 0,0:00:06.88,0:00:09.06,Default,,0,0,0,,law that the amount
+Dialogue: 0,0:00:09.06,0:00:10.56,Default,,0,0,0,,of power would double
+Dialogue: 0,0:00:10.56,0:00:11.60,Default,,0,0,0,,every 12 months or
+Dialogue: 0,0:00:11.60,0:00:12.92,Default,,0,0,0,,every 18 months We
+Dialogue: 0,0:00:12.92,0:00:14.16,Default,,0,0,0,,have a Moore's law
+Dialogue: 0,0:00:14.16,0:00:15.80,Default,,0,0,0,,like law except it's
+Dialogue: 0,0:00:15.80,0:00:17.72,Default,,0,0,0,,for intelligence itself for
+Dialogue: 0,0:00:17.72,0:00:19.40,Default,,0,0,0,,the cognitive ability of
+Dialogue: 0,0:00:19.40,0:00:21.04,Default,,0,0,0,,the across many tasks
+Dialogue: 0,0:00:21.42,0:00:22.60,Default,,0,0,0,,So what we are
+Dialogue: 0,0:00:22.60,0:00:24.40,Default,,0,0,0,,seeing is that that
+Dialogue: 0,0:00:24.40,0:00:25.52,Default,,0,0,0,,ability is
+Dialogue: 0,0:00:26.86,0:00:27.62,Default,,0,0,0,,depending on how you
+Dialogue: 0,0:00:27.62,0:00:29.96,Default,,0,0,0,,measure it every four
+Dialogue: 0,0:00:29.96,0:00:32.28,Default,,0,0,0,,to 12 months So
+Dialogue: 0,0:00:32.28,0:00:34.08,Default,,0,0,0,,we're just the of
+Dialogue: 0,0:00:34.08,0:00:35.04,Default,,0,0,0,,cognitive ability and where
+Dialogue: 0,0:00:35.04,0:00:36.16,Default,,0,0,0,,we are now is
+Dialogue: 0,0:00:36.16,0:00:37.56,Default,,0,0,0,,to take coding as
+Dialogue: 0,0:00:37.56,0:00:38.74,Default,,0,0,0,,one example that's been
+Dialogue: 0,0:00:38.74,0:00:40.62,Default,,0,0,0,,exploding really fast over
+Dialogue: 0,0:00:40.62,0:00:41.84,Default,,0,0,0,,the last year or
+Dialogue: 0,0:00:41.84,0:00:43.60,Default,,0,0,0,,two I have engineers
+Dialogue: 0,0:00:43.74,0:00:45.82,Default,,0,0,0,,in the team that
+Dialogue: 0,0:00:45.82,0:00:47.10,Default,,0,0,0,,one of our lead
+Dialogue: 0,0:00:47.10,0:00:48.52,Default,,0,0,0,,products Code which is
+Dialogue: 0,0:00:48.52,0:00:49.08,Default,,0,0,0,,the way you use
+Dialogue: 0,0:00:49.08,0:00:50.46,Default,,0,0,0,,our for coding
+Dialogue: 0,0:00:51.38,0:00:53.60,Default,,0,0,0,,He says he hasn't
+Dialogue: 0,0:00:53.60,0:00:55.22,Default,,0,0,0,,written any code in
+Dialogue: 0,0:00:55.22,0:00:57.92,Default,,0,0,0,,the last two It's
+Dialogue: 0,0:00:57.92,0:00:59.52,Default,,0,0,0,,all Claude He's edited
+Dialogue: 0,0:00:59.52,0:01:00.26,Default,,0,0,0,,it he's looked at
+Dialogue: 0,0:01:00.26,0:01:01.12,Default,,0,0,0,,it but it's all
+Dialogue: 0,0:01:01.12,0:01:02.78,Default,,0,0,0,,been written by Indeed
+Dialogue: 0,0:01:02.78,0:01:04.04,Default,,0,0,0,,we recently released this
+Dialogue: 0,0:01:04.04,0:01:05.42,Default,,0,0,0,,thing called Cowork which
+Dialogue: 0,0:01:05.42,0:01:08.08,Default,,0,0,0,,was Claude Code to
+Dialogue: 0,0:01:08.08,0:01:10.28,Default,,0,0,0,,non coding tasks
+Dialogue: 0,0:01:10.28,0:01:12.02,Default,,0,0,0,,It really seems to
+Dialogue: 0,0:01:12.02,0:01:13.46,Default,,0,0,0,,have off wrote it
+Dialogue: 0,0:01:13.46,0:01:14.26,Default,,0,0,0,,in like a week
+Dialogue: 0,0:01:14.26,0:01:15.58,Default,,0,0,0,,and a almost entirely
+Dialogue: 0,0:01:15.58,0:01:16.46,Default,,0,0,0,,with Claude Code

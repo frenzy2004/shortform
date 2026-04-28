@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "entries": {
+    "abc": {
+      "video_id": "abc",
+      "url": "u",
+      "title": "t",
+      "channel": "c",
+      "work_dir": "/w",
+      "source_mp4": "/w/s.mp4",
+      "transcript_json": "/w/t.json",
+      "downloaded_at": "2026-01-01T00:00:00Z"
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "hooks": [
+    {
+      "clip_id": "001",
+      "hook_start_sec": 12.18,
+      "hook_end_sec": 17.72,
+      "hook_text": "that Amazon was going to lose so much more money in the next year because",
+      "reason": "This is a shocking and counterintuitive claim about a famous company, which immediately makes the viewer curious about the rationale."
+    },
+    {
+      "clip_id": "002",
+      "hook_start_sec": 22.84,
+      "hook_end_sec": 32.68,
+      "hook_text": "Software as a Service is becoming a victim of this AI revolution. There will be consolidators and",
+      "reason": "This is a bold, controversial claim that positions a popular business model as a 'victim,' creating immediate intrigue and a desire to understand why."
+    },
+    {
+      "clip_id": "003",
+      "hook_start_sec": 0.01,
+      "hook_end_sec": 6.45,
+      "hook_text": "One thing we can say about this cycle is the demand for GPUs is voracious.",
+      "reason": "This is a perfect opening claim, using a strong adjective ('voracious') to describe a hot topic (GPUs), immediately establishing the clip's relevance and authority."
+    },
+    {
+      "clip_id": "004",
+      "hook_start_sec": 19.9,
+      "hook_end_sec": 29.24,
+      "hook_text": "seeing these hyperscalers take their capital spending budgets up 100% in one year.",
+      "reason": "This hook combines a huge number ('100%') with a specific, dramatic action, creating a sense of shock and prompting the viewer to ask 'why?'"
+    },
+    {
+      "clip_id": "005",
+      "hook_start_sec": 0.02,
+      "hook_end_sec": 2.22,
+      "hook_text": "Look what trueflation is telling us.",
+      "reason": "This is a direct command that creates immediate intrigue by referencing a specific data source ('trueflation') and promising a revelation."
+    },
+    {
+      "clip_id": "006",
+      "hook_start_sec": 22.12,
+      "hook_end_sec": 29.11,
+      "hook_text": "I'm leading this organization now, and I'm going to protect it from this bubble.",
+      "reason": "This line works as a powerful hook because it's a direct, high-stakes quote that establishes a clear conflict and a character's mission, creating immediate narrative tension."
+    }
+  ]
+}

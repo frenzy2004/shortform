@@ -1,0 +1,75 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Base,Arial,86,&H00FFFFFF,&H000000FF,&H00101010,&H00000000,-1,0,0,0,100,100,-1,0,1,4,0,8,0,0,0,0
+Style: Highlight,Arial,86,&H00FFFFFF,&H000000FF,&H00000000,&H00F65C8B,-1,0,0,0,100,100,-1,0,4,0,10,7,0,0,0,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.56,Base,,0,0,0,,{\an7\pos(247.0,1440.0)}are also going
+Dialogue: 0,0:00:00.00,0:00:01.56,Base,,0,0,0,,{\an7\pos(247.0,1534.0)}to cut delivery
+Dialogue: 1,0:00:00.96,0:00:01.56,Highlight,,0,0,0,,{\an7\pos(353.0,1534.0)\blur0.8}cut delivery
+Dialogue: 0,0:00:01.64,0:00:02.78,Base,,0,0,0,,{\an7\pos(151.5,1534.0)}costs dramatically.
+Dialogue: 1,0:00:01.64,0:00:02.78,Highlight,,0,0,0,,{\an7\pos(151.5,1534.0)\blur0.8}costs dramatically.
+Dialogue: 0,0:00:03.32,0:00:05.46,Base,,0,0,0,,{\an7\pos(259.0,1440.0)}Did you know
+Dialogue: 0,0:00:03.32,0:00:05.46,Base,,0,0,0,,{\an7\pos(195.0,1534.0)}there are already
+Dialogue: 1,0:00:04.52,0:00:05.46,Highlight,,0,0,0,,{\an7\pos(430.0,1534.0)\blur0.8}are already
+Dialogue: 0,0:00:05.86,0:00:08.34,Base,,0,0,0,,{\an7\pos(305.0,1440.0)}four million
+Dialogue: 1,0:00:05.86,0:00:06.80,Highlight,,0,0,0,,{\an7\pos(305.0,1440.0)\blur0.8}four million
+Dialogue: 0,0:00:05.86,0:00:08.34,Base,,0,0,0,,{\an7\pos(262.0,1534.0)}deliveries per
+Dialogue: 0,0:00:08.46,0:00:10.88,Base,,0,0,0,,{\an7\pos(206.5,1440.0)}year by drones?
+Dialogue: 1,0:00:08.88,0:00:10.24,Highlight,,0,0,0,,{\an7\pos(407.5,1440.0)\blur0.8}by drones?
+Dialogue: 0,0:00:08.46,0:00:10.88,Base,,0,0,0,,{\an7\pos(321.5,1534.0)}Now, to be
+Dialogue: 0,0:00:10.98,0:00:13.05,Base,,0,0,0,,{\an7\pos(184.5,1440.0)}sure, Zipline, one
+Dialogue: 1,0:00:10.98,0:00:12.17,Highlight,,0,0,0,,{\an7\pos(184.5,1440.0)\blur0.8}sure, Zipline,
+Dialogue: 0,0:00:10.98,0:00:13.05,Base,,0,0,0,,{\an7\pos(184.5,1534.0)}of the companies
+Dialogue: 0,0:00:13.11,0:00:15.43,Base,,0,0,0,,{\an7\pos(252.0,1440.0)}in our venture
+Dialogue: 1,0:00:13.21,0:00:13.69,Highlight,,0,0,0,,{\an7\pos(353.0,1440.0)\blur0.8}our venture
+Dialogue: 0,0:00:13.11,0:00:15.43,Base,,0,0,0,,{\an7\pos(131.5,1534.0)}fund, is responsible
+Dialogue: 0,0:00:15.49,0:00:16.73,Base,,0,0,0,,{\an7\pos(319.0,1440.0)}for, I think,
+Dialogue: 1,0:00:15.63,0:00:15.89,Highlight,,0,0,0,,{\an7\pos(482.0,1440.0)\blur0.8}I think,
+Dialogue: 0,0:00:15.49,0:00:16.73,Base,,0,0,0,,{\an7\pos(270.5,1534.0)}half of those.
+Dialogue: 0,0:00:16.83,0:00:19.03,Base,,0,0,0,,{\an7\pos(398.5,1440.0)}But we
+Dialogue: 0,0:00:16.83,0:00:19.03,Base,,0,0,0,,{\an7\pos(302.0,1534.0)}believe that
+Dialogue: 1,0:00:17.73,0:00:19.03,Highlight,,0,0,0,,{\an7\pos(302.0,1534.0)\blur0.8}believe that
+Dialogue: 0,0:00:19.31,0:00:22.11,Base,,0,0,0,,{\an7\pos(321.0,1440.0)}the cost to
+Dialogue: 0,0:00:19.31,0:00:22.11,Base,,0,0,0,,{\an7\pos(206.5,1534.0)}deliver by drone
+Dialogue: 1,0:00:20.43,0:00:21.31,Highlight,,0,0,0,,{\an7\pos(206.5,1534.0)\blur0.8}deliver by
+Dialogue: 0,0:00:22.21,0:00:24.59,Base,,0,0,0,,{\an7\pos(218.5,1440.0)}will cut delivery
+Dialogue: 1,0:00:22.49,0:00:23.37,Highlight,,0,0,0,,{\an7\pos(381.5,1440.0)\blur0.8}cut delivery
+Dialogue: 0,0:00:22.21,0:00:24.59,Base,,0,0,0,,{\an7\pos(196.5,1534.0)}costs, right now,
+Dialogue: 0,0:00:25.07,0:00:27.39,Base,,0,0,0,,{\an7\pos(147.0,1440.0)}DoorDash, $15 per,
+Dialogue: 1,0:00:25.07,0:00:26.31,Highlight,,0,0,0,,{\an7\pos(147.0,1440.0)\blur0.8}DoorDash, $15
+Dialogue: 0,0:00:25.07,0:00:27.39,Base,,0,0,0,,{\an7\pos(299.5,1534.0)}to less than
+Dialogue: 0,0:00:27.51,0:00:30.07,Base,,0,0,0,,{\an7\pos(312.0,1440.0)}a dollar, so
+Dialogue: 0,0:00:27.51,0:00:30.07,Base,,0,0,0,,{\an7\pos(209.0,1534.0)}a 90% reduction
+Dialogue: 1,0:00:28.37,0:00:30.07,Highlight,,0,0,0,,{\an7\pos(281.0,1534.0)\blur0.8}90% reduction
+Dialogue: 0,0:00:30.13,0:00:30.69,Base,,0,0,0,,{\an7\pos(336.5,1534.0)}over time.
+Dialogue: 1,0:00:30.13,0:00:30.69,Highlight,,0,0,0,,{\an7\pos(336.5,1534.0)\blur0.8}over time.
+Dialogue: 0,0:00:31.13,0:00:34.07,Base,,0,0,0,,{\an7\pos(348.0,1440.0)}So this is
+Dialogue: 0,0:00:31.13,0:00:34.07,Base,,0,0,0,,{\an7\pos(113.0,1534.0)}another huge market
+Dialogue: 1,0:00:31.63,0:00:33.39,Highlight,,0,0,0,,{\an7\pos(113.0,1534.0)\blur0.8}another huge
+Dialogue: 0,0:00:34.17,0:00:36.19,Base,,0,0,0,,{\an7\pos(98.0,1534.0)}percolating out there.
+Dialogue: 1,0:00:34.17,0:00:35.22,Highlight,,0,0,0,,{\an7\pos(98.0,1534.0)\blur0.8}percolating out
+Dialogue: 0,0:00:36.25,0:00:38.63,Base,,0,0,0,,{\an7\pos(273.5,1440.0)}And we're so
+Dialogue: 0,0:00:36.25,0:00:38.63,Base,,0,0,0,,{\an7\pos(206.0,1534.0)}excited because
+Dialogue: 1,0:00:37.13,0:00:38.63,Highlight,,0,0,0,,{\an7\pos(206.0,1534.0)\blur0.8}excited because
+Dialogue: 0,0:00:38.71,0:00:41.47,Base,,0,0,0,,{\an7\pos(324.0,1440.0)}we believe
+Dialogue: 0,0:00:38.71,0:00:41.47,Base,,0,0,0,,{\an7\pos(283.0,1534.0)}we're now in
+Dialogue: 1,0:00:39.25,0:00:40.55,Highlight,,0,0,0,,{\an7\pos(283.0,1534.0)\blur0.8}we're now
+Dialogue: 0,0:00:41.53,0:00:44.29,Base,,0,0,0,,{\an7\pos(245.5,1440.0)}the prime time
+Dialogue: 1,0:00:41.69,0:00:42.51,Highlight,,0,0,0,,{\an7\pos(399.5,1440.0)\blur0.8}prime time
+Dialogue: 0,0:00:41.53,0:00:44.29,Base,,0,0,0,,{\an7\pos(252.0,1534.0)}for the reason
+Dialogue: 0,0:00:44.41,0:00:46.49,Base,,0,0,0,,{\an7\pos(249.5,1440.0)}I founded Ark.
+Dialogue: 1,0:00:44.55,0:00:45.31,Highlight,,0,0,0,,{\an7\pos(297.5,1440.0)\blur0.8}founded Ark.
+Dialogue: 0,0:00:44.41,0:00:46.49,Base,,0,0,0,,{\an7\pos(261.5,1534.0)}I founded Ark
+Dialogue: 0,0:00:46.53,0:00:48.74,Base,,0,0,0,,{\an7\pos(324.0,1440.0)}in 2014 for
+Dialogue: 1,0:00:46.53,0:00:47.85,Highlight,,0,0,0,,{\an7\pos(324.0,1440.0)\blur0.8}in 2014
+Dialogue: 0,0:00:46.53,0:00:48.74,Base,,0,0,0,,{\an7\pos(297.5,1534.0)}this reason.

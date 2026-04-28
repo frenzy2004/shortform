@@ -1,0 +1,39 @@
+{
+  "decisions": [
+    {
+      "clip_id": "001",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.74,
+      "reason": "Trimmed a 0.74s repetition of 'worried about it' at the very end of the clip.",
+      "thought": "The opening is weak and refers to a chart, but trimming it would make the clip too short or lose the railroad analogy. The end had a clear transcription artifact that was safe to remove."
+    },
+    {
+      "clip_id": "002",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 6.98,
+      "reason": "Removed the final 7 seconds which began a new, unrelated topic about 'the fear in the market today'.",
+      "thought": "The opening was a bit slow but formed a single narrative block that was necessary for context. The end had a very clear topic change after the Bezos anecdote concluded, providing a perfect out-point."
+    },
+    {
+      "clip_id": "003",
+      "trim_start_sec": 5.44,
+      "trim_end_sec": 0.0,
+      "reason": "Trimmed the opening 5.4s which depended on prior context, starting instead with the list of cryptocurrencies.",
+      "thought": "The ideal start began at 11.78s, but this would make the clip too short. Trimming the first segment was the best compromise to remove the context-dependent 'it won't be...' while respecting the duration constraints."
+    },
+    {
+      "clip_id": "004",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "reason": "No trim was warranted as the clip is already tight, with a strong opening and a clean ending.",
+      "thought": "The clip contains some minor filler, like a personal aside, but it's structurally embedded and could not be removed without damaging the narrative flow. The clip is effective as is."
+    },
+    {
+      "clip_id": "005",
+      "trim_start_sec": 4.92,
+      "trim_end_sec": 0.0,
+      "reason": "Trimmed the opening 4.9s to get to the main subject ('software as a service') more quickly.",
+      "thought": "The clip's first 20 seconds are heavily dependent on a visual chart and hard to follow. A major trim was impossible due to duration constraints, so I made a smaller cut to remove the weakest opening phrase ('You can see...')."
+    }
+  ]
+}

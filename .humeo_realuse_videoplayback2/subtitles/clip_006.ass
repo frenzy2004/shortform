@@ -1,0 +1,56 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,48,&H00FFFFFF,&H000000FF,&H00000000,&H70000000,-1,0,0,0,100,100,0,0,4,0,0,2,60,60,160,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.06,Default,,0,0,0,,a massive thing The
+Dialogue: 0,0:00:01.06,0:00:01.50,Default,,0,0,0,,last thing I'd say
+Dialogue: 0,0:00:01.50,0:00:02.12,Default,,0,0,0,,about ag tech is
+Dialogue: 0,0:00:02.12,0:00:03.68,Default,,0,0,0,,a promising sector that
+Dialogue: 0,0:00:03.68,0:00:04.38,Default,,0,0,0,,a lot of farmers
+Dialogue: 0,0:00:04.52,0:00:05.00,Default,,0,0,0,,The kids don't want
+Dialogue: 0,0:00:05.00,0:00:05.80,Default,,0,0,0,,to be farmers anymore
+Dialogue: 0,0:00:06.01,0:00:07.17,Default,,0,0,0,,Right so who's going
+Dialogue: 0,0:00:07.17,0:00:07.57,Default,,0,0,0,,to do all that
+Dialogue: 0,0:00:07.57,0:00:08.69,Default,,0,0,0,,work right We machines
+Dialogue: 0,0:00:08.69,0:00:09.51,Default,,0,0,0,,to do it right
+Dialogue: 0,0:00:09.61,0:00:10.57,Default,,0,0,0,,Yeah These are conversations
+Dialogue: 0,0:00:10.57,0:00:11.15,Default,,0,0,0,,that I've been having
+Dialogue: 0,0:00:11.15,0:00:12.01,Default,,0,0,0,,for a time with
+Dialogue: 0,0:00:12.01,0:00:14.79,Default,,0,0,0,,families that had farms
+Dialogue: 0,0:00:14.79,0:00:15.79,Default,,0,0,0,,and whatever for generation
+Dialogue: 0,0:00:15.79,0:00:16.91,Default,,0,0,0,,after generation and their
+Dialogue: 0,0:00:16.91,0:00:17.59,Default,,0,0,0,,kids are just leaving
+Dialogue: 0,0:00:17.59,0:00:18.51,Default,,0,0,0,,it abandoning the farm
+Dialogue: 0,0:00:18.51,0:00:19.19,Default,,0,0,0,,and moving to the
+Dialogue: 0,0:00:19.19,0:00:20.53,Default,,0,0,0,,cities And food security
+Dialogue: 0,0:00:20.67,0:00:21.45,Default,,0,0,0,,as you mentioned is
+Dialogue: 0,0:00:21.45,0:00:22.53,Default,,0,0,0,,the biggest thing that
+Dialogue: 0,0:00:22.53,0:00:23.53,Default,,0,0,0,,I've spoken about in
+Dialogue: 0,0:00:23.53,0:00:24.29,Default,,0,0,0,,the last few months
+Dialogue: 0,0:00:24.57,0:00:25.59,Default,,0,0,0,,Do you also think
+Dialogue: 0,0:00:25.65,0:00:26.87,Default,,0,0,0,,though that it's kind
+Dialogue: 0,0:00:26.87,0:00:27.67,Default,,0,0,0,,because that sector has
+Dialogue: 0,0:00:27.67,0:00:28.53,Default,,0,0,0,,been so stagnant for
+Dialogue: 0,0:00:28.53,0:00:29.31,Default,,0,0,0,,so long and so
+Dialogue: 0,0:00:29.31,0:00:30.05,Default,,0,0,0,,stuck in its ways
+Dialogue: 0,0:00:30.05,0:00:31.17,Default,,0,0,0,,that nobody has gone
+Dialogue: 0,0:00:31.17,0:00:31.97,Default,,0,0,0,,over to them previously
+Dialogue: 0,0:00:31.97,0:00:32.85,Default,,0,0,0,,and said OK guys
+Dialogue: 0,0:00:32.85,0:00:34.15,Default,,0,0,0,,there's a really easy
+Dialogue: 0,0:00:34.15,0:00:34.91,Default,,0,0,0,,way that you can
+Dialogue: 0,0:00:34.91,0:00:35.65,Default,,0,0,0,,up your game by
+Dialogue: 0,0:00:35.65,0:00:36.49,Default,,0,0,0,,doing these certain things
+Dialogue: 0,0:00:36.53,0:00:37.03,Default,,0,0,0,,Do think that might
+Dialogue: 0,0:00:37.03,0:00:37.63,Default,,0,0,0,,be part of it
+Dialogue: 0,0:00:37.65,0:00:38.21,Default,,0,0,0,,I think there are
+Dialogue: 0,0:00:38.21,0:00:40.00,Default,,0,0,0,,probably many more

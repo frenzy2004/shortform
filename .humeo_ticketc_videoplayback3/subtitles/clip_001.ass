@@ -1,0 +1,74 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,48,&H00FFFFFF,&H000000FF,&H00000000,&H70000000,-1,0,0,0,100,100,0,0,4,0,0,2,60,60,160,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:00.59,Default,,0,0,0,,Now the thing about
+Dialogue: 0,0:00:00.59,0:00:02.07,Default,,0,0,0,,like going after like
+Dialogue: 0,0:00:02.07,0:00:02.59,Default,,0,0,0,,five or 10 more
+Dialogue: 0,0:00:02.59,0:00:03.53,Default,,0,0,0,,ways to be able
+Dialogue: 0,0:00:03.53,0:00:05.37,Default,,0,0,0,,to load up your
+Dialogue: 0,0:00:05.37,0:00:06.75,Default,,0,0,0,,fundraising odds of success
+Dialogue: 0,0:00:07.01,0:00:08.69,Default,,0,0,0,,is that it gives
+Dialogue: 0,0:00:08.69,0:00:10.89,Default,,0,0,0,,the confidence If
+Dialogue: 0,0:00:10.89,0:00:12.47,Default,,0,0,0,,the only has one
+Dialogue: 0,0:00:12.47,0:00:14.15,Default,,0,0,0,,VC who's showing interest
+Dialogue: 0,0:00:14.73,0:00:16.67,Default,,0,0,0,,they're like everything is
+Dialogue: 0,0:00:16.67,0:00:17.43,Default,,0,0,0,,on this one VC
+Dialogue: 0,0:00:17.55,0:00:18.29,Default,,0,0,0,,Yeah it's like super
+Dialogue: 0,0:00:18.29,0:00:19.79,Default,,0,0,0,,tunnel vision Super tunnel
+Dialogue: 0,0:00:19.79,0:00:21.21,Default,,0,0,0,,vision desperate Yes Like
+Dialogue: 0,0:00:21.21,0:00:22.19,Default,,0,0,0,,live or die kind
+Dialogue: 0,0:00:22.19,0:00:23.09,Default,,0,0,0,,situation Yes And then
+Dialogue: 0,0:00:23.09,0:00:24.49,Default,,0,0,0,,the interaction between that
+Dialogue: 0,0:00:24.81,0:00:25.39,Default,,0,0,0,,then the VC will
+Dialogue: 0,0:00:25.39,0:00:26.27,Default,,0,0,0,,be like hey is
+Dialogue: 0,0:00:26.27,0:00:27.67,Default,,0,0,0,,this founder actually do
+Dialogue: 0,0:00:27.67,0:00:28.57,Default,,0,0,0,,people actually want this
+Dialogue: 0,0:00:28.85,0:00:31.01,Default,,0,0,0,,Do market forces support
+Dialogue: 0,0:00:31.01,0:00:31.93,Default,,0,0,0,,the success of this
+Dialogue: 0,0:00:31.93,0:00:33.31,Default,,0,0,0,,company Yeah They may
+Dialogue: 0,0:00:33.31,0:00:33.95,Default,,0,0,0,,not say that oh
+Dialogue: 0,0:00:33.95,0:00:35.41,Default,,0,0,0,,I smell desperation I
+Dialogue: 0,0:00:35.41,0:00:36.25,Default,,0,0,0,,should go away It's
+Dialogue: 0,0:00:36.25,0:00:37.89,Default,,0,0,0,,not like that It's
+Dialogue: 0,0:00:37.89,0:00:39.69,Default,,0,0,0,,more like they see
+Dialogue: 0,0:00:39.69,0:00:40.55,Default,,0,0,0,,that and then they
+Dialogue: 0,0:00:40.55,0:00:41.43,Default,,0,0,0,,get a that if
+Dialogue: 0,0:00:41.43,0:00:42.03,Default,,0,0,0,,I'm the only one
+Dialogue: 0,0:00:42.03,0:00:43.19,Default,,0,0,0,,backing it the founder
+Dialogue: 0,0:00:43.19,0:00:43.63,Default,,0,0,0,,is not gonna have
+Dialogue: 0,0:00:43.63,0:00:44.23,Default,,0,0,0,,enough money to build
+Dialogue: 0,0:00:44.23,0:00:45.03,Default,,0,0,0,,a big business Yeah
+Dialogue: 0,0:00:45.85,0:00:46.69,Default,,0,0,0,,And even though I
+Dialogue: 0,0:00:46.69,0:00:47.73,Default,,0,0,0,,have full conviction if
+Dialogue: 0,0:00:47.73,0:00:48.45,Default,,0,0,0,,nobody else has conviction
+Dialogue: 0,0:00:48.45,0:00:49.73,Default,,0,0,0,,down the line like
+Dialogue: 0,0:00:49.73,0:00:50.79,Default,,0,0,0,,this is you see
+Dialogue: 0,0:00:50.79,0:00:52.69,Default,,0,0,0,,customers and and whatever
+Dialogue: 0,0:00:52.69,0:00:53.67,Default,,0,0,0,,all in line makes
+Dialogue: 0,0:00:53.67,0:00:54.59,Default,,0,0,0,,you yeah sure Okay
+Dialogue: 0,0:00:54.59,0:00:55.75,Default,,0,0,0,,that's human psychology right
+Dialogue: 0,0:00:55.75,0:00:56.59,Default,,0,0,0,,Like people wanna be
+Dialogue: 0,0:00:56.59,0:00:57.87,Default,,0,0,0,,where there's buzz So
+Dialogue: 0,0:00:57.87,0:00:59.33,Default,,0,0,0,,if we get curious
+Dialogue: 0,0:00:59.33,0:01:00.59,Default,,0,0,0,,about why it is
+Dialogue: 0,0:01:00.59,0:01:01.49,Default,,0,0,0,,we have less leverage
+Dialogue: 0,0:01:01.49,0:01:02.97,Default,,0,0,0,,in that moment and
+Dialogue: 0,0:01:02.97,0:01:03.99,Default,,0,0,0,,we go deeper into
+Dialogue: 0,0:01:03.99,0:01:05.05,Default,,0,0,0,,that and say let's
+Dialogue: 0,0:01:05.05,0:01:05.79,Default,,0,0,0,,kind of like get
+Dialogue: 0,0:01:05.79,0:01:06.73,Default,,0,0,0,,the let's kind of
+Dialogue: 0,0:01:06.73,0:01:07.47,Default,,0,0,0,,load up let's load
+Dialogue: 0,0:01:07.47,0:01:09.73,Default,,0,0,0,,up our cards in
+Dialogue: 0,0:01:09.73,0:01:10.65,Default,,0,0,0,,our favor odds in
+Dialogue: 0,0:01:10.65,0:01:11.00,Default,,0,0,0,,our favor

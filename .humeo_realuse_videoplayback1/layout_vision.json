@@ -1,0 +1,1282 @@
+{
+  "clips": {
+    "001": {
+      "instruction": {
+        "clip_id": "001",
+        "layout": "sit_center",
+        "zoom": 1.0,
+        "person_x_norm": 0.3375,
+        "person_tracking": [
+          {
+            "t_sec": 0.0,
+            "x_norm": 0.5249999999999999
+          },
+          {
+            "t_sec": 5.0,
+            "x_norm": 0.5249999999999999
+          },
+          {
+            "t_sec": 10.0,
+            "x_norm": 0.63
+          },
+          {
+            "t_sec": 15.0,
+            "x_norm": 0.64
+          },
+          {
+            "t_sec": 20.0,
+            "x_norm": 0.54
+          },
+          {
+            "t_sec": 25.0,
+            "x_norm": 0.3375
+          },
+          {
+            "t_sec": 30.0,
+            "x_norm": 0.496
+          },
+          {
+            "t_sec": 35.0,
+            "x_norm": 0.605
+          },
+          {
+            "t_sec": 40.0,
+            "x_norm": 0.6699999999999999
+          },
+          {
+            "t_sec": 45.0,
+            "x_norm": 0.6545000000000001
+          },
+          {
+            "t_sec": 50.0,
+            "x_norm": 0.6545000000000001
+          }
+        ],
+        "chart_x_norm": 0.0,
+        "focus_stack_order": "chart_then_person",
+        "split_chart_region": null,
+        "split_person_region": null,
+        "split_second_chart_region": null,
+        "split_second_person_region": null,
+        "top_band_ratio": 0.5
+      },
+      "raw": {
+        "layout": "sit_center",
+        "person_bbox": {
+          "x1": 160,
+          "y1": 66,
+          "x2": 515,
+          "y2": 1000
+        },
+        "face_bbox": {
+          "x1": 280,
+          "y1": 66,
+          "x2": 410,
+          "y2": 260
+        },
+        "chart_bbox": null,
+        "second_person_bbox": null,
+        "second_face_bbox": null,
+        "second_chart_bbox": null,
+        "reason": "The frame features a single speaker on stage. I am using sit_center to focus on the speaker's upper body and face.",
+        "person_tracking_samples": [
+          {
+            "sample_kind": "midpoint_keyframe",
+            "time_sec": 25.0,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realuse_videoplayback1\\keyframes\\001.jpg",
+            "center_x_norm": 0.3375,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 160,
+                "y1": 66,
+                "x2": 515,
+                "y2": 1000
+              },
+              "face_bbox": {
+                "x1": 280,
+                "y1": 66,
+                "x2": 410,
+                "y2": 260
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame features a single speaker on stage. I am using sit_center to focus on the speaker's upper body and face."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 5.0,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realuse_videoplayback1\\layout_tracking\\001\\001_005000.jpg",
+            "center_x_norm": 0.5249999999999999,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 0.35,
+                "y1": 0.05,
+                "x2": 0.72,
+                "y2": 0.95
+              },
+              "face_bbox": {
+                "x1": 0.47,
+                "y1": 0.07,
+                "x2": 0.58,
+                "y2": 0.28
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame contains a single speaker on stage. A sit_center layout is appropriate to focus on the speaker."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 10.0,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realuse_videoplayback1\\layout_tracking\\001\\001_010000.jpg",
+            "center_x_norm": 0.63,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 565,
+                "y1": 75,
+                "x2": 710,
+                "y2": 700
+              },
+              "face_bbox": {
+                "x1": 610,
+                "y1": 75,
+                "x2": 650,
+                "y2": 135
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame features a single speaker on a stage. The sit_center layout is appropriate to focus on the speaker."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 15.0,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realuse_videoplayback1\\layout_tracking\\001\\001_015000.jpg",
+            "center_x_norm": 0.64,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 585,
+                "y1": 69,
+                "x2": 698,
+                "y2": 701
+              },
+              "face_bbox": {
+                "x1": 617,
+                "y1": 69,
+                "x2": 663,
+                "y2": 145
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame features a single speaker on a stage. I am centering the speaker to maintain focus on them for the vertical format."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 20.0,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realuse_videoplayback1\\layout_tracking\\001\\001_020000.jpg",
+            "center_x_norm": 0.54,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 0.04,
+                "y1": 0.15,
+                "x2": 0.96,
+                "y2": 0.98
+              },
+              "face_bbox": {
+                "x1": 0.43,
+                "y1": 0.15,
+                "x2": 0.65,
+                "y2": 0.55
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame contains a single speaker gesturing. A sit_center layout is appropriate for this interview-style shot."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 30.0,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realuse_videoplayback1\\layout_tracking\\001\\001_030000.jpg",
+            "center_x_norm": 0.496,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 305,
+                "y1": 79,
+                "x2": 687,
+                "y2": 1000
+              },
+              "face_bbox": {
+                "x1": 443,
+                "y1": 79,
+                "x2": 546,
+                "y2": 328
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame contains a single speaker on stage. Using sit_center for optimal vertical framing."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 35.0,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realuse_videoplayback1\\layout_tracking\\001\\001_035000.jpg",
+            "center_x_norm": 0.605,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 450,
+                "y1": 30,
+                "x2": 760,
+                "y2": 990
+              },
+              "face_bbox": {
+                "x1": 545,
+                "y1": 30,
+                "x2": 630,
+                "y2": 180
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame features a single speaker on stage. The sit_center layout is appropriate for this presentation style."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 40.0,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realuse_videoplayback1\\layout_tracking\\001\\001_040000.jpg",
+            "center_x_norm": 0.6699999999999999,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 573,
+                "y1": 232,
+                "x2": 743,
+                "y2": 786
+              },
+              "face_bbox": {
+                "x1": 651,
+                "y1": 232,
+                "x2": 689,
+                "y2": 286
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame shows a single speaker on stage. I am centering the crop on the speaker to maintain focus on their presentation."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 45.0,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realuse_videoplayback1\\layout_tracking\\001\\001_045000.jpg",
+            "center_x_norm": 0.6545000000000001,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 603,
+                "y1": 230,
+                "x2": 713,
+                "y2": 675
+              },
+              "face_bbox": {
+                "x1": 637,
+                "y1": 230,
+                "x2": 672,
+                "y2": 285
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The speaker is the primary subject on stage, centered in the frame. The background is a large screen, but the speaker is the focus."
+            }
+          }
+        ]
+      }
+    },
+    "004": {
+      "instruction": {
+        "clip_id": "004",
+        "layout": "sit_center",
+        "zoom": 1.0,
+        "person_x_norm": 0.5569999999999999,
+        "person_tracking": [
+          {
+            "t_sec": 0.0,
+            "x_norm": 0.22049999999999997
+          },
+          {
+            "t_sec": 4.020000000000005,
+            "x_norm": 0.22049999999999997
+          },
+          {
+            "t_sec": 8.04000000000001,
+            "x_norm": 0.445
+          },
+          {
+            "t_sec": 12.060000000000013,
+            "x_norm": 0.5
+          },
+          {
+            "t_sec": 16.08000000000002,
+            "x_norm": 0.5305
+          },
+          {
+            "t_sec": 20.100000000000023,
+            "x_norm": 0.5569999999999999
+          },
+          {
+            "t_sec": 24.120000000000026,
+            "x_norm": 0.5
+          },
+          {
+            "t_sec": 28.14000000000003,
+            "x_norm": 0.42500000000000004
+          },
+          {
+            "t_sec": 32.16000000000004,
+            "x_norm": 0.62
+          },
+          {
+            "t_sec": 36.18000000000004,
+            "x_norm": 0.5785
+          },
+          {
+            "t_sec": 40.200000000000045,
+            "x_norm": 0.5785
+          }
+        ],
+        "chart_x_norm": 0.0,
+        "focus_stack_order": "chart_then_person",
+        "split_chart_region": null,
+        "split_person_region": null,
+        "split_second_chart_region": null,
+        "split_second_person_region": null,
+        "top_band_ratio": 0.5
+      },
+      "raw": {
+        "layout": "sit_center",
+        "person_bbox": {
+          "x1": 503,
+          "y1": 153,
+          "x2": 611,
+          "y2": 709
+        },
+        "face_bbox": {
+          "x1": 535,
+          "y1": 153,
+          "x2": 578,
+          "y2": 213
+        },
+        "chart_bbox": null,
+        "second_person_bbox": null,
+        "second_face_bbox": null,
+        "second_chart_bbox": null,
+        "reason": "The frame shows a single speaker on stage. The sit_center layout is appropriate for this presentation style.",
+        "person_tracking_samples": [
+          {
+            "sample_kind": "midpoint_keyframe",
+            "time_sec": 20.100000000000023,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realuse_videoplayback1\\keyframes\\004.jpg",
+            "center_x_norm": 0.5569999999999999,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 503,
+                "y1": 153,
+                "x2": 611,
+                "y2": 709
+              },
+              "face_bbox": {
+                "x1": 535,
+                "y1": 153,
+                "x2": 578,
+                "y2": 213
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame shows a single speaker on stage. The sit_center layout is appropriate for this presentation style."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 4.020000000000005,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realuse_videoplayback1\\layout_tracking\\004\\004_004020.jpg",
+            "center_x_norm": 0.22049999999999997,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 143,
+                "y1": 332,
+                "x2": 259,
+                "y2": 948
+              },
+              "face_bbox": {
+                "x1": 204,
+                "y1": 332,
+                "x2": 237,
+                "y2": 415
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame features a single speaker on stage. I am framing the subject centrally to maintain focus on the presenter."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 8.04000000000001,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realuse_videoplayback1\\layout_tracking\\004\\004_008040.jpg",
+            "center_x_norm": 0.445,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 0.201,
+                "y1": 0.05,
+                "x2": 0.83,
+                "y2": 1.0
+              },
+              "face_bbox": {
+                "x1": 0.345,
+                "y1": 0.05,
+                "x2": 0.545,
+                "y2": 0.45
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame contains a single speaker centered in the shot, making sit_center the appropriate layout."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 12.060000000000013,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realuse_videoplayback1\\layout_tracking\\004\\004_012060.jpg",
+            "center_x_norm": 0.5,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 0.18,
+                "y1": 0.08,
+                "x2": 0.82,
+                "y2": 1.0
+              },
+              "face_bbox": {
+                "x1": 0.35,
+                "y1": 0.08,
+                "x2": 0.65,
+                "y2": 0.55
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame contains a single speaker centered in the shot, making sit_center the appropriate layout."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 16.08000000000002,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realuse_videoplayback1\\layout_tracking\\004\\004_016080.jpg",
+            "center_x_norm": 0.5305,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 0.477,
+                "y1": 149,
+                "x2": 0.586,
+                "y2": 713
+              },
+              "face_bbox": {
+                "x1": 0.513,
+                "y1": 149,
+                "x2": 0.548,
+                "y2": 224
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame shows a single speaker on a stage. The sit_center layout is appropriate for this type of presentation framing."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 24.120000000000026,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realuse_videoplayback1\\layout_tracking\\004\\004_024120.jpg",
+            "center_x_norm": 0.5,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 0.24,
+                "y1": 0.08,
+                "x2": 0.76,
+                "y2": 1.0
+              },
+              "face_bbox": {
+                "x1": 0.39,
+                "y1": 0.08,
+                "x2": 0.61,
+                "y2": 0.45
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame contains a single speaker centered in the shot, which is best captured using the sit_center layout."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 28.14000000000003,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realuse_videoplayback1\\layout_tracking\\004\\004_028140.jpg",
+            "center_x_norm": 0.42500000000000004,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 0.06,
+                "y1": 0.06,
+                "x2": 0.94,
+                "y2": 0.94
+              },
+              "face_bbox": {
+                "x1": 0.31,
+                "y1": 0.06,
+                "x2": 0.54,
+                "y2": 0.45
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame contains a single speaker in a studio setting. A sit_center layout is appropriate for this interview-style shot."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 32.16000000000004,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realuse_videoplayback1\\layout_tracking\\004\\004_032160.jpg",
+            "center_x_norm": 0.62,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 495,
+                "y1": 27,
+                "x2": 767,
+                "y2": 999
+              },
+              "face_bbox": {
+                "x1": 579,
+                "y1": 27,
+                "x2": 661,
+                "y2": 213
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "A single speaker is presenting on stage, so sit_center is the appropriate layout."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 36.18000000000004,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realuse_videoplayback1\\layout_tracking\\004\\004_036180.jpg",
+            "center_x_norm": 0.5785,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 443,
+                "y1": 37,
+                "x2": 714,
+                "y2": 999
+              },
+              "face_bbox": {
+                "x1": 521,
+                "y1": 37,
+                "x2": 599,
+                "y2": 242
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame contains a single speaker on stage. sit_center is the appropriate layout for this type of presentation."
+            }
+          }
+        ]
+      }
+    },
+    "005": {
+      "instruction": {
+        "clip_id": "005",
+        "layout": "sit_center",
+        "zoom": 1.0,
+        "person_x_norm": 0.5,
+        "person_tracking": [
+          {
+            "t_sec": 0.0,
+            "x_norm": 0.4185
+          },
+          {
+            "t_sec": 4.949999999999995,
+            "x_norm": 0.4185
+          },
+          {
+            "t_sec": 9.89999999999999,
+            "x_norm": 0.312
+          },
+          {
+            "t_sec": 14.849999999999982,
+            "x_norm": 0.46749999999999997
+          },
+          {
+            "t_sec": 19.79999999999998,
+            "x_norm": 0.5954999999999999
+          },
+          {
+            "t_sec": 24.74999999999997,
+            "x_norm": 0.5
+          },
+          {
+            "t_sec": 29.699999999999964,
+            "x_norm": 0.4375
+          },
+          {
+            "t_sec": 34.649999999999956,
+            "x_norm": 0.59
+          },
+          {
+            "t_sec": 39.59999999999996,
+            "x_norm": 0.1805
+          },
+          {
+            "t_sec": 44.54999999999995,
+            "x_norm": 0.23046875
+          },
+          {
+            "t_sec": 49.49999999999994,
+            "x_norm": 0.23046875
+          }
+        ],
+        "chart_x_norm": 0.0,
+        "focus_stack_order": "chart_then_person",
+        "split_chart_region": null,
+        "split_person_region": null,
+        "split_second_chart_region": null,
+        "split_second_person_region": null,
+        "top_band_ratio": 0.5
+      },
+      "raw": {
+        "layout": "sit_center",
+        "person_bbox": {
+          "x1": 0.339,
+          "y1": 68,
+          "x2": 0.661,
+          "y2": 1.0
+        },
+        "face_bbox": {
+          "x1": 0.449,
+          "y1": 0.068,
+          "x2": 0.551,
+          "y2": 0.285
+        },
+        "chart_bbox": null,
+        "second_person_bbox": null,
+        "second_face_bbox": null,
+        "second_chart_bbox": null,
+        "reason": "The frame contains a single speaker centered in the shot, which is best captured using the sit_center layout.",
+        "person_tracking_samples": [
+          {
+            "sample_kind": "midpoint_keyframe",
+            "time_sec": 24.74999999999997,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realuse_videoplayback1\\keyframes\\005.jpg",
+            "center_x_norm": 0.5,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 0.339,
+                "y1": 68,
+                "x2": 0.661,
+                "y2": 1.0
+              },
+              "face_bbox": {
+                "x1": 0.449,
+                "y1": 0.068,
+                "x2": 0.551,
+                "y2": 0.285
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame contains a single speaker centered in the shot, which is best captured using the sit_center layout."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 4.949999999999995,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realuse_videoplayback1\\layout_tracking\\005\\005_004950.jpg",
+            "center_x_norm": 0.4185,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 0.403,
+                "y1": 448,
+                "x2": 0.434,
+                "y2": 575
+              },
+              "face_bbox": {
+                "x1": 0.413,
+                "y1": 448,
+                "x2": 0.424,
+                "y2": 465
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The main focus is the speaker on the TED stage. While there are screens in the background, the primary subject is the person standing in the center of the stage."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 9.89999999999999,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realuse_videoplayback1\\layout_tracking\\005\\005_009900.jpg",
+            "center_x_norm": 0.312,
+            "raw": {
+              "layout": "split_two_persons",
+              "person_bbox": {
+                "x1": 213,
+                "y1": 346,
+                "x2": 407,
+                "y2": 999
+              },
+              "face_bbox": {
+                "x1": 266,
+                "y1": 346,
+                "x2": 358,
+                "y2": 475
+              },
+              "chart_bbox": null,
+              "second_person_bbox": {
+                "x1": 554,
+                "y1": 296,
+                "x2": 954,
+                "y2": 999
+              },
+              "second_face_bbox": {
+                "x1": 602,
+                "y1": 296,
+                "x2": 683,
+                "y2": 444
+              },
+              "second_chart_bbox": null,
+              "reason": "The frame contains three people, but the two main speakers on the right are the focus. I will frame the two primary speakers on the right side of the frame for the split_two_persons layout."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 14.849999999999982,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realuse_videoplayback1\\layout_tracking\\005\\005_014850.jpg",
+            "center_x_norm": 0.46749999999999997,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 225,
+                "y1": 80,
+                "x2": 857,
+                "y2": 1000
+              },
+              "face_bbox": {
+                "x1": 360,
+                "y1": 80,
+                "x2": 575,
+                "y2": 580
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame contains a single speaker centered in the shot, suitable for a sit_center layout."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 19.79999999999998,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realuse_videoplayback1\\layout_tracking\\005\\005_019800.jpg",
+            "center_x_norm": 0.5954999999999999,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 403,
+                "y1": 71,
+                "x2": 974,
+                "y2": 1000
+              },
+              "face_bbox": {
+                "x1": 477,
+                "y1": 71,
+                "x2": 714,
+                "y2": 578
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame contains a single speaker in a studio setting. A sit_center layout is appropriate for this interview-style framing."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 29.699999999999964,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realuse_videoplayback1\\layout_tracking\\005\\005_029700.jpg",
+            "center_x_norm": 0.4375,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 236,
+                "y1": 136,
+                "x2": 698,
+                "y2": 1000
+              },
+              "face_bbox": {
+                "x1": 379,
+                "y1": 136,
+                "x2": 496,
+                "y2": 405
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The image features a single speaker on stage. I am using sit_center to frame the speaker centrally."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 34.649999999999956,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realuse_videoplayback1\\layout_tracking\\005\\005_034650.jpg",
+            "center_x_norm": 0.59,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 475,
+                "y1": 225,
+                "x2": 705,
+                "y2": 1000
+              },
+              "face_bbox": {
+                "x1": 550,
+                "y1": 225,
+                "x2": 605,
+                "y2": 310
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The subject is the main focus of the frame. While a laptop is present, the person is the primary subject and the scene is best captured by centering on him."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 39.59999999999996,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realuse_videoplayback1\\layout_tracking\\005\\005_039600.jpg",
+            "center_x_norm": 0.1805,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 115,
+                "y1": 290,
+                "x2": 252,
+                "y2": 907
+              },
+              "face_bbox": {
+                "x1": 158,
+                "y1": 290,
+                "x2": 203,
+                "y2": 375
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame shows a single speaker on stage. I am centering the crop on the speaker to maintain focus."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 44.54999999999995,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realuse_videoplayback1\\layout_tracking\\005\\005_044550.jpg",
+            "center_x_norm": 0.23046875,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 75,
+                "y1": 300,
+                "x2": 220,
+                "y2": 910
+              },
+              "face_bbox": {
+                "x1": 130,
+                "y1": 305,
+                "x2": 165,
+                "y2": 355
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "A single speaker is presenting on a stage, so sit_center is the appropriate layout."
+            }
+          }
+        ]
+      }
+    },
+    "007": {
+      "instruction": {
+        "clip_id": "007",
+        "layout": "sit_center",
+        "zoom": 1.0,
+        "person_x_norm": 0.6855,
+        "person_tracking": [
+          {
+            "t_sec": 0.0,
+            "x_norm": 0.5409999999999999
+          },
+          {
+            "t_sec": 6.6000000000000005,
+            "x_norm": 0.5409999999999999
+          },
+          {
+            "t_sec": 13.200000000000001,
+            "x_norm": 0.417
+          },
+          {
+            "t_sec": 19.8,
+            "x_norm": 0.423
+          },
+          {
+            "t_sec": 26.400000000000002,
+            "x_norm": 0.55
+          },
+          {
+            "t_sec": 33.0,
+            "x_norm": 0.6855
+          },
+          {
+            "t_sec": 39.6,
+            "x_norm": 0.5409999999999999
+          },
+          {
+            "t_sec": 46.199999999999996,
+            "x_norm": 0.5965
+          },
+          {
+            "t_sec": 52.800000000000004,
+            "x_norm": 0.5465
+          },
+          {
+            "t_sec": 59.4,
+            "x_norm": 0.55
+          },
+          {
+            "t_sec": 66.0,
+            "x_norm": 0.55
+          }
+        ],
+        "chart_x_norm": 0.0,
+        "focus_stack_order": "chart_then_person",
+        "split_chart_region": null,
+        "split_person_region": null,
+        "split_second_chart_region": null,
+        "split_second_person_region": null,
+        "top_band_ratio": 0.5
+      },
+      "raw": {
+        "layout": "sit_center",
+        "person_bbox": {
+          "x1": 598,
+          "y1": 118,
+          "x2": 767,
+          "y2": 932
+        },
+        "face_bbox": {
+          "x1": 658,
+          "y1": 118,
+          "x2": 713,
+          "y2": 236
+        },
+        "chart_bbox": null,
+        "second_person_bbox": null,
+        "second_face_bbox": null,
+        "second_chart_bbox": null,
+        "reason": "The frame contains a single person on a stage. I am framing the person centrally for a 9:16 vertical crop.",
+        "person_tracking_samples": [
+          {
+            "sample_kind": "midpoint_keyframe",
+            "time_sec": 33.0,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realuse_videoplayback1\\keyframes\\007.jpg",
+            "center_x_norm": 0.6855,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 598,
+                "y1": 118,
+                "x2": 767,
+                "y2": 932
+              },
+              "face_bbox": {
+                "x1": 658,
+                "y1": 118,
+                "x2": 713,
+                "y2": 236
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame contains a single person on a stage. I am framing the person centrally for a 9:16 vertical crop."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 6.6000000000000005,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realuse_videoplayback1\\layout_tracking\\007\\007_006600.jpg",
+            "center_x_norm": 0.5409999999999999,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 373,
+                "y1": 57,
+                "x2": 709,
+                "y2": 1000
+              },
+              "face_bbox": {
+                "x1": 468,
+                "y1": 57,
+                "x2": 576,
+                "y2": 315
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame contains a single speaker on stage. I am using sit_center to capture the speaker's upper body and gestures."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 13.200000000000001,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realuse_videoplayback1\\layout_tracking\\007\\007_013200.jpg",
+            "center_x_norm": 0.417,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 0.402,
+                "y1": 448,
+                "x2": 0.431,
+                "y2": 574
+              },
+              "face_bbox": {
+                "x1": 0.412,
+                "y1": 448,
+                "x2": 0.422,
+                "y2": 465
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The speaker is small on stage, so I am framing the center stage area where he is standing."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 19.8,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realuse_videoplayback1\\layout_tracking\\007\\007_019800.jpg",
+            "center_x_norm": 0.423,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 408,
+                "y1": 448,
+                "x2": 438,
+                "y2": 577
+              },
+              "face_bbox": {
+                "x1": 418,
+                "y1": 448,
+                "x2": 428,
+                "y2": 465
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The speaker is standing on the stage, which is the primary focus of the frame. While there are projections of the speaker on the screen, the actual person on stage is the main subject."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 26.400000000000002,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realuse_videoplayback1\\layout_tracking\\007\\007_026400.jpg",
+            "center_x_norm": 0.55,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 416,
+                "y1": 54,
+                "x2": 684,
+                "y2": 1000
+              },
+              "face_bbox": {
+                "x1": 500,
+                "y1": 54,
+                "x2": 578,
+                "y2": 265
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame contains a single speaker on stage. sit_center is the appropriate layout for this type of presentation framing."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 39.6,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realuse_videoplayback1\\layout_tracking\\007\\007_039600.jpg",
+            "center_x_norm": 0.5409999999999999,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 481,
+                "y1": 74,
+                "x2": 601,
+                "y2": 716
+              },
+              "face_bbox": {
+                "x1": 519,
+                "y1": 74,
+                "x2": 562,
+                "y2": 145
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame features a single speaker on a stage. I am centering the crop on the speaker to maintain the context of the TED talk."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 46.199999999999996,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realuse_videoplayback1\\layout_tracking\\007\\007_046200.jpg",
+            "center_x_norm": 0.5965,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 535,
+                "y1": 94,
+                "x2": 658,
+                "y2": 708
+              },
+              "face_bbox": {
+                "x1": 538,
+                "y1": 94,
+                "x2": 585,
+                "y2": 165
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame features a single speaker on a stage. The person_bbox captures the full body of the speaker, and the face_bbox captures the head."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 52.800000000000004,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realuse_videoplayback1\\layout_tracking\\007\\007_052800.jpg",
+            "center_x_norm": 0.5465,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 368,
+                "y1": 48,
+                "x2": 725,
+                "y2": 1000
+              },
+              "face_bbox": {
+                "x1": 506,
+                "y1": 48,
+                "x2": 613,
+                "y2": 313
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame contains a single speaker on stage. I am using sit_center to capture the person and their gestures."
+            }
+          },
+          {
+            "sample_kind": "tracking_frame",
+            "time_sec": 59.4,
+            "frame_path": "C:\\Users\\HP\\new shortform\\.humeo_realuse_videoplayback1\\layout_tracking\\007\\007_059400.jpg",
+            "center_x_norm": 0.55,
+            "raw": {
+              "layout": "sit_center",
+              "person_bbox": {
+                "x1": 370,
+                "y1": 70,
+                "x2": 730,
+                "y2": 1000
+              },
+              "face_bbox": {
+                "x1": 495,
+                "y1": 70,
+                "x2": 605,
+                "y2": 280
+              },
+              "chart_bbox": null,
+              "second_person_bbox": null,
+              "second_face_bbox": null,
+              "second_chart_bbox": null,
+              "reason": "The frame contains a single speaker on stage. A sit_center layout is appropriate to focus on the speaker."
+            }
+          }
+        ]
+      }
+    }
+  }
+}

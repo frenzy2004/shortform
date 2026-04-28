@@ -1,0 +1,39 @@
+{
+  "hooks": [
+    {
+      "clip_id": "001",
+      "hook_start_sec": 23.95,
+      "hook_end_sec": 29.83,
+      "hook_text": "you must have in your mind an idea for a new business, something that frustrates you,",
+      "reason": "This is a direct command to the viewer that prompts introspection, which is more engaging than the preceding statistical setup that violates duration rules."
+    },
+    {
+      "clip_id": "002",
+      "hook_start_sec": 2.08,
+      "hook_end_sec": 7.98,
+      "hook_text": "productivity growth will accelerate to the 4% to 6% range and be sustained there.",
+      "reason": "This is the first major numerical claim in the clip, making a specific and surprising prediction that grabs attention and fits all constraints."
+    },
+    {
+      "clip_id": "003",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 5.83,
+      "hook_text": "Without a doubt. We've always said Tesla is not an auto company. It is actually the",
+      "reason": "This makes a bold, counter-intuitive claim about a well-known company right at the start, immediately challenging the viewer's assumptions."
+    },
+    {
+      "clip_id": "004",
+      "hook_start_sec": 12.25,
+      "hook_end_sec": 18.19,
+      "hook_text": "so the top three stocks in our flagship are Tesla. We think it",
+      "reason": "This sentence immediately answers the implied question of the clip by naming the number one stock, providing instant value and a clear topic."
+    },
+    {
+      "clip_id": "005",
+      "hook_start_sec": 7.83,
+      "hook_end_sec": 12.81,
+      "hook_text": "But now, we're moving into space.",
+      "reason": "This is a short, powerful, and futuristic statement that immediately grabs the viewer's attention with a surprising claim."
+    }
+  ]
+}

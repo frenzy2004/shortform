@@ -1,0 +1,34 @@
+{
+  "clips": [
+    {
+      "clip_id": "001",
+      "trim_start_sec": 0.16,
+      "trim_end_sec": 0.0
+    },
+    {
+      "clip_id": "002",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0
+    },
+    {
+      "clip_id": "003",
+      "trim_start_sec": 0.63,
+      "trim_end_sec": 0.04
+    },
+    {
+      "clip_id": "004",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0
+    },
+    {
+      "clip_id": "005",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.03
+    },
+    {
+      "clip_id": "006",
+      "trim_start_sec": 0.03,
+      "trim_end_sec": 0.0
+    }
+  ]
+}

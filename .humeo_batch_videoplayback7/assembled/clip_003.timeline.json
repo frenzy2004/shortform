@@ -1,0 +1,54 @@
+{
+  "clip_id": "003",
+  "source_spans": [
+    {
+      "start_time_sec": 1225.0,
+      "end_time_sec": 1226.166
+    },
+    {
+      "start_time_sec": 1227.066,
+      "end_time_sec": 1233.786
+    },
+    {
+      "start_time_sec": 1234.506,
+      "end_time_sec": 1235.046
+    },
+    {
+      "start_time_sec": 1236.006,
+      "end_time_sec": 1238.5059999999999
+    },
+    {
+      "start_time_sec": 1239.046,
+      "end_time_sec": 1245.2359999999999
+    },
+    {
+      "start_time_sec": 1246.4460000000001,
+      "end_time_sec": 1252.026
+    },
+    {
+      "start_time_sec": 1252.646,
+      "end_time_sec": 1253.586
+    },
+    {
+      "start_time_sec": 1254.826,
+      "end_time_sec": 1258.346
+    },
+    {
+      "start_time_sec": 1258.826,
+      "end_time_sec": 1260.446
+    },
+    {
+      "start_time_sec": 1261.266,
+      "end_time_sec": 1262.066
+    },
+    {
+      "start_time_sec": 1263.026,
+      "end_time_sec": 1269.566
+    },
+    {
+      "start_time_sec": 1270.026,
+      "end_time_sec": 1277.6
+    }
+  ],
+  "assembled_duration_sec": 43.689999999999145
+}

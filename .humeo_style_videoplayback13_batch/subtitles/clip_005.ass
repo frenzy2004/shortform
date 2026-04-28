@@ -1,0 +1,188 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Base,Arial,86,&H00FFFFFF,&H000000FF,&H00101010,&H00000000,-1,0,0,0,100,100,-1,0,1,4,0,8,0,0,0,0
+Style: Highlight,Arial,86,&H00FFFFFF,&H000000FF,&H00000000,&H00F65C8B,-1,0,0,0,100,100,-1,0,4,0,10,7,0,0,0,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.63,Base,,0,0,0,,{\an7\pos(208.5,1440.0)}Bitcoin's role as
+Dialogue: 1,0:00:00.00,0:00:00.33,Highlight,,0,0,0,,{\an7\pos(208.5,1440.0)\blur0.8}Bitcoin's
+Dialogue: 1,0:00:00.33,0:00:00.53,Highlight,,0,0,0,,{\an7\pos(593.5,1440.0)\blur0.8}role
+Dialogue: 1,0:00:00.53,0:00:01.05,Highlight,,0,0,0,,{\an7\pos(775.5,1440.0)\blur0.8}as
+Dialogue: 0,0:00:00.00,0:00:02.63,Base,,0,0,0,,{\an7\pos(222.5,1534.0)}digital gold has
+Dialogue: 1,0:00:01.05,0:00:01.39,Highlight,,0,0,0,,{\an7\pos(222.5,1534.0)\blur0.8}digital
+Dialogue: 1,0:00:01.39,0:00:02.05,Highlight,,0,0,0,,{\an7\pos(501.5,1534.0)\blur0.8}gold
+Dialogue: 1,0:00:02.05,0:00:02.63,Highlight,,0,0,0,,{\an7\pos(708.5,1534.0)\blur0.8}has
+Dialogue: 0,0:00:02.63,0:00:04.97,Base,,0,0,0,,{\an7\pos(312.0,1440.0)}miles to go
+Dialogue: 1,0:00:02.63,0:00:03.15,Highlight,,0,0,0,,{\an7\pos(312.0,1440.0)\blur0.8}miles
+Dialogue: 1,0:00:03.15,0:00:03.47,Highlight,,0,0,0,,{\an7\pos(556.0,1440.0)\blur0.8}to
+Dialogue: 1,0:00:03.47,0:00:03.71,Highlight,,0,0,0,,{\an7\pos(662.0,1440.0)\blur0.8}go
+Dialogue: 0,0:00:02.63,0:00:04.97,Base,,0,0,0,,{\an7\pos(71.0,1534.0)}Interestingly and you'll
+Dialogue: 1,0:00:03.71,0:00:04.61,Highlight,,0,0,0,,{\an7\pos(71.0,1534.0)\blur0.8}Interestingly
+Dialogue: 1,0:00:04.61,0:00:04.79,Highlight,,0,0,0,,{\an7\pos(609.0,1534.0)\blur0.8}and
+Dialogue: 1,0:00:04.79,0:00:04.97,Highlight,,0,0,0,,{\an7\pos(787.0,1534.0)\blur0.8}you'll
+Dialogue: 0,0:00:04.97,0:00:06.95,Base,,0,0,0,,{\an7\pos(328.5,1440.0)}see this in
+Dialogue: 1,0:00:04.97,0:00:05.11,Highlight,,0,0,0,,{\an7\pos(328.5,1440.0)\blur0.8}see
+Dialogue: 1,0:00:05.11,0:00:05.35,Highlight,,0,0,0,,{\an7\pos(496.5,1440.0)\blur0.8}this
+Dialogue: 1,0:00:05.35,0:00:05.93,Highlight,,0,0,0,,{\an7\pos(674.5,1440.0)\blur0.8}in
+Dialogue: 0,0:00:04.97,0:00:06.95,Base,,0,0,0,,{\an7\pos(260.0,1534.0)}my New letter
+Dialogue: 1,0:00:05.93,0:00:06.25,Highlight,,0,0,0,,{\an7\pos(260.0,1534.0)\blur0.8}my
+Dialogue: 1,0:00:06.25,0:00:06.55,Highlight,,0,0,0,,{\an7\pos(408.0,1534.0)\blur0.8}New
+Dialogue: 1,0:00:06.55,0:00:06.95,Highlight,,0,0,0,,{\an7\pos(609.0,1534.0)\blur0.8}letter
+Dialogue: 0,0:00:07.05,0:00:09.47,Base,,0,0,0,,{\an7\pos(240.0,1440.0)}the correlation
+Dialogue: 1,0:00:07.05,0:00:07.13,Highlight,,0,0,0,,{\an7\pos(240.0,1440.0)\blur0.8}the
+Dialogue: 1,0:00:07.13,0:00:07.79,Highlight,,0,0,0,,{\an7\pos(394.0,1440.0)\blur0.8}correlation
+Dialogue: 0,0:00:07.05,0:00:09.47,Base,,0,0,0,,{\an7\pos(119.5,1534.0)}between Bitcoin and
+Dialogue: 1,0:00:07.79,0:00:08.49,Highlight,,0,0,0,,{\an7\pos(119.5,1534.0)\blur0.8}between
+Dialogue: 1,0:00:08.49,0:00:08.95,Highlight,,0,0,0,,{\an7\pos(489.5,1534.0)\blur0.8}Bitcoin
+Dialogue: 1,0:00:08.95,0:00:09.47,Highlight,,0,0,0,,{\an7\pos(806.5,1534.0)\blur0.8}and
+Dialogue: 0,0:00:09.47,0:00:12.43,Base,,0,0,0,,{\an7\pos(249.0,1440.0)}gold has been
+Dialogue: 1,0:00:09.47,0:00:09.75,Highlight,,0,0,0,,{\an7\pos(249.0,1440.0)\blur0.8}gold
+Dialogue: 1,0:00:09.75,0:00:10.39,Highlight,,0,0,0,,{\an7\pos(456.0,1440.0)\blur0.8}has
+Dialogue: 1,0:00:10.39,0:00:10.59,Highlight,,0,0,0,,{\an7\pos(629.0,1440.0)\blur0.8}been
+Dialogue: 0,0:00:09.47,0:00:12.43,Base,,0,0,0,,{\an7\pos(43.0,1534.0)}almost nonexistent over
+Dialogue: 1,0:00:10.59,0:00:10.95,Highlight,,0,0,0,,{\an7\pos(43.0,1534.0)\blur0.8}almost
+Dialogue: 1,0:00:10.95,0:00:11.85,Highlight,,0,0,0,,{\an7\pos(345.0,1534.0)\blur0.8}nonexistent
+Dialogue: 1,0:00:11.85,0:00:12.43,Highlight,,0,0,0,,{\an7\pos(855.0,1534.0)\blur0.8}over
+Dialogue: 0,0:00:12.43,0:00:14.13,Base,,0,0,0,,{\an7\pos(285.0,1440.0)}Bitcoin's life
+Dialogue: 1,0:00:12.43,0:00:13.09,Highlight,,0,0,0,,{\an7\pos(285.0,1440.0)\blur0.8}Bitcoin's
+Dialogue: 1,0:00:13.09,0:00:13.45,Highlight,,0,0,0,,{\an7\pos(670.0,1440.0)\blur0.8}life
+Dialogue: 0,0:00:12.43,0:00:14.13,Base,,0,0,0,,{\an7\pos(456.0,1534.0)}0 14
+Dialogue: 1,0:00:13.45,0:00:13.65,Highlight,,0,0,0,,{\an7\pos(456.0,1534.0)\blur0.8}0
+Dialogue: 1,0:00:13.65,0:00:14.13,Highlight,,0,0,0,,{\an7\pos(528.0,1534.0)\blur0.8}14
+Dialogue: 0,0:00:14.23,0:00:16.93,Base,,0,0,0,,{\an7\pos(148.5,1440.0)}Nonetheless we do
+Dialogue: 1,0:00:14.23,0:00:14.87,Highlight,,0,0,0,,{\an7\pos(148.5,1440.0)\blur0.8}Nonetheless
+Dialogue: 1,0:00:14.87,0:00:15.25,Highlight,,0,0,0,,{\an7\pos(686.5,1440.0)\blur0.8}we
+Dialogue: 1,0:00:15.25,0:00:15.69,Highlight,,0,0,0,,{\an7\pos(825.5,1440.0)\blur0.8}do
+Dialogue: 0,0:00:14.23,0:00:16.93,Base,,0,0,0,,{\an7\pos(350.0,1534.0)}think it is
+Dialogue: 1,0:00:15.69,0:00:16.07,Highlight,,0,0,0,,{\an7\pos(350.0,1534.0)\blur0.8}think
+Dialogue: 1,0:00:16.07,0:00:16.51,Highlight,,0,0,0,,{\an7\pos(581.0,1534.0)\blur0.8}it
+Dialogue: 1,0:00:16.51,0:00:16.93,Highlight,,0,0,0,,{\an7\pos(658.0,1534.0)\blur0.8}is
+Dialogue: 0,0:00:16.93,0:00:19.65,Base,,0,0,0,,{\an7\pos(335.5,1440.0)}not only a
+Dialogue: 1,0:00:16.93,0:00:17.67,Highlight,,0,0,0,,{\an7\pos(335.5,1440.0)\blur0.8}not
+Dialogue: 1,0:00:17.67,0:00:17.91,Highlight,,0,0,0,,{\an7\pos(494.5,1440.0)\blur0.8}only
+Dialogue: 1,0:00:17.91,0:00:18.21,Highlight,,0,0,0,,{\an7\pos(696.5,1440.0)\blur0.8}a
+Dialogue: 0,0:00:16.93,0:00:19.65,Base,,0,0,0,,{\an7\pos(276.0,1534.0)}risk on asset
+Dialogue: 1,0:00:18.21,0:00:18.41,Highlight,,0,0,0,,{\an7\pos(276.0,1534.0)\blur0.8}risk
+Dialogue: 1,0:00:18.41,0:00:18.97,Highlight,,0,0,0,,{\an7\pos(453.0,1534.0)\blur0.8}on
+Dialogue: 1,0:00:18.97,0:00:19.65,Highlight,,0,0,0,,{\an7\pos(583.0,1534.0)\blur0.8}asset
+Dialogue: 0,0:00:20.05,0:00:22.95,Base,,0,0,0,,{\an7\pos(270.5,1440.0)}thanks to the
+Dialogue: 1,0:00:20.05,0:00:20.35,Highlight,,0,0,0,,{\an7\pos(270.5,1440.0)\blur0.8}thanks
+Dialogue: 1,0:00:20.35,0:00:20.73,Highlight,,0,0,0,,{\an7\pos(573.5,1440.0)\blur0.8}to
+Dialogue: 1,0:00:20.73,0:00:21.05,Highlight,,0,0,0,,{\an7\pos(679.5,1440.0)\blur0.8}the
+Dialogue: 0,0:00:20.05,0:00:22.95,Base,,0,0,0,,{\an7\pos(133.5,1534.0)}new technology but
+Dialogue: 1,0:00:21.05,0:00:21.33,Highlight,,0,0,0,,{\an7\pos(133.5,1534.0)\blur0.8}new
+Dialogue: 1,0:00:21.33,0:00:22.21,Highlight,,0,0,0,,{\an7\pos(325.5,1534.0)\blur0.8}technology
+Dialogue: 1,0:00:22.21,0:00:22.95,Highlight,,0,0,0,,{\an7\pos(811.5,1534.0)\blur0.8}but
+Dialogue: 0,0:00:22.95,0:00:25.33,Base,,0,0,0,,{\an7\pos(367.0,1440.0)}it is also
+Dialogue: 1,0:00:22.95,0:00:23.33,Highlight,,0,0,0,,{\an7\pos(367.0,1440.0)\blur0.8}it
+Dialogue: 1,0:00:23.33,0:00:23.61,Highlight,,0,0,0,,{\an7\pos(444.0,1440.0)\blur0.8}is
+Dialogue: 1,0:00:23.61,0:00:24.09,Highlight,,0,0,0,,{\an7\pos(540.0,1440.0)\blur0.8}also
+Dialogue: 0,0:00:22.95,0:00:25.33,Base,,0,0,0,,{\an7\pos(360.0,1534.0)}a risk off
+Dialogue: 1,0:00:24.09,0:00:24.57,Highlight,,0,0,0,,{\an7\pos(360.0,1534.0)\blur0.8}a
+Dialogue: 1,0:00:24.57,0:00:24.79,Highlight,,0,0,0,,{\an7\pos(432.0,1534.0)\blur0.8}risk
+Dialogue: 1,0:00:24.79,0:00:25.33,Highlight,,0,0,0,,{\an7\pos(609.0,1534.0)\blur0.8}off
+Dialogue: 0,0:00:25.33,0:00:29.07,Base,,0,0,0,,{\an7\pos(321.0,1440.0)}asset It's a
+Dialogue: 1,0:00:25.33,0:00:25.95,Highlight,,0,0,0,,{\an7\pos(321.0,1440.0)\blur0.8}asset
+Dialogue: 1,0:00:25.95,0:00:26.13,Highlight,,0,0,0,,{\an7\pos(566.0,1440.0)\blur0.8}It's
+Dialogue: 1,0:00:26.13,0:00:26.55,Highlight,,0,0,0,,{\an7\pos(711.0,1440.0)\blur0.8}a
+Dialogue: 0,0:00:25.33,0:00:29.07,Base,,0,0,0,,{\an7\pos(145.5,1534.0)}against inflation Its
+Dialogue: 1,0:00:26.55,0:00:27.03,Highlight,,0,0,0,,{\an7\pos(145.5,1534.0)\blur0.8}against
+Dialogue: 1,0:00:27.03,0:00:27.63,Highlight,,0,0,0,,{\an7\pos(472.5,1534.0)\blur0.8}inflation
+Dialogue: 1,0:00:27.63,0:00:29.07,Highlight,,0,0,0,,{\an7\pos(833.5,1534.0)\blur0.8}Its
+Dialogue: 0,0:00:29.07,0:00:31.85,Base,,0,0,0,,{\an7\pos(305.0,1440.0)}growth rate
+Dialogue: 1,0:00:29.07,0:00:29.41,Highlight,,0,0,0,,{\an7\pos(305.0,1440.0)\blur0.8}growth
+Dialogue: 1,0:00:29.41,0:00:29.65,Highlight,,0,0,0,,{\an7\pos(617.0,1440.0)\blur0.8}rate
+Dialogue: 0,0:00:29.07,0:00:31.85,Base,,0,0,0,,{\an7\pos(276.0,1534.0)}is lower than
+Dialogue: 1,0:00:29.65,0:00:30.57,Highlight,,0,0,0,,{\an7\pos(276.0,1534.0)\blur0.8}is
+Dialogue: 1,0:00:30.57,0:00:31.03,Highlight,,0,0,0,,{\an7\pos(372.0,1534.0)\blur0.8}lower
+Dialogue: 1,0:00:31.03,0:00:31.85,Highlight,,0,0,0,,{\an7\pos(621.0,1534.0)\blur0.8}than
+Dialogue: 0,0:00:31.85,0:00:33.47,Base,,0,0,0,,{\an7\pos(323.5,1534.0)}gold's rate
+Dialogue: 1,0:00:31.85,0:00:33.21,Highlight,,0,0,0,,{\an7\pos(323.5,1534.0)\blur0.8}gold's
+Dialogue: 1,0:00:33.21,0:00:33.47,Highlight,,0,0,0,,{\an7\pos(598.5,1534.0)\blur0.8}rate
+Dialogue: 0,0:00:33.61,0:00:36.77,Base,,0,0,0,,{\an7\pos(321.0,1440.0)}And I'll bet
+Dialogue: 1,0:00:33.61,0:00:33.69,Highlight,,0,0,0,,{\an7\pos(321.0,1440.0)\blur0.8}And
+Dialogue: 1,0:00:33.69,0:00:34.01,Highlight,,0,0,0,,{\an7\pos(513.0,1440.0)\blur0.8}I'll
+Dialogue: 1,0:00:34.01,0:00:34.27,Highlight,,0,0,0,,{\an7\pos(629.0,1440.0)\blur0.8}bet
+Dialogue: 0,0:00:33.61,0:00:36.77,Base,,0,0,0,,{\an7\pos(219.0,1534.0)}gold miners are
+Dialogue: 1,0:00:34.27,0:00:35.07,Highlight,,0,0,0,,{\an7\pos(219.0,1534.0)\blur0.8}gold
+Dialogue: 1,0:00:35.07,0:00:35.51,Highlight,,0,0,0,,{\an7\pos(426.0,1534.0)\blur0.8}miners
+Dialogue: 1,0:00:35.51,0:00:36.77,Highlight,,0,0,0,,{\an7\pos(732.0,1534.0)\blur0.8}are
+Dialogue: 0,0:00:36.77,0:00:39.03,Base,,0,0,0,,{\an7\pos(122.0,1440.0)}doing their darndest
+Dialogue: 1,0:00:36.77,0:00:37.03,Highlight,,0,0,0,,{\an7\pos(122.0,1440.0)\blur0.8}doing
+Dialogue: 1,0:00:37.03,0:00:37.41,Highlight,,0,0,0,,{\an7\pos(382.0,1440.0)\blur0.8}their
+Dialogue: 1,0:00:37.41,0:00:37.89,Highlight,,0,0,0,,{\an7\pos(593.0,1440.0)\blur0.8}darndest
+Dialogue: 0,0:00:36.77,0:00:39.03,Base,,0,0,0,,{\an7\pos(305.0,1534.0)}to get more
+Dialogue: 1,0:00:37.89,0:00:38.41,Highlight,,0,0,0,,{\an7\pos(305.0,1534.0)\blur0.8}to
+Dialogue: 1,0:00:38.41,0:00:38.79,Highlight,,0,0,0,,{\an7\pos(411.0,1534.0)\blur0.8}get
+Dialogue: 1,0:00:38.79,0:00:39.03,Highlight,,0,0,0,,{\an7\pos(565.0,1534.0)\blur0.8}more
+Dialogue: 0,0:00:39.03,0:00:40.31,Base,,0,0,0,,{\an7\pos(301.5,1440.0)}of that stuff
+Dialogue: 1,0:00:39.03,0:00:39.31,Highlight,,0,0,0,,{\an7\pos(301.5,1440.0)\blur0.8}of
+Dialogue: 1,0:00:39.31,0:00:39.45,Highlight,,0,0,0,,{\an7\pos(407.5,1440.0)\blur0.8}that
+Dialogue: 1,0:00:39.45,0:00:39.67,Highlight,,0,0,0,,{\an7\pos(590.5,1440.0)\blur0.8}stuff
+Dialogue: 0,0:00:39.03,0:00:40.31,Base,,0,0,0,,{\an7\pos(342.5,1534.0)}out of the
+Dialogue: 1,0:00:39.67,0:00:39.89,Highlight,,0,0,0,,{\an7\pos(342.5,1534.0)\blur0.8}out
+Dialogue: 1,0:00:39.89,0:00:40.01,Highlight,,0,0,0,,{\an7\pos(501.5,1534.0)\blur0.8}of
+Dialogue: 1,0:00:40.01,0:00:40.31,Highlight,,0,0,0,,{\an7\pos(607.5,1534.0)\blur0.8}the
+Dialogue: 0,0:00:40.31,0:00:41.49,Base,,0,0,0,,{\an7\pos(201.0,1440.0)}ground now that
+Dialogue: 1,0:00:40.31,0:00:40.36,Highlight,,0,0,0,,{\an7\pos(201.0,1440.0)\blur0.8}ground
+Dialogue: 1,0:00:40.33,0:00:40.63,Highlight,,0,0,0,,{\an7\pos(523.0,1440.0)\blur0.8}now
+Dialogue: 1,0:00:40.63,0:00:40.79,Highlight,,0,0,0,,{\an7\pos(720.0,1440.0)\blur0.8}that
+Dialogue: 0,0:00:40.31,0:00:41.49,Base,,0,0,0,,{\an7\pos(172.0,1534.0)}they're being paid
+Dialogue: 1,0:00:40.79,0:00:41.01,Highlight,,0,0,0,,{\an7\pos(172.0,1534.0)\blur0.8}they're
+Dialogue: 1,0:00:41.01,0:00:41.33,Highlight,,0,0,0,,{\an7\pos(475.0,1534.0)\blur0.8}being
+Dialogue: 1,0:00:41.33,0:00:41.49,Highlight,,0,0,0,,{\an7\pos(730.0,1534.0)\blur0.8}paid
+Dialogue: 0,0:00:41.49,0:00:42.27,Base,,0,0,0,,{\an7\pos(245.5,1534.0)}so much more
+Dialogue: 1,0:00:41.49,0:00:41.79,Highlight,,0,0,0,,{\an7\pos(245.5,1534.0)\blur0.8}so
+Dialogue: 1,0:00:41.79,0:00:41.99,Highlight,,0,0,0,,{\an7\pos(370.5,1534.0)\blur0.8}much
+Dialogue: 1,0:00:41.99,0:00:42.27,Highlight,,0,0,0,,{\an7\pos(624.5,1534.0)\blur0.8}more
+Dialogue: 0,0:00:42.49,0:00:45.41,Base,,0,0,0,,{\an7\pos(171.5,1440.0)}That can't happen
+Dialogue: 1,0:00:42.49,0:00:42.95,Highlight,,0,0,0,,{\an7\pos(171.5,1440.0)\blur0.8}That
+Dialogue: 1,0:00:42.95,0:00:43.43,Highlight,,0,0,0,,{\an7\pos(378.5,1440.0)\blur0.8}can't
+Dialogue: 1,0:00:43.43,0:00:43.51,Highlight,,0,0,0,,{\an7\pos(600.5,1440.0)\blur0.8}happen
+Dialogue: 0,0:00:42.49,0:00:45.41,Base,,0,0,0,,{\an7\pos(206.0,1534.0)}with Bitcoin and
+Dialogue: 1,0:00:43.51,0:00:43.79,Highlight,,0,0,0,,{\an7\pos(206.0,1534.0)\blur0.8}with
+Dialogue: 1,0:00:43.79,0:00:44.15,Highlight,,0,0,0,,{\an7\pos(403.0,1534.0)\blur0.8}Bitcoin
+Dialogue: 1,0:00:44.15,0:00:45.41,Highlight,,0,0,0,,{\an7\pos(720.0,1534.0)\blur0.8}and
+Dialogue: 0,0:00:45.41,0:00:48.07,Base,,0,0,0,,{\an7\pos(240.5,1440.0)}Bitcoin miners
+Dialogue: 1,0:00:45.41,0:00:45.79,Highlight,,0,0,0,,{\an7\pos(240.5,1440.0)\blur0.8}Bitcoin
+Dialogue: 1,0:00:45.79,0:00:46.47,Highlight,,0,0,0,,{\an7\pos(557.5,1440.0)\blur0.8}miners
+Dialogue: 0,0:00:45.41,0:00:48.07,Base,,0,0,0,,{\an7\pos(-2.0,1534.0)}Mathematically metered to
+Dialogue: 1,0:00:46.47,0:00:47.03,Highlight,,0,0,0,,{\an7\pos(-2.0,1534.0)\blur0.8}Mathematically
+Dialogue: 1,0:00:47.03,0:00:47.51,Highlight,,0,0,0,,{\an7\pos(641.0,1534.0)\blur0.8}metered
+Dialogue: 1,0:00:47.51,0:00:48.07,Highlight,,0,0,0,,{\an7\pos(1000.0,1534.0)\blur0.8}to
+Dialogue: 0,0:00:48.07,0:00:50.13,Base,,0,0,0,,{\an7\pos(342.5,1440.0)}top out at
+Dialogue: 1,0:00:48.07,0:00:48.31,Highlight,,0,0,0,,{\an7\pos(342.5,1440.0)\blur0.8}top
+Dialogue: 1,0:00:48.31,0:00:48.55,Highlight,,0,0,0,,{\an7\pos(501.5,1440.0)\blur0.8}out
+Dialogue: 1,0:00:48.55,0:00:48.87,Highlight,,0,0,0,,{\an7\pos(660.5,1440.0)\blur0.8}at
+Dialogue: 0,0:00:48.07,0:00:50.13,Base,,0,0,0,,{\an7\pos(225.5,1534.0)}21 million units
+Dialogue: 1,0:00:48.87,0:00:49.33,Highlight,,0,0,0,,{\an7\pos(225.5,1534.0)\blur0.8}21
+Dialogue: 1,0:00:49.33,0:00:49.71,Highlight,,0,0,0,,{\an7\pos(345.5,1534.0)\blur0.8}million
+Dialogue: 1,0:00:49.71,0:00:50.13,Highlight,,0,0,0,,{\an7\pos(647.5,1534.0)\blur0.8}units
+Dialogue: 0,0:00:50.23,0:00:53.17,Base,,0,0,0,,{\an7\pos(350.5,1440.0)}So we do
+Dialogue: 1,0:00:50.23,0:00:50.97,Highlight,,0,0,0,,{\an7\pos(350.5,1440.0)\blur0.8}So
+Dialogue: 1,0:00:50.97,0:00:51.71,Highlight,,0,0,0,,{\an7\pos(484.5,1440.0)\blur0.8}we
+Dialogue: 1,0:00:51.71,0:00:52.15,Highlight,,0,0,0,,{\an7\pos(623.5,1440.0)\blur0.8}do
+Dialogue: 0,0:00:50.23,0:00:53.17,Base,,0,0,0,,{\an7\pos(398.0,1534.0)}think it
+Dialogue: 1,0:00:52.15,0:00:52.63,Highlight,,0,0,0,,{\an7\pos(398.0,1534.0)\blur0.8}think
+Dialogue: 1,0:00:52.63,0:00:53.17,Highlight,,0,0,0,,{\an7\pos(629.0,1534.0)\blur0.8}it
+Dialogue: 0,0:00:53.17,0:00:55.65,Base,,0,0,0,,{\an7\pos(372.0,1440.0)}will be a
+Dialogue: 1,0:00:53.17,0:00:53.65,Highlight,,0,0,0,,{\an7\pos(372.0,1440.0)\blur0.8}will
+Dialogue: 1,0:00:53.65,0:00:54.11,Highlight,,0,0,0,,{\an7\pos(535.0,1440.0)\blur0.8}be
+Dialogue: 1,0:00:54.11,0:00:54.47,Highlight,,0,0,0,,{\an7\pos(660.0,1440.0)\blur0.8}a
+Dialogue: 0,0:00:53.17,0:00:55.65,Base,,0,0,0,,{\an7\pos(123.0,1534.0)}very important store
+Dialogue: 1,0:00:54.47,0:00:54.87,Highlight,,0,0,0,,{\an7\pos(123.0,1534.0)\blur0.8}very
+Dialogue: 1,0:00:54.87,0:00:55.23,Highlight,,0,0,0,,{\an7\pos(324.0,1534.0)\blur0.8}important
+Dialogue: 1,0:00:55.23,0:00:55.65,Highlight,,0,0,0,,{\an7\pos(746.0,1534.0)\blur0.8}store
+Dialogue: 0,0:00:55.65,0:00:56.97,Base,,0,0,0,,{\an7\pos(199.0,1534.0)}of going forward
+Dialogue: 1,0:00:55.65,0:00:56.15,Highlight,,0,0,0,,{\an7\pos(199.0,1534.0)\blur0.8}of
+Dialogue: 1,0:00:56.15,0:00:56.47,Highlight,,0,0,0,,{\an7\pos(305.0,1534.0)\blur0.8}going
+Dialogue: 1,0:00:56.47,0:00:56.97,Highlight,,0,0,0,,{\an7\pos(565.0,1534.0)\blur0.8}forward

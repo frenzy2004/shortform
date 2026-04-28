@@ -1,0 +1,265 @@
+{
+  "source_path": "",
+  "clips": [
+    {
+      "clip_id": "001",
+      "topic": "Prediction markets and active management",
+      "start_time_sec": 174.6,
+      "end_time_sec": 227.6,
+      "viral_hook": "this movement is the beginnings, I think, of bringing active equity management back into style",
+      "virality_score": 0.98,
+      "transcript": "wait a minute, this movement is the beginnings, I think, of bringing active equity management back into style because we're talking about events that should move stocks. And if we have more people looking for and at those events, they're going to be interested in investing in some of these opportunities and maybe taking a little bit out of that passive portfolio that is tied to the indexes. So I'm pretty excited about this. This could be the beginning of a resurgence in active equity management.",
+      "suggested_overlay_title": "Active Management is Back",
+      "layout": null,
+      "score_breakdown": {
+        "counter_intuitive_claim": 3.0,
+        "concrete_prediction": 3.0,
+        "first_person_conviction": 2.0,
+        "quotable_phrasing": 2.0
+      },
+      "reasoning": "This clip contains a bold, counter-intuitive prediction about the future of finance, directly challenging the passive investing trend.",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 4.5,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "shorts_title": "The End of Passive Investing?",
+      "description": "Cathie Wood explains why prediction markets like Kalshi could signal a massive shift back to active equity management.",
+      "hashtags": [
+        "investing",
+        "stocks",
+        "finance",
+        "cathiewood",
+        "arkinvest"
+      ],
+      "layout_hint": "sit_center",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "002",
+      "topic": "Prediction market growth potential",
+      "start_time_sec": 291.7,
+      "end_time_sec": 344.3,
+      "viral_hook": "in the medium term, so over the next few years, we believe that this market could explode up to $5 trillion",
+      "virality_score": 0.96,
+      "transcript": "in the medium term, so over the next few years, we believe that this market could explode up to $5 trillion in notional volume. Now, right now, Cal, she is on an annualized run rate to do around 120 $130 billion in notional volume for this year. So we're talking about a massive explosion of where this total market is headed. But when you put it the perspective of the total derivatives market, which in 2024 was around $715 trillion in notional volume, you're only talking about 70 basis points, right? That $5 trillion figure over 715. So it's a drop in the bucket, compared to where traditional derivatives sit today. And as you point out, I think this is an expansion of the addressable market that derivatives don't necessarily give you today in terms of the risk profile.",
+      "suggested_overlay_title": "The $5 Trillion Prediction",
+      "layout": null,
+      "score_breakdown": {
+        "concrete_prediction": 3.0,
+        "specific_timeframe": 2.0,
+        "hard_number": 3.0,
+        "chart_reference": 2.0
+      },
+      "reasoning": "Strong hard data reveal and concrete growth prediction with a specific timeframe.",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 5.0,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "shorts_title": "Prediction Markets: $5 Trillion Opportunity",
+      "description": "ARK Invest's Nick Gruss breaks down the massive growth potential of prediction markets compared to the global derivatives industry.",
+      "hashtags": [
+        "finance",
+        "predictionmarkets",
+        "investing",
+        "data"
+      ],
+      "layout_hint": "split_chart_person",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "003",
+      "topic": "Debunking Debt/GDP ratio",
+      "start_time_sec": 685.0,
+      "end_time_sec": 745.2,
+      "viral_hook": "really, you should be comparing debt to equity.",
+      "virality_score": 0.92,
+      "transcript": "really, you should be comparing debt to equity. So equity is the black line, debt is the purple, and GDP is the red. And if we go to the next chart, you will see that while debt to GDP is above one here, the one ratio, you can see debt to equity is at 0.5. And actually it's very low by historical standards.",
+      "suggested_overlay_title": "Stop Using Debt-to-GDP",
+      "layout": null,
+      "score_breakdown": {
+        "first_principles_reframe": 2.0,
+        "chart_reference": 2.0,
+        "counter_intuitive_claim": 3.0,
+        "quotable_phrasing": 2.0
+      },
+      "reasoning": "A sharp first-principles reframe that challenges standard economic metrics.",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 3.0,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "shorts_title": "The Wrong Way to Measure Debt",
+      "description": "Cathie Wood reveals why the standard Debt-to-GDP metric is flawed and why we should look at Debt-to-Equity instead.",
+      "hashtags": [
+        "economics",
+        "investing",
+        "debt",
+        "finance"
+      ],
+      "layout_hint": "split_chart_person",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "004",
+      "topic": "The Dollar and Trumponomics",
+      "start_time_sec": 958.9,
+      "end_time_sec": 1033.3,
+      "viral_hook": "we think Trumponomics resembles greatly, actually, Reaganomics.",
+      "virality_score": 0.88,
+      "transcript": "why? It is because we like to illustrate what happened during Reaganomics. And we think Trumponomics resembles greatly, actually, Reaganomics. And look what happened to the dollar back then. Now, it was coming from the depths of despair in the late 70s. But it really went into overdrive to the point where all the treasury and monetary ministers around the world got together and said, this is becoming a deflationary risk to the rest of the world, because a lot of debt is denominated, was and still is denominated in dollars. So the debt service was getting more and more expensive back then. We think we're not going to see a surge like we did in the early 80s. But we think the pressure is to the upside. And if you look at this chart in the context of history, you will see that we are closer, if you take out that boom in the early 80s, we're closer to the higher end of the dollar's range than we are to the lower end. And again, I think that goes against conventional thinking right now.",
+      "suggested_overlay_title": "Trumponomics vs Reaganomics",
+      "layout": null,
+      "score_breakdown": {
+        "named_call_out": 3.0,
+        "counter_intuitive_claim": 3.0,
+        "chart_reference": 2.0
+      },
+      "reasoning": "Strong comparison and historical analysis that challenges current market sentiment.",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 4.0,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "shorts_title": "Will the Dollar Go Up?",
+      "description": "Comparing the current economic policy to the 1980s, Cathie Wood explains why she expects dollar strength.",
+      "hashtags": [
+        "economy",
+        "dollar",
+        "trumponomics",
+        "finance"
+      ],
+      "layout_hint": "split_chart_person",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "005",
+      "topic": "AI's impact on employment",
+      "start_time_sec": 1648.8,
+      "end_time_sec": 1657.6,
+      "viral_hook": "Entry-level jobs are not there for college graduates the way they have been in the past.",
+      "virality_score": 0.85,
+      "transcript": "Entry-level jobs are not there for college graduates the way they have been in the past.",
+      "suggested_overlay_title": "AI Killing Entry-Level Jobs?",
+      "layout": null,
+      "score_breakdown": {
+        "cultural_impact": 1.0,
+        "first_person_conviction": 2.0,
+        "quotable_phrasing": 2.0
+      },
+      "reasoning": "Highly relevant and emotionally resonant topic for younger audiences.",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 3.0,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "shorts_title": "AI and the Entry-Level Crisis",
+      "description": "Cathie Wood highlights how AI is fundamentally changing the job market for new college graduates.",
+      "hashtags": [
+        "ai",
+        "jobs",
+        "career",
+        "economy"
+      ],
+      "layout_hint": "sit_center",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "006",
+      "topic": "Selling government land",
+      "start_time_sec": 774.9,
+      "end_time_sec": 822.9,
+      "viral_hook": "so if we really thought about this, we could sell some of our land",
+      "virality_score": 0.82,
+      "transcript": "so if we really thought about this, we could sell some of our land, and I forget how much land the government owns. I think it's over a quarter of all the land in the United States. So we could defray the debt that way. Now, I'm not recommending it, and we do want discipline. So I'm very happy that there is a concern about the deficit and the debt, because if you think about government spending, which is the problem, every incremental dollar in government spending is effectively an incremental tax dollar.",
+      "suggested_overlay_title": "Sell US Land to Pay Debt?",
+      "layout": null,
+      "score_breakdown": {
+        "counter_intuitive_claim": 3.0,
+        "cultural_impact": 1.0,
+        "quotable_phrasing": 2.0
+      },
+      "reasoning": "A provocative suggestion that sparks immediate public discussion.",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 4.0,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "shorts_title": "Solving the Debt Crisis",
+      "description": "Cathie Wood discusses the government's massive land ownership and its potential role in balancing the budget.",
+      "hashtags": [
+        "politics",
+        "debt",
+        "economy",
+        "land"
+      ],
+      "layout_hint": "sit_center",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "007",
+      "topic": "Why we hire younger talent",
+      "start_time_sec": 2262.1,
+      "end_time_sec": 2313.3,
+      "viral_hook": "I don't have any time to experiment. I have too much on my plate",
+      "virality_score": 0.78,
+      "transcript": "I don't think we'll be hiring people because AI is making us all so much more productive. But on the business side especially we are we need to hire more people because what is the refrain I'm hearing from our employee base. It is you know I know all these tools are out there but I don't have any time to experiment. I have too much on my plate and so we're bringing in younger people with one foot through the AI door and very eager to introduce us to new productivity enhancing ideas. Maybe that's what's going on a little bit more broadly here I don't know.",
+      "suggested_overlay_title": "Why We Hire Gen Z",
+      "layout": null,
+      "score_breakdown": {
+        "personal_confession": 2.0,
+        "first_principles_reframe": 2.0,
+        "emotional_resonance": 1.0
+      },
+      "reasoning": "Provides a practical, relatable perspective on AI adoption in the workplace.",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 3.0,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "shorts_title": "AI Hiring Strategy",
+      "description": "Cathie Wood explains why ARK Invest is hiring younger talent specifically to bridge the AI adoption gap.",
+      "hashtags": [
+        "ai",
+        "hiring",
+        "productivity",
+        "genz"
+      ],
+      "layout_hint": "sit_center",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "008",
+      "topic": "The deflationary power of AI",
+      "start_time_sec": 1369.2,
+      "end_time_sec": 1426.0,
+      "viral_hook": "Now we have robotics, energy storage, AI, very importantly AI, blockchain technology, and multiomics technology.",
+      "virality_score": 0.75,
+      "transcript": "Now we have robotics, energy storage, AI, very importantly AI, blockchain technology, and multiomics technology. All of those are highly deflationary trends. And could the yield curve be picking up on that? We think it might.",
+      "suggested_overlay_title": "The Truth About AI Inflation",
+      "layout": null,
+      "score_breakdown": {
+        "first_principles_reframe": 2.0,
+        "first_person_conviction": 2.0,
+        "cultural_impact": 1.0
+      },
+      "reasoning": "A key thesis for ARK Invest, presented in a concise way.",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 5.0,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "shorts_title": "Is AI Deflationary?",
+      "description": "Cathie Wood explains why the convergence of AI, robotics, and blockchain is inherently deflationary for the global economy.",
+      "hashtags": [
+        "ai",
+        "deflation",
+        "economics",
+        "tech"
+      ],
+      "layout_hint": "sit_center",
+      "needs_review": false,
+      "review_reason": ""
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "version": 1,
+  "transcript_sha256": "a0594288154e64c18bc9621b7b1c11214825e71664dd752c7af98d982086107c",
+  "clips_sha256": "4dbbe4478f0646b4000c28cd910b2d4bdd4b8e60f3000392498e575f03b73ab2",
+  "gemini_model": "gemini-3.1-flash-lite-preview",
+  "prune_level": "balanced",
+  "llm_backend": "openrouter"
+}

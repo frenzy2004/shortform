@@ -1,0 +1,46 @@
+{
+  "hooks": [
+    {
+      "clip_id": "001",
+      "hook_start_sec": 5.9,
+      "hook_end_sec": 11.46,
+      "hook_text": "this market could explode up to $5 trillion in notional volume.",
+      "reason": "This sentence provides a bold, quantifiable claim that immediately captures interest without needing the preceding filler."
+    },
+    {
+      "clip_id": "002",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 3.5,
+      "hook_text": "wait a minute, this movement is the beginnings, I think, of bringing active equity management back into style",
+      "reason": "The phrase 'wait a minute' acts as a strong conversational pattern interrupt that draws the viewer into the speaker's contrarian take."
+    },
+    {
+      "clip_id": "003",
+      "hook_start_sec": 0.88,
+      "hook_end_sec": 6.04,
+      "hook_text": "prediction markets really represent the purest form of risk out there.",
+      "reason": "This is a strong, definitive statement that establishes the topic and the speaker's unique perspective immediately."
+    },
+    {
+      "clip_id": "004",
+      "hook_start_sec": 24.69,
+      "hook_end_sec": 29.85,
+      "hook_text": "Really, you should be comparing debt to equity.",
+      "reason": "This sentence challenges conventional financial wisdom with a direct, actionable correction, making it highly engaging."
+    },
+    {
+      "clip_id": "005",
+      "hook_start_sec": 0.03,
+      "hook_end_sec": 9.69,
+      "hook_text": "So here we ask the question, will non-farm productivity increase above 3% in any quarter?",
+      "reason": "The sentence frames a clear, high-stakes question that invites the viewer to stay for the answer."
+    },
+    {
+      "clip_id": "006",
+      "hook_start_sec": 48.71,
+      "hook_end_sec": 51.35,
+      "hook_text": "All of those are highly deflationary trends.",
+      "reason": "This is a punchy, high-level summary statement that provides a clear takeaway about the economic impact of the previously mentioned technologies."
+    }
+  ]
+}

@@ -1,0 +1,175 @@
+{
+  "source_path": "",
+  "clips": [
+    {
+      "clip_id": "001",
+      "topic": "The Billion-Dollar Bet on AI Scaling",
+      "start_time_sec": 0.0,
+      "end_time_sec": 56.55300000000261,
+      "viral_hook": "is that we haven't found the end yet.",
+      "virality_score": 0.8325,
+      "transcript": "is that we haven't found the end yet. So that leads to this dynamic where Llama 3, we could train on 10 to 20,000 GPUs. Llama 4, we could train on more than 100,000 GPUs. Llama 5, we can plan to scale even further, and there's just an interesting question of how far that goes. It's totally possible that at some point we just hit a limit, and just like previous systems, there's an asymptote, and it doesn't keep on growing. But it's also possible that that limit is not going to happen anytime soon, and that we're going to be able to keep on just building more clusters and generating more synthetic data to train the systems, and that they're just going to keep on getting more and more useful for people for quite a while to come. And it's a really big and high-stakes question, I think, for the company is because we're basically making these bets- Mm-hmm on how much infrastructure to build out for the future, and this is hundreds of billions of dollars of infrastructure. So I'm clearly betting that this is going to",
+      "suggested_overlay_title": "The $100B Question Haunting AI",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.9,
+        "hook_emotion": 0.85,
+        "catchy": 0.7
+      },
+      "reasoning": "This clip has huge stakes ('hundreds of billions of dollars') and a powerful hook ('we haven't found the end yet'). The message clearly articulates the central gamble in the entire AI industry right now.",
+      "hook_start_sec": null,
+      "hook_end_sec": null,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "render_spans": [],
+      "shorts_title": "Mark Zuckerberg's multi-billion dollar bet on AI.",
+      "description": "Mark Zuckerberg reveals the single biggest unknown in AI development: will it keep getting smarter, or will it hit a wall? The answer has hundreds of billions of dollars riding on it.",
+      "hashtags": [
+        "ai",
+        "technology",
+        "markzuckerberg",
+        "futuretech",
+        "innovation"
+      ],
+      "layout_hint": "sit_center",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "002",
+      "topic": "Digital Tools Aren't Replacing Friendship",
+      "start_time_sec": 0.0,
+      "end_time_sec": 47.593999999999596,
+      "viral_hook": "Is that going to replace the physical connection?",
+      "virality_score": 0.7725,
+      "transcript": "Is that going to replace the physical connection? And my answer to that, especially in the case of something like this, is that, no, because people already don't have as much connection as they would like to have. It's not like this is replacing some sort of better physical connection that they would've otherwise had. It's that the average person would like to have 10 friends, and they have two or three. And there's just more demand to socialize than what people are able to do given the current construct. And giving people the ability to be present with people who are in other places physically just seems like it will unlock more. If I have glasses, it's not going to make it that I spend less time with my wife. It's going to make it so that I spend more time with my sister who lives across the country. And I think that that's good, and I think people need that.",
+      "suggested_overlay_title": "Tech Isn't Replacing Friends",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.85,
+        "hook_emotion": 0.8,
+        "catchy": 0.65
+      },
+      "reasoning": "This clip tackles a universal concern about technology and loneliness. The hook is a common objection, making it highly relatable. The message provides a powerful reframe: tech is filling a void, not creating one.",
+      "hook_start_sec": null,
+      "hook_end_sec": null,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "render_spans": [],
+      "shorts_title": "Are we losing connection because of tech?",
+      "description": "Mark Zuckerberg argues that new technology isn't replacing our physical connections, but rather supplementing the connections we already wish we had more of.",
+      "hashtags": [
+        "loneliness",
+        "friendship",
+        "technology",
+        "socialmedia",
+        "mentalhealth"
+      ],
+      "layout_hint": "sit_center",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "003",
+      "topic": "AI's Purpose: Is Struggle a Feature, Not a Bug?",
+      "start_time_sec": 0.0,
+      "end_time_sec": 73.44999999999982,
+      "viral_hook": "where the struggle is kind of the point, right? It's like building a muscle.",
+      "virality_score": 0.84,
+      "transcript": "where the struggle is kind of the point, right? It's like building a muscle. Yeah. I can think of so many times in my life where the reason why I was doing something was not the output, it was the- fact that I was trying so hard to do it. There's one example in the Tim Ferriss interview where you talked about your kids struggling to articulate themselves emotionally. Mm-hmm. And adults very much have the same problem. Mm-hmm. And you talked about AI as a way to help them articulate those emotions. Yeah. And I thought about all of the many times in my life where I have struggled to articulate my emotions and how I really could've used some help in those moments. And I also found myself thinking about the times when that was really building a muscle. Where the act of struggling to communicate with someone and- understand what they wanted from me was important to my development. Mm-hmm. And so my question is, if you think about that as a spectrum between things that are really important to our humanity, and the struggle being removed is helpful, versus things where the struggle is the point, and it unlocks something about our humanity and is important to preserve, like building- Yeah muscle. How do you draw the line between those things? And how do we ensure that the muscles that we're building for this future are stronger and not weaker? Yeah, it's interesting. I think we're always going to find new things to struggle with.",
+      "suggested_overlay_title": "When the Struggle Is the Point",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.9,
+        "hook_emotion": 0.8,
+        "catchy": 0.8
+      },
+      "reasoning": "This clip raises a deep, philosophical question about AI and human development, using the highly relatable and catchy 'building a muscle' analogy. The hook is excellent and the message is thought-provoking.",
+      "hook_start_sec": null,
+      "hook_end_sec": null,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "render_spans": [],
+      "shorts_title": "Should AI eliminate all our struggles?",
+      "description": "Mark Zuckerberg discusses the fine line between using AI as a helpful tool and letting it remove the essential 'struggles' that help us grow as humans.",
+      "hashtags": [
+        "ai",
+        "philosophy",
+        "selfdevelopment",
+        "markzuckerberg",
+        "psychology"
+      ],
+      "layout_hint": "sit_center",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "004",
+      "topic": "The Illusion of Virtual 'Presence'",
+      "start_time_sec": 0.0,
+      "end_time_sec": 48.32599999999911,
+      "viral_hook": "the sense of presence is almost like when you're designing something that's sort of trying to artificially deliver it, you're delivering an illusion to a person.",
+      "virality_score": 0.6925,
+      "transcript": "the sense of presence is almost like when you're designing something that's sort of trying to artificially deliver it, you're delivering an illusion to a person. And more than any one thing that provides a sense of presence, it's actually more the case that any one thing done wrong breaks the sense of presence. You kind of know that you're interacting with technology, but it's so convincing that you just kind of go along with it, and you're like, \"Okay, yeah, no, this person feel like they're there,\" right? Um, when I did that ping pong demo, like at the end of it, I dropped the ping pong paddle on the virtual table and it shattered, so that was not the best for our internal development. But like that's winning in our development, right? It's like when you feel like something is kind of so realistic that you're just convinced that it's there. Now, and there are a lot of things that can break that, right?",
+      "suggested_overlay_title": "The Secret to Making Vr Feel",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.8,
+        "hook_emotion": 0.6,
+        "catchy": 0.75
+      },
+      "reasoning": "The message provides a fascinating insight into the psychology of VR design. The hook, 'delivering an illusion,' is intriguing. The anecdote about the shattering ping pong paddle is a catchy and effective illustration of the concept.",
+      "hook_start_sec": null,
+      "hook_end_sec": null,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "render_spans": [],
+      "shorts_title": "It's not what you add, it's what you don't break.",
+      "description": "Mark Zuckerberg explains that creating a true sense of 'presence' in VR is like delivering an illusion, where any single mistake can shatter the entire experience.",
+      "hashtags": [
+        "vr",
+        "virtualreality",
+        "psychology",
+        "tech",
+        "metaverse"
+      ],
+      "layout_hint": "sit_center",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "005",
+      "topic": "The Next Computing Platform After Phones",
+      "start_time_sec": 0.0,
+      "end_time_sec": 43.43900000000011,
+      "viral_hook": "Well, I think it's going to be the next major computing platform.",
+      "virality_score": 0.68,
+      "transcript": "Well, I think it's going to be the next major computing platform. So if you look at the grand arc of computing over time, you've gone from mainframes to computers that basically live on your desk or on a tower, to phones that you have in your hand that you basically can take with you everywhere that you want, but it's pretty unnatural. It takes you away from the world around you. And I think that the trend in computing is it gets more ubiquitous, it gets more natural, and it just gets more social. So you want to be able to interact with people in the world around you, and I think that this is probably going to be the next major platform after phones. I'll give these to you. These are the clear ones that show all the Yeah, the whole thing is a special edition, and this is a really special edition. There's not a single millimeter of space.",
+      "suggested_overlay_title": "The Major Platform After Phones",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.8,
+        "hook_emotion": 0.6,
+        "catchy": 0.7
+      },
+      "reasoning": "A very strong, clear, and predictive message. The hook is a bold claim that immediately establishes stakes. The catchy part is the simple historical progression (mainframe -> PC -> phone -> glasses) that makes the argument easy to grasp.",
+      "hook_start_sec": null,
+      "hook_end_sec": null,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "render_spans": [],
+      "shorts_title": "Zuckerberg's vision for what comes after the smartphone.",
+      "description": "Mark Zuckerberg lays out the grand arc of computing and explains why he believes AR glasses are the natural successor to the smartphone.",
+      "hashtags": [
+        "futuretech",
+        "ar",
+        "meta",
+        "innovation",
+        "technology"
+      ],
+      "layout_hint": "sit_center",
+      "needs_review": false,
+      "review_reason": ""
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "hooks": [
+    {
+      "clip_id": "001",
+      "hook_start_sec": 11.08,
+      "hook_end_sec": 15.02,
+      "hook_text": "It is the reason that the world seems to be speeding up.",
+      "reason": "This sentence provides a compelling, high-level thesis that immediately captures viewer interest, unlike the preceding sentences which are generic observations about AI."
+    }
+  ]
+}

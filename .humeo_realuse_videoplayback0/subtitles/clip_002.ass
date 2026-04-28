@@ -1,0 +1,50 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,48,&H00FFFFFF,&H000000FF,&H00000000,&H70000000,-1,0,0,0,100,100,0,0,4,0,0,2,60,60,160,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.80,Default,,0,0,0,,sneak preview I think
+Dialogue: 0,0:00:01.84,0:00:03.10,Default,,0,0,0,,you in the medium
+Dialogue: 0,0:00:03.10,0:00:04.32,Default,,0,0,0,,term So over the
+Dialogue: 0,0:00:04.32,0:00:05.28,Default,,0,0,0,,next few years we
+Dialogue: 0,0:00:05.28,0:00:06.20,Default,,0,0,0,,believe that this market
+Dialogue: 0,0:00:06.20,0:00:07.46,Default,,0,0,0,,could explode up to
+Dialogue: 0,0:00:07.46,0:00:09.12,Default,,0,0,0,,5 trillion in notional
+Dialogue: 0,0:00:09.12,0:00:10.38,Default,,0,0,0,,volume Now right now
+Dialogue: 0,0:00:10.64,0:00:11.26,Default,,0,0,0,,Cal she is on
+Dialogue: 0,0:00:11.26,0:00:12.44,Default,,0,0,0,,an annualized run rate
+Dialogue: 0,0:00:12.44,0:00:14.16,Default,,0,0,0,,to do around 120
+Dialogue: 0,0:00:14.16,0:00:16.20,Default,,0,0,0,,130 billion in notional
+Dialogue: 0,0:00:16.20,0:00:17.14,Default,,0,0,0,,volume for this year
+Dialogue: 0,0:00:17.24,0:00:18.50,Default,,0,0,0,,So we're talking about
+Dialogue: 0,0:00:18.50,0:00:19.86,Default,,0,0,0,,a massive explosion of
+Dialogue: 0,0:00:19.86,0:00:20.94,Default,,0,0,0,,where this total market
+Dialogue: 0,0:00:20.94,0:00:22.32,Default,,0,0,0,,is But when you
+Dialogue: 0,0:00:22.32,0:00:23.58,Default,,0,0,0,,put it the perspective
+Dialogue: 0,0:00:23.58,0:00:24.92,Default,,0,0,0,,of the total derivatives
+Dialogue: 0,0:00:24.92,0:00:26.64,Default,,0,0,0,,market which in 2024
+Dialogue: 0,0:00:27.30,0:00:30.06,Default,,0,0,0,,was around 715 trillion
+Dialogue: 0,0:00:30.06,0:00:31.94,Default,,0,0,0,,in notional volume you're
+Dialogue: 0,0:00:31.94,0:00:33.28,Default,,0,0,0,,only talking about 70
+Dialogue: 0,0:00:33.28,0:00:34.46,Default,,0,0,0,,basis points right that
+Dialogue: 0,0:00:34.46,0:00:36.50,Default,,0,0,0,,5 trillion figure over
+Dialogue: 0,0:00:36.58,0:00:38.26,Default,,0,0,0,,715 So it's a
+Dialogue: 0,0:00:38.26,0:00:40.18,Default,,0,0,0,,in the compared to
+Dialogue: 0,0:00:40.18,0:00:42.00,Default,,0,0,0,,where traditional derivatives sit
+Dialogue: 0,0:00:42.00,0:00:43.70,Default,,0,0,0,,today And as you
+Dialogue: 0,0:00:43.70,0:00:44.40,Default,,0,0,0,,point out I think
+Dialogue: 0,0:00:44.40,0:00:45.44,Default,,0,0,0,,this is an expansion
+Dialogue: 0,0:00:45.44,0:00:46.98,Default,,0,0,0,,of the addressable market
+Dialogue: 0,0:00:46.98,0:00:49.58,Default,,0,0,0,,that derivatives don't necessarily
+Dialogue: 0,0:00:49.58,0:00:51.42,Default,,0,0,0,,give you today in
+Dialogue: 0,0:00:51.42,0:00:52.20,Default,,0,0,0,,terms of the risk
+Dialogue: 0,0:00:52.20,0:00:52.60,Default,,0,0,0,,profile

@@ -1,0 +1,328 @@
+{
+  "segments": [
+    {
+      "start": 0.079,
+      "end": 5.379,
+      "text": "AI has been the big story for the past two years, and it's still the big story. In",
+      "words": [
+        {
+          "word": "AI",
+          "start": 0.079,
+          "end": 0.56
+        },
+        {
+          "word": "has",
+          "start": 0.579,
+          "end": 0.839
+        },
+        {
+          "word": "been",
+          "start": 0.939,
+          "end": 1.1
+        },
+        {
+          "word": "the",
+          "start": 1.139,
+          "end": 1.24
+        },
+        {
+          "word": "big",
+          "start": 1.299,
+          "end": 1.419
+        },
+        {
+          "word": "story",
+          "start": 1.559,
+          "end": 1.779
+        },
+        {
+          "word": "for",
+          "start": 1.899,
+          "end": 1.979
+        },
+        {
+          "word": "the",
+          "start": 2.019,
+          "end": 2.099
+        },
+        {
+          "word": "past",
+          "start": 2.159,
+          "end": 2.5
+        },
+        {
+          "word": "two",
+          "start": 2.519,
+          "end": 2.72
+        },
+        {
+          "word": "years,",
+          "start": 2.799,
+          "end": 3.199
+        },
+        {
+          "word": "and",
+          "start": 3.46,
+          "end": 3.539
+        },
+        {
+          "word": "it's",
+          "start": 3.579,
+          "end": 3.74
+        },
+        {
+          "word": "still",
+          "start": 3.74,
+          "end": 4.039
+        },
+        {
+          "word": "the",
+          "start": 4.079,
+          "end": 4.159
+        },
+        {
+          "word": "big",
+          "start": 4.239,
+          "end": 4.38
+        },
+        {
+          "word": "story.",
+          "start": 4.519,
+          "end": 4.94
+        },
+        {
+          "word": "In",
+          "start": 5.259,
+          "end": 5.379
+        }
+      ]
+    },
+    {
+      "start": 5.4,
+      "end": 11.36,
+      "text": "fact, it is the biggest catalyst to all of the innovation taking place out there. It",
+      "words": [
+        {
+          "word": "fact,",
+          "start": 5.4,
+          "end": 5.639
+        },
+        {
+          "word": "it",
+          "start": 5.719,
+          "end": 5.94
+        },
+        {
+          "word": "is",
+          "start": 6.059,
+          "end": 6.579
+        },
+        {
+          "word": "the",
+          "start": 6.659,
+          "end": 6.879
+        },
+        {
+          "word": "biggest",
+          "start": 6.94,
+          "end": 7.379
+        },
+        {
+          "word": "catalyst",
+          "start": 7.419,
+          "end": 8.22
+        },
+        {
+          "word": "to",
+          "start": 8.26,
+          "end": 8.579
+        },
+        {
+          "word": "all",
+          "start": 8.72,
+          "end": 8.9
+        },
+        {
+          "word": "of",
+          "start": 8.92,
+          "end": 9.039
+        },
+        {
+          "word": "the",
+          "start": 9.079,
+          "end": 9.139
+        },
+        {
+          "word": "innovation",
+          "start": 9.179,
+          "end": 9.76
+        },
+        {
+          "word": "taking",
+          "start": 9.8,
+          "end": 10.159
+        },
+        {
+          "word": "place",
+          "start": 10.179,
+          "end": 10.46
+        },
+        {
+          "word": "out",
+          "start": 10.5,
+          "end": 10.68
+        },
+        {
+          "word": "there.",
+          "start": 10.739,
+          "end": 11.039
+        },
+        {
+          "word": "It",
+          "start": 11.119,
+          "end": 11.36
+        }
+      ]
+    },
+    {
+      "start": 11.439,
+      "end": 16.739,
+      "text": "is the reason that the world seems to be speeding up. And I'll just give you a few",
+      "words": [
+        {
+          "word": "is",
+          "start": 11.439,
+          "end": 11.64
+        },
+        {
+          "word": "the",
+          "start": 11.679,
+          "end": 11.759
+        },
+        {
+          "word": "reason",
+          "start": 11.8,
+          "end": 12.699
+        },
+        {
+          "word": "that",
+          "start": 12.739,
+          "end": 12.88
+        },
+        {
+          "word": "the",
+          "start": 12.92,
+          "end": 13.019
+        },
+        {
+          "word": "world",
+          "start": 13.059,
+          "end": 13.319
+        },
+        {
+          "word": "seems",
+          "start": 13.42,
+          "end": 13.68
+        },
+        {
+          "word": "to",
+          "start": 13.699,
+          "end": 13.779
+        },
+        {
+          "word": "be",
+          "start": 13.799,
+          "end": 14.019
+        },
+        {
+          "word": "speeding",
+          "start": 14.059,
+          "end": 14.699
+        },
+        {
+          "word": "up.",
+          "start": 14.799,
+          "end": 15.059
+        },
+        {
+          "word": "And",
+          "start": 15.159,
+          "end": 15.48
+        },
+        {
+          "word": "I'll",
+          "start": 15.519,
+          "end": 15.64
+        },
+        {
+          "word": "just",
+          "start": 15.699,
+          "end": 15.819
+        },
+        {
+          "word": "give",
+          "start": 15.839,
+          "end": 16.02
+        },
+        {
+          "word": "you",
+          "start": 16.059,
+          "end": 16.34
+        },
+        {
+          "word": "a",
+          "start": 16.52,
+          "end": 16.54
+        },
+        {
+          "word": "few",
+          "start": 16.579,
+          "end": 16.739
+        }
+      ]
+    },
+    {
+      "start": 16.84,
+      "end": 19.42,
+      "text": "examples of how quickly things are happening.",
+      "words": [
+        {
+          "word": "examples",
+          "start": 16.84,
+          "end": 17.76
+        },
+        {
+          "word": "of",
+          "start": 17.799,
+          "end": 17.899
+        },
+        {
+          "word": "how",
+          "start": 17.979,
+          "end": 18.159
+        },
+        {
+          "word": "quickly",
+          "start": 18.18,
+          "end": 18.46
+        },
+        {
+          "word": "things",
+          "start": 18.559,
+          "end": 18.799
+        },
+        {
+          "word": "are",
+          "start": 18.84,
+          "end": 18.94
+        },
+        {
+          "word": "happening.",
+          "start": 19.02,
+          "end": 19.42
+        }
+      ]
+    }
+  ],
+  "language": "eng"
+}

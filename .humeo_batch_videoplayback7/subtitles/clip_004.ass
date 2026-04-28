@@ -1,0 +1,100 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Base,Arial,86,&H00FFFFFF,&H000000FF,&H00101010,&H00000000,-1,0,0,0,100,100,-1,0,1,4,0,8,0,0,0,0
+Style: Highlight,Arial,86,&H00FFFFFF,&H000000FF,&H00000000,&H00F65C8B,-1,0,0,0,100,100,-1,0,4,0,10,7,0,0,0,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.05,0:00:02.19,Base,,0,0,0,,{\an7\pos(130.1,1440.0)}Tether, for example,
+Dialogue: 0,0:00:00.05,0:00:02.19,Base,,0,0,0,,{\an7\pos(283.5,1534.0)}last year, we
+Dialogue: 1,0:00:01.41,0:00:01.97,Highlight,,0,0,0,,{\an7\pos(283.5,1534.0)\blur0.8}last year,
+Dialogue: 0,0:00:02.23,0:00:04.33,Base,,0,0,0,,{\an7\pos(108.0,1534.0)}believe delivered $50
+Dialogue: 1,0:00:02.77,0:00:04.33,Highlight,,0,0,0,,{\an7\pos(425.0,1534.0)\blur0.8}delivered $50
+Dialogue: 0,0:00:04.69,0:00:07.97,Base,,0,0,0,,{\an7\pos(99.0,1534.0)}million per employee.
+Dialogue: 1,0:00:04.69,0:00:06.75,Highlight,,0,0,0,,{\an7\pos(99.0,1534.0)\blur0.8}million per
+Dialogue: 0,0:00:08.07,0:00:08.99,Base,,0,0,0,,{\an7\pos(400.5,1440.0)}That is
+Dialogue: 0,0:00:08.07,0:00:08.99,Base,,0,0,0,,{\an7\pos(304.5,1534.0)}unheard of.
+Dialogue: 1,0:00:08.43,0:00:08.99,Highlight,,0,0,0,,{\an7\pos(304.5,1534.0)\blur0.8}unheard of.
+Dialogue: 0,0:00:09.09,0:00:11.73,Base,,0,0,0,,{\an7\pos(283.0,1440.0)}But we think
+Dialogue: 0,0:00:09.09,0:00:11.73,Base,,0,0,0,,{\an7\pos(136.0,1534.0)}that the capitalizing
+Dialogue: 1,0:00:10.61,0:00:11.73,Highlight,,0,0,0,,{\an7\pos(319.0,1534.0)\blur0.8}the capitalizing
+Dialogue: 0,0:00:11.83,0:00:14.63,Base,,0,0,0,,{\an7\pos(374.0,1440.0)}on all of
+Dialogue: 0,0:00:11.83,0:00:14.63,Base,,0,0,0,,{\an7\pos(52.0,1534.0)}these new technologies
+Dialogue: 1,0:00:13.41,0:00:14.63,Highlight,,0,0,0,,{\an7\pos(302.0,1534.0)\blur0.8}new technologies
+Dialogue: 0,0:00:14.69,0:00:17.39,Base,,0,0,0,,{\an7\pos(321.0,1440.0)}is going to
+Dialogue: 0,0:00:14.69,0:00:17.39,Base,,0,0,0,,{\an7\pos(52.5,1534.0)}drive productivity gains
+Dialogue: 1,0:00:15.19,0:00:16.38,Highlight,,0,0,0,,{\an7\pos(52.5,1534.0)\blur0.8}drive productivity
+Dialogue: 0,0:00:17.47,0:00:19.25,Base,,0,0,0,,{\an7\pos(177.5,1440.0)}much higher than
+Dialogue: 1,0:00:17.47,0:00:18.05,Highlight,,0,0,0,,{\an7\pos(177.5,1440.0)\blur0.8}much higher
+Dialogue: 0,0:00:17.47,0:00:19.25,Base,,0,0,0,,{\an7\pos(203.5,1534.0)}people can even
+Dialogue: 0,0:00:19.37,0:00:20.97,Base,,0,0,0,,{\an7\pos(129.0,1534.0)}postulate right now.
+Dialogue: 1,0:00:19.37,0:00:20.65,Highlight,,0,0,0,,{\an7\pos(129.0,1534.0)\blur0.8}postulate right
+Dialogue: 0,0:00:21.07,0:00:23.33,Base,,0,0,0,,{\an7\pos(254.0,1440.0)}And with that,
+Dialogue: 0,0:00:21.07,0:00:23.33,Base,,0,0,0,,{\an7\pos(156.0,1534.0)}while many people
+Dialogue: 1,0:00:22.47,0:00:23.33,Highlight,,0,0,0,,{\an7\pos(396.0,1534.0)\blur0.8}many people
+Dialogue: 0,0:00:23.39,0:00:26.09,Base,,0,0,0,,{\an7\pos(209.0,1440.0)}are afraid, given
+Dialogue: 0,0:00:23.39,0:00:26.09,Base,,0,0,0,,{\an7\pos(65.0,1534.0)}the robotics movement
+Dialogue: 1,0:00:25.07,0:00:26.09,Highlight,,0,0,0,,{\an7\pos(219.0,1534.0)\blur0.8}robotics movement
+Dialogue: 0,0:00:26.19,0:00:28.75,Base,,0,0,0,,{\an7\pos(396.0,1440.0)}and AI,
+Dialogue: 0,0:00:26.19,0:00:28.75,Base,,0,0,0,,{\an7\pos(223.0,1534.0)}everyone being
+Dialogue: 1,0:00:28.21,0:00:28.75,Highlight,,0,0,0,,{\an7\pos(223.0,1534.0)\blur0.8}everyone being
+Dialogue: 0,0:00:28.81,0:00:31.11,Base,,0,0,0,,{\an7\pos(263.5,1440.0)}thrown out of
+Dialogue: 1,0:00:28.81,0:00:29.25,Highlight,,0,0,0,,{\an7\pos(263.5,1440.0)\blur0.8}thrown out
+Dialogue: 0,0:00:28.81,0:00:31.11,Base,,0,0,0,,{\an7\pos(168.0,1534.0)}jobs, we disagree.
+Dialogue: 0,0:00:31.36,0:00:32.27,Base,,0,0,0,,{\an7\pos(271.0,1440.0)}We think this
+Dialogue: 1,0:00:31.36,0:00:31.71,Highlight,,0,0,0,,{\an7\pos(271.0,1440.0)\blur0.8}We think
+Dialogue: 0,0:00:31.36,0:00:32.27,Base,,0,0,0,,{\an7\pos(321.0,1534.0)}is going to
+Dialogue: 0,0:00:32.31,0:00:34.95,Base,,0,0,0,,{\an7\pos(347.5,1440.0)}be one of
+Dialogue: 0,0:00:32.31,0:00:34.95,Base,,0,0,0,,{\an7\pos(6.5,1534.0)}the greatest opportunities
+Dialogue: 1,0:00:33.07,0:00:34.95,Highlight,,0,0,0,,{\an7\pos(160.5,1534.0)\blur0.8}greatest opportunities
+Dialogue: 0,0:00:35.01,0:00:37.79,Base,,0,0,0,,{\an7\pos(405.5,1440.0)}for the
+Dialogue: 0,0:00:35.01,0:00:37.79,Base,,0,0,0,,{\an7\pos(108.5,1534.0)}entrepreneurial spirit
+Dialogue: 1,0:00:36.09,0:00:37.79,Highlight,,0,0,0,,{\an7\pos(108.5,1534.0)\blur0.8}entrepreneurial spirit
+Dialogue: 0,0:00:37.89,0:00:40.28,Base,,0,0,0,,{\an7\pos(115.0,1440.0)}in history, especially
+Dialogue: 1,0:00:38.11,0:00:39.18,Highlight,,0,0,0,,{\an7\pos(216.0,1440.0)\blur0.8}history, especially
+Dialogue: 0,0:00:37.89,0:00:40.28,Base,,0,0,0,,{\an7\pos(191.5,1534.0)}because you can
+Dialogue: 0,0:00:40.34,0:00:43.51,Base,,0,0,0,,{\an7\pos(237.5,1440.0)}go to ChatGPT
+Dialogue: 1,0:00:40.74,0:00:41.86,Highlight,,0,0,0,,{\an7\pos(367.5,1440.0)\blur0.8}to ChatGPT
+Dialogue: 0,0:00:40.34,0:00:43.51,Base,,0,0,0,,{\an7\pos(295.5,1534.0)}or Grok and
+Dialogue: 0,0:00:43.56,0:00:46.48,Base,,0,0,0,,{\an7\pos(296.0,1440.0)}say, "I think
+Dialogue: 0,0:00:43.56,0:00:46.48,Base,,0,0,0,,{\an7\pos(249.0,1534.0)}there's a huge
+Dialogue: 1,0:00:45.34,0:00:45.78,Highlight,,0,0,0,,{\an7\pos(249.0,1534.0)\blur0.8}there's a
+Dialogue: 0,0:00:46.60,0:00:48.96,Base,,0,0,0,,{\an7\pos(228.0,1440.0)}unmet need for
+Dialogue: 1,0:00:46.60,0:00:47.84,Highlight,,0,0,0,,{\an7\pos(228.0,1440.0)\blur0.8}unmet need
+Dialogue: 0,0:00:46.60,0:00:48.96,Base,,0,0,0,,{\an7\pos(347.5,1534.0)}this, that,
+Dialogue: 0,0:00:49.02,0:00:50.78,Base,,0,0,0,,{\an7\pos(300.0,1440.0)}or the other
+Dialogue: 0,0:00:49.02,0:00:50.78,Base,,0,0,0,,{\an7\pos(131.0,1534.0)}product or service."
+Dialogue: 1,0:00:49.54,0:00:50.28,Highlight,,0,0,0,,{\an7\pos(131.0,1534.0)\blur0.8}product or
+Dialogue: 0,0:00:50.88,0:00:52.38,Base,,0,0,0,,{\an7\pos(244.0,1534.0)}Think about it.
+Dialogue: 1,0:00:50.88,0:00:51.35,Highlight,,0,0,0,,{\an7\pos(244.0,1534.0)\blur0.8}Think about
+Dialogue: 0,0:00:52.52,0:00:54.28,Base,,0,0,0,,{\an7\pos(295.0,1440.0)}And I would
+Dialogue: 1,0:00:53.25,0:00:53.60,Highlight,,0,0,0,,{\an7\pos(487.0,1440.0)\blur0.8}I would
+Dialogue: 0,0:00:52.52,0:00:54.28,Base,,0,0,0,,{\an7\pos(309.5,1534.0)}like to start
+Dialogue: 0,0:00:54.34,0:00:56.44,Base,,0,0,0,,{\an7\pos(143.5,1440.0)}that business. Boy,
+Dialogue: 1,0:00:54.58,0:00:55.64,Highlight,,0,0,0,,{\an7\pos(326.5,1440.0)\blur0.8}business. Boy,
+Dialogue: 0,0:00:54.34,0:00:56.44,Base,,0,0,0,,{\an7\pos(204.0,1534.0)}when we started
+Dialogue: 0,0:00:56.50,0:00:58.22,Base,,0,0,0,,{\an7\pos(295.5,1440.0)}Ark, I would
+Dialogue: 0,0:00:56.50,0:00:58.22,Base,,0,0,0,,{\an7\pos(263.5,1534.0)}have loved to
+Dialogue: 1,0:00:57.60,0:00:58.12,Highlight,,0,0,0,,{\an7\pos(263.5,1534.0)\blur0.8}have loved
+Dialogue: 0,0:00:58.26,0:00:59.74,Base,,0,0,0,,{\an7\pos(235.0,1440.0)}have a starting
+Dialogue: 0,0:00:58.26,0:00:59.74,Base,,0,0,0,,{\an7\pos(246.5,1534.0)}point like that.
+Dialogue: 1,0:00:59.02,0:00:59.46,Highlight,,0,0,0,,{\an7\pos(246.5,1534.0)\blur0.8}point like
+Dialogue: 0,0:00:59.84,0:01:03.12,Base,,0,0,0,,{\an7\pos(280.5,1440.0)}And you can
+Dialogue: 0,0:00:59.84,0:01:03.12,Base,,0,0,0,,{\an7\pos(132.6,1534.0)}work with ChatGPT,
+Dialogue: 1,0:01:01.58,0:01:03.12,Highlight,,0,0,0,,{\an7\pos(357.6,1534.0)\blur0.8}with ChatGPT,
+Dialogue: 0,0:01:03.22,0:01:05.66,Base,,0,0,0,,{\an7\pos(295.5,1440.0)}xAI, Grok to
+Dialogue: 1,0:01:03.22,0:01:04.26,Highlight,,0,0,0,,{\an7\pos(295.5,1440.0)\blur0.8}xAI, Grok
+Dialogue: 0,0:01:03.22,0:01:05.66,Base,,0,0,0,,{\an7\pos(119.5,1534.0)}build your business.
+Dialogue: 0,0:01:06.20,0:01:07.76,Base,,0,0,0,,{\an7\pos(384.0,1440.0)}Try it. If
+Dialogue: 0,0:01:06.20,0:01:07.76,Base,,0,0,0,,{\an7\pos(177.0,1534.0)}you're looking for
+Dialogue: 1,0:01:07.12,0:01:07.60,Highlight,,0,0,0,,{\an7\pos(177.0,1534.0)\blur0.8}you're looking
+Dialogue: 0,0:01:07.82,0:01:08.13,Base,,0,0,0,,{\an7\pos(427.0,1534.0)}a job,
+Dialogue: 1,0:01:07.82,0:01:08.13,Highlight,,0,0,0,,{\an7\pos(427.0,1534.0)\blur0.8}a job,

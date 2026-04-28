@@ -1,0 +1,46 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,48,&H00FFFFFF,&H000000FF,&H00000000,&H70000000,-1,0,0,0,100,100,0,0,4,0,0,2,60,60,160,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.14,Default,,0,0,0,,So while I was
+Dialogue: 0,0:00:01.14,0:00:02.36,Default,,0,0,0,,walking to the bedroom
+Dialogue: 0,0:00:02.44,0:00:03.82,Default,,0,0,0,,the happily booted up
+Dialogue: 0,0:00:03.82,0:00:05.84,Default,,0,0,0,,again and talked to
+Dialogue: 0,0:00:05.84,0:00:06.50,Default,,0,0,0,,everyone in the world
+Dialogue: 0,0:00:07.78,0:00:09.52,Default,,0,0,0,,The next morning woke
+Dialogue: 0,0:00:09.52,0:00:11.84,Default,,0,0,0,,up Over 800 messages
+Dialogue: 0,0:00:12.52,0:00:14.76,Default,,0,0,0,,I panicked I
+Dialogue: 0,0:00:14.76,0:00:16.10,Default,,0,0,0,,pulled the I read
+Dialogue: 0,0:00:16.10,0:00:17.22,Default,,0,0,0,,every single message
+Dialogue: 0,0:00:18.42,0:00:20.10,Default,,0,0,0,,just to see if
+Dialogue: 0,0:00:20.10,0:00:21.24,Default,,0,0,0,,the leaked my private
+Dialogue: 0,0:00:21.24,0:00:24.22,Default,,0,0,0,,life Nothing
+Dialogue: 0,0:00:24.22,0:00:25.99,Default,,0,0,0,,happened But it could
+Dialogue: 0,0:00:25.99,0:00:27.99,Default,,0,0,0,,have But there was
+Dialogue: 0,0:00:27.99,0:00:30.06,Default,,0,0,0,,the where it went
+Dialogue: 0,0:00:30.06,0:00:32.36,Default,,0,0,0,,viral Today the project
+Dialogue: 0,0:00:32.36,0:00:35.14,Default,,0,0,0,,is called OpenClaw It's
+Dialogue: 0,0:00:35.14,0:00:37.54,Default,,0,0,0,,pretty much the growing
+Dialogue: 0,0:00:37.54,0:00:39.08,Default,,0,0,0,,open source project
+Dialogue: 0,0:00:40.16,0:00:41.70,Default,,0,0,0,,Its mascot is a
+Dialogue: 0,0:00:42.80,0:00:44.46,Default,,0,0,0,,claws into your machine
+Dialogue: 0,0:00:46.40,0:00:48.24,Default,,0,0,0,,Chenxin Huang calls it
+Dialogue: 0,0:00:48.24,0:00:50.20,Default,,0,0,0,,the operating system for
+Dialogue: 0,0:00:50.20,0:00:52.58,Default,,0,0,0,,personal AI But
+Dialogue: 0,0:00:52.58,0:00:53.70,Default,,0,0,0,,by far my favorite
+Dialogue: 0,0:00:53.70,0:00:54.92,Default,,0,0,0,,quote is from a
+Dialogue: 0,0:00:54.92,0:00:55.82,Default,,0,0,0,,who looked at this
+Dialogue: 0,0:00:55.82,0:00:57.42,Default,,0,0,0,,statistic and said Peter
+Dialogue: 0,0:00:57.58,0:00:59.36,Default,,0,0,0,,this is not hockey
+Dialogue: 0,0:00:59.36,0:01:01.54,Default,,0,0,0,,stick growth This is
+Dialogue: 0,0:01:01.54,0:01:02.10,Default,,0,0,0,,stripper pole

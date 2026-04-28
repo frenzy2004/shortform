@@ -1,0 +1,7 @@
+{
+  "version": 1,
+  "transcript_sha256": "fp-1",
+  "clips_sha256": "408ee5697c92e5f45cb5dd8ab0bdd9939ca36aa420bbdefe51ff38936a39007c",
+  "gemini_model": "gemini-test",
+  "llm_backend": "google"
+}

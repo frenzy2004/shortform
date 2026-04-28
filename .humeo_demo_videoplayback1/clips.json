@@ -1,0 +1,133 @@
+{
+  "source_path": "",
+  "clips": [
+    {
+      "clip_id": "001",
+      "topic": "The AI Agent that improvises",
+      "start_time_sec": 247.9,
+      "end_time_sec": 305.3,
+      "viral_hook": "For me, this was the moment where I thought, this is something new.",
+      "virality_score": 0.885,
+      "transcript": "For me, this was the moment where I thought, this is something new. This is not a chatbot. Chatbots give up. Agents improvise. And you know, I was sold. I wanted to share this. I wanted to tell people on Twitter. And nobody really got it. It's almost like you have to experience an agent. It's kind of hard to explain. It took me a few weeks. And then I did something stupid. Remember, this agent, by default, can do anything that you can do on your computer. So obviously, I put it in a public Discord, and I invited random people. And I was looking at it the whole night. People were talking with it. People were having fun with it. People tried to hack it.",
+      "suggested_overlay_title": "AI Agents vs Chatbots",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.95,
+        "hook_emotion": 0.85,
+        "catchy": 0.8
+      },
+      "reasoning": "This clip contains a powerful, high-stakes anecdote about releasing an AI agent into the wild, perfectly illustrating the 'Agent vs Chatbot' distinction.",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 3.4,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "shorts_title": "Why Agents Are Different",
+      "description": "The difference between static chatbots and improvising AI agents.",
+      "hashtags": [
+        "ai",
+        "coding",
+        "tech",
+        "agents"
+      ],
+      "layout_hint": "sit_center",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "002",
+      "topic": "The 9-second AI miracle",
+      "start_time_sec": 185.3,
+      "end_time_sec": 245.4,
+      "viral_hook": "And then I froze, because I actually didn't build voice in there.",
+      "virality_score": 0.855,
+      "transcript": "And then I froze, because I actually didn't build voice in there. I added support for images, yeah, but even that took hours. So I was looking at the typing indicator, and then the agent responded. And I very vividly remember the situation. I was standing there, and I was like, how did you do that? And the agent replied, I'm not kidding you, the mad lad figured it out on its own. And then it walked me through every single step. How it got a message from me, but there was no file ending. So it inspected the file. It found that it was audio, but a weird format, so it converted it. And then it was looking for something to translate the audio, but I didn't have it installed. But then it found an OpenAI key. It sent the whole thing to the server. It got it back, and then it replied. All of that in nine seconds. Can you imagine?",
+      "suggested_overlay_title": "AI Agent's 9-Second Miracle",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.9,
+        "hook_emotion": 0.85,
+        "catchy": 0.75
+      },
+      "reasoning": "High-tension story of an AI performing an unexpected, complex task on its own. Strong emotional hook and clear 'wow' moment.",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 3.8,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "shorts_title": "AI Agent Solves Problems Alone",
+      "description": "A developer watches in shock as his AI agent solves a complex problem on its own in seconds.",
+      "hashtags": [
+        "ai",
+        "tech",
+        "development",
+        "innovation"
+      ],
+      "layout_hint": "sit_center",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "003",
+      "topic": "The stripper pole growth",
+      "start_time_sec": 354.7,
+      "end_time_sec": 422.1,
+      "viral_hook": "Today, the project is called OpenClaw. It's pretty much the fastest-growing open-source project.",
+      "virality_score": 0.795,
+      "transcript": "Today, the project is called OpenClaw. It's pretty much the fastest-growing open-source project. Its mascot is a lobster. It claws into your machine. Chenxin Huang calls it the operating system for personal AI. But by far, my favorite quote is from a friend who looked at this statistic and said, Peter, this is not hockey stick growth. This is stripper pole. And I was not ready. You know, when something blows up like this, everything explodes. Hundreds of messages. Reporters calling me in the middle of the night. Security vulnerabilities. And then the AI company, whose model most of my users loved, sent me a trademark claim. I had to rename the whole thing while it was taking off.",
+      "suggested_overlay_title": "Stripper Pole Growth",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.75,
+        "hook_emotion": 0.8,
+        "catchy": 0.85
+      },
+      "reasoning": "Funny, memorable metaphor combined with the high-stakes reality of rapid project scaling and corporate pushback.",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 4.5,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "shorts_title": "Fastest Growing AI Project",
+      "description": "The chaotic story of scaling an open-source AI project overnight.",
+      "hashtags": [
+        "ai",
+        "growth",
+        "startup",
+        "openclaw"
+      ],
+      "layout_hint": "sit_center",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "004",
+      "topic": "The bottleneck is syncing",
+      "start_time_sec": 99.3,
+      "end_time_sec": 155.3,
+      "viral_hook": "The bottleneck is no longer typing. It's syncing.",
+      "virality_score": 0.615,
+      "transcript": "The bottleneck is no longer typing. It's syncing. And syncing was the part I did 25 years. Building software felt like playing a video game again. I was back. I built 44 projects in just a few months. And the latest one was a WhatsApp bot. I put it on my computer. It talks through the apps that you already know. And then I took it on a trip to Marrakech. You know, just to navigate around, to find restaurants, do translations. And at first, it didn't really feel right. It felt too much like a tool,",
+      "suggested_overlay_title": "Coding's New Bottleneck",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.7,
+        "hook_emotion": 0.5,
+        "catchy": 0.6
+      },
+      "reasoning": "Insightful observation on how AI changes the nature of software development work.",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 3.2,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "shorts_title": "The Future of Coding",
+      "description": "How AI is changing the fundamental bottleneck of software development.",
+      "hashtags": [
+        "coding",
+        "ai",
+        "software",
+        "development"
+      ],
+      "layout_hint": "sit_center",
+      "needs_review": false,
+      "review_reason": ""
+    }
+  ]
+}

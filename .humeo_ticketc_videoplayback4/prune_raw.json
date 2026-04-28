@@ -1,0 +1,46 @@
+{
+  "decisions": [
+    {
+      "clip_id": "001",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "reason": "The clip is already well-structured and hits the hook immediately.",
+      "thought": "The opening is direct and the content flows logically to a strong conclusion about the speed of AI development."
+    },
+    {
+      "clip_id": "002",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "reason": "The clip provides a necessary narrative setup for the 'technological adolescence' concept.",
+      "thought": "The intro is essential for the hook to make sense, and the ending provides a strong, relevant summary of the current challenge."
+    },
+    {
+      "clip_id": "003",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "reason": "The clip maintains a steady narrative arc regarding revenue and research focus.",
+      "thought": "The content is cohesive and the ending provides a clear, professional summary of the company's research-led philosophy."
+    },
+    {
+      "clip_id": "004",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "reason": "The clip is concise and directly addresses the Fermi Paradox as a framework for AI risk.",
+      "thought": "The argument is self-contained and the ending provides a clear, forward-looking statement."
+    },
+    {
+      "clip_id": "005",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "reason": "The clip effectively balances the historical context of labor with the urgency of current AI progress.",
+      "thought": "The transition from historical labor shifts to the current concern about adaptation speed is the core of the clip."
+    },
+    {
+      "clip_id": "006",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "reason": "The clip provides a clear narrative of Google DeepMind's recovery and current progress.",
+      "thought": "The opening sets the stage well, and the ending provides a balanced view of progress versus remaining work."
+    }
+  ]
+}

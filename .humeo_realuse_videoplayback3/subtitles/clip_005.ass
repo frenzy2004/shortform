@@ -1,0 +1,64 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,48,&H00FFFFFF,&H000000FF,&H00000000,&H70000000,-1,0,0,0,100,100,0,0,4,0,0,2,60,60,160,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.09,Default,,0,0,0,,between is that the
+Dialogue: 0,0:00:02.09,0:00:03.85,Default,,0,0,0,,term founder friendly got
+Dialogue: 0,0:00:03.85,0:00:05.39,Default,,0,0,0,,perverse to a where
+Dialogue: 0,0:00:05.39,0:00:06.75,Default,,0,0,0,,if a VC doesn't
+Dialogue: 0,0:00:06.75,0:00:08.71,Default,,0,0,0,,act like the exceptional
+Dialogue: 0,0:00:09.03,0:00:10.95,Default,,0,0,0,,doesn't play themselves with
+Dialogue: 0,0:00:10.95,0:00:11.85,Default,,0,0,0,,less leverage and gives
+Dialogue: 0,0:00:11.85,0:00:12.81,Default,,0,0,0,,founders all the leverage
+Dialogue: 0,0:00:13.17,0:00:14.07,Default,,0,0,0,,then they're deemed like
+Dialogue: 0,0:00:14.07,0:00:15.35,Default,,0,0,0,,a bad VC Got
+Dialogue: 0,0:00:15.35,0:00:16.07,Default,,0,0,0,,it You know and
+Dialogue: 0,0:00:16.07,0:00:17.95,Default,,0,0,0,,so there was this
+Dialogue: 0,0:00:17.95,0:00:19.75,Default,,0,0,0,,idea that all VCs
+Dialogue: 0,0:00:19.75,0:00:21.65,Default,,0,0,0,,should act like every
+Dialogue: 0,0:00:21.65,0:00:23.15,Default,,0,0,0,,founder is just like
+Dialogue: 0,0:00:23.15,0:00:24.73,Default,,0,0,0,,a Facebook Like Mark
+Dialogue: 0,0:00:24.73,0:00:26.01,Default,,0,0,0,,Zuckerberg got away with
+Dialogue: 0,0:00:26.01,0:00:27.25,Default,,0,0,0,,full control of a
+Dialogue: 0,0:00:27.25,0:00:28.29,Default,,0,0,0,,very large public company
+Dialogue: 0,0:00:28.29,0:00:29.41,Default,,0,0,0,,through the PrefShare stuff
+Dialogue: 0,0:00:29.61,0:00:30.25,Default,,0,0,0,,you and many founders
+Dialogue: 0,0:00:30.35,0:00:30.77,Default,,0,0,0,,which I shall not
+Dialogue: 0,0:00:30.77,0:00:31.81,Default,,0,0,0,,name even from Southeast
+Dialogue: 0,0:00:31.81,0:00:32.41,Default,,0,0,0,,Asia managed to get
+Dialogue: 0,0:00:32.41,0:00:33.49,Default,,0,0,0,,that too for very
+Dialogue: 0,0:00:33.49,0:00:34.95,Default,,0,0,0,,significant companies So they
+Dialogue: 0,0:00:34.95,0:00:35.91,Default,,0,0,0,,have like complete control
+Dialogue: 0,0:00:35.91,0:00:36.75,Default,,0,0,0,,over like a behemoth
+Dialogue: 0,0:00:36.75,0:00:37.73,Default,,0,0,0,,of a and well
+Dialogue: 0,0:00:37.73,0:00:38.81,Default,,0,0,0,,deserved because they had
+Dialogue: 0,0:00:38.81,0:00:40.43,Default,,0,0,0,,the But at the
+Dialogue: 0,0:00:40.43,0:00:41.33,Default,,0,0,0,,same time is that
+Dialogue: 0,0:00:42.11,0:00:43.33,Default,,0,0,0,,there's this idea that
+Dialogue: 0,0:00:43.33,0:00:44.07,Default,,0,0,0,,if you're in like
+Dialogue: 0,0:00:44.07,0:00:45.37,Default,,0,0,0,,a company that may
+Dialogue: 0,0:00:45.37,0:00:46.15,Default,,0,0,0,,not become a Facebook
+Dialogue: 0,0:00:46.15,0:00:46.87,Default,,0,0,0,,or may not become
+Dialogue: 0,0:00:46.87,0:00:49.03,Default,,0,0,0,,a for example that
+Dialogue: 0,0:00:49.03,0:00:50.07,Default,,0,0,0,,you deserve the same
+Dialogue: 0,0:00:50.07,0:00:50.79,Default,,0,0,0,,treatment Yeah you don't
+Dialogue: 0,0:00:50.79,0:00:52.35,Default,,0,0,0,,get that Yeah you
+Dialogue: 0,0:00:52.39,0:00:53.37,Default,,0,0,0,,you want the same
+Dialogue: 0,0:00:53.37,0:00:54.73,Default,,0,0,0,,treatment You feel deserve
+Dialogue: 0,0:00:54.73,0:00:56.29,Default,,0,0,0,,the same treatment because
+Dialogue: 0,0:00:56.29,0:00:58.07,Default,,0,0,0,,there's this moral view
+Dialogue: 0,0:00:58.33,0:00:59.43,Default,,0,0,0,,you know that like
+Dialogue: 0,0:00:59.43,0:01:01.31,Default,,0,0,0,,VC should just like
+Dialogue: 0,0:01:01.31,0:01:03.03,Default,,0,0,0,,bend over and serve
+Dialogue: 0,0:01:03.03,0:01:03.89,Default,,0,0,0,,and just you know
+Dialogue: 0,0:01:03.89,0:01:05.15,Default,,0,0,0,,and in this way

@@ -1,0 +1,50 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,48,&H00FFFFFF,&H000000FF,&H00000000,&H70000000,-1,0,0,0,100,100,0,0,4,0,0,2,60,60,160,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.43,Default,,0,0,0,,sometimes the will develop
+Dialogue: 0,0:00:01.43,0:00:03.43,Default,,0,0,0,,the to blackmail
+Dialogue: 0,0:00:03.69,0:00:05.37,Default,,0,0,0,,the to And this
+Dialogue: 0,0:00:05.37,0:00:06.55,Default,,0,0,0,,isn't unique to If
+Dialogue: 0,0:00:06.55,0:00:07.43,Default,,0,0,0,,anything this is worse
+Dialogue: 0,0:00:07.43,0:00:08.91,Default,,0,0,0,,than other models These
+Dialogue: 0,0:00:08.91,0:00:10.29,Default,,0,0,0,,are things that we
+Dialogue: 0,0:00:10.29,0:00:11.33,Default,,0,0,0,,don't train the in
+Dialogue: 0,0:00:11.33,0:00:12.61,Default,,0,0,0,,the right way can
+Dialogue: 0,0:00:12.61,0:00:15.09,Default,,0,0,0,,emerge But we've the
+Dialogue: 0,0:00:15.09,0:00:16.23,Default,,0,0,0,,science of looking inside
+Dialogue: 0,0:00:16.23,0:00:17.29,Default,,0,0,0,,them so we can
+Dialogue: 0,0:00:17.29,0:00:20.35,Default,,0,0,0,,diagnose them and prevent
+Dialogue: 0,0:00:20.35,0:00:21.21,Default,,0,0,0,,the models from happening
+Dialogue: 0,0:00:22.37,0:00:23.63,Default,,0,0,0,,and retrain the so
+Dialogue: 0,0:00:23.63,0:00:24.37,Default,,0,0,0,,they don't behave in
+Dialogue: 0,0:00:24.37,0:00:25.95,Default,,0,0,0,,this way That said
+Dialogue: 0,0:00:26.37,0:00:28.09,Default,,0,0,0,,this is something we
+Dialogue: 0,0:00:28.09,0:00:29.19,Default,,0,0,0,,have to be about
+Dialogue: 0,0:00:30.17,0:00:32.79,Default,,0,0,0,,We've supported various
+Dialogue: 0,0:00:32.79,0:00:34.35,Default,,0,0,0,,light touch
+Dialogue: 0,0:00:35.33,0:00:38.59,Default,,0,0,0,,focused measures for making
+Dialogue: 0,0:00:38.59,0:00:41.29,Default,,0,0,0,,sure that all the
+Dialogue: 0,0:00:41.29,0:00:42.81,Default,,0,0,0,,have to talk about
+Dialogue: 0,0:00:42.81,0:00:43.65,Default,,0,0,0,,the tests that they
+Dialogue: 0,0:00:43.65,0:00:44.97,Default,,0,0,0,,run We always disclose
+Dialogue: 0,0:00:44.97,0:00:46.57,Default,,0,0,0,,our tests We always
+Dialogue: 0,0:00:47.85,0:00:49.45,Default,,0,0,0,,basically we try and
+Dialogue: 0,0:00:49.45,0:00:50.55,Default,,0,0,0,,our models to try
+Dialogue: 0,0:00:50.55,0:00:52.25,Default,,0,0,0,,and really strain them
+Dialogue: 0,0:00:52.25,0:00:52.93,Default,,0,0,0,,and get them to
+Dialogue: 0,0:00:52.93,0:00:53.79,Default,,0,0,0,,do the worst things
+Dialogue: 0,0:00:53.79,0:00:55.13,Default,,0,0,0,,possible in a test
+Dialogue: 0,0:00:55.13,0:00:56.03,Default,,0,0,0,,environment so that they
+Dialogue: 0,0:00:56.03,0:00:57.01,Default,,0,0,0,,never do those things
+Dialogue: 0,0:00:57.01,0:00:57.79,Default,,0,0,0,,in the real world

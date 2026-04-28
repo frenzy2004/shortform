@@ -1,0 +1,39 @@
+{
+  "decisions": [
+    {
+      "clip_id": "001",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 3.0,
+      "reason": "Dropped 3s of trailing filler about customers and grants to keep the focus on the VC psychology.",
+      "thought": "The clip ends on a strong point about the VC's perspective on conviction; the final sentence about customers/grants felt like a new, unrelated tangent."
+    },
+    {
+      "clip_id": "002",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "reason": "No trimming required as the narrative arc from the crab story to the echo chamber metaphor is cohesive.",
+      "thought": "The story is a bit long but serves as a necessary setup for the 'echo chamber' metaphor, which is the core takeaway."
+    },
+    {
+      "clip_id": "003",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 1.6,
+      "reason": "Dropped 1.6s of trailing stuttering filler.",
+      "thought": "The clip is already quite long, but the ending is a bit messy with filler; trimming the final stutter keeps the professional tone."
+    },
+    {
+      "clip_id": "004",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "reason": "No trimming required to maintain the logical flow of the economic machine explanation.",
+      "thought": "The explanation builds step-by-step; removing any part of the cycle would break the coherence of the 'doom loop' premise."
+    },
+    {
+      "clip_id": "005",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "reason": "No trimming required as the clip is already concise and hits the core argument.",
+      "thought": "The clip is near the 50s mark and the dialogue is tight, so I opted to keep the full duration to ensure the argument about unproductive spending is clear."
+    }
+  ]
+}

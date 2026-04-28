@@ -1,0 +1,60 @@
+{
+  "decisions": [
+    {
+      "clip_id": "001",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 5.52,
+      "reason": "Removed trailing conversational filler after the core argument was completed.",
+      "thought": "The clip ends with a strong summary statement about the resurgence of active management; the final 'Yeah, absolutely' is unnecessary filler."
+    },
+    {
+      "clip_id": "002",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "reason": "No trimming required as the clip is well-paced and within the target duration.",
+      "thought": "The clip provides a clear, data-driven argument from start to finish without significant fluff."
+    },
+    {
+      "clip_id": "003",
+      "trim_start_sec": 0.79,
+      "trim_end_sec": 0.0,
+      "reason": "Dropped the introductory conversational lead-in to start directly on the core concept.",
+      "thought": "Starting with 'And what he does...' is weak; jumping to the explanation of debt vs. equity makes the clip more impactful."
+    },
+    {
+      "clip_id": "004",
+      "trim_start_sec": 0.04,
+      "trim_end_sec": 0.0,
+      "reason": "Removed the initial 'Why?' to start directly on the premise of the comparison.",
+      "thought": "The clip is long enough that removing the rhetorical 'Why?' tightens the opening without losing context."
+    },
+    {
+      "clip_id": "005",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "reason": "No trimming possible as the clip is very short.",
+      "thought": "The clip is already under the 50s minimum, but it is a self-contained, high-impact statement."
+    },
+    {
+      "clip_id": "006",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "reason": "No trimming required as the clip is concise and maintains a clear narrative arc.",
+      "thought": "The flow from the land-selling proposal to the broader point about government spending is logical and tight."
+    },
+    {
+      "clip_id": "007",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 5.16,
+      "reason": "Removed the trailing off-topic comment about the saving rate.",
+      "thought": "The clip concludes perfectly after the explanation of hiring younger talent; the final sentence is a distracting tangent."
+    },
+    {
+      "clip_id": "008",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "reason": "No trimming required as the historical context builds effectively to the conclusion.",
+      "thought": "The progression from historical innovation to current deflationary trends is well-structured."
+    }
+  ]
+}

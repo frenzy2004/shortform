@@ -1,0 +1,175 @@
+{
+  "source_path": "",
+  "clips": [
+    {
+      "clip_id": "001",
+      "topic": "The Loneliness Epidemic Data",
+      "start_time_sec": 0.0,
+      "end_time_sec": 60.475999999999885,
+      "viral_hook": "research that says that the average American has fewer friends now than they did 15 years ago.",
+      "virality_score": 0.85,
+      "transcript": "research that says that the average American has fewer friends now than they did 15 years ago. Yeah. And I was so interested in that because it seems like if we want to get to a world where there's more human connection- Mm-hmm this is the trend that we're going to have to grapple with. Yeah. just to give some data on this, in the American Time Use Survey, over the last 20 years, the amount of time American adults spend socializing in person has dropped by nearly 30%. For ages 15 to 24, according to the surgeon general, it's nearly 70%. And I look at that data and I think to myself, well, maybe if we're all socializing digitally, that doesn't matter so much. Maybe there's a future where that's actually fine. But there's also data that suggests that we're struggling somewhat. The number of Americans who say that they don't have a single close friend- Yeah that share has jumped- Yeah, it's really sad from 3% to 12% in the last 30 years. It feels to me like with all the tools that we've built for human connection, we're struggling to connect. And I'm curious, why do you think that's happening?",
+      "suggested_overlay_title": "Why Americans Are Losing Their Friends",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.9,
+        "hook_emotion": 0.9,
+        "catchy": 0.7
+      },
+      "reasoning": "This clip has an extremely powerful, data-driven hook that creates immediate emotional stakes and curiosity. The statistics cited are shocking and memorable, making the message highly impactful and shareable.",
+      "hook_start_sec": null,
+      "hook_end_sec": null,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "render_spans": [],
+      "shorts_title": "The Shocking Data on the US Loneliness Epidemic",
+      "description": "The average American has fewer friends than 15 years ago, and the share of people with zero close friends has quadrupled. What is happening?",
+      "hashtags": [
+        "loneliness",
+        "mentalhealth",
+        "socialconnection",
+        "sociology",
+        "markzuckerberg"
+      ],
+      "layout_hint": "sit_center",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "002",
+      "topic": "Does Digital Connection Replace Physical Connection?",
+      "start_time_sec": 0.0,
+      "end_time_sec": 45.65999999999963,
+      "viral_hook": "Is that going to replace the physical connection?",
+      "virality_score": 0.765,
+      "transcript": "Is that going to replace the physical connection? And my answer to that, especially in the case of something like this, is that, no, because people already don't have as much connection as they would like to have. It's not like this is replacing some sort of better physical connection that they would've otherwise had. It's that the average person would like to have 10 friends, and they have two or three. And there's just more demand to socialize than what people are able to do given the current construct. And giving people the ability to be present with people who are in other places physically just seems like it will unlock more. If I have glasses, it's not going to make it that I spend less time with my wife. It's going to make it so that I spend more time with my sister who lives across the country. And I think that that's good, and I think people need that.",
+      "suggested_overlay_title": "Digital Tools Don't Replace Real Friends",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.8,
+        "hook_emotion": 0.7,
+        "catchy": 0.8
+      },
+      "reasoning": "This clip directly addresses a common fear about technology. The message is a clear, optimistic reframe, and the example about his wife vs. his sister is extremely memorable and quotable.",
+      "hook_start_sec": null,
+      "hook_end_sec": null,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "render_spans": [],
+      "shorts_title": "Zuckerberg: Tech Helps You Connect MORE, Not Less",
+      "description": "Mark Zuckerberg argues that technology like AR glasses won't replace physical connection, but instead supplement it to meet an existing, unfulfilled demand for more social time.",
+      "hashtags": [
+        "socialmedia",
+        "loneliness",
+        "technology",
+        "future",
+        "markzuckerberg"
+      ],
+      "layout_hint": "sit_center",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "003",
+      "topic": "AI and When Struggle Is the Point",
+      "start_time_sec": 0.0,
+      "end_time_sec": 69.50899999999979,
+      "viral_hook": "And then on the other end of the spectrum, there are a lot of educational things, for example, where the struggle is kind of the point, right?",
+      "virality_score": 0.8175,
+      "transcript": "And then on the other end of the spectrum, there are a lot of educational things, for example, where the struggle is kind of the point, right? It's like building a muscle. Yeah. I can think of so many times in my life where the reason why I was doing something was not the output, it was the- fact that I was trying so hard to do it. There's one example in the Tim Ferriss interview where you talked about your kids struggling to articulate themselves emotionally. Mm-hmm. And adults very much have the same problem. Mm-hmm. And you talked about AI as a way to help them articulate those emotions. Yeah. And I thought about all of the many times in my life where I have struggled to articulate my emotions and how I really could've used some help in those moments. And I also found myself thinking about the times when that was really building a muscle. Where the act of struggling to communicate with someone and- understand what they wanted from me was important to my development. Mm-hmm. And so my question is, if you think about that as a spectrum between things that are really important to our humanity, and the struggle being removed is helpful, versus things where the struggle is the point, and it unlocks something about our humanity and is important to preserve, like building- Yeah muscle. How do you draw the line between those things? And how do we ensure that the muscles that we're building for this future are stronger and not weaker?",
+      "suggested_overlay_title": "Sometimes, the Struggle Is the Point",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.9,
+        "hook_emotion": 0.7,
+        "catchy": 0.85
+      },
+      "reasoning": "The core message presents a profound reframe on the purpose of technology, built around the highly catchy phrase 'the struggle is the point.' This creates a strong 'wow' moment and philosophical depth.",
+      "hook_start_sec": null,
+      "hook_end_sec": null,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "render_spans": [],
+      "shorts_title": "Should AI Help Us With Everything?",
+      "description": "Should AI help us with challenges where the struggle itself is how we grow? A deep question about technology and human development.",
+      "hashtags": [
+        "ai",
+        "philosophy",
+        "education",
+        "psychology",
+        "selfimprovement"
+      ],
+      "layout_hint": "sit_center",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "004",
+      "topic": "The Billion-Dollar Bet on AI Scaling",
+      "start_time_sec": 0.0,
+      "end_time_sec": 44.801000000003114,
+      "viral_hook": "is that we haven't found the end yet.",
+      "virality_score": 0.69,
+      "transcript": "is that we haven't found the end yet. So that leads to this dynamic where Llama 3, we could train on 10 to 20,000 GPUs. Llama 4, we could train on more than 100,000 GPUs. Llama 5, we can plan to scale even further, and there's just an interesting question of how far that goes. It's totally possible that at some point we just hit a limit, and just like previous systems, there's an asymptote, and it doesn't keep on growing. But it's also possible that that limit is not going to happen anytime soon, and that we're going to be able to keep on just building more clusters and generating more synthetic data to train the systems, and that they're just going to keep on getting more and more useful for people for quite a while to come.",
+      "suggested_overlay_title": "The Biggest Question in AI Right",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.8,
+        "hook_emotion": 0.7,
+        "catchy": 0.5
+      },
+      "reasoning": "The hook 'we haven't found the end yet' is mysterious and compelling. The message reveals the core high-stakes uncertainty driving the entire AI industry, and mentioning the massive scale of investment adds significant emotional weight.",
+      "hook_start_sec": null,
+      "hook_end_sec": null,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "render_spans": [],
+      "shorts_title": "Zuckerberg: We Haven't Found The Limit of AI... Yet",
+      "description": "Mark Zuckerberg explains the biggest open question in AI today: will current methods continue to get smarter, or will they hit a plateau? The answer determines hundreds of billions in investment.",
+      "hashtags": [
+        "ai",
+        "markzuckerberg",
+        "tech",
+        "future",
+        "innovation"
+      ],
+      "layout_hint": "sit_center",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "005",
+      "topic": "AI Solution for the Creator Economy",
+      "start_time_sec": 0.0,
+      "end_time_sec": 45.649000000001934,
+      "viral_hook": "there are only so many hours in the day, and your community probably has a nearly unlimited demand to interact with you,",
+      "virality_score": 0.6575,
+      "transcript": "there are only so many hours in the day, and your community probably has a nearly unlimited demand to interact with you, and you want to interact with them because you're trying to grow your community. Both socially and from a business perspective, that's sort of growing the community is an important part of what every creator does. So, okay, if we can make it so that each creator can basically make an AI artifact that their community can interact with, people will be clear- that it's not the actual creator themselves, but it's almost like a piece of digital art that you're producing, like an interactive sculpture or something that it's like you train it to, here's the context that I want it to have. Here's the topics I want it to communicate on. Here's stuff that I want it to stay away from. You're giving your community something to interact with when you can't be there to kind of answer all the questions.",
+      "suggested_overlay_title": "The Creator Economy's Biggest Problem",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.7,
+        "hook_emotion": 0.65,
+        "catchy": 0.6
+      },
+      "reasoning": "The hook perfectly identifies a core pain point for a large and engaged audience (creators). The proposed solution is a novel application of AI that feels futuristic but practical, making the message very relevant.",
+      "hook_start_sec": null,
+      "hook_end_sec": null,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "render_spans": [],
+      "shorts_title": "The Future of Fan Interaction for Creators",
+      "description": "Creators have limited time but their communities have unlimited demand. Mark Zuckerberg proposes a solution: AI versions of creators that can interact with fans 24/7.",
+      "hashtags": [
+        "creatortips",
+        "creator",
+        "aiforbusiness",
+        "socialmediamarketing",
+        "community"
+      ],
+      "layout_hint": "sit_center",
+      "needs_review": false,
+      "review_reason": ""
+    }
+  ]
+}

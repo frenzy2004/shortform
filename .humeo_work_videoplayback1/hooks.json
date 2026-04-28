@@ -1,0 +1,60 @@
+{
+  "hooks": [
+    {
+      "clip_id": "001",
+      "hook_start_sec": 18.64,
+      "hook_end_sec": 20.58,
+      "hook_text": "The bottleneck is no longer typing.",
+      "reason": "This is a strong, provocative claim that immediately challenges the viewer's understanding of software development."
+    },
+    {
+      "clip_id": "002",
+      "hook_start_sec": 48.4,
+      "hook_end_sec": 52.1,
+      "hook_text": "Chatbots give up. Agents improvise.",
+      "reason": "This contrast provides a clear, punchy definition of the topic that is far more compelling than the anecdotal lead-in."
+    },
+    {
+      "clip_id": "003",
+      "hook_start_sec": 0.01,
+      "hook_end_sec": 9.43,
+      "hook_text": "Now, if you install OpenClaw on your work machine, at least with the default settings, you might get fired.",
+      "reason": "This is a high-stakes warning that immediately grabs attention by linking a specific tool to a negative real-world consequence."
+    },
+    {
+      "clip_id": "004",
+      "hook_start_sec": 57.3,
+      "hook_end_sec": 62.1,
+      "hook_text": "Peter, this is not hockey stick growth. This is stripper pole.",
+      "reason": "This is a shocking, memorable quote that serves as a much stronger hook than the descriptive lead-in about the lobster mascot."
+    },
+    {
+      "clip_id": "005",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 1.91,
+      "hook_text": "How can we make it more scary?",
+      "reason": "This is a direct, intriguing question that immediately sets a high-stakes, slightly ominous tone for the rest of the clip."
+    },
+    {
+      "clip_id": "006",
+      "hook_start_sec": 17.01,
+      "hook_end_sec": 19.43,
+      "hook_text": "because how did humanity level up?",
+      "reason": "This rhetorical question creates a curiosity gap that forces the viewer to listen to the answer, which is the core of the clip's argument."
+    },
+    {
+      "clip_id": "007",
+      "hook_start_sec": 16.64,
+      "hook_end_sec": 21.1,
+      "hook_text": "a beer sommelier who never wrote a single line of code.",
+      "reason": "This highlights the 'everyman' accessibility of the technology, which is the most compelling part of the story."
+    },
+    {
+      "clip_id": "008",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 2.27,
+      "hook_text": "You really terrify me.",
+      "reason": "This is a strong, personal, and dramatic opening statement that immediately establishes conflict and tension."
+    }
+  ]
+}

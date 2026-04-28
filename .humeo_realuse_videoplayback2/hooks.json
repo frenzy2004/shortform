@@ -1,0 +1,39 @@
+{
+  "hooks": [
+    {
+      "clip_id": "001",
+      "hook_start_sec": 4.56,
+      "hook_end_sec": 6.06,
+      "hook_text": "and you don't know what you're hunting for,",
+      "reason": "This phrase introduces the core problem of the hunting metaphor, creating immediate curiosity about the consequences of lacking focus."
+    },
+    {
+      "clip_id": "002",
+      "hook_start_sec": 13.54,
+      "hook_end_sec": 15.44,
+      "hook_text": "We found that to be a false positive.",
+      "reason": "This is a contrarian claim that challenges the conventional wisdom about 'traction' in investing, immediately grabbing the viewer's attention."
+    },
+    {
+      "clip_id": "003",
+      "hook_start_sec": 1.42,
+      "hook_end_sec": 6.22,
+      "hook_text": "So we were early investors in a fishery from a seed fund in early days and recently in the series D",
+      "reason": "This establishes credibility by citing a specific, successful investment case study, which provides a concrete anchor for the rest of the clip."
+    },
+    {
+      "clip_id": "004",
+      "hook_start_sec": 25.1,
+      "hook_end_sec": 27.58,
+      "hook_text": "There's no desktop, you can't win on the desktop.",
+      "reason": "This is a bold, punchy statement that defies the typical perception of VC work, making the viewer want to know how they actually win."
+    },
+    {
+      "clip_id": "005",
+      "hook_start_sec": 3.5,
+      "hook_end_sec": 5.48,
+      "hook_text": "Like money is just a means to an end.",
+      "reason": "This philosophical statement immediately pivots the conversation from a generic finance topic to a higher-level purpose, which is more engaging for a general audience."
+    }
+  ]
+}

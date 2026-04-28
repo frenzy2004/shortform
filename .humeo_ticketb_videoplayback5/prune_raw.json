@@ -1,0 +1,39 @@
+{
+  "decisions": [
+    {
+      "clip_id": "001",
+      "trim_start_sec": 14.0,
+      "trim_end_sec": 0.0,
+      "reason": "Removed 14s of preamble to start directly on the core conflict of building data centers and the risk of overextension.",
+      "thought": "The original start was a bit abstract; starting at the 14s mark immediately introduces the speaker's involvement in building data centers and the tension of the 'bubble' question."
+    },
+    {
+      "clip_id": "002",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "reason": "No trimming required as the clip is already concise and hits the hook early.",
+      "thought": "The clip is 76s long and moves quickly from the Moore's Law analogy to the specific example of Claude Code, maintaining a good pace."
+    },
+    {
+      "clip_id": "003",
+      "trim_start_sec": 1.86,
+      "trim_end_sec": 0.0,
+      "reason": "Dropped 1.86s of conversational filler ('I think exactly what you said') to start directly on the economic thesis.",
+      "thought": "Starting with the core claim about GDP growth and unemployment makes the clip much more punchy for a cold viewer."
+    },
+    {
+      "clip_id": "004",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "reason": "No trimming required as the clip starts with a direct question and answer.",
+      "thought": "The opening is strong and the clip maintains a clear narrative arc regarding Chinese AI progress and the chip embargo."
+    },
+    {
+      "clip_id": "005",
+      "trim_start_sec": 17.2,
+      "trim_end_sec": 0.0,
+      "reason": "Removed 17.2s of setup to start directly on the 'country of geniuses' premise.",
+      "thought": "The initial analogy was a bit slow; jumping straight to the '100 million people smarter than Nobel Prize winners' hook creates a much stronger immediate impact."
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "decisions": [
+    {
+      "clip_id": "001",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 5.52,
+      "reason": "Dropped the trailing 'Yeah, absolutely' filler to end on the core thesis statement.",
+      "thought": "The clip is already short enough that minimal trimming is required to keep it punchy. Removing the conversational filler at the end provides a stronger, more definitive conclusion."
+    },
+    {
+      "clip_id": "002",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "reason": "No trimming required as the clip is already concise and within the target duration.",
+      "thought": "The clip flows well from the hook into the supporting data and concludes with a relevant observation about the addressable market."
+    },
+    {
+      "clip_id": "003",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "reason": "No trimming required to maintain the logical flow of the argument.",
+      "thought": "The clip provides a clear setup, a core insight, and a data-backed conclusion that is necessary for the argument's coherence."
+    },
+    {
+      "clip_id": "004",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "reason": "No trimming required as the narrative arc is tight and informative.",
+      "thought": "The clip moves from a provocative question to a historical context and ends on a strong contrast with conventional wisdom."
+    },
+    {
+      "clip_id": "005",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 7.41,
+      "reason": "Dropped the final sentence about a 'rolling recession' as it is a tangent that weakens the focus on productivity growth.",
+      "thought": "The core argument is about AI and productivity growth; the final comment about a recession is a separate topic that dilutes the primary message."
+    }
+  ]
+}

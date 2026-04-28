@@ -1,0 +1,55 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,48,&H00FFFFFF,&H000000FF,&H00000000,&H70000000,-1,0,0,0,100,100,0,0,4,0,0,2,60,60,160,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.00,Default,,0,0,0,,And you don't want
+Dialogue: 0,0:00:01.00,0:00:02.04,Default,,0,0,0,,to buy too much
+Dialogue: 0,0:00:02.04,0:00:03.98,Default,,0,0,0,,because you could financially
+Dialogue: 0,0:00:03.98,0:00:05.66,Default,,0,0,0,,overextend yourself and you
+Dialogue: 0,0:00:05.66,0:00:06.28,Default,,0,0,0,,don't want to buy
+Dialogue: 0,0:00:06.28,0:00:07.74,Default,,0,0,0,,too little because then
+Dialogue: 0,0:00:07.74,0:00:08.84,Default,,0,0,0,,you can't serve all
+Dialogue: 0,0:00:08.84,0:00:10.40,Default,,0,0,0,,the revenue And so
+Dialogue: 0,0:00:10.40,0:00:11.86,Default,,0,0,0,,that's where the kind
+Dialogue: 0,0:00:11.86,0:00:13.12,Default,,0,0,0,,of economic and financial
+Dialogue: 0,0:00:13.56,0:00:14.78,Default,,0,0,0,,is But you are
+Dialogue: 0,0:00:14.78,0:00:16.10,Default,,0,0,0,,involved in that building
+Dialogue: 0,0:00:16.10,0:00:17.82,Default,,0,0,0,,data centers you're vast
+Dialogue: 0,0:00:17.82,0:00:18.64,Default,,0,0,0,,fortunes you've got the
+Dialogue: 0,0:00:18.64,0:00:20.24,Default,,0,0,0,,deals with Nvidia Do
+Dialogue: 0,0:00:20.24,0:00:21.12,Default,,0,0,0,,you worry that that's
+Dialogue: 0,0:00:21.12,0:00:21.70,Default,,0,0,0,,going to come back
+Dialogue: 0,0:00:21.70,0:00:23.10,Default,,0,0,0,,and you So we
+Dialogue: 0,0:00:23.10,0:00:24.32,Default,,0,0,0,,have some advantages in
+Dialogue: 0,0:00:24.32,0:00:26.60,Default,,0,0,0,,this There's a stability
+Dialogue: 0,0:00:26.60,0:00:28.36,Default,,0,0,0,,to business that there
+Dialogue: 0,0:00:28.36,0:00:29.26,Default,,0,0,0,,is not to consumer
+Dialogue: 0,0:00:29.36,0:00:30.40,Default,,0,0,0,,right Consumer is very
+Dialogue: 0,0:00:30.40,0:00:33.12,Default,,0,0,0,,fickle Enterprise purchasing
+Dialogue: 0,0:00:33.76,0:00:36.32,Default,,0,0,0,,predictions are predictable Also
+Dialogue: 0,0:00:36.44,0:00:37.48,Default,,0,0,0,,enterprise tends to have
+Dialogue: 0,0:00:37.48,0:00:39.30,Default,,0,0,0,,better margins The margin
+Dialogue: 0,0:00:39.30,0:00:40.42,Default,,0,0,0,,is basically how much
+Dialogue: 0,0:00:40.42,0:00:41.64,Default,,0,0,0,,buffer you have between
+Dialogue: 0,0:00:41.64,0:00:42.86,Default,,0,0,0,,buying too little and
+Dialogue: 0,0:00:42.86,0:00:44.06,Default,,0,0,0,,buying too much what
+Dialogue: 0,0:00:44.06,0:00:45.10,Default,,0,0,0,,you have to pay
+Dialogue: 0,0:00:45.10,0:00:45.86,Default,,0,0,0,,for and what you
+Dialogue: 0,0:00:45.86,0:00:47.26,Default,,0,0,0,,have to support in
+Dialogue: 0,0:00:47.26,0:00:48.26,Default,,0,0,0,,revenue So we have
+Dialogue: 0,0:00:48.26,0:00:50.26,Default,,0,0,0,,a of here but
+Dialogue: 0,0:00:50.26,0:00:51.86,Default,,0,0,0,,I won't deny that
+Dialogue: 0,0:00:51.86,0:00:52.84,Default,,0,0,0,,there is some inherent
+Dialogue: 0,0:00:52.84,0:00:55.16,Default,,0,0,0,,risk in all
+Dialogue: 0,0:00:55.16,0:00:56.86,Default,,0,0,0,,of the to this
+Dialogue: 0,0:00:56.86,0:00:57.30,Default,,0,0,0,,process

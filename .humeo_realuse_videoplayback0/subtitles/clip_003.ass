@@ -1,0 +1,44 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,48,&H00FFFFFF,&H000000FF,&H00000000,&H70000000,-1,0,0,0,100,100,0,0,4,0,0,2,60,60,160,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.19,Default,,0,0,0,,But how high will
+Dialogue: 0,0:00:02.19,0:00:04.01,Default,,0,0,0,,the get Last year
+Dialogue: 0,0:00:04.08,0:00:06.17,Default,,0,0,0,,the narrative was the
+Dialogue: 0,0:00:06.17,0:00:08.32,Default,,0,0,0,,U exceptionalism is dead
+Dialogue: 0,0:00:08.86,0:00:10.97,Default,,0,0,0,,the is in decline
+Dialogue: 0,0:00:11.48,0:00:14.51,Default,,0,0,0,,and it's inexorable
+Dialogue: 0,0:00:14.79,0:00:16.35,Default,,0,0,0,,It's going to continue
+Dialogue: 0,0:00:16.97,0:00:17.79,Default,,0,0,0,,And you can see
+Dialogue: 0,0:00:17.79,0:00:21.02,Default,,0,0,0,,here many people
+Dialogue: 0,0:00:21.02,0:00:23.51,Default,,0,0,0,,believe that the
+Dialogue: 0,0:00:23.51,0:00:26.29,Default,,0,0,0,,dollar will end
+Dialogue: 0,0:00:26.29,0:00:28.85,Default,,0,0,0,,the year as
+Dialogue: 0,0:00:28.85,0:00:30.10,Default,,0,0,0,,measured by the DXY
+Dialogue: 0,0:00:30.29,0:00:32.60,Default,,0,0,0,,at 1036 Now
+Dialogue: 0,0:00:32.60,0:00:33.76,Default,,0,0,0,,that is very interesting
+Dialogue: 0,0:00:33.76,0:00:35.75,Default,,0,0,0,,to us because you
+Dialogue: 0,0:00:35.75,0:00:36.39,Default,,0,0,0,,can see on the
+Dialogue: 0,0:00:36.39,0:00:37.58,Default,,0,0,0,,next page where we
+Dialogue: 0,0:00:37.58,0:00:38.57,Default,,0,0,0,,are in the context
+Dialogue: 0,0:00:38.57,0:00:41.08,Default,,0,0,0,,of We are just
+Dialogue: 0,0:00:41.08,0:00:43.85,Default,,0,0,0,,below 99 So what
+Dialogue: 0,0:00:43.85,0:00:46.13,Default,,0,0,0,,Calixte is suggesting
+Dialogue: 0,0:00:46.13,0:00:48.64,Default,,0,0,0,,is the
+Dialogue: 0,0:00:48.64,0:00:52.75,Default,,0,0,0,,people who are
+Dialogue: 0,0:00:52.75,0:00:54.70,Default,,0,0,0,,to trade or make
+Dialogue: 0,0:00:54.70,0:00:57.04,Default,,0,0,0,,a they actually
+Dialogue: 0,0:00:57.04,0:00:57.86,Default,,0,0,0,,think the dollar is
+Dialogue: 0,0:00:57.86,0:00:59.20,Default,,0,0,0,,going to up
+Dialogue: 0,0:01:00.23,0:01:01.97,Default,,0,0,0,,And that goes against
+Dialogue: 0,0:01:01.97,0:01:03.79,Default,,0,0,0,,conventional wisdom

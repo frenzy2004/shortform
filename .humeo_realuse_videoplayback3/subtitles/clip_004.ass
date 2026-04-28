@@ -1,0 +1,61 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,48,&H00FFFFFF,&H000000FF,&H00000000,&H70000000,-1,0,0,0,100,100,0,0,4,0,0,2,60,60,160,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.49,Default,,0,0,0,,you is that if
+Dialogue: 0,0:00:01.49,0:00:03.71,Default,,0,0,0,,individuals are earning money
+Dialogue: 0,0:00:03.71,0:00:06.09,Default,,0,0,0,,now and they're
+Dialogue: 0,0:00:06.09,0:00:07.01,Default,,0,0,0,,using Buy Pay Later
+Dialogue: 0,0:00:07.01,0:00:09.33,Default,,0,0,0,,to buy things
+Dialogue: 0,0:00:09.33,0:00:11.53,Default,,0,0,0,,online and then they're
+Dialogue: 0,0:00:11.53,0:00:13.01,Default,,0,0,0,,it on not very
+Dialogue: 0,0:00:13.01,0:00:13.81,Default,,0,0,0,,productive things It's not
+Dialogue: 0,0:00:13.81,0:00:14.57,Default,,0,0,0,,like they're buying maybe
+Dialogue: 0,0:00:14.57,0:00:15.45,Default,,0,0,0,,you buy a MacBook
+Dialogue: 0,0:00:15.45,0:00:16.69,Default,,0,0,0,,and you do podcasts
+Dialogue: 0,0:00:16.69,0:00:17.25,Default,,0,0,0,,on your MacBook and
+Dialogue: 0,0:00:17.25,0:00:17.77,Default,,0,0,0,,you make money with
+Dialogue: 0,0:00:17.77,0:00:18.33,Default,,0,0,0,,that that's great That's
+Dialogue: 0,0:00:18.33,0:00:19.15,Default,,0,0,0,,productive spending It's like
+Dialogue: 0,0:00:19.15,0:00:21.43,Default,,0,0,0,,la boos and it
+Dialogue: 0,0:00:21.55,0:00:22.27,Default,,0,0,0,,nailed it So there's
+Dialogue: 0,0:00:22.27,0:00:22.91,Default,,0,0,0,,a of like non
+Dialogue: 0,0:00:22.91,0:00:24.23,Default,,0,0,0,,productive spending So I'll
+Dialogue: 0,0:00:24.23,0:00:25.15,Default,,0,0,0,,use like a say
+Dialogue: 0,0:00:25.15,0:00:27.39,Default,,0,0,0,,on TikTok shop right
+Dialogue: 0,0:00:27.39,0:00:28.09,Default,,0,0,0,,So I spoke to
+Dialogue: 0,0:00:28.09,0:00:28.61,Default,,0,0,0,,a lot of people
+Dialogue: 0,0:00:29.09,0:00:30.19,Default,,0,0,0,,who are involved in
+Dialogue: 0,0:00:30.19,0:00:31.31,Default,,0,0,0,,that ecosystem and saying
+Dialogue: 0,0:00:31.31,0:00:31.79,Default,,0,0,0,,that okay what are
+Dialogue: 0,0:00:31.79,0:00:32.91,Default,,0,0,0,,people buying And then
+Dialogue: 0,0:00:32.91,0:00:33.59,Default,,0,0,0,,a of it are
+Dialogue: 0,0:00:33.59,0:00:34.81,Default,,0,0,0,,not actually productive stuff
+Dialogue: 0,0:00:34.89,0:00:36.21,Default,,0,0,0,,They're like perfumes or
+Dialogue: 0,0:00:36.21,0:00:37.25,Default,,0,0,0,,they're like and so
+Dialogue: 0,0:00:37.25,0:00:38.19,Default,,0,0,0,,there's just like stuff
+Dialogue: 0,0:00:38.19,0:00:38.95,Default,,0,0,0,,you don't actually need
+Dialogue: 0,0:00:39.03,0:00:40.19,Default,,0,0,0,,So they don't fully
+Dialogue: 0,0:00:40.19,0:00:41.45,Default,,0,0,0,,make you they don't
+Dialogue: 0,0:00:41.45,0:00:42.63,Default,,0,0,0,,influence your Yeah
+Dialogue: 0,0:00:43.79,0:00:44.53,Default,,0,0,0,,Yeah yeah yeah The
+Dialogue: 0,0:00:44.53,0:00:45.29,Default,,0,0,0,,ROI is not great
+Dialogue: 0,0:00:45.35,0:00:45.73,Default,,0,0,0,,The ROI is not
+Dialogue: 0,0:00:45.73,0:00:46.53,Default,,0,0,0,,great That is terrible
+Dialogue: 0,0:00:46.59,0:00:47.45,Default,,0,0,0,,right It's Yeah it's
+Dialogue: 0,0:00:47.45,0:00:48.57,Default,,0,0,0,,terrible right So what
+Dialogue: 0,0:00:48.57,0:00:49.43,Default,,0,0,0,,has Buy Pay Later
+Dialogue: 0,0:00:49.43,0:00:51.07,Default,,0,0,0,,done And what has
+Dialogue: 0,0:00:51.07,0:00:52.97,Default,,0,0,0,,like what has credit
+Dialogue: 0,0:00:52.97,0:00:54.09,Default,,0,0,0,,cards you done for
+Dialogue: 0,0:00:54.09,0:00:54.91,Default,,0,0,0,,the S back then

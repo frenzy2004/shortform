@@ -1,0 +1,100 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Base,Arial,86,&H00FFFFFF,&H000000FF,&H00101010,&H00000000,-1,0,0,0,100,100,-1,0,1,4,0,8,0,0,0,0
+Style: Highlight,Arial,86,&H00FFFFFF,&H000000FF,&H00000000,&H00F65C8B,-1,0,0,0,100,100,-1,0,4,0,10,7,0,0,0,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.05,Base,,0,0,0,,{\an7\pos(198.5,1440.0)}Without a doubt.
+Dialogue: 0,0:00:00.00,0:00:02.05,Base,,0,0,0,,{\an7\pos(165.5,1534.0)}We've always said
+Dialogue: 1,0:00:01.27,0:00:01.76,Highlight,,0,0,0,,{\an7\pos(165.5,1534.0)\blur0.8}We've always
+Dialogue: 0,0:00:02.09,0:00:04.39,Base,,0,0,0,,{\an7\pos(302.0,1440.0)}Tesla is not
+Dialogue: 0,0:00:02.09,0:00:04.39,Base,,0,0,0,,{\an7\pos(172.5,1534.0)}an auto company.
+Dialogue: 1,0:00:03.49,0:00:04.39,Highlight,,0,0,0,,{\an7\pos(297.5,1534.0)\blur0.8}auto company.
+Dialogue: 0,0:00:04.61,0:00:06.71,Base,,0,0,0,,{\an7\pos(292.5,1440.0)}It is actually
+Dialogue: 1,0:00:04.81,0:00:05.69,Highlight,,0,0,0,,{\an7\pos(369.5,1440.0)\blur0.8}is actually
+Dialogue: 0,0:00:04.61,0:00:06.71,Base,,0,0,0,,{\an7\pos(143.5,1534.0)}the convergence of
+Dialogue: 0,0:00:06.79,0:00:08.79,Base,,0,0,0,,{\an7\pos(304.5,1440.0)}three of the
+Dialogue: 0,0:00:06.79,0:00:08.79,Base,,0,0,0,,{\an7\pos(77.0,1534.0)}platforms I mentioned,
+Dialogue: 1,0:00:07.55,0:00:08.25,Highlight,,0,0,0,,{\an7\pos(77.0,1534.0)\blur0.8}platforms I
+Dialogue: 0,0:00:08.91,0:00:11.29,Base,,0,0,0,,{\an7\pos(295.0,1440.0)}so robotics,
+Dialogue: 0,0:00:08.91,0:00:11.29,Base,,0,0,0,,{\an7\pos(218.5,1534.0)}energy storage,
+Dialogue: 1,0:00:10.35,0:00:11.29,Highlight,,0,0,0,,{\an7\pos(218.5,1534.0)\blur0.8}energy storage,
+Dialogue: 0,0:00:11.35,0:00:13.34,Base,,0,0,0,,{\an7\pos(281.0,1440.0)}and AI. Each
+Dialogue: 1,0:00:11.57,0:00:12.59,Highlight,,0,0,0,,{\an7\pos(459.0,1440.0)\blur0.8}AI. Each
+Dialogue: 0,0:00:11.35,0:00:13.34,Base,,0,0,0,,{\an7\pos(282.5,1534.0)}one of those
+Dialogue: 0,0:00:13.39,0:00:16.21,Base,,0,0,0,,{\an7\pos(186.5,1440.0)}technologies has
+Dialogue: 1,0:00:13.39,0:00:15.36,Highlight,,0,0,0,,{\an7\pos(186.5,1440.0)\blur0.8}technologies has
+Dialogue: 0,0:00:13.39,0:00:16.21,Base,,0,0,0,,{\an7\pos(391.0,1534.0)}its own
+Dialogue: 0,0:00:16.29,0:00:18.21,Base,,0,0,0,,{\an7\pos(182.5,1440.0)}S-curve, and now
+Dialogue: 0,0:00:16.29,0:00:18.21,Base,,0,0,0,,{\an7\pos(124.0,1534.0)}they're feeding each
+Dialogue: 1,0:00:17.43,0:00:18.02,Highlight,,0,0,0,,{\an7\pos(124.0,1534.0)\blur0.8}they're feeding
+Dialogue: 0,0:00:18.29,0:00:20.04,Base,,0,0,0,,{\an7\pos(211.0,1440.0)}other, and we're
+Dialogue: 0,0:00:18.29,0:00:20.04,Base,,0,0,0,,{\an7\pos(261.0,1534.0)}seeing that in
+Dialogue: 1,0:00:19.11,0:00:19.72,Highlight,,0,0,0,,{\an7\pos(261.0,1534.0)\blur0.8}seeing that
+Dialogue: 0,0:00:20.05,0:00:22.45,Base,,0,0,0,,{\an7\pos(100.5,1440.0)}robotaxis. Robotaxis,
+Dialogue: 1,0:00:20.05,0:00:21.84,Highlight,,0,0,0,,{\an7\pos(100.5,1440.0)\blur0.8}robotaxis. Robotaxis,
+Dialogue: 0,0:00:20.05,0:00:22.45,Base,,0,0,0,,{\an7\pos(312.0,1534.0)}we believe,
+Dialogue: 0,0:00:22.55,0:00:25.31,Base,,0,0,0,,{\an7\pos(223.0,1440.0)}will account for
+Dialogue: 0,0:00:22.55,0:00:25.31,Base,,0,0,0,,{\an7\pos(244.5,1534.0)}90% of Tesla's
+Dialogue: 1,0:00:23.63,0:00:24.83,Highlight,,0,0,0,,{\an7\pos(244.5,1534.0)\blur0.8}90% of
+Dialogue: 0,0:00:25.37,0:00:27.04,Base,,0,0,0,,{\an7\pos(210.5,1440.0)}valuation by the
+Dialogue: 1,0:00:25.37,0:00:26.55,Highlight,,0,0,0,,{\an7\pos(210.5,1440.0)\blur0.8}valuation by
+Dialogue: 0,0:00:25.37,0:00:27.04,Base,,0,0,0,,{\an7\pos(333.0,1534.0)}end of the
+Dialogue: 0,0:00:27.13,0:00:29.81,Base,,0,0,0,,{\an7\pos(201.5,1440.0)}decade. We're in
+Dialogue: 0,0:00:27.13,0:00:29.81,Base,,0,0,0,,{\an7\pos(261.5,1534.0)}print at 2,600.
+Dialogue: 1,0:00:28.63,0:00:29.81,Highlight,,0,0,0,,{\an7\pos(477.5,1534.0)\blur0.8}at 2,600.
+Dialogue: 0,0:00:30.09,0:00:33.03,Base,,0,0,0,,{\an7\pos(261.0,1440.0)}That includes
+Dialogue: 1,0:00:30.09,0:00:30.99,Highlight,,0,0,0,,{\an7\pos(261.0,1440.0)\blur0.8}That includes
+Dialogue: 0,0:00:30.09,0:00:33.03,Base,,0,0,0,,{\an7\pos(124.5,1534.0)}nothing for Optimus
+Dialogue: 0,0:00:33.53,0:00:34.15,Base,,0,0,0,,{\an7\pos(393.5,1534.0)}robots.
+Dialogue: 1,0:00:33.53,0:00:34.15,Highlight,,0,0,0,,{\an7\pos(393.5,1534.0)\blur0.8}robots.
+Dialogue: 0,0:00:34.63,0:00:36.99,Base,,0,0,0,,{\an7\pos(117.0,1440.0)}And we're beginning
+Dialogue: 1,0:00:34.81,0:00:35.43,Highlight,,0,0,0,,{\an7\pos(309.0,1440.0)\blur0.8}we're beginning
+Dialogue: 0,0:00:34.63,0:00:36.99,Base,,0,0,0,,{\an7\pos(251.5,1534.0)}to understand
+Dialogue: 0,0:00:37.05,0:00:39.55,Base,,0,0,0,,{\an7\pos(292.5,1440.0)}how quickly
+Dialogue: 1,0:00:37.05,0:00:38.41,Highlight,,0,0,0,,{\an7\pos(292.5,1440.0)\blur0.8}how quickly
+Dialogue: 0,0:00:37.05,0:00:39.55,Base,,0,0,0,,{\an7\pos(216.0,1534.0)}Tesla is moving
+Dialogue: 0,0:00:39.63,0:00:40.85,Base,,0,0,0,,{\an7\pos(395.5,1440.0)}on that
+Dialogue: 0,0:00:39.63,0:00:40.85,Base,,0,0,0,,{\an7\pos(300.0,1534.0)}front. Why?
+Dialogue: 1,0:00:40.11,0:00:40.85,Highlight,,0,0,0,,{\an7\pos(300.0,1534.0)\blur0.8}front. Why?
+Dialogue: 0,0:00:40.93,0:00:42.79,Base,,0,0,0,,{\an7\pos(192.0,1440.0)}Mm. Because it's
+Dialogue: 1,0:00:40.93,0:00:41.53,Highlight,,0,0,0,,{\an7\pos(192.0,1440.0)\blur0.8}Mm. Because
+Dialogue: 0,0:00:40.93,0:00:42.79,Base,,0,0,0,,{\an7\pos(143.5,1534.0)}the convergence of
+Dialogue: 0,0:00:42.85,0:00:45.54,Base,,0,0,0,,{\an7\pos(235.5,1440.0)}the same three
+Dialogue: 0,0:00:42.85,0:00:45.54,Base,,0,0,0,,{\an7\pos(-139.0,1534.0)}technologies- Mm-hmm robotics,
+Dialogue: 1,0:00:44.75,0:00:45.54,Highlight,,0,0,0,,{\an7\pos(448.0,1534.0)\blur0.8}Mm-hmm robotics,
+Dialogue: 0,0:00:45.71,0:00:47.91,Base,,0,0,0,,{\an7\pos(218.5,1440.0)}energy storage,
+Dialogue: 1,0:00:45.71,0:00:46.55,Highlight,,0,0,0,,{\an7\pos(218.5,1440.0)\blur0.8}energy storage,
+Dialogue: 0,0:00:45.71,0:00:47.91,Base,,0,0,0,,{\an7\pos(396.0,1534.0)}and AI.
+Dialogue: 0,0:00:48.01,0:00:50.03,Base,,0,0,0,,{\an7\pos(345.5,1440.0)}So I think
+Dialogue: 0,0:00:48.01,0:00:50.03,Base,,0,0,0,,{\an7\pos(201.5,1534.0)}that price target,
+Dialogue: 1,0:00:49.19,0:00:50.03,Highlight,,0,0,0,,{\an7\pos(384.5,1534.0)\blur0.8}price target,
+Dialogue: 0,0:00:50.15,0:00:52.79,Base,,0,0,0,,{\an7\pos(100.5,1440.0)}obviously, if Optimus
+Dialogue: 1,0:00:50.15,0:00:51.21,Highlight,,0,0,0,,{\an7\pos(100.5,1440.0)\blur0.8}obviously, if
+Dialogue: 0,0:00:50.15,0:00:52.79,Base,,0,0,0,,{\an7\pos(256.5,1534.0)}is successful,
+Dialogue: 0,0:00:52.82,0:00:54.57,Base,,0,0,0,,{\an7\pos(235.0,1440.0)}and we believe
+Dialogue: 1,0:00:53.59,0:00:53.97,Highlight,,0,0,0,,{\an7\pos(413.0,1440.0)\blur0.8}we believe
+Dialogue: 0,0:00:52.82,0:00:54.57,Base,,0,0,0,,{\an7\pos(357.5,1534.0)}it will be.
+Dialogue: 0,0:00:54.63,0:00:57.31,Base,,0,0,0,,{\an7\pos(268.5,1440.0)}We think that
+Dialogue: 0,0:00:54.63,0:00:57.31,Base,,0,0,0,,{\an7\pos(139.0,1534.0)}humanoid robots is
+Dialogue: 1,0:00:55.47,0:00:56.71,Highlight,,0,0,0,,{\an7\pos(139.0,1534.0)\blur0.8}humanoid robots
+Dialogue: 0,0:00:57.45,0:00:59.93,Base,,0,0,0,,{\an7\pos(273.0,1440.0)}evolving into
+Dialogue: 0,0:00:57.45,0:00:59.93,Base,,0,0,0,,{\an7\pos(432.0,1534.0)}a $26
+Dialogue: 1,0:00:58.63,0:00:59.93,Highlight,,0,0,0,,{\an7\pos(432.0,1534.0)\blur0.8}a $26
+Dialogue: 0,0:01:00.01,0:01:02.43,Base,,0,0,0,,{\an7\pos(408.0,1440.0)}trillion
+Dialogue: 0,0:01:00.01,0:01:02.43,Base,,0,0,0,,{\an7\pos(198.5,1534.0)}opportunity, half
+Dialogue: 1,0:01:01.09,0:01:02.43,Highlight,,0,0,0,,{\an7\pos(198.5,1534.0)\blur0.8}opportunity, half
+Dialogue: 0,0:01:02.47,0:01:04.83,Base,,0,0,0,,{\an7\pos(285.5,1440.0)}in the home,
+Dialogue: 0,0:01:02.47,0:01:04.83,Base,,0,0,0,,{\an7\pos(100.5,1534.0)}half in manufacturing
+Dialogue: 1,0:01:03.75,0:01:04.83,Highlight,,0,0,0,,{\an7\pos(278.5,1534.0)\blur0.8}in manufacturing
+Dialogue: 0,0:01:04.91,0:01:05.27,Base,,0,0,0,,{\an7\pos(400.5,1534.0)}plants.
+Dialogue: 1,0:01:04.91,0:01:05.27,Highlight,,0,0,0,,{\an7\pos(400.5,1534.0)\blur0.8}plants.

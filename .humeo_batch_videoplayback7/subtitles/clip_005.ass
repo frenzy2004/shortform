@@ -1,0 +1,77 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Base,Arial,86,&H00FFFFFF,&H000000FF,&H00101010,&H00000000,-1,0,0,0,100,100,-1,0,1,4,0,8,0,0,0,0
+Style: Highlight,Arial,86,&H00FFFFFF,&H000000FF,&H00000000,&H00F65C8B,-1,0,0,0,100,100,-1,0,4,0,10,7,0,0,0,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.56,Base,,0,0,0,,{\an7\pos(283.5,1440.0)}Sure, it feels
+Dialogue: 0,0:00:00.00,0:00:01.56,Base,,0,0,0,,{\an7\pos(359.5,1534.0)}like it's a
+Dialogue: 1,0:00:01.16,0:00:01.50,Highlight,,0,0,0,,{\an7\pos(359.5,1534.0)\blur0.8}like it's
+Dialogue: 0,0:00:01.62,0:00:04.04,Base,,0,0,0,,{\an7\pos(134.0,1440.0)}hype cycle because
+Dialogue: 0,0:00:01.62,0:00:04.04,Base,,0,0,0,,{\an7\pos(198.5,1534.0)}capital spending
+Dialogue: 1,0:00:03.00,0:00:04.04,Highlight,,0,0,0,,{\an7\pos(198.5,1534.0)\blur0.8}capital spending
+Dialogue: 0,0:00:04.14,0:00:06.34,Base,,0,0,0,,{\an7\pos(323.5,1440.0)}in the tech
+Dialogue: 0,0:00:04.14,0:00:06.34,Base,,0,0,0,,{\an7\pos(122.5,1534.0)}and telecom sectors
+Dialogue: 1,0:00:05.00,0:00:06.34,Highlight,,0,0,0,,{\an7\pos(300.5,1534.0)\blur0.8}telecom sectors
+Dialogue: 0,0:00:06.78,0:00:09.22,Base,,0,0,0,,{\an7\pos(288.0,1440.0)}as a percent
+Dialogue: 1,0:00:06.94,0:00:07.54,Highlight,,0,0,0,,{\an7\pos(408.0,1440.0)\blur0.8}a percent
+Dialogue: 0,0:00:06.78,0:00:09.22,Base,,0,0,0,,{\an7\pos(346.0,1534.0)}of GDP is
+Dialogue: 0,0:00:09.34,0:00:11.61,Base,,0,0,0,,{\an7\pos(249.5,1440.0)}nearly as high
+Dialogue: 1,0:00:09.34,0:00:10.00,Highlight,,0,0,0,,{\an7\pos(249.5,1440.0)\blur0.8}nearly as
+Dialogue: 0,0:00:09.34,0:00:11.61,Base,,0,0,0,,{\an7\pos(355.0,1534.0)}now as it
+Dialogue: 0,0:00:11.66,0:00:13.52,Base,,0,0,0,,{\an7\pos(235.0,1440.0)}was during the
+Dialogue: 1,0:00:11.66,0:00:12.57,Highlight,,0,0,0,,{\an7\pos(235.0,1440.0)\blur0.8}was during
+Dialogue: 0,0:00:11.66,0:00:13.52,Base,,0,0,0,,{\an7\pos(187.0,1534.0)}tech and telecom
+Dialogue: 0,0:00:13.62,0:00:14.58,Base,,0,0,0,,{\an7\pos(386.0,1534.0)}bubble.
+Dialogue: 1,0:00:13.62,0:00:14.58,Highlight,,0,0,0,,{\an7\pos(386.0,1534.0)\blur0.8}bubble.
+Dialogue: 0,0:00:14.98,0:00:16.70,Base,,0,0,0,,{\an7\pos(340.5,1440.0)}But if you
+Dialogue: 0,0:00:14.98,0:00:16.70,Base,,0,0,0,,{\an7\pos(162.0,1534.0)}will remember, the
+Dialogue: 1,0:00:15.68,0:00:16.41,Highlight,,0,0,0,,{\an7\pos(162.0,1534.0)\blur0.8}will remember,
+Dialogue: 0,0:00:16.74,0:00:19.42,Base,,0,0,0,,{\an7\pos(187.0,1440.0)}tech and telecom
+Dialogue: 0,0:00:16.74,0:00:19.42,Base,,0,0,0,,{\an7\pos(194.0,1534.0)}bubble laid fiber,
+Dialogue: 1,0:00:17.68,0:00:18.78,Highlight,,0,0,0,,{\an7\pos(194.0,1534.0)\blur0.8}bubble laid
+Dialogue: 0,0:00:19.88,0:00:21.52,Base,,0,0,0,,{\an7\pos(295.0,1440.0)}and most of
+Dialogue: 0,0:00:19.88,0:00:21.52,Base,,0,0,0,,{\an7\pos(195.0,1534.0)}it remained dark.
+Dialogue: 1,0:00:20.64,0:00:21.52,Highlight,,0,0,0,,{\an7\pos(272.0,1534.0)\blur0.8}remained dark.
+Dialogue: 0,0:00:21.62,0:00:23.84,Base,,0,0,0,,{\an7\pos(194.6,1534.0)}Today, the GPUs
+Dialogue: 1,0:00:21.62,0:00:22.58,Highlight,,0,0,0,,{\an7\pos(194.6,1534.0)\blur0.8}Today, the
+Dialogue: 0,0:00:24.12,0:00:25.50,Base,,0,0,0,,{\an7\pos(319.5,1440.0)}are driving
+Dialogue: 1,0:00:24.12,0:00:24.76,Highlight,,0,0,0,,{\an7\pos(319.5,1440.0)\blur0.8}are driving
+Dialogue: 0,0:00:24.12,0:00:25.50,Base,,0,0,0,,{\an7\pos(331.0,1534.0)}this cycle.
+Dialogue: 0,0:00:25.60,0:00:28.04,Base,,0,0,0,,{\an7\pos(287.5,1440.0)}And I'll steal
+Dialogue: 0,0:00:25.60,0:00:28.04,Base,,0,0,0,,{\an7\pos(143.0,1534.0)}from Brad Gerstner
+Dialogue: 1,0:00:27.10,0:00:28.04,Highlight,,0,0,0,,{\an7\pos(358.0,1534.0)\blur0.8}Brad Gerstner
+Dialogue: 0,0:00:28.14,0:00:30.26,Base,,0,0,0,,{\an7\pos(291.1,1440.0)}at Altimeter.
+Dialogue: 0,0:00:28.14,0:00:30.26,Base,,0,0,0,,{\an7\pos(290.0,1534.0)}He's saying,
+Dialogue: 1,0:00:29.72,0:00:30.26,Highlight,,0,0,0,,{\an7\pos(290.0,1534.0)\blur0.8}He's saying,
+Dialogue: 0,0:00:30.50,0:00:32.70,Base,,0,0,0,,{\an7\pos(149.5,1440.0)}"Those aren't dark.
+Dialogue: 1,0:00:30.50,0:00:31.12,Highlight,,0,0,0,,{\an7\pos(149.5,1440.0)\blur0.8}"Those aren't
+Dialogue: 0,0:00:30.50,0:00:32.70,Base,,0,0,0,,{\an7\pos(218.0,1534.0)}They're in short
+Dialogue: 0,0:00:32.78,0:00:35.12,Base,,0,0,0,,{\an7\pos(198.5,1440.0)}supply, and they
+Dialogue: 0,0:00:32.78,0:00:35.12,Base,,0,0,0,,{\an7\pos(202.5,1534.0)}are being used."
+Dialogue: 1,0:00:34.14,0:00:35.12,Highlight,,0,0,0,,{\an7\pos(355.5,1534.0)\blur0.8}being used."
+Dialogue: 0,0:00:35.22,0:00:36.94,Base,,0,0,0,,{\an7\pos(259.5,1440.0)}And we agree
+Dialogue: 0,0:00:35.22,0:00:36.94,Base,,0,0,0,,{\an7\pos(112.5,1534.0)}completely with that.
+Dialogue: 1,0:00:35.90,0:00:36.62,Highlight,,0,0,0,,{\an7\pos(112.5,1534.0)\blur0.8}completely with
+Dialogue: 0,0:00:37.04,0:00:40.12,Base,,0,0,0,,{\an7\pos(195.0,1440.0)}We compare this
+Dialogue: 0,0:00:37.04,0:00:40.12,Base,,0,0,0,,{\an7\pos(78.5,1534.0)}capital spending cycle
+Dialogue: 1,0:00:37.99,0:00:39.12,Highlight,,0,0,0,,{\an7\pos(78.5,1534.0)\blur0.8}capital spending
+Dialogue: 0,0:00:40.44,0:00:43.24,Base,,0,0,0,,{\an7\pos(228.0,1440.0)}to the railroads
+Dialogue: 0,0:00:40.44,0:00:43.24,Base,,0,0,0,,{\an7\pos(280.5,1534.0)}in the 1800s.
+Dialogue: 1,0:00:42.22,0:00:43.24,Highlight,,0,0,0,,{\an7\pos(381.5,1534.0)\blur0.8}the 1800s.
+Dialogue: 0,0:00:43.34,0:00:45.08,Base,,0,0,0,,{\an7\pos(304.0,1440.0)}That got up
+Dialogue: 0,0:00:43.34,0:00:45.08,Base,,0,0,0,,{\an7\pos(372.0,1534.0)}to 5% to
+Dialogue: 1,0:00:44.20,0:00:44.93,Highlight,,0,0,0,,{\an7\pos(372.0,1534.0)\blur0.8}to 5%
+Dialogue: 0,0:00:45.34,0:00:47.40,Base,,0,0,0,,{\an7\pos(308.1,1534.0)}6% of GDP.
+Dialogue: 1,0:00:45.34,0:00:46.76,Highlight,,0,0,0,,{\an7\pos(308.1,1534.0)\blur0.8}6% of
+Dialogue: 0,0:00:47.50,0:00:48.25,Base,,0,0,0,,{\an7\pos(352.5,1534.0)}And then
+Dialogue: 1,0:00:47.50,0:00:48.25,Highlight,,0,0,0,,{\an7\pos(352.5,1534.0)\blur0.8}And then

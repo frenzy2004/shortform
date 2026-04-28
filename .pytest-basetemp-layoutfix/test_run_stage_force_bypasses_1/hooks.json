@@ -1,0 +1,11 @@
+{
+  "hooks": [
+    {
+      "clip_id": "001",
+      "hook_start_sec": 4.0,
+      "hook_end_sec": 7.0,
+      "hook_text": "ok",
+      "reason": "ok"
+    }
+  ]
+}

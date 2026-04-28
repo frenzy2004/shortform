@@ -1,0 +1,279 @@
+{
+  "clips": {
+    "004": {
+      "instruction": {
+        "clip_id": "004",
+        "layout": "split_chart_person",
+        "zoom": 1.0,
+        "person_x_norm": 0.3023,
+        "person_tracking": [],
+        "chart_x_norm": 0.4718,
+        "focus_stack_order": "chart_then_person",
+        "split_chart_region": {
+          "x1": 0.4718,
+          "y1": 0.18,
+          "x2": 0.9625,
+          "y2": 0.8511,
+          "label": "",
+          "confidence": 1.0
+        },
+        "split_person_region": {
+          "x1": 0.0833,
+          "y1": 0.1822,
+          "x2": 0.4531,
+          "y2": 0.8511,
+          "label": "",
+          "confidence": 1.0
+        },
+        "split_second_chart_region": null,
+        "split_second_person_region": null,
+        "top_band_ratio": 0.5
+      },
+      "raw": {
+        "layout": "split_chart_person",
+        "person_bbox": {
+          "x1": 0.0833,
+          "y1": 0.1822,
+          "x2": 0.4531,
+          "y2": 0.8511
+        },
+        "face_bbox": {
+          "x1": 0.1828,
+          "y1": 0.26,
+          "x2": 0.4218,
+          "y2": 0.58
+        },
+        "chart_bbox": {
+          "x1": 0.4718,
+          "y1": 0.18,
+          "x2": 0.9625,
+          "y2": 0.8511
+        },
+        "second_person_bbox": null,
+        "second_face_bbox": null,
+        "second_chart_bbox": null,
+        "reason": "The frame clearly shows a speaker on the left in a video call window and a data chart on the right, which is a perfect fit for the split_chart_person layout."
+      }
+    },
+    "005": {
+      "instruction": {
+        "clip_id": "005",
+        "layout": "split_chart_person",
+        "zoom": 1.0,
+        "person_x_norm": 0.2685,
+        "person_tracking": [],
+        "chart_x_norm": 0.47,
+        "focus_stack_order": "chart_then_person",
+        "split_chart_region": {
+          "x1": 0.47,
+          "y1": 0.15,
+          "x2": 0.97,
+          "y2": 0.85,
+          "label": "",
+          "confidence": 1.0
+        },
+        "split_person_region": {
+          "x1": 0.083,
+          "y1": 0.203,
+          "x2": 0.453,
+          "y2": 0.803,
+          "label": "",
+          "confidence": 1.0
+        },
+        "split_second_chart_region": null,
+        "split_second_person_region": null,
+        "top_band_ratio": 0.5
+      },
+      "raw": {
+        "layout": "split_chart_person",
+        "person_bbox": {
+          "x1": 0.083,
+          "y1": 0.203,
+          "x2": 0.453,
+          "y2": 0.803
+        },
+        "face_bbox": {
+          "x1": 0.156,
+          "y1": 0.25,
+          "x2": 0.381,
+          "y2": 0.56
+        },
+        "chart_bbox": {
+          "x1": 0.47,
+          "y1": 0.15,
+          "x2": 0.97,
+          "y2": 0.85
+        },
+        "second_person_bbox": null,
+        "second_face_bbox": null,
+        "second_chart_bbox": null,
+        "reason": "The frame clearly shows a speaker in a video call window on the left and a data chart on the right, which is a classic split-screen presentation format."
+      }
+    },
+    "006": {
+      "instruction": {
+        "clip_id": "006",
+        "layout": "split_chart_person",
+        "zoom": 1.0,
+        "person_x_norm": 0.3125,
+        "person_tracking": [],
+        "chart_x_norm": 0.461,
+        "focus_stack_order": "chart_then_person",
+        "split_chart_region": {
+          "x1": 0.461,
+          "y1": 0.181,
+          "x2": 0.961,
+          "y2": 0.821,
+          "label": "",
+          "confidence": 1.0
+        },
+        "split_person_region": {
+          "x1": 0.155,
+          "y1": 0.181,
+          "x2": 0.451,
+          "y2": 0.821,
+          "label": "",
+          "confidence": 1.0
+        },
+        "split_second_chart_region": null,
+        "split_second_person_region": null,
+        "top_band_ratio": 0.5
+      },
+      "raw": {
+        "layout": "split_chart_person",
+        "person_bbox": {
+          "x1": 0.155,
+          "y1": 0.181,
+          "x2": 0.451,
+          "y2": 0.821
+        },
+        "face_bbox": {
+          "x1": 0.229,
+          "y1": 0.259,
+          "x2": 0.396,
+          "y2": 0.56
+        },
+        "chart_bbox": {
+          "x1": 0.461,
+          "y1": 0.181,
+          "x2": 0.961,
+          "y2": 0.821
+        },
+        "second_person_bbox": null,
+        "second_face_bbox": null,
+        "second_chart_bbox": null,
+        "reason": "The frame clearly shows a single speaker on the left and a data chart on the right, which is a classic 'split_chart_person' layout."
+      }
+    },
+    "007": {
+      "instruction": {
+        "clip_id": "007",
+        "layout": "split_chart_person",
+        "zoom": 1.0,
+        "person_x_norm": 0.2775,
+        "person_tracking": [],
+        "chart_x_norm": 0.491,
+        "focus_stack_order": "chart_then_person",
+        "split_chart_region": {
+          "x1": 0.491,
+          "y1": 0.153,
+          "x2": 0.963,
+          "y2": 0.852,
+          "label": "",
+          "confidence": 1.0
+        },
+        "split_person_region": {
+          "x1": 0.083,
+          "y1": 0.163,
+          "x2": 0.485,
+          "y2": 0.843,
+          "label": "",
+          "confidence": 1.0
+        },
+        "split_second_chart_region": null,
+        "split_second_person_region": null,
+        "top_band_ratio": 0.5
+      },
+      "raw": {
+        "layout": "split_chart_person",
+        "person_bbox": {
+          "x1": 0.083,
+          "y1": 0.163,
+          "x2": 0.485,
+          "y2": 0.843
+        },
+        "face_bbox": {
+          "x1": 0.152,
+          "y1": 0.222,
+          "x2": 0.403,
+          "y2": 0.556
+        },
+        "chart_bbox": {
+          "x1": 0.491,
+          "y1": 0.153,
+          "x2": 0.963,
+          "y2": 0.852
+        },
+        "second_person_bbox": null,
+        "second_face_bbox": null,
+        "second_chart_bbox": null,
+        "reason": "The frame clearly shows a speaker on the left and a data chart on the right, making it a classic split-screen presentation."
+      }
+    },
+    "008": {
+      "instruction": {
+        "clip_id": "008",
+        "layout": "split_chart_person",
+        "zoom": 1.0,
+        "person_x_norm": 0.293,
+        "person_tracking": [],
+        "chart_x_norm": 0.501,
+        "focus_stack_order": "chart_then_person",
+        "split_chart_region": {
+          "x1": 0.501,
+          "y1": 0.201,
+          "x2": 0.98,
+          "y2": 0.88,
+          "label": "",
+          "confidence": 1.0
+        },
+        "split_person_region": {
+          "x1": 0.072,
+          "y1": 0.252,
+          "x2": 0.483,
+          "y2": 0.854,
+          "label": "",
+          "confidence": 1.0
+        },
+        "split_second_chart_region": null,
+        "split_second_person_region": null,
+        "top_band_ratio": 0.5
+      },
+      "raw": {
+        "layout": "split_chart_person",
+        "person_bbox": {
+          "x1": 0.072,
+          "y1": 0.252,
+          "x2": 0.483,
+          "y2": 0.854
+        },
+        "face_bbox": {
+          "x1": 0.162,
+          "y1": 0.321,
+          "x2": 0.424,
+          "y2": 0.721
+        },
+        "chart_bbox": {
+          "x1": 0.501,
+          "y1": 0.201,
+          "x2": 0.98,
+          "y2": 0.88
+        },
+        "second_person_bbox": null,
+        "second_face_bbox": null,
+        "second_chart_bbox": null,
+        "reason": "The frame clearly shows a speaker in a video call on the left and a financial chart on the right, making it a perfect candidate for the split_chart_person layout."
+      }
+    }
+  }
+}

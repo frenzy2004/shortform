@@ -1,0 +1,39 @@
+{
+  "hooks": [
+    {
+      "clip_id": "001",
+      "hook_start_sec": 61.0,
+      "hook_end_sec": 66.99,
+      "hook_text": "this is hundreds of billions of dollars of infrastructure. So I'm clearly betting",
+      "reason": "This sentence uses a massive, concrete number ('hundreds of billions of dollars') to instantly establish the enormous stakes of the topic, making it the most impactful line."
+    },
+    {
+      "clip_id": "002",
+      "hook_start_sec": 12.86,
+      "hook_end_sec": 16.88,
+      "hook_text": "people already don't have as much connection as they would like to have.",
+      "reason": "This sentence makes a strong, universally relatable claim about a common human problem, immediately drawing the viewer in by mirroring their potential feelings."
+    },
+    {
+      "clip_id": "003",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 4.95,
+      "hook_text": "where the struggle is kind of the point, right? It's like building a muscle.",
+      "reason": "This sentence introduces a powerful, counterintuitive philosophical idea and reinforces it with a strong metaphor, immediately making the viewer reconsider the value of difficulty."
+    },
+    {
+      "clip_id": "004",
+      "hook_start_sec": 15.66,
+      "hook_end_sec": 20.29,
+      "hook_text": "it's actually more the case that any one thing done wrong breaks the sense of presence.",
+      "reason": "This sentence presents a sharp, counterintuitive claim about failure, which is more intriguing and curiosity-provoking than a simple definition of the topic."
+    },
+    {
+      "clip_id": "005",
+      "hook_start_sec": 3.94,
+      "hook_end_sec": 8.56,
+      "hook_text": "if you look at the grand arc of computing over time, you've gone from mainframes to",
+      "reason": "This sentence establishes authority by framing the topic within a grand historical narrative, promising a big-picture insight into the future of technology."
+    }
+  ]
+}

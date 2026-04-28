@@ -1,0 +1,388 @@
+{
+  "clips": [
+    {
+      "clip_id": "001",
+      "topic": "The Loneliness Epidemic Data",
+      "start_time_sec": 1221.8,
+      "end_time_sec": 1295.0,
+      "viral_hook": "research that says that the average American has fewer friends now than they did 15 years ago.",
+      "virality_score": 0.85,
+      "transcript": "research that says that the average American has fewer friends now than they did 15 years ago. Yeah. And I was so interested in that because it seems like if we want to get to a world where there's more human connection- Mm-hmm this is the trend that we're going to have to grapple with. Yeah. just to give some data on this, in the American Time Use Survey, over the last 20 years, the amount of time American adults spend socializing in person has dropped by nearly 30%. For ages 15 to 24, according to the surgeon general, it's nearly 70%. And I look at that data and I think to myself, well, maybe if we're all socializing digitally, that doesn't matter so much. Maybe there's a future where that's actually fine. But there's also data that suggests that we're struggling somewhat. The number of Americans who say that they don't have a single close friend- Yeah that share has jumped- Yeah, it's really sad from 3% to 12% in the last 30 years. It feels to me like with all the tools that we've built for human connection, we're struggling to connect. And I'm curious, why do you think that's happening?",
+      "suggested_overlay_title": "Why Americans Are Losing Their Friends",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 5.7,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "shorts_title": "The Shocking Data on the US Loneliness Epidemic",
+      "description": "The average American has fewer friends than 15 years ago, and the share of people with zero close friends has quadrupled. What is happening?",
+      "hashtags": [
+        "loneliness",
+        "mentalhealth",
+        "socialconnection",
+        "sociology",
+        "markzuckerberg"
+      ],
+      "layout_hint": "sit_center",
+      "needs_review": false,
+      "review_reason": "",
+      "reasoning": "This clip has an extremely powerful, data-driven hook that creates immediate emotional stakes and curiosity. The statistics cited are shocking and memorable, making the message highly impactful and shareable.",
+      "score_breakdown": {
+        "message_wow": 0.9,
+        "hook_emotion": 0.9,
+        "catchy": 0.7
+      }
+    },
+    {
+      "clip_id": "002",
+      "topic": "AI and When Struggle Is the Point",
+      "start_time_sec": 1523.6,
+      "end_time_sec": 1601.4,
+      "viral_hook": "And then on the other end of the spectrum, there are a lot of educational things, for example, where the struggle is kind of the point, right?",
+      "virality_score": 0.8175,
+      "transcript": "And then on the other end of the spectrum, there are a lot of educational things, for example, where the struggle is kind of the point, right? It's like building a muscle. Yeah. I can think of so many times in my life where the reason why I was doing something was not the output, it was the- fact that I was trying so hard to do it. There's one example in the Tim Ferriss interview where you talked about your kids struggling to articulate themselves emotionally. Mm-hmm. And adults very much have the same problem. Mm-hmm. And you talked about AI as a way to help them articulate those emotions. Yeah. And I thought about all of the many times in my life where I have struggled to articulate my emotions and how I really could've used some help in those moments. And I also found myself thinking about the times when that was really building a muscle. Where the act of struggling to communicate with someone and- understand what they wanted from me was important to my development. Mm-hmm. And so my question is, if you think about that as a spectrum between things that are really important to our humanity, and the struggle being removed is helpful, versus things where the struggle is the point, and it unlocks something about our humanity and is important to preserve, like building- Yeah muscle. How do you draw the line between those things? And how do we ensure that the muscles that we're building for this future are stronger and not weaker?",
+      "suggested_overlay_title": "Sometimes, The Struggle Is The Point",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 6.5,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "shorts_title": "Should AI Help Us With Everything?",
+      "description": "Should AI help us with challenges where the struggle itself is how we grow? A deep question about technology and human development.",
+      "hashtags": [
+        "ai",
+        "philosophy",
+        "education",
+        "psychology",
+        "selfimprovement"
+      ],
+      "layout_hint": "sit_center",
+      "needs_review": false,
+      "review_reason": "",
+      "reasoning": "The core message presents a profound reframe on the purpose of technology, built around the highly catchy phrase 'the struggle is the point.' This creates a strong 'wow' moment and philosophical depth.",
+      "score_breakdown": {
+        "message_wow": 0.9,
+        "hook_emotion": 0.7,
+        "catchy": 0.85
+      }
+    },
+    {
+      "clip_id": "003",
+      "topic": "Does Digital Connection Replace Physical Connection?",
+      "start_time_sec": 1330.2,
+      "end_time_sec": 1391.2,
+      "viral_hook": "Is that going to replace the physical connection?",
+      "virality_score": 0.765,
+      "transcript": "Is that going to replace the physical connection? And my answer to that, especially in the case of something like this, is that, no, because people already don't have as much connection as they would like to have. It's not like this is replacing some sort of better physical connection that they would've otherwise had. It's that the average person would like to have 10 friends, and they have two or three. And there's just more demand to socialize than what people are able to do given the current construct. And giving people the ability to be present with people who are in other places physically just seems like it will unlock more. If I have glasses, it's not going to make it that I spend less time with my wife. It's going to make it so that I spend more time with my sister who lives across the country. And I think that that's good, and I think people need that.",
+      "suggested_overlay_title": "Digital Tools Don't Replace Real Friends",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 2.0,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "shorts_title": "Zuckerberg: Tech Helps You Connect MORE, Not Less",
+      "description": "Mark Zuckerberg argues that technology like AR glasses won't replace physical connection, but instead supplement it to meet an existing, unfulfilled demand for more social time.",
+      "hashtags": [
+        "socialmedia",
+        "loneliness",
+        "technology",
+        "future",
+        "markzuckerberg"
+      ],
+      "layout_hint": "sit_center",
+      "needs_review": false,
+      "review_reason": "",
+      "reasoning": "This clip directly addresses a common fear about technology. The message is a clear, optimistic reframe, and the example about his wife vs. his sister is extremely memorable and quotable.",
+      "score_breakdown": {
+        "message_wow": 0.8,
+        "hook_emotion": 0.7,
+        "catchy": 0.8
+      }
+    },
+    {
+      "clip_id": "004",
+      "topic": "The Case for Open-Source AI Safety",
+      "start_time_sec": 2521.0,
+      "end_time_sec": 2601.3,
+      "viral_hook": "I think what we've seen with open source is actually the opposite, which is that this is not the first open source project, right?",
+      "virality_score": 0.725,
+      "transcript": "I think what we've seen with open source is actually the opposite, which is that this is not the first open source project, right? This has been a thing in the industry for decades, and I think what we've traditionally seen is that open source software is safer and more secure, largely because you put it out there, more people can scrutinize it because they can see all parts of the system, and then there are inevitably issues with any software. There are bugs. There are security issues, and initially with open source, people thought, \"Hey, if you're putting this software out there and there are holes in it, isn't everyone just going to go exploit those holes, and especially the bad guys?\" But it turned out that in this counterintuitive wayThat by adding more scrutiny to the systems, the holes became apparent quicker and then were fixed. And then people roll out a new version, just like we roll out a new version of our models, right? Llama 3, Llama 3.1, Llama 3.2, everyone upgrades. So I think the same thing is going to happen here. I think it's sort of this counterintuitive thing where even though I think there's some concern around, all right, are bad guys going to do bad things with these models? I actually think you just get a kind of smarter and safer model for everyone the more it's rolled out, and the more kind of scrutiny is on it.",
+      "suggested_overlay_title": "Why Open-Source AI Is Actually Safer",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 4.3,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "shorts_title": "Zuckerberg's Counterintuitive Take on AI Safety",
+      "description": "Mark Zuckerberg explains the counterintuitive reason why he believes open-sourcing AI models actually makes them safer and more secure for everyone.",
+      "hashtags": [
+        "ai",
+        "openai",
+        "llama3",
+        "tech",
+        "aisafety"
+      ],
+      "layout_hint": "sit_center",
+      "needs_review": false,
+      "review_reason": "",
+      "reasoning": "The clip's strength is its strong, counterintuitive thesis that challenges a common assumption about AI safety. The hook 'is actually the opposite' creates immediate intrigue, and the historical analogy makes the argument compelling.",
+      "score_breakdown": {
+        "message_wow": 0.85,
+        "hook_emotion": 0.6,
+        "catchy": 0.7
+      }
+    },
+    {
+      "clip_id": "005",
+      "topic": "The Real-Life Tony Stark Glasses",
+      "start_time_sec": 134.7,
+      "end_time_sec": 207.5,
+      "viral_hook": "I heard someone on your team call these the real-life Tony Stark glasses.",
+      "virality_score": 0.71,
+      "transcript": "I heard someone on your team call these the real-life Tony Stark glasses. We're getting there. But I'd love to just hear in your voice, what are these? Well, these are the first full holographic augmented reality glasses, I think, that exist in the world. We've made, I think it's a few thousand or something. Very hard to make each one of these. But this is the culmination of 10 years of research and development that we've done to basically miniaturize all the computing that you need to have glasses, not a headset, but glasses, that can put full holograms into the world with a wide field of view. So you can imagine sort of in the future, we'd be having a version of this conversation where maybe I or you are not even here. It's like one of us is physically here and the other one is here as kind of a full-body hologram. And it's not just a video call. You can actually interact. You can do things. I mean, in the demo, we had the ping pong and games and things like that. But you can interact, you can work together, you can play poker, play chess, whatever. The holographic cards, holographic board game.",
+      "suggested_overlay_title": "Meta's Real-Life Tony Stark Glasses",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 4.1,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "shorts_title": "Mark Zuckerberg Unveils Holographic AR Glasses",
+      "description": "After 10 years of development, Meta has created what some call 'real-life Tony Stark glasses' that can project full holograms into the real world.",
+      "hashtags": [
+        "ar",
+        "meta",
+        "tonystark",
+        "tech",
+        "future"
+      ],
+      "layout_hint": "sit_center",
+      "needs_review": false,
+      "review_reason": "",
+      "reasoning": "The hook leverages a massive pop culture reference (Tony Stark), creating instant excitement and a clear visual. The message paints a sci-fi vision of the future with concrete examples like holographic poker.",
+      "score_breakdown": {
+        "message_wow": 0.7,
+        "hook_emotion": 0.8,
+        "catchy": 0.6
+      }
+    },
+    {
+      "clip_id": "006",
+      "topic": "The Billion-Dollar Bet on AI Scaling",
+      "start_time_sec": 2683.7,
+      "end_time_sec": 2733.9,
+      "viral_hook": "is that we haven't found the end yet.",
+      "virality_score": 0.69,
+      "transcript": "is that we haven't found the end yet. So that leads to this dynamic where Llama 3, we could train on 10 to 20,000 GPUs. Llama 4, we could train on more than 100,000 GPUs. Llama 5, we can plan to scale even further, and there's just an interesting question of how far that goes. It's totally possible that at some point we just hit a limit, and just like previous systems, there's an asymptote, and it doesn't keep on growing. But it's also possible that that limit is not going to happen anytime soon, and that we're going to be able to keep on just building more clusters and generating more synthetic data to train the systems, and that they're just going to keep on getting more and more useful for people for quite a while to come.",
+      "suggested_overlay_title": "The Biggest Question in AI Right Now",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 2.6,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "shorts_title": "Zuckerberg: We Haven't Found The Limit of AI... Yet",
+      "description": "Mark Zuckerberg explains the biggest open question in AI today: will current methods continue to get smarter, or will they hit a plateau? The answer determines hundreds of billions in investment.",
+      "hashtags": [
+        "ai",
+        "markzuckerberg",
+        "tech",
+        "future",
+        "innovation"
+      ],
+      "layout_hint": "sit_center",
+      "needs_review": false,
+      "review_reason": "",
+      "reasoning": "The hook 'we haven't found the end yet' is mysterious and compelling. The message reveals the core high-stakes uncertainty driving the entire AI industry, and mentioning the massive scale of investment adds significant emotional weight.",
+      "score_breakdown": {
+        "message_wow": 0.8,
+        "hook_emotion": 0.7,
+        "catchy": 0.5
+      }
+    },
+    {
+      "clip_id": "007",
+      "topic": "Should Kids Still Learn to Code?",
+      "start_time_sec": 1722.5,
+      "end_time_sec": 1810.2,
+      "viral_hook": "I think that there's some things that you need to be able to do yourself. I think that that's a lot of the basic fear that people have around this.",
+      "virality_score": 0.66,
+      "transcript": "or things that you would have concerns about? I think that there's some things that you need to be able to do yourself. I think that that's a lot of the basic fear that people have around this. I agree with that, yeah. Is that while we're building these amazing tools, we get away from this self-confidence and ability of being able to do this basic stuff yourself. So it's like, all right, you have a calculator, but it's still good to be able to do basic math in your head because there are a lot of things that come up throughout the day that you just want to have a general numeracy around, right? That often they're not expressed in numerical terms, but just in terms of understanding trends or understanding arguments that people are making. You kind of need to understand the shape of how numbers come together, and so I think one of the big debates is should we still teach our kids to program computers? Even though you're going to have these tools in the future that are just so much more powerful than anything that we have now to produce incredibly complicated pieces of software. I think the answer that is probably yes, because I think teaching someone how to code is teaching them a way to think rigorously, and that even if they're not doing most of the code production, I think it's important that you kind of have the ability to think in that way, and I think it's going to just make you generally a better thinker and better person.",
+      "suggested_overlay_title": "Should Your Kids Still Learn To Code?",
+      "hook_start_sec": 2.1,
+      "hook_end_sec": 7.4,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "shorts_title": "Zuckerberg on Why Kids Should Learn to Code, Even With AI",
+      "description": "In an AI world, is learning to code still important? Mark Zuckerberg argues it's not about the output, it's about teaching a rigorous way of thinking.",
+      "hashtags": [
+        "parenting",
+        "education",
+        "coding",
+        "ai",
+        "stem"
+      ],
+      "layout_hint": "sit_center",
+      "needs_review": false,
+      "review_reason": "",
+      "reasoning": "This clip addresses a timely and relevant question for parents and educators. The message is thoughtful, and the calculator analogy makes the concept of 'learning how to think' very accessible and memorable.",
+      "score_breakdown": {
+        "message_wow": 0.75,
+        "hook_emotion": 0.6,
+        "catchy": 0.6
+      }
+    },
+    {
+      "clip_id": "008",
+      "topic": "AI Solution for the Creator Economy",
+      "start_time_sec": 2043.5,
+      "end_time_sec": 2093.7,
+      "viral_hook": "there are only so many hours in the day, and your community probably has a nearly unlimited demand to interact with you,",
+      "virality_score": 0.6575,
+      "transcript": "there are only so many hours in the day, and your community probably has a nearly unlimited demand to interact with you, and you want to interact with them because you're trying to grow your community. Both socially and from a business perspective, that's sort of growing the community is an important part of what every creator does. So, okay, if we can make it so that each creator can basically make an AI artifact that their community can interact with, people will be clear- that it's not the actual creator themselves, but it's almost like a piece of digital art that you're producing, like an interactive sculpture or something that it's like you train it to, here's the context that I want it to have. Here's the topics I want it to communicate on. Here's stuff that I want it to stay away from. You're giving your community something to interact with when you can't be there to kind of answer all the questions.",
+      "suggested_overlay_title": "The Creator Economy's Biggest Problem",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 5.4,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "shorts_title": "The Future of Fan Interaction for Creators",
+      "description": "Creators have limited time but their communities have unlimited demand. Mark Zuckerberg proposes a solution: AI versions of creators that can interact with fans 24/7.",
+      "hashtags": [
+        "creatortips",
+        "creator",
+        "aiforbusiness",
+        "socialmediamarketing",
+        "community"
+      ],
+      "layout_hint": "sit_center",
+      "needs_review": false,
+      "review_reason": "",
+      "reasoning": "The hook perfectly identifies a core pain point for a large and engaged audience (creators). The proposed solution is a novel application of AI that feels futuristic but practical, making the message very relevant.",
+      "score_breakdown": {
+        "message_wow": 0.7,
+        "hook_emotion": 0.65,
+        "catchy": 0.6
+      }
+    },
+    {
+      "clip_id": "009",
+      "topic": "Meta's Two Core Values: Presence & Personalized AI",
+      "start_time_sec": 686.8,
+      "end_time_sec": 738.2,
+      "viral_hook": "there are two primary values that we're trying to bring. Mm-hmm. On the AR and kind of mixed reality side, the main value we're trying to bring is this feeling of presence.",
+      "virality_score": 0.605,
+      "transcript": "there are two primary values that we're trying to bring. Mm-hmm. On the AR and kind of mixed reality side, the main value we're trying to bring is this feeling of presence. So there's something that I think is just really deep about being physically present with another person that you don't get from any other technology today. And I think that that's the thing when people have a very visceral reaction to experiencing virtual or mixed reality. What they're really reacting to is that they actually, for the first time with technology, feel a sense of presence. Mm-hmm. they're in a place with a person, and that's super powerful. I've focused on designing social apps and experiences for 20 years. That's sort of the holy grail of that, is being able to build a technology platform that delivers this deep sense of social presence.The other big track is around personalized AI.",
+      "suggested_overlay_title": "Meta's Two Ultimate Goals",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 7.1,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "shorts_title": "Zuckerberg Explains Meta's Two Main Goals",
+      "description": "Mark Zuckerberg breaks down the two core values driving Meta's future development: creating a true sense of 'presence' and building truly personalized AI.",
+      "hashtags": [
+        "meta",
+        "vr",
+        "ai",
+        "futuretech",
+        "markzuckerberg"
+      ],
+      "layout_hint": "sit_center",
+      "needs_review": false,
+      "review_reason": "",
+      "reasoning": "This clip provides a clear, high-level framework for understanding Meta's entire strategy. The hook sets up a simple 'list of two' structure, and the concepts of 'presence' and 'personalized AI' are sticky and easy to grasp.",
+      "score_breakdown": {
+        "message_wow": 0.7,
+        "hook_emotion": 0.5,
+        "catchy": 0.6
+      }
+    },
+    {
+      "clip_id": "010",
+      "topic": "The Fragile Illusion of Presence",
+      "start_time_sec": 1022.0,
+      "end_time_sec": 1078.9,
+      "viral_hook": "This has the frustrating property to develop that the sense of presence is almost like when you're designing something that's sort of trying to artificially deliver it, you're delivering an illusion to a person.",
+      "virality_score": 0.585,
+      "transcript": "This has the frustrating property to develop that the sense of presence is almost like when you're designing something that's sort of trying to artificially deliver it, you're delivering an illusion to a person. And more than any one thing that provides a sense of presence, it's actually more the case that any one thing done wrong breaks the sense of presence. You kind of know that you're interacting with technology, but it's so convincing that you just kind of go along with it, and you're like, \"Okay. Yeah, no, this person feel like they're there,\" right? Um, when I did that ping pong demo, like at the end of it, I dropped the ping pong paddle on the virtual table and it shattered, so that was not the best for our internal development. But like that's winning in our development, right? It's like when you feel like something is kind of so realistic that you're just convinced that it's there.",
+      "suggested_overlay_title": "What Breaks The Illusion of VR",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 8.8,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "shorts_title": "The Hardest Part of Building the Metaverse",
+      "description": "Mark Zuckerberg explains the core challenge of building for virtual reality: presence is a fragile illusion, and any one thing done wrong can shatter it.",
+      "hashtags": [
+        "vr",
+        "metaverse",
+        "gamedev",
+        "tech",
+        "psychology"
+      ],
+      "layout_hint": "sit_center",
+      "needs_review": false,
+      "review_reason": "",
+      "reasoning": "This clip offers a fascinating insight into the design philosophy of VR/AR. The core idea that 'any one thing done wrong breaks the sense of presence' is a strong, catchy message. The personal anecdote about the ping pong paddle adds a nice human touch.",
+      "score_breakdown": {
+        "message_wow": 0.65,
+        "hook_emotion": 0.5,
+        "catchy": 0.6
+      }
+    },
+    {
+      "clip_id": "011",
+      "topic": "The Evolution of Social Media Feeds",
+      "start_time_sec": 1932.4,
+      "end_time_sec": 2000.6,
+      "viral_hook": "There's already been one big shift, which is that social media started out as people primarily interacting with their friends.",
+      "virality_score": 0.54,
+      "transcript": "There's already been one big shift, which is that social media started out as people primarily interacting with their friends. And now it is at least half of the content is basically people interacting with creators or content that's not created by people who they've kind of personally know. So we sort of already have that paradigm, and I think AI is probably going to accelerate that. It will give all these people additional tools. So your friends will create kind of funnier memes and more interesting content. That'll come from a lot of different ways. I think some of it will be, okay, your friends have glasses, and they capture a bunch of stuff, and before, they might have not been able to edit it to make it interesting, or maybe was just too much work, or they didn't even realize that they captured something amazing, but now the AI is like, \"Hey, I made this thing for you out of your content.\" And it's like, okay, that's awesome. People will enjoy that. Creators, obviously, kind of much more specialized skills are going to be able to use even more advanced AI tools to make more compelling content. But",
+      "suggested_overlay_title": "How Social Media Feeds Have Changed",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 5.0,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "shorts_title": "From Friends to Creators: The Future of Your Feed",
+      "description": "Social media has shifted from being about your friends to being about creators. Mark Zuckerberg explains how AI is going to accelerate that trend even further.",
+      "hashtags": [
+        "socialmedia",
+        "ai",
+        "instagram",
+        "tiktok",
+        "creators"
+      ],
+      "layout_hint": "sit_center",
+      "needs_review": true,
+      "review_reason": "The hook is somewhat nostalgic but may lack strong emotional punch. The message is a solid summary but might feel like common knowledge to savvy social media users.",
+      "reasoning": "The clip provides a good summary of a major trend in social media. The hook creates a simple before-and-after narrative that is easy to follow. However, the insight may not be novel enough to generate a strong 'wow' reaction.",
+      "score_breakdown": {
+        "message_wow": 0.6,
+        "hook_emotion": 0.5,
+        "catchy": 0.5
+      }
+    },
+    {
+      "clip_id": "012",
+      "topic": "The Tech Inside Holographic Glasses",
+      "start_time_sec": 289.2,
+      "end_time_sec": 356.1,
+      "viral_hook": "There's not a single millimeter of space.",
+      "virality_score": 0.515,
+      "transcript": "a single millimeter of space. Everything in here from the micro projectors that basically shoot light into the waveguides. It's a special type of display system. These aren't normal displays like you have in a phone or a TV or computer, like the type of displays that people have been building for decades. It's a waveguide system. The projector that's shooting light basically goes into these nano etchings across the waveguide that are what catches and creates the holograms. In order to synchronize that with where you're looking, there's eye tracking and little cameras. They illuminate your eyes. And then, of course, there's all the basic stuff that you need, all the computing, the batteries to power the whole thing, microphones, the speakers, because it needs to be able to play audio and speak with you, and the cameras and sensors to see things around you in the world, so that way when it's placing holograms in the world, it can do that in the right place and understand where you are.",
+      "suggested_overlay_title": "What's Inside Meta's AR Glasses",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 2.8,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "shorts_title": "The Insane Tech Packed Into These Glasses",
+      "description": "Mark Zuckerberg gives a tour of the incredible amount of technology—from micro-projectors to eye-tracking cameras—that has to be miniaturized to create holographic AR glasses.",
+      "hashtags": [
+        "engineering",
+        "tech",
+        "ar",
+        "innovation",
+        "meta"
+      ],
+      "layout_hint": "sit_center",
+      "needs_review": true,
+      "review_reason": "This clip is very technical and may only appeal to a niche audience interested in hardware engineering. The message lacks a broader human element or emotional core.",
+      "reasoning": "The hook 'not a single millimeter of space' creates a good visual and sense of complexity. The message conveys the impressive engineering involved, but the dense list of technical components might not be catchy or broadly appealing.",
+      "score_breakdown": {
+        "message_wow": 0.6,
+        "hook_emotion": 0.5,
+        "catchy": 0.4
+      }
+    }
+  ]
+}

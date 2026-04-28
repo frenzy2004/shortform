@@ -1,0 +1,53 @@
+{
+  "hooks": [
+    {
+      "clip_id": "001",
+      "hook_start_sec": 57.09,
+      "hook_end_sec": 58.77,
+      "hook_text": "Create a business, just try it out.",
+      "reason": "This is a direct, actionable command to the viewer, which is stronger than the long, filler-laden sentences at the start of the clip."
+    },
+    {
+      "clip_id": "002",
+      "hook_start_sec": 22.54,
+      "hook_end_sec": 28.54,
+      "hook_text": "This one is going to be probably twice as big.",
+      "reason": "This is a massive, quantified claim that creates immediate curiosity about the scale of the AI revolution compared to the industrial revolution."
+    },
+    {
+      "clip_id": "003",
+      "hook_start_sec": 79.0,
+      "hook_end_sec": 82.8,
+      "hook_text": "always start your business in a recession or a bear market.",
+      "reason": "This is the core, counter-intuitive lesson of the entire clip, making it the most compelling takeaway and a perfect hook."
+    },
+    {
+      "clip_id": "004",
+      "hook_start_sec": 8.84,
+      "hook_end_sec": 12.92,
+      "hook_text": "And this time is 180 degrees the opposite.",
+      "reason": "This is a dramatic, intriguing claim that creates a strong contrast with the dot-com bubble and makes the viewer want to know why this time is different."
+    },
+    {
+      "clip_id": "005",
+      "hook_start_sec": 53.65,
+      "hook_end_sec": 57.45,
+      "hook_text": "Many people thought Palantir was a consultant, not a software company.",
+      "reason": "This hook identifies and corrects a common misconception about a well-known company, promising insider knowledge."
+    },
+    {
+      "clip_id": "006",
+      "hook_start_sec": 37.15,
+      "hook_end_sec": 40.67,
+      "hook_text": "We did not define Tesla as an auto manufacturer.",
+      "reason": "This is a highly specific and surprising claim about a famous company that immediately makes the audience question their own assumptions."
+    },
+    {
+      "clip_id": "007",
+      "hook_start_sec": 19.19,
+      "hook_end_sec": 24.45,
+      "hook_text": "that is going to be completely destroyed by AI.",
+      "reason": "This is the most dramatic and provocative claim in the clip; the phrase 'completely destroyed by AI' creates high stakes and immediate intrigue."
+    }
+  ]
+}

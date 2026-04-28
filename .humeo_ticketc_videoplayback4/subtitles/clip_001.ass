@@ -1,0 +1,70 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,48,&H00FFFFFF,&H000000FF,&H00000000,&H70000000,-1,0,0,0,100,100,0,0,4,0,0,2,60,60,160,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.58,Default,,0,0,0,,the mechanism whereby I
+Dialogue: 0,0:00:02.58,0:00:03.62,Default,,0,0,0,,imagined it would happen
+Dialogue: 0,0:00:03.62,0:00:04.78,Default,,0,0,0,,is that we would
+Dialogue: 0,0:00:04.78,0:00:05.80,Default,,0,0,0,,make models that were
+Dialogue: 0,0:00:05.80,0:00:07.02,Default,,0,0,0,,good at coding and
+Dialogue: 0,0:00:07.02,0:00:08.10,Default,,0,0,0,,good at AI research
+Dialogue: 0,0:00:08.42,0:00:09.18,Default,,0,0,0,,and we would use
+Dialogue: 0,0:00:09.18,0:00:11.20,Default,,0,0,0,,that to produce the
+Dialogue: 0,0:00:11.20,0:00:12.14,Default,,0,0,0,,next generation of model
+Dialogue: 0,0:00:12.14,0:00:12.80,Default,,0,0,0,,and speed it up
+Dialogue: 0,0:00:12.88,0:00:13.70,Default,,0,0,0,,to create a loop
+Dialogue: 0,0:00:13.70,0:00:16.18,Default,,0,0,0,,that would increase the
+Dialogue: 0,0:00:16.18,0:00:17.18,Default,,0,0,0,,speed of model development
+Dialogue: 0,0:00:17.70,0:00:19.26,Default,,0,0,0,,We are now in
+Dialogue: 0,0:00:19.26,0:00:20.52,Default,,0,0,0,,terms of the models
+Dialogue: 0,0:00:20.52,0:00:22.10,Default,,0,0,0,,that write code I
+Dialogue: 0,0:00:22.10,0:00:24.00,Default,,0,0,0,,have engineers within Anthropa
+Dialogue: 0,0:00:24.00,0:00:24.80,Default,,0,0,0,,who say don't write
+Dialogue: 0,0:00:24.80,0:00:26.20,Default,,0,0,0,,any code anymore I
+Dialogue: 0,0:00:26.20,0:00:27.24,Default,,0,0,0,,just let the model
+Dialogue: 0,0:00:27.24,0:00:28.90,Default,,0,0,0,,write the I edit
+Dialogue: 0,0:00:28.90,0:00:29.98,Default,,0,0,0,,it I do the
+Dialogue: 0,0:00:29.98,0:00:31.68,Default,,0,0,0,,around it I think
+Dialogue: 0,0:00:31.68,0:00:32.70,Default,,0,0,0,,I don't know we
+Dialogue: 0,0:00:32.70,0:00:33.66,Default,,0,0,0,,might be 6 to
+Dialogue: 0,0:00:33.66,0:00:35.56,Default,,0,0,0,,12 months away from
+Dialogue: 0,0:00:35.56,0:00:36.76,Default,,0,0,0,,when the is doing
+Dialogue: 0,0:00:36.76,0:00:39.34,Default,,0,0,0,,most all of what
+Dialogue: 0,0:00:39.34,0:00:40.46,Default,,0,0,0,,do end to end
+Dialogue: 0,0:00:40.60,0:00:41.78,Default,,0,0,0,,And then it's a
+Dialogue: 0,0:00:41.78,0:00:42.70,Default,,0,0,0,,of how fast does
+Dialogue: 0,0:00:42.70,0:00:44.32,Default,,0,0,0,,that loop close Not
+Dialogue: 0,0:00:44.32,0:00:45.78,Default,,0,0,0,,every part of that
+Dialogue: 0,0:00:45.78,0:00:47.16,Default,,0,0,0,,is something that can
+Dialogue: 0,0:00:47.16,0:00:47.88,Default,,0,0,0,,be sped up by
+Dialogue: 0,0:00:47.88,0:00:49.30,Default,,0,0,0,,AI right There's like
+Dialogue: 0,0:00:49.50,0:00:51.46,Default,,0,0,0,,There's manufacture of There's
+Dialogue: 0,0:00:51.46,0:00:52.76,Default,,0,0,0,,training time for the
+Dialogue: 0,0:00:53.26,0:00:54.36,Default,,0,0,0,,it's you I think
+Dialogue: 0,0:00:54.36,0:00:55.20,Default,,0,0,0,,there's a lot of
+Dialogue: 0,0:00:55.36,0:00:56.42,Default,,0,0,0,,It's easy to see
+Dialogue: 0,0:00:56.42,0:00:57.84,Default,,0,0,0,,how this could take
+Dialogue: 0,0:00:57.84,0:00:59.94,Default,,0,0,0,,a years I don't
+Dialogue: 0,0:01:00.06,0:01:01.20,Default,,0,0,0,,it's very hard for
+Dialogue: 0,0:01:01.20,0:01:01.54,Default,,0,0,0,,me to see how
+Dialogue: 0,0:01:01.54,0:01:02.10,Default,,0,0,0,,it could take longer
+Dialogue: 0,0:01:02.10,0:01:04.10,Default,,0,0,0,,than that But if
+Dialogue: 0,0:01:04.10,0:01:05.46,Default,,0,0,0,,I had to I
+Dialogue: 0,0:01:05.46,0:01:06.26,Default,,0,0,0,,would guess that this
+Dialogue: 0,0:01:06.26,0:01:07.80,Default,,0,0,0,,goes faster than people
+Dialogue: 0,0:01:07.80,0:01:09.22,Default,,0,0,0,,imagine And that key
+Dialogue: 0,0:01:09.22,0:01:11.56,Default,,0,0,0,,element of code and
+Dialogue: 0,0:01:11.56,0:01:14.10,Default,,0,0,0,,increasingly research going faster
+Dialogue: 0,0:01:14.10,0:01:16.02,Default,,0,0,0,,than we imagine that's
+Dialogue: 0,0:01:16.02,0:01:16.38,Default,,0,0,0,,going to be the
+Dialogue: 0,0:01:16.38,0:01:16.72,Default,,0,0,0,,key driver

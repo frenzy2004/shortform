@@ -1,0 +1,71 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,48,&H00FFFFFF,&H000000FF,&H00000000,&H70000000,-1,0,0,0,100,100,0,0,4,0,0,2,60,60,160,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:00.84,Default,,0,0,0,,take Southeast Asia as
+Dialogue: 0,0:00:00.84,0:00:02.00,Default,,0,0,0,,an right now and
+Dialogue: 0,0:00:02.00,0:00:02.64,Default,,0,0,0,,I think it's pretty
+Dialogue: 0,0:00:02.64,0:00:03.92,Default,,0,0,0,,absurd I'm show this
+Dialogue: 0,0:00:03.92,0:00:05.66,Default,,0,0,0,,to you is that
+Dialogue: 0,0:00:05.66,0:00:08.06,Default,,0,0,0,,if individuals are earning
+Dialogue: 0,0:00:08.06,0:00:10.32,Default,,0,0,0,,money now and
+Dialogue: 0,0:00:10.32,0:00:11.46,Default,,0,0,0,,they're using Buy Pay
+Dialogue: 0,0:00:11.46,0:00:14.00,Default,,0,0,0,,Later to buy things
+Dialogue: 0,0:00:14.00,0:00:16.20,Default,,0,0,0,,online and then they're
+Dialogue: 0,0:00:16.20,0:00:17.68,Default,,0,0,0,,it on not very
+Dialogue: 0,0:00:17.68,0:00:18.48,Default,,0,0,0,,productive things It's not
+Dialogue: 0,0:00:18.48,0:00:19.24,Default,,0,0,0,,like they're buying maybe
+Dialogue: 0,0:00:19.24,0:00:20.12,Default,,0,0,0,,you buy a MacBook
+Dialogue: 0,0:00:20.12,0:00:21.36,Default,,0,0,0,,and you do podcasts
+Dialogue: 0,0:00:21.36,0:00:21.92,Default,,0,0,0,,on your MacBook and
+Dialogue: 0,0:00:21.92,0:00:22.44,Default,,0,0,0,,you make money with
+Dialogue: 0,0:00:22.44,0:00:23.00,Default,,0,0,0,,that that's great That's
+Dialogue: 0,0:00:23.00,0:00:23.82,Default,,0,0,0,,productive spending It's like
+Dialogue: 0,0:00:23.82,0:00:26.10,Default,,0,0,0,,la boos and it
+Dialogue: 0,0:00:26.22,0:00:26.94,Default,,0,0,0,,nailed it So there's
+Dialogue: 0,0:00:26.94,0:00:27.58,Default,,0,0,0,,a of like non
+Dialogue: 0,0:00:27.58,0:00:28.90,Default,,0,0,0,,productive spending So I'll
+Dialogue: 0,0:00:28.90,0:00:29.82,Default,,0,0,0,,use like a say
+Dialogue: 0,0:00:29.82,0:00:32.06,Default,,0,0,0,,on TikTok shop right
+Dialogue: 0,0:00:32.06,0:00:32.76,Default,,0,0,0,,So I spoke to
+Dialogue: 0,0:00:32.76,0:00:33.28,Default,,0,0,0,,a lot of people
+Dialogue: 0,0:00:33.76,0:00:34.86,Default,,0,0,0,,who are involved in
+Dialogue: 0,0:00:34.86,0:00:35.98,Default,,0,0,0,,that ecosystem and saying
+Dialogue: 0,0:00:35.98,0:00:36.46,Default,,0,0,0,,that okay what are
+Dialogue: 0,0:00:36.46,0:00:37.58,Default,,0,0,0,,people buying And then
+Dialogue: 0,0:00:37.58,0:00:38.26,Default,,0,0,0,,a of it are
+Dialogue: 0,0:00:38.26,0:00:39.48,Default,,0,0,0,,not actually productive stuff
+Dialogue: 0,0:00:39.56,0:00:40.88,Default,,0,0,0,,They're like perfumes or
+Dialogue: 0,0:00:40.88,0:00:41.92,Default,,0,0,0,,they're like and so
+Dialogue: 0,0:00:41.92,0:00:42.86,Default,,0,0,0,,there's just like stuff
+Dialogue: 0,0:00:42.86,0:00:43.62,Default,,0,0,0,,you don't actually need
+Dialogue: 0,0:00:43.70,0:00:44.86,Default,,0,0,0,,So they don't fully
+Dialogue: 0,0:00:44.86,0:00:46.12,Default,,0,0,0,,make you they don't
+Dialogue: 0,0:00:46.12,0:00:47.30,Default,,0,0,0,,influence your Yeah
+Dialogue: 0,0:00:48.46,0:00:49.20,Default,,0,0,0,,Yeah yeah yeah The
+Dialogue: 0,0:00:49.20,0:00:49.96,Default,,0,0,0,,ROI is not great
+Dialogue: 0,0:00:50.02,0:00:50.40,Default,,0,0,0,,The ROI is not
+Dialogue: 0,0:00:50.40,0:00:51.20,Default,,0,0,0,,great That is terrible
+Dialogue: 0,0:00:51.26,0:00:52.12,Default,,0,0,0,,right It's Yeah it's
+Dialogue: 0,0:00:52.12,0:00:53.24,Default,,0,0,0,,terrible right So what
+Dialogue: 0,0:00:53.24,0:00:54.10,Default,,0,0,0,,has Buy Pay Later
+Dialogue: 0,0:00:54.10,0:00:55.74,Default,,0,0,0,,done And what has
+Dialogue: 0,0:00:55.74,0:00:57.64,Default,,0,0,0,,like what has credit
+Dialogue: 0,0:00:57.64,0:00:58.76,Default,,0,0,0,,cards you done for
+Dialogue: 0,0:00:58.76,0:00:59.58,Default,,0,0,0,,the US back then
+Dialogue: 0,0:00:59.60,0:01:00.24,Default,,0,0,0,,you And so I
+Dialogue: 0,0:01:00.24,0:01:01.62,Default,,0,0,0,,think they they inject
+Dialogue: 0,0:01:01.62,0:01:02.70,Default,,0,0,0,,a lot of they
+Dialogue: 0,0:01:02.70,0:01:03.68,Default,,0,0,0,,help the because they
+Dialogue: 0,0:01:03.68,0:01:04.80,Default,,0,0,0,,inject loss spending Yeah
+Dialogue: 0,0:01:04.80,0:01:04.84,Default,,0,0,0,,So

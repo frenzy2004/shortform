@@ -1,0 +1,76 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,48,&H00FFFFFF,&H000000FF,&H00000000,&H70000000,-1,0,0,0,100,100,0,0,4,0,0,2,60,60,160,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.22,Default,,0,0,0,,have to buy compute
+Dialogue: 0,0:00:01.22,0:00:02.40,Default,,0,0,0,,to serve all that
+Dialogue: 0,0:00:02.40,0:00:03.84,Default,,0,0,0,,revenue And you don't
+Dialogue: 0,0:00:03.84,0:00:04.64,Default,,0,0,0,,want to buy too
+Dialogue: 0,0:00:04.64,0:00:06.48,Default,,0,0,0,,much because you could
+Dialogue: 0,0:00:06.48,0:00:08.46,Default,,0,0,0,,financially overextend yourself and
+Dialogue: 0,0:00:08.46,0:00:09.16,Default,,0,0,0,,you don't want to
+Dialogue: 0,0:00:09.16,0:00:10.52,Default,,0,0,0,,buy too little because
+Dialogue: 0,0:00:10.52,0:00:11.60,Default,,0,0,0,,then you can't serve
+Dialogue: 0,0:00:11.60,0:00:12.90,Default,,0,0,0,,all the revenue And
+Dialogue: 0,0:00:12.90,0:00:14.52,Default,,0,0,0,,so that's where the
+Dialogue: 0,0:00:14.52,0:00:15.86,Default,,0,0,0,,kind of economic and
+Dialogue: 0,0:00:15.86,0:00:17.54,Default,,0,0,0,,financial is So but
+Dialogue: 0,0:00:17.54,0:00:18.18,Default,,0,0,0,,you are involved in
+Dialogue: 0,0:00:18.18,0:00:19.78,Default,,0,0,0,,that building data centers
+Dialogue: 0,0:00:20.12,0:00:21.30,Default,,0,0,0,,you're vast fortunes there
+Dialogue: 0,0:00:21.30,0:00:21.84,Default,,0,0,0,,you've got the deals
+Dialogue: 0,0:00:21.84,0:00:23.52,Default,,0,0,0,,with NVIDIA Do you
+Dialogue: 0,0:00:23.52,0:00:24.18,Default,,0,0,0,,worry that that's going
+Dialogue: 0,0:00:24.18,0:00:25.00,Default,,0,0,0,,to come back and
+Dialogue: 0,0:00:25.00,0:00:26.28,Default,,0,0,0,,you So we have
+Dialogue: 0,0:00:26.28,0:00:27.60,Default,,0,0,0,,some advantages in this
+Dialogue: 0,0:00:28.36,0:00:30.44,Default,,0,0,0,,There's a stability to
+Dialogue: 0,0:00:30.44,0:00:31.46,Default,,0,0,0,,business that there is
+Dialogue: 0,0:00:31.46,0:00:32.68,Default,,0,0,0,,not to consumer right
+Dialogue: 0,0:00:32.68,0:00:33.66,Default,,0,0,0,,Consumer is very fickle
+Dialogue: 0,0:00:34.98,0:00:37.64,Default,,0,0,0,,Enterprise purchasing predictions are
+Dialogue: 0,0:00:37.64,0:00:40.08,Default,,0,0,0,,predictable Also enterprise tends
+Dialogue: 0,0:00:40.08,0:00:41.12,Default,,0,0,0,,to have better margins
+Dialogue: 0,0:00:41.48,0:00:42.90,Default,,0,0,0,,The margin is basically
+Dialogue: 0,0:00:42.90,0:00:43.90,Default,,0,0,0,,how much buffer you
+Dialogue: 0,0:00:43.90,0:00:45.32,Default,,0,0,0,,have between buying too
+Dialogue: 0,0:00:45.32,0:00:46.28,Default,,0,0,0,,little and buying too
+Dialogue: 0,0:00:46.28,0:00:47.42,Default,,0,0,0,,much what you have
+Dialogue: 0,0:00:47.42,0:00:48.60,Default,,0,0,0,,to pay for and
+Dialogue: 0,0:00:48.60,0:00:49.26,Default,,0,0,0,,what you have to
+Dialogue: 0,0:00:49.26,0:00:50.98,Default,,0,0,0,,support in revenue so
+Dialogue: 0,0:00:50.98,0:00:52.34,Default,,0,0,0,,we have a of
+Dialogue: 0,0:00:52.34,0:00:54.24,Default,,0,0,0,,here but I won't
+Dialogue: 0,0:00:54.24,0:00:55.16,Default,,0,0,0,,deny that there is
+Dialogue: 0,0:00:55.16,0:00:57.28,Default,,0,0,0,,some inherent risk in
+Dialogue: 0,0:00:57.28,0:00:59.56,Default,,0,0,0,,all of the to
+Dialogue: 0,0:00:59.56,0:01:01.14,Default,,0,0,0,,this process Whenever you
+Dialogue: 0,0:01:01.14,0:01:02.52,Default,,0,0,0,,have an upside whose
+Dialogue: 0,0:01:02.52,0:01:04.74,Default,,0,0,0,,amount is uncertain or
+Dialogue: 0,0:01:04.74,0:01:06.12,Default,,0,0,0,,even whose timing is
+Dialogue: 0,0:01:06.12,0:01:07.14,Default,,0,0,0,,uncertain and you have
+Dialogue: 0,0:01:07.14,0:01:09.08,Default,,0,0,0,,to make financial decisions
+Dialogue: 0,0:01:09.08,0:01:11.22,Default,,0,0,0,,somewhat blind to those
+Dialogue: 0,0:01:11.22,0:01:12.68,Default,,0,0,0,,things have to decide
+Dialogue: 0,0:01:12.68,0:01:15.10,Default,,0,0,0,,early to
+Dialogue: 0,0:01:15.10,0:01:16.62,Default,,0,0,0,,build out capital to
+Dialogue: 0,0:01:16.62,0:01:18.44,Default,,0,0,0,,out resources a few
+Dialogue: 0,0:01:18.44,0:01:19.88,Default,,0,0,0,,years in advance there's
+Dialogue: 0,0:01:19.88,0:01:20.60,Default,,0,0,0,,going to be some
+Dialogue: 0,0:01:20.60,0:01:22.02,Default,,0,0,0,,inherent risk that's by
+Dialogue: 0,0:01:22.02,0:01:23.52,Default,,0,0,0,,that uncertainty And I
+Dialogue: 0,0:01:23.52,0:01:24.90,Default,,0,0,0,,do think that some
+Dialogue: 0,0:01:24.90,0:01:26.46,Default,,0,0,0,,companies have probably overbought
+Dialogue: 0,0:01:26.64,0:01:27.92,Default,,0,0,0,,I'm not able to
+Dialogue: 0,0:01:27.92,0:01:29.08,Default,,0,0,0,,look at their financials
+Dialogue: 0,0:01:29.08,0:01:29.96,Default,,0,0,0,,I just know

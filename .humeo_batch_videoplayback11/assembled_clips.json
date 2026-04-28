@@ -1,0 +1,175 @@
+{
+  "source_path": "",
+  "clips": [
+    {
+      "clip_id": "004",
+      "topic": "From Rolling Recession to Economic Boom",
+      "start_time_sec": 0.0,
+      "end_time_sec": 54.059985351562545,
+      "viral_hook": "that the rolling recession we've seen in the last few years will turn into a rolling recovery, and we're getting some green shoots already.",
+      "virality_score": 0.7825,
+      "transcript": "Before going there, I do want to reinforce that we think after this short-term period of discomfort, and it is uncomfortable, believe me, I know, that the rolling recession we've seen in the last few years will turn into a rolling recovery, and we're getting some green shoots already. Employment lags, so the unemployment rate probably will continue moving up, even as this rolling recovery gets underway. And then we think next year, we will be in much more of a productivity-driven, almost boom in economic activity, mostly because of this chart. And I know I've presented it, but for those of you who haven't seen it, I wanted to make sure everybody has seen this, everyone interested in the know.",
+      "suggested_overlay_title": "The 'Rolling Recession' Become a Boom",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.8,
+        "hook_emotion": 0.75,
+        "catchy": 0.8
+      },
+      "reasoning": "This clip offers a strong, optimistic, and counter-narrative prediction of an economic boom. The message is simple and powerful, the emotional arc from 'recession' to 'boom' is compelling, and the phrases 'rolling recession,' 'rolling recovery,' and 'productivity-driven boom' are extremely catchy and memorable.",
+      "hook_start_sec": null,
+      "hook_end_sec": null,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "render_spans": [],
+      "shorts_title": "A 'Productivity Boom' Is Coming Next Year. Here's Why.",
+      "description": "Cathie Wood predicts the recent 'rolling recession' will transform into a 'rolling recovery' and then a 'productivity-driven boom' next year, teasing the specific policy change that will drive it.",
+      "hashtags": [
+        "economy",
+        "recession",
+        "investing",
+        "boom",
+        "cathiewood"
+      ],
+      "layout_hint": "split_chart_person",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "005",
+      "topic": "Gold Market Cap vs. Great Depression",
+      "start_time_sec": 0.0,
+      "end_time_sec": 71.10000350952055,
+      "viral_hook": "what you can see here is two prior peaks near this level. One was in the Great Depression.",
+      "virality_score": 0.77,
+      "transcript": "look like relative to history? And what you can see here is two prior peaks near this level. One was in the Great Depression. And what happened is this peaked, I believe, in 32 or 33, and then it started moving down. We went went through a reprieve in the Depression. Many people think it lasted throughout the 30s. It was at its worst in the early part of the 30s or its most intense. And then in 1932, I think to 36, if I'm not mistaken, we had a reprieve and then a relapse in 37. During that reprieve, what we saw was money supply going back up. It had been declining and the gold price was fixed back then. So all of this move was a function of money first declining. There was a deflationary bust and the Fed wasn't picking up on it. And the Fed was fairly new or they wanted to make sure not to let inflation out of the bag. And so they tightened way too much. Money collapsed. GDP went negative. Pricing went negative.",
+      "suggested_overlay_title": "Gold Chart Only Peaked Twice Before",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.85,
+        "hook_emotion": 0.8,
+        "catchy": 0.6
+      },
+      "reasoning": "The message provides a powerful historical parallel with predictive weight. The hook invoking the 'Great Depression' immediately establishes high stakes and historical gravity, making the viewer want to know the implication. The 'two prior peaks' framing is a simple but effective narrative device.",
+      "hook_start_sec": null,
+      "hook_end_sec": null,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "render_spans": [],
+      "shorts_title": "This Market Indicator Is Flashing a Great Depression Signal",
+      "description": "Cathie Wood analyzes a provocative chart showing the ratio of gold's market cap to M2 money supply, noting it has only reached today's levels twice before—once during the Great Depression.",
+      "hashtags": [
+        "gold",
+        "investing",
+        "history",
+        "greatdepression",
+        "economy"
+      ],
+      "layout_hint": "split_chart_person",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "006",
+      "topic": "The Coming 'Highly Deflationary Age'",
+      "start_time_sec": 0.0,
+      "end_time_sec": 57.42998657226531,
+      "viral_hook": "If we are right, we are moving into a highly deflationary age. And a lot of that is good deflation associated with technology.",
+      "virality_score": 0.725,
+      "transcript": "are complicating the picture. If we are right, we are moving into a highly deflationary age. And a lot of that is good deflation associated with technology. I know I've talked about the, the huge deflationary ramifications of robotics, energy storage, and especially AI. And, and those are, are playing out, we believe. But we have the tariffs, and we also have the lag in housing price measures. I think also oil, oil is breaking down, it's below $60 on West Texas Intermediate. So we do have a lot of forces pressing down, and they've been obfuscated, we think, by lags in the data and by tariffs. But all of that is going to pass. We think next year will become clear.",
+      "suggested_overlay_title": "We Are Entering a 'Highly Deflationary",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.85,
+        "hook_emotion": 0.6,
+        "catchy": 0.7
+      },
+      "reasoning": "This clip presents a strong, counter-cyclical macroeconomic prediction that reframes a common fear (deflation) as a positive force ('good deflation'). The message is a significant 'wow' moment. The phrases 'highly deflationary age' and 'good deflation' are memorable and provide a new lens for viewers.",
+      "hook_start_sec": null,
+      "hook_end_sec": null,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "render_spans": [],
+      "shorts_title": "Why The Fed Is Wrong About Inflation",
+      "description": "Cathie Wood argues that despite current concerns, we are moving into a 'highly deflationary age' driven by 'good deflation' from technologies like AI, robotics, and energy storage.",
+      "hashtags": [
+        "deflation",
+        "inflation",
+        "economy",
+        "ai",
+        "technology"
+      ],
+      "layout_hint": "split_chart_person",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "007",
+      "topic": "Government Spending and SNAP Program",
+      "start_time_sec": 0.0,
+      "end_time_sec": 52.2799957275389,
+      "viral_hook": "despite the fact that the unemployment rate is really near a near a record low. So there's something wrong with this picture.",
+      "virality_score": 0.715,
+      "transcript": "the fact that the unemployment rate is really near a near a record low. So there's something wrong with this picture. And I looked up the poverty rates as I was looking at this chart saying, well, wait a minute, hasn't the poverty rate in the United States gone down? And yes, the poverty rate recently peaked in 2010 at 15%. And is now down to 10.6%. And so, and and that I think is the lowest since 2003. And you can see where the snap participation rate was in 2003, it was around seven and a half percent. So even here, there is there is overspending, given what is given the macro backdrop in the United States. And so, you know, the, the, the president and the administration hanging tough on cutting back some of these spending programs, because they, they are probably being abused to some extent.",
+      "suggested_overlay_title": "Something Is Wrong with Government Spending",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.8,
+        "hook_emotion": 0.7,
+        "catchy": 0.6
+      },
+      "reasoning": "This clip offers a data-driven and controversial take on a major political and economic issue. The hook 'there's something wrong with this picture' creates immediate curiosity. The message itself, suggesting government programs are being abused, is strong and will provoke a reaction.",
+      "hook_start_sec": null,
+      "hook_end_sec": null,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "render_spans": [],
+      "shorts_title": "Is Government Spending Being Abused? The Data Says Yes.",
+      "description": "Cathie Wood points out a major discrepancy in economic data: while unemployment and poverty are at historic lows, participation in programs like SNAP (food stamps) remains stubbornly high, suggesting overspending or abuse.",
+      "hashtags": [
+        "economy",
+        "politics",
+        "spending",
+        "data",
+        "government"
+      ],
+      "layout_hint": "split_chart_person",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "008",
+      "topic": "The Private Credit Bubble",
+      "start_time_sec": 0.0,
+      "end_time_sec": 55.08001098633031,
+      "viral_hook": "This is high-yield spreads, so high-yield rates relative to 10-year treasuries and not a care in the world. I find that very interesting.",
+      "virality_score": 0.715,
+      "transcript": "This is high-yield spreads, so high-yield rates relative to 10-year treasuries and not a care in the world. I find that very interesting. I think it's partly because where are the excesses in the markets? They're not on the equity side of the equation. They are on private credit side and maybe private equity side, but certainly private credit. That search for yield, I think that we're seeing that here. We've seen first brands and a number of blowups out there still not affecting this. Maybe it did for a moment in time. We think that there has been a lot of ill-advised lending out there in the search for yield and that this will move up as more of these, I'll say, blowups occur.",
+      "suggested_overlay_title": "The Real Market Bubble Isn't In",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.8,
+        "hook_emotion": 0.7,
+        "catchy": 0.6
+      },
+      "reasoning": "This clip identifies a specific, under-the-radar risk area (private credit), which is a strong insight. The hook poses a question ('where are the excesses?') and provides a surprising answer, creating intrigue. The prediction of 'blowups' adds emotional weight and stakes.",
+      "hook_start_sec": null,
+      "hook_end_sec": null,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "render_spans": [],
+      "shorts_title": "Where the Next Financial 'Blowups' Will Happen",
+      "description": "Cathie Wood argues that while high-yield spreads show 'not a care in the world,' the real excess and risk in the market is not in stocks, but in private credit, where she predicts future 'blowups' will occur.",
+      "hashtags": [
+        "investing",
+        "bubble",
+        "privatecredit",
+        "market",
+        "risk"
+      ],
+      "layout_hint": "split_chart_person",
+      "needs_review": false,
+      "review_reason": ""
+    }
+  ]
+}

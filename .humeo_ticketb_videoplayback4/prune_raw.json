@@ -1,0 +1,39 @@
+{
+  "decisions": [
+    {
+      "clip_id": "001",
+      "trim_start_sec": 3.46,
+      "trim_end_sec": 0.0,
+      "reason": "Dropped 3.46s of rambling filler at the start to lead directly with the core mechanism of the AI loop.",
+      "thought": "The original start was hesitant and lacked focus. Starting at 3.46s immediately introduces the 'mechanism' of the AI self-improvement loop, which is the core premise."
+    },
+    {
+      "clip_id": "002",
+      "trim_start_sec": 27.52,
+      "trim_end_sec": 0.0,
+      "reason": "Dropped 27.52s of setup context to start directly with the core question about technological adolescence.",
+      "thought": "The anecdote about the movie is interesting but long; starting with the specific question about surviving technological adolescence is much more gripping for a short clip."
+    },
+    {
+      "clip_id": "003",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 4.28,
+      "reason": "Dropped 4.28s of trailing filler at the end to end on the punchy conclusion about the speed of adaptation.",
+      "thought": "The final sentence was a weak transition to another speaker. Ending on the warning that AI will 'overwhelm our ability to adapt' provides a much stronger, more coherent conclusion."
+    },
+    {
+      "clip_id": "004",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "reason": "No trimming required as the clip is already concise and starts directly with the claim.",
+      "thought": "The clip is already at 54 seconds and starts with a clear, confident statement. Trimming would likely remove necessary context about the research bench."
+    },
+    {
+      "clip_id": "005",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 1.37,
+      "reason": "Dropped 1.37s of trailing filler to end on a clean, definitive statement.",
+      "thought": "The final sentence was a weak conversational filler. Ending on the idea that it is up to humanity to write what happens next is a much stronger, more thematic close."
+    }
+  ]
+}

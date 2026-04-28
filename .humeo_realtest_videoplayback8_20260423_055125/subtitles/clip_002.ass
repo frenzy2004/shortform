@@ -1,0 +1,56 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Source Sans 3,48,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,-1,-1,0,0,100,100,0,0,1,0,0,1,60,60,160,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.46,Default,,0,0,0,,productivity growth will accelerate
+Dialogue: 0,0:00:02.54,0:00:03.44,Default,,0,0,0,,to the 4% to
+Dialogue: 0,0:00:03.88,0:00:05.56,Default,,0,0,0,,6% range and be
+Dialogue: 0,0:00:05.66,0:00:06.98,Default,,0,0,0,,sustained there. Normally, we
+Dialogue: 0,0:00:07.10,0:00:08.20,Default,,0,0,0,,see a cyclical peak
+Dialogue: 0,0:00:08.22,0:00:09.94,Default,,0,0,0,,around there and then
+Dialogue: 0,0:00:10.00,0:00:10.88,Default,,0,0,0,,it falls back. We
+Dialogue: 0,0:00:10.96,0:00:11.72,Default,,0,0,0,,think it will be
+Dialogue: 0,0:00:11.82,0:00:14.00,Default,,0,0,0,,sustained, and we think
+Dialogue: 0,0:00:14.42,0:00:15.42,Default,,0,0,0,,that by the end
+Dialogue: 0,0:00:15.48,0:00:17.00,Default,,0,0,0,,of this decade, real
+Dialogue: 0,0:00:17.04,0:00:18.76,Default,,0,0,0,,GDP growth could be
+Dialogue: 0,0:00:18.88,0:00:20.98,Default,,0,0,0,,averaging more than 7%
+Dialogue: 0,0:00:21.08,0:00:21.83,Default,,0,0,0,,per year. Wow. And
+Dialogue: 0,0:00:21.90,0:00:22.59,Default,,0,0,0,,I know that sounds
+Dialogue: 0,0:00:22.66,0:00:24.42,Default,,0,0,0,,shocking- Yeah given that
+Dialogue: 0,0:00:24.44,0:00:25.56,Default,,0,0,0,,we've been at 3%
+Dialogue: 0,0:00:25.60,0:00:27.76,Default,,0,0,0,,for 125 years.
+Dialogue: 0,0:00:28.14,0:00:28.96,Default,,0,0,0,,But it is the
+Dialogue: 0,0:00:29.04,0:00:31.46,Default,,0,0,0,,history associated with technology
+Dialogue: 0,0:00:31.50,0:00:33.26,Default,,0,0,0,,revolutions, a step change
+Dialogue: 0,0:00:33.36,0:00:34.97,Default,,0,0,0,,upIn GDP growth The
+Dialogue: 0,0:00:35.01,0:00:36.57,Default,,0,0,0,,productivity increase, the GDP
+Dialogue: 0,0:00:36.67,0:00:37.73,Default,,0,0,0,,growth that you are
+Dialogue: 0,0:00:37.77,0:00:39.93,Default,,0,0,0,,forecasting as a result
+Dialogue: 0,0:00:40.03,0:00:41.92,Default,,0,0,0,,of these disruptive technologies,
+Dialogue: 0,0:00:42.43,0:00:43.72,Default,,0,0,0,,to what extent is
+Dialogue: 0,0:00:43.72,0:00:44.50,Default,,0,0,0,,that the result of
+Dialogue: 0,0:00:44.50,0:00:46.49,Default,,0,0,0,,fewer people doing more?
+Dialogue: 0,0:00:46.53,0:00:47.30,Default,,0,0,0,,My question is about
+Dialogue: 0,0:00:47.33,0:00:48.41,Default,,0,0,0,,job losses as a
+Dialogue: 0,0:00:48.43,0:00:49.64,Default,,0,0,0,,result of this technology,
+Dialogue: 0,0:00:49.65,0:00:51.26,Default,,0,0,0,,because if everything that
+Dialogue: 0,0:00:51.29,0:00:52.34,Default,,0,0,0,,investors are betting on
+Dialogue: 0,0:00:52.35,0:00:53.11,Default,,0,0,0,,when it comes to
+Dialogue: 0,0:00:53.15,0:00:54.57,Default,,0,0,0,,this AI revolution comes
+Dialogue: 0,0:00:54.63,0:00:55.63,Default,,0,0,0,,true, it means that
+Dialogue: 0,0:00:55.71,0:00:56.33,Default,,0,0,0,,companies aren't going to
+Dialogue: 0,0:00:56.37,0:00:57.47,Default,,0,0,0,,need as many people
+Dialogue: 0,0:00:57.53,0:00:58.05,Default,,0,0,0,,to do a lot
+Dialogue: 0,0:00:58.15,0:00:58.95,Default,,0,0,0,,more. What does that
+Dialogue: 0,0:00:58.99,0:00:59.38,Default,,0,0,0,,look like?

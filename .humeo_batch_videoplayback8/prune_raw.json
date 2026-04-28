@@ -1,0 +1,39 @@
+{
+  "decisions": [
+    {
+      "clip_id": "001",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "reason": "The clip is already short at 52.2s, and any trim would risk falling below the 50s minimum duration while removing valuable context.",
+      "thought": "The clip has a necessary setup at the beginning and a topic change at the very end. However, trimming the setup would hurt comprehension, and trimming the end would make the clip too short and remove the 'entrepreneurial explosion' punchline."
+    },
+    {
+      "clip_id": "002",
+      "trim_start_sec": 2.08,
+      "trim_end_sec": 0.0,
+      "reason": "Removed 2.08s of filler and silence at the start to begin directly on the core prediction about productivity growth.",
+      "thought": "The clip starts with 'also that' and a pause, which is easily trimmed. The end transitions to a question about job losses; this serves as a strong cliffhanger and a direct challenge to the speaker's claim, so it was kept to maintain tension."
+    },
+    {
+      "clip_id": "003",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "reason": "The clip starts with the hook and ends with the main punchline ($26T opportunity), making trims at either end damaging to the core message.",
+      "thought": "There is some filler and repetition in the middle of the clip (around 52-61s), but since I can only trim the start and end, removing it is not possible without cutting the essential punchline at the very end."
+    },
+    {
+      "clip_id": "004",
+      "trim_start_sec": 3.51,
+      "trim_end_sec": 5.03,
+      "reason": "Trimmed the interviewer's lead-in and closing remarks to focus on the core question and the speaker's answer.",
+      "thought": "The original start referred to a prior conversation, so I cut to the direct question 'what's your best idea...'. The end contained interviewer chatter ('I love it. All right.') that was easily removed for a stronger finish on the speaker's confident statement."
+    },
+    {
+      "clip_id": "005",
+      "trim_start_sec": 7.83,
+      "trim_end_sec": 0.0,
+      "reason": "Trimmed 7.8s of slow setup to start the clip on the more impactful phrase 'But now, we're moving into space.'",
+      "thought": "The original opening was a bit philosophical and started mid-sentence. Cutting to the hook's start creates a much more dynamic and intriguing opening, while the original ending was already strong and required no changes."
+    }
+  ]
+}

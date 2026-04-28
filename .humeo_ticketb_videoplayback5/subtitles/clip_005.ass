@@ -1,0 +1,49 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,48,&H00FFFFFF,&H000000FF,&H00000000,&H70000000,-1,0,0,0,100,100,0,0,4,0,0,2,60,60,160,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.32,Default,,0,0,0,,You know the analogy
+Dialogue: 0,0:00:01.32,0:00:02.26,Default,,0,0,0,,I thought of if
+Dialogue: 0,0:00:02.26,0:00:04.10,Default,,0,0,0,,you think about the
+Dialogue: 0,0:00:04.60,0:00:07.42,Default,,0,0,0,,national security implications of
+Dialogue: 0,0:00:07.42,0:00:09.64,Default,,0,0,0,,building models that
+Dialogue: 0,0:00:09.64,0:00:11.18,Default,,0,0,0,,are essentially cognition that
+Dialogue: 0,0:00:11.18,0:00:12.66,Default,,0,0,0,,are essentially intelligence right
+Dialogue: 0,0:00:12.66,0:00:13.56,Default,,0,0,0,,I've called where we're
+Dialogue: 0,0:00:13.56,0:00:14.86,Default,,0,0,0,,going with this a
+Dialogue: 0,0:00:14.86,0:00:16.02,Default,,0,0,0,,country of geniuses and
+Dialogue: 0,0:00:16.02,0:00:17.20,Default,,0,0,0,,a data center right
+Dialogue: 0,0:00:17.20,0:00:19.78,Default,,0,0,0,,So imagine 100 million
+Dialogue: 0,0:00:19.78,0:00:21.58,Default,,0,0,0,,people smarter than any
+Dialogue: 0,0:00:21.58,0:00:23.12,Default,,0,0,0,,Nobel Prize winner and
+Dialogue: 0,0:00:23.12,0:00:23.74,Default,,0,0,0,,it's going to be
+Dialogue: 0,0:00:23.74,0:00:25.00,Default,,0,0,0,,under the of one
+Dialogue: 0,0:00:25.00,0:00:26.04,Default,,0,0,0,,country or
+Dialogue: 0,0:00:27.20,0:00:28.62,Default,,0,0,0,,So I think this
+Dialogue: 0,0:00:28.62,0:00:29.56,Default,,0,0,0,,is I think it's
+Dialogue: 0,0:00:29.56,0:00:30.18,Default,,0,0,0,,you it's a bit
+Dialogue: 0,0:00:30.18,0:00:31.78,Default,,0,0,0,,like you I don't
+Dialogue: 0,0:00:31.78,0:00:33.88,Default,,0,0,0,,know like selling you
+Dialogue: 0,0:00:33.88,0:00:35.32,Default,,0,0,0,,know nuclear weapons to
+Dialogue: 0,0:00:35.32,0:00:36.64,Default,,0,0,0,,North Korea and you
+Dialogue: 0,0:00:36.78,0:00:37.62,Default,,0,0,0,,oh yeah Boeing made
+Dialogue: 0,0:00:37.62,0:00:40.14,Default,,0,0,0,,the case your friend
+Dialogue: 0,0:00:40.14,0:00:41.64,Default,,0,0,0,,David Sachs is basically
+Dialogue: 0,0:00:41.64,0:00:44.30,Default,,0,0,0,,arming the No
+Dialogue: 0,0:00:44.30,0:00:45.40,Default,,0,0,0,,I wouldn't refer to
+Dialogue: 0,0:00:45.40,0:00:46.50,Default,,0,0,0,,any particular people but
+Dialogue: 0,0:00:46.76,0:00:47.72,Default,,0,0,0,,I would just say
+Dialogue: 0,0:00:47.72,0:00:48.98,Default,,0,0,0,,that this particular policy
+Dialogue: 0,0:00:49.18,0:00:51.40,Default,,0,0,0,,think you Akin to
+Dialogue: 0,0:00:51.68,0:00:53.44,Default,,0,0,0,,Yeah it's not well
+Dialogue: 0,0:00:53.44,0:00:53.86,Default,,0,0,0,,advised

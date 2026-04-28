@@ -1,0 +1,59 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,48,&H00FFFFFF,&H000000FF,&H00000000,&H70000000,-1,0,0,0,100,100,0,0,4,0,0,2,60,60,160,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.11,Default,,0,0,0,,They're converging And we
+Dialogue: 0,0:00:02.11,0:00:04.59,Default,,0,0,0,,think that growth is
+Dialogue: 0,0:00:04.59,0:00:07.53,Default,,0,0,0,,going to in the
+Dialogue: 0,0:00:07.53,0:00:09.49,Default,,0,0,0,,next few years So
+Dialogue: 0,0:00:09.49,0:00:11.61,Default,,0,0,0,,here we ask the
+Dialogue: 0,0:00:12.25,0:00:15.53,Default,,0,0,0,,non farm productivity increase
+Dialogue: 0,0:00:15.53,0:00:18.33,Default,,0,0,0,,above 3 in
+Dialogue: 0,0:00:18.33,0:00:19.61,Default,,0,0,0,,any quarter This is
+Dialogue: 0,0:00:19.61,0:00:20.23,Default,,0,0,0,,on a year over
+Dialogue: 0,0:00:20.23,0:00:21.35,Default,,0,0,0,,year basis in any
+Dialogue: 0,0:00:21.35,0:00:23.41,Default,,0,0,0,,quarter in 26 And
+Dialogue: 0,0:00:23.41,0:00:24.37,Default,,0,0,0,,you can see there's
+Dialogue: 0,0:00:24.37,0:00:26.99,Default,,0,0,0,,a 42 probability
+Dialogue: 0,0:00:27.71,0:00:29.45,Default,,0,0,0,,Well we think the
+Dialogue: 0,0:00:29.45,0:00:31.67,Default,,0,0,0,,actually is much higher
+Dialogue: 0,0:00:31.67,0:00:33.29,Default,,0,0,0,,than that And it's
+Dialogue: 0,0:00:33.29,0:00:34.81,Default,,0,0,0,,actually for a statistical
+Dialogue: 0,0:00:34.81,0:00:36.11,Default,,0,0,0,,reason If you look
+Dialogue: 0,0:00:36.11,0:00:38.37,Default,,0,0,0,,at productivity today you
+Dialogue: 0,0:00:38.37,0:00:39.75,Default,,0,0,0,,can see we're at
+Dialogue: 0,0:00:39.75,0:00:42.07,Default,,0,0,0,,2 5
+Dialogue: 0,0:00:42.25,0:00:43.59,Default,,0,0,0,,And you can also
+Dialogue: 0,0:00:43.59,0:00:44.85,Default,,0,0,0,,see again if you
+Dialogue: 0,0:00:44.85,0:00:46.07,Default,,0,0,0,,look across this chart
+Dialogue: 0,0:00:46.25,0:00:47.97,Default,,0,0,0,,this is in the
+Dialogue: 0,0:00:47.97,0:00:50.59,Default,,0,0,0,,higher half of the
+Dialogue: 0,0:00:50.59,0:00:53.05,Default,,0,0,0,,of this So
+Dialogue: 0,0:00:53.05,0:00:55.37,Default,,0,0,0,,pretty strong And
+Dialogue: 0,0:00:55.37,0:00:56.77,Default,,0,0,0,,as we have said
+Dialogue: 0,0:00:56.77,0:00:58.21,Default,,0,0,0,,in the know many
+Dialogue: 0,0:00:58.21,0:00:59.21,Default,,0,0,0,,times we've in a
+Dialogue: 0,0:00:59.21,0:01:00.43,Default,,0,0,0,,rolling recession And this
+Dialogue: 0,0:01:00.43,0:01:01.23,Default,,0,0,0,,is what has happened
+Dialogue: 0,0:01:01.35,0:01:03.77,Default,,0,0,0,,That's so interesting Housing
+Dialogue: 0,0:01:03.77,0:01:04.79,Default,,0,0,0,,has been down and
+Dialogue: 0,0:01:04.79,0:01:06.19,Default,,0,0,0,,out Manufacturing's been down
+Dialogue: 0,0:01:06.19,0:01:07.41,Default,,0,0,0,,and out Small business
+Dialogue: 0,0:01:07.41,0:01:09.33,Default,,0,0,0,,down and out Consumers
+Dialogue: 0,0:01:09.33,0:01:10.29,Default,,0,0,0,,have been in funk
+Dialogue: 0,0:01:10.85,0:01:12.39,Default,,0,0,0,,as measured by sentiment
+Dialogue: 0,0:01:12.67,0:01:14.07,Default,,0,0,0,,And productivity is at
+Dialogue: 0,0:01:14.07,0:01:16.11,Default,,0,0,0,,2 5 So we
+Dialogue: 0,0:01:16.11,0:01:17.65,Default,,0,0,0,,believe that these technologies
+Dialogue: 0,0:01:17.65,0:01:19.75,Default,,0,0,0,,are already having an
+Dialogue: 0,0:01:19.75,0:01:20.89,Default,,0,0,0,,on productivity

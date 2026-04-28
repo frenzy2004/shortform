@@ -1,0 +1,146 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Base,Arial,86,&H00FFFFFF,&H000000FF,&H00101010,&H00000000,-1,0,0,0,100,100,-1,0,1,4,0,8,0,0,0,0
+Style: Highlight,Arial,86,&H00FFFFFF,&H000000FF,&H00F65C8B,&H00000000,-1,0,0,0,100,100,-1,0,3,4,0,8,0,0,0,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:03.02,Base,,0,0,0,,{\an7\pos(420.0,1440.0)}wait a
+Dialogue: 1,0:00:00.00,0:00:00.02,Highlight,,0,0,0,,{\an7\pos(420.0,1440.0)\blur0.8}{\rHighlight}wait{\rBase} a
+Dialogue: 1,0:00:00.02,0:00:00.50,Highlight,,0,0,0,,{\an7\pos(420.0,1440.0)\blur0.8}wait {\rHighlight}a{\rBase}
+Dialogue: 0,0:00:00.00,0:00:03.02,Base,,0,0,0,,{\an7\pos(235.5,1534.0)}this movement
+Dialogue: 1,0:00:00.56,0:00:01.32,Highlight,,0,0,0,,{\an7\pos(235.5,1534.0)\blur0.8}{\rHighlight}this{\rBase} movement
+Dialogue: 1,0:00:01.32,0:00:03.02,Highlight,,0,0,0,,{\an7\pos(235.5,1534.0)\blur0.8}this {\rHighlight}movement{\rBase}
+Dialogue: 0,0:00:03.02,0:00:05.50,Base,,0,0,0,,{\an7\pos(427.0,1440.0)}is the
+Dialogue: 1,0:00:03.02,0:00:04.08,Highlight,,0,0,0,,{\an7\pos(427.0,1440.0)\blur0.8}{\rHighlight}is{\rBase} the
+Dialogue: 1,0:00:04.08,0:00:04.84,Highlight,,0,0,0,,{\an7\pos(427.0,1440.0)\blur0.8}is {\rHighlight}the{\rBase}
+Dialogue: 0,0:00:03.02,0:00:05.50,Base,,0,0,0,,{\an7\pos(285.0,1534.0)}beginnings I
+Dialogue: 1,0:00:04.84,0:00:05.14,Highlight,,0,0,0,,{\an7\pos(285.0,1534.0)\blur0.8}{\rHighlight}beginnings{\rBase} I
+Dialogue: 1,0:00:05.32,0:00:05.50,Highlight,,0,0,0,,{\an7\pos(285.0,1534.0)\blur0.8}beginnings {\rHighlight}I{\rBase}
+Dialogue: 0,0:00:05.50,0:00:10.46,Base,,0,0,0,,{\an7\pos(383.5,1440.0)}think of
+Dialogue: 1,0:00:05.50,0:00:05.80,Highlight,,0,0,0,,{\an7\pos(383.5,1440.0)\blur0.8}{\rHighlight}think{\rBase} of
+Dialogue: 1,0:00:06.04,0:00:06.58,Highlight,,0,0,0,,{\an7\pos(383.5,1440.0)\blur0.8}think {\rHighlight}of{\rBase}
+Dialogue: 0,0:00:05.50,0:00:10.46,Base,,0,0,0,,{\an7\pos(232.5,1534.0)}bringing active
+Dialogue: 1,0:00:06.58,0:00:07.76,Highlight,,0,0,0,,{\an7\pos(232.5,1534.0)\blur0.8}{\rHighlight}bringing{\rBase} active
+Dialogue: 1,0:00:07.76,0:00:10.46,Highlight,,0,0,0,,{\an7\pos(232.5,1534.0)\blur0.8}bringing {\rHighlight}active{\rBase}
+Dialogue: 0,0:00:10.46,0:00:13.04,Base,,0,0,0,,{\an7\pos(134.5,1440.0)}equity management
+Dialogue: 1,0:00:10.46,0:00:11.22,Highlight,,0,0,0,,{\an7\pos(134.5,1440.0)\blur0.8}{\rHighlight}equity{\rBase} management
+Dialogue: 1,0:00:11.22,0:00:12.10,Highlight,,0,0,0,,{\an7\pos(134.5,1440.0)\blur0.8}equity {\rHighlight}management{\rBase}
+Dialogue: 0,0:00:10.46,0:00:13.04,Base,,0,0,0,,{\an7\pos(350.0,1534.0)}back into
+Dialogue: 1,0:00:12.20,0:00:12.64,Highlight,,0,0,0,,{\an7\pos(350.0,1534.0)\blur0.8}{\rHighlight}back{\rBase} into
+Dialogue: 1,0:00:12.64,0:00:13.04,Highlight,,0,0,0,,{\an7\pos(350.0,1534.0)\blur0.8}back {\rHighlight}into{\rBase}
+Dialogue: 0,0:00:13.04,0:00:15.68,Base,,0,0,0,,{\an7\pos(136.5,1534.0)}style because we're
+Dialogue: 1,0:00:13.04,0:00:13.50,Highlight,,0,0,0,,{\an7\pos(136.5,1534.0)\blur0.8}{\rHighlight}style{\rBase} because we're
+Dialogue: 1,0:00:13.50,0:00:14.70,Highlight,,0,0,0,,{\an7\pos(136.5,1534.0)\blur0.8}style {\rHighlight}because{\rBase} we're
+Dialogue: 1,0:00:14.70,0:00:15.68,Highlight,,0,0,0,,{\an7\pos(136.5,1534.0)\blur0.8}style because {\rHighlight}we're{\rBase}
+Dialogue: 0,0:00:15.68,0:00:18.52,Base,,0,0,0,,{\an7\pos(121.5,1440.0)}talking about events
+Dialogue: 1,0:00:15.68,0:00:16.08,Highlight,,0,0,0,,{\an7\pos(121.5,1440.0)\blur0.8}{\rHighlight}talking{\rBase} about events
+Dialogue: 1,0:00:16.08,0:00:16.64,Highlight,,0,0,0,,{\an7\pos(121.5,1440.0)\blur0.8}talking {\rHighlight}about{\rBase} events
+Dialogue: 1,0:00:16.64,0:00:17.18,Highlight,,0,0,0,,{\an7\pos(121.5,1440.0)\blur0.8}talking about {\rHighlight}events{\rBase}
+Dialogue: 0,0:00:15.68,0:00:18.52,Base,,0,0,0,,{\an7\pos(182.0,1534.0)}that should move
+Dialogue: 1,0:00:17.18,0:00:17.58,Highlight,,0,0,0,,{\an7\pos(182.0,1534.0)\blur0.8}{\rHighlight}that{\rBase} should move
+Dialogue: 1,0:00:17.58,0:00:17.98,Highlight,,0,0,0,,{\an7\pos(182.0,1534.0)\blur0.8}that {\rHighlight}should{\rBase} move
+Dialogue: 1,0:00:17.98,0:00:18.52,Highlight,,0,0,0,,{\an7\pos(182.0,1534.0)\blur0.8}that should {\rHighlight}move{\rBase}
+Dialogue: 0,0:00:18.52,0:00:19.02,Base,,0,0,0,,{\an7\pos(403.0,1534.0)}stocks
+Dialogue: 1,0:00:18.52,0:00:19.02,Highlight,,0,0,0,,{\an7\pos(403.0,1534.0)\blur0.8}{\rHighlight}stocks{\rBase}
+Dialogue: 0,0:00:19.10,0:00:20.26,Base,,0,0,0,,{\an7\pos(348.0,1440.0)}And if we
+Dialogue: 1,0:00:19.10,0:00:19.26,Highlight,,0,0,0,,{\an7\pos(348.0,1440.0)\blur0.8}{\rHighlight}And{\rBase} if we
+Dialogue: 1,0:00:19.26,0:00:19.30,Highlight,,0,0,0,,{\an7\pos(348.0,1440.0)\blur0.8}And {\rHighlight}if{\rBase} we
+Dialogue: 1,0:00:19.30,0:00:19.42,Highlight,,0,0,0,,{\an7\pos(348.0,1440.0)\blur0.8}And if {\rHighlight}we{\rBase}
+Dialogue: 0,0:00:19.10,0:00:20.26,Base,,0,0,0,,{\an7\pos(173.0,1534.0)}have more people
+Dialogue: 1,0:00:19.42,0:00:19.60,Highlight,,0,0,0,,{\an7\pos(173.0,1534.0)\blur0.8}{\rHighlight}have{\rBase} more people
+Dialogue: 1,0:00:19.60,0:00:19.84,Highlight,,0,0,0,,{\an7\pos(173.0,1534.0)\blur0.8}have {\rHighlight}more{\rBase} people
+Dialogue: 1,0:00:19.84,0:00:20.26,Highlight,,0,0,0,,{\an7\pos(173.0,1534.0)\blur0.8}have more {\rHighlight}people{\rBase}
+Dialogue: 0,0:00:20.26,0:00:22.74,Base,,0,0,0,,{\an7\pos(316.5,1440.0)}looking for
+Dialogue: 1,0:00:20.26,0:00:20.90,Highlight,,0,0,0,,{\an7\pos(316.5,1440.0)\blur0.8}{\rHighlight}looking{\rBase} for
+Dialogue: 1,0:00:20.90,0:00:21.96,Highlight,,0,0,0,,{\an7\pos(316.5,1440.0)\blur0.8}looking {\rHighlight}for{\rBase}
+Dialogue: 0,0:00:20.26,0:00:22.74,Base,,0,0,0,,{\an7\pos(412.5,1534.0)}and at
+Dialogue: 1,0:00:21.96,0:00:22.40,Highlight,,0,0,0,,{\an7\pos(412.5,1534.0)\blur0.8}{\rHighlight}and{\rBase} at
+Dialogue: 1,0:00:22.40,0:00:22.74,Highlight,,0,0,0,,{\an7\pos(412.5,1534.0)\blur0.8}and {\rHighlight}at{\rBase}
+Dialogue: 0,0:00:22.74,0:00:25.26,Base,,0,0,0,,{\an7\pos(275.5,1440.0)}those events
+Dialogue: 1,0:00:22.74,0:00:23.08,Highlight,,0,0,0,,{\an7\pos(275.5,1440.0)\blur0.8}{\rHighlight}those{\rBase} events
+Dialogue: 1,0:00:23.08,0:00:23.52,Highlight,,0,0,0,,{\an7\pos(275.5,1440.0)\blur0.8}those {\rHighlight}events{\rBase}
+Dialogue: 0,0:00:22.74,0:00:25.26,Base,,0,0,0,,{\an7\pos(217.5,1534.0)}they're going to
+Dialogue: 1,0:00:23.62,0:00:24.94,Highlight,,0,0,0,,{\an7\pos(217.5,1534.0)\blur0.8}{\rHighlight}they're{\rBase} going to
+Dialogue: 1,0:00:24.94,0:00:25.08,Highlight,,0,0,0,,{\an7\pos(217.5,1534.0)\blur0.8}they're {\rHighlight}going{\rBase} to
+Dialogue: 1,0:00:25.08,0:00:25.26,Highlight,,0,0,0,,{\an7\pos(217.5,1534.0)\blur0.8}they're going {\rHighlight}to{\rBase}
+Dialogue: 0,0:00:25.26,0:00:27.72,Base,,0,0,0,,{\an7\pos(271.0,1440.0)}be interested
+Dialogue: 1,0:00:25.26,0:00:25.68,Highlight,,0,0,0,,{\an7\pos(271.0,1440.0)\blur0.8}{\rHighlight}be{\rBase} interested
+Dialogue: 1,0:00:25.68,0:00:25.96,Highlight,,0,0,0,,{\an7\pos(271.0,1440.0)\blur0.8}be {\rHighlight}interested{\rBase}
+Dialogue: 0,0:00:25.26,0:00:27.72,Base,,0,0,0,,{\an7\pos(249.0,1534.0)}in investing in
+Dialogue: 1,0:00:25.96,0:00:26.64,Highlight,,0,0,0,,{\an7\pos(249.0,1534.0)\blur0.8}{\rHighlight}in{\rBase} investing in
+Dialogue: 1,0:00:26.64,0:00:27.02,Highlight,,0,0,0,,{\an7\pos(249.0,1534.0)\blur0.8}in {\rHighlight}investing{\rBase} in
+Dialogue: 1,0:00:27.02,0:00:27.72,Highlight,,0,0,0,,{\an7\pos(249.0,1534.0)\blur0.8}in investing {\rHighlight}in{\rBase}
+Dialogue: 0,0:00:27.72,0:00:30.82,Base,,0,0,0,,{\an7\pos(374.5,1440.0)}some of
+Dialogue: 1,0:00:27.72,0:00:28.40,Highlight,,0,0,0,,{\an7\pos(374.5,1440.0)\blur0.8}{\rHighlight}some{\rBase} of
+Dialogue: 1,0:00:28.40,0:00:28.92,Highlight,,0,0,0,,{\an7\pos(374.5,1440.0)\blur0.8}some {\rHighlight}of{\rBase}
+Dialogue: 0,0:00:27.72,0:00:30.82,Base,,0,0,0,,{\an7\pos(138.5,1534.0)}these opportunities
+Dialogue: 1,0:00:29.16,0:00:30.04,Highlight,,0,0,0,,{\an7\pos(138.5,1534.0)\blur0.8}{\rHighlight}these{\rBase} opportunities
+Dialogue: 1,0:00:30.04,0:00:30.82,Highlight,,0,0,0,,{\an7\pos(138.5,1534.0)\blur0.8}these {\rHighlight}opportunities{\rBase}
+Dialogue: 0,0:00:30.82,0:00:33.38,Base,,0,0,0,,{\an7\pos(175.0,1534.0)}and maybe taking
+Dialogue: 1,0:00:30.82,0:00:32.16,Highlight,,0,0,0,,{\an7\pos(175.0,1534.0)\blur0.8}{\rHighlight}and{\rBase} maybe taking
+Dialogue: 1,0:00:32.16,0:00:32.64,Highlight,,0,0,0,,{\an7\pos(175.0,1534.0)\blur0.8}and {\rHighlight}maybe{\rBase} taking
+Dialogue: 1,0:00:32.64,0:00:33.38,Highlight,,0,0,0,,{\an7\pos(175.0,1534.0)\blur0.8}and maybe {\rHighlight}taking{\rBase}
+Dialogue: 0,0:00:33.38,0:00:35.00,Base,,0,0,0,,{\an7\pos(350.0,1440.0)}a little bit
+Dialogue: 1,0:00:33.38,0:00:33.66,Highlight,,0,0,0,,{\an7\pos(350.0,1440.0)\blur0.8}{\rHighlight}a{\rBase} little bit
+Dialogue: 1,0:00:33.66,0:00:33.82,Highlight,,0,0,0,,{\an7\pos(350.0,1440.0)\blur0.8}a {\rHighlight}little{\rBase} bit
+Dialogue: 1,0:00:33.82,0:00:34.08,Highlight,,0,0,0,,{\an7\pos(350.0,1440.0)\blur0.8}a little {\rHighlight}bit{\rBase}
+Dialogue: 0,0:00:33.38,0:00:35.00,Base,,0,0,0,,{\an7\pos(328.0,1534.0)}out of that
+Dialogue: 1,0:00:34.08,0:00:34.24,Highlight,,0,0,0,,{\an7\pos(328.0,1534.0)\blur0.8}{\rHighlight}out{\rBase} of that
+Dialogue: 1,0:00:34.24,0:00:34.42,Highlight,,0,0,0,,{\an7\pos(328.0,1534.0)\blur0.8}out {\rHighlight}of{\rBase} that
+Dialogue: 1,0:00:34.42,0:00:35.00,Highlight,,0,0,0,,{\an7\pos(328.0,1534.0)\blur0.8}out of {\rHighlight}that{\rBase}
+Dialogue: 0,0:00:35.00,0:00:38.56,Base,,0,0,0,,{\an7\pos(194.0,1440.0)}passive portfolio
+Dialogue: 1,0:00:35.00,0:00:35.24,Highlight,,0,0,0,,{\an7\pos(194.0,1440.0)\blur0.8}{\rHighlight}passive{\rBase} portfolio
+Dialogue: 1,0:00:35.24,0:00:35.90,Highlight,,0,0,0,,{\an7\pos(194.0,1440.0)\blur0.8}passive {\rHighlight}portfolio{\rBase}
+Dialogue: 0,0:00:35.00,0:00:38.56,Base,,0,0,0,,{\an7\pos(323.5,1534.0)}that is tied
+Dialogue: 1,0:00:35.90,0:00:36.38,Highlight,,0,0,0,,{\an7\pos(323.5,1534.0)\blur0.8}{\rHighlight}that{\rBase} is tied
+Dialogue: 1,0:00:36.38,0:00:36.86,Highlight,,0,0,0,,{\an7\pos(323.5,1534.0)\blur0.8}that {\rHighlight}is{\rBase} tied
+Dialogue: 1,0:00:36.86,0:00:38.56,Highlight,,0,0,0,,{\an7\pos(323.5,1534.0)\blur0.8}that is {\rHighlight}tied{\rBase}
+Dialogue: 0,0:00:38.56,0:00:40.14,Base,,0,0,0,,{\an7\pos(249.0,1534.0)}to the indexes
+Dialogue: 1,0:00:38.56,0:00:38.92,Highlight,,0,0,0,,{\an7\pos(249.0,1534.0)\blur0.8}{\rHighlight}to{\rBase} the indexes
+Dialogue: 1,0:00:38.92,0:00:39.36,Highlight,,0,0,0,,{\an7\pos(249.0,1534.0)\blur0.8}to {\rHighlight}the{\rBase} indexes
+Dialogue: 1,0:00:39.46,0:00:40.14,Highlight,,0,0,0,,{\an7\pos(249.0,1534.0)\blur0.8}to the {\rHighlight}indexes{\rBase}
+Dialogue: 0,0:00:40.26,0:00:42.74,Base,,0,0,0,,{\an7\pos(281.0,1440.0)}So I'm pretty
+Dialogue: 1,0:00:40.26,0:00:40.52,Highlight,,0,0,0,,{\an7\pos(281.0,1440.0)\blur0.8}{\rHighlight}So{\rBase} I'm pretty
+Dialogue: 1,0:00:40.52,0:00:41.34,Highlight,,0,0,0,,{\an7\pos(281.0,1440.0)\blur0.8}So {\rHighlight}I'm{\rBase} pretty
+Dialogue: 1,0:00:41.34,0:00:41.78,Highlight,,0,0,0,,{\an7\pos(281.0,1440.0)\blur0.8}So I'm {\rHighlight}pretty{\rBase}
+Dialogue: 0,0:00:40.26,0:00:42.74,Base,,0,0,0,,{\an7\pos(172.0,1534.0)}excited about this
+Dialogue: 1,0:00:41.78,0:00:42.14,Highlight,,0,0,0,,{\an7\pos(172.0,1534.0)\blur0.8}{\rHighlight}excited{\rBase} about this
+Dialogue: 1,0:00:42.14,0:00:42.44,Highlight,,0,0,0,,{\an7\pos(172.0,1534.0)\blur0.8}excited {\rHighlight}about{\rBase} this
+Dialogue: 1,0:00:42.44,0:00:42.74,Highlight,,0,0,0,,{\an7\pos(172.0,1534.0)\blur0.8}excited about {\rHighlight}this{\rBase}
+Dialogue: 0,0:00:43.20,0:00:45.54,Base,,0,0,0,,{\an7\pos(285.0,1440.0)}could be the
+Dialogue: 1,0:00:43.20,0:00:43.90,Highlight,,0,0,0,,{\an7\pos(285.0,1440.0)\blur0.8}{\rHighlight}could{\rBase} be the
+Dialogue: 1,0:00:43.90,0:00:44.12,Highlight,,0,0,0,,{\an7\pos(285.0,1440.0)\blur0.8}could {\rHighlight}be{\rBase} the
+Dialogue: 1,0:00:44.12,0:00:44.46,Highlight,,0,0,0,,{\an7\pos(285.0,1440.0)\blur0.8}could be {\rHighlight}the{\rBase}
+Dialogue: 0,0:00:43.20,0:00:45.54,Base,,0,0,0,,{\an7\pos(244.0,1534.0)}beginning of a
+Dialogue: 1,0:00:44.46,0:00:44.88,Highlight,,0,0,0,,{\an7\pos(244.0,1534.0)\blur0.8}{\rHighlight}beginning{\rBase} of a
+Dialogue: 1,0:00:44.88,0:00:45.26,Highlight,,0,0,0,,{\an7\pos(244.0,1534.0)\blur0.8}beginning {\rHighlight}of{\rBase} a
+Dialogue: 1,0:00:45.26,0:00:45.54,Highlight,,0,0,0,,{\an7\pos(244.0,1534.0)\blur0.8}beginning of {\rHighlight}a{\rBase}
+Dialogue: 0,0:00:45.54,0:00:48.08,Base,,0,0,0,,{\an7\pos(122.5,1440.0)}resurgence in active
+Dialogue: 1,0:00:45.54,0:00:45.88,Highlight,,0,0,0,,{\an7\pos(122.5,1440.0)\blur0.8}{\rHighlight}resurgence{\rBase} in active
+Dialogue: 1,0:00:45.88,0:00:46.48,Highlight,,0,0,0,,{\an7\pos(122.5,1440.0)\blur0.8}resurgence {\rHighlight}in{\rBase} active
+Dialogue: 1,0:00:46.48,0:00:46.88,Highlight,,0,0,0,,{\an7\pos(122.5,1440.0)\blur0.8}resurgence in {\rHighlight}active{\rBase}
+Dialogue: 0,0:00:45.54,0:00:48.08,Base,,0,0,0,,{\an7\pos(19.6,1534.0)}equity management Yeah
+Dialogue: 1,0:00:46.88,0:00:47.20,Highlight,,0,0,0,,{\an7\pos(19.6,1534.0)\blur0.8}{\rHighlight}equity{\rBase} management Yeah
+Dialogue: 1,0:00:47.20,0:00:47.72,Highlight,,0,0,0,,{\an7\pos(19.6,1534.0)\blur0.8}equity {\rHighlight}management{\rBase} Yeah
+Dialogue: 1,0:00:47.82,0:00:48.08,Highlight,,0,0,0,,{\an7\pos(19.6,1534.0)\blur0.8}equity management {\rHighlight}Yeah{\rBase}
+Dialogue: 0,0:00:48.22,0:00:48.76,Base,,0,0,0,,{\an7\pos(326.0,1534.0)}absolutely
+Dialogue: 1,0:00:48.22,0:00:48.76,Highlight,,0,0,0,,{\an7\pos(326.0,1534.0)\blur0.8}{\rHighlight}absolutely{\rBase}
+Dialogue: 0,0:00:49.06,0:00:50.88,Base,,0,0,0,,{\an7\pos(316.5,1440.0)}And I think
+Dialogue: 1,0:00:49.06,0:00:49.24,Highlight,,0,0,0,,{\an7\pos(316.5,1440.0)\blur0.8}{\rHighlight}And{\rBase} I think
+Dialogue: 1,0:00:49.24,0:00:49.42,Highlight,,0,0,0,,{\an7\pos(316.5,1440.0)\blur0.8}And {\rHighlight}I{\rBase} think
+Dialogue: 1,0:00:49.42,0:00:49.60,Highlight,,0,0,0,,{\an7\pos(316.5,1440.0)\blur0.8}And I {\rHighlight}think{\rBase}
+Dialogue: 0,0:00:49.06,0:00:50.88,Base,,0,0,0,,{\an7\pos(172.0,1534.0)}when we've about
+Dialogue: 1,0:00:49.60,0:00:50.02,Highlight,,0,0,0,,{\an7\pos(172.0,1534.0)\blur0.8}{\rHighlight}when{\rBase} we've about
+Dialogue: 1,0:00:50.02,0:00:50.56,Highlight,,0,0,0,,{\an7\pos(172.0,1534.0)\blur0.8}when {\rHighlight}we've{\rBase} about
+Dialogue: 1,0:00:50.56,0:00:50.88,Highlight,,0,0,0,,{\an7\pos(172.0,1534.0)\blur0.8}when we've {\rHighlight}about{\rBase}
+Dialogue: 0,0:00:50.88,0:00:51.22,Base,,0,0,0,,{\an7\pos(513.5,1534.0)}it
+Dialogue: 1,0:00:50.88,0:00:51.22,Highlight,,0,0,0,,{\an7\pos(513.5,1534.0)\blur0.8}{\rHighlight}it{\rBase}

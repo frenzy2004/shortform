@@ -1,0 +1,39 @@
+{
+  "decisions": [
+    {
+      "clip_id": "001",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "reason": "No trim was applied as the clip is already short at 52.2s, and any meaningful trim would violate the minimum duration requirement.",
+      "thought": "The clip starts with its hook, so the beginning is strong. The end transitions to a new topic, which is not ideal, but cutting it would make the clip shorter than the 50-second minimum. Therefore, leaving it untrimmed is the best option to satisfy all constraints."
+    },
+    {
+      "clip_id": "002",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "reason": "The clip presents a strong claim followed by a relevant, challenging question, creating a self-contained narrative that works well without trims.",
+      "thought": "I considered trimming the clip after the speaker's prediction at 38.02s, but this would remove the compelling narrative tension created by the interviewer's follow-up question about job losses. The clip is stronger as a complete thought-and-response unit."
+    },
+    {
+      "clip_id": "004",
+      "trim_start_sec": 3.77,
+      "trim_end_sec": 0.0,
+      "reason": "Trimmed 3.77s of introductory conversational filler to start closer to the main question about 2026 stock ideas.",
+      "thought": "The ideal start is at 12.23s ('so the top three stocks...'), but this would make the clip too short. Trimming 3.77s is a good compromise that removes confusing lead-in context while respecting the duration constraints. The end was not trimmed because there was no clean sentence boundary available in the provided segments."
+    },
+    {
+      "clip_id": "005",
+      "trim_start_sec": 9.38,
+      "trim_end_sec": 0.78,
+      "reason": "Trimmed 9.38s of slow setup to start directly on the hook ('But today... we have five') and cut the final 0.78s to remove a dangling, incomplete phrase.",
+      "thought": "The clip's opening is significantly strengthened by jumping directly to the hook at 9.38s. The original ending trailed off mid-sentence, so trimming to the last segment boundary at 74.62s provides a cleaner stop on the key takeaway of '12% of GDP'."
+    },
+    {
+      "clip_id": "006",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "reason": "The clip is already very tight at 51.7s, starts with a strong hook, and ends with a concise summary, so no trims are necessary.",
+      "thought": "This clip is already an excellent short-form video. It has a great structure: a bold claim, supporting evidence, and a concluding summary that reinforces the main point. Trimming is not possible due to duration constraints and would not improve the clip."
+    }
+  ]
+}

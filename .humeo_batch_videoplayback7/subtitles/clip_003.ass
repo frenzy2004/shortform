@@ -1,0 +1,65 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Base,Arial,86,&H00FFFFFF,&H000000FF,&H00101010,&H00000000,-1,0,0,0,100,100,-1,0,1,4,0,8,0,0,0,0
+Style: Highlight,Arial,86,&H00FFFFFF,&H000000FF,&H00000000,&H00F65C8B,-1,0,0,0,100,100,-1,0,4,0,10,7,0,0,0,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.04,0:00:02.66,Base,,0,0,0,,{\an7\pos(263.5,1440.0)}it is shocking
+Dialogue: 0,0:00:00.04,0:00:02.66,Base,,0,0,0,,{\an7\pos(316.5,1534.0)}to see how
+Dialogue: 1,0:00:01.50,0:00:02.66,Highlight,,0,0,0,,{\an7\pos(422.5,1534.0)\blur0.8}see how
+Dialogue: 0,0:00:02.72,0:00:05.22,Base,,0,0,0,,{\an7\pos(162.5,1440.0)}regulation stunted
+Dialogue: 1,0:00:02.72,0:00:04.56,Highlight,,0,0,0,,{\an7\pos(162.5,1440.0)\blur0.8}regulation stunted
+Dialogue: 0,0:00:02.72,0:00:05.22,Base,,0,0,0,,{\an7\pos(319.0,1534.0)}the growth
+Dialogue: 0,0:00:05.32,0:00:07.84,Base,,0,0,0,,{\an7\pos(283.0,1440.0)}of nuclear in
+Dialogue: 0,0:00:05.32,0:00:07.84,Base,,0,0,0,,{\an7\pos(278.0,1534.0)}the mid-'70s.
+Dialogue: 1,0:00:06.68,0:00:07.84,Highlight,,0,0,0,,{\an7\pos(278.0,1534.0)\blur0.8}the mid-'70s.
+Dialogue: 0,0:00:07.94,0:00:10.16,Base,,0,0,0,,{\an7\pos(292.5,1440.0)}If regulation
+Dialogue: 0,0:00:07.94,0:00:10.16,Base,,0,0,0,,{\an7\pos(383.5,1534.0)}had not
+Dialogue: 1,0:00:09.52,0:00:10.16,Highlight,,0,0,0,,{\an7\pos(383.5,1534.0)\blur0.8}had not
+Dialogue: 0,0:00:10.40,0:00:12.74,Base,,0,0,0,,{\an7\pos(294.5,1440.0)}stopped the
+Dialogue: 0,0:00:10.40,0:00:12.74,Base,,0,0,0,,{\an7\pos(266.0,1534.0)}cost declines
+Dialogue: 1,0:00:11.30,0:00:12.74,Highlight,,0,0,0,,{\an7\pos(266.0,1534.0)\blur0.8}cost declines
+Dialogue: 0,0:00:13.20,0:00:15.88,Base,,0,0,0,,{\an7\pos(242.0,1440.0)}for developing
+Dialogue: 0,0:00:13.20,0:00:15.88,Base,,0,0,0,,{\an7\pos(247.0,1534.0)}nuclear plants
+Dialogue: 1,0:00:14.24,0:00:15.88,Highlight,,0,0,0,,{\an7\pos(247.0,1534.0)\blur0.8}nuclear plants
+Dialogue: 0,0:00:15.94,0:00:18.61,Base,,0,0,0,,{\an7\pos(199.0,1440.0)}from continuing,
+Dialogue: 0,0:00:15.94,0:00:18.61,Base,,0,0,0,,{\an7\pos(213.5,1534.0)}electricity costs
+Dialogue: 1,0:00:17.17,0:00:18.61,Highlight,,0,0,0,,{\an7\pos(213.5,1534.0)\blur0.8}electricity costs
+Dialogue: 0,0:00:18.67,0:00:22.03,Base,,0,0,0,,{\an7\pos(287.5,1440.0)}today would
+Dialogue: 0,0:00:18.67,0:00:22.03,Base,,0,0,0,,{\an7\pos(391.5,1534.0)}be 40%
+Dialogue: 1,0:00:20.23,0:00:22.03,Highlight,,0,0,0,,{\an7\pos(391.5,1534.0)\blur0.8}be 40%
+Dialogue: 0,0:00:22.15,0:00:23.59,Base,,0,0,0,,{\an7\pos(324.0,1440.0)}lower than
+Dialogue: 1,0:00:22.15,0:00:22.89,Highlight,,0,0,0,,{\an7\pos(324.0,1440.0)\blur0.8}lower than
+Dialogue: 0,0:00:22.15,0:00:23.59,Base,,0,0,0,,{\an7\pos(264.0,1534.0)}they are now.
+Dialogue: 0,0:00:23.69,0:00:26.07,Base,,0,0,0,,{\an7\pos(305.0,1440.0)}So we have
+Dialogue: 0,0:00:23.69,0:00:26.07,Base,,0,0,0,,{\an7\pos(217.5,1534.0)}high hopes that
+Dialogue: 1,0:00:24.81,0:00:25.47,Highlight,,0,0,0,,{\an7\pos(217.5,1534.0)\blur0.8}high hopes
+Dialogue: 0,0:00:26.19,0:00:28.33,Base,,0,0,0,,{\an7\pos(199.5,1440.0)}nuclear power is
+Dialogue: 1,0:00:26.19,0:00:27.11,Highlight,,0,0,0,,{\an7\pos(199.5,1440.0)\blur0.8}nuclear power
+Dialogue: 0,0:00:26.19,0:00:28.33,Base,,0,0,0,,{\an7\pos(268.0,1534.0)}going to help
+Dialogue: 0,0:00:28.43,0:00:30.59,Base,,0,0,0,,{\an7\pos(227.5,1440.0)}us, once again,
+Dialogue: 1,0:00:28.43,0:00:29.09,Highlight,,0,0,0,,{\an7\pos(227.5,1440.0)\blur0.8}us, once
+Dialogue: 0,0:00:28.43,0:00:30.59,Base,,0,0,0,,{\an7\pos(259.0,1534.0)}as they scale,
+Dialogue: 0,0:00:31.13,0:00:33.85,Base,,0,0,0,,{\an7\pos(235.0,1440.0)}drive down the
+Dialogue: 1,0:00:31.13,0:00:32.03,Highlight,,0,0,0,,{\an7\pos(235.0,1440.0)\blur0.8}drive down
+Dialogue: 0,0:00:31.13,0:00:33.85,Base,,0,0,0,,{\an7\pos(184.5,1534.0)}cost of electricity
+Dialogue: 0,0:00:33.95,0:00:36.97,Base,,0,0,0,,{\an7\pos(364.5,1440.0)}and be a
+Dialogue: 0,0:00:33.95,0:00:36.97,Base,,0,0,0,,{\an7\pos(223.0,1534.0)}counterforce to
+Dialogue: 1,0:00:34.97,0:00:36.97,Highlight,,0,0,0,,{\an7\pos(223.0,1534.0)\blur0.8}counterforce to
+Dialogue: 0,0:00:37.03,0:00:39.30,Base,,0,0,0,,{\an7\pos(182.0,1440.0)}the demands that
+Dialogue: 1,0:00:37.03,0:00:37.91,Highlight,,0,0,0,,{\an7\pos(182.0,1440.0)\blur0.8}the demands
+Dialogue: 0,0:00:37.03,0:00:39.30,Base,,0,0,0,,{\an7\pos(307.0,1534.0)}AI and data
+Dialogue: 0,0:00:39.37,0:00:41.81,Base,,0,0,0,,{\an7\pos(146.5,1534.0)}centers are placing
+Dialogue: 1,0:00:39.37,0:00:40.63,Highlight,,0,0,0,,{\an7\pos(146.5,1534.0)\blur0.8}centers are
+Dialogue: 0,0:00:41.91,0:00:43.69,Base,,0,0,0,,{\an7\pos(312.0,1440.0)}on our grid
+Dialogue: 1,0:00:42.23,0:00:42.99,Highlight,,0,0,0,,{\an7\pos(442.0,1440.0)\blur0.8}our grid
+Dialogue: 0,0:00:41.91,0:00:43.69,Base,,0,0,0,,{\an7\pos(333.5,1534.0)}right now.

@@ -1,0 +1,33 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,48,&H00FFFFFF,&H000000FF,&H00000000,&H70000000,-1,0,0,0,100,100,0,0,4,0,0,2,60,60,160,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.02,Default,,0,0,0,,users What we discovered
+Dialogue: 0,0:00:01.02,0:00:02.38,Default,,0,0,0,,was that it took
+Dialogue: 0,0:00:02.38,0:00:03.60,Default,,0,0,0,,20 years for the
+Dialogue: 0,0:00:03.60,0:00:04.38,Default,,0,0,0,,first two and a
+Dialogue: 0,0:00:04.38,0:00:05.74,Default,,0,0,0,,billion internet users to
+Dialogue: 0,0:00:05.74,0:00:07.02,Default,,0,0,0,,come online And it
+Dialogue: 0,0:00:07.02,0:00:07.84,Default,,0,0,0,,only took 10 years
+Dialogue: 0,0:00:07.84,0:00:08.40,Default,,0,0,0,,for the next two
+Dialogue: 0,0:00:08.40,0:00:08.94,Default,,0,0,0,,and a billion to
+Dialogue: 0,0:00:08.94,0:00:10.12,Default,,0,0,0,,come online Now the
+Dialogue: 0,0:00:10.12,0:00:11.82,Default,,0,0,0,,next three billion at
+Dialogue: 0,0:00:11.82,0:00:12.54,Default,,0,0,0,,the rate kind of
+Dialogue: 0,0:00:12.54,0:00:14.26,Default,,0,0,0,,like prices are data
+Dialogue: 0,0:00:14.26,0:00:15.32,Default,,0,0,0,,prices are how cheap
+Dialogue: 0,0:00:15.32,0:00:16.16,Default,,0,0,0,,smartphones are coming And
+Dialogue: 0,0:00:16.16,0:00:17.02,Default,,0,0,0,,so and forth the
+Dialogue: 0,0:00:17.02,0:00:18.14,Default,,0,0,0,,next three billion are
+Dialogue: 0,0:00:18.14,0:00:19.22,Default,,0,0,0,,coming online as we
+Dialogue: 0,0:00:19.22,0:00:20.00,Default,,0,0,0,,speak right now

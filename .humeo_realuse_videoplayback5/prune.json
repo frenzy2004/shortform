@@ -1,0 +1,29 @@
+{
+  "clips": [
+    {
+      "clip_id": "001",
+      "trim_start_sec": 4.399999999999999,
+      "trim_end_sec": 0.0
+    },
+    {
+      "clip_id": "002",
+      "trim_start_sec": 3.8999999999999773,
+      "trim_end_sec": 0.0
+    },
+    {
+      "clip_id": "003",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0
+    },
+    {
+      "clip_id": "004",
+      "trim_start_sec": 16.783999999999992,
+      "trim_end_sec": 0.0
+    },
+    {
+      "clip_id": "005",
+      "trim_start_sec": 5.43,
+      "trim_end_sec": 0.0
+    }
+  ]
+}

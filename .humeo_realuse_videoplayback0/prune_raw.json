@@ -1,0 +1,46 @@
+{
+  "decisions": [
+    {
+      "clip_id": "001",
+      "trim_start_sec": 0.16,
+      "trim_end_sec": 0.0,
+      "reason": "Removed the 'sneak preview' filler at the start to lead directly with the market prediction.",
+      "thought": "The clip starts with a conversational filler that adds no value. Starting at 0.16s allows the clip to begin with the core claim about the $5 trillion market potential."
+    },
+    {
+      "clip_id": "002",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 5.52,
+      "reason": "Removed the trailing conversational filler 'Yeah, absolutely. And I think when we've talked about it,' which starts a new, unrelated thought.",
+      "thought": "The clip ends on a clean summary of the resurgence of active management. Cutting the final conversational tag keeps the focus tight on the main argument."
+    },
+    {
+      "clip_id": "003",
+      "trim_start_sec": 0.88,
+      "trim_end_sec": 0.04,
+      "reason": "Removed the leading conversational fragment and the trailing empty segment.",
+      "thought": "The clip now starts directly with the definition of prediction markets as the purest form of risk, which is a strong hook."
+    },
+    {
+      "clip_id": "004",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "reason": "No trimming required as the clip is already concise and the hook is well-positioned.",
+      "thought": "The clip effectively explains the debt-to-equity comparison within the 59-second window. Trimming would remove necessary context for the chart explanation."
+    },
+    {
+      "clip_id": "005",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.03,
+      "reason": "Removed the final empty segment.",
+      "thought": "The clip provides a strong, data-driven argument about productivity. The current length is appropriate for the depth of the analysis provided."
+    },
+    {
+      "clip_id": "006",
+      "trim_start_sec": 0.03,
+      "trim_end_sec": 0.0,
+      "reason": "Removed the initial 'And' to start the sentence with a stronger subject.",
+      "thought": "Starting with 'We saw this in the 50 years...' provides better immediate context for the historical comparison being made."
+    }
+  ]
+}

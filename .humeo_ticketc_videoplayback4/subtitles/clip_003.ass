@@ -1,0 +1,75 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,48,&H00FFFFFF,&H000000FF,&H00000000,&H70000000,-1,0,0,0,100,100,0,0,4,0,0,2,60,60,160,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.01,0:00:00.59,Default,,0,0,0,,Yeah I mean you
+Dialogue: 0,0:00:00.59,0:00:02.01,Default,,0,0,0,,know I think how
+Dialogue: 0,0:00:02.01,0:00:03.11,Default,,0,0,0,,we think about that
+Dialogue: 0,0:00:03.11,0:00:05.41,Default,,0,0,0,,is you as we've
+Dialogue: 0,0:00:05.41,0:00:07.27,Default,,0,0,0,,better and models there's
+Dialogue: 0,0:00:07.27,0:00:08.61,Default,,0,0,0,,been a kind of
+Dialogue: 0,0:00:08.61,0:00:10.81,Default,,0,0,0,,relationship not only between
+Dialogue: 0,0:00:10.81,0:00:11.61,Default,,0,0,0,,how much compute you
+Dialogue: 0,0:00:11.61,0:00:12.87,Default,,0,0,0,,put into the and
+Dialogue: 0,0:00:12.87,0:00:14.41,Default,,0,0,0,,how cognitively it is
+Dialogue: 0,0:00:14.67,0:00:16.11,Default,,0,0,0,,but between how cognitively
+Dialogue: 0,0:00:16.11,0:00:17.35,Default,,0,0,0,,it is and how
+Dialogue: 0,0:00:17.35,0:00:18.15,Default,,0,0,0,,much revenue it's able
+Dialogue: 0,0:00:18.15,0:00:19.25,Default,,0,0,0,,to So our revenue
+Dialogue: 0,0:00:19.25,0:00:20.85,Default,,0,0,0,,has 10x in the
+Dialogue: 0,0:00:20.85,0:00:21.77,Default,,0,0,0,,last three years from
+Dialogue: 0,0:00:21.77,0:00:22.73,Default,,0,0,0,,zero to 100 million
+Dialogue: 0,0:00:22.73,0:00:24.59,Default,,0,0,0,,in 2023 100 million
+Dialogue: 0,0:00:24.59,0:00:25.65,Default,,0,0,0,,to a billion in
+Dialogue: 0,0:00:25.65,0:00:27.09,Default,,0,0,0,,2024 and 1 billion
+Dialogue: 0,0:00:27.09,0:00:28.03,Default,,0,0,0,,to 10 billion in
+Dialogue: 0,0:00:28.03,0:00:29.47,Default,,0,0,0,,2025 And so those
+Dialogue: 0,0:00:29.47,0:00:30.99,Default,,0,0,0,,revenue numbers you I
+Dialogue: 0,0:00:30.99,0:00:31.59,Default,,0,0,0,,don't know if that
+Dialogue: 0,0:00:31.59,0:00:32.71,Default,,0,0,0,,curve will literally continue
+Dialogue: 0,0:00:32.85,0:00:33.47,Default,,0,0,0,,It would be crazy
+Dialogue: 0,0:00:33.47,0:00:35.07,Default,,0,0,0,,if it did But
+Dialogue: 0,0:00:35.07,0:00:36.03,Default,,0,0,0,,those numbers are starting
+Dialogue: 0,0:00:36.03,0:00:37.23,Default,,0,0,0,,to get not too
+Dialogue: 0,0:00:37.23,0:00:38.93,Default,,0,0,0,,far from you the
+Dialogue: 0,0:00:38.93,0:00:40.59,Default,,0,0,0,,scale of the companies
+Dialogue: 0,0:00:40.59,0:00:41.35,Default,,0,0,0,,in the world So
+Dialogue: 0,0:00:41.35,0:00:43.53,Default,,0,0,0,,there's always uncertainty You
+Dialogue: 0,0:00:43.53,0:00:44.25,Default,,0,0,0,,we're trying to bootstrap
+Dialogue: 0,0:00:44.25,0:00:45.55,Default,,0,0,0,,this from nothing It's
+Dialogue: 0,0:00:45.55,0:00:46.91,Default,,0,0,0,,a crazy thing But
+Dialogue: 0,0:00:46.91,0:00:48.57,Default,,0,0,0,,I have confidence that
+Dialogue: 0,0:00:48.57,0:00:49.79,Default,,0,0,0,,if we're able to
+Dialogue: 0,0:00:49.79,0:00:51.29,Default,,0,0,0,,the best models in
+Dialogue: 0,0:00:51.29,0:00:52.05,Default,,0,0,0,,the things that we
+Dialogue: 0,0:00:52.05,0:00:54.63,Default,,0,0,0,,focus on then I
+Dialogue: 0,0:00:54.63,0:00:55.41,Default,,0,0,0,,think things will go
+Dialogue: 0,0:00:55.41,0:00:56.83,Default,,0,0,0,,well And you I
+Dialogue: 0,0:00:56.83,0:00:57.95,Default,,0,0,0,,will generally say you
+Dialogue: 0,0:00:57.95,0:00:58.75,Default,,0,0,0,,I think it's been
+Dialogue: 0,0:00:58.75,0:01:00.01,Default,,0,0,0,,a good year for
+Dialogue: 0,0:01:00.01,0:01:01.71,Default,,0,0,0,,both Google and Entropic
+Dialogue: 0,0:01:02.03,0:01:02.87,Default,,0,0,0,,And I think the
+Dialogue: 0,0:01:02.87,0:01:03.81,Default,,0,0,0,,thing we actually have
+Dialogue: 0,0:01:03.81,0:01:06.09,Default,,0,0,0,,in is that they're
+Dialogue: 0,0:01:06.09,0:01:08.03,Default,,0,0,0,,both kind of companies
+Dialogue: 0,0:01:08.03,0:01:09.01,Default,,0,0,0,,that are you or
+Dialogue: 0,0:01:09.01,0:01:09.85,Default,,0,0,0,,the research part of
+Dialogue: 0,0:01:09.85,0:01:10.97,Default,,0,0,0,,the company that are
+Dialogue: 0,0:01:10.97,0:01:12.73,Default,,0,0,0,,kind of by who
+Dialogue: 0,0:01:12.73,0:01:14.25,Default,,0,0,0,,focus on the who
+Dialogue: 0,0:01:14.25,0:01:16.73,Default,,0,0,0,,focus on important problems
+Dialogue: 0,0:01:16.73,0:01:17.61,Default,,0,0,0,,in the right who
+Dialogue: 0,0:01:17.61,0:01:18.77,Default,,0,0,0,,have these kind hard
+Dialogue: 0,0:01:18.77,0:01:21.23,Default,,0,0,0,,scientific problems as a
+Dialogue: 0,0:01:21.23,0:01:21.70,Default,,0,0,0,,North Star

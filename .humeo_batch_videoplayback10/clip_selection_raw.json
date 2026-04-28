@@ -1,0 +1,388 @@
+{
+  "clips": [
+    {
+      "clip_id": "001",
+      "topic": "AI will cause an entrepreneurial explosion",
+      "start_time_sec": 503.4,
+      "end_time_sec": 592.3,
+      "viral_hook": "So, what I tell young people, and I think this is going to be the most exciting entrepreneurial explosion in history.",
+      "virality_score": 0.84,
+      "transcript": "So, what I tell young people, and I think this is going to be the most exciting entrepreneurial explosion in history. Now that we're talking about generative AI. And it's all about natural language. And we can speak that. We can do that. We can vibe code. We can get a lot of help from ChatGVT or Claude, Cursor, Repl.it. And we can actually create our own businesses. So my advice is the average duration of unemployment today is six months. So, okay, fine. Keep looking for the job, but why don't you try and figure out a solution to a problem you have that frustrates you, that you think AI can help. And if it frustrates you, it probably frustrates a lot of people. Create a business, just try it out. And the reason you really want to do that is anyone looking for a job now, just they have to devour AI in all kinds of ways. Using it, understanding it, taking a point of view of where it's taking us, because those are the people who are going to become very valuable in terms of entering, if they decide to enter big corporations and not start their own jobs, their own businesses, they'll be very valuable with that skillset in a company.",
+      "suggested_overlay_title": "AI Is Creating An Entrepreneurial Explosion",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 5.4,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "shorts_title": "Her Advice To Young People In The Age of AI",
+      "description": "Kathy Wood explains why she believes generative AI will lead to the most exciting entrepreneurial explosion in history and gives actionable advice for young people.",
+      "hashtags": [
+        "ai",
+        "entrepreneurship",
+        "careeradvice",
+        "kathywood",
+        "innovation"
+      ],
+      "layout_hint": "zoom_call_center",
+      "needs_review": false,
+      "review_reason": "",
+      "reasoning": "This clip offers a highly optimistic and actionable message for a young audience, directly addressing anxieties about AI and jobs with a call to entrepreneurship. The hook is strong and the advice is concrete.",
+      "score_breakdown": {
+        "message_wow": 0.9,
+        "hook_emotion": 0.8,
+        "catchy": 0.8
+      }
+    },
+    {
+      "clip_id": "002",
+      "topic": "This AI revolution is twice as big as the industrial revolution",
+      "start_time_sec": 223.9,
+      "end_time_sec": 277.7,
+      "viral_hook": "we in our lifetimes have never seen anything like today.",
+      "virality_score": 0.815,
+      "transcript": "we in our lifetimes have never seen anything like today. You have to go back, in order to get into the right mindset, you have to go back to really the end of railroad construction and then telephone, electricity, and internal combustion engine. That was a technology revolution and we call it the industrial revolution. This one is going to be probably twice as big. So, the capital spending in the telephone, electricity, internal combustion engine, capital spending as a percent of GDP topped out at about 6%. We think this capital spending cycle is going to go north of 12% of GDP. And we think we're in really early stages.",
+      "suggested_overlay_title": "This AI Revolution Is Twice As Big",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 3.5,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "shorts_title": "Why This AI Revolution Is Different",
+      "description": "Kathy Wood compares the current AI revolution to the industrial revolution, predicting it will be at least twice as large in terms of capital spending as a percentage of GDP.",
+      "hashtags": [
+        "ai",
+        "industrialrevolution",
+        "innovation",
+        "investing",
+        "economy"
+      ],
+      "layout_hint": "zoom_call_center",
+      "needs_review": false,
+      "review_reason": "",
+      "reasoning": "This clip makes a massive, historically-grounded prediction and backs it up with specific numbers (6% vs 12% of GDP). The scale of the claim creates a huge 'wow' factor and sense of awe.",
+      "score_breakdown": {
+        "message_wow": 0.9,
+        "hook_emotion": 0.8,
+        "catchy": 0.7
+      }
+    },
+    {
+      "clip_id": "003",
+      "topic": "The best time to start a business is in a bear market",
+      "start_time_sec": 1281.7,
+      "end_time_sec": 1368.4,
+      "viral_hook": "We went to founders. We just and we used our research saying you're on our wish list",
+      "virality_score": 0.79,
+      "transcript": "We went to founders. We just and we used our research saying you're on our wish list. Here, here's some of our research. Well, the odds were very high. We learned they already knew who we were and very often they were using some of our big ideas in their pitch decks because what we were doing is sizing markets, trying to help people understand how big these markets are going to be and how quickly they're going to evolve and Again, we were in that the markets were in such tough shape. The founders wanted to talk to someone positive and so that's how it was really great timing and Kudos to Charlie Roberts and Chase Prather who are in the audience here really spearheading this movement. And so we were able to talk to most founders. We would go to them and say you're on our wish list. Here are our big ideas and we got on to almost every cap table directly which today, given how different the environment is and how there's just a race for capital into all of these companies, we couldn't have we couldn't have started it as successfully today as we did in a bear market. That's a lesson always start your business in a recession or a bear market. It's true. It's that it's it's usually a very good time",
+      "suggested_overlay_title": "The Secret To Starting A Business",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 4.4,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "shorts_title": "Always Start Your Business in a Bear Market",
+      "description": "Kathy Wood shares the story of how ARK was able to get into the best venture deals by launching during a bear market, offering a powerful lesson for entrepreneurs.",
+      "hashtags": [
+        "entrepreneurship",
+        "startup",
+        "bearmarket",
+        "businessadvice",
+        "investing"
+      ],
+      "layout_hint": "zoom_call_center",
+      "needs_review": false,
+      "review_reason": "",
+      "reasoning": "This clip tells a compelling story with a very clear, contrarian, and highly quotable takeaway. The punchline, 'always start your business in a recession or a bear market,' is extremely catchy.",
+      "score_breakdown": {
+        "message_wow": 0.8,
+        "hook_emotion": 0.7,
+        "catchy": 0.9
+      }
+    },
+    {
+      "clip_id": "004",
+      "topic": "Why today's AI boom is different from the dot-com bubble",
+      "start_time_sec": 106.7,
+      "end_time_sec": 196.0,
+      "viral_hook": "Well, I was there throughout the early internet into the tech and telecom bubble and then the bust. And this time is 180 degrees the opposite.",
+      "virality_score": 0.78,
+      "transcript": "Well, I was there throughout the early internet into the tech and telecom bubble and then the bust. And this time is 180 degrees the opposite. Back then, given the research and the way we do our research, back then we were thinking that there was too much capital chasing too few opportunities too soon. The technologies were not ready. We didn't get the cloud until 06. We didn't get the first big breakthrough in AI until 2012, the deep learning. And then the more provocative one, transformer architecture till December 18th. But the 20 years that led up to the tech and telecom bubble were the seeds being planted for what is happening now. And when I say the technologies weren't ready, I gave you some examples. When I say the costs were too high, just to give you a sense, biotech was part of the tech and telecom bubble. And we sequenced the first whole human genome. It cost $2.7 billion and everybody was so excited about personalized medicine, right? 2.7 billion, not a scalable model. Today, that number is down to $150 or less.",
+      "suggested_overlay_title": "Dot-Com Bust vs. Today's AI Boom",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 8.3,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "shorts_title": "This Time It's Different (Here's Why)",
+      "description": "Kathy Wood explains why the current AI moment is '180 degrees the opposite' of the dot-com bubble, using the incredible cost reduction in genome sequencing as a prime example.",
+      "hashtags": [
+        "ai",
+        "dotcom",
+        "investing",
+        "technology",
+        "kathywood"
+      ],
+      "layout_hint": "zoom_call_center",
+      "needs_review": false,
+      "review_reason": "",
+      "reasoning": "The clip uses a strong contrast hook ('180 degrees the opposite') and provides clear historical context. The payoff with the $2.7 billion to $150 genome sequencing statistic is a massive 'wow' moment.",
+      "score_breakdown": {
+        "message_wow": 0.9,
+        "hook_emotion": 0.7,
+        "catchy": 0.7
+      }
+    },
+    {
+      "clip_id": "005",
+      "topic": "The 'Saskopelips' and predicting market shifts",
+      "start_time_sec": 962.1,
+      "end_time_sec": 1025.9,
+      "viral_hook": "you did talk about a Saskopelips, right?",
+      "virality_score": 0.765,
+      "transcript": "you did talk about a Saskopelips, right? Two years ago, I believe it was two years ago, we basically showed the tech stack. So the three parts of the tech stack, so infrastructure, so chips and data centers, that's one. Platform as a service, think Palantir, that's another. And then applications, SAS, an important one, that's the third. And you could see in the last five years versus the five years prior that, and this is subtle, but it was very important that incremental growth, while they were all growing quickly, the incremental growth was going to the platform even more than the infrastructure, right? And that's why Palantir surprised enormously. Many people thought Palantir was a consultant, not a software company. So again, defining the companies correctly and understanding how the tech stack is moving over time.",
+      "suggested_overlay_title": "The 'Saskopelips' That Predicted The Market",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 2.2,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "shorts_title": "How They Predicted The SaaS Crash",
+      "description": "Using the concept of the 'Saskopelips', Kathy Wood explains how analyzing the tech stack allowed them to see the shift away from SaaS and towards platforms like Palantir.",
+      "hashtags": [
+        "investing",
+        "saas",
+        "palantir",
+        "techstocks",
+        "marketanalysis"
+      ],
+      "layout_hint": "zoom_call_center",
+      "needs_review": false,
+      "review_reason": "",
+      "reasoning": "The hook uses a catchy, made-up word ('Saskopelips') that creates immediate curiosity. The clip then delivers a clear, 'insider' explanation of how they analyze markets, which feels like a valuable secret.",
+      "score_breakdown": {
+        "message_wow": 0.8,
+        "hook_emotion": 0.7,
+        "catchy": 0.8
+      }
+    },
+    {
+      "clip_id": "006",
+      "topic": "How Wall Street misunderstands Tesla",
+      "start_time_sec": 763.9,
+      "end_time_sec": 818.3,
+      "viral_hook": "The reason the traditional world is going to have a little trouble with this is research is not organized correctly.",
+      "virality_score": 0.7375,
+      "transcript": "The reason the traditional world is going to have a little trouble with this is research is not organized correctly. It's very siloed by sector or industry or sub-industry. So five consumer analysts, five healthcare analysts. I don't think that works. I think what's going to work in this new world is, and how we've set up our research team, is by technology. Those 14 different technologies that are converging. So very collaborative. So in the case of Tesla, for example, that was an interesting case or proof of concept. We did not define Tesla as an auto manufacturer. We defined it, and you could just have used Elon's master plans to figure this out. We weren't that brilliant. But as a robotics company, think autonomous vehicles. They are robots.",
+      "suggested_overlay_title": "Why Wall Street Gets Tesla Wrong",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 5.1,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "shorts_title": "Tesla Isn't A Car Company",
+      "description": "Kathy Wood explains why traditional, siloed Wall Street research fails to correctly value innovative companies like Tesla, which ARK defines as a robotics, energy, and AI company.",
+      "hashtags": [
+        "tesla",
+        "investing",
+        "wallstreet",
+        "innovation",
+        "kathywood"
+      ],
+      "layout_hint": "zoom_call_center",
+      "needs_review": false,
+      "review_reason": "",
+      "reasoning": "This clip provides a strong reframe for a very famous company, Tesla, explaining why the 'old way' of thinking is wrong. It gives viewers an 'aha' moment and a new lens to view the market.",
+      "score_breakdown": {
+        "message_wow": 0.85,
+        "hook_emotion": 0.6,
+        "catchy": 0.75
+      }
+    },
+    {
+      "clip_id": "007",
+      "topic": "Why ARK was started",
+      "start_time_sec": 663.3,
+      "end_time_sec": 714.6,
+      "viral_hook": "Yeah, so one of the reasons I did start ARK is I saw an unmet need.",
+      "virality_score": 0.7,
+      "transcript": "Yeah, so one of the reasons I did start ARK is I saw an unmet need. What was that? The traditional financial world was going passive or benchmark sensitive, which to me is almost the same thing. And by the way, that is going to be completely destroyed by AI. It's much cheaper to do this with a machine. But what I thought was unfortunate about that is we lost a lot of research on innovation. And a lot of these companies in the broad-based benchmarks, those at the top are there because of past success. If there is the kind of disruptive innovation that we see today coming out of five major platforms,",
+      "suggested_overlay_title": "The Unmet Need That Launched ARK",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 4.9,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "shorts_title": "Why She Started ARK Invest",
+      "description": "Kathy Wood reveals the unmet need that inspired her to start ARK: the traditional financial world was abandoning innovation research in favor of passive investing.",
+      "hashtags": [
+        "arkinvest",
+        "kathywood",
+        "investing",
+        "innovation",
+        "founderstory"
+      ],
+      "layout_hint": "zoom_call_center",
+      "needs_review": false,
+      "review_reason": "",
+      "reasoning": "A solid founder story with a clear mission. The bold prediction that passive investing will be 'completely destroyed by AI' adds a strong emotional and catchy element to an otherwise standard explanation.",
+      "score_breakdown": {
+        "message_wow": 0.7,
+        "hook_emotion": 0.7,
+        "catchy": 0.7
+      }
+    },
+    {
+      "clip_id": "008",
+      "topic": "How anyone can invest in SpaceX",
+      "start_time_sec": 1193.9,
+      "end_time_sec": 1266.7,
+      "viral_hook": "So we set on about you know doing this in a retail Wrapper, it's called an interval fund anyone with $500 can get direct to cap exposure to SpaceX",
+      "virality_score": 0.695,
+      "transcript": "So we set on about you know doing this in a retail Wrapper, it's called an interval fund anyone with $500 can get direct to cap exposure to SpaceX and philanthropic open AI Neuralink XAI epic. I mean Just you know, the the great company is replete, you know the index of the future. Yeah. Yeah, so and It was daunting in the beginning and we were a little fearful thinking Wow. What is our calling card here? you know, this is a market where there were networks communication networks really matter and and So we we basically used our big ideas big ideas we started in 2017 and We we actually went the other direction because in the beginning we only had 12 Our earliest checks because we started with very little seed just employees. So the first checks were $25,000 how could we get on the cap table?",
+      "suggested_overlay_title": "How You Can Invest In SpaceX For $500",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 9.2,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "shorts_title": "Invest in SpaceX, OpenAI, and Neuralink for $500",
+      "description": "Kathy Wood explains how ARK created a retail venture fund that allows anyone with $500 to get exposure to some of the world's most valuable private companies like SpaceX and OpenAI.",
+      "hashtags": [
+        "investing",
+        "spacex",
+        "openai",
+        "venturecapital",
+        "retailinvesting"
+      ],
+      "layout_hint": "zoom_call_center",
+      "needs_review": false,
+      "review_reason": "",
+      "reasoning": "The clip's strength comes from the extreme emotional appeal of its premise: democratizing access to elite private companies. The hook mentioning '$500' and 'SpaceX' is highly aspirational and attention-grabbing.",
+      "score_breakdown": {
+        "message_wow": 0.6,
+        "hook_emotion": 0.8,
+        "catchy": 0.7
+      }
+    },
+    {
+      "clip_id": "009",
+      "topic": "Why 'Wall of Worry' markets are the best",
+      "start_time_sec": 368.0,
+      "end_time_sec": 424.2,
+      "viral_hook": "Personally, as an investor, I much prefer this kind of an environment where there's a lot of controversy, a lot of angst.",
+      "virality_score": 0.685,
+      "transcript": "Personally, as an investor, I much prefer this kind of an environment where there's a lot of controversy, a lot of angst. In the public equity markets, this kind of period we call the wall of worry because you notice the market's going to all-time highs. So, this is a wall of worry. These are the most robust and durable bull markets. The 90s, just, you know, straight up and not looking back, no worries at all, those are very dangerous. And so, I feel a lot better. In terms of, we're actually going to invite, I think his name is Abha Shah, I think I got that right, he has accepted our invitation to join us on what we call brainstorm, which comes out every week. And so, we'll, we'll delve into this.",
+      "suggested_overlay_title": "Why I Prefer Markets With Controversy",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 6.4,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "shorts_title": "The 'Wall of Worry' is a GOOD Sign for Investors",
+      "description": "Feeling anxious about the market? Kathy Wood explains why bull markets built on a 'wall of worry' are the most robust and durable, and why she prefers them to euphoric ones.",
+      "hashtags": [
+        "investing",
+        "psychology",
+        "bullmarket",
+        "wallofworry",
+        "stocks"
+      ],
+      "layout_hint": "zoom_call_center",
+      "needs_review": false,
+      "review_reason": "",
+      "reasoning": "This clip offers a valuable piece of contrarian investor psychology. The 'wall of worry' is a catchy, well-known phrase, and her explanation of why it's a good thing is a strong reframe for anxious investors.",
+      "score_breakdown": {
+        "message_wow": 0.75,
+        "hook_emotion": 0.6,
+        "catchy": 0.7
+      }
+    },
+    {
+      "clip_id": "010",
+      "topic": "How index funds kill original thinking",
+      "start_time_sec": 894.6,
+      "end_time_sec": 948.7,
+      "viral_hook": "is that if your job is to outperform and really track an index, right? Which is increasingly, in my view, a little bit unfortunately where the world is going, you really don't get paid to take big bets outside of the index, right?",
+      "virality_score": 0.58,
+      "transcript": "is that if your job is to outperform and really track an index, right? Which is increasingly, in my view, a little bit unfortunately where the world is going, you really don't get paid to take big bets outside of the index, right? What you're really kind of doing is you're looking at what moves the index and you're trying to maybe shift the weights a little bit of, okay, I might own a little bit more Apple, a little less Nvidia, but at the end of the day, I just wanna outperform the index by certain basis points. And if your view is just that software isn't gonna move the index, then you're actually totally fine completely abandoning it, right? And so that's why the volatility and the mentality that you see has really been moved by this kind of index mentality, right? And these baskets, which is why we need, in my opinion, original thinkers, right? Like Ark and others to say, wait, hold on, let's rethink this from first principles.",
+      "suggested_overlay_title": "How Index Funds Break The Market",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 10.0,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "shorts_title": "The Problem With Index Fund Investing",
+      "description": "A clear explanation of how the rise of index funds discourages original thinking and big bets, leading to increased volatility in sectors that fall out of favor.",
+      "hashtags": [
+        "investing",
+        "indexfunds",
+        "finance",
+        "stockmarket",
+        "arkinvest"
+      ],
+      "layout_hint": "zoom_call_center",
+      "needs_review": true,
+      "review_reason": "The message is solid but the hook is somewhat academic and less punchy than other clips. The speaker is also the moderator, not the main guest.",
+      "reasoning": "A good educational clip that explains a complex market dynamic simply. However, it lacks a strong emotional hook and the phrasing is not as memorable as the top clips. It's more intellectual than viral.",
+      "score_breakdown": {
+        "message_wow": 0.7,
+        "hook_emotion": 0.5,
+        "catchy": 0.5
+      }
+    },
+    {
+      "clip_id": "011",
+      "topic": "AI won't steal jobs, it will expand work",
+      "start_time_sec": 311.8,
+      "end_time_sec": 366.4,
+      "viral_hook": "it seemed to me like one of its fundamental premises is that it views the amount of work in the world, whatever unit you want to measure it as, as kind of this fixed number.",
+      "virality_score": 0.58,
+      "transcript": "it seemed to me like one of its fundamental premises is that it views the amount of work in the world, whatever unit you want to measure it as, as kind of this fixed number. So, today it's a unit of X and maybe humans are doing some portion of it and machines are the rest. But when I read it, I thought, well, gee, what if the TAM for work is actually going to go up massively because the cost of work is lower? So, I'm curious, when you read the report and just kind of generally about this cycle, right, when there are so many doomers, how do you, and I think we as investors to capture an innovation, we need to be big thinkers, we need to be optimists. There's more negativity around this cycle than others. So, how are you kind of generally thinking about these, you know, these, these doomer reports while trying to stay optimistic?",
+      "suggested_overlay_title": "AI Won't Steal Jobs, It'll Do This",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 7.4,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "shorts_title": "The Big Misconception About AI and Jobs",
+      "description": "Challenging the 'fixed pie' fallacy, this clip explores the idea that AI won't just replace human work, but will massively expand the total amount of work to be done by lowering its cost.",
+      "hashtags": [
+        "ai",
+        "jobs",
+        "futureofwork",
+        "economy",
+        "optimism"
+      ],
+      "layout_hint": "zoom_call_center",
+      "needs_review": true,
+      "review_reason": "This is a thoughtful reframe from the moderator, but the hook is intellectual and may not grab attention as effectively as others. It's a setup for a question.",
+      "reasoning": "The message pushes back against common AI fears, which is valuable. However, the delivery is more of an intellectual musing than a punchy declaration, limiting its emotional and catchy appeal.",
+      "score_breakdown": {
+        "message_wow": 0.7,
+        "hook_emotion": 0.5,
+        "catchy": 0.5
+      }
+    },
+    {
+      "clip_id": "012",
+      "topic": "The 5 Innovation Platforms Changing The World",
+      "start_time_sec": 706.5,
+      "end_time_sec": 758.2,
+      "viral_hook": "If there is the kind of disruptive innovation that we see today coming out of five major platforms,",
+      "virality_score": 0.56,
+      "transcript": "If there is the kind of disruptive innovation that we see today coming out of five major platforms, so robotics, energy storage, AI most importantly, blockchain technology, and multi-omics technology in the life science space. So those are five platforms. They involve 14 different technologies. And these technologies are converging. I felt that seeds that had been germinating were going to flourish. And I felt we wanted to be a pure play on that. I didn't want to have to follow General Mills or Exxon. Just a pure play. Many people would say it's a narrow focus, but I actually think this is the way the world is going to work. And our so-called niche strategy",
+      "suggested_overlay_title": "The 5 Platforms Defining Our Future",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 5.1,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "shorts_title": "These 5 Technologies Are The Future",
+      "description": "Kathy Wood outlines the five core innovation platforms that form the basis of ARK's investment thesis: robotics, energy storage, AI, blockchain, and multi-omics.",
+      "hashtags": [
+        "innovation",
+        "technology",
+        "ai",
+        "investing",
+        "future"
+      ],
+      "layout_hint": "zoom_call_center",
+      "needs_review": true,
+      "review_reason": "This clip is a list of platforms. While informative, it lacks a strong narrative or emotional hook compared to other clips. It serves as a good summary of a thesis but may not perform as well virally.",
+      "reasoning": "The message provides a good summary of the core investment thesis, but the format is a list. The hook is weak, and the content, while informative, is not particularly catchy or emotionally resonant.",
+      "score_breakdown": {
+        "message_wow": 0.65,
+        "hook_emotion": 0.5,
+        "catchy": 0.5
+      }
+    }
+  ]
+}

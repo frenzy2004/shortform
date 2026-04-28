@@ -1,0 +1,42 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Source Sans 3,60,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,-1,0,1,3,0,2,60,60,120,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.77,Default,,0,0,0,,The
+Dialogue: 0,0:00:01.85,0:00:03.73,Default,,0,0,0,,unemployment rate for
+Dialogue: 0,0:00:03.79,0:00:05.49,Default,,0,0,0,,16 to\N24 year
+Dialogue: 0,0:00:05.73,0:00:06.85,Default,,0,0,0,,olds- Mm-hmm.\NMm-hmm, right has
+Dialogue: 0,0:00:06.99,0:00:08.81,Default,,0,0,0,,moved to 12%.
+Dialogue: 0,0:00:09.09,0:00:11.45,Default,,0,0,0,,12%, big\Nincrease. And
+Dialogue: 0,0:00:11.81,0:00:13.04,Default,,0,0,0,,what is that\Nsaying? That's
+Dialogue: 0,0:00:13.07,0:00:15.18,Default,,0,0,0,,saying that\Nentry-level jobs
+Dialogue: 0,0:00:15.28,0:00:16.46,Default,,0,0,0,,are not being\Ncreated the
+Dialogue: 0,0:00:16.50,0:00:18.16,Default,,0,0,0,,way they\Nused to be.
+Dialogue: 0,0:00:18.24,0:00:20.12,Default,,0,0,0,,To those\Npeople, I
+Dialogue: 0,0:00:20.18,0:00:22.03,Default,,0,0,0,,say, you\Nmust have in
+Dialogue: 0,0:00:22.09,0:00:24.17,Default,,0,0,0,,your mind\Nan idea
+Dialogue: 0,0:00:24.21,0:00:25.81,Default,,0,0,0,,for a new\Nbusiness, something
+Dialogue: 0,0:00:25.85,0:00:27.81,Default,,0,0,0,,that frustrates\Nyou, an unmet
+Dialogue: 0,0:00:27.89,0:00:29.17,Default,,0,0,0,,need. Well,\Nnow you can
+Dialogue: 0,0:00:29.21,0:00:30.91,Default,,0,0,0,,go to ChatGPT,\Nyou can
+Dialogue: 0,0:00:31.01,0:00:32.19,Default,,0,0,0,,go to Grok,\Nand you
+Dialogue: 0,0:00:32.25,0:00:33.81,Default,,0,0,0,,can have an\Nassistant help
+Dialogue: 0,0:00:33.87,0:00:35.63,Default,,0,0,0,,you build out\Nthat business.
+Dialogue: 0,0:00:35.73,0:00:37.59,Default,,0,0,0,,Just interview\Nfor jobs, but
+Dialogue: 0,0:00:37.67,0:00:39.64,Default,,0,0,0,,also think about\Nnew business
+Dialogue: 0,0:00:39.75,0:00:40.73,Default,,0,0,0,,ideas. I think\Nwe're going
+Dialogue: 0,0:00:40.75,0:00:42.74,Default,,0,0,0,,to see entrepreneurial\Nexplosion
+Dialogue: 0,0:00:42.79,0:00:44.17,Default,,0,0,0,,here. Well,\Nand speaking of
+Dialogue: 0,0:00:44.25,0:00:46.02,Default,,0,0,0,,entrepreneurial\Nexplosion, I think about
+Dialogue: 0,0:00:46.31,0:00:47.93,Default,,0,0,0,,how long you\Nhave certainly
+Dialogue: 0,0:00:47.97,0:00:47.98,Default,,0,0,0,,been

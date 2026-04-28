@@ -1,0 +1,58 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,48,&H00FFFFFF,&H000000FF,&H00000000,&H70000000,-1,0,0,0,100,100,0,0,4,0,0,2,60,60,160,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.04,0:00:02.08,Default,,0,0,0,,I you one to
+Dialogue: 0,0:00:02.08,0:00:03.14,Default,,0,0,0,,five years as of
+Dialogue: 0,0:00:03.14,0:00:04.18,Default,,0,0,0,,six months ago I
+Dialogue: 0,0:00:04.18,0:00:04.94,Default,,0,0,0,,would stick with that
+Dialogue: 0,0:00:04.98,0:00:06.20,Default,,0,0,0,,You if you kind
+Dialogue: 0,0:00:06.20,0:00:07.62,Default,,0,0,0,,of you connect this
+Dialogue: 0,0:00:07.62,0:00:08.20,Default,,0,0,0,,to what I said
+Dialogue: 0,0:00:08.20,0:00:09.56,Default,,0,0,0,,before which is you
+Dialogue: 0,0:00:09.56,0:00:11.10,Default,,0,0,0,,we might have AI
+Dialogue: 0,0:00:11.10,0:00:11.98,Default,,0,0,0,,that's better than humans
+Dialogue: 0,0:00:11.98,0:00:13.99,Default,,0,0,0,,at everything in you
+Dialogue: 0,0:00:13.99,0:00:15.22,Default,,0,0,0,,maybe one to two
+Dialogue: 0,0:00:15.22,0:00:16.66,Default,,0,0,0,,years maybe a little
+Dialogue: 0,0:00:16.66,0:00:18.38,Default,,0,0,0,,longer than that those
+Dialogue: 0,0:00:18.38,0:00:19.24,Default,,0,0,0,,don't seem to line
+Dialogue: 0,0:00:19.24,0:00:20.62,Default,,0,0,0,,up The reason is
+Dialogue: 0,0:00:20.62,0:00:22.66,Default,,0,0,0,,that there's this lag
+Dialogue: 0,0:00:23.02,0:00:24.84,Default,,0,0,0,,and there's this replacement
+Dialogue: 0,0:00:24.84,0:00:26.04,Default,,0,0,0,,thing right I know
+Dialogue: 0,0:00:26.04,0:00:26.84,Default,,0,0,0,,that the labor market
+Dialogue: 0,0:00:26.84,0:00:27.92,Default,,0,0,0,,is adaptable right It's
+Dialogue: 0,0:00:27.92,0:00:28.64,Default,,0,0,0,,just like you 80
+Dialogue: 0,0:00:28.78,0:00:30.08,Default,,0,0,0,,of people used to
+Dialogue: 0,0:00:30.08,0:00:32.16,Default,,0,0,0,,do farming you got
+Dialogue: 0,0:00:32.16,0:00:32.98,Default,,0,0,0,,automated and then they
+Dialogue: 0,0:00:32.98,0:00:34.06,Default,,0,0,0,,became factory workers and
+Dialogue: 0,0:00:34.06,0:00:35.94,Default,,0,0,0,,then knowledge workers So
+Dialogue: 0,0:00:35.94,0:00:37.50,Default,,0,0,0,,you there is some
+Dialogue: 0,0:00:37.50,0:00:39.06,Default,,0,0,0,,level of adaptability here
+Dialogue: 0,0:00:39.06,0:00:39.70,Default,,0,0,0,,as well right We
+Dialogue: 0,0:00:39.70,0:00:41.32,Default,,0,0,0,,should be economically sophisticated
+Dialogue: 0,0:00:41.32,0:00:42.14,Default,,0,0,0,,about how the labor
+Dialogue: 0,0:00:42.14,0:00:43.68,Default,,0,0,0,,market works But my
+Dialogue: 0,0:00:43.68,0:00:45.04,Default,,0,0,0,,worry is as this
+Dialogue: 0,0:00:45.04,0:00:46.96,Default,,0,0,0,,exponential keeps compounding and
+Dialogue: 0,0:00:46.96,0:00:47.66,Default,,0,0,0,,I don't think it's
+Dialogue: 0,0:00:47.66,0:00:48.34,Default,,0,0,0,,going to take that
+Dialogue: 0,0:00:48.34,0:00:50.86,Default,,0,0,0,,long again somewhere between
+Dialogue: 0,0:00:50.86,0:00:52.08,Default,,0,0,0,,a year and five
+Dialogue: 0,0:00:52.08,0:00:53.30,Default,,0,0,0,,years it will overwhelm
+Dialogue: 0,0:00:53.30,0:00:54.28,Default,,0,0,0,,our ability to adapt
+Dialogue: 0,0:00:54.36,0:00:54.99,Default,,0,0,0,,I think I may
+Dialogue: 0,0:00:54.99,0:00:55.82,Default,,0,0,0,,be saying the same
+Dialogue: 0,0:00:55.82,0:00:56.70,Default,,0,0,0,,thing Demis is

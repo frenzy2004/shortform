@@ -1,0 +1,39 @@
+{
+  "hooks": [
+    {
+      "clip_id": "001",
+      "hook_start_sec": 15.66,
+      "hook_end_sec": 17.9,
+      "hook_text": "AI could do all of it.",
+      "reason": "This is a bold, high-stakes claim that immediately captures the viewer's attention regarding the capabilities of AI, unlike the preceding anecdotal setup."
+    },
+    {
+      "clip_id": "002",
+      "hook_start_sec": 48.4,
+      "hook_end_sec": 52.1,
+      "hook_text": "Chatbots give up. Agents improvise.",
+      "reason": "This contrast provides a clear, punchy definition of the topic that is much more compelling than the initial story-based lead-in."
+    },
+    {
+      "clip_id": "003",
+      "hook_start_sec": 11.88,
+      "hook_end_sec": 17.72,
+      "hook_text": "The next morning, I woke up. Over 800 messages. I panicked.",
+      "reason": "This creates immediate tension and curiosity by presenting a high-stakes, relatable scenario of a tech experiment going out of control."
+    },
+    {
+      "clip_id": "004",
+      "hook_start_sec": 2.97,
+      "hook_end_sec": 10.19,
+      "hook_text": "How can we make it more scary? So I added a new feature, a heartbeat.",
+      "reason": "The concept of a 'heartbeat' feature in AI is inherently intriguing and creates a sense of mystery that hooks the viewer."
+    },
+    {
+      "clip_id": "005",
+      "hook_start_sec": 0.01,
+      "hook_end_sec": 4.77,
+      "hook_text": "Imagine putting an agent into a meeting.",
+      "reason": "This is a direct, relatable prompt that invites the viewer to visualize a specific, high-utility use case for AI."
+    }
+  ]
+}

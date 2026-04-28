@@ -1,0 +1,53 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,48,&H00FFFFFF,&H000000FF,&H00000000,&H70000000,-1,0,0,0,100,100,0,0,4,0,0,2,60,60,160,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.74,Default,,0,0,0,,No I wouldn't refer
+Dialogue: 0,0:00:01.74,0:00:02.70,Default,,0,0,0,,to any particular people
+Dialogue: 0,0:00:02.70,0:00:03.98,Default,,0,0,0,,but I would just
+Dialogue: 0,0:00:03.98,0:00:04.98,Default,,0,0,0,,say that this particular
+Dialogue: 0,0:00:04.98,0:00:06.48,Default,,0,0,0,,policy I think is
+Dialogue: 0,0:00:06.48,0:00:08.50,Default,,0,0,0,,akin to Yeah it's
+Dialogue: 0,0:00:08.50,0:00:10.34,Default,,0,0,0,,not well advised
+Dialogue: 0,0:00:10.88,0:00:12.20,Default,,0,0,0,,Another issue in this
+Dialogue: 0,0:00:12.44,0:00:13.60,Default,,0,0,0,,you could be right
+Dialogue: 0,0:00:13.72,0:00:14.84,Default,,0,0,0,,All this technology be
+Dialogue: 0,0:00:14.84,0:00:15.64,Default,,0,0,0,,going in the right
+Dialogue: 0,0:00:15.64,0:00:17.80,Default,,0,0,0,,direction but economically we
+Dialogue: 0,0:00:17.80,0:00:18.94,Default,,0,0,0,,could be towards a
+Dialogue: 0,0:00:19.76,0:00:20.74,Default,,0,0,0,,Do you think that's
+Dialogue: 0,0:00:20.74,0:00:22.44,Default,,0,0,0,,true Yeah yeah So
+Dialogue: 0,0:00:22.44,0:00:23.64,Default,,0,0,0,,I would separate out
+Dialogue: 0,0:00:23.64,0:00:25.04,Default,,0,0,0,,the two things One
+Dialogue: 0,0:00:25.04,0:00:26.50,Default,,0,0,0,,is the basic exponential
+Dialogue: 0,0:00:27.40,0:00:28.66,Default,,0,0,0,,and that's what we've
+Dialogue: 0,0:00:28.66,0:00:29.82,Default,,0,0,0,,been talking about That's
+Dialogue: 0,0:00:29.82,0:00:30.70,Default,,0,0,0,,been kind of the
+Dialogue: 0,0:00:30.70,0:00:31.94,Default,,0,0,0,,technological direction
+Dialogue: 0,0:00:33.04,0:00:35.08,Default,,0,0,0,,And there just like
+Dialogue: 0,0:00:35.08,0:00:36.04,Default,,0,0,0,,with Moore's law you
+Dialogue: 0,0:00:36.04,0:00:37.30,Default,,0,0,0,,can never be sure
+Dialogue: 0,0:00:37.30,0:00:39.20,Default,,0,0,0,,that the technology is
+Dialogue: 0,0:00:39.20,0:00:40.46,Default,,0,0,0,,sort of fully going
+Dialogue: 0,0:00:40.46,0:00:41.30,Default,,0,0,0,,to advance It's gonna
+Dialogue: 0,0:00:41.30,0:00:42.18,Default,,0,0,0,,keep going right It's
+Dialogue: 0,0:00:42.18,0:00:44.06,Default,,0,0,0,,a fundamentally inductive problem
+Dialogue: 0,0:00:44.22,0:00:45.72,Default,,0,0,0,,But now that I've
+Dialogue: 0,0:00:45.72,0:00:47.06,Default,,0,0,0,,seen well over a
+Dialogue: 0,0:00:47.06,0:00:48.34,Default,,0,0,0,,of it I would
+Dialogue: 0,0:00:48.34,0:00:49.72,Default,,0,0,0,,say I am pretty
+Dialogue: 0,0:00:49.72,0:00:51.12,Default,,0,0,0,,confident that it's gonna
+Dialogue: 0,0:00:51.12,0:00:52.42,Default,,0,0,0,,continue or at least
+Dialogue: 0,0:00:52.42,0:00:53.52,Default,,0,0,0,,I'm more confident than
+Dialogue: 0,0:00:53.52,0:00:54.44,Default,,0,0,0,,I've ever been at
+Dialogue: 0,0:00:54.44,0:00:55.28,Default,,0,0,0,,any time in the

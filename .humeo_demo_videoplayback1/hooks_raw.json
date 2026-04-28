@@ -1,0 +1,32 @@
+{
+  "hooks": [
+    {
+      "clip_id": "001",
+      "hook_start_sec": 6.7,
+      "hook_end_sec": 10.4,
+      "hook_text": "Chatbots give up. Agents improvise.",
+      "reason": "This provides a clear, punchy contrast that defines the core value proposition of the topic immediately."
+    },
+    {
+      "clip_id": "002",
+      "hook_start_sec": 55.76,
+      "hook_end_sec": 60.08,
+      "hook_text": "All of that in nine seconds. Can you imagine?",
+      "reason": "The clip's most compelling element is the speed of the AI's autonomous action, making this summary the strongest hook."
+    },
+    {
+      "clip_id": "003",
+      "hook_start_sec": 26.0,
+      "hook_end_sec": 30.82,
+      "hook_text": "Peter, this is not hockey stick growth. This is stripper pole.",
+      "reason": "This is a highly memorable, provocative quote that immediately grabs attention compared to the dry introduction."
+    },
+    {
+      "clip_id": "004",
+      "hook_start_sec": 0.04,
+      "hook_end_sec": 3.6,
+      "hook_text": "The bottleneck is no longer typing. It's syncing.",
+      "reason": "This is a strong, counter-intuitive claim about software development that sets the stage for the rest of the story."
+    }
+  ]
+}

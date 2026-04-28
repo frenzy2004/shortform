@@ -1,0 +1,50 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Source Sans 3,48,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,-1,-1,0,0,100,100,0,0,1,0,0,1,60,60,160,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.84,Default,,0,0,0,,we're in a technology
+Dialogue: 0,0:00:01.88,0:00:03.51,Default,,0,0,0,,revolution. And many people
+Dialogue: 0,0:00:03.71,0:00:05.27,Default,,0,0,0,,thought that the internet
+Dialogue: 0,0:00:05.39,0:00:07.15,Default,,0,0,0,,was a technology revolution,
+Dialogue: 0,0:00:07.23,0:00:08.13,Default,,0,0,0,,and to some extent
+Dialogue: 0,0:00:08.19,0:00:10.81,Default,,0,0,0,,it was. But today,
+Dialogue: 0,0:00:10.89,0:00:12.00,Default,,0,0,0,,instead of just one
+Dialogue: 0,0:00:12.03,0:00:14.15,Default,,0,0,0,,major platform evolving, we
+Dialogue: 0,0:00:14.27,0:00:16.43,Default,,0,0,0,,have five. So robotics,
+Dialogue: 0,0:00:16.69,0:00:19.41,Default,,0,0,0,,energy storage, AI, blockchain
+Dialogue: 0,0:00:19.51,0:00:22.04,Default,,0,0,0,,technology, and multi-omic sequencing
+Dialogue: 0,0:00:22.30,0:00:23.34,Default,,0,0,0,,in the life science
+Dialogue: 0,0:00:23.52,0:00:24.70,Default,,0,0,0,,space, which we believe
+Dialogue: 0,0:00:24.88,0:00:26.44,Default,,0,0,0,,is the most profound
+Dialogue: 0,0:00:26.96,0:00:29.08,Default,,0,0,0,,application of AI,
+Dialogue: 0,0:00:29.26,0:00:30.96,Default,,0,0,0,,healthcare. And so this
+Dialogue: 0,0:00:31.22,0:00:32.38,Default,,0,0,0,,boom, if you look
+Dialogue: 0,0:00:32.48,0:00:33.76,Default,,0,0,0,,back at the railroad
+Dialogue: 0,0:00:33.90,0:00:35.18,Default,,0,0,0,,boom, the amount of
+Dialogue: 0,0:00:35.24,0:00:37.06,Default,,0,0,0,,investment that we saw
+Dialogue: 0,0:00:37.16,0:00:38.00,Default,,0,0,0,,back then was about
+Dialogue: 0,0:00:38.36,0:00:40.10,Default,,0,0,0,,6% of GDP at
+Dialogue: 0,0:00:40.14,0:00:41.00,Default,,0,0,0,,its peak, 5% to
+Dialogue: 0,0:00:41.26,0:00:43.82,Default,,0,0,0,,6%. The internet boom
+Dialogue: 0,0:00:43.83,0:00:45.02,Default,,0,0,0,,was more like the
+Dialogue: 0,0:00:45.10,0:00:46.04,Default,,0,0,0,,auto boom in the
+Dialogue: 0,0:00:46.08,0:00:48.03,Default,,0,0,0,,early 1900s. It was
+Dialogue: 0,0:00:48.10,0:00:48.94,Default,,0,0,0,,more in the 3%
+Dialogue: 0,0:00:48.95,0:00:50.62,Default,,0,0,0,,to 4% of GDP
+Dialogue: 0,0:00:50.72,0:00:52.50,Default,,0,0,0,,range. We believe this
+Dialogue: 0,0:00:52.60,0:00:54.78,Default,,0,0,0,,five-platform innovation
+Dialogue: 0,0:00:54.88,0:00:57.08,Default,,0,0,0,,strategy or boom is
+Dialogue: 0,0:00:57.12,0:00:58.88,Default,,0,0,0,,going to move to
+Dialogue: 0,0:00:59.08,0:01:01.32,Default,,0,0,0,,12% of GDP.
+Dialogue: 0,0:01:01.86,0:01:02.70,Default,,0,0,0,,And we do believe
+Dialogue: 0,0:01:02.74,0:01:03.48,Default,,0,0,0,,also that

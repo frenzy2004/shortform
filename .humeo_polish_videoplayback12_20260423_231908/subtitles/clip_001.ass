@@ -1,0 +1,59 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Base,Arial,86,&H00FFFFFF,&H000000FF,&H00101010,&H00000000,-1,0,0,0,100,100,-1,0,1,4,0,8,0,0,0,0
+Style: Highlight,Arial,86,&H00FFFFFF,&H000000FF,&H00000000,&H00F65C8B,-1,0,0,0,100,100,-1,0,4,0,10,7,0,0,0,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.68,Base,,0,0,0,,{\an7\pos(297.5,1440.0)}AI has been
+Dialogue: 0,0:00:00.00,0:00:01.68,Base,,0,0,0,,{\an7\pos(280.5,1534.0)}the big story
+Dialogue: 1,0:00:00.00,0:00:00.74,Highlight,,0,0,0,,{\an7\pos(297.5,1440.0)\blur0.8}AI has
+Dialogue: 1,0:00:00.84,0:00:01.00,Highlight,,0,0,0,,{\an7\pos(580.5,1440.0)\blur0.8}been
+Dialogue: 1,0:00:01.20,0:00:01.68,Highlight,,0,0,0,,{\an7\pos(434.5,1534.0)\blur0.8}big story
+Dialogue: 0,0:00:01.80,0:00:03.44,Base,,0,0,0,,{\an7\pos(304.5,1440.0)}for the past
+Dialogue: 0,0:00:01.80,0:00:03.44,Base,,0,0,0,,{\an7\pos(240.0,1534.0)}two years, and
+Dialogue: 1,0:00:02.06,0:00:02.40,Highlight,,0,0,0,,{\an7\pos(597.5,1440.0)\blur0.8}past
+Dialogue: 1,0:00:02.42,0:00:03.10,Highlight,,0,0,0,,{\an7\pos(240.0,1534.0)\blur0.8}two years,
+Dialogue: 0,0:00:03.48,0:00:04.84,Base,,0,0,0,,{\an7\pos(393.0,1440.0)}it's still
+Dialogue: 0,0:00:03.48,0:00:04.84,Base,,0,0,0,,{\an7\pos(268.5,1534.0)}the big story.
+Dialogue: 1,0:00:03.48,0:00:03.94,Highlight,,0,0,0,,{\an7\pos(393.0,1440.0)\blur0.8}it's still
+Dialogue: 1,0:00:04.14,0:00:04.84,Highlight,,0,0,0,,{\an7\pos(422.5,1534.0)\blur0.8}big story.
+Dialogue: 0,0:00:05.16,0:00:07.28,Base,,0,0,0,,{\an7\pos(362.0,1440.0)}In fact, it
+Dialogue: 0,0:00:05.16,0:00:07.28,Base,,0,0,0,,{\an7\pos(261.0,1534.0)}is the biggest
+Dialogue: 1,0:00:05.30,0:00:05.54,Highlight,,0,0,0,,{\an7\pos(463.0,1440.0)\blur0.8}fact,
+Dialogue: 1,0:00:06.56,0:00:07.28,Highlight,,0,0,0,,{\an7\pos(357.0,1534.0)\blur0.8}the biggest
+Dialogue: 0,0:00:07.32,0:00:09.66,Base,,0,0,0,,{\an7\pos(266.0,1440.0)}catalyst to all
+Dialogue: 0,0:00:07.32,0:00:09.66,Base,,0,0,0,,{\an7\pos(191.0,1534.0)}of the innovation
+Dialogue: 1,0:00:07.32,0:00:08.12,Highlight,,0,0,0,,{\an7\pos(266.0,1440.0)\blur0.8}catalyst
+Dialogue: 1,0:00:08.98,0:00:09.66,Highlight,,0,0,0,,{\an7\pos(297.0,1534.0)\blur0.8}the innovation
+Dialogue: 0,0:00:09.70,0:00:10.94,Base,,0,0,0,,{\an7\pos(290.0,1440.0)}taking place
+Dialogue: 0,0:00:09.70,0:00:10.94,Base,,0,0,0,,{\an7\pos(343.0,1534.0)}out there.
+Dialogue: 1,0:00:09.70,0:00:10.36,Highlight,,0,0,0,,{\an7\pos(290.0,1440.0)\blur0.8}taking place
+Dialogue: 1,0:00:10.40,0:00:10.58,Highlight,,0,0,0,,{\an7\pos(343.0,1534.0)\blur0.8}out
+Dialogue: 0,0:00:11.02,0:00:12.92,Base,,0,0,0,,{\an7\pos(388.5,1440.0)}It is the
+Dialogue: 0,0:00:11.02,0:00:12.92,Base,,0,0,0,,{\an7\pos(230.0,1534.0)}reason that the
+Dialogue: 1,0:00:11.70,0:00:12.60,Highlight,,0,0,0,,{\an7\pos(230.0,1534.0)\blur0.8}reason
+Dialogue: 0,0:00:12.96,0:00:14.96,Base,,0,0,0,,{\an7\pos(226.0,1440.0)}world seems to
+Dialogue: 0,0:00:12.96,0:00:14.96,Base,,0,0,0,,{\an7\pos(210.5,1534.0)}be speeding up.
+Dialogue: 1,0:00:12.96,0:00:13.58,Highlight,,0,0,0,,{\an7\pos(226.0,1440.0)\blur0.8}world seems
+Dialogue: 1,0:00:13.70,0:00:14.60,Highlight,,0,0,0,,{\an7\pos(210.5,1534.0)\blur0.8}be speeding
+Dialogue: 1,0:00:14.70,0:00:14.96,Highlight,,0,0,0,,{\an7\pos(739.5,1534.0)\blur0.8}up.
+Dialogue: 0,0:00:15.06,0:00:16.44,Base,,0,0,0,,{\an7\pos(309.0,1440.0)}And I'll just
+Dialogue: 0,0:00:15.06,0:00:16.44,Base,,0,0,0,,{\an7\pos(328.5,1534.0)}give you a
+Dialogue: 1,0:00:15.42,0:00:15.72,Highlight,,0,0,0,,{\an7\pos(501.0,1440.0)\blur0.8}I'll just
+Dialogue: 1,0:00:15.74,0:00:15.92,Highlight,,0,0,0,,{\an7\pos(328.5,1534.0)\blur0.8}give
+Dialogue: 0,0:00:16.48,0:00:18.70,Base,,0,0,0,,{\an7\pos(206.5,1440.0)}few examples of
+Dialogue: 0,0:00:16.48,0:00:18.70,Base,,0,0,0,,{\an7\pos(150.5,1534.0)}how quickly things
+Dialogue: 1,0:00:16.48,0:00:17.66,Highlight,,0,0,0,,{\an7\pos(206.5,1440.0)\blur0.8}few examples
+Dialogue: 1,0:00:17.88,0:00:18.36,Highlight,,0,0,0,,{\an7\pos(150.5,1534.0)\blur0.8}how quickly
+Dialogue: 1,0:00:18.46,0:00:18.70,Highlight,,0,0,0,,{\an7\pos(669.5,1534.0)\blur0.8}things
+Dialogue: 0,0:00:18.74,0:00:19.32,Base,,0,0,0,,{\an7\pos(232.5,1534.0)}are happening.
+Dialogue: 1,0:00:18.74,0:00:19.32,Highlight,,0,0,0,,{\an7\pos(232.5,1534.0)\blur0.8}are happening.

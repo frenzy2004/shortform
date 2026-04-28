@@ -1,0 +1,106 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Base,Arial,86,&H00FFFFFF,&H000000FF,&H00101010,&H00000000,-1,0,0,0,100,100,-1,0,1,4,0,8,0,0,0,0
+Style: Highlight,Arial,86,&H00FFFFFF,&H000000FF,&H00000000,&H00F65C8B,-1,0,0,0,100,100,-1,0,4,0,10,7,0,0,0,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.48,Base,,0,0,0,,{\an7\pos(136.5,1440.0)}productivity growth
+Dialogue: 1,0:00:00.00,0:00:01.12,Highlight,,0,0,0,,{\an7\pos(136.5,1440.0)\blur0.8}productivity growth
+Dialogue: 0,0:00:00.00,0:00:02.48,Base,,0,0,0,,{\an7\pos(247.5,1534.0)}will accelerate
+Dialogue: 0,0:00:02.56,0:00:05.04,Base,,0,0,0,,{\an7\pos(348.0,1440.0)}to the 4%
+Dialogue: 0,0:00:02.56,0:00:05.04,Base,,0,0,0,,{\an7\pos(295.5,1534.0)}to 6% range
+Dialogue: 1,0:00:03.90,0:00:05.04,Highlight,,0,0,0,,{\an7\pos(401.5,1534.0)\blur0.8}6% range
+Dialogue: 0,0:00:05.14,0:00:06.46,Base,,0,0,0,,{\an7\pos(400.5,1440.0)}and be
+Dialogue: 0,0:00:05.14,0:00:06.46,Base,,0,0,0,,{\an7\pos(208.5,1534.0)}sustained there.
+Dialogue: 1,0:00:05.68,0:00:06.46,Highlight,,0,0,0,,{\an7\pos(208.5,1534.0)\blur0.8}sustained there.
+Dialogue: 0,0:00:06.52,0:00:08.22,Base,,0,0,0,,{\an7\pos(190.5,1440.0)}Normally, we see
+Dialogue: 0,0:00:06.52,0:00:08.22,Base,,0,0,0,,{\an7\pos(237.5,1534.0)}a cyclical peak
+Dialogue: 1,0:00:07.46,0:00:08.22,Highlight,,0,0,0,,{\an7\pos(309.5,1534.0)\blur0.8}cyclical peak
+Dialogue: 0,0:00:08.24,0:00:10.48,Base,,0,0,0,,{\an7\pos(187.0,1440.0)}around there and
+Dialogue: 1,0:00:08.24,0:00:08.76,Highlight,,0,0,0,,{\an7\pos(187.0,1440.0)\blur0.8}around there
+Dialogue: 0,0:00:08.24,0:00:10.48,Base,,0,0,0,,{\an7\pos(311.5,1534.0)}then it falls
+Dialogue: 0,0:00:10.52,0:00:11.74,Base,,0,0,0,,{\an7\pos(237.5,1440.0)}back. We think
+Dialogue: 1,0:00:10.52,0:00:10.90,Highlight,,0,0,0,,{\an7\pos(237.5,1440.0)\blur0.8}back. We
+Dialogue: 0,0:00:10.52,0:00:11.74,Base,,0,0,0,,{\an7\pos(369.5,1534.0)}it will be
+Dialogue: 0,0:00:11.84,0:00:14.02,Base,,0,0,0,,{\an7\pos(237.0,1440.0)}sustained, and
+Dialogue: 1,0:00:11.84,0:00:13.18,Highlight,,0,0,0,,{\an7\pos(237.0,1440.0)\blur0.8}sustained, and
+Dialogue: 0,0:00:11.84,0:00:14.02,Base,,0,0,0,,{\an7\pos(367.0,1534.0)}we think
+Dialogue: 0,0:00:14.44,0:00:15.84,Base,,0,0,0,,{\an7\pos(321.0,1440.0)}that by the
+Dialogue: 0,0:00:14.44,0:00:15.84,Base,,0,0,0,,{\an7\pos(321.0,1534.0)}end of this
+Dialogue: 1,0:00:15.22,0:00:15.56,Highlight,,0,0,0,,{\an7\pos(321.0,1534.0)\blur0.8}end of
+Dialogue: 0,0:00:15.88,0:00:18.24,Base,,0,0,0,,{\an7\pos(290.5,1440.0)}decade, real
+Dialogue: 0,0:00:15.88,0:00:18.24,Base,,0,0,0,,{\an7\pos(291.0,1534.0)}GDP growth
+Dialogue: 1,0:00:17.06,0:00:18.24,Highlight,,0,0,0,,{\an7\pos(291.0,1534.0)\blur0.8}GDP growth
+Dialogue: 0,0:00:18.36,0:00:21.00,Base,,0,0,0,,{\an7\pos(146.0,1440.0)}could be averaging
+Dialogue: 0,0:00:18.36,0:00:21.00,Base,,0,0,0,,{\an7\pos(257.5,1534.0)}more than 7%
+Dialogue: 1,0:00:19.92,0:00:21.00,Highlight,,0,0,0,,{\an7\pos(491.5,1534.0)\blur0.8}than 7%
+Dialogue: 0,0:00:21.10,0:00:21.77,Base,,0,0,0,,{\an7\pos(236.1,1534.0)}per year. Wow.
+Dialogue: 1,0:00:21.10,0:00:21.58,Highlight,,0,0,0,,{\an7\pos(236.1,1534.0)\blur0.8}per year.
+Dialogue: 0,0:00:21.77,0:00:23.22,Base,,0,0,0,,{\an7\pos(309.5,1440.0)}And I know
+Dialogue: 0,0:00:21.77,0:00:23.22,Base,,0,0,0,,{\an7\pos(78.0,1534.0)}that sounds shocking-
+Dialogue: 1,0:00:22.36,0:00:23.22,Highlight,,0,0,0,,{\an7\pos(261.0,1534.0)\blur0.8}sounds shocking-
+Dialogue: 0,0:00:23.54,0:00:24.87,Base,,0,0,0,,{\an7\pos(220.5,1440.0)}Yeah given that
+Dialogue: 1,0:00:23.54,0:00:24.24,Highlight,,0,0,0,,{\an7\pos(220.5,1440.0)\blur0.8}Yeah given
+Dialogue: 0,0:00:23.54,0:00:24.87,Base,,0,0,0,,{\an7\pos(261.0,1534.0)}we've been at
+Dialogue: 0,0:00:25.10,0:00:27.78,Base,,0,0,0,,{\an7\pos(408.5,1440.0)}3% for
+Dialogue: 0,0:00:25.10,0:00:27.78,Base,,0,0,0,,{\an7\pos(331.5,1534.0)}125 years.
+Dialogue: 1,0:00:25.84,0:00:27.78,Highlight,,0,0,0,,{\an7\pos(331.5,1534.0)\blur0.8}125 years.
+Dialogue: 0,0:00:28.16,0:00:30.56,Base,,0,0,0,,{\an7\pos(381.5,1440.0)}But it is
+Dialogue: 0,0:00:28.16,0:00:30.56,Base,,0,0,0,,{\an7\pos(83.5,1534.0)}the history associated
+Dialogue: 1,0:00:29.06,0:00:30.56,Highlight,,0,0,0,,{\an7\pos(237.5,1534.0)\blur0.8}history associated
+Dialogue: 0,0:00:30.60,0:00:33.28,Base,,0,0,0,,{\an7\pos(-46.5,1440.0)}with technology revolutions,
+Dialogue: 1,0:00:30.80,0:00:32.18,Highlight,,0,0,0,,{\an7\pos(150.5,1440.0)\blur0.8}technology revolutions,
+Dialogue: 0,0:00:30.60,0:00:33.28,Base,,0,0,0,,{\an7\pos(251.5,1534.0)}a step change
+Dialogue: 0,0:00:33.38,0:00:36.09,Base,,0,0,0,,{\an7\pos(187.5,1440.0)}upIn GDP growth
+Dialogue: 1,0:00:34.23,0:00:34.78,Highlight,,0,0,0,,{\an7\pos(394.5,1440.0)\blur0.8}GDP growth
+Dialogue: 0,0:00:33.38,0:00:36.09,Base,,0,0,0,,{\an7\pos(4.5,1534.0)}The productivity increase,
+Dialogue: 0,0:00:36.17,0:00:37.73,Base,,0,0,0,,{\an7\pos(214.0,1440.0)}the GDP growth
+Dialogue: 1,0:00:36.29,0:00:36.95,Highlight,,0,0,0,,{\an7\pos(368.0,1440.0)\blur0.8}GDP growth
+Dialogue: 0,0:00:36.17,0:00:37.73,Base,,0,0,0,,{\an7\pos(295.0,1534.0)}that you are
+Dialogue: 0,0:00:37.79,0:00:40.19,Base,,0,0,0,,{\an7\pos(247.0,1440.0)}forecasting as
+Dialogue: 1,0:00:37.79,0:00:39.29,Highlight,,0,0,0,,{\an7\pos(247.0,1440.0)\blur0.8}forecasting as
+Dialogue: 0,0:00:37.79,0:00:40.19,Base,,0,0,0,,{\an7\pos(333.5,1534.0)}a result of
+Dialogue: 0,0:00:40.27,0:00:42.73,Base,,0,0,0,,{\an7\pos(208.5,1440.0)}these disruptive
+Dialogue: 1,0:00:40.27,0:00:41.05,Highlight,,0,0,0,,{\an7\pos(208.5,1440.0)\blur0.8}these disruptive
+Dialogue: 0,0:00:40.27,0:00:42.73,Base,,0,0,0,,{\an7\pos(97.5,1534.0)}technologies, to what
+Dialogue: 0,0:00:42.77,0:00:44.52,Base,,0,0,0,,{\an7\pos(273.0,1440.0)}extent is that
+Dialogue: 1,0:00:42.77,0:00:43.74,Highlight,,0,0,0,,{\an7\pos(273.0,1440.0)\blur0.8}extent is
+Dialogue: 0,0:00:42.77,0:00:44.52,Base,,0,0,0,,{\an7\pos(292.5,1534.0)}the result of
+Dialogue: 0,0:00:44.55,0:00:46.51,Base,,0,0,0,,{\an7\pos(276.0,1440.0)}fewer people
+Dialogue: 1,0:00:44.55,0:00:45.68,Highlight,,0,0,0,,{\an7\pos(276.0,1440.0)\blur0.8}fewer people
+Dialogue: 0,0:00:44.55,0:00:46.51,Base,,0,0,0,,{\an7\pos(278.5,1534.0)}doing more?
+Dialogue: 0,0:00:46.55,0:00:48.20,Base,,0,0,0,,{\an7\pos(239.5,1440.0)}My question is
+Dialogue: 1,0:00:46.55,0:00:46.96,Highlight,,0,0,0,,{\an7\pos(239.5,1440.0)\blur0.8}My question
+Dialogue: 0,0:00:46.55,0:00:48.20,Base,,0,0,0,,{\an7\pos(198.5,1534.0)}about job losses
+Dialogue: 0,0:00:48.27,0:00:49.66,Base,,0,0,0,,{\an7\pos(326.5,1440.0)}as a result
+Dialogue: 1,0:00:48.38,0:00:48.78,Highlight,,0,0,0,,{\an7\pos(446.5,1440.0)\blur0.8}a result
+Dialogue: 0,0:00:48.27,0:00:49.66,Base,,0,0,0,,{\an7\pos(155.0,1534.0)}of this technology,
+Dialogue: 0,0:00:49.67,0:00:51.91,Base,,0,0,0,,{\an7\pos(98.0,1440.0)}because if everything
+Dialogue: 1,0:00:49.67,0:00:50.58,Highlight,,0,0,0,,{\an7\pos(98.0,1440.0)\blur0.8}because if
+Dialogue: 0,0:00:49.67,0:00:51.91,Base,,0,0,0,,{\an7\pos(180.0,1534.0)}that investors are
+Dialogue: 0,0:00:51.93,0:00:53.13,Base,,0,0,0,,{\an7\pos(208.0,1440.0)}betting on when
+Dialogue: 1,0:00:51.93,0:00:52.36,Highlight,,0,0,0,,{\an7\pos(208.0,1440.0)\blur0.8}betting on
+Dialogue: 0,0:00:51.93,0:00:53.13,Base,,0,0,0,,{\an7\pos(312.0,1534.0)}it comes to
+Dialogue: 0,0:00:53.17,0:00:54.87,Base,,0,0,0,,{\an7\pos(187.0,1440.0)}this AI revolution
+Dialogue: 1,0:00:53.51,0:00:54.31,Highlight,,0,0,0,,{\an7\pos(365.0,1440.0)\blur0.8}AI revolution
+Dialogue: 0,0:00:53.17,0:00:54.87,Base,,0,0,0,,{\an7\pos(259.5,1534.0)}comes true, it
+Dialogue: 0,0:00:54.93,0:00:56.35,Base,,0,0,0,,{\an7\pos(74.5,1440.0)}means that companies
+Dialogue: 0,0:00:54.93,0:00:56.35,Base,,0,0,0,,{\an7\pos(241.5,1534.0)}aren't going to
+Dialogue: 1,0:00:56.07,0:00:56.29,Highlight,,0,0,0,,{\an7\pos(241.5,1534.0)\blur0.8}aren't going
+Dialogue: 0,0:00:56.39,0:00:57.81,Base,,0,0,0,,{\an7\pos(254.5,1440.0)}need as many
+Dialogue: 0,0:00:56.39,0:00:57.81,Base,,0,0,0,,{\an7\pos(282.5,1534.0)}people to do
+Dialogue: 1,0:00:56.87,0:00:57.67,Highlight,,0,0,0,,{\an7\pos(282.5,1534.0)\blur0.8}people to
+Dialogue: 0,0:00:57.85,0:00:58.37,Base,,0,0,0,,{\an7\pos(322.0,1534.0)}a lot more.
+Dialogue: 1,0:00:57.93,0:00:58.37,Highlight,,0,0,0,,{\an7\pos(394.0,1534.0)\blur0.8}lot more.
+Dialogue: 0,0:00:58.57,0:00:59.40,Base,,0,0,0,,{\an7\pos(230.0,1440.0)}What does that
+Dialogue: 1,0:00:58.57,0:00:58.76,Highlight,,0,0,0,,{\an7\pos(230.0,1440.0)\blur0.8}What does
+Dialogue: 0,0:00:58.57,0:00:59.40,Base,,0,0,0,,{\an7\pos(340.5,1534.0)}look like?

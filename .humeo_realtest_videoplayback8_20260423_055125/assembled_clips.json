@@ -1,0 +1,180 @@
+{
+  "source_path": "",
+  "clips": [
+    {
+      "clip_id": "001",
+      "topic": "Advice for Gen Z in a Tough Job Market",
+      "start_time_sec": 0.0,
+      "end_time_sec": 47.97899999999947,
+      "viral_hook": "The unemployment rate for 16 to 24 year olds has moved to 12%.",
+      "virality_score": 0.81,
+      "transcript": "The unemployment rate for 16 to 24 year olds- Mm-hmm. Mm-hmm, right has moved to 12%. 12%, big increase. And what is that saying? That's saying that entry-level jobs are not being created the way they used to be. To those people, I say, you must have in your mind an idea for a new business, something that frustrates you, an unmet need. Well, now you can go to ChatGPT, you can go to Grok, and you can have an assistant help you build out that business. Just interview for jobs, but also think about new business ideas. I think we're going to see entrepreneurial explosion here. Well, and speaking of entrepreneurial explosion, I think about how long you have certainly",
+      "suggested_overlay_title": "12% Youth Unemployment? Start a Business With AI",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.8,
+        "hook_emotion": 0.9,
+        "catchy": 0.7
+      },
+      "reasoning": "This clip scores high on emotional hook by identifying a real problem (12% youth unemployment) and provides a strong, modern, and actionable solution (use AI as a business partner), making the message very impactful.",
+      "hook_start_sec": null,
+      "hook_end_sec": null,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "render_spans": [],
+      "shorts_title": "Cathie Wood's Advice for Unemployed Young People",
+      "description": "With youth unemployment at 12%, Cathie Wood explains why entry-level jobs are disappearing and how young people can use AI tools like ChatGPT as a co-founder to launch their own businesses.",
+      "hashtags": [
+        "cathiewood",
+        "entrepreneurship",
+        "ai",
+        "genz",
+        "careeradvice",
+        "chatgpt"
+      ],
+      "layout_hint": "zoom_call_center",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "002",
+      "topic": "Prediction: 7% Real GDP Growth",
+      "start_time_sec": 0.0,
+      "end_time_sec": 59.379999999999995,
+      "viral_hook": "productivity growth will accelerate to the 4% to 6% range and be sustained there.",
+      "virality_score": 0.805,
+      "transcript": "productivity growth will accelerate to the 4% to 6% range and be sustained there. Normally, we see a cyclical peak around there and then it falls back. We think it will be sustained, and we think that by the end of this decade, real GDP growth could be averaging more than 7% per year. Wow. And I know that sounds shocking- Yeah given that we've been at 3% for 125 years. But it is the history associated with technology revolutions, a step change upIn GDP growth The productivity increase, the GDP growth that you are forecasting as a result of these disruptive technologies, to what extent is that the result of fewer people doing more? My question is about job losses as a result of this technology, because if everything that investors are betting on when it comes to this AI revolution comes true, it means that companies aren't going to need as many people to do a lot more. What does that look like?",
+      "suggested_overlay_title": "Her Prediction: 7% GDP Growth Is Coming",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.9,
+        "hook_emotion": 0.7,
+        "catchy": 0.8
+      },
+      "reasoning": "The core message is a massive, shocking prediction (7%+ GDP growth) which is inherently interesting. The hook is a big number that builds into an even bigger one, and the quotability of '7% GDP growth' is very high.",
+      "hook_start_sec": null,
+      "hook_end_sec": null,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "render_spans": [],
+      "shorts_title": "Cathie Wood's Shocking 7% GDP Growth Prediction",
+      "description": "Cathie Wood predicts that due to major technology platforms, US productivity growth will sustain 4-6%, leading to real GDP growth of over 7%—a shocking number compared to the historical average.",
+      "hashtags": [
+        "cathiewood",
+        "economy",
+        "gdp",
+        "prediction",
+        "investing",
+        "ai"
+      ],
+      "layout_hint": "zoom_call_center",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "004",
+      "topic": "Cathie Wood's Top Stock Ideas for 2026",
+      "start_time_sec": 0.0,
+      "end_time_sec": 51.88799999999935,
+      "viral_hook": "Just 30 seconds, though, what's your best idea, you think, for 2026 at this point?",
+      "virality_score": 0.775,
+      "transcript": "of the companies that are in that. Just 30 seconds, though, what's your best idea, you think, for 2026 at this point? And I know there's a lot in your research, but is there a best idea or narrative? Just quickly, if you could. Well, so the top three stocks in our flagship are Tesla. We think it has miles to go. We do take profits from time to time, but it could break out here in a big way as more and more analysts do their homework on robotaxis. Mm. Crispr Therapeutics has moved into the second position. That company is curing sickle cell disease and beta thalassemia and has its eyes set on not just rare diseases, but curing the bad cholesterol problem, especially for those who have hereditary issues in that realm. That could be an enormous market, and I don't think anyone is doing the modeling work there the way we are. I love it. All right. Hopefully,",
+      "suggested_overlay_title": "Her Two Best Stock Ideas for 2026",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.8,
+        "hook_emotion": 0.8,
+        "catchy": 0.7
+      },
+      "reasoning": "This clip has very high utility, directly answering the question everyone wants to know. The interviewer's direct question creates strong anticipation (hook emotion), and naming specific, high-profile stocks makes the content memorable and actionable.",
+      "hook_start_sec": null,
+      "hook_end_sec": null,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "render_spans": [],
+      "shorts_title": "Cathie Wood: My Top Stock Ideas for 2026",
+      "description": "When asked for her best idea for 2026, Cathie Wood names her top two holdings: Tesla, due to the robotaxi opportunity, and Crispr Therapeutics, for its potential to cure major diseases.",
+      "hashtags": [
+        "cathiewood",
+        "investing",
+        "stocks",
+        "tesla",
+        "crispr",
+        "stockmarket"
+      ],
+      "layout_hint": "zoom_call_center",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "005",
+      "topic": "Five Tech Platforms Bigger Than The Internet",
+      "start_time_sec": 0.0,
+      "end_time_sec": 63.4800000000003,
+      "viral_hook": "we're in a technology revolution. And many people thought that the internet was a technology revolution, and to some extent it was. But today, instead of just one major platform evolving, we have five.",
+      "virality_score": 0.7375,
+      "transcript": "we're in a technology revolution. And many people thought that the internet was a technology revolution, and to some extent it was. But today, instead of just one major platform evolving, we have five. So robotics, energy storage, AI, blockchain technology, and multi-omic sequencing in the life science space, which we believe is the most profound application of AI, healthcare. And so this boom, if you look back at the railroad boom, the amount of investment that we saw back then was about 6% of GDP at its peak, 5% to 6%. The internet boom was more like the auto boom in the early 1900s. It was more in the 3% to 4% of GDP range. We believe this five-platform innovation strategy or boom is going to move to 12% of GDP. And we do believe also that",
+      "suggested_overlay_title": "These 5 Platforms Are Bigger Than The Internet",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.85,
+        "hook_emotion": 0.6,
+        "catchy": 0.75
+      },
+      "reasoning": "The message presents a powerful, grand-scale thesis. The hook's framing ('bigger than the internet') creates immediate intrigue, and the historical comparison to the railroad and internet booms provides a catchy, memorable analogy for the scale of this change.",
+      "hook_start_sec": null,
+      "hook_end_sec": null,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "render_spans": [],
+      "shorts_title": "This Tech Revolution is Bigger Than The Internet",
+      "description": "Cathie Wood argues we're in a new technology revolution driven by five platforms (not just one like the internet), which will command an investment boom equal to 12% of GDP, dwarfing previous revolutions.",
+      "hashtags": [
+        "cathiewood",
+        "technology",
+        "innovation",
+        "ai",
+        "investing",
+        "future"
+      ],
+      "layout_hint": "zoom_call_center",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "006",
+      "topic": "Why Tesla Is Not A Car Company",
+      "start_time_sec": 0.0,
+      "end_time_sec": 47.879999999999654,
+      "viral_hook": "Without a doubt. We've always said Tesla is not an auto company.",
+      "virality_score": 0.715,
+      "transcript": "Without a doubt. We've always said Tesla is not an auto company. It is actually the convergence of three of the platforms I mentioned, so robotics, energy storage, and AI. Each one of those technologies has its own S-curve, and now they're feeding each other, and we're seeing that in robotaxis. Robotaxis, we believe, will account for 90% of Tesla's valuation by the end of the decade. We're in print at 2,600. That includes nothing for Optimus robots. And we're beginning to understand how quickly Tesla is moving on that front. Why? Mm. Because it's the convergence of the same three technologies- Mm-hmm robotics, energy storage, and AI.",
+      "suggested_overlay_title": "Why Tesla Is Not A Car Company",
+      "layout": null,
+      "score_breakdown": {
+        "message_wow": 0.8,
+        "hook_emotion": 0.7,
+        "catchy": 0.6
+      },
+      "reasoning": "This clip offers a classic, strong reframe of a well-known company, which is a powerful message. The hook is a bold, contrarian statement that grabs attention, and the core phrase 'Tesla is not an auto company' is very catchy.",
+      "hook_start_sec": null,
+      "hook_end_sec": null,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "render_spans": [],
+      "shorts_title": "Cathie Wood: Tesla is a Robotics Company, Not a Car Company",
+      "description": "Cathie Wood explains her core thesis that Tesla is not an auto company, but rather the convergence of three major technology platforms: robotics, energy storage, and AI.",
+      "hashtags": [
+        "cathiewood",
+        "tesla",
+        "investing",
+        "ai",
+        "robotics",
+        "tsla"
+      ],
+      "layout_hint": "zoom_call_center",
+      "needs_review": false,
+      "review_reason": ""
+    }
+  ]
+}

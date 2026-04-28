@@ -1,0 +1,198 @@
+{
+  "source_path": "",
+  "clips": [
+    {
+      "clip_id": "001",
+      "topic": "Prediction Markets and Future Growth",
+      "start_time_sec": 291.5,
+      "end_time_sec": 344.3,
+      "viral_hook": "I think, you know, in the medium term. So over the next few years, we believe that this market could explode up to $5 trillion in notional volume.",
+      "virality_score": 0.98,
+      "transcript": "When we started doing this research, and I'll sneak preview, I think, you know, in the medium term. So over the next few years, we believe that this market could explode up to $5 trillion in notional volume. Now, right now, Cal, she is on an annualized run rate to do around 120 $130 billion in notional volume for this year. So we're talking about a massive explosion of where this total market is headed. But when you put it the perspective of the total derivatives market, which in 2024, was around $715 trillion in notional volume, you're only talking about 70 basis points, right, that $5 trillion figure over 715. So it's a drop in the bucket, compared to where traditional derivatives sit today. And as you point out, I think this is an expansion of the addressable market that derivatives don't necessarily give you today in terms of the risk profile.",
+      "suggested_overlay_title": "Prediction Market Growth Potential",
+      "layout": null,
+      "score_breakdown": {
+        "hard_number_reveal": 1.0,
+        "specific_timeframe": 1.0,
+        "first_person_conviction": 1.0,
+        "counter_intuitive_claim": 1.0
+      },
+      "reasoning": "Contains a high-stakes, specific quantitative prediction ($5T market size) and uses hard data comparisons to current derivatives markets.",
+      "hook_start_sec": 0.2,
+      "hook_end_sec": 4.5,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "shorts_title": "Prediction Markets: Next Trillion Dollar Industry?",
+      "description": "ARK Invest believes prediction markets could grow to $5 trillion. Here is why this financial innovation is just getting started.",
+      "hashtags": [
+        "finance",
+        "investing",
+        "ARKInvest",
+        "predictionmarkets"
+      ],
+      "layout_hint": "sit_center",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "002",
+      "topic": "Resurgence of Active Management",
+      "start_time_sec": 174.6,
+      "end_time_sec": 227.6,
+      "viral_hook": "Wait a minute, this movement is the beginnings, I think, of bringing active equity management back into style.",
+      "virality_score": 0.95,
+      "transcript": "wait a minute, this movement is the beginnings, I think, of bringing active equity management back into style because we're talking about events that should move stocks. And if we have more people looking for and at those events, they're going to be interested in investing in some of these opportunities and maybe taking a little bit out of that passive portfolio that is tied to the indexes. So I'm pretty excited about this. This could be the beginning of a resurgence in active equity management.",
+      "suggested_overlay_title": "Active Management is Back",
+      "layout": null,
+      "score_breakdown": {
+        "counter_intuitive_claim": 1.0,
+        "first_person_conviction": 1.0,
+        "cultural_impact": 1.0,
+        "quotable_phrasing": 1.0
+      },
+      "reasoning": "Strong contrarian claim against the passive-index consensus, high-conviction delivery.",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 3.5,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "shorts_title": "Active vs Passive Management Shift",
+      "description": "Cathie Wood explains why event-based prediction markets could signal the end of the passive investing era.",
+      "hashtags": [
+        "investing",
+        "stocks",
+        "activemanagement",
+        "cathiewood"
+      ],
+      "layout_hint": "sit_center",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "003",
+      "topic": "Prediction Markets as Derivative Inverse",
+      "start_time_sec": 227.6,
+      "end_time_sec": 287.2,
+      "viral_hook": "Prediction markets really represent the purest form of risk out there.",
+      "virality_score": 0.88,
+      "transcript": "prediction markets really represent the purest form of risk out there. Because as you point out, Cathy, you can go directly to the underlying discrete event that then moves the needle on equity. And so I actually think of these tools as almost the inverse of derivatives, right? It's the underlying catalyst that will drive the performance of a stock up or down. And so whereas you may want to hedge out some of that risk using a put call spread or many other forms of hedging, now you have direct access to those underlying events, business KPIs, macroeconomic events where you don't need to take on the extra risk that is associated with the market, right? If you don't want to be exposed to what is happening in Iran, well, you don't need to take on that exposure through derivatives, which are going to inherently have some of that in it, you can go directly to the underlying event. So I think it's a really amazing opportunity for the financial markets.",
+      "suggested_overlay_title": "Risk Simplified: Prediction Markets",
+      "layout": null,
+      "score_breakdown": {
+        "first_principles_reframe": 1.0,
+        "strong_metaphor": 1.0,
+        "quotable_phrasing": 1.0
+      },
+      "reasoning": "Strong conceptual metaphor ('inverse of derivatives') and clear reframe of financial risk.",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 3.0,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "shorts_title": "The Purest Form of Risk",
+      "description": "Why prediction markets are the 'inverse of derivatives' and offer a cleaner way to hedge against specific world events.",
+      "hashtags": [
+        "finance",
+        "derivatives",
+        "trading",
+        "risk"
+      ],
+      "layout_hint": "sit_center",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "004",
+      "topic": "The U.S. Debt Myth",
+      "start_time_sec": 685.8,
+      "end_time_sec": 745.2,
+      "viral_hook": "Really, you should be comparing debt to equity.",
+      "virality_score": 0.85,
+      "transcript": "really, you should be comparing debt to equity. So equity is the black line, debt is the purple, and GDP is the red. And if we go to the next chart, you will see that while debt to GDP is above one here, the one ratio, you can see debt to equity is at 0.5. And actually it's very low by historical standards.",
+      "suggested_overlay_title": "Debt vs Equity: The Truth",
+      "layout": null,
+      "score_breakdown": {
+        "first_principles_reframe": 1.0,
+        "chart_reference": 1.0,
+        "counter_intuitive_claim": 1.0
+      },
+      "reasoning": "Reframes a common economic fear with a new metric, uses a chart anchor.",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 3.0,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "shorts_title": "Debunking the US Debt Crisis",
+      "description": "Cathie Wood shares a chart that reframes the national debt conversation by comparing it to equity rather than GDP.",
+      "hashtags": [
+        "economy",
+        "usa",
+        "debt",
+        "investing"
+      ],
+      "layout_hint": "split_chart_person",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "005",
+      "topic": "Productivity Boom Prediction",
+      "start_time_sec": 1452.8,
+      "end_time_sec": 1518.5,
+      "viral_hook": "We think that productivity growth is going to soar in the next few years.",
+      "virality_score": 0.78,
+      "transcript": "we think that productivity growth is going to soar in the next few years. So here we ask the question, will non-farm productivity increase above 3% in any quarter? This is on a year-over-year basis, in any quarter in 26. And you can see there's a 42% probability. Well, we think the probability actually is much higher than that. And it's actually for a statistical reason. If you look at productivity today, you can see we're at roughly 2.5%. And you can also see, again, if you look across this chart, this is in the higher half of the history of this chart. So pretty strong. And as we have said in the know many times, we've been in a rolling recession. And this is what has happened. That's so interesting. Housing has been down and out. Manufacturing's been down and out. Small business down and out. Consumers have been in a funk, as measured by sentiment. And productivity is at 2.5%.",
+      "suggested_overlay_title": "Productivity is About to Soar",
+      "layout": null,
+      "score_breakdown": {
+        "concrete_prediction": 1.0,
+        "specific_timeframe": 1.0,
+        "chart_reference": 1.0
+      },
+      "reasoning": "Bold prediction with timeframe, anchored to current economic data.",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 3.0,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "shorts_title": "The Coming Productivity Boom",
+      "description": "ARK Invest predicts a massive surge in productivity. Here is why the numbers are better than they seem.",
+      "hashtags": [
+        "productivity",
+        "economy",
+        "AI",
+        "growth"
+      ],
+      "layout_hint": "split_chart_person",
+      "needs_review": false,
+      "review_reason": ""
+    },
+    {
+      "clip_id": "006",
+      "topic": "Deflationary Technology Trends",
+      "start_time_sec": 1369.4,
+      "end_time_sec": 1426.0,
+      "viral_hook": "All of those are highly deflationary trends.",
+      "virality_score": 0.7,
+      "transcript": "all of those are highly deflationary trends. And could the yield curve be picking up on that? We think it might. Now, here's productivity, which is a part of that story. The technology, the innovation platforms that I just mentioned, involve 15 different technologies. They're converging. And we think that productivity growth is going to soar in the next few years.",
+      "suggested_overlay_title": "AI is Deflationary",
+      "layout": null,
+      "score_breakdown": {
+        "first_principles_reframe": 1.0,
+        "first_person_conviction": 1.0
+      },
+      "reasoning": "Strong argument linking tech innovation to inflation metrics.",
+      "hook_start_sec": 0.0,
+      "hook_end_sec": 3.0,
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "shorts_title": "Why AI will lower prices",
+      "description": "Cathie Wood argues that AI and other emerging technologies are fundamentally deflationary forces.",
+      "hashtags": [
+        "AI",
+        "deflation",
+        "economics",
+        "tech"
+      ],
+      "layout_hint": "sit_center",
+      "needs_review": false,
+      "review_reason": ""
+    }
+  ]
+}

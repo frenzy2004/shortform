@@ -1,0 +1,52 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,48,&H00FFFFFF,&H000000FF,&H00000000,&H70000000,-1,0,0,0,100,100,0,0,4,0,0,2,60,60,160,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.25,0:00:00.83,Default,,0,0,0,,One of the things
+Dialogue: 0,0:00:00.83,0:00:01.59,Default,,0,0,0,,I would say is
+Dialogue: 0,0:00:01.59,0:00:02.41,Default,,0,0,0,,that you there are
+Dialogue: 0,0:00:02.41,0:00:03.71,Default,,0,0,0,,super intelligences today and
+Dialogue: 0,0:00:03.71,0:00:05.03,Default,,0,0,0,,they're basically large corporations
+Dialogue: 0,0:00:05.03,0:00:06.21,Default,,0,0,0,,right They're smarter than
+Dialogue: 0,0:00:06.21,0:00:07.33,Default,,0,0,0,,any human can be
+Dialogue: 0,0:00:08.21,0:00:09.99,Default,,0,0,0,,at you the problem
+Dialogue: 0,0:00:09.99,0:00:11.89,Default,,0,0,0,,of you shipping commerce
+Dialogue: 0,0:00:11.89,0:00:12.77,Default,,0,0,0,,at the lowest possible
+Dialogue: 0,0:00:12.77,0:00:13.93,Default,,0,0,0,,cost or making solar
+Dialogue: 0,0:00:13.93,0:00:14.77,Default,,0,0,0,,panels at the lowest
+Dialogue: 0,0:00:14.77,0:00:16.43,Default,,0,0,0,,possible cost or launching
+Dialogue: 0,0:00:16.43,0:00:17.39,Default,,0,0,0,,rockets at the lowest
+Dialogue: 0,0:00:17.39,0:00:19.55,Default,,0,0,0,,possible cost And so
+Dialogue: 0,0:00:19.55,0:00:21.51,Default,,0,0,0,,there's really high returns
+Dialogue: 0,0:00:21.51,0:00:22.99,Default,,0,0,0,,to intelligence in this
+Dialogue: 0,0:00:22.99,0:00:24.41,Default,,0,0,0,,area which I incentivizes
+Dialogue: 0,0:00:24.41,0:00:26.67,Default,,0,0,0,,us to kind
+Dialogue: 0,0:00:26.67,0:00:27.49,Default,,0,0,0,,of build the right
+Dialogue: 0,0:00:27.49,0:00:29.33,Default,,0,0,0,,thing It's also you
+Dialogue: 0,0:00:29.33,0:00:31.11,Default,,0,0,0,,I think it's a
+Dialogue: 0,0:00:31.11,0:00:32.61,Default,,0,0,0,,business that is more
+Dialogue: 0,0:00:32.61,0:00:33.69,Default,,0,0,0,,stable than consumer We
+Dialogue: 0,0:00:33.69,0:00:34.59,Default,,0,0,0,,don't need you know
+Dialogue: 0,0:00:34.63,0:00:35.63,Default,,0,0,0,,we don't need ads
+Dialogue: 0,0:00:35.85,0:00:38.41,Default,,0,0,0,,don't need you
+Dialogue: 0,0:00:38.41,0:00:39.95,Default,,0,0,0,,know large numbers of
+Dialogue: 0,0:00:39.95,0:00:41.79,Default,,0,0,0,,free users can just
+Dialogue: 0,0:00:41.79,0:00:43.93,Default,,0,0,0,,very directly create value
+Dialogue: 0,0:00:43.95,0:00:44.79,Default,,0,0,0,,right There aren't all
+Dialogue: 0,0:00:44.79,0:00:46.51,Default,,0,0,0,,these weird externalities of
+Dialogue: 0,0:00:46.51,0:00:48.51,Default,,0,0,0,,like you're prioritizing engagement
+Dialogue: 0,0:00:48.67,0:00:49.89,Default,,0,0,0,,you're prioritizing these other
+Dialogue: 0,0:00:49.89,0:00:51.25,Default,,0,0,0,,things you're all this
+Dialogue: 0,0:00:51.25,0:00:52.65,Default,,0,0,0,,slop We just make
+Dialogue: 0,0:00:52.65,0:00:54.05,Default,,0,0,0,,stuff that people can
+Dialogue: 0,0:00:54.05,0:00:54.35,Default,,0,0,0,,use

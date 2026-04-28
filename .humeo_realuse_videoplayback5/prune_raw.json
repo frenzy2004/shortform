@@ -1,0 +1,39 @@
+{
+  "decisions": [
+    {
+      "clip_id": "001",
+      "trim_start_sec": 8.08,
+      "trim_end_sec": 0.0,
+      "reason": "Removed the Moore's Law setup to start directly on the core claim about intelligence.",
+      "thought": "The clip is stronger when it immediately defines the 'intelligence law' rather than spending 8 seconds on the historical Moore's Law analogy."
+    },
+    {
+      "clip_id": "002",
+      "trim_start_sec": 17.2,
+      "trim_end_sec": 0.0,
+      "reason": "Removed the preamble to start directly on the high-stakes hook.",
+      "thought": "Starting with the '100 million people smarter than Nobel Prize winners' creates an immediate, gripping hook that stands on its own."
+    },
+    {
+      "clip_id": "003",
+      "trim_start_sec": 0.0,
+      "trim_end_sec": 0.0,
+      "reason": "No trimming required as the clip is already concise and well-structured.",
+      "thought": "The clip maintains a logical flow from the economic risk to the enterprise advantage without unnecessary filler."
+    },
+    {
+      "clip_id": "004",
+      "trim_start_sec": 37.4,
+      "trim_end_sec": 0.0,
+      "reason": "Removed the conversational setup to start directly on the core economic prediction.",
+      "thought": "The clip is much more impactful starting with the 'unusual combination' of GDP growth and high unemployment rather than the preceding interview back-and-forth."
+    },
+    {
+      "clip_id": "005",
+      "trim_start_sec": 5.68,
+      "trim_end_sec": 0.0,
+      "reason": "Removed the conversational lead-in to start directly on the provocative claim about corporations.",
+      "thought": "Starting with 'There are super intelligences today' immediately sets the premise and grabs attention."
+    }
+  ]
+}

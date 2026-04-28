@@ -1,0 +1,304 @@
+{
+  "clips": {
+    "001": {
+      "instruction": {
+        "clip_id": "001",
+        "layout": "sit_center",
+        "zoom": 1.0,
+        "person_x_norm": 0.45275,
+        "person_tracking": [
+          {
+            "t_sec": 0.0,
+            "x_norm": 0.41197636539713434
+          },
+          {
+            "t_sec": 56.15998535156177,
+            "x_norm": 0.41197636539713434
+          }
+        ],
+        "chart_x_norm": 0.0,
+        "focus_stack_order": "chart_then_person",
+        "split_chart_region": null,
+        "split_person_region": null,
+        "split_second_chart_region": null,
+        "split_second_person_region": null,
+        "top_band_ratio": 0.5
+      },
+      "raw": {
+        "layout": "sit_center",
+        "person_bbox": {
+          "x1": 0.2442,
+          "y1": 0.0,
+          "x2": 0.8323,
+          "y2": 1.0
+        },
+        "face_bbox": {
+          "x1": 0.3149,
+          "y1": 0.1111,
+          "x2": 0.5906,
+          "y2": 0.5028
+        },
+        "chart_bbox": null,
+        "second_person_bbox": null,
+        "second_face_bbox": null,
+        "second_chart_bbox": null,
+        "reason": "The image features a single person in a seated position, speaking into a microphone. This is a classic interview or podcast setup, best framed using the sit_center layout.",
+        "segmentation_tracking": {
+          "provider": "replicate",
+          "model": "meta/sam-2-video:2d7219877ca847f463d749d9b224e62f7b078fe035d60a74b58889b455d5cbad",
+          "seed_point_px": [
+            290,
+            111
+          ],
+          "seed_frame": 842,
+          "prompt_frames": [
+            0,
+            842
+          ],
+          "output_frame_interval": 168,
+          "mask_count": 11
+        }
+      }
+    },
+    "002": {
+      "instruction": {
+        "clip_id": "002",
+        "layout": "sit_center",
+        "zoom": 1.0,
+        "person_x_norm": 0.511,
+        "person_tracking": [
+          {
+            "t_sec": 0.0,
+            "x_norm": 0.41446815381446944
+          },
+          {
+            "t_sec": 60.5940549316399,
+            "x_norm": 0.41446815381446944
+          }
+        ],
+        "chart_x_norm": 0.0,
+        "focus_stack_order": "chart_then_person",
+        "split_chart_region": null,
+        "split_person_region": null,
+        "split_second_chart_region": null,
+        "split_second_person_region": null,
+        "top_band_ratio": 0.5
+      },
+      "raw": {
+        "layout": "sit_center",
+        "person_bbox": {
+          "x1": 0.152,
+          "y1": 0.0,
+          "x2": 0.85,
+          "y2": 1.0
+        },
+        "face_bbox": {
+          "x1": 0.362,
+          "y1": 0.16,
+          "x2": 0.66,
+          "y2": 0.54
+        },
+        "chart_bbox": null,
+        "second_person_bbox": null,
+        "second_face_bbox": null,
+        "second_chart_bbox": null,
+        "reason": "A single person is speaking in a seated interview or podcast setting, making 'sit_center' the appropriate layout.",
+        "segmentation_tracking": {
+          "provider": "replicate",
+          "model": "meta/sam-2-video:2d7219877ca847f463d749d9b224e62f7b078fe035d60a74b58889b455d5cbad",
+          "seed_point_px": [
+            327,
+            126
+          ],
+          "seed_frame": 908,
+          "prompt_frames": [
+            0,
+            908
+          ],
+          "output_frame_interval": 182,
+          "mask_count": 10
+        }
+      }
+    },
+    "003": {
+      "instruction": {
+        "clip_id": "003",
+        "layout": "sit_center",
+        "zoom": 1.0,
+        "person_x_norm": 0.48169999999999996,
+        "person_tracking": [
+          {
+            "t_sec": 0.0,
+            "x_norm": 0.40272861614595135
+          },
+          {
+            "t_sec": 53.980084228515125,
+            "x_norm": 0.40272861614595135
+          }
+        ],
+        "chart_x_norm": 0.0,
+        "focus_stack_order": "chart_then_person",
+        "split_chart_region": null,
+        "split_person_region": null,
+        "split_second_chart_region": null,
+        "split_second_person_region": null,
+        "top_band_ratio": 0.5
+      },
+      "raw": {
+        "layout": "sit_center",
+        "person_bbox": {
+          "x1": 0.2781,
+          "y1": 0.1083,
+          "x2": 0.8251,
+          "y2": 1.0
+        },
+        "face_bbox": {
+          "x1": 0.3601,
+          "y1": 0.1511,
+          "x2": 0.6033,
+          "y2": 0.4583
+        },
+        "chart_bbox": null,
+        "second_person_bbox": null,
+        "second_face_bbox": null,
+        "second_chart_bbox": null,
+        "reason": "The image features a single person in a classic seated interview or podcast setting, making 'sit_center' the most appropriate layout.",
+        "segmentation_tracking": {
+          "provider": "replicate",
+          "model": "meta/sam-2-video:2d7219877ca847f463d749d9b224e62f7b078fe035d60a74b58889b455d5cbad",
+          "seed_point_px": [
+            308,
+            110
+          ],
+          "seed_frame": 809,
+          "prompt_frames": [
+            0,
+            809
+          ],
+          "output_frame_interval": 162,
+          "mask_count": 10
+        }
+      }
+    },
+    "004": {
+      "instruction": {
+        "clip_id": "004",
+        "layout": "sit_center",
+        "zoom": 1.0,
+        "person_x_norm": 0.4865,
+        "person_tracking": [
+          {
+            "t_sec": 0.0,
+            "x_norm": 0.40436873639458326
+          },
+          {
+            "t_sec": 43.54992065429633,
+            "x_norm": 0.40436873639458326
+          }
+        ],
+        "chart_x_norm": 0.0,
+        "focus_stack_order": "chart_then_person",
+        "split_chart_region": null,
+        "split_person_region": null,
+        "split_second_chart_region": null,
+        "split_second_person_region": null,
+        "top_band_ratio": 0.5
+      },
+      "raw": {
+        "layout": "sit_center",
+        "person_bbox": {
+          "x1": 0.284,
+          "y1": 0.108,
+          "x2": 0.85,
+          "y2": 1.0
+        },
+        "face_bbox": {
+          "x1": 0.363,
+          "y1": 0.158,
+          "x2": 0.61,
+          "y2": 0.465
+        },
+        "chart_bbox": null,
+        "second_person_bbox": null,
+        "second_face_bbox": null,
+        "second_chart_bbox": null,
+        "reason": "A single speaker is present in a seated, interview-style shot, making 'sit_center' the appropriate layout.",
+        "segmentation_tracking": {
+          "provider": "replicate",
+          "model": "meta/sam-2-video:2d7219877ca847f463d749d9b224e62f7b078fe035d60a74b58889b455d5cbad",
+          "seed_point_px": [
+            311,
+            112
+          ],
+          "seed_frame": 653,
+          "prompt_frames": [
+            0,
+            653
+          ],
+          "output_frame_interval": 131,
+          "mask_count": 10
+        }
+      }
+    },
+    "005": {
+      "instruction": {
+        "clip_id": "005",
+        "layout": "sit_center",
+        "zoom": 1.0,
+        "person_x_norm": 0.494,
+        "person_tracking": [
+          {
+            "t_sec": 0.0,
+            "x_norm": 0.40910504951066
+          },
+          {
+            "t_sec": 56.968014038085585,
+            "x_norm": 0.40910504951066
+          }
+        ],
+        "chart_x_norm": 0.0,
+        "focus_stack_order": "chart_then_person",
+        "split_chart_region": null,
+        "split_person_region": null,
+        "split_second_chart_region": null,
+        "split_second_person_region": null,
+        "top_band_ratio": 0.5
+      },
+      "raw": {
+        "layout": "sit_center",
+        "person_bbox": {
+          "x1": 0.2818,
+          "y1": 0.1533,
+          "x2": 0.999,
+          "y2": 1.0
+        },
+        "face_bbox": {
+          "x1": 0.332,
+          "y1": 0.1789,
+          "x2": 0.656,
+          "y2": 0.5567
+        },
+        "chart_bbox": null,
+        "second_person_bbox": null,
+        "second_face_bbox": null,
+        "second_chart_bbox": null,
+        "reason": "The frame features a single speaker in a seated, interview-style setting. The sit_center layout is appropriate to focus on her.",
+        "segmentation_tracking": {
+          "provider": "replicate",
+          "model": "meta/sam-2-video:2d7219877ca847f463d749d9b224e62f7b078fe035d60a74b58889b455d5cbad",
+          "seed_point_px": [
+            316,
+            132
+          ],
+          "seed_frame": 854,
+          "prompt_frames": [
+            0,
+            854
+          ],
+          "output_frame_interval": 171,
+          "mask_count": 10
+        }
+      }
+    }
+  }
+}

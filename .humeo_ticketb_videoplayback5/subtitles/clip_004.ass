@@ -1,0 +1,57 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,48,&H00FFFFFF,&H000000FF,&H00000000,&H70000000,-1,0,0,0,100,100,0,0,4,0,0,2,60,60,160,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.04,0:00:00.60,Default,,0,0,0,,Do you think now
+Dialogue: 0,0:00:00.60,0:00:01.46,Default,,0,0,0,,the Chinese have fallen
+Dialogue: 0,0:00:01.46,0:00:03.40,Default,,0,0,0,,behind You know I
+Dialogue: 0,0:00:03.40,0:00:04.82,Default,,0,0,0,,think they never really
+Dialogue: 0,0:00:04.82,0:00:06.26,Default,,0,0,0,,caught up that much
+Dialogue: 0,0:00:06.68,0:00:07.56,Default,,0,0,0,,you of there was
+Dialogue: 0,0:00:07.56,0:00:09.20,Default,,0,0,0,,this huge excitement around
+Dialogue: 0,0:00:09.20,0:00:11.96,Default,,0,0,0,,DeepSeek right But
+Dialogue: 0,0:00:12.04,0:00:13.48,Default,,0,0,0,,you the truth was
+Dialogue: 0,0:00:13.48,0:00:15.48,Default,,0,0,0,,a couple things One
+Dialogue: 0,0:00:15.48,0:00:16.70,Default,,0,0,0,,you those models are
+Dialogue: 0,0:00:16.70,0:00:17.86,Default,,0,0,0,,very optimized for the
+Dialogue: 0,0:00:17.86,0:00:18.98,Default,,0,0,0,,benchmarks It's actually very
+Dialogue: 0,0:00:18.98,0:00:21.22,Default,,0,0,0,,easy to a for
+Dialogue: 0,0:00:21.22,0:00:23.50,Default,,0,0,0,,a list of When
+Dialogue: 0,0:00:23.50,0:00:24.48,Default,,0,0,0,,we go out into
+Dialogue: 0,0:00:24.48,0:00:26.82,Default,,0,0,0,,the right When we're
+Dialogue: 0,0:00:26.82,0:00:29.04,Default,,0,0,0,,you know against
+Dialogue: 0,0:00:29.04,0:00:30.44,Default,,0,0,0,,other companies for enterprise
+Dialogue: 0,0:00:30.44,0:00:32.62,Default,,0,0,0,,contracts we see just
+Dialogue: 0,0:00:32.62,0:00:33.46,Default,,0,0,0,,honestly and candidly we
+Dialogue: 0,0:00:33.46,0:00:34.42,Default,,0,0,0,,see Google and we
+Dialogue: 0,0:00:34.42,0:00:36.14,Default,,0,0,0,,see OpenAI Every once
+Dialogue: 0,0:00:36.14,0:00:37.24,Default,,0,0,0,,in we see a
+Dialogue: 0,0:00:37.24,0:00:38.74,Default,,0,0,0,,other US players
+Dialogue: 0,0:00:39.74,0:00:42.02,Default,,0,0,0,,I have almost never
+Dialogue: 0,0:00:42.02,0:00:44.08,Default,,0,0,0,,lost a deal a
+Dialogue: 0,0:00:44.08,0:00:46.14,Default,,0,0,0,,contract to a Chinese
+Dialogue: 0,0:00:46.14,0:00:47.24,Default,,0,0,0,,model But now you
+Dialogue: 0,0:00:47.24,0:00:48.72,Default,,0,0,0,,have the administration and
+Dialogue: 0,0:00:48.72,0:00:49.52,Default,,0,0,0,,I think you've already
+Dialogue: 0,0:00:49.52,0:00:51.32,Default,,0,0,0,,protested about this giving
+Dialogue: 0,0:00:51.32,0:00:52.92,Default,,0,0,0,,high speed chips and
+Dialogue: 0,0:00:52.92,0:00:54.02,Default,,0,0,0,,video chips to the
+Dialogue: 0,0:00:54.02,0:00:55.16,Default,,0,0,0,,Chinese That's right that's
+Dialogue: 0,0:00:55.16,0:00:55.82,Default,,0,0,0,,right The thing that
+Dialogue: 0,0:00:55.82,0:00:56.66,Default,,0,0,0,,is holding them back
+Dialogue: 0,0:00:56.80,0:00:58.46,Default,,0,0,0,,and they've said it
+Dialogue: 0,0:00:58.46,0:00:59.58,Default,,0,0,0,,The CEOs of these
+Dialogue: 0,0:00:59.58,0:01:00.70,Default,,0,0,0,,companies say it's the
+Dialogue: 0,0:01:00.70,0:01:02.60,Default,,0,0,0,,embargo on that's holding
+Dialogue: 0,0:01:02.60,0:01:04.12,Default,,0,0,0,,us back They explicitly
+Dialogue: 0,0:01:04.12,0:01:04.76,Default,,0,0,0,,say this
